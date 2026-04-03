@@ -254,6 +254,7 @@
 
   footer { text-align: center; padding: 28px 20px 44px; font-size: 0.73rem; color: var(--text-dim); font-weight: 500; line-height: 1.9; border-top: 1px solid rgba(0,0,0,0.06); margin-top: 20px; }
   footer .blue { color: var(--blue); font-weight: 700; }
+  .credit-hover { opacity: 0; transition: opacity 0.4s ease; cursor: default; }
 </style>
 </head>
 <body>
@@ -400,7 +401,7 @@
 
 <footer>
   <span class="blue">Mathski</span> — IB Mathematics Internal Assessment Tool<br>
-  Produced by <span class="blue">@sidequestqs</span><br>
+  <span class="credit-hover">produced by @sidequestqs</span><br>
   © 2025 Mathski. All rights reserved.
 </footer>
 
@@ -508,6 +509,11 @@ D — Reflection (0–3): 0: Not reached | 1: Limited (describing results) | 2: 
 E — Use of Mathematics (0–6): ${eCriteria}
 
 RED FLAGS: vague aim, maths below level, reflection only in conclusion, decorative engagement, missing method justification, overcomplication, results not interpreted, unlabelled graphs, undefined variables, statistical test misuse.
+
+CALIBRATION ANCHORS (use these to ground your marking):
+- lbz630 SLAI: A3,B3,C2,D2,E4 = 14/20 — confirmed unchanged by IBO moderation. Primary SLAI anchor.
+- mgd025 SLAI: A3,B2,C1,D1,E4 = 11/20 — rugby world cup weight vs tackles.
+- lrg678 HLAA: A3,B3,C3,D3,E5 = 17/20 — Fourier transforms/music (piano chord, noise reduction). A3 not A4: reflection box repetition reduces conciseness. B3 not B4: minor gaps in comparative graph and superposed waveform image. C3 secure: self-taught DFT, engagement shapes mathematical choices not decoration. D3 secure: critical reflection distributed at pp11,13,14,15,25-26, not only in conclusion. E5 not E6: DFT with Euler form is sophisticated, but N=5 sample size, visual-only comparison, and phase shift approximation prevent E6.
 
 Respond ONLY with valid JSON, no markdown, no preamble:
 {"criteria":[{"letter":"A","name":"Presentation","max":4,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"B","name":"Mathematical Communication","max":4,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"C","name":"Personal Engagement","max":3,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"D","name":"Reflection","max":3,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"E","name":"Use of Mathematics","max":6,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""}],"total":0,"red_flags":[]}
