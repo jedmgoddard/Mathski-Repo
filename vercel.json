@@ -5,6 +5,10 @@
     }
   },
   "rewrites": [
-    { "source": "/api/mark", "destination": "/api/mark.js" }
-  ]
+    { "source": "/api/mark", "destination": "/api/mark.js" },
+    { "source": "/", "destination": "/mathski.html" }
+  ],
+  "api": {
+    "bodySizeLimit": "20mb"
+  }
 }
