@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/mark.js": {
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/api/mark", "destination": "/api/mark.js" }
+  ]
+}
