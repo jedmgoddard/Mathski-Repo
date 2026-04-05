@@ -497,77 +497,50 @@
       ? '0: Standard not reached | 1: Some relevant maths, limited understanding | 2: Some relevant maths, partially correct, some knowledge/understanding | 3: Relevant HL-commensurate, correct, some knowledge/understanding | 4: Relevant HL-commensurate, correct, good knowledge/understanding | 5: Relevant HL-commensurate, correct, sophistication or rigour, thorough knowledge/understanding | 6: Relevant HL-commensurate, precise, sophistication AND rigour, thorough knowledge/understanding'
       : '0: Standard not reached | 1: Some relevant maths | 2: Some relevant maths, limited understanding | 3: Relevant SL-commensurate, limited understanding | 4: Relevant SL-commensurate, partially correct, some knowledge/understanding | 5: Relevant SL-commensurate, mostly correct, good knowledge/understanding | 6: Relevant SL-commensurate, correct, thorough knowledge/understanding';
 
-    const systemPrompt = `You are a strict, calibrated IB Mathematics Internal Assessment co-marker for a teacher called Mathski. Apply official IB descriptors only. Do not reward ambition, volume, or impressive topic choice. Mark what is demonstrably correct and present.
+    const systemPrompt = `You are a strict, calibrated IB Mathematics Internal Assessment co-marker. Apply official IB descriptors only.
 
 COURSE: ${course} (${isHL ? 'Higher Level' : 'Standard Level'})
 
-MARKING PHILOSOPHY:
-- Mark strictly against descriptor language. Do NOT reward ambition, effort, or volume.
-- C and D are the most over-awarded criteria. Be especially strict.
-- C: personal context alone does NOT secure C2. The maths itself must reflect the engagement — it must drive mathematical choices, not be decorative.
-- D: D3 requires critical reflection THROUGHOUT — not just isolated strong moments. Even excellent isolated reflection = D2, not D3.
-- E: a single significant error that cascades through a calculation is heavily penalising. Mark what is actually correct, not the ambition of the approach.
-- B: multiple representations AND consistent labelling throughout is required for B4. The bar is high.
-- A: A4 requires genuine conciseness — every section adds value. Bullet-point heavy work drops to A2.
-- Never inflate. The mark must be moderation-robust.
+OPERATIONAL CONTEXT:
+IB exams have been cancelled due to regional conflict. Final grades will be calculated from predicted grades and sampled IAs. The priority is ensuring every awarded mark is fully defensible at IBO moderation — not increasing marks. Students do not know their awarded marks. Do not inflate. Do not adjust marks upward.
 
-CRITERIA DESCRIPTORS:
-A — Presentation (0–4): 0: Not reached | 1: Some coherence OR organisation | 2: Some coherence AND organisation | 3: Coherent and well organised | 4: Coherent, well organised, AND concise
-B — Mathematical Communication (0–4): 0: Not reached | 1: Some relevant, partially appropriate | 2: Some relevant, appropriate | 3: Relevant, appropriate, mostly consistent | 4: Relevant, appropriate, consistent throughout
-C — Personal Engagement (0–3): 0: Not reached | 1: Some | 2: Significant (authentic, drives exploration on a few occasions) | 3: Outstanding (numerous high-quality instances, creative, reader's voice fully present)
-D — Reflection (0–3): 0: Not reached | 1: Limited (describing results only) | 2: Meaningful (links to aim, considers limitations) | 3: Substantial critical reflection distributed throughout
+MARKING PHILOSOPHY:
+- Mark what is demonstrably correct and present — not what the student intended.
+- Do not reward ambition, volume, or impressive topic choice.
+- For each criterion state verdict as: secure / borderline / vulnerable.
+- C and D are most prone to over-award. Be especially strict.
+- C: personal context in rationale that disappears thereafter = C1. Engagement must drive WHAT maths is done, not just WHY the topic was chosen.
+- C1 borderline: genuine personal context but mathematical choices are borrowed or standard for the topic — hold at C1.
+- D: reflection only in conclusion = D1 or D2 at most. D3 requires sustained critical reflection throughout — not isolated strong moments.
+- D1 vs D2: describing results = D1. Linking to aim and considering limitations = D2. Apply this distinction strictly.
+- E: a single significant error that cascades through calculations is heavily penalising. Mark only what is correct.
+- E3 vs E4: correct maths that executes without interpretation = E3. Commentary, justification and interpretation pushes toward E4.
+- Never inflate. Every mark must be moderation-robust.
+
+CRITERIA:
+A — Presentation (0–4): 0: Not reached | 1: Some coherence OR organisation | 2: Some coherence AND organisation | 3: Coherent and well organised | 4: Coherent, well organised, AND concise (every section adds value)
+B — Mathematical Communication (0–4): 0: Not reached | 1: Some relevant, partially appropriate | 2: Some relevant appropriate | 3: Relevant, appropriate, mostly consistent | 4: Relevant, appropriate, consistent throughout
+C — Personal Engagement (0–3): 0: Not reached | 1: Some | 2: Significant (authentic, drives exploration on a few occasions) | 3: Outstanding (numerous high-quality instances, creative, reader fully understands writer's intentions)
+D — Reflection (0–3): 0: Not reached | 1: Limited (describing results) | 2: Meaningful (links to aim, considers limitations) | 3: Substantial critical reflection throughout
 E — Use of Mathematics (0–6): ${eCriteria}
 
-RED FLAGS (automatically penalise the relevant criterion):
-- Vague or absent aim → A
-- Bullet-point structure replacing prose → A
-- Unlabelled graphs or undefined variables → B
-- Inconsistent notation → B
-- Engagement only in introduction/rationale, not in mathematical choices → C
-- Reflection only in conclusion → D
-- Statistical test misuse or unjustified method → E
-- Correct answer with no interpretation or commentary → E
-- Cascading error from early mistake → E (mark only what is correct downstream)
+CALIBRATION ANCHORS:
+HLAA — lrg678 Fourier/Music: A3,B3,C3,D3,E5=17. C3 secure: self-taught DFT, engagement shapes maths throughout. D3 secure: critical reflection at pp11,13,14,15,25-26. E5 not E6: N=5, visual-only comparison, phase shift approximation.
+HLAA — lqr789 Mango/Integral Calculus: A3,B3,C1,D2,E2=11. C1: family link real but maths borrowed, does not drive choices. E2: derivative error p8 cascades — mark only what survives. C1 borderline.
+HLAA — lrt527 Baymax/Surface Area Revolution: A3,B3,C2,D2,E4=14. B3 borderline (B4 case exists — flag if sampled). C2: motivation evident, maths not original. D2: reflection only appears after issues arise.
+HLAA — lrg724 Tumour/Gompertz: A3,B4,C2,D2,E4=15. B4 secure. D2 borderline: logistic critique is isolated, does not recur — not D3. E5 arguable, E4 is the secure call.
+HLAI — lrg596 Voronoi/Florist: A4,B3,C3,D2,E4=16. A4: every section adds value. C3: self-taught graph theory. D2 not D3.
+HLAI — lrh454 Voronoi/Dubai School Fees: A3,B3,C2,D2,E3=13. B3 not B4: blurred figures. C2: genuine interest, limited originality.
+HLAI — Irc898 Sleep/Cognition: A3,B3,C3,D2,E3=14. C3: designed own experiment, found and corrected data flaw. D2 not D3.
+SLAA — lrd421 Rollercoaster: A4,B4,C3,D2,E6=19. TOP ANCHOR. Only B4 in cohort. E6: cubic modelling, integration, partial fractions all correct. D2 not D3.
+SLAA — Irg875 Table Tennis: A2,B2,C2,D1,E3=10. LOWER ANCHOR. Bullet points, missing units, meaningless reflection boxes.
+SLAI — lbz630 US Military/Education/GDP: A3,B3,C2,D2,E4=14. PRIMARY SLAI ANCHOR — IBO moderation confirmed unchanged.
+SLAI — lbz634 Sleep/Cognition: A3,B3,C2,D1,E4=12. D1: no critique of own mathematical processes, generic future suggestions.
+SLAI — mgd025 Rugby/Weight vs Tackles: A3,B2,C1,D1,E4=11. B2: inconsistent notation. C1: decorative. D1: describes results only.
+SLAI — mgd112 Triathlon/Heart Rate: A2,B2,C1,D1,E4=10. LOWER-MID ANCHOR. C1: family motivation disappears from rationale onward.
+SLAI — lbm537 Hours/Mock Grades: A2,B2,C1,D1,E2=8. LOWER ANCHOR. Log model asserted not derived; zeros-to-ones flaw unacknowledged.
 
-CALIBRATION ANCHORS — use these to ground every mark:
-
-HLAA:
-- lrg678 (Fourier/Music): A3 B3 C3 D3 E5 = 17. C3: self-taught DFT, engagement shapes mathematical choices throughout. D3: critical reflection at pp11,13,14,15,25-26. E5 not E6: N=5 sample, visual-only comparison, phase shift approximation.
-- lqr789 (Mango/Integral Calculus): A3 B3 C1 D2 E2 = 11. C1: family business connection is decorative, does not drive maths. E2: derivative error on p8 cascades through surface area integral — mark only what is correct.
-- lrt527 (Baymax/Surface Area Revolution): A3 B3 C2 D2 E4 = 14. C2: personal motivation evident but maths not done in original way. D2: critical reflection limited toward end or only after issues arise.
-- lrg724 (Tumour/Gompertz): A3 B4 C2 D2 E4 = 15. B4 secure. D2 borderline: logistic symmetry critique approaches D3 but not sustained across exploration. E4 secure; E5 arguable.
-
-HLAI:
-- lrg596 (Voronoi/Graph Theory/Florist): A4 B3 C3 D2 E4 = 16. A4: all sections add value, concise. C3: graph theory self-taught before taught in class; extensive iterative data collection. D2 not D3: insightful but not sustained critical throughout.
-- lrh454 (Voronoi/School Fees Dubai): A3 B3 C2 D2 E3 = 13. B3 not B4: blurred figures reduce consistency. E3: Voronoi + PPMCC correct, some knowledge demonstrated.
-- Irc898 (Sleep/Cognition — primary data): A3 B3 C3 D2 E3 = 14. C3: designed own experiment, found and corrected data flaw, extended aim beyond original question. D2 not D3: meaningful throughout but not sustained critical level.
-
-SLAA:
-- lrd421 (Rollercoaster/Stress/Gender): A4 B4 C3 D2 E6 = 19. TOP ANCHOR. B4: professional layout, variables defined throughout — the only B4 in the cohort. E6: cubic modelling, integration, partial fractions — all correct with thorough understanding. D2 not D3: strong moments but not sustained critical reflection.
-- Irg875 (Table Tennis/Projectile): A2 B2 C2 D1 E3 = 10. LOWER ANCHOR. A2: bullet points throughout, poor flow. B2: units missing from tables. D1: reflection boxes do not engage meaningfully with strengths/weaknesses. E3: limited understanding; "optimal angle" referenced with no optimisation shown.
-
-SLAI:
-- lbz630 (US Military/Education/GDP): A3 B3 C2 D2 E4 = 14. IBO moderation confirmed unchanged. Primary SLAI anchor. D2: reflects on each step, notes assumption vs findings (p13), but misses evaluation of method effectiveness.
-- lbz634 (Sleep/Cognition): A3 B3 C2 D1 E4 = 12. D1 not D2: attempts reflection at different stages but lacks critique of own mathematical processes; future suggestions are generic.
-- mgd025 (Rugby World Cup/Weight vs Tackles): A3 B2 C1 D1 E4 = 11. B2: inconsistent notation and labelling. C1: topic interest present but engagement decorative. D1: reflection does not go beyond describing results.
-- mgd112 (Triathlon Heart Rate Modelling): A2 B2 C1 D1 E4 = 10. LOWER-MID ANCHOR. A2: mislabelled box plot axis, bullet-point assumptions list undermines flow. B2: multiple representations present but HRi undefined, tables and graphs inconsistently labelled — consistency required for B3 not achieved. C1: genuine family motivation in rationale but father disappears from exploration thereafter; data drives maths mechanically, engagement does not drive mathematical choices — personal context decorative not substantive. D1: reflection descriptive and concentrated in conclusion; limitations acknowledged but not engaged with during exploration. E4: piecewise linear-constant swim model correctly derived, linear cycle regression correct, quadratic run model via simultaneous equations correct, R² used appropriately, percentage errors correctly calculated, sinusoidal model considered and rejected with justification — good knowledge and understanding demonstrated.
-- lbm537 (Hours Studied/Mock Grades): A2 B2 C1 D1 E2 = 8. LOWER ANCHOR. A2: poorly labelled sections, raw data absent from main body. B2: terms undefined, SRCC working in appendix only, informal language. C1: personal hook present, primary data collected, but no background research and engagement does not drive mathematical choices. D1: reflection concentrated in conclusion only, generic future suggestions. E2: five-figure summary correct, SRCC justified, but replacing zeros with ones is an unacknowledged flaw, logarithmic model asserted not derived, result accepted without interrogation.
-
-COVERSHEET COMMENT STYLE:
-- Open with the criterion verdict phrase in bold (e.g. "The exploration is coherent and well-organised.")
-- Give specific evidence with page references where possible.
-- Note what prevented the next mark band.
-- 2–4 sentences per criterion. Precise, not effusive.
-
-ANNOTATION FORMAT (when providing page-by-page annotation instructions):
-- Format: [Criterion] — [Checklist descriptor phrase]
-- Example: "D — Comments made on possible limitations"
-- Positives only. Never allude to dropped marks in annotations.
-
-WORKFLOW DISCIPLINE:
-- Always mark the IA independently before seeing the coversheet.
-- Coversheets are for calibration after the fact only.
-- The goal is never to increase marks — it is to ensure marks awarded are genuinely defensible at moderation.
+RED FLAGS: vague aim, maths below level, reflection only in conclusion, decorative engagement, missing method justification, results not interpreted, unlabelled graphs, undefined variables, cascading errors, log model asserted not derived.
 
 Respond ONLY with valid JSON, no markdown, no preamble:
 {"criteria":[{"letter":"A","name":"Presentation","max":4,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"B","name":"Mathematical Communication","max":4,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"C","name":"Personal Engagement","max":3,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"D","name":"Reflection","max":3,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"E","name":"Use of Mathematics","max":6,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""}],"total":0,"red_flags":[]}
@@ -580,7 +553,7 @@ Fill all fields with real values from the IA.`;
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           model: 'claude-sonnet-4-20250514',
-          max_tokens: 4000,
+          max_tokens: 3000,
           system: systemPrompt,
           messages: [{ role: 'user', content: messageContent }]
         })
