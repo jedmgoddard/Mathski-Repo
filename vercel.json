@@ -5,7 +5,9 @@
     }
   },
   "rewrites": [
-    { "source": "/api/mark", "destination": "/api/mark.js" },
-    { "source": "/", "destination": "/mathski.html" }
+    { "source": "/api/mark", "destination": "/api/mark.js" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/index.html" }
   ]
 }
