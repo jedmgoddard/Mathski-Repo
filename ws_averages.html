@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Averages</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#f2f2f7;--white:#fff;--blue:#007aff;--blue-light:#e8f2ff;--blue-dark:#0055cc;--orange:#ff9500;--orange-light:#fff4e0;--text:#1c1c1e;--text-sec:#3c3c43;--text-muted:#6b6b70;--r:16px;--rs:10px;--sh:0 2px 12px rgba(0,0,0,.07);}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:"Nunito Sans",-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;-webkit-font-smoothing:antialiased;}
+header{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.08);padding:0 24px;position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:"Nunito",sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);}.logo-text span{color:var(--blue);}
+.hdr{display:flex;align-items:center;gap:10px;}.htag{font-size:.72rem;color:var(--text-muted);font-weight:500;letter-spacing:.04em;text-transform:uppercase;}
+.tw{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px;}.tb{font-family:"Nunito",sans-serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;color:var(--text-muted);background:transparent;}.tb.on{background:var(--white);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.1);}.tb.on.sol{color:var(--orange);}
+.shell{max-width:720px;margin:0 auto;padding:28px 20px 80px;}.wm{background:var(--white);border-radius:var(--r);padding:20px 22px;margin-bottom:18px;box-shadow:var(--sh);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}.wt{font-family:"Nunito",sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:3px;}.ws{font-size:.8rem;color:var(--text-muted);}.wb{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;background:var(--blue-light);color:var(--blue);}.wb.sb{background:var(--orange-light);color:var(--orange);}
+.nl{background:var(--white);border-radius:var(--rs);padding:13px 18px;margin-bottom:18px;box-shadow:var(--sh);font-size:.88rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}.nd{flex:1;border-bottom:1.5px dotted var(--text-muted);height:1px;margin-top:2px;}
+.qc{background:var(--white);border-radius:var(--r);padding:22px 22px 18px;margin-bottom:14px;box-shadow:var(--sh);animation:fu .3s ease both;}@keyframes fu{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.qn{font-family:"Nunito",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}.qs{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:14px;}.qp{display:flex;flex-direction:column;gap:10px;}.qr{display:flex;gap:14px;align-items:baseline;}.ql{font-family:"Nunito",sans-serif;font-weight:700;font-size:.85rem;color:var(--text-sec);min-width:22px;flex-shrink:0;}.qt{font-size:.92rem;color:var(--text);line-height:1.65;}
+.dr{display:flex;flex-wrap:wrap;gap:10px 0;margin-bottom:6px;}.dc{display:flex;gap:10px;align-items:baseline;min-width:33%;padding-right:12px;}.dc2{min-width:50%;}.dc .ql{min-width:20px;}
+.ss{background:var(--orange-light);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px;font-size:.88rem;line-height:1.75;color:var(--text-sec);}.ss .sl{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:4px;}
+.sa{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;margin-top:6px;font-size:.9rem;color:var(--blue-dark);font-weight:600;}.sa .al{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:3px;}
+.sp{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bg);}.sp:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}.sh{display:flex;gap:10px;align-items:baseline;margin-bottom:4px;}
+.ft{text-align:center;margin-top:32px;font-size:.73rem;color:var(--text-muted);}
+@media print{header{display:none;}body{background:white;}.qc,.wm,.nl{box-shadow:none;border:1px solid #e5e5e5;break-inside:avoid;}}
+.mode-q .so{display:none;}.mode-s .qo{display:none;}
+</style></head><body class="mode-q">
+<header><div class="logo-text">Math<span>ski</span></div>
+<div class="hdr"><span class="htag" id="ml">Worksheet</span>
+<div class="tw"><button class="tb on" id="bq" onclick="sm('q')">Questions</button><button class="tb" id="bs" onclick="sm('s')">Solutions</button></div></div></header>
+<div class="shell">
+<div class="wm"><div><div class="wt">Averages</div><div class="ws">IB Mathematics AA &middot; SL &amp; HL &middot; Shadow Worksheet</div></div><div class="wb" id="mb">Practice</div></div>
+<div class="nl qo">Name <div class="nd"></div></div>
+<div class="qc"><div class="qn">Question 1</div>
+<div class="qs">Find the mean, median, and mode of the following data sets:</div>
+<div class="qp">
+<div class="qr"><span class="ql">(a)</span><span class="qt">\(3,\;7,\;5,\;2,\;8,\;5,\;4,\;9,\;5,\;2\)</span></div>
+<div class="qr"><span class="ql">(b)</span><span class="qt">\(12,\;15,\;11,\;18,\;14,\;16,\;13\)</span></div>
+</div>
+<div class="so">
+<div class="sp"><div class="sh"><span class="ql">(a)</span></div>
+<div class="ss"><div class="sl">Sort: 2,2,3,4,5,5,5,7,8,9</div>Mean \(=	frac{50}{10}=5\); Median \(=	frac{5+5}{2}=5\); Mode \(=5\)</div>
+<div class="sa"><div class="al">Answer</div>Mean \(5\), Median \(5\), Mode \(5\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(b)</span></div>
+<div class="ss"><div class="sl">Sort: 11,12,13,14,15,16,18</div>Mean \(=	frac{99}{7}=	frac{99}{7}pprox14.1\); Median \(=14\); Mode: none</div>
+<div class="sa"><div class="al">Answer</div>Mean \(pprox14.1\), Median \(14\), No mode</div></div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 2</div>
+<div class="qs">The following frequency table shows scores in a test:</div>
+<div class="qs" style="overflow-x:auto">\[egin{array}{c|ccccc}	ext{Score}&2&3&4&5&6\\hline	ext{Frequency}&3&7&12&6&2\end{array}\]</div>
+<div class="qp">
+<div class="qr"><span class="ql">(a)</span><span class="qt">Find the mean score.</span></div>
+<div class="qr"><span class="ql">(b)</span><span class="qt">Find the median score.</span></div>
+<div class="qr"><span class="ql">(c)</span><span class="qt">Find the modal score.</span></div>
+</div>
+<div class="so">
+<div class="sp"><div class="sh"><span class="ql">(a)</span></div>
+<div class="ss"><div class="sl">Weighted mean</div>\(\dfrac{6+21+48+30+12}{30}=\dfrac{117}{30}=3.9\)</div>
+<div class="sa"><div class="al">Answer</div>\(3.9\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(b)</span></div>
+<div class="ss"><div class="sl">Cumulative freq: 3,10,22,28,30. Median = average of 15th and 16th values</div>Both in score 4 group</div>
+<div class="sa"><div class="al">Answer</div>\(4\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(c)</span></div><div class="sa"><div class="al">Answer</div>\(4\) (highest frequency)</div></div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 3</div>
+<div class="qs">The mean of six numbers is 14. Five of the numbers are 10, 16, 12, 18, 15. Find the sixth number.</div>
+<div class="so">
+<div class="ss"><div class="sl">Sum of all six</div>\(6	imes14=84\); sum of five \(=71\)</div>
+<div class="sa"><div class="al">Answer</div>\(84-71=13\)</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 4</div>
+<div class="qs">The grouped frequency table shows ages of visitors to a museum:</div>
+<div class="qs" style="overflow-x:auto">\[egin{array}{c|c}	ext{Age (years)}&	ext{Frequency}\\hline10\leq a<20&8\20\leq a<30&15\30\leq a<40&22\40\leq a<50&11\50\leq a<60&4\end{array}\]</div>
+<div class="qp">
+<div class="qr"><span class="ql">(a)</span><span class="qt">Estimate the mean age.</span></div>
+<div class="qr"><span class="ql">(b)</span><span class="qt">State the modal class.</span></div>
+</div>
+<div class="so">
+<div class="sp"><div class="sh"><span class="ql">(a)</span></div>
+<div class="ss"><div class="sl">Midpoints: 15,25,35,45,55</div>\(ar{x}=\dfrac{8(15)+15(25)+22(35)+11(45)+4(55)}{60}=\dfrac{120+375+770+495+220}{60}=\dfrac{1980}{60}\)</div>
+<div class="sa"><div class="al">Answer</div>\(33\) years</div></div>
+<div class="sp"><div class="sh"><span class="ql">(b)</span></div><div class="sa"><div class="al">Answer</div>\(30\leq a<40\)</div></div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 5</div>
+<div class="qs">When is the median a more appropriate average than the mean? Give an example.</div>
+<div class="so">
+<div class="ss"><div class="sl">When data is skewed or has outliers</div>The mean is pulled by extreme values; the median is resistant to outliers.</div>
+<div class="sa"><div class="al">Example</div>House prices in a neighbourhood — a few very expensive properties inflate the mean, making the median a better measure of a "typical" price.</div>
+</div></div>
+<div class="ft">Generated by Mathski &nbsp;&middot;&nbsp; mathski.io &nbsp;&middot;&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div><script>
+function sm(m){{document.body.className="mode-"+m;document.getElementById("bq").className="tb"+(m==="q"?" on":"");document.getElementById("bs").className="tb"+(m==="s"?" on sol":"");document.getElementById("ml").textContent=m==="q"?"Worksheet":"Solutions";document.getElementById("mb").textContent=m==="q"?"Practice":"Solutions";document.getElementById("mb").className="wb"+(m==="s"?" sb":"");}}
+document.addEventListener("DOMContentLoaded",()=>{{renderMathInElement(document.body,{{delimiters:[{{left:"\\(",right:"\\)",display:false}},{{left:"\\[",right:"\\]",display:true}}],throwOnError:false}});}});
+</script></body></html>

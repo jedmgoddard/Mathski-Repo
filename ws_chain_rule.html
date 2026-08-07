@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Chain Rule &amp; Basic Trig Derivatives</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f2f7;--white:#ffffff;--blue:#007aff;--blue-light:#e8f2ff;--blue-mid:#c5dbff;--blue-dark:#0055cc;--orange:#ff9500;--orange-light:#fff4e0;--text:#1c1c1e;--text-sec:#3c3c43;--text-muted:#6b6b70;--radius-card:16px;--radius-sm:10px;--shadow:0 2px 12px rgba(0,0,0,0.07);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Nunito Sans',-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;-webkit-font-smoothing:antialiased;}
+header{background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.08);padding:0 24px;position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);}.logo-text span{color:var(--blue);}
+.header-right{display:flex;align-items:center;gap:10px;}
+.header-tag{font-size:0.72rem;color:var(--text-muted);font-weight:500;letter-spacing:0.04em;text-transform:uppercase;}
+.toggle-wrap{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px;}
+.toggle-btn{font-family:'Nunito',sans-serif;font-size:0.78rem;font-weight:700;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all 0.18s;color:var(--text-muted);background:transparent;}
+.toggle-btn.active{background:var(--white);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,0.1);}
+.toggle-btn.active.solutions{color:var(--orange);}
+.shell{max-width:720px;margin:0 auto;padding:28px 20px 80px;}
+.ws-meta{background:var(--white);border-radius:var(--radius-card);padding:20px 22px;margin-bottom:18px;box-shadow:var(--shadow);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}
+.ws-title{font-family:'Nunito',sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:3px;}
+.ws-subtitle{font-size:0.8rem;color:var(--text-muted);}
+.ws-badge{font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;background:var(--blue-light);color:var(--blue);}
+.ws-badge.solutions-badge{background:var(--orange-light);color:var(--orange);}
+.name-line{background:var(--white);border-radius:var(--radius-sm);padding:13px 18px;margin-bottom:18px;box-shadow:var(--shadow);font-size:0.88rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}
+.name-dots{flex:1;border-bottom:1.5px dotted var(--text-muted);height:1px;margin-top:2px;}
+.q-card{background:var(--white);border-radius:var(--radius-card);padding:22px 22px 18px;margin-bottom:14px;box-shadow:var(--shadow);animation:fadeUp 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.q-number{font-family:'Nunito',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}
+.q-stem{font-size:0.95rem;color:var(--text);line-height:1.7;margin-bottom:14px;}
+.q-parts{display:flex;flex-direction:column;gap:10px;}
+.q-part{display:flex;gap:14px;align-items:baseline;}
+.q-part-label{font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-sec);min-width:22px;flex-shrink:0;}
+.q-part-text{font-size:0.92rem;color:var(--text);line-height:1.65;}
+.drill-row{display:flex;flex-wrap:wrap;gap:10px 0;margin-bottom:6px;}
+.drill-cell{display:flex;gap:10px;align-items:baseline;min-width:33%;padding-right:12px;}
+.drill-cell .q-part-label{min-width:20px;}
+.sol-step{background:var(--orange-light);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px;font-size:0.88rem;line-height:1.75;color:var(--text-sec);}
+.sol-step .step-label{font-family:'Nunito',sans-serif;font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;color:var(--orange);margin-bottom:4px;}
+.sol-answer{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;margin-top:6px;font-size:0.9rem;color:var(--blue-dark);font-weight:600;}
+.sol-answer .ans-label{font-family:'Nunito',sans-serif;font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;color:var(--blue);margin-bottom:3px;}
+.sol-part{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bg);}
+.sol-part:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.sol-part-header{display:flex;gap:10px;align-items:baseline;margin-bottom:4px;}
+.ws-footer{text-align:center;margin-top:32px;font-size:0.73rem;color:var(--text-muted);}
+@media print{header{display:none;}body{background:white;}.q-card,.ws-meta,.name-line{box-shadow:none;border:1px solid #e5e5e5;break-inside:avoid;}}
+.mode-questions .solutions-only{display:none;}
+.mode-solutions .questions-only{display:none;}
+</style>
+</head>
+<body class="mode-questions">
+<header>
+  <div class="logo-text">Math<span>ski</span></div>
+  <div class="header-right">
+    <span class="header-tag" id="mode-label">Worksheet</span>
+    <div class="toggle-wrap">
+      <button class="toggle-btn active" id="btn-q" onclick="setMode('questions')">Questions</button>
+      <button class="toggle-btn" id="btn-s" onclick="setMode('solutions')">Solutions</button>
+    </div>
+  </div>
+</header>
+<div class="shell">
+  <div class="ws-meta">
+    <div>
+      <div class="ws-title">Chain Rule &amp; Basic Trig Derivatives</div>
+      <div class="ws-subtitle">IB Mathematics AA · SL &amp; HL · Shadow Worksheet</div>
+    </div>
+    <div class="ws-badge" id="meta-badge">Practice</div>
+  </div>
+  <div class="name-line questions-only">Name <div class="name-dots"></div></div>
+
+  <!-- Q1: Chain rule — polynomial composites -->
+  <div class="q-card">
+    <div class="q-number">Question 1</div>
+    <div class="q-stem">Differentiate the following using the chain rule:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = (3x - 1)^5\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = (x^2 - 4)^6\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = (2x^3 + x)^4\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(f(x) = \dfrac{1}{(4x+1)^3}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(e)</span><span class="q-part-text">\(f(x) = \sqrt{3x^2 - 5}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(f)</span><span class="q-part-text">\(f(x) = \dfrac{3}{\sqrt{x^2+x}}\)</span></div>
+      </div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(15(3x-1)^4\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(12x(x^2-4)^5\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(4(6x^2+1)(2x^3+x)^3\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\((4x+1)^{-3}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(-12(4x+1)^{-4}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(e)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{3x}{\sqrt{3x^2-5}}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(f)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(3(x^2+x)^{-1/2}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(-\dfrac{3(2x+1)}{2(x^2+x)^{3/2}}\)</div></div>
+    </div>
+  </div>
+
+  <!-- Q2: Exponential chain -->
+  <div class="q-card">
+    <div class="q-number">Question 2</div>
+    <div class="q-stem">Differentiate the following:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = e^{3x}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = 5e^{x^2}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = 3e^{2x^2-x}\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(f(x) = -e^{-4x}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(e)</span><span class="q-part-text">\(f(x) = 4e^{-x^2}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(f)</span><span class="q-part-text">\(f(x) = 7e^{x^3+2x-1}\)</span></div>
+      </div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(3e^{3x}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(10xe^{x^2}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(3(4x-1)e^{2x^2-x}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(4e^{-4x}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(e)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(-8xe^{-x^2}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(f)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(7(3x^2+2)e^{x^3+2x-1}\)</div></div>
+    </div>
+  </div>
+
+  <!-- Q3: Log chain -->
+  <div class="q-card">
+    <div class="q-number">Question 3</div>
+    <div class="q-stem">Differentiate the following:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = \ln(3x)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = \ln(x-4)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = \ln(3x^2+1)\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(f(x) = \ln(x^2 - x)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(e)</span><span class="q-part-text">\(f(x) = \ln(x^4 + 2x)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(f)</span><span class="q-part-text">\(f(x) = \ln(e^{2x})\)</span></div>
+      </div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{1}{x}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{1}{x-4}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{6x}{3x^2+1}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{2x-1}{x^2-x}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(e)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{4x^3+2}{x^4+2x}\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(f)</span></div>
+        <div class="sol-step"><div class="step-label">Simplify first</div>\(\ln(e^{2x}) = 2x\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(2\)</div></div>
+    </div>
+  </div>
+
+  <!-- Q4: Trig chain -->
+  <div class="q-card">
+    <div class="q-number">Question 4</div>
+    <div class="q-stem">Differentiate the following trig functions:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = \sin(4x)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = \cos(x^2)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = \tan(3x+1)\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(f(x) = \sin^2(x)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(e)</span><span class="q-part-text">\(f(x) = 2\cos(x^3 - x)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(f)</span><span class="q-part-text">\(f(x) = \sqrt{\sin x}\)</span></div>
+      </div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(4\cos(4x)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(-2x\sin(x^2)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(3\sec^2(3x+1)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite as composite</div>\((\sin x)^2\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(2\sin x \cos x = \sin 2x\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(e)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(-2(3x^2-1)\sin(x^3-x)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(f)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\((\sin x)^{1/2}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{\cos x}{2\sqrt{\sin x}}\)</div></div>
+    </div>
+  </div>
+
+  <!-- Q5: Mixed chain + application -->
+  <div class="q-card">
+    <div class="q-number">Question 5</div>
+    <div class="q-stem">Find the equation of the tangent to \(f(x) = (2x^2 - 1)^3\) at \(x = 1\). Leave your answer in the form \(y = mx + c\).</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Find gradient</div>\(f'(x) = 3(2x^2-1)^2 \cdot 4x = 12x(2x^2-1)^2\)</div>
+      <div class="sol-step"><div class="step-label">At \(x=1\)</div>\(f'(1) = 12(1)(1)^2 = 12,\quad f(1) = 1\)</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(y = 12x - 11\)</div>
+    </div>
+  </div>
+
+  <!-- Q6: Application — stationary points with chain rule -->
+  <div class="q-card">
+    <div class="q-number">Question 6</div>
+    <div class="q-stem">\(f(x) = e^{x^2 - 4x}\). Show that \(f'(x) = 0\) when \(x = 2\) and find the value of \(f(2)\). Leave your answer in exact form.</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Differentiate</div>\(f'(x) = (2x-4)e^{x^2-4x}\)</div>
+      <div class="sol-step"><div class="step-label">Set to zero</div>\((2x-4)e^{x^2-4x}=0\). Since \(e^{x^2-4x}>0\) for all \(x\), we need \(2x-4=0 \Rightarrow x=2\) ✓</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(f(2) = e^{4-8} = e^{-4}\)</div>
+    </div>
+  </div>
+
+  <!-- Q7: [Non-GDC] Combined -->
+  <div class="q-card">
+    <div class="q-number">Question 7</div>
+    <div class="q-stem">[Non GDC] The graph of \(f(x) = \ln(x^2 - 3x + 3)\) is shown below.</div>
+    <div class="q-parts">
+      <div class="q-part"><span class="q-part-label">(a)</span><span class="q-part-text">Find \(f'(x)\).</span></div>
+      <div class="q-part"><span class="q-part-label">(b)</span><span class="q-part-text">Show that the gradient is \(0\) when \(x = \dfrac{3}{2}\) and find \(f\!\left(\dfrac{3}{2}\right)\).</span></div>
+      <div class="q-part"><span class="q-part-label">(c)</span><span class="q-part-text">Find the coordinates of the minimum point. Leave your answer in exact form.</span></div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = \dfrac{2x-3}{x^2-3x+3}\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Set numerator to zero</div>\(2x-3=0 \Rightarrow x=\tfrac{3}{2}\) ✓</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f\!\left(\tfrac{3}{2}\right) = \ln\!\left(\tfrac{9}{4}-\tfrac{9}{2}+3\right) = \ln\!\left(\tfrac{3}{4}\right)\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Minimum at \(\left(\dfrac{3}{2},\ \ln\dfrac{3}{4}\right)\)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ws-footer">Generated by Mathski &nbsp;·&nbsp; mathski.io &nbsp;·&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div>
+<script>
+function setMode(m){document.body.className='mode-'+m;document.getElementById('btn-q').className='toggle-btn'+(m==='questions'?' active':'');document.getElementById('btn-s').className='toggle-btn'+(m==='solutions'?' active solutions':'');document.getElementById('mode-label').textContent=m==='questions'?'Worksheet':'Solutions';document.getElementById('meta-badge').textContent=m==='questions'?'Practice':'Solutions';document.getElementById('meta-badge').className='ws-badge'+(m==='solutions'?' solutions-badge':'');}
+document.addEventListener('DOMContentLoaded',()=>{renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}],throwOnError:false});});
+</script>
+</body>
+</html>

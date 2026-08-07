@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Binomial Expansion II</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#f2f2f7;--white:#fff;--blue:#007aff;--blue-light:#e8f2ff;--blue-dark:#0055cc;--orange:#ff9500;--orange-light:#fff4e0;--text:#1c1c1e;--text-sec:#3c3c43;--text-muted:#6b6b70;--r:16px;--rs:10px;--sh:0 2px 12px rgba(0,0,0,.07);}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:"Nunito Sans",-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;-webkit-font-smoothing:antialiased;}
+header{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.08);padding:0 24px;position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:"Nunito",sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);}.logo-text span{color:var(--blue);}
+.hdr{display:flex;align-items:center;gap:10px;}.htag{font-size:.72rem;color:var(--text-muted);font-weight:500;letter-spacing:.04em;text-transform:uppercase;}
+.tw{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px;}.tb{font-family:"Nunito",sans-serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;color:var(--text-muted);background:transparent;}.tb.on{background:var(--white);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.1);}.tb.on.sol{color:var(--orange);}
+.shell{max-width:720px;margin:0 auto;padding:28px 20px 80px;}.wm{background:var(--white);border-radius:var(--r);padding:20px 22px;margin-bottom:18px;box-shadow:var(--sh);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}.wt{font-family:"Nunito",sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:3px;}.ws{font-size:.8rem;color:var(--text-muted);}.wb{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;background:var(--blue-light);color:var(--blue);}.wb.sb{background:var(--orange-light);color:var(--orange);}
+.nl{background:var(--white);border-radius:var(--rs);padding:13px 18px;margin-bottom:18px;box-shadow:var(--sh);font-size:.88rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}.nd{flex:1;border-bottom:1.5px dotted var(--text-muted);height:1px;margin-top:2px;}
+.qc{background:var(--white);border-radius:var(--r);padding:22px 22px 18px;margin-bottom:14px;box-shadow:var(--sh);animation:fu .3s ease both;}@keyframes fu{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.qn{font-family:"Nunito",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}.qs{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:14px;}.qp{display:flex;flex-direction:column;gap:10px;}.qr{display:flex;gap:14px;align-items:baseline;}.ql{font-family:"Nunito",sans-serif;font-weight:700;font-size:.85rem;color:var(--text-sec);min-width:22px;flex-shrink:0;}.qt{font-size:.92rem;color:var(--text);line-height:1.65;}
+.dr{display:flex;flex-wrap:wrap;gap:10px 0;margin-bottom:6px;}.dc{display:flex;gap:10px;align-items:baseline;min-width:33%;padding-right:12px;}.dc2{min-width:50%;}.dc .ql{min-width:20px;}
+.ss{background:var(--orange-light);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px;font-size:.88rem;line-height:1.75;color:var(--text-sec);}.ss .sl{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:4px;}
+.sa{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;margin-top:6px;font-size:.9rem;color:var(--blue-dark);font-weight:600;}.sa .al{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:3px;}
+.sp{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bg);}.sp:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}.sh{display:flex;gap:10px;align-items:baseline;margin-bottom:4px;}
+.ft{text-align:center;margin-top:32px;font-size:.73rem;color:var(--text-muted);}
+@media print{header{display:none;}body{background:white;}.qc,.wm,.nl{box-shadow:none;border:1px solid #e5e5e5;break-inside:avoid;}}
+.mode-q .so{display:none;}.mode-s .qo{display:none;}
+</style></head><body class="mode-q">
+<header><div class="logo-text">Math<span>ski</span></div>
+<div class="hdr"><span class="htag" id="ml">Worksheet</span>
+<div class="tw"><button class="tb on" id="bq" onclick="sm('q')">Questions</button><button class="tb" id="bs" onclick="sm('s')">Solutions</button></div></div></header>
+<div class="shell">
+<div class="wm"><div><div class="wt">Binomial Expansion II</div><div class="ws">IB Mathematics AA &middot; SL &amp; HL &middot; Shadow Worksheet</div></div><div class="wb" id="mb">Practice</div></div>
+<div class="nl qo">Name <div class="nd"></div></div>
+<div class="qc"><div class="qn">Question 1</div><div class="qs">Find the first four terms of the expansion of \((1-2x)^7\) in ascending powers of \(x\).</div>
+<div class="so">
+<div class="ss"><div class="sl">Terms \(r=0,1,2,3\)</div>\(1+7(-2x)+21(-2x)^2+35(-2x)^3\)</div>
+<div class="sa"><div class="al">Answer</div>\(1-14x+84x^2-280x^3+\ldots\)</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 2</div><div class="qs">The expansion of \((a+bx)^5\) has first term 32 and second term \(-240x\). Find \(a\) and \(b\).</div>
+<div class="so">
+<div class="ss"><div class="sl">First term</div>\(a^5=32\Rightarrow a=2\)</div>
+<div class="ss"><div class="sl">Second term</div>\(5a^4b=-240\Rightarrow 5\cdot16\cdot b=-240\Rightarrow b=-3\)</div>
+<div class="sa"><div class="al">Answer</div>\(a=2,\;b=-3\)</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 3</div><div class="qs">Find the coefficient of \(x^4\) in the expansion of \((3+x)^3(1-2x)^4\). <em>(Consider only the \(x^4\) producing terms.)</em></div>
+<div class="so">
+<div class="ss"><div class="sl">Expand each to relevant terms</div>\((3+x)^3=27+27x+9x^2+x^3\); \((1-2x)^4=1-8x+24x^2-32x^3+16x^4\)</div>
+<div class="ss"><div class="sl">Collect \(x^4\) contributions</div>\(27\cdot16+27\cdot(-32)+9\cdot24+1\cdot(-8)=432-864+216-8\)</div>
+<div class="sa"><div class="al">Answer</div>\(-224\)</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 4</div><div class="qs">Show that the ratio of the 4th term to the 3rd term in the expansion of \((1+x)^n\) is \(\dfrac{(n-2)x}{3}\).</div>
+<div class="so">
+<div class="ss"><div class="sl">3rd term (\(r=2\))</div>\(inom{n}{2}x^2=\dfrac{n(n-1)}{2}x^2\)</div>
+<div class="ss"><div class="sl">4th term (\(r=3\))</div>\(inom{n}{3}x^3=\dfrac{n(n-1)(n-2)}{6}x^3\)</div>
+<div class="ss"><div class="sl">Ratio</div>\(\dfrac{n(n-1)(n-2)x^3/6}{n(n-1)x^2/2}=\dfrac{(n-2)x}{3}\) ✓</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 5</div><div class="qs">Find the term in \(x^2\) in the expansion of \((2x+1)^3(x-3)^4\).</div>
+<div class="so">
+<div class="ss"><div class="sl">Relevant terms from each</div>\((2x+1)^3: 1+6x+12x^2+\ldots\); \((x-3)^4: 81-108x+54x^2-\ldots\)</div>
+<div class="ss"><div class="sl">Collect \(x^2\)</div>\(1\cdot54+6x\cdot(-108x)+12x^2\cdot81=54-648+972\)</div>
+<div class="sa"><div class="al">Answer</div>\(378x^2\); coefficient is \(378\)</div>
+</div></div>
+<div class="ft">Generated by Mathski &nbsp;&middot;&nbsp; mathski.io &nbsp;&middot;&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div><script>
+function sm(m){{document.body.className="mode-"+m;document.getElementById("bq").className="tb"+(m==="q"?" on":"");document.getElementById("bs").className="tb"+(m==="s"?" on sol":"");document.getElementById("ml").textContent=m==="q"?"Worksheet":"Solutions";document.getElementById("mb").textContent=m==="q"?"Practice":"Solutions";document.getElementById("mb").className="wb"+(m==="s"?" sb":"");}}
+document.addEventListener("DOMContentLoaded",()=>{{renderMathInElement(document.body,{{delimiters:[{{left:"\\(",right:"\\)",display:false}},{{left:"\\[",right:"\\]",display:true}}],throwOnError:false}});}});
+</script></body></html>

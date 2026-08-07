@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Proof</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#f2f2f7;--white:#fff;--blue:#007aff;--blue-light:#e8f2ff;--blue-dark:#0055cc;--orange:#ff9500;--orange-light:#fff4e0;--text:#1c1c1e;--text-sec:#3c3c43;--text-muted:#6b6b70;--r:16px;--rs:10px;--sh:0 2px 12px rgba(0,0,0,.07);}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:"Nunito Sans",-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;-webkit-font-smoothing:antialiased;}
+header{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.08);padding:0 24px;position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:"Nunito",sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);}.logo-text span{color:var(--blue);}
+.hdr{display:flex;align-items:center;gap:10px;}.htag{font-size:.72rem;color:var(--text-muted);font-weight:500;letter-spacing:.04em;text-transform:uppercase;}
+.tw{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px;}.tb{font-family:"Nunito",sans-serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;color:var(--text-muted);background:transparent;}.tb.on{background:var(--white);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.1);}.tb.on.sol{color:var(--orange);}
+.shell{max-width:720px;margin:0 auto;padding:28px 20px 80px;}.wm{background:var(--white);border-radius:var(--r);padding:20px 22px;margin-bottom:18px;box-shadow:var(--sh);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}.wt{font-family:"Nunito",sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:3px;}.ws{font-size:.8rem;color:var(--text-muted);}.wb{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;background:var(--blue-light);color:var(--blue);}.wb.sb{background:var(--orange-light);color:var(--orange);}
+.nl{background:var(--white);border-radius:var(--rs);padding:13px 18px;margin-bottom:18px;box-shadow:var(--sh);font-size:.88rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}.nd{flex:1;border-bottom:1.5px dotted var(--text-muted);height:1px;margin-top:2px;}
+.qc{background:var(--white);border-radius:var(--r);padding:22px 22px 18px;margin-bottom:14px;box-shadow:var(--sh);animation:fu .3s ease both;}@keyframes fu{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.qn{font-family:"Nunito",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}.qs{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:14px;}.qp{display:flex;flex-direction:column;gap:10px;}.qr{display:flex;gap:14px;align-items:baseline;}.ql{font-family:"Nunito",sans-serif;font-weight:700;font-size:.85rem;color:var(--text-sec);min-width:22px;flex-shrink:0;}.qt{font-size:.92rem;color:var(--text);line-height:1.65;}
+.dr{display:flex;flex-wrap:wrap;gap:10px 0;margin-bottom:6px;}.dc{display:flex;gap:10px;align-items:baseline;min-width:33%;padding-right:12px;}.dc2{min-width:50%;}.dc .ql{min-width:20px;}
+.ss{background:var(--orange-light);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px;font-size:.88rem;line-height:1.75;color:var(--text-sec);}.ss .sl{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:4px;}
+.sa{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;margin-top:6px;font-size:.9rem;color:var(--blue-dark);font-weight:600;}.sa .al{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:3px;}
+.sp{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bg);}.sp:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}.sh{display:flex;gap:10px;align-items:baseline;margin-bottom:4px;}
+.ft{text-align:center;margin-top:32px;font-size:.73rem;color:var(--text-muted);}
+@media print{header{display:none;}body{background:white;}.qc,.wm,.nl{box-shadow:none;border:1px solid #e5e5e5;break-inside:avoid;}}
+.mode-q .so{display:none;}.mode-s .qo{display:none;}
+</style></head><body class="mode-q">
+<header><div class="logo-text">Math<span>ski</span></div>
+<div class="hdr"><span class="htag" id="ml">Worksheet</span>
+<div class="tw"><button class="tb on" id="bq" onclick="sm('q')">Questions</button><button class="tb" id="bs" onclick="sm('s')">Solutions</button></div></div></header>
+<div class="shell">
+<div class="wm"><div><div class="wt">Proof</div><div class="ws">IB Mathematics AA &middot; HL &middot; Shadow Worksheet</div></div><div class="wb" id="mb">Practice</div></div>
+<div class="nl qo">Name <div class="nd"></div></div>
+<div class="qc"><div class="qn">Question 1</div><div class="qs">Prove that the product of two odd numbers is always odd.</div>
+<div class="so">
+<div class="ss"><div class="sl">Let two odd numbers be</div>\(2m+1\) and \(2n+1\) for integers \(m,n\)</div>
+<div class="ss"><div class="sl">Product</div>\((2m+1)(2n+1)=4mn+2m+2n+1=2(2mn+m+n)+1\)</div>
+<div class="sa"><div class="al">Conclusion</div>This is of the form \(2k+1\) where \(k=2mn+m+n\in\mathbb{Z}\). Hence the product is odd. &#9632;</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 2</div><div class="qs">Prove that if \(n\) is even then \(n^3+n\) is divisible by 4.</div>
+<div class="so">
+<div class="ss"><div class="sl">Let \(n=2k\)</div>\(n^3+n=8k^3+2k=2k(4k^2+1)\)</div>
+<div class="ss"><div class="sl">Since \(n=2k\) is even</div>\(n^3+n=2k(4k^2+1)\). For this to be divisible by 4, we need \(2k\) divisible by 4 OR \(4k^2+1\) even — but \(4k^2+1\) is always odd.</div>
+<div class="ss"><div class="sl">Re-approach</div>\(n^3+n=n(n^2+1)\). With \(n=2k\): \(2k(4k^2+1)\). Note \(4k^2+1\) is odd; so we need \(2k\) to supply the factor of 4. When \(k\) is any integer, \(n(n^2+1)=2k(4k^2+1)\) is divisible by 2. We need to show divisible by 4: take \(n=2k\), then \(n^2+1=4k^2+1\equiv 1\pmod{4}\), and \(n=2k\equiv 2\pmod 4\) when \(k\) is odd, giving product \(\equiv 2\pmod 4\) — <em>not</em> always divisible by 4. Counterexample: \(n=2\): \(8+2=10\), not divisible by 4.</div>
+<div class="sa"><div class="al">Conclusion</div>Statement is <strong>false</strong>. Counterexample: \(n=2\) gives \(n^3+n=10\), which is not divisible by 4.</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 3</div><div class="qs">Prove by contradiction that \(\sqrt{3}\) is irrational.</div>
+<div class="so">
+<div class="ss"><div class="sl">Assume</div>\(\sqrt{3}=\dfrac{p}{q}\) in lowest terms (\(\gcd(p,q)=1\))</div>
+<div class="ss"><div class="sl">Then</div>\(3=\dfrac{p^2}{q^2}\Rightarrow p^2=3q^2\), so \(3|p^2\Rightarrow 3|p\). Let \(p=3k\).</div>
+<div class="ss"><div class="sl">Substitute</div>\(9k^2=3q^2\Rightarrow q^2=3k^2\Rightarrow 3|q\). But then \(3|p\) and \(3|q\), contradicting \(\gcd(p,q)=1\).</div>
+<div class="sa"><div class="al">Conclusion</div>\(\sqrt{3}\) is irrational. &#9632;</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 4</div><div class="qs">Prove by induction that \(\displaystyle\sum_{r=1}^{n} r^2 = \dfrac{n(n+1)(2n+1)}{6}\).</div>
+<div class="so">
+<div class="ss"><div class="sl">Base case \(n=1\)</div>LHS: \(1\); RHS: \(	frac{1\cdot2\cdot3}{6}=1\). ✓</div>
+<div class="ss"><div class="sl">Inductive step</div>Assume true for \(n=k\): \(\sum_{r=1}^k r^2=	frac{k(k+1)(2k+1)}{6}\).</div>
+<div class="ss"><div class="sl">For \(n=k+1\)</div>\(\sum_{r=1}^{k+1}r^2=	frac{k(k+1)(2k+1)}{6}+(k+1)^2=	frac{(k+1)[k(2k+1)+6(k+1)]}{6}=	frac{(k+1)(2k^2+7k+6)}{6}=	frac{(k+1)(k+2)(2k+3)}{6}\) ✓</div>
+<div class="sa"><div class="al">Conclusion</div>By the principle of mathematical induction, the formula holds for all \(n\in\mathbb{Z}^+\). &#9632;</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 5</div><div class="qs">Prove by induction that \(7^n - 1\) is divisible by 6 for all \(n\in\mathbb{Z}^+\).</div>
+<div class="so">
+<div class="ss"><div class="sl">Base case \(n=1\)</div>\(7-1=6\). Divisible by 6. ✓</div>
+<div class="ss"><div class="sl">Inductive step</div>Assume \(7^k-1=6m\) for some integer \(m\), so \(7^k=6m+1\).</div>
+<div class="ss"><div class="sl">For \(n=k+1\)</div>\(7^{k+1}-1=7\cdot7^k-1=7(6m+1)-1=42m+6=6(7m+1)\). Divisible by 6. ✓</div>
+<div class="sa"><div class="al">Conclusion</div>By induction, \(7^n-1\) is divisible by 6 for all \(n\in\mathbb{Z}^+\). &#9632;</div>
+</div></div>
+<div class="ft">Generated by Mathski &nbsp;&middot;&nbsp; mathski.io &nbsp;&middot;&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div><script>
+function sm(m){{document.body.className="mode-"+m;document.getElementById("bq").className="tb"+(m==="q"?" on":"");document.getElementById("bs").className="tb"+(m==="s"?" on sol":"");document.getElementById("ml").textContent=m==="q"?"Worksheet":"Solutions";document.getElementById("mb").textContent=m==="q"?"Practice":"Solutions";document.getElementById("mb").className="wb"+(m==="s"?" sb":"");}}
+document.addEventListener("DOMContentLoaded",()=>{{renderMathInElement(document.body,{{delimiters:[{{left:"\\(",right:"\\)",display:false}},{{left:"\\[",right:"\\]",display:true}}],throwOnError:false}});}});
+</script></body></html>

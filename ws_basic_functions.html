@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Functions I: Domain, Range &amp; Inverse</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#f2f2f7;--white:#fff;--blue:#007aff;--blue-light:#e8f2ff;--blue-dark:#0055cc;--orange:#ff9500;--orange-light:#fff4e0;--text:#1c1c1e;--text-sec:#3c3c43;--text-muted:#6b6b70;--r:16px;--rs:10px;--sh:0 2px 12px rgba(0,0,0,.07);}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:"Nunito Sans",-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;-webkit-font-smoothing:antialiased;}
+header{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.08);padding:0 24px;position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:"Nunito",sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);}.logo-text span{color:var(--blue);}
+.hdr{display:flex;align-items:center;gap:10px;}.htag{font-size:.72rem;color:var(--text-muted);font-weight:500;letter-spacing:.04em;text-transform:uppercase;}
+.tw{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px;}.tb{font-family:"Nunito",sans-serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;color:var(--text-muted);background:transparent;}.tb.on{background:var(--white);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.1);}.tb.on.sol{color:var(--orange);}
+.shell{max-width:720px;margin:0 auto;padding:28px 20px 80px;}.wm{background:var(--white);border-radius:var(--r);padding:20px 22px;margin-bottom:18px;box-shadow:var(--sh);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}.wt{font-family:"Nunito",sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:3px;}.ws{font-size:.8rem;color:var(--text-muted);}.wb{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;background:var(--blue-light);color:var(--blue);}.wb.sb{background:var(--orange-light);color:var(--orange);}
+.nl{background:var(--white);border-radius:var(--rs);padding:13px 18px;margin-bottom:18px;box-shadow:var(--sh);font-size:.88rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}.nd{flex:1;border-bottom:1.5px dotted var(--text-muted);height:1px;margin-top:2px;}
+.qc{background:var(--white);border-radius:var(--r);padding:22px 22px 18px;margin-bottom:14px;box-shadow:var(--sh);animation:fu .3s ease both;}@keyframes fu{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.qn{font-family:"Nunito",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}.qs{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:14px;}.qp{display:flex;flex-direction:column;gap:10px;}.qr{display:flex;gap:14px;align-items:baseline;}.ql{font-family:"Nunito",sans-serif;font-weight:700;font-size:.85rem;color:var(--text-sec);min-width:22px;flex-shrink:0;}.qt{font-size:.92rem;color:var(--text);line-height:1.65;}
+.dr{display:flex;flex-wrap:wrap;gap:10px 0;margin-bottom:6px;}.dc{display:flex;gap:10px;align-items:baseline;min-width:33%;padding-right:12px;}.dc2{min-width:50%;}.dc .ql{min-width:20px;}
+.ss{background:var(--orange-light);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px;font-size:.88rem;line-height:1.75;color:var(--text-sec);}.ss .sl{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:4px;}
+.sa{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;margin-top:6px;font-size:.9rem;color:var(--blue-dark);font-weight:600;}.sa .al{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:3px;}
+.sp{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bg);}.sp:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}.sh{display:flex;gap:10px;align-items:baseline;margin-bottom:4px;}
+.ft{text-align:center;margin-top:32px;font-size:.73rem;color:var(--text-muted);}
+@media print{header{display:none;}body{background:white;}.qc,.wm,.nl{box-shadow:none;border:1px solid #e5e5e5;break-inside:avoid;}}
+.mode-q .so{display:none;}.mode-s .qo{display:none;}
+</style></head><body class="mode-q">
+<header><div class="logo-text">Math<span>ski</span></div>
+<div class="hdr"><span class="htag" id="ml">Worksheet</span>
+<div class="tw"><button class="tb on" id="bq" onclick="sm('q')">Questions</button><button class="tb" id="bs" onclick="sm('s')">Solutions</button></div></div></header>
+<div class="shell">
+<div class="wm"><div><div class="wt">Functions I: Domain, Range &amp; Inverse</div><div class="ws">IB Mathematics AA &middot; SL &amp; HL &middot; Shadow Worksheet</div></div><div class="wb" id="mb">Practice</div></div>
+<div class="nl qo">Name <div class="nd"></div></div>
+<div class="qc"><div class="qn">Question 1</div>
+<div class="qs">State the domain and range of the following functions:</div>
+<div class="qp">
+<div class="qr"><span class="ql">(a)</span><span class="qt">\(f(x)=x^2+3,\quad x\in\mathbb{R}\)</span></div>
+<div class="qr"><span class="ql">(b)</span><span class="qt">\(f(x)=\dfrac{1}{x-2},\quad x\in\mathbb{R},\;x
+eq2\)</span></div>
+<div class="qr"><span class="ql">(c)</span><span class="qt">\(f(x)=\sqrt{x+4},\quad x\geq-4\)</span></div>
+<div class="qr"><span class="ql">(d)</span><span class="qt">\(f(x)=\sin x,\quad x\in\mathbb{R}\)</span></div>
+</div>
+<div class="so">
+<div class="sp"><div class="sh"><span class="ql">(a)</span></div><div class="sa"><div class="al">Answer</div>Domain: \(\mathbb{R}\); Range: \(f(x)\geq3\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(b)</span></div><div class="sa"><div class="al">Answer</div>Domain: \(x
+eq2\); Range: \(f(x)
+eq0\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(c)</span></div><div class="sa"><div class="al">Answer</div>Domain: \(x\geq-4\); Range: \(f(x)\geq0\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(d)</span></div><div class="sa"><div class="al">Answer</div>Domain: \(\mathbb{R}\); Range: \(-1\leq f(x)\leq1\)</div></div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 2</div>
+<div class="qs">For each function find \(f^{-1}(x)\) and state its domain:</div>
+<div class="qp">
+<div class="qr"><span class="ql">(a)</span><span class="qt">\(f(x)=3x-5\)</span></div>
+<div class="qr"><span class="ql">(b)</span><span class="qt">\(f(x)=x^2-1,\quad x\geq0\)</span></div>
+<div class="qr"><span class="ql">(c)</span><span class="qt">\(f(x)=\dfrac{2x+1}{x-3},\quad x
+eq3\)</span></div>
+</div>
+<div class="so">
+<div class="sp"><div class="sh"><span class="ql">(a)</span></div><div class="ss"><div class="sl">Swap and rearrange</div>\(y=3x-5\Rightarrow x=\dfrac{y+5}{3}\)</div><div class="sa"><div class="al">Answer</div>\(f^{-1}(x)=\dfrac{x+5}{3},\quad x\in\mathbb{R}\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(b)</span></div><div class="ss"><div class="sl">Swap</div>\(y=x^2-1\Rightarrow x=\sqrt{y+1}\)</div><div class="sa"><div class="al">Answer</div>\(f^{-1}(x)=\sqrt{x+1},\quad x\geq-1\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(c)</span></div><div class="ss"><div class="sl">Swap and rearrange</div>\(y(x-3)=2x+1\Rightarrow x(y-2)=3y+1\)</div><div class="sa"><div class="al">Answer</div>\(f^{-1}(x)=\dfrac{3x+1}{x-2},\quad x
+eq2\)</div></div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 3</div>
+<div class="qs">Given \(f(x)=2x+3\) and \(g(x)=x^2-1\), find:</div>
+<div class="qp">
+<div class="dr"><div class="dc"><span class="ql">(a)</span><span class="qt">\(f(g(x))\)</span></div><div class="dc"><span class="ql">(b)</span><span class="qt">\(g(f(x))\)</span></div><div class="dc"><span class="ql">(c)</span><span class="qt">\(f(f(x))\)</span></div></div>
+<div class="dr"><div class="dc"><span class="ql">(d)</span><span class="qt">\(g(g(2))\)</span></div><div class="dc"><span class="ql">(e)</span><span class="qt">\(f^{-1}(g(x))\)</span></div></div>
+</div>
+<div class="so">
+<div class="sp"><div class="sh"><span class="ql">(a)</span></div><div class="sa"><div class="al">Answer</div>\(2x^2-2+3=2x^2+1\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(b)</span></div><div class="sa"><div class="al">Answer</div>\((2x+3)^2-1=4x^2+12x+8\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(c)</span></div><div class="sa"><div class="al">Answer</div>\(2(2x+3)+3=4x+9\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(d)</span></div><div class="ss"><div class="sl">Step by step</div>\(g(2)=3;\;g(3)=8\)</div><div class="sa"><div class="al">Answer</div>\(8\)</div></div>
+<div class="sp"><div class="sh"><span class="ql">(e)</span></div><div class="ss"><div class="sl">\(f^{-1}(x)=	frac{x-3}{2}\)</div>\(f^{-1}(g(x))=\dfrac{x^2-1-3}{2}\)</div><div class="sa"><div class="al">Answer</div>\(\dfrac{x^2-4}{2}\)</div></div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 4</div>
+<div class="qs">Solve \(f(f(x))=x\) for \(f(x)=\dfrac{x+2}{x-1},\;x
+eq1\).</div>
+<div class="so">
+<div class="ss"><div class="sl">Compute \(f(f(x))\)</div>\(f(f(x))=\dfrac{	frac{x+2}{x-1}+2}{	frac{x+2}{x-1}-1}=\dfrac{x+2+2(x-1)}{x+2-(x-1)}=\dfrac{3x}{3}=x\)</div>
+<div class="sa"><div class="al">Answer</div>\(f(f(x))=x\) for all \(x
+eq1\) — this function is its own inverse.</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 5</div>
+<div class="qs">The function \(f(x)=ax+b\) satisfies \(f(2)=7\) and \(f^{-1}(3)=1\). Find \(a\) and \(b\).</div>
+<div class="so">
+<div class="ss"><div class="sl">Two equations</div>\(2a+b=7\quad(1)\); \(f^{-1}(3)=1\Rightarrow f(1)=3\Rightarrow a+b=3\quad(2)\)</div>
+<div class="ss"><div class="sl">Solve</div>\((1)-(2):a=4\Rightarrow b=-1\)</div>
+<div class="sa"><div class="al">Answer</div>\(a=4,\;b=-1\)</div>
+</div></div>
+<div class="ft">Generated by Mathski &nbsp;&middot;&nbsp; mathski.io &nbsp;&middot;&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div><script>
+function sm(m){{document.body.className="mode-"+m;document.getElementById("bq").className="tb"+(m==="q"?" on":"");document.getElementById("bs").className="tb"+(m==="s"?" on sol":"");document.getElementById("ml").textContent=m==="q"?"Worksheet":"Solutions";document.getElementById("mb").textContent=m==="q"?"Practice":"Solutions";document.getElementById("mb").className="wb"+(m==="s"?" sb":"");}}
+document.addEventListener("DOMContentLoaded",()=>{{renderMathInElement(document.body,{{delimiters:[{{left:"\\(",right:"\\)",display:false}},{{left:"\\[",right:"\\]",display:true}}],throwOnError:false}});}});
+</script></body></html>

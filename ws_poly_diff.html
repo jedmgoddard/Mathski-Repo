@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Polynomial Differentiation</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f2f2f7;
+  --white: #ffffff;
+  --blue: #007aff;
+  --blue-light: #e8f2ff;
+  --blue-mid: #c5dbff;
+  --blue-dark: #0055cc;
+  --orange: #ff9500;
+  --orange-light: #fff4e0;
+  --text: #1c1c1e;
+  --text-sec: #3c3c43;
+  --text-muted: #6b6b70;
+  --radius-card: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Nunito Sans', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HEADER */
+header {
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 0 24px;
+  position: sticky; top: 0; z-index: 100;
+  height: 60px; display: flex; align-items: center; justify-content: space-between;
+}
+.logo-text { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--text); }
+.logo-text span { color: var(--blue); }
+.header-right { display: flex; align-items: center; gap: 10px; }
+.header-tag { font-size: 0.72rem; color: var(--text-muted); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+
+/* TOGGLE */
+.toggle-wrap {
+  display: flex; background: var(--bg); border-radius: 10px; padding: 3px; gap: 2px;
+}
+.toggle-btn {
+  font-family: 'Nunito', sans-serif; font-size: 0.78rem; font-weight: 700;
+  padding: 6px 14px; border-radius: 8px; border: none; cursor: pointer;
+  transition: all 0.18s; color: var(--text-muted); background: transparent;
+  letter-spacing: 0.01em;
+}
+.toggle-btn.active { background: var(--white); color: var(--text); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+.toggle-btn.active.solutions { color: var(--orange); }
+
+/* SHELL */
+.shell { max-width: 720px; margin: 0 auto; padding: 28px 20px 80px; }
+
+/* META */
+.ws-meta {
+  background: var(--white); border-radius: var(--radius-card);
+  padding: 20px 22px; margin-bottom: 18px; box-shadow: var(--shadow);
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+}
+.ws-title { font-family: 'Nunito', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text); margin-bottom: 3px; }
+.ws-subtitle { font-size: 0.8rem; color: var(--text-muted); }
+.ws-badge {
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px; white-space: nowrap;
+  background: var(--blue-light); color: var(--blue);
+}
+.ws-badge.solutions-badge { background: var(--orange-light); color: var(--orange); }
+.name-line {
+  background: var(--white); border-radius: var(--radius-sm);
+  padding: 13px 18px; margin-bottom: 18px; box-shadow: var(--shadow);
+  font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;
+}
+.name-dots { flex: 1; border-bottom: 1.5px dotted var(--text-muted); height: 1px; margin-top: 2px; }
+
+/* QUESTION CARDS */
+.q-card {
+  background: var(--white); border-radius: var(--radius-card);
+  padding: 22px 22px 18px; margin-bottom: 14px; box-shadow: var(--shadow);
+  animation: fadeUp 0.3s ease both;
+}
+@keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+.q-number {
+  font-family: 'Nunito', sans-serif; font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue);
+  margin-bottom: 10px;
+}
+.q-stem { font-size: 0.95rem; color: var(--text); line-height: 1.7; margin-bottom: 14px; }
+.q-parts { display: flex; flex-direction: column; gap: 10px; }
+.q-part { display: flex; gap: 14px; align-items: baseline; }
+.q-part-label {
+  font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.85rem;
+  color: var(--text-sec); min-width: 22px; flex-shrink: 0;
+}
+.q-part-text { font-size: 0.92rem; color: var(--text); line-height: 1.65; }
+
+/* inline drill row */
+.drill-row { display: flex; flex-wrap: wrap; gap: 8px 0; margin-bottom: 4px; }
+.drill-cell { display: flex; gap: 10px; align-items: baseline; min-width: 33%; padding-right: 12px; }
+.drill-cell .q-part-label { min-width: 20px; }
+
+/* SOLUTIONS */
+.sol-step {
+  background: var(--orange-light); border-left: 3px solid var(--orange);
+  border-radius: 0 8px 8px 0; padding: 10px 14px; margin-top: 8px;
+  font-size: 0.88rem; line-height: 1.75; color: var(--text-sec);
+}
+.sol-step .step-label {
+  font-family: 'Nunito', sans-serif; font-size: 0.68rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--orange);
+  margin-bottom: 4px;
+}
+.sol-answer {
+  background: var(--blue-light); border-left: 3px solid var(--blue);
+  border-radius: 0 8px 8px 0; padding: 9px 14px; margin-top: 6px;
+  font-size: 0.9rem; color: var(--blue-dark); font-weight: 600;
+}
+.sol-answer .ans-label {
+  font-family: 'Nunito', sans-serif; font-size: 0.68rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--blue);
+  margin-bottom: 3px;
+}
+.sol-part { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--bg); }
+.sol-part:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.sol-part-header { display: flex; gap: 10px; align-items: baseline; margin-bottom: 4px; }
+
+/* FOOTER */
+.ws-footer {
+  text-align: center; margin-top: 32px;
+  font-size: 0.73rem; color: var(--text-muted);
+}
+
+/* PRINT */
+@media print {
+  header { display: none; }
+  body { background: white; }
+  .q-card { box-shadow: none; border: 1px solid #e5e5e5; break-inside: avoid; }
+  .ws-meta { box-shadow: none; border: 1px solid #e5e5e5; }
+  .name-line { box-shadow: none; border: 1px solid #e5e5e5; }
+}
+
+/* Hidden state */
+.mode-questions .solutions-only { display: none; }
+.mode-solutions .questions-only { display: none; }
+</style>
+</head>
+<body class="mode-questions">
+
+<header>
+  <div class="logo-text">Math<span>ski</span></div>
+  <div class="header-right">
+    <span class="header-tag" id="mode-label">Worksheet</span>
+    <div class="toggle-wrap">
+      <button class="toggle-btn active" id="btn-q" onclick="setMode('questions')">Questions</button>
+      <button class="toggle-btn" id="btn-s" onclick="setMode('solutions')">Solutions</button>
+    </div>
+  </div>
+</header>
+
+<div class="shell">
+
+  <!-- META -->
+  <div class="ws-meta">
+    <div>
+      <div class="ws-title">Polynomial Differentiation</div>
+      <div class="ws-subtitle">IB Mathematics AA · SL &amp; HL · Shadow Worksheet</div>
+    </div>
+    <div class="ws-badge" id="meta-badge">Practice</div>
+  </div>
+
+  <div class="name-line questions-only">
+    Name <div class="name-dots"></div>
+  </div>
+
+  <!-- ═══ Q1 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 1</div>
+    <div class="q-stem">Differentiate the following functions:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = 3x^3 - 5x + 1\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = \sqrt[4]{x}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = \dfrac{1}{x^2}\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(f(x) = 5x^5 - 3 + \dfrac{4}{x^4}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(e)</span><span class="q-part-text">\(f(x) = \dfrac{1}{\sqrt{x}}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(f)</span><span class="q-part-text">\(f(x) = \sqrt[5]{x^3}\)</span></div>
+      </div>
+    </div>
+    <!-- SOLUTIONS -->
+    <div class="solutions-only">
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = 9x^2 - 5\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(f(x) = x^{1/4}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = \dfrac{1}{4}x^{-3/4}\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(f(x) = x^{-2}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = -2x^{-3} = -\dfrac{2}{x^3}\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(f(x) = 5x^5 - 3 + 4x^{-4}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = 25x^4 - 16x^{-5}\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(e)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(f(x) = x^{-1/2}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = -\dfrac{1}{2}x^{-3/2}\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(f)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(f(x) = x^{3/5}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = \dfrac{3}{5}x^{-2/5}\)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Q2 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 2</div>
+    <div class="q-stem">By first simplifying, differentiate the following functions:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = (x+3)(3x-1)\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = 3x^2\sqrt{x}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = \dfrac{4x^3 - 6x}{2x}\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(f(x) = \!\left(\dfrac{3x^2}{x}\right)^{\!3}\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(e)</span><span class="q-part-text">\(f(x) = \dfrac{2}{\sqrt[3]{x}}\)</span></div>
+      </div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-step"><div class="step-label">Expand</div>\(f(x) = 3x^2 - x + 9x - 3 = 3x^2 + 8x - 3\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = 6x + 8\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(f(x) = 3x^2 \cdot x^{1/2} = 3x^{5/2}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = \dfrac{15}{2}x^{3/2}\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-step"><div class="step-label">Simplify</div>\(f(x) = 2x^2 - 3\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = 4x\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-step"><div class="step-label">Simplify</div>\(\dfrac{3x^2}{x} = 3x\), so \(f(x) = (3x)^3 = 27x^3\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = 81x^2\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(e)</span></div>
+        <div class="sol-step"><div class="step-label">Rewrite</div>\(f(x) = 2x^{-1/3}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(x) = -\dfrac{2}{3}x^{-4/3}\)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Q3 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 3</div>
+    <div class="q-stem">Expand \((2x-3)^4\) using the binomial expansion. Hence, if \(f(x) = (2x-3)^4\), find \(f'(x)\).</div>
+    <div class="solutions-only">
+      <div class="sol-step">
+        <div class="step-label">Expand</div>
+        \((2x-3)^4 = 16x^4 - 4\cdot8x^3\cdot3 + 6\cdot4x^2\cdot9 - 4\cdot2x\cdot27 + 81\)
+        \(= 16x^4 - 96x^3 + 216x^2 - 216x + 81\)
+      </div>
+      <div class="sol-answer">
+        <div class="ans-label">Answer</div>
+        \(f'(x) = 64x^3 - 288x^2 + 432x - 216\)
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Q4 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 4</div>
+    <div class="q-stem">If \(A = \pi r^2 + \dfrac{6\pi}{r}\), find \(\dfrac{dA}{dr}\).</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Rewrite</div>\(A = \pi r^2 + 6\pi r^{-1}\)</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{dA}{dr} = 2\pi r - \dfrac{6\pi}{r^2}\)</div>
+    </div>
+  </div>
+
+  <!-- ═══ Q5 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 5</div>
+    <div class="q-stem">If \(P = \dfrac{4t^3}{3} - 5t^2 + 12\), find \(\dfrac{dP}{dt}\).</div>
+    <div class="solutions-only">
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(\dfrac{dP}{dt} = 4t^2 - 10t\)</div>
+    </div>
+  </div>
+
+  <!-- ═══ Q6 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 6</div>
+    <div class="q-stem">\(f(x) = \dfrac{x^3}{3} - 2x^2 + 9x - 4\). Find \(f'(2)\).</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Differentiate</div>\(f'(x) = x^2 - 4x + 9\)</div>
+      <div class="sol-step"><div class="step-label">Substitute \(x=2\)</div>\(f'(2) = 4 - 8 + 9\)</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(2) = 5\)</div>
+    </div>
+  </div>
+
+  <!-- ═══ Q7 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 7</div>
+    <div class="q-stem">Find the gradient of the following functions at the given \(x\) values.</div>
+    <div class="q-parts">
+      <div class="q-part"><span class="q-part-label">(a)</span><span class="q-part-text">\(y = -x^3 + 2\sqrt{x} + 5\) at \(x = 4\)</span></div>
+      <div class="q-part"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = 3x^5 - 2x^2 + x\) at \(x = -1\)</span></div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-step"><div class="step-label">Differentiate</div>\(y' = -3x^2 + x^{-1/2}\)</div>
+        <div class="sol-step"><div class="step-label">Substitute \(x=4\)</div>\(y'(4) = -48 + \frac{1}{2}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(-\dfrac{95}{2}\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Differentiate</div>\(f'(x) = 15x^4 - 4x + 1\)</div>
+        <div class="sol-step"><div class="step-label">Substitute \(x=-1\)</div>\(f'(-1) = 15 + 4 + 1\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(20\)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Q8 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 8</div>
+    <div class="q-stem">\(f(x) = x^2 - 4x + 7\). Find:</div>
+    <div class="q-parts">
+      <div class="q-part"><span class="q-part-label">(a)</span><span class="q-part-text">\(f'(5)\)</span></div>
+      <div class="q-part"><span class="q-part-label">(b)</span><span class="q-part-text">the value of \(x\) where \(f'(x) = 0\)</span></div>
+      <div class="q-part"><span class="q-part-label">(c)</span><span class="q-part-text">the values of \(x\) where \(f'(x) = 4\)</span></div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Differentiate</div>\(f'(x) = 2x - 4\)</div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(5) = 10 - 4 = 6\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Solve</div>\(2x-4=0 \Rightarrow x=2\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(x = 2\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-step"><div class="step-label">Solve</div>\(2x-4=4 \Rightarrow 2x=8\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(x = 4\)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Q9 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 9</div>
+    <div class="q-stem">\(f(x) = \dfrac{3}{x^2} + 4x\). Solve \(f'(x) = 1\).</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Rewrite &amp; differentiate</div>\(f(x) = 3x^{-2} + 4x \Rightarrow f'(x) = -6x^{-3} + 4\)</div>
+      <div class="sol-step"><div class="step-label">Solve</div>\(-\dfrac{6}{x^3} + 4 = 1 \Rightarrow \dfrac{6}{x^3} = 3 \Rightarrow x^3 = 2\)</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(x = \sqrt[3]{2}\)</div>
+    </div>
+  </div>
+
+  <!-- ═══ Q10 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 10</div>
+    <div class="q-stem">\(f(x) = \dfrac{k}{x^3}\). Find \(f'(2)\) in terms of \(k\).</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Rewrite &amp; differentiate</div>\(f(x) = kx^{-3} \Rightarrow f'(x) = -3kx^{-4}\)</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(2) = -\dfrac{3k}{16}\)</div>
+    </div>
+  </div>
+
+  <!-- ═══ Q11 ═══ -->
+  <div class="q-card">
+    <div class="q-number">Question 11</div>
+    <div class="q-stem">\(f(x) = \dfrac{x^3}{3} - \dfrac{x^2}{2} - 2x\). Find:</div>
+    <div class="q-parts">
+      <div class="q-part"><span class="q-part-label">(a)</span><span class="q-part-text">\(f'(2)\)</span></div>
+      <div class="q-part"><span class="q-part-label">(b)</span><span class="q-part-text">the values of \(x\) where \(f'(x) = 0\)</span></div>
+      <div class="q-part"><span class="q-part-label">(c)</span><span class="q-part-text">the values of \(x\) where \(f'(x) = 6\)</span></div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Differentiate</div>\(f'(x) = x^2 - x - 2\)</div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(f'(2) = 4 - 2 - 2 = 0\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Solve</div>\(x^2 - x - 2 = 0 \Rightarrow (x-2)(x+1) = 0\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(x = 2\) or \(x = -1\)</div>
+      </div>
+      <div class="sol-part">
+        <div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-step"><div class="step-label">Solve</div>\(x^2 - x - 2 = 6 \Rightarrow x^2 - x - 8 = 0 \Rightarrow x = \dfrac{1 \pm \sqrt{33}}{2}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(x = \dfrac{1 + \sqrt{33}}{2}\) or \(x = \dfrac{1 - \sqrt{33}}{2}\)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ws-footer">Generated by Mathski &nbsp;·&nbsp; mathski.io &nbsp;·&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div>
+
+<script>
+function setMode(mode) {
+  document.body.className = 'mode-' + mode;
+  document.getElementById('btn-q').className = 'toggle-btn' + (mode==='questions' ? ' active' : '');
+  document.getElementById('btn-s').className = 'toggle-btn' + (mode==='solutions' ? ' active solutions' : '');
+  document.getElementById('mode-label').textContent = mode==='questions' ? 'Worksheet' : 'Solutions';
+  document.getElementById('meta-badge').textContent = mode==='questions' ? 'Practice' : 'Solutions';
+  document.getElementById('meta-badge').className = 'ws-badge' + (mode==='solutions' ? ' solutions-badge' : '');
+}
+document.addEventListener('DOMContentLoaded', () => {
+  renderMathInElement(document.body, {
+    delimiters: [
+      {left:'\\(', right:'\\)', display:false},
+      {left:'\\[', right:'\\]', display:true},
+    ],
+    throwOnError: false
+  });
+});
+</script>
+</body>
+</html>

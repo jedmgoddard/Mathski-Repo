@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Optimisation: Volume Problems</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#f2f2f7;--white:#fff;--blue:#007aff;--blue-light:#e8f2ff;--blue-dark:#0055cc;--orange:#ff9500;--orange-light:#fff4e0;--text:#1c1c1e;--text-sec:#3c3c43;--text-muted:#6b6b70;--r:16px;--rs:10px;--sh:0 2px 12px rgba(0,0,0,.07);}
+*{margin:0;padding:0;box-sizing:border-box;}body{font-family:"Nunito Sans",-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;-webkit-font-smoothing:antialiased;}
+header{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,.08);padding:0 24px;position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:"Nunito",sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);}.logo-text span{color:var(--blue);}
+.hdr{display:flex;align-items:center;gap:10px;}.htag{font-size:.72rem;color:var(--text-muted);font-weight:500;letter-spacing:.04em;text-transform:uppercase;}
+.tw{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px;}.tb{font-family:"Nunito",sans-serif;font-size:.78rem;font-weight:700;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all .18s;color:var(--text-muted);background:transparent;}.tb.on{background:var(--white);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,.1);}.tb.on.sol{color:var(--orange);}
+.shell{max-width:720px;margin:0 auto;padding:28px 20px 80px;}.wm{background:var(--white);border-radius:var(--r);padding:20px 22px;margin-bottom:18px;box-shadow:var(--sh);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}.wt{font-family:"Nunito",sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:3px;}.ws{font-size:.8rem;color:var(--text-muted);}.wb{font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;background:var(--blue-light);color:var(--blue);}.wb.sb{background:var(--orange-light);color:var(--orange);}
+.nl{background:var(--white);border-radius:var(--rs);padding:13px 18px;margin-bottom:18px;box-shadow:var(--sh);font-size:.88rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}.nd{flex:1;border-bottom:1.5px dotted var(--text-muted);height:1px;margin-top:2px;}
+.qc{background:var(--white);border-radius:var(--r);padding:22px 22px 18px;margin-bottom:14px;box-shadow:var(--sh);animation:fu .3s ease both;}@keyframes fu{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.qn{font-family:"Nunito",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}.qs{font-size:.95rem;color:var(--text);line-height:1.7;margin-bottom:14px;}.qp{display:flex;flex-direction:column;gap:10px;}.qr{display:flex;gap:14px;align-items:baseline;}.ql{font-family:"Nunito",sans-serif;font-weight:700;font-size:.85rem;color:var(--text-sec);min-width:22px;flex-shrink:0;}.qt{font-size:.92rem;color:var(--text);line-height:1.65;}
+.dr{display:flex;flex-wrap:wrap;gap:10px 0;margin-bottom:6px;}.dc{display:flex;gap:10px;align-items:baseline;min-width:33%;padding-right:12px;}.dc2{min-width:50%;}.dc .ql{min-width:20px;}
+.ss{background:var(--orange-light);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px;font-size:.88rem;line-height:1.75;color:var(--text-sec);}.ss .sl{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:4px;}
+.sa{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;margin-top:6px;font-size:.9rem;color:var(--blue-dark);font-weight:600;}.sa .al{font-family:"Nunito",sans-serif;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em;color:var(--blue);margin-bottom:3px;}
+.sp{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bg);}.sp:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}.sh{display:flex;gap:10px;align-items:baseline;margin-bottom:4px;}
+.ft{text-align:center;margin-top:32px;font-size:.73rem;color:var(--text-muted);}
+@media print{header{display:none;}body{background:white;}.qc,.wm,.nl{box-shadow:none;border:1px solid #e5e5e5;break-inside:avoid;}}
+.mode-q .so{display:none;}.mode-s .qo{display:none;}
+</style></head><body class="mode-q">
+<header><div class="logo-text">Math<span>ski</span></div>
+<div class="hdr"><span class="htag" id="ml">Worksheet</span>
+<div class="tw"><button class="tb on" id="bq" onclick="sm('q')">Questions</button><button class="tb" id="bs" onclick="sm('s')">Solutions</button></div></div></header>
+<div class="shell">
+<div class="wm"><div><div class="wt">Optimisation: Volume Problems</div><div class="ws">IB Mathematics AA &middot; SL &amp; HL &middot; Shadow Worksheet</div></div><div class="wb" id="mb">Practice</div></div>
+<div class="nl qo">Name <div class="nd"></div></div>
+<div class="qc"><div class="qn">Question 1</div>
+<div class="qs">A open-topped box is made from a square sheet of card (side 24 cm) by cutting equal squares from each corner and folding up the sides. Find the size of corner square that maximises the volume.</div>
+<div class="so">
+<div class="ss"><div class="sl">Let corner square have side \(x\)</div>\(V=x(24-2x)^2\)</div>
+<div class="ss"><div class="sl">Expand and differentiate</div>\(V=x(576-96x+4x^2)=576x-96x^2+4x^3\)</div>
+<div class="ss"><div class="sl">\(V'=576-192x+12x^2=12(x^2-16x+48)=12(x-4)(x-12)=0\)</div>Reject \(x=12\) (no box left)</div>
+<div class="sa"><div class="al">Answer</div>\(x=4\) cm; max volume \(=4	imes16^2=1024\) cm³</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 2</div>
+<div class="qs">An open cylindrical can must hold \(250\pi\) cm³. Find the radius that minimises the total surface area (no lid).</div>
+<div class="so">
+<div class="ss"><div class="sl">Volume</div>\(\pi r^2 h=250\pi\Rightarrow h=	frac{250}{r^2}\)</div>
+<div class="ss"><div class="sl">Surface area (no lid)</div>\(A=\pi r^2+2\pi rh=\pi r^2+	frac{500\pi}{r}\)</div>
+<div class="ss"><div class="sl">Minimise</div>\(A'=2\pi r-	frac{500\pi}{r^2}=0\Rightarrow r^3=250\Rightarrow r=\sqrt[3]{250}pprox6.30\)</div>
+<div class="sa"><div class="al">Answer</div>\(r=\sqrt[3]{250}pprox6.30\) cm; \(hpprox6.30\) cm (cube-like shape)</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 3</div>
+<div class="qs">A cone has slant height 12 cm. Find the radius that maximises the volume of the cone.</div>
+<div class="so">
+<div class="ss"><div class="sl">Height in terms of \(r\)</div>\(h=\sqrt{144-r^2}\)</div>
+<div class="ss"><div class="sl">Volume</div>\(V=	frac{\pi r^2}{3}\sqrt{144-r^2}\)</div>
+<div class="ss"><div class="sl">Maximise \(V^2\) (simpler)</div>\(V^2=	frac{\pi^2}{9}r^4(144-r^2)\); differentiate: \(	frac{d(V^2)}{dr}=	frac{\pi^2}{9}(576r^3-6r^5)=0\Rightarrow r^2=96\Rightarrow r=4\sqrt6\)</div>
+<div class="sa"><div class="al">Answer</div>\(r=4\sqrt{6}pprox9.80\) cm; \(h=\sqrt{144-96}=4\sqrt{3}pprox6.93\) cm</div>
+</div></div>
+
+<div class="qc"><div class="qn">Question 4</div>
+<div class="qs">A rectangular box with a square base and lid has volume 32 cm³. Find the dimensions that minimise the total surface area.</div>
+<div class="so">
+<div class="ss"><div class="sl">Let base side \(=x\), height \(=h\)</div>\(x^2h=32\Rightarrow h=	frac{32}{x^2}\)</div>
+<div class="ss"><div class="sl">Surface area</div>\(A=2x^2+4xh=2x^2+	frac{128}{x}\)</div>
+<div class="ss"><div class="sl">Minimise</div>\(A'=4x-	frac{128}{x^2}=0\Rightarrow x^3=32\Rightarrow x=2\sqrt[3]{4}\)</div>
+<div class="sa"><div class="al">Answer</div>\(x=2\sqrt[3]{4}pprox3.17\) cm; \(h=	frac{32}{x^2}pprox3.17\) cm (cube)</div>
+</div></div>
+<div class="ft">Generated by Mathski &nbsp;&middot;&nbsp; mathski.io &nbsp;&middot;&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div><script>
+function sm(m){{document.body.className="mode-"+m;document.getElementById("bq").className="tb"+(m==="q"?" on":"");document.getElementById("bs").className="tb"+(m==="s"?" on sol":"");document.getElementById("ml").textContent=m==="q"?"Worksheet":"Solutions";document.getElementById("mb").textContent=m==="q"?"Practice":"Solutions";document.getElementById("mb").className="wb"+(m==="s"?" sb":"");}}
+document.addEventListener("DOMContentLoaded",()=>{{renderMathInElement(document.body,{{delimiters:[{{left:"\\(",right:"\\)",display:false}},{{left:"\\[",right:"\\]",display:true}}],throwOnError:false}});}});
+</script></body></html>

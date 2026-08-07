@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathski — Stationary Points &amp; Increasing/Decreasing</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f2f7;--white:#ffffff;--blue:#007aff;--blue-light:#e8f2ff;--blue-mid:#c5dbff;--blue-dark:#0055cc;--orange:#ff9500;--orange-light:#fff4e0;--text:#1c1c1e;--text-sec:#3c3c43;--text-muted:#6b6b70;--radius-card:16px;--radius-sm:10px;--shadow:0 2px 12px rgba(0,0,0,0.07);}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Nunito Sans',-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;-webkit-font-smoothing:antialiased;}
+header{background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.08);padding:0 24px;position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.logo-text{font-family:'Nunito',sans-serif;font-weight:800;font-size:1.15rem;color:var(--text);}.logo-text span{color:var(--blue);}
+.header-right{display:flex;align-items:center;gap:10px;}
+.header-tag{font-size:0.72rem;color:var(--text-muted);font-weight:500;letter-spacing:0.04em;text-transform:uppercase;}
+.toggle-wrap{display:flex;background:var(--bg);border-radius:10px;padding:3px;gap:2px;}
+.toggle-btn{font-family:'Nunito',sans-serif;font-size:0.78rem;font-weight:700;padding:6px 14px;border-radius:8px;border:none;cursor:pointer;transition:all 0.18s;color:var(--text-muted);background:transparent;}
+.toggle-btn.active{background:var(--white);color:var(--text);box-shadow:0 1px 4px rgba(0,0,0,0.1);}
+.toggle-btn.active.solutions{color:var(--orange);}
+.shell{max-width:720px;margin:0 auto;padding:28px 20px 80px;}
+.ws-meta{background:var(--white);border-radius:var(--radius-card);padding:20px 22px;margin-bottom:18px;box-shadow:var(--shadow);display:flex;align-items:flex-start;justify-content:space-between;gap:16px;}
+.ws-title{font-family:'Nunito',sans-serif;font-size:1.25rem;font-weight:800;color:var(--text);margin-bottom:3px;}
+.ws-subtitle{font-size:0.8rem;color:var(--text-muted);}
+.ws-badge{font-size:0.68rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:4px 10px;border-radius:20px;white-space:nowrap;background:var(--blue-light);color:var(--blue);}
+.ws-badge.solutions-badge{background:var(--orange-light);color:var(--orange);}
+.name-line{background:var(--white);border-radius:var(--radius-sm);padding:13px 18px;margin-bottom:18px;box-shadow:var(--shadow);font-size:0.88rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;}
+.name-dots{flex:1;border-bottom:1.5px dotted var(--text-muted);height:1px;margin-top:2px;}
+.q-card{background:var(--white);border-radius:var(--radius-card);padding:22px 22px 18px;margin-bottom:14px;box-shadow:var(--shadow);animation:fadeUp 0.3s ease both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+.q-number{font-family:'Nunito',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;}
+.q-stem{font-size:0.95rem;color:var(--text);line-height:1.7;margin-bottom:14px;}
+.q-parts{display:flex;flex-direction:column;gap:10px;}
+.q-part{display:flex;gap:14px;align-items:baseline;}
+.q-part-label{font-family:'Nunito',sans-serif;font-weight:700;font-size:0.85rem;color:var(--text-sec);min-width:22px;flex-shrink:0;}
+.q-part-text{font-size:0.92rem;color:var(--text);line-height:1.65;}
+.drill-row{display:flex;flex-wrap:wrap;gap:10px 0;margin-bottom:6px;}
+.drill-cell{display:flex;gap:10px;align-items:baseline;min-width:50%;padding-right:12px;}
+.drill-cell .q-part-label{min-width:20px;}
+.sol-step{background:var(--orange-light);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;padding:10px 14px;margin-top:8px;font-size:0.88rem;line-height:1.75;color:var(--text-sec);}
+.sol-step .step-label{font-family:'Nunito',sans-serif;font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;color:var(--orange);margin-bottom:4px;}
+.sol-answer{background:var(--blue-light);border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:9px 14px;margin-top:6px;font-size:0.9rem;color:var(--blue-dark);font-weight:600;}
+.sol-answer .ans-label{font-family:'Nunito',sans-serif;font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;color:var(--blue);margin-bottom:3px;}
+.sol-part{margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bg);}
+.sol-part:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.sol-part-header{display:flex;gap:10px;align-items:baseline;margin-bottom:4px;}
+.sign-table{width:100%;border-collapse:collapse;font-size:0.82rem;margin:8px 0;}
+.sign-table th,.sign-table td{border:1px solid #ddd;padding:6px 10px;text-align:center;}
+.sign-table th{background:#f5f5f5;font-weight:700;}
+.ws-footer{text-align:center;margin-top:32px;font-size:0.73rem;color:var(--text-muted);}
+@media print{header{display:none;}body{background:white;}.q-card,.ws-meta,.name-line{box-shadow:none;border:1px solid #e5e5e5;break-inside:avoid;}}
+.mode-questions .solutions-only{display:none;}
+.mode-solutions .questions-only{display:none;}
+</style>
+</head>
+<body class="mode-questions">
+<header>
+  <div class="logo-text">Math<span>ski</span></div>
+  <div class="header-right">
+    <span class="header-tag" id="mode-label">Worksheet</span>
+    <div class="toggle-wrap">
+      <button class="toggle-btn active" id="btn-q" onclick="setMode('questions')">Questions</button>
+      <button class="toggle-btn" id="btn-s" onclick="setMode('solutions')">Solutions</button>
+    </div>
+  </div>
+</header>
+<div class="shell">
+  <div class="ws-meta">
+    <div>
+      <div class="ws-title">Increasing/Decreasing &amp; Stationary Points</div>
+      <div class="ws-subtitle">IB Mathematics AA · SL &amp; HL · Shadow Worksheet</div>
+    </div>
+    <div class="ws-badge" id="meta-badge">Practice</div>
+  </div>
+  <div class="name-line questions-only">Name <div class="name-dots"></div></div>
+
+  <!-- Q1: Reading from graph -->
+  <div class="q-card">
+    <div class="q-number">Question 1</div>
+    <div class="q-stem">A graph of a function \(f(x)\) has stationary points at \(x = -1\) (local max, \(f(-1) = 4\)) and \(x = 3\) (local min, \(f(3) = -2\)), and passes through \((0, 2)\).</div>
+    <div class="q-parts">
+      <div class="q-part"><span class="q-part-label">(a)</span><span class="q-part-text">For the graph \(f(x)\), state the interval(s) where \(f'(x) &lt; 0\).</span></div>
+      <div class="q-part"><span class="q-part-label">(b)</span><span class="q-part-text">State the values of \(x\) where \(f'(x) = 0\).</span></div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(-1 &lt; x &lt; 3\) (between the local max and local min)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(x = -1\) and \(x = 3\)</div></div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-card">
+    <div class="q-number">Question 2</div>
+    <div class="q-stem">A function \(f(x)\) is defined below: \[f(x) = \dfrac{8}{x^2},\quad x \neq 0\]</div>
+    <div class="q-parts">
+      <div class="q-part"><span class="q-part-label">(a)</span><span class="q-part-text">Write down the equations of the vertical and horizontal asymptotes.</span></div>
+      <div class="q-part"><span class="q-part-label">(b)</span><span class="q-part-text">Show using calculus that \(f(x)\) is a decreasing function for all \(x &gt; 0\).</span></div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Vertical: \(x = 0\); Horizontal: \(y = 0\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Differentiate</div>\(f'(x) = -16x^{-3} = -\dfrac{16}{x^3}\)</div>
+        <div class="sol-step"><div class="step-label">Argument</div>For \(x &gt; 0\): \(x^3 &gt; 0\), so \(f'(x) = -\dfrac{16}{x^3} &lt; 0\) for all \(x &gt; 0\). Hence \(f\) is decreasing. ✓</div></div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q-card">
+    <div class="q-number">Question 3</div>
+    <div class="q-stem">A function \(f(x) = 3bx^2 + 2x\) where \(b\) is a positive constant. For what values of \(x\) is \(f(x)\) a decreasing function?</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Differentiate</div>\(f'(x) = 6bx + 2\)</div>
+      <div class="sol-step"><div class="step-label">Set \(f'(x) &lt; 0\)</div>\(6bx + 2 &lt; 0 \Rightarrow x &lt; -\dfrac{1}{3b}\)</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>\(x &lt; -\dfrac{1}{3b}\)</div>
+    </div>
+  </div>
+
+  <!-- Q4: First derivative test -->
+  <div class="q-card">
+    <div class="q-number">Question 4</div>
+    <div class="q-stem">Use the <strong>first derivative test</strong> to classify any stationary points of the following graphs:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = 2x^2 - 8x + 3\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = -x^3 + 3x^2 + 9x - 5\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = \dfrac{x^3}{3} - x^2 - 8x + 2\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(f(x) = \dfrac{x^3}{3} - x^2 - 3x + 1\)</span></div>
+      </div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-step"><div class="step-label">Differentiate &amp; solve</div>\(f'(x) = 4x-8 = 0 \Rightarrow x=2,\quad f(2)=-5\)</div>
+        <div class="sol-step"><div class="step-label">Sign test</div>\(x&lt;2: f'&lt;0;\quad x&gt;2: f'&gt;0\) → minimum</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local minimum at \((2,\,-5)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Differentiate &amp; solve</div>\(f'(x) = -3x^2+6x+9 = -3(x^2-2x-3) = -3(x-3)(x+1) = 0\)</div>
+        \(\Rightarrow x = 3\) or \(x = -1\)
+        <div class="sol-step"><div class="step-label">Sign tests</div>At \(x=-1\): \(f'(-2)=-3(4+4-3)&lt;0\to f'(0)=9&gt;0\) → local min at \((-1,-10)\)<br>At \(x=3\): \(f'(1)=12&gt;0\to f'(4)=-15&lt;0\) → local max at \((3,22)\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local min at \((-1,\,-10)\); local max at \((3,\,22)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-step"><div class="step-label">Differentiate &amp; solve</div>\(f'(x) = x^2-2x-8 = (x-4)(x+2) = 0 \Rightarrow x=4\) or \(x=-2\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \(\!\left(-2,\,\tfrac{34}{3}\right)\); local min at \(\left(4,\,-\tfrac{46}{3}\right)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-step"><div class="step-label">Differentiate &amp; solve</div>\(f'(x)=x^2-2x-3=(x-3)(x+1)=0 \Rightarrow x=3\) or \(x=-1\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \(\left(-1,\,\tfrac{8}{3}\right)\); local min at \(\left(3,\,-8\right)\)</div></div>
+    </div>
+  </div>
+
+  <!-- Q5: Second derivative test -->
+  <div class="q-card">
+    <div class="q-number">Question 5</div>
+    <div class="q-stem">Use the <strong>second derivative test</strong> to classify any stationary points of the following graphs:</div>
+    <div class="q-parts">
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = 2x^3 - 9x^2\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = \dfrac{x^4}{4} - 2x^2 + 1\)</span></div>
+      </div>
+      <div class="drill-row">
+        <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = 2x^3 + 3x^2 - 12x\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(d)</span><span class="q-part-text">\(x^3 - 3x^2 - 9x + 5\)</span></div>
+      </div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-step"><div class="step-label">Solve \(f'=0\)</div>\(f'(x)=6x^2-18x=6x(x-3)=0 \Rightarrow x=0,\;x=3\)</div>
+        <div class="sol-step"><div class="step-label">Second derivative</div>\(f''(x)=12x-18\). \(f''(0)=-18&lt;0\) → max; \(f''(3)=18&gt;0\) → min</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \((0,0)\); local min at \((3,-27)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Solve \(f'=0\)</div>\(f'(x)=x^3-4x=x(x^2-4)=x(x-2)(x+2)=0 \Rightarrow x=0,\pm2\)</div>
+        <div class="sol-step"><div class="step-label">Second derivative</div>\(f''(x)=3x^2-4\). \(f''(0)=-4&lt;0\) → max; \(f''(\pm2)=8&gt;0\) → min</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \((0,1)\); local min at \((\pm2,-3)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(c)</span></div>
+        <div class="sol-step"><div class="step-label">Solve \(f'=0\)</div>\(f'(x)=6x^2+6x-12=6(x+2)(x-1)=0 \Rightarrow x=-2,\;x=1\)</div>
+        <div class="sol-step"><div class="step-label">Second derivative</div>\(f''(x)=12x+6\). \(f''(-2)=-18&lt;0\) → max; \(f''(1)=18&gt;0\) → min</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \((-2,20)\); local min at \((1,-7)\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(d)</span></div>
+        <div class="sol-step"><div class="step-label">Solve \(f'=0\)</div>\(f'(x)=3x^2-6x-9=3(x-3)(x+1)=0 \Rightarrow x=3,\;x=-1\)</div>
+        <div class="sol-step"><div class="step-label">Second derivative</div>\(f''(x)=6x-6\). \(f''(-1)=-12&lt;0\) → max; \(f''(3)=12&gt;0\) → min</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \((-1,10)\); local min at \((3,-22)\)</div></div>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="q-card">
+    <div class="q-number">Question 6</div>
+    <div class="q-stem">Classify any stationary points of the following graph: \[y = \dfrac{x^2}{x - 1},\quad x \neq 1\]</div>
+    <div class="solutions-only">
+      <div class="sol-step"><div class="step-label">Quotient rule</div>\(\dfrac{dy}{dx} = \dfrac{2x(x-1) - x^2}{(x-1)^2} = \dfrac{x^2 - 2x}{(x-1)^2} = \dfrac{x(x-2)}{(x-1)^2}\)</div>
+      <div class="sol-step"><div class="step-label">Solve \(=0\)</div>\(x=0\) or \(x=2\) (denominator \(\neq 0\) at these points)</div>
+      <div class="sol-step"><div class="step-label">Sign analysis</div>
+        \(x=0\): \(f'(-1)=\tfrac{3}{4}&gt;0\to f'(\tfrac{1}{2})=-1&lt;0\) → local max<br>
+        \(x=2\): \(f'(\tfrac{3}{2})=-3&lt;0\to f'(3)=\tfrac{3}{4}&gt;0\) → local min</div>
+      <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \((0,0)\); local min at \((2,4)\)</div>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="q-card">
+    <div class="q-number">Question 7</div>
+    <div class="q-stem">The graph \(f(x) = x^3 + ax^2 + bx + 6\) has a stationary point at \((2, -2)\).</div>
+    <div class="q-parts">
+      <div class="q-part"><span class="q-part-label">(a)</span><span class="q-part-text">Find \(a\) and \(b\).</span></div>
+      <div class="q-part"><span class="q-part-label">(b)</span><span class="q-part-text">Classify all stationary points.</span></div>
+    </div>
+    <div class="solutions-only">
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(a)</span></div>
+        <div class="sol-step"><div class="step-label">Two equations</div>
+          From \(f(2)=-2\): \(8+4a+2b+6=-2 \Rightarrow 4a+2b=-16 \Rightarrow 2a+b=-8 \quad\cdots(1)\)<br>
+          From \(f'(2)=0\): \(f'(x)=3x^2+2ax+b\Rightarrow 12+4a+b=0 \Rightarrow 4a+b=-12 \quad\cdots(2)\)
+        </div>
+        <div class="sol-step"><div class="step-label">Solve simultaneously</div>\((2)-(1): 2a=-4\Rightarrow a=-2,\quad b=-8-2(-2)=-4\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(a = -2,\quad b = -4\)</div></div>
+      <div class="sol-part"><div class="sol-part-header"><span class="q-part-label">(b)</span></div>
+        <div class="sol-step"><div class="step-label">Find stationary points</div>\(f'(x)=3x^2-4x-4=(3x+2)(x-2)=0 \Rightarrow x=-\tfrac{2}{3}\) or \(x=2\)</div>
+        <div class="sol-step"><div class="step-label">Second derivative</div>\(f''(x)=6x-4\). \(f''\!\left(-\tfrac{2}{3}\right)=-8&lt;0\) → max; \(f''(2)=8&gt;0\) → min</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>Local max at \(\left(-\tfrac{2}{3},\,f\!\left(-\tfrac{2}{3}\right)\right)\); confirmed local min at \((2,-2)\)</div></div>
+    </div>
+  </div>
+
+  <div class="ws-footer">Generated by Mathski &nbsp;·&nbsp; mathski.io &nbsp;·&nbsp; IB Mathematics AA Shadow Worksheets</div>
+</div>
+<script>
+function setMode(m){document.body.className='mode-'+m;document.getElementById('btn-q').className='toggle-btn'+(m==='questions'?' active':'');document.getElementById('btn-s').className='toggle-btn'+(m==='solutions'?' active solutions':'');document.getElementById('mode-label').textContent=m==='questions'?'Worksheet':'Solutions';document.getElementById('meta-badge').textContent=m==='questions'?'Practice':'Solutions';document.getElementById('meta-badge').className='ws-badge'+(m==='solutions'?' solutions-badge':'');}
+document.addEventListener('DOMContentLoaded',()=>{renderMathInElement(document.body,{delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}],throwOnError:false});});
+</script>
+</body>
+</html>
