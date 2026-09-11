@@ -240,7 +240,7 @@ header{background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-back
     <div class="q-parts">
       <div class="drill-row">
         <div class="drill-cell"><span class="q-part-label">(a)</span><span class="q-part-text">\(f(x) = 2x^5 + x^3\)</span></div>
-        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = \dfrac{3}{\sqrt[4]{x}} + 1\)</span></div>
+        <div class="drill-cell"><span class="q-part-label">(b)</span><span class="q-part-text">\(f(x) = \dfrac{3}{x^2} + 1\)</span></div>
         <div class="drill-cell"><span class="q-part-label">(c)</span><span class="q-part-text">\(f(x) = \dfrac{5}{x^3} + x\)</span></div>
       </div>
     </div>
@@ -253,8 +253,9 @@ header{background:rgba(255,255,255,0.88);backdrop-filter:blur(20px);-webkit-back
       </div>
       <div class="sol-part">
         <div class="sol-part-header"><span class="q-part-label">(b)</span></div>
-        <div class="sol-step"><div class="step-label">Note</div>\(x=-2\) gives \(x^{1/4}\) undefined in \(\mathbb{R}\). This part requires \(x&gt;0\); use \(x=2\) instead for a valid answer.</div>
-        <div class="sol-answer"><div class="ans-label">At \(x=2\)</div>\(f'(x)=-\tfrac{3}{4}x^{-5/4},\quad f'(2)=-\tfrac{3}{4\cdot 2^{5/4}}\). Normal slope \(=\tfrac{4\cdot 2^{5/4}}{3}\).</div>
+        <div class="sol-step"><div class="step-label">Gradient &amp; point</div>\(f(x)=3x^{-2}+1,\quad f'(x)=-6x^{-3},\quad f'(-2)=-6\cdot(-2)^{-3}=-6\div(-8)=\tfrac{3}{4},\quad f(-2)=\tfrac{3}{4}+1=\tfrac{7}{4}\)</div>
+        <div class="sol-step"><div class="step-label">Normal</div>\(m_n=-\dfrac{4}{3}\)</div>
+        <div class="sol-answer"><div class="ans-label">Answer</div>\(y-\tfrac{7}{4}=-\tfrac{4}{3}(x+2)\Rightarrow 16x+12y+11=0\)</div>
       </div>
       <div class="sol-part">
         <div class="sol-part-header"><span class="q-part-label">(c)</span></div>
