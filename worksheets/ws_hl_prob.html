@@ -30,28 +30,28 @@ header{background:rgba(255,255,255,.88);backdrop-filter:blur(20px);-webkit-backd
 <div class="wm"><div><div class="wt">Extra Probability (HL)</div><div class="ws">IB Mathematics AA &middot; HL &middot; Shadow Worksheet</div></div><div class="wb" id="mb">Practice</div></div>
 <div class="nl qo">Name <div class="nd"></div></div>
 <div class="qc"><div class="qn">Question 1</div>
-<div class="qs">If \(X\sim	ext{Poisson}(3)\), find \(P(X=4)\), \(P(X\leq2)\), and \(E(X^2)\).</div>
+<div class="qs">If \(X\sim\text{Poisson}(3)\), find \(P(X=4)\), \(P(X\leq2)\), and \(E(X^2)\).</div>
 <div class="so">
 <div class="ss"><div class="sl">Poisson formula: \(P(X=k)=\dfrac{e^{-\lambda}\lambda^k}{k!}\), \(\lambda=3\)</div></div>
 <div class="ss"><div class="sl">\(P(X=4)\)</div>\(\dfrac{e^{-3}\cdot81}{24}=\dfrac{81e^{-3}}{24}\approx0.168\)</div>
-<div class="ss"><div class="sl">\(P(X\leq2)=P(0)+P(1)+P(2)\)</div>\(e^{-3}(1+3+	frac{9}{2})=e^{-3}	imes8.5\approx0.423\)</div>
-<div class="ss"><div class="sl">\(E(X^2)=	ext{Var}(X)+[E(X)]^2=3+9\)</div></div>
+<div class="ss"><div class="sl">\(P(X\leq2)=P(0)+P(1)+P(2)\)</div>\(e^{-3}(1+3+\tfrac{9}{2})=e^{-3}\times8.5\approx0.423\)</div>
+<div class="ss"><div class="sl">\(E(X^2)=\text{Var}(X)+[E(X)]^2=3+9\)</div></div>
 <div class="sa"><div class="al">Answer</div>\(P(X=4)\approx0.168\); \(P(X\leq2)\approx0.423\); \(E(X^2)=12\)</div>
 </div></div>
 
 <div class="qc"><div class="qn">Question 2</div>
-<div class="qs">Events A and B satisfy \(P(A)=	frac{1}{3}\), \(P(B|A)=	frac{1}{2}\), \(P(B|A')=	frac{1}{4}\). Find \(P(A|B)\).</div>
+<div class="qs">Events A and B satisfy \(P(A)=\tfrac{1}{3}\), \(P(B|A)=\tfrac{1}{2}\), \(P(B|A')=\tfrac{1}{4}\). Find \(P(A|B)\).</div>
 <div class="so">
-<div class="ss"><div class="sl">Total probability</div>\(P(B)=	frac{1}{3}	imes	frac{1}{2}+	frac{2}{3}	imes	frac{1}{4}=	frac{1}{6}+	frac{1}{6}=	frac{1}{3}\)</div>
-<div class="ss"><div class="sl">Bayes</div>\(P(A|B)=\dfrac{P(B|A)P(A)}{P(B)}=\dfrac{	frac{1}{2}	imes	frac{1}{3}}{	frac{1}{3}}\)</div>
+<div class="ss"><div class="sl">Total probability</div>\(P(B)=\tfrac{1}{3}\times\tfrac{1}{2}+\tfrac{2}{3}\times\tfrac{1}{4}=\tfrac{1}{6}+\tfrac{1}{6}=\tfrac{1}{3}\)</div>
+<div class="ss"><div class="sl">Bayes</div>\(P(A|B)=\dfrac{P(B|A)P(A)}{P(B)}=\dfrac{\tfrac{1}{2}\times\tfrac{1}{3}}{\tfrac{1}{3}}\)</div>
 <div class="sa"><div class="al">Answer</div>\(P(A|B)=\dfrac{1}{2}\)</div>
 </div></div>
 
 <div class="qc"><div class="qn">Question 3</div>
 <div class="qs">A continuous random variable \(X\) has PDF \(f(x)=\lambda e^{-\lambda x}\) for \(x\geq0\) (Exponential distribution). Show that \(E(X)=\dfrac{1}{\lambda}\) and find the median.</div>
 <div class="so">
-<div class="ss"><div class="sl">\(E(X)=\displaystyle\int_0^\infty x\lambda e^{-\lambda x}\,dx\)</div>IBP with \(u=x,\;dv=\lambda e^{-\lambda x}\): \([-xe^{-\lambda x}]_0^\infty+\displaystyle\int_0^\infty e^{-\lambda x}\,dx=0+[-	frac{1}{\lambda}e^{-\lambda x}]_0^\infty=	frac{1}{\lambda}\) ✓</div>
-<div class="ss"><div class="sl">Median: solve \(\displaystyle\int_0^m\lambda e^{-\lambda x}\,dx=	frac{1}{2}\)</div>\(1-e^{-\lambda m}=	frac{1}{2}\Rightarrow m=\dfrac{\ln2}{\lambda}\)</div>
+<div class="ss"><div class="sl">\(E(X)=\displaystyle\int_0^\infty x\lambda e^{-\lambda x}\,dx\)</div>IBP with \(u=x,\;dv=\lambda e^{-\lambda x}\): \([-xe^{-\lambda x}]_0^\infty+\displaystyle\int_0^\infty e^{-\lambda x}\,dx=0+[-\tfrac{1}{\lambda}e^{-\lambda x}]_0^\infty=\tfrac{1}{\lambda}\) ✓</div>
+<div class="ss"><div class="sl">Median: solve \(\displaystyle\int_0^m\lambda e^{-\lambda x}\,dx=\tfrac{1}{2}\)</div>\(1-e^{-\lambda m}=\tfrac{1}{2}\Rightarrow m=\dfrac{\ln2}{\lambda}\)</div>
 <div class="sa"><div class="al">Answer</div>Median \(=\dfrac{\ln2}{\lambda}\)</div>
 </div></div>
 
