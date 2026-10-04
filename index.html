@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mathski — IB Maths IA Marking Tool</title>
+<title>Mathski — Back Soon</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -19,16 +19,12 @@
     --text-muted: #6b6b70;
     --text-dim: #8e8e93;
     --success: #34c759;
-    --warn: #ff9500;
-    --danger: #ff3b30;
-    --teacher-green: #248a3d;
     --radius-bubble: 18px;
     --radius-card: 16px;
     --radius-sm: 10px;
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
     --shadow: 0 2px 8px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.05);
     --shadow-md: 0 4px 16px rgba(0,0,0,0.09), 0 2px 6px rgba(0,0,0,0.06);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.11), 0 4px 12px rgba(0,0,0,0.07);
     --shadow-blue: 0 4px 16px rgba(0,122,255,0.28), 0 1px 4px rgba(0,122,255,0.15);
     --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
     --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -43,6 +39,8 @@
     min-height: 100vh;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
   }
 
   header {
@@ -56,322 +54,137 @@
   }
 
   .logo { display: flex; align-items: center; gap: 8px; }
-
-  .logo-img {
-    height: 44px;
-    width: auto;
-    display: block;
-    object-fit: contain;
-  }
-
+  .logo-img { height: 44px; width: auto; display: block; object-fit: contain; }
   .logo-text { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.01em; }
   .logo-text span { color: var(--blue); }
   .header-tag { font-size: 0.72rem; color: var(--text-dim); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
 
-  .shell { max-width: 720px; margin: 0 auto; padding: 28px 20px 60px; }
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
 
-  .section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
+  .shell { max-width: 480px; width: 100%; }
 
   .bubble-card {
-    background: var(--white); border-radius: var(--radius-card);
-    padding: 20px; margin-bottom: 14px; box-shadow: var(--shadow-md);
-    animation: fadeUp 0.4s var(--ease-out) both;
-    transition: box-shadow 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+    background: var(--white);
+    border-radius: var(--radius-card);
+    padding: 36px 28px;
+    box-shadow: var(--shadow-md);
+    animation: fadeUp 0.5s var(--ease-out) both;
+    text-align: center;
   }
 
-  @keyframes fadeUp { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
-
-  .card-title { font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 14px; }
-
-  .limits-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
-  @media (max-width: 540px) { .limits-grid { grid-template-columns: 1fr; } }
-
-  .limit-bubble {
-    background: var(--bg); border-radius: var(--radius-sm);
-    padding: 11px 13px; font-size: 0.8rem; color: var(--text-sec);
-    line-height: 1.5; display: flex; gap: 8px; align-items: flex-start;
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
-  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
-  .dot.warn { background: var(--warn); }
-  .dot.info { background: var(--blue); }
-
-  .limits-footer {
-    font-size: 0.78rem; color: var(--text-muted); font-style: italic;
-    text-align: center; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.06);
+  .icon {
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+    display: block;
+    animation: bob 3s ease-in-out infinite;
   }
 
-  /* CRITERIA SECTION */
-  .criteria-intro { font-size: 0.87rem; color: var(--text-sec); line-height: 1.65; margin-bottom: 16px; }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
 
-  .criteria-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .section-label {
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--blue); margin-bottom: 10px;
+  }
 
-  .crit-pill {
-    background: var(--blue-light); border: 1px solid var(--blue-mid);
-    border-radius: 20px; padding: 6px 14px;
-    font-size: 0.8rem; font-weight: 600; color: var(--blue-dark);
+  .card-title {
+    font-family: 'Nunito', sans-serif; font-size: 1.3rem; font-weight: 800;
+    color: var(--text); margin-bottom: 12px; line-height: 1.3;
+  }
+
+  .card-body {
+    font-size: 0.88rem; color: var(--text-sec); line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .dots {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: 28px;
+  }
+
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--blue-mid);
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes pulse {
+    0%, 100% { background: var(--blue-mid); transform: scale(1); }
+    50% { background: var(--blue); transform: scale(1.3); }
+  }
+
+  .notify-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px;
+  }
+
+  .notify-row {
+    display: flex; gap: 8px;
+  }
+
+  .notify-input {
+    flex: 1;
+    border: 1.5px solid var(--blue-mid); border-radius: var(--radius-bubble);
+    padding: 11px 16px; font-size: 0.85rem;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--text); outline: none; background: var(--bg);
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .notify-input:focus { border-color: var(--blue); background: white; }
+  .notify-input::placeholder { color: var(--text-dim); }
+
+  .btn-notify {
+    background: var(--blue); color: white; border: none;
+    border-radius: var(--radius-bubble); padding: 11px 20px;
+    font-size: 0.85rem; font-weight: 700;
+    font-family: 'Nunito', sans-serif; cursor: pointer;
+    box-shadow: var(--shadow-blue);
+    transition: all 0.22s var(--spring);
+    white-space: nowrap;
+  }
+  .btn-notify:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,122,255,0.38); }
+
+  .notify-success {
+    display: none; font-size: 0.82rem; color: var(--success);
+    font-weight: 600; margin-top: 12px;
+    animation: fadeUp 0.3s var(--ease-out) both;
+  }
+
+  .feature-row {
+    display: flex; gap: 8px; margin-top: 24px; flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature-pill {
+    background: var(--bg); border-radius: 20px; padding: 6px 14px;
+    font-size: 0.78rem; font-weight: 600; color: var(--text-sec);
+    border: 1px solid rgba(0,0,0,0.07);
     font-family: 'Nunito', sans-serif;
   }
-  .crit-pill span { color: var(--text-muted); font-weight: 400; margin-left: 4px; }
 
-  .folder-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; }
-
-  .doc-item {
-    display: flex; align-items: center; gap: 14px;
-    background: var(--bg); border-radius: var(--radius-sm);
-    padding: 13px 14px; margin-bottom: 8px;
-    text-decoration: none; color: inherit;
-    transition: background 0.15s; border: 1px solid transparent;
+  footer {
+    text-align: center; padding: 20px 20px 32px;
+    font-size: 0.73rem; color: var(--text-dim);
+    font-weight: 500; line-height: 1.9;
+    border-top: 1px solid rgba(0,0,0,0.06);
   }
-  .doc-item:hover { background: var(--blue-light); border-color: var(--blue-mid); }
-
-  .doc-icon {
-    width: 38px; height: 38px; border-radius: 9px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem; flex-shrink: 0;
-  }
-  .doc-icon.blue-bg { background: #e8f2ff; }
-  .doc-icon.green-bg { background: #eefaf3; }
-  .doc-icon.yellow-bg { background: #fff8e8; }
-
-  .doc-info { flex: 1; min-width: 0; }
-  .doc-name { font-size: 0.87rem; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-  .doc-desc { font-size: 0.76rem; color: var(--text-muted); line-height: 1.4; }
-
-  .doc-tag {
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em;
-    text-transform: uppercase; padding: 3px 9px; border-radius: 20px; flex-shrink: 0;
-  }
-  .doc-tag.official { background: var(--blue-light); color: var(--blue); }
-  .doc-tag.supplementary { background: #fff3d6; color: #a06000; }
-
-  /* UPLOAD */
-  .drop-zone {
-    border: 2px dashed var(--blue-mid); border-radius: var(--radius-sm);
-    padding: 32px 20px; text-align: center; cursor: pointer;
-    transition: all 0.2s; background: var(--blue-light); position: relative;
-  }
-  .drop-zone:hover, .drop-zone.drag-over { border-color: var(--blue); background: #ddeeff; }
-  .drop-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
-  .drop-icon { font-size: 2rem; margin-bottom: 10px; display: block; }
-  .drop-zone p { font-size: 0.88rem; color: var(--text-sec); font-weight: 500; }
-  .drop-zone p strong { color: var(--blue); }
-  .drop-zone .sub { font-size: 0.73rem; color: var(--text-dim); margin-top: 5px; }
-
-  .file-pill {
-    display: none; margin-top: 12px; background: var(--blue); color: white;
-    border-radius: 20px; padding: 7px 16px; font-size: 0.8rem; font-weight: 600;
-  }
-
-  /* COURSE */
-  .course-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-  @media (max-width: 440px) { .course-grid { grid-template-columns: 1fr; } }
-
-  .course-option {
-    border: 2px solid var(--bubble-gray); border-radius: var(--radius-sm);
-    padding: 12px 14px; cursor: pointer; transition: all 0.18s; background: var(--white);
-  }
-  .course-option:hover { border-color: var(--blue-mid); background: var(--blue-light); }
-  .course-option.selected { border-color: var(--blue); background: var(--blue-light); }
-  .course-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--blue); margin-bottom: 2px; }
-  .course-name { font-size: 0.82rem; color: var(--text-sec); font-weight: 500; line-height: 1.3; }
-  .course-option.selected .course-name { color: var(--text); font-weight: 600; }
-
-  /* BUTTON */
-  .btn-mark {
-    width: 100%; background: var(--blue); color: white; border: none;
-    border-radius: var(--radius-bubble); padding: 15px;
-    font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700;
-    cursor: pointer; transition: all 0.18s;
-    box-shadow: var(--shadow-blue); letter-spacing: 0.01em; margin-top: 4px;
-  }
-  .btn-mark:hover:not(:disabled) { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,122,255,0.4), 0 2px 8px rgba(0,122,255,0.2); transition: all 0.22s var(--spring); }
-  .btn-mark:disabled { opacity: 0.35; cursor: not-allowed; transform: none; box-shadow: none; }
-
-  /* STATUS */
-  .status-bubble {
-    display: none; background: var(--bubble-gray);
-    border-radius: var(--radius-bubble); border-bottom-left-radius: 4px;
-    padding: 12px 18px; margin: 12px 0; font-size: 0.85rem; color: var(--text-sec);
-    align-items: center; gap: 10px; max-width: 85%;
-  }
-  .spinner { width: 14px; height: 14px; border: 2px solid rgba(0,0,0,0.12); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.7s linear infinite; flex-shrink: 0; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  .error-bubble {
-    display: none; background: #fff2f2; border: 1px solid #ffd0d0;
-    border-radius: var(--radius-sm); padding: 12px 16px;
-    color: var(--danger); font-size: 0.84rem; margin: 10px 0;
-  }
-
-  /* RESULTS */
-  #results { display: none; }
-
-  .score-bubble {
-    background: var(--blue); color: white;
-    border-radius: var(--radius-bubble); border-bottom-right-radius: 4px;
-    padding: 16px 22px; display: inline-block; margin-bottom: 18px;
-    box-shadow: var(--shadow-blue); float: right; clear: both;
-  }
-  .score-num { font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 800; line-height: 1; }
-  .score-label { font-size: 0.75rem; opacity: 0.8; margin-top: 2px; font-weight: 500; }
-  .clearfix::after { content: ''; display: table; clear: both; }
-
-  .crit-card {
-    background: var(--white); border-radius: var(--radius-card);
-    margin-bottom: 10px; box-shadow: var(--shadow-md);
-    overflow: hidden; animation: fadeUp 0.35s var(--ease-out) both;
-    transition: box-shadow 0.22s var(--ease-out), transform 0.22s var(--ease-out);
-  }
-  .crit-header {
-    display: flex; align-items: center; padding: 14px 18px;
-    cursor: pointer; gap: 12px; transition: background 0.15s; user-select: none;
-  }
-  .crit-header:hover { background: var(--bg); }
-  .crit-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-1px); }
-  .crit-letter-circle {
-    width: 38px; height: 38px; border-radius: 50%;
-    background: var(--blue-light); border: 2px solid var(--blue-mid);
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--blue); flex-shrink: 0;
-  }
-  .crit-info { flex: 1; min-width: 0; }
-  .crit-name-text { font-size: 0.88rem; font-weight: 600; color: var(--text); }
-  .crit-score-row { display: flex; align-items: center; gap: 8px; margin-top: 2px; }
-  .score-pip { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; font-family: 'Nunito', sans-serif; }
-  .verdict-pill { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 2px 9px; border-radius: 20px; }
-  .verdict-pill.secure { background: rgba(52,199,89,0.12); color: #248a3d; }
-  .verdict-pill.borderline { background: rgba(255,149,0,0.12); color: #b25000; }
-  .verdict-pill.vulnerable { background: rgba(255,59,48,0.12); color: #c0392b; }
-  .chevron { color: var(--text-dim); font-size: 0.65rem; transition: transform 0.32s var(--spring); flex-shrink: 0; }
-  .crit-card.open .chevron { transform: rotate(90deg); }
-  .crit-body { display: none; padding: 0 18px 18px; border-top: 1px solid var(--bg); }
-  .crit-card.open .crit-body { display: block; animation: slideDown 0.28s var(--spring) both; }
-  @keyframes slideDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
-  .body-section { margin-top: 14px; }
-  .body-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 7px; }
-  .reasoning-box { background: var(--bubble-gray); border-radius: var(--radius-sm); border-top-left-radius: 4px; padding: 12px 14px; font-size: 0.83rem; color: var(--text-sec); line-height: 1.6; }
-  .comment-box { background: var(--blue-light); border: 1px solid var(--blue-mid); border-radius: var(--radius-sm); padding: 12px 14px 40px; font-size: 0.83rem; color: var(--text); line-height: 1.65; font-style: italic; position: relative; }
-  .copy-btn { position: absolute; bottom: 10px; right: 10px; background: var(--blue); color: white; border: none; border-radius: 20px; padding: 4px 14px; font-size: 0.7rem; font-weight: 700; cursor: pointer; transition: all 0.15s; font-family: 'Nunito', sans-serif; }
-  .copy-btn:hover { background: var(--blue-dark); }
-
-  .flags-card { background: #fff8f0; border: 1px solid #ffd0a0; border-radius: var(--radius-card); padding: 18px; margin-top: 10px; animation: fadeUp 0.4s ease both; }
-  .flags-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--warn); margin-bottom: 12px; }
-  .flag-item { display: flex; gap: 9px; font-size: 0.83rem; color: var(--text-sec); line-height: 1.5; margin-bottom: 8px; background: white; border-radius: var(--radius-sm); padding: 9px 12px; }
-  .flag-item::before { content: '⚑'; color: var(--warn); flex-shrink: 0; font-size: 0.72rem; margin-top: 2px; }
-  .no-flags { font-size: 0.84rem; color: var(--success); font-style: italic; background: white; border-radius: var(--radius-sm); padding: 10px 12px; }
-
-  .disclaimer-box { background: var(--bubble-gray); border-radius: var(--radius-sm); padding: 12px 14px; font-size: 0.76rem; color: var(--text-muted); line-height: 1.6; font-style: italic; margin-top: 14px; animation: fadeUp 0.5s ease both; }
-
-  footer { text-align: center; padding: 28px 20px 44px; font-size: 0.73rem; color: var(--text-dim); font-weight: 500; line-height: 1.9; border-top: 1px solid rgba(0,0,0,0.06); margin-top: 20px; }
   footer .blue { color: var(--blue); font-weight: 700; }
   .credit-hover { opacity: 0; transition: opacity 0.4s ease; cursor: default; display: inline-block; }
   .credit-hover:hover { opacity: 1; }
-
-  /* ── Pricing Section ── */
-  .pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 4px;
-  }
-  @media (max-width: 640px) { .pricing-grid { grid-template-columns: 1fr; } }
-
-  .pricing-card {
-    background: var(--white);
-    border-radius: var(--radius-card);
-    padding: 22px 18px 20px;
-    box-shadow: var(--shadow-md);
-    display: flex; flex-direction: column;
-    border: 2px solid transparent;
-    transition: box-shadow 0.22s var(--ease-out), transform 0.22s var(--ease-out), border-color 0.2s;
-    position: relative;
-  }
-  .pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-  .pricing-card.featured { border-color: var(--blue); }
-  .pricing-card.featured::before {
-    content: 'Most Popular';
-    position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
-    background: var(--blue); color: white;
-    font-family: 'Nunito', sans-serif; font-size: 0.62rem; font-weight: 800;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 3px 12px; border-radius: 20px;
-  }
-
-  .pricing-tier-label {
-    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.09em;
-    text-transform: uppercase; color: var(--blue); margin-bottom: 6px;
-  }
-  .pricing-tier-name {
-    font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 800;
-    color: var(--text); margin-bottom: 12px; line-height: 1.2;
-  }
-  .pricing-price {
-    font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 800;
-    color: var(--text); line-height: 1; margin-bottom: 4px;
-  }
-  .pricing-price sup { font-size: 1rem; font-weight: 700; vertical-align: super; }
-  .pricing-price-sub {
-    font-size: 0.73rem; color: var(--text-muted); margin-bottom: 16px;
-  }
-  .pricing-divider {
-    height: 1px; background: var(--bg); margin-bottom: 14px;
-  }
-  .pricing-features {
-    list-style: none; flex: 1; margin-bottom: 18px;
-  }
-  .pricing-features li {
-    font-size: 0.8rem; color: var(--text-sec); line-height: 1.5;
-    padding: 5px 0; display: flex; align-items: flex-start; gap: 8px;
-  }
-  .pricing-features li::before {
-    content: '✓'; color: var(--success); font-weight: 800;
-    font-size: 0.75rem; flex-shrink: 0; margin-top: 1px;
-  }
-  .pricing-features li.locked::before { content: '·'; color: var(--text-dim); }
-  .pricing-features li.locked { color: var(--text-dim); }
-
-  .btn-pricing-free {
-    width: 100%; background: var(--bg); color: var(--blue); border: 2px solid var(--blue-mid);
-    border-radius: var(--radius-bubble); padding: 12px;
-    font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 700;
-    cursor: default; letter-spacing: 0.01em;
-    display: block; text-align: center;
-  }
-  .btn-pricing-paid {
-    width: 100%; background: var(--blue); color: white; border: none;
-    border-radius: var(--radius-bubble); padding: 12px;
-    font-family: 'Nunito', sans-serif; font-size: 0.9rem; font-weight: 700;
-    cursor: pointer; letter-spacing: 0.01em;
-    box-shadow: var(--shadow-blue);
-    transition: all 0.22s var(--spring);
-    display: block; text-align: center; text-decoration: none;
-  }
-  .btn-pricing-paid:hover { background: var(--blue-dark); transform: translateY(-1px); box-shadow: 0 8px 28px rgba(0,122,255,0.4); }
-
-  .pricing-note {
-    font-size: 0.72rem; color: var(--text-dim); text-align: center;
-    margin-top: 14px; font-style: italic; line-height: 1.5;
-  }
-
-
-  /* ── Main Tab Bar ── */
-  .main-tab-bar {
-    display: flex; gap: 4px; padding: 12px 20px 0;
-    max-width: 720px; margin: 0 auto;
-  }
-  .main-tab-btn {
-    font-family: 'Nunito', sans-serif; font-size: 0.82rem; font-weight: 700;
-    padding: 9px 18px; border-radius: 10px 10px 0 0; border: none;
-    cursor: pointer; transition: all 0.22s var(--ease-out); letter-spacing: 0.01em;
-    background: var(--bubble-gray); color: var(--text-muted);
-  }
-  .main-tab-btn.active {
-    background: var(--white); color: var(--blue);
-    box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
-  }
-  .main-tab-btn:hover:not(.active) { background: var(--blue-mid); color: var(--blue); }
-
 </style>
 </head>
 <body>
@@ -384,368 +197,37 @@
   <div class="header-tag">IB Mathematics IA Tool</div>
 </header>
 
-<div class="main-tab-bar">
-  <button class="main-tab-btn active" id="tab-mark" onclick="switchTab('mark')">🎯 IA Marking</button>
-  <button class="main-tab-btn" id="tab-practice" onclick="switchTab('practice')">📚 Practice Questions</button>
-  <button class="main-tab-btn" id="tab-pricing" onclick="switchTab('pricing')">💳 Pricing</button>
-</div>
-<div id="mark-shell">
+<main>
+  <div class="shell">
+    <div class="bubble-card">
+      <span class="icon">⛷️</span>
+      <div class="section-label">We'll be right back</div>
+      <div class="card-title">Mathski is getting an upgrade</div>
+      <p class="card-body">
+        We're working on something better — a faster, smarter IA checking experience with new features on the way. Check back soon.
+      </p>
 
-<div class="shell">
-
-  <!-- LIMITS -->
-  <div class="bubble-card" style="animation-delay:0.03s">
-    <div class="section-label">Before You Begin</div>
-    <div class="card-title">How Mathski works — and what it can't do</div>
-    <div class="limits-grid">
-      <div class="limit-bubble"><div class="dot warn"></div><span>First-pass drafting aid only. All marks must be reviewed and finalised by the teacher.</span></div>
-      <div class="limit-bubble"><div class="dot warn"></div><span>Criteria C and D need the most human oversight — most prone to over-award.</span></div>
-      <div class="limit-bubble"><div class="dot warn"></div><span>Mathematical correctness in Criterion E is checked but not guaranteed. Verify calculations independently.</span></div>
-      <div class="limit-bubble"><div class="dot warn"></div><span>Graphs, GDC screenshots, and diagrams in PDFs may not be fully readable. Note this for Criterion B.</span></div>
-      <div class="limit-bubble"><div class="dot info"></div><span>Marks anchored strictly to official IB descriptor language. Volume and ambition do not substitute for meeting descriptors.</span></div>
-      <div class="limit-bubble"><div class="dot info"></div><span>Each criterion flagged <strong>secure / borderline / vulnerable</strong> to support moderation-ready submission.</span></div>
-      <div class="limit-bubble"><div class="dot info"></div><span>Built on official IB Mathematics IA assessment criteria and descriptors for SL and HL.</span></div>
-      <div class="limit-bubble"><div class="dot info"></div><span>Coversheet comments are drafts — edit before pasting into any official form or IBIS.</span></div>
-    </div>
-    <div class="limits-footer">The teacher remains the marker. Mathski supports — it does not replace — professional judgement.</div>
-  </div>
-
-  <!-- WHAT IS YOUR IA MARKED AGAINST -->
-  <div class="bubble-card" style="animation-delay:0.08s">
-    <div class="section-label">The Marking Framework</div>
-    <div class="card-title">What is your IA marked against?</div>
-    <p class="criteria-intro">
-      Every IB Mathematics Internal Assessment is marked by your teacher against five criteria — A through E — and then externally moderated by the IB. The total mark is out of 20. Criteria A to D are identical for SL and HL students. Criterion E (Use of Mathematics) has separate descriptors for SL and HL, with HL requiring greater sophistication and rigour at the top bands.
-    </p>
-    <div class="criteria-pills">
-      <div class="crit-pill">A <span>Presentation</span></div>
-      <div class="crit-pill">B <span>Mathematical Communication</span></div>
-      <div class="crit-pill">C <span>Personal Engagement</span></div>
-      <div class="crit-pill">D <span>Reflection</span></div>
-      <div class="crit-pill">E <span>Use of Mathematics</span></div>
-    </div>
-    <p class="criteria-intro" style="margin-bottom:18px;">
-      Marking uses a best-fit model — the descriptor that most accurately reflects the overall level of the work is selected. It is not necessary for every aspect of a descriptor to be met. The documents below are the official and supporting materials that Mathski's marking is based on. Download and review them to understand exactly what examiners are looking for.
-    </p>
-
-    <div class="folder-label">📁 Reference Documents</div>
-
-    <a class="doc-item" href="IA_Guide.pdf" target="_blank" download>
-      <div class="doc-icon blue-bg">📘</div>
-      <div class="doc-info">
-        <div class="doc-name">IB Mathematics IA Guide</div>
-        <div class="doc-desc">Official IB guidance — full criteria descriptors for A–E (SL and HL), marking instructions, and exploration requirements.</div>
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
-      <span class="doc-tag official">Official</span>
-    </a>
 
-    <a class="doc-item" href="IA_Rubric.pdf" target="_blank" download>
-      <div class="doc-icon green-bg">📗</div>
-      <div class="doc-info">
-        <div class="doc-name">IA Mark Sheet &amp; Rubric</div>
-        <div class="doc-desc">Complete criterion rubric with all descriptor levels for SL and HL — the sheet used by teachers when awarding marks.</div>
+      <div class="notify-label">Notify me when it's ready</div>
+      <div class="notify-row">
+        <input class="notify-input" type="email" id="emailInput" placeholder="your@email.com" autocomplete="off" />
+        <button class="btn-notify" onclick="notifyMe()">Notify me</button>
       </div>
-      <span class="doc-tag official">Official</span>
-    </a>
+      <div class="notify-success" id="notifySuccess">✓ We'll let you know when we're back!</div>
 
-    <a class="doc-item" href="IA_Checklist.pdf" target="_blank" download>
-      <div class="doc-icon yellow-bg">📙</div>
-      <div class="doc-info">
-        <div class="doc-name">IA Marking Checklist (SL)</div>
-        <div class="doc-desc">A detailed criterion-by-criterion checklist to self-assess your exploration at each stage before submission.</div>
-      </div>
-      <span class="doc-tag supplementary">Supplementary</span>
-    </a>
-  </div>
-
-  <!-- UPLOAD -->
-  <div class="bubble-card" style="animation-delay:0.13s">
-    <div class="section-label">Upload IA</div>
-    <div class="drop-zone" id="dropZone">
-      <input type="file" id="fileInput" accept=".pdf,.docx,.txt">
-      <span class="drop-icon">📄</span>
-      <p><strong>Tap to upload</strong> or drag and drop</p>
-      <p class="sub">PDF preferred · DOCX and TXT accepted · 12–20 pages</p>
-    </div>
-    <div class="file-pill" id="filePill"></div>
-  </div>
-
-  <!-- COURSE -->
-  <div class="bubble-card" style="animation-delay:0.18s">
-    <div class="section-label">Course</div>
-    <div class="course-grid">
-      <div class="course-option selected" data-course="SLAI" onclick="selectCourse(this)">
-        <div class="course-tag">SL · AI</div>
-        <div class="course-name">Applications &amp; Interpretation</div>
-      </div>
-      <div class="course-option" data-course="SLAA" onclick="selectCourse(this)">
-        <div class="course-tag">SL · AA</div>
-        <div class="course-name">Analysis &amp; Approaches</div>
-      </div>
-      <div class="course-option" data-course="HLAI" onclick="selectCourse(this)">
-        <div class="course-tag">HL · AI</div>
-        <div class="course-name">Applications &amp; Interpretation</div>
-      </div>
-      <div class="course-option" data-course="HLAA" onclick="selectCourse(this)">
-        <div class="course-tag">HL · AA</div>
-        <div class="course-name">Analysis &amp; Approaches</div>
+      <div class="feature-row">
+        <div class="feature-pill">🎯 IA Marking</div>
+        <div class="feature-pill">📚 Practice Questions</div>
+        <div class="feature-pill">💳 New Pricing</div>
       </div>
     </div>
   </div>
-
-  <button class="btn-mark" id="markBtn" disabled onclick="runMarking()">Mark this IA →</button>
-
-  <div class="status-bubble" id="statusBar">
-    <div class="spinner"></div>
-    <span id="statusText">Reading IA and applying criteria…</span>
-  </div>
-
-  <div class="error-bubble" id="errorMsg"></div>
-
-  <!-- RESULTS -->
-  <div id="results">
-    <div style="height:20px;"></div>
-    <div class="clearfix">
-      <div class="score-bubble">
-        <div class="score-num" id="scoreNum">—</div>
-        <div class="score-label">out of 20</div>
-      </div>
-    </div>
-    <div id="criteriaCards"></div>
-    <div class="flags-card">
-      <div class="flags-title">⚑ Red Flags</div>
-      <div id="flagsList"></div>
-    </div>
-    <div class="disclaimer-box">
-      These marks and comments are generated from official IB descriptor language and represent a first-pass check only. The teacher must review, adjust, and take full responsibility for all submitted marks. Coversheet comments should be edited before pasting into IBIS or any official submission form.
-    </div>
-  </div>
-
-</div>
-
-
-
-</div><!-- /mark-shell -->
-
-<!-- PRACTICE QUESTIONS TAB -->
-<div id="practice-shell" style="display:none">
-<div class="shell">
-
-<div class="bubble-card" style="animation-delay:0.03s">
-  <div class="section-label">Shadow Worksheets</div>
-  <div class="card-title">Practice Questions — IB Mathematics AA</div>
-  <p style="font-size:0.88rem;color:var(--text-sec);line-height:1.6;margin-top:6px;">
-    Parallel practice worksheets for every topic. Each sheet opens with a <strong>Questions &harr; Solutions</strong> toggle.
-  </p>
-</div>
-
-<style>
-.topic-section { margin-bottom: 24px; }
-.topic-section-title {
-  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--blue);
-  border-bottom: 1px solid var(--bubble-gray);
-  padding-bottom: 8px; margin-bottom: 10px;
-}
-.ws-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
-.ws-card {
-  background: var(--white); border-radius: var(--radius-sm);
-  padding: 12px 14px; box-shadow: var(--shadow);
-  text-decoration: none; color: var(--text);
-  display: flex; align-items: center; gap: 10px;
-  transition: all 0.22s var(--ease-out); border: 1.5px solid transparent;
-}
-.ws-card:hover { border-color: var(--blue); background: var(--blue-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
-.ws-card-icon { font-size: 1.1rem; flex-shrink: 0; }
-.ws-card-info { flex: 1; min-width: 0; }
-.ws-card-name { font-size: 0.83rem; font-weight: 600; line-height: 1.3; }
-.ws-card-level { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
-.ws-card-level.hl { color: var(--danger); }
-.ws-card-level.sl { color: var(--success); }
-</style>
-
-<div class="topic-section"><div class="topic-section-title">🔢 Algebra</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_indices1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Indices I</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_indices2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Indices II</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_intro_logs.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Introduction to Logarithms</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_laws_logs.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Laws of Logarithms I</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_laws_logs2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Laws of Logarithms II</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_quadratics.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Quadratic Functions</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_quad_solutions.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Solutions of Quadratics</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_binomials1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Binomial Expansion I</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_binomials2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Binomial Expansion II</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_binomials3.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Binomial Expansion III: Fractional &amp; Negative</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_proof.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Proof</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_sum_product.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Sum and Product of Roots</div><div class="ws-card-level">SL/HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">📈 Sequences &amp; Series</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_arith1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Arithmetic Sequences I</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_arith2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Arithmetic Sequences II: Series</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_geom1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Geometric Sequences I</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_geom2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Geometric Series &amp; Infinite Series</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_seq_mixed_SL.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Sequences Mixed (SL)</div><div class="ws-card-level sl">SL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_seq_mixed_HL.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Sequences Mixed — Past Paper Style (HL)</div><div class="ws-card-level">SL/HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">📐 Functions</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_basic_functions.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Functions I: Domain, Range &amp; Inverse</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_transforming.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Transforming Graphs</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_rational_fn.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Rational Functions</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_sketching.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Sketching Graphs</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_draw_inverse.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Drawing the Inverse from a Graph</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_modulus_recip.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Modulus &amp; Reciprocal Functions</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_mixed_fn1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Mixed Functions SL I</div><div class="ws-card-level sl">SL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_mixed_fn2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Mixed Functions SL II</div><div class="ws-card-level sl">SL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_geom_conn.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Geometrical Connections</div><div class="ws-card-level hl">HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">📡 Trigonometry</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_double_angles.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Double Angle Formulae</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_trig_solve_nongdc.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Solving Trig Equations (Non-GDC)</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_trig_nongdc_pp.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Trig: Past Paper Style (Non-GDC)</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_trig_gdc_pp.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Trig: Past Paper Style (GDC)</div><div class="ws-card-level">SL/HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">📉 Differentiation</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_poly_diff.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Polynomial Differentiation</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_tangents_normals.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Second Differentials, Tangents &amp; Normals</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_chain_rule.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Chain Rule &amp; Basic Trig Derivatives</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_quotient_product.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">e&#x02E3;, ln x, Quotient &amp; Product Rule</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_stationary_points.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Increasing/Decreasing &amp; Stationary Points</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_inflection.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Stationary Points &amp; Inflection Points</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_gradient_graphs.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Gradient Graphs</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_optimise_area.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Optimisation: Area Problems</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_optimise_vol.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Optimisation: Volume Problems</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_optimise.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Optimisation: Mixed</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_kinematics.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Kinematics</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_super_speed.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Super-Speed Differentiation</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_implicit.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Implicit Differentiation &amp; Related Rates</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_l_hopital.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">L&#x02BC;H&#x00F4;pital&#x02BC;s Rule</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_maclaurin.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Maclaurin Series</div><div class="ws-card-level hl">HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">&#x222B; Integration</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_poly_int1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Polynomial Integration I</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_poly_int2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Polynomial Integration II</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_int_rules.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Integration Rules (Non-polynomial)</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_area_ftc.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Area Between Two Curves &amp; FTC</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_substitution.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Integration by Substitution</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_int_parts.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Integration by Parts</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_volume_rev.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Volume of Revolution</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_vol_kin_HL.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Volume of Revolution &amp; Kinematics (HL)</div><div class="ws-card-level hl">HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">🎲 Probability</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_venn.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Probability I: Venn Diagrams</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_mut_excl.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Probability II: Mutually Exclusive &amp; Independent</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_conditional.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Probability III: Conditional Probability</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_tree.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Tree Diagrams</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_perm_comb.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Permutations &amp; Combinations</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_binom_dist.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Binomial Distribution</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_discrete_rv.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Discrete Random Variables</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_normal1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Normal Distribution I</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_normal2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Normal Distribution II</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_crv1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Continuous Random Variables I</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_crv2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Continuous Random Variables II</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_hl_prob.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Extra Probability (HL)</div><div class="ws-card-level hl">HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">📊 Statistics</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_averages.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Averages</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_box_cumfreq.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Box-and-Whisker &amp; Cumulative Frequency</div><div class="ws-card-level">SL/HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_bivariate.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Bivariate Data</div><div class="ws-card-level">SL/HL</div></div></a>
-</div></div>
-
-<div class="topic-section"><div class="topic-section-title">🔵 Complex Numbers</div><div class="ws-grid">
-  <a class="ws-card" href="worksheets/ws_cx1.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Complex Numbers I: Non-Calculator</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_cx2.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Complex Numbers II: Modulus &amp; Argument</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_cx3.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Complex Numbers III: Loci &amp; Multiplication</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_cx4.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Complex Numbers IV: De Moivre's Theorem</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_cx5.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Complex Numbers V: Roots of Unity</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_cx6.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Complex Numbers VI: Mixed</div><div class="ws-card-level hl">HL</div></div></a>
-  <a class="ws-card" href="worksheets/ws_cx7.html" target="_blank"><div class="ws-card-icon">📄</div><div class="ws-card-info"><div class="ws-card-name">Complex Numbers VII: Converting Forms</div><div class="ws-card-level hl">HL</div></div></a>
-</div></div>
-
-</div>
-</div><!-- /practice-shell -->
-<!-- ══════════════════════════════════════════
-     PRICING TAB
-     ═══════════════════════════════════════ -->
-<div id="pricing-shell" style="display:none">
-<div class="shell">
-
-<div class="bubble-card" style="animation-delay:0.03s">
-  <div class="section-label">Plans</div>
-  <div class="card-title">Simple, transparent pricing</div>
-  <p style="font-size:0.88rem;color:var(--text-sec);line-height:1.6;margin-top:6px;">
-    Mathski is free for worksheets and practice. Unlock full IA marking reports when you need them — per use for students, annual access for teachers.
-  </p>
-</div>
-
-<div class="pricing-grid">
-
-  <!-- FREE -->
-  <div class="pricing-card">
-    <div class="pricing-tier-label">Free</div>
-    <div class="pricing-tier-name">Worksheets &amp; Practice</div>
-    <div class="pricing-price"><sup></sup>£0</div>
-    <div class="pricing-price-sub">Always free</div>
-    <div class="pricing-divider"></div>
-    <ul class="pricing-features">
-      <li>All practice question worksheets</li>
-      <li>Topic-by-topic AA &amp; AI coverage</li>
-      <li>Questions &amp; solutions toggle</li>
-      <li class="locked">IA marking report</li>
-      <li class="locked">Coversheet comments</li>
-      <li class="locked">Red flag analysis</li>
-    </ul>
-    <div class="btn-pricing-free">Free — no signup</div>
-  </div>
-
-  <!-- STUDENT -->
-  <div class="pricing-card featured">
-    <div class="pricing-tier-label">Student</div>
-    <div class="pricing-tier-name">IA Feedback Report</div>
-    <div class="pricing-price"><sup>£</sup>3.49</div>
-    <div class="pricing-price-sub">per IA marked</div>
-    <div class="pricing-divider"></div>
-    <ul class="pricing-features">
-      <li>Full mark per criterion (A–E)</li>
-      <li>Secure / borderline / vulnerable verdict</li>
-      <li>Detailed reasoning per criterion</li>
-      <li>Red flag identification</li>
-      <li>Total score out of 20</li>
-      <li class="locked">Coversheet comments (teacher)</li>
-    </ul>
-    <a href="https://mathski.lemonsqueezy.com/checkout/buy/418900bf-b80b-42a3-94c6-5396401b2d09?embed=1" class="lemonsqueezy-button btn-pricing-paid">Get IA Report →</a>
-  </div>
-
-  <!-- TEACHER -->
-  <div class="pricing-card">
-    <div class="pricing-tier-label">Teacher</div>
-    <div class="pricing-tier-name">Mathski Teacher Access</div>
-    <div class="pricing-price"><sup>£</sup>49.99</div>
-    <div class="pricing-price-sub">per year · unlimited marking</div>
-    <div class="pricing-divider"></div>
-    <ul class="pricing-features">
-      <li>Everything in Student</li>
-      <li>Coversheet comment drafts</li>
-      <li>Annotation instruction sheet</li>
-      <li>Unlimited IA submissions</li>
-      <li>All four courses (HLAA, HLAI, SLAA, SLAI)</li>
-      <li>Calibration anchors built in</li>
-    </ul>
-    <a href="https://mathski.lemonsqueezy.com/checkout/buy/be7fbfdb-0738-4284-9afa-1f72b7a7c8d4?embed=1" class="lemonsqueezy-button btn-pricing-paid">Get Teacher Access →</a>
-  </div>
-
-</div>
-
-<p class="pricing-note">All prices include VAT where applicable. Student reports are one-time purchases — no subscription. Teacher access renews annually.</p>
-
-</div>
-</div><!-- /pricing-shell -->
-
+</main>
 
 <footer>
   <span class="blue">Mathski</span> — IB Mathematics Internal Assessment Tool<br>
@@ -754,228 +236,32 @@
 </footer>
 
 <script>
-  let selectedFile = null;
-  let selectedCourse = 'SLAI';
-  window._comments = [];
-
-  const fileInput = document.getElementById('fileInput');
-  const dropZone = document.getElementById('dropZone');
-  const filePill = document.getElementById('filePill');
-  const markBtn = document.getElementById('markBtn');
-
-  fileInput.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
-  dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('drag-over'); });
-  dropZone.addEventListener('dragleave', () => dropZone.classList.remove('drag-over'));
-  dropZone.addEventListener('drop', e => {
-    e.preventDefault(); dropZone.classList.remove('drag-over');
-    if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
-  });
-
-  function handleFile(file) {
-    selectedFile = file;
-    filePill.style.display = 'inline-block';
-    const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
-    if (file.size > 4 * 1024 * 1024) {
-      filePill.style.background = 'var(--warn)';
-      filePill.textContent = '⚠ ' + file.name + ' (' + sizeMB + 'MB) — may be too large. Try compressing the PDF.';
-    } else {
-      filePill.style.background = 'var(--blue)';
-      filePill.textContent = '✓ ' + file.name + ' (' + sizeMB + 'MB)';
+  // Backdoor — redirects to app.html instantly, invisible to everyone else
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('preview') === 'mathski2025') {
+      window.location.replace('app.html');
     }
-    markBtn.disabled = false;
-  }
+  })();
 
-  function selectCourse(el) {
-    document.querySelectorAll('.course-option').forEach(o => o.classList.remove('selected'));
-    el.classList.add('selected');
-    selectedCourse = el.dataset.course;
-  }
-
-  async function fileToBase64(file) {
-    return new Promise((res, rej) => {
-      const reader = new FileReader();
-      reader.onload = () => res(reader.result.split(',')[1]);
-      reader.onerror = rej;
-      reader.readAsDataURL(file);
-    });
-  }
-
-  function setStatus(visible, text) {
-    const bar = document.getElementById('statusBar');
-    bar.style.display = visible ? 'flex' : 'none';
-    if (text) document.getElementById('statusText').textContent = text;
-  }
-
-  function showError(msg) { const el = document.getElementById('errorMsg'); el.style.display = 'block'; el.textContent = msg; }
-  function hideError() { document.getElementById('errorMsg').style.display = 'none'; }
-
-  async function runMarking() {
-    if (!selectedFile) return;
-    hideError();
-    document.getElementById('results').style.display = 'none';
-    markBtn.disabled = true;
-    setStatus(true, 'Reading IA…');
-
-    const course = selectedCourse;
-    const isHL = course.startsWith('HL');
-    let messageContent;
-
-    try {
-      if (selectedFile.type === 'application/pdf') {
-        setStatus(true, 'Processing PDF…');
-        const b64 = await fileToBase64(selectedFile);
-        messageContent = [
-          { type: 'document', source: { type: 'base64', media_type: 'application/pdf', data: b64 } },
-          { type: 'text', text: 'Mark this IB Mathematics ' + course + ' Internal Assessment using the marking framework provided.' }
-        ];
-      } else {
-        const text = await selectedFile.text();
-        messageContent = 'IB Mathematics ' + course + ' IA:\n\n' + text;
-      }
-    } catch (err) {
-      setStatus(false); markBtn.disabled = false;
-      showError('Could not read the file. Please try a PDF.');
+  function notifyMe() {
+    var input = document.getElementById('emailInput');
+    var success = document.getElementById('notifySuccess');
+    var email = input.value.trim();
+    if (!email || !email.includes('@')) {
+      input.style.borderColor = '#ff3b30';
+      setTimeout(function() { input.style.borderColor = ''; }, 1500);
       return;
     }
-
-    setStatus(true, 'Applying IB descriptors — this may take 30–60 seconds…');
-
-    const eCriteria = isHL
-      ? '0: Standard not reached | 1: Some relevant maths, limited understanding | 2: Some relevant maths, partially correct, some knowledge/understanding | 3: Relevant HL-commensurate, correct, some knowledge/understanding | 4: Relevant HL-commensurate, correct, good knowledge/understanding | 5: Relevant HL-commensurate, correct, sophistication or rigour, thorough knowledge/understanding | 6: Relevant HL-commensurate, precise, sophistication AND rigour, thorough knowledge/understanding'
-      : '0: Standard not reached | 1: Some relevant maths | 2: Some relevant maths, limited understanding | 3: Relevant SL-commensurate, limited understanding | 4: Relevant SL-commensurate, partially correct, some knowledge/understanding | 5: Relevant SL-commensurate, mostly correct, good knowledge/understanding | 6: Relevant SL-commensurate, correct, thorough knowledge/understanding';
-
-    const systemPrompt = `You are a strict, experienced IB Mathematics Internal Assessment marker. Apply official IB descriptors only.
-
-COURSE: ${course} (${isHL ? 'Higher Level' : 'Standard Level'})
-
-MARKING PHILOSOPHY:
-- Mark strictly against descriptor language. Do NOT reward ambition, effort, or volume.
-- C and D are most prone to over-award. Be especially strict.
-- C: engagement must be mathematically substantiated and drive the exploration forward — not decorative.
-- D: reflection only in the conclusion cannot reach level 3 unless of exceptional quality. Ideally present throughout.
-- E: overly complicated maths where simple would suffice is not relevant. Correct answers alone do not demonstrate understanding.
-- Never inflate. The mark must be moderation-robust.
-
-CRITERIA:
-A — Presentation (0–4): 0: Not reached | 1: Some coherence OR organisation | 2: Some coherence AND organisation | 3: Coherent and well organised | 4: Coherent, well organised, AND concise
-B — Mathematical Communication (0–4): 0: Not reached | 1: Some relevant, partially appropriate | 2: Some relevant appropriate | 3: Relevant, appropriate, mostly consistent | 4: Relevant, appropriate, consistent throughout
-C — Personal Engagement (0–3): 0: Not reached | 1: Some | 2: Significant (authentic, drives exploration on a few occasions) | 3: Outstanding (numerous high-quality instances, creative, reader fully understands writer's intentions)
-D — Reflection (0–3): 0: Not reached | 1: Limited (describing results) | 2: Meaningful (links to aim, considers limitations) | 3: Substantial critical reflection throughout
-E — Use of Mathematics (0–6): ${eCriteria}
-
-RED FLAGS: vague aim, maths below level, reflection only in conclusion, decorative engagement, missing method justification, overcomplication, results not interpreted, unlabelled graphs, undefined variables, statistical test misuse.
-
-CALIBRATION ANCHORS (use these to ground your marking):
-- lbz630 SLAI: A3,B3,C2,D2,E4 = 14/20 — confirmed unchanged by IBO moderation. Primary SLAI anchor.
-- mgd025 SLAI: A3,B2,C1,D1,E4 = 11/20 — rugby world cup weight vs tackles.
-- lrg678 HLAA: A3,B3,C3,D3,E5 = 17/20 — Fourier transforms/music (piano chord, noise reduction). A3 not A4: reflection box repetition reduces conciseness. B3 not B4: minor gaps in comparative graph and superposed waveform image. C3 secure: self-taught DFT, engagement shapes mathematical choices not decoration. D3 secure: critical reflection distributed at pp11,13,14,15,25-26, not only in conclusion. E5 not E6: DFT with Euler form is sophisticated, but N=5 sample size, visual-only comparison, and phase shift approximation prevent E6.
-
-Respond ONLY with valid JSON, no markdown, no preamble:
-{"criteria":[{"letter":"A","name":"Presentation","max":4,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"B","name":"Mathematical Communication","max":4,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"C","name":"Personal Engagement","max":3,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"D","name":"Reflection","max":3,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""},{"letter":"E","name":"Use of Mathematics","max":6,"awarded":0,"verdict":"secure","reasoning":"","coversheet_comment":""}],"total":0,"red_flags":[]}
-
-Fill all fields with real values from the IA.`;
-
-    try {
-      const response = await fetch('/api/mark', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 3000,
-          system: systemPrompt,
-          messages: [{ role: 'user', content: messageContent }]
-        })
-      });
-
-      if (!response.ok) { const err = await response.json(); throw new Error(err.error?.message || 'API error'); }
-
-      const data = await response.json();
-      const raw = data.content.map(function(b) { return b.text || ''; }).join('');
-      const clean = raw.replace(/```json|```/g, '').trim();
-      const parsed = JSON.parse(clean);
-      setStatus(false);
-      renderResults(parsed);
-    } catch (err) {
-      setStatus(false); markBtn.disabled = false;
-      showError('Something went wrong: ' + err.message + '. Please try again.');
-    }
+    input.parentElement.style.display = 'none';
+    success.style.display = 'block';
+    console.log('Notify signup:', email);
   }
 
-  function renderResults(data) {
-    markBtn.disabled = false;
-    const results = document.getElementById('results');
-    results.style.display = 'block';
-    document.getElementById('scoreNum').textContent = data.total;
-    window._comments = data.criteria.map(function(c) { return c.coversheet_comment; });
-
-    const cards = document.getElementById('criteriaCards');
-    cards.innerHTML = '';
-    const delays = [0, 0.07, 0.14, 0.21, 0.28];
-
-    data.criteria.forEach(function(c, i) {
-      const card = document.createElement('div');
-      card.className = 'crit-card';
-      card.style.animationDelay = delays[i] + 's';
-      card.innerHTML =
-        '<div class="crit-header" onclick="toggleCard(this)">' +
-          '<div class="crit-letter-circle">' + c.letter + '</div>' +
-          '<div class="crit-info">' +
-            '<div class="crit-name-text">' + c.name + '</div>' +
-            '<div class="crit-score-row">' +
-              '<span class="score-pip">' + c.awarded + ' / ' + c.max + '</span>' +
-              '<span class="verdict-pill ' + c.verdict + '">' + c.verdict + '</span>' +
-            '</div>' +
-          '</div>' +
-          '<span class="chevron">▶</span>' +
-        '</div>' +
-        '<div class="crit-body">' +
-          '<div class="body-section">' +
-            '<div class="body-label">Reasoning</div>' +
-            '<div class="reasoning-box">' + c.reasoning + '</div>' +
-          '</div>' +
-          '<div class="body-section">' +
-            '<div class="body-label">Coversheet Comment — edit before pasting</div>' +
-            '<div class="comment-box">' +
-              c.coversheet_comment +
-              '<button class="copy-btn" onclick="copyComment(' + i + ')">Copy</button>' +
-            '</div>' +
-          '</div>' +
-        '</div>';
-      cards.appendChild(card);
-    });
-
-    const flagsList = document.getElementById('flagsList');
-    if (data.red_flags && data.red_flags.length > 0) {
-      flagsList.innerHTML = data.red_flags.map(function(f) { return '<div class="flag-item">' + f + '</div>'; }).join('');
-    } else {
-      flagsList.innerHTML = '<div class="no-flags">No significant red flags identified.</div>';
-    }
-
-    results.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  function toggleCard(header) { header.closest('.crit-card').classList.toggle('open'); }
-
-  function copyComment(i) {
-    const btn = document.querySelectorAll('.copy-btn')[i];
-    navigator.clipboard.writeText(window._comments[i]).then(function() {
-      btn.textContent = 'Copied ✓';
-      setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
-    });
-  }
+  document.getElementById('emailInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') notifyMe();
+  });
 </script>
 
-  function switchTab(tab) {
-    var shells = { mark: 'mark-shell', practice: 'practice-shell', pricing: 'pricing-shell' };
-    var btns = { mark: 'tab-mark', practice: 'tab-practice', pricing: 'tab-pricing' };
-    Object.keys(shells).forEach(function(t) {
-      var shell = document.getElementById(shells[t]);
-      var btn = document.getElementById(btns[t]);
-      if (shell) shell.style.display = (t === tab) ? 'block' : 'none';
-      if (btn) btn.className = 'main-tab-btn' + (t === tab ? ' active' : '');
-    });
-  }
-
-<script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 </body>
 </html>
