@@ -471,6 +471,7 @@
   .popup-dismiss:hover { color: var(--text-muted); }
 
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
 </head>
 <body>
 
@@ -480,6 +481,9 @@
     <div class="logo-text">Math<span>ski</span></div>
   </div>
   <div class="header-tag">IB Mathematics IA Tool</div>
+  <div class="header-right">
+    <span id="marksRemainingBadge" class="marks-badge" style="display:none;"></span>
+  </div>
 </header>
 
 <!-- ── Welcome Popup ── -->
@@ -930,6 +934,13 @@
 
   async function runMarking() {
     if (!selectedFile) return;
+
+    // Auth gate check
+    const authCheck = await window.mathskiAuth.checkMarkAllowed();
+    if (!authCheck.allowed) {
+      window.mathskiAuth.showGateModal(authCheck.action);
+      return;
+    }
     hideError();
     document.getElementById('results').style.display = 'none';
     markBtn.disabled = true;
@@ -995,9 +1006,21 @@ Respond ONLY with valid JSON, no markdown, no preamble:
 Fill all fields with real values from the IA.`;
 
     try {
+      // Build auth headers
+      const fetchHeaders = { 'Content-Type': 'application/json' };
+      const sbClient = window._supabaseForMark;
+      if (sbClient) {
+        const { data: { session } } = await sbClient.auth.getSession();
+        if (session) fetchHeaders['Authorization'] = 'Bearer ' + session.access_token;
+      }
+      if (authCheck.freeMode) {
+        const em = document.getElementById('gateEmailInput')?.value?.trim() || localStorage.getItem('mathski_free_email') || '';
+        if (em) fetchHeaders['X-Free-Email'] = em;
+      }
+
       const response = await fetch('/api/mark', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: fetchHeaders,
         body: JSON.stringify({
           model: 'claude-sonnet-4-20250514',
           max_tokens: 3000,
@@ -1014,6 +1037,8 @@ Fill all fields with real values from the IA.`;
       const parsed = JSON.parse(clean);
       setStatus(false);
       renderResults(parsed);
+      // Record mark used
+      await window.mathskiAuth.recordMarkUsed(authCheck.freeMode);
     } catch (err) {
       setStatus(false); markBtn.disabled = false;
       showError('Something went wrong: ' + err.message + '. Please try again.');
@@ -1118,6 +1143,412 @@ Fill all fields with real values from the IA.`;
       setTimeout(function() { switchTab(tab); }, 100);
     }
   }
+
+</script>
+
+
+<!-- Auth Gate Modal — paste into mathski HTML just before </body> -->
+<!-- Also add to <head>: <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> -->
+<!-- And link: <script src="/auth-gate.js" defer></script> -->
+
+<!-- Marks remaining badge — add this inside .header or nav area -->
+<!-- <span id="marksRemainingBadge" style="display:none;"></span> -->
+
+<style>
+  /* Auth Gate Modal */
+  #authGateModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+
+  .gate-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 36px 32px;
+    max-width: 440px;
+    width: 100%;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.18);
+    text-align: center;
+    animation: gateSlideUp 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  @keyframes gateSlideUp {
+    from { opacity: 0; transform: translateY(24px) scale(0.97); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .gate-icon { font-size: 40px; margin-bottom: 12px; }
+
+  .gate-card h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 10px;
+  }
+
+  .gate-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 24px;
+  }
+
+  .gate-email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .gate-email-form input[type="email"] {
+    padding: 12px 16px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .gate-email-form input[type="email"]:focus {
+    border-color: #1a56db;
+  }
+
+  .gate-btn-primary {
+    background: #1a56db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    width: 100%;
+  }
+
+  .gate-btn-primary:hover { background: #1447c0; }
+
+  .gate-btn-secondary {
+    background: #f2f4f8;
+    color: #1a56db;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+    transition: background 0.15s;
+  }
+
+  .gate-btn-secondary:hover { background: #eaf2ff; }
+
+  .gate-dismiss {
+    font-size: 13px;
+    color: #aaa;
+    cursor: pointer;
+    margin-top: 16px;
+    display: block;
+    background: none;
+    border: none;
+    text-decoration: underline;
+  }
+
+  .gate-status {
+    font-size: 13px;
+    color: #1a56db;
+    margin-top: 10px;
+    min-height: 18px;
+  }
+
+  .marks-remaining-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a56db;
+    background: #eaf2ff;
+    border-radius: 20px;
+    padding: 4px 12px;
+  }
+</style>
+
+<!-- The modal -->
+<div id="authGateModal" role="dialog" aria-modal="true" aria-labelledby="gateModalTitle">
+  <div class="gate-card">
+
+    <!-- Section: trial exhausted → get account -->
+    <div id="gateModalSignup">
+      <div class="gate-icon">🔒</div>
+      <h2 id="gateModalTitle">Get your free mark first</h2>
+      <p>Enter your email to get <strong>1 free IA mark</strong>. After that, unlock unlimited marks with a student account.</p>
+      <div class="gate-email-form" id="gateEmailForm">
+        <input type="email" id="gateEmailInput" placeholder="your@email.com" autocomplete="email" />
+        <button class="gate-btn-primary" onclick="submitGateEmail()">Send my free mark →</button>
+      </div>
+      <div id="gateEmailSent" style="display:none;">
+        <p style="color:#248a3d;font-weight:600;">✓ Check your email</p>
+        <p>We've sent a sign-in link to <span id="gateEmailDisplay"></span>. Click it to access your free mark.</p>
+      </div>
+      <div id="gateStatus" class="gate-status"></div>
+      <p style="font-size:12px;color:#aaa;margin:16px 0 8px;">Already bought marks?</p>
+      <button class="gate-btn-secondary" onclick="submitGateEmail()">Sign in with email →</button>
+      <button class="gate-dismiss" onclick="hideGateModal()">Maybe later</button>
+    </div>
+
+    <!-- Section: out of paid marks → buy more -->
+    <div id="gateModalBuyMore" style="display:none;">
+      <div class="gate-icon">🎯</div>
+      <h2>You've used all your marks</h2>
+      <p>Top up your account to keep marking. Each pack gives you 2 more IA marks.</p>
+      <a class="gate-btn-primary lemonsqueezy-button"
+         href="https://mathski.lemonsqueezy.com/checkout/buy/418900bf-b80b-42a3-94c6-5396401b2d09?embed=1"
+         style="display:block;text-decoration:none;line-height:48px;margin-bottom:8px;">
+        Buy 2 marks — £3.49 →
+      </a>
+      <button class="gate-dismiss" onclick="hideGateModal()">Not now</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+async function submitGateEmail() {
+  const emailInput = document.getElementById('gateEmailInput');
+  const statusEl = document.getElementById('gateStatus');
+  const email = emailInput.value.trim();
+
+  if (!email || !email.includes('@')) {
+    statusEl.textContent = 'Please enter a valid email address.';
+    return;
+  }
+
+  statusEl.textContent = 'Sending…';
+
+  try {
+    await window.mathskiAuth.handleEmailSignin(email);
+    document.getElementById('gateEmailForm').style.display = 'none';
+    document.getElementById('gateEmailSent').style.display = 'block';
+    document.getElementById('gateEmailDisplay').textContent = email;
+    statusEl.textContent = '';
+  } catch (err) {
+    statusEl.textContent = 'Something went wrong. Please try again.';
+    console.error(err);
+  }
+}
+</script>
+
+
+
+<script type="module">
+// auth-gate.js
+// Option C: 1 free mark by email, then payment gate
+// Paste this <script> block into mathski HTML before closing </body>
+// Supabase JS loaded via CDN (added to HTML head)
+
+// ── Config ────────────────────────────────────────────────────────────────────
+const SUPABASE_URL = 'https://iarykzygakbppscjkdkw.supabase.co';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY'; // safe to expose — RLS protects data
+const FREE_MARKS_ALLOWED = 1;
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let _supabaseClient = null;
+let _currentUser = null;    // Supabase auth user (null if not logged in)
+let _userRecord = null;     // Our DB record
+let _freeMarksUsed = 0;     // localStorage fallback for pre-signup
+
+// ── Supabase client (lazy init) ───────────────────────────────────────────────
+function getSupabase() {
+  if (!_supabaseClient) {
+    _supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  }
+  return _supabaseClient;
+}
+
+// ── Init: called on page load ─────────────────────────────────────────────────
+async function initAuth() {
+  const sb = getSupabase();
+
+  // Check for existing session (magic link callback lands here)
+  const { data: { session } } = await sb.auth.getSession();
+
+  if (session) {
+    _currentUser = session.user;
+    await loadUserRecord(session.access_token);
+  }
+
+  // Also handle auth state changes (magic link sign-ins)
+  sb.auth.onAuthStateChange(async (event, session) => {
+    if (event === 'SIGNED_IN' && session) {
+      _currentUser = session.user;
+      await loadUserRecord(session.access_token);
+      updateUI();
+    } else if (event === 'SIGNED_OUT') {
+      _currentUser = null;
+      _userRecord = null;
+      updateUI();
+    }
+  });
+
+  // Load free trial count from localStorage
+  _freeMarksUsed = parseInt(localStorage.getItem('mathski_free_marks') || '0', 10);
+
+  updateUI();
+}
+
+// ── Load user record from our DB ──────────────────────────────────────────────
+async function loadUserRecord(token) {
+  try {
+    const res = await fetch('/api/auth', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    if (res.ok) {
+      _userRecord = await res.json();
+    } else {
+      _userRecord = null;
+    }
+  } catch {
+    _userRecord = null;
+  }
+}
+
+// ── Gate check: called before every mark attempt ──────────────────────────────
+// Returns { allowed: true } or { allowed: false, reason: '...', action: '...' }
+async function checkMarkAllowed() {
+  // 1. Logged-in user
+  if (_currentUser && _userRecord?.ok) {
+    const r = _userRecord;
+    if (r.tier === 'teacher') return { allowed: true };
+    if (r.tier === 'student' && r.remaining > 0) return { allowed: true };
+    if (r.tier === 'student' && r.remaining <= 0) {
+      return { allowed: false, reason: 'no_marks', action: 'buy_more' };
+    }
+  }
+
+  // 2. Anonymous — check free trial
+  if (_freeMarksUsed < FREE_MARKS_ALLOWED) {
+    return { allowed: true, freeMode: true };
+  }
+
+  // 3. Free trial exhausted
+  return { allowed: false, reason: 'trial_exhausted', action: 'signup' };
+}
+
+// ── Record a mark being used ──────────────────────────────────────────────────
+async function recordMarkUsed(wasFree) {
+  if (wasFree) {
+    _freeMarksUsed++;
+    localStorage.setItem('mathski_free_marks', String(_freeMarksUsed));
+  } else if (_currentUser) {
+    // Decrement on server side happens in /api/mark.js
+    // Refresh user record so UI updates
+    const sb = getSupabase();
+    const { data: { session } } = await sb.auth.getSession();
+    if (session) await loadUserRecord(session.access_token);
+  }
+  updateUI();
+}
+
+// ── Show gate modal ───────────────────────────────────────────────────────────
+function showGateModal(action) {
+  const modal = document.getElementById('authGateModal');
+  const buyMoreSection = document.getElementById('gateModalBuyMore');
+  const signupSection = document.getElementById('gateModalSignup');
+
+  if (action === 'buy_more') {
+    buyMoreSection.style.display = 'block';
+    signupSection.style.display = 'none';
+  } else {
+    buyMoreSection.style.display = 'none';
+    signupSection.style.display = 'block';
+  }
+
+  modal.style.display = 'flex';
+}
+
+function hideGateModal() {
+  document.getElementById('authGateModal').style.display = 'none';
+}
+
+// ── Email capture for free trial → magic link ─────────────────────────────────
+async function handleEmailSignin(email) {
+  const sb = getSupabase();
+  const { error } = await sb.auth.signInWithOtp({
+    email,
+    options: { emailRedirectTo: 'https://mathski.io' },
+  });
+  if (error) throw error;
+}
+
+// ── Update UI (marks remaining badge, sign in/out state) ─────────────────────
+function updateUI() {
+  const badge = document.getElementById('marksRemainingBadge');
+  if (!badge) return;
+
+  if (_currentUser && _userRecord?.ok) {
+    const r = _userRecord;
+    if (r.tier === 'teacher') {
+      badge.textContent = '∞ marks';
+      badge.style.display = 'inline-block';
+    } else {
+      const rem = r.remaining;
+      badge.textContent = `${rem} mark${rem !== 1 ? 's' : ''} left`;
+      badge.style.display = 'inline-block';
+      badge.style.color = rem === 0 ? '#c0392b' : '';
+    }
+  } else {
+    // Anonymous — show free marks remaining
+    const rem = FREE_MARKS_ALLOWED - _freeMarksUsed;
+    if (rem > 0) {
+      badge.textContent = `${rem} free mark${rem !== 1 ? 's' : ''} left`;
+      badge.style.display = 'inline-block';
+    } else {
+      badge.textContent = '0 marks left';
+      badge.style.display = 'inline-block';
+      badge.style.color = '#c0392b';
+    }
+  }
+}
+
+// ── Hook into existing mark submission ────────────────────────────────────────
+// Call this from your existing submitMark() / markBtn click handler
+// Replace or wrap the existing PDF submit logic
+async function guardedSubmitMark(originalSubmitFn) {
+  const check = await checkMarkAllowed();
+
+  if (!check.allowed) {
+    showGateModal(check.action);
+    return false; // abort
+  }
+
+  // Proceed with mark
+  const result = await originalSubmitFn();
+  await recordMarkUsed(check.freeMode);
+  return result;
+}
+
+// ── Init on load ──────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', initAuth);
+
+// Export for use in HTML
+window.mathskiAuth = {
+  checkMarkAllowed,
+  recordMarkUsed,
+  showGateModal,
+  hideGateModal,
+  handleEmailSignin,
+  guardedSubmitMark,
+};
 
 </script>
 </body>
