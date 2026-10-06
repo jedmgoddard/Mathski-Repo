@@ -1,13 +1,12 @@
 {
   "functions": {
-    "api/mark.js": {
-      "maxDuration": 60
-    }
+    "api/mark.js": { "maxDuration": 60 },
+    "api/payment.js": { "maxDuration": 30 },
+    "api/auth.js": { "maxDuration": 10 }
   },
   "rewrites": [
-    { "source": "/api/mark", "destination": "/api/mark.js" }
-  ],
-  "routes": [
-    { "src": "/", "dest": "/index.html" }
+    { "source": "/api/mark", "destination": "/api/mark.js" },
+    { "source": "/api/payment", "destination": "/api/payment.js" },
+    { "source": "/api/auth", "destination": "/api/auth.js" }
   ]
 }
