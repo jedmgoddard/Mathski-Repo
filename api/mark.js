@@ -29,27 +29,32 @@ module.exports = async (req, res) => {
       // Check teacher role
       const { data: profile } = await supabase
         .from('users')
-        .select('is_teacher')
-        .eq('id', user.id)
+        .select('role')
+        .eq('email', user.email)
         .single();
-      isTeacher = profile?.is_teacher === true;
+      isTeacher = profile?.role === 'teacher';
     }
   }
 
-  // For free email (action:'report' only), check free_trials table
+  // For free email (action:'report' only), check users table marks_limit
   if (action === 'report' && !isJWT && freeEmail) {
     const supabase = createClient(
       process.env.SUPABASE_URL,
       process.env.SUPABASE_SERVICE_KEY
     );
     const { data: existing } = await supabase
-      .from('free_trials')
-      .select('used')
+      .from('users')
+      .select('marks_limit, marks_used')
       .eq('email', freeEmail.toLowerCase())
       .single();
 
-    if (existing?.used) {
-      return res.status(403).json({ error: 'Free trial already used for this email.' });
+    // If they exist in users table, they've had their free trial
+    // (free trial inserts them with marks_limit:0; paid purchases top up marks_limit)
+    if (existing) {
+      const remaining = (existing.marks_limit || 0) - (existing.marks_used || 0);
+      if (remaining <= 0) {
+        return res.status(403).json({ error: 'No marks remaining.' });
+      }
     }
   }
 
@@ -150,15 +155,37 @@ Be strict. Mark what is demonstrably present. C and D most prone to over-award.`
       const clean = raw.replace(/```json|```/g, '').trim();
       const parsed = JSON.parse(clean);
 
-      // Mark free trial as used in Supabase
+      // Record free trial in users table (marks_limit:0, marks_used:1)
+      // Paid purchases via payment.js will top up marks_limit
       if (!isJWT && freeEmail) {
         const supabase = createClient(
           process.env.SUPABASE_URL,
           process.env.SUPABASE_SERVICE_KEY
         );
-        await supabase
-          .from('free_trials')
-          .upsert({ email: freeEmail.toLowerCase(), used: true, used_at: new Date().toISOString() });
+        const email_lc = freeEmail.toLowerCase();
+        const { data: existing } = await supabase
+          .from('users')
+          .select('id, marks_used')
+          .eq('email', email_lc)
+          .single();
+
+        if (existing) {
+          await supabase
+            .from('users')
+            .update({ marks_used: (existing.marks_used || 0) + 1, last_active: new Date().toISOString() })
+            .eq('email', email_lc);
+        } else {
+          await supabase
+            .from('users')
+            .insert({
+              email: email_lc,
+              role: 'student',
+              tier: 'student',
+              marks_limit: 0,
+              marks_used: 1,
+              last_active: new Date().toISOString(),
+            });
+        }
       }
 
       // Send email via Resend
