@@ -1,0 +1,3275 @@
+[
+ {
+  "id": "ai-na-001",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "Each parcel in a delivery has a mass of 3.4 kg, correct to one decimal place."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the lower bound and the upper bound for the mass of one parcel.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "A van carries 250 of these parcels. Find the upper bound for the total mass of the parcels.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "The van can safely carry a load of 860 kg. Determine whether it is certain that the parcels are within this limit. Give a reason for your answer.",
+    "marks": 2
+   }
+  ],
+  "idea": "A rounded measurement could be anywhere within half a unit of the last digit shown. A question that asks whether something is certain is answered with the worst case, so here you use the upper bound.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The mass is given to the nearest 0.1 kg, so the true mass is within half of 0.1 kg, which is 0.05 kg, of 3.4 kg.",
+     "\\(3.4 - 0.05 = 3.35\\) and \\(3.4 + 0.05 = 3.45\\)."
+    ],
+    "answer": "Lower bound 3.35 kg, upper bound 3.45 kg"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The total is largest when every parcel is as heavy as it can be: \\(250 \\times 3.45\\)."
+    ],
+    "answer": "862.5 kg"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Compare the worst case with the limit: \\(862.5 > 860\\).",
+     "Using 3.4 kg for every parcel gives \\(250 \\times 3.4 = 850\\) kg, which looks safe. The bounds show that the true total could still be over the limit."
+    ],
+    "answer": "No, it is not certain. The total mass could be as much as 862.5 kg, which is more than 860 kg"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-002",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "Four students each round the number \\(N = 0.0306952\\). Their answers are:",
+   "Ali: 0.031 \\(\\qquad\\) Bea: 0.0307 \\(\\qquad\\) Cy: 0.03 \\(\\qquad\\) Dee: 0.03070"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the name of the student who has rounded \\(N\\) to (i) 3 significant figures; (ii) 3 decimal places; (iii) 1 significant figure.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write down the number of significant figures in Dee's answer.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Write \\(N\\), correct to 2 significant figures, in the form \\(a \\times 10^{k}\\), where \\(1 \\le a < 10\\) and \\(k \\in \\mathbb{Z}\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "Decimal places are counted from the decimal point. Significant figures are counted from the first digit that is not zero, so the zeros at the front of 0.0306952 do not count.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "(i) The first three significant figures of 0.0306952 are 3, 0 and 6. The next digit is 9, so round up: 0.0307. This is Bea's answer.",
+     "(ii) Three decimal places means three digits after the point: 0.030, and the next digit is 6, so round up: 0.031. This is Ali's answer.",
+     "(iii) The first significant figure is 3 and the next digit is 0, so round down: 0.03. This is Cy's answer."
+    ],
+    "answer": "(i) Bea  (ii) Ali  (iii) Cy"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Count from the first non-zero digit of 0.03070: the digits are 3, 0, 7 and 0.",
+     "The last zero counts. It was written to show that the answer is accurate to that place. (To 4 significant figures, \\(N\\) is 0.03070, because the 9 is rounded up by the 5 that follows it.)"
+    ],
+    "answer": "4"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "To 2 significant figures, \\(N = 0.031\\).",
+     "Move the decimal point two places to the right to get a number between 1 and 10, which is 3.1. Moving two places to the right is balanced by multiplying by \\(10^{-2}\\)."
+    ],
+    "answer": "\\(3.1 \\times 10^{-2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-003",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The fractions \\(\\dfrac{22}{7}\\) and \\(\\dfrac{355}{113}\\) are both used as approximations for \\(\\pi\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the value of \\(\\dfrac{22}{7}\\) correct to four decimal places.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Calculate the percentage error when \\(\\dfrac{22}{7}\\) is used as an approximation for \\(\\pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Calculate the percentage error when \\(\\dfrac{355}{113}\\) is used as an approximation for \\(\\pi\\). Give your answer in the form \\(a \\times 10^{k}\\), where \\(1 \\le a < 10\\) and \\(k \\in \\mathbb{Z}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Percentage error compares the size of the error with the exact value: \\(\\varepsilon = \\left|\\dfrac{v_A - v_E}{v_E}\\right| \\times 100\\,\\%\\), where \\(v_A\\) is the approximate value and \\(v_E\\) is the exact value. Here \\(v_E = \\pi\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(22 \\div 7 = 3.142857\\ldots\\) The fifth decimal place is 5, so round up."
+    ],
+    "answer": "3.1429"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Use the fraction itself on your calculator, not the rounded 3.1429. Rounding too early changes the answer.",
+     "\\[\\varepsilon = \\left|\\frac{\\frac{22}{7} - \\pi}{\\pi}\\right| \\times 100 = 0.040249\\ldots\\]"
+    ],
+    "answer": "0.0402 %"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\[\\varepsilon = \\left|\\frac{\\frac{355}{113} - \\pi}{\\pi}\\right| \\times 100 = 0.00000849136\\ldots\\]",
+     "Write this in standard form: move the decimal point 6 places to the right to get 8.49, and balance this with \\(10^{-6}\\).",
+     "This error is thousands of times smaller than the error in part (b), so \\(\\frac{355}{113}\\) is by far the better approximation."
+    ],
+    "answer": "\\(8.49 \\times 10^{-6}\\) %"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-004",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Yuki measures the density of a piece of aluminium. Its mass is 135.2 g. When she lowers it into a measuring cylinder of water, the water level rises from 120 cm\\(^3\\) to 170 cm\\(^3\\).",
+   "Density is mass divided by volume."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Calculate Yuki's value for the density of aluminium, in g cm\\(^{-3}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "The accepted value for the density of aluminium is 2.70 g cm\\(^{-3}\\). Calculate the percentage error in Yuki's value.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "In Yuki's class, a result is accepted if its percentage error is less than 0.5 %. Find the range of values for the density that are accepted.",
+    "marks": 2
+   }
+  ],
+  "idea": "In an experiment, the measured result is the approximate value and the accepted value is the exact value. The percentage error is always a percentage of the exact value.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The aluminium pushes the water level up by its own volume: \\(170 - 120 = 50\\) cm\\(^3\\).",
+     "\\[\\text{density} = \\frac{135.2}{50}\\]"
+    ],
+    "answer": "2.704 g cm\\(^{-3}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\[\\begin{aligned}\\varepsilon &= \\left|\\frac{2.704 - 2.70}{2.70}\\right| \\times 100 \\\\[4pt] &= \\frac{0.004}{2.70} \\times 100 = 0.148148\\ldots\\end{aligned}\\]"
+    ],
+    "answer": "0.148 %"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "A percentage error of 0.5 % means the result differs from 2.70 by 0.5 % of 2.70, which is \\(0.005 \\times 2.70 = 0.0135\\).",
+     "The result may be up to 0.0135 below or above the accepted value: \\(2.70 - 0.0135 = 2.6865\\) and \\(2.70 + 0.0135 = 2.7135\\).",
+     "Yuki's value of 2.704 lies inside this range, which agrees with part (b)."
+    ],
+    "answer": "Greater than 2.6865 and less than 2.7135 g cm\\(^{-3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-005",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Aiko cycles to school. The distance is 4.6 km, correct to the nearest 0.1 km. The journey takes 14 minutes, correct to the nearest minute."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the lower bound and the upper bound for the distance.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the upper bound for Aiko's average speed, in km per hour.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Aiko says that her average speed was definitely more than 18.5 km per hour. Determine whether she is correct.",
+    "marks": 2
+   }
+  ],
+  "idea": "Speed is distance divided by time. A division is largest when the top is as large as possible and the bottom is as small as possible, and smallest the other way round.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Half of 0.1 km is 0.05 km, so the distance is between \\(4.6 - 0.05\\) and \\(4.6 + 0.05\\)."
+    ],
+    "answer": "Lower bound 4.55 km, upper bound 4.65 km"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The time is between 13.5 and 14.5 minutes.",
+     "For the greatest speed, use the longest distance and the shortest time. Change the time to hours by dividing by 60.",
+     "\\[\\frac{4.65}{13.5 \\div 60} = 20.666\\ldots\\]"
+    ],
+    "answer": "20.7 km per hour"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "“Definitely” means even in the worst case, so find the lower bound for the speed: the shortest distance and the longest time.",
+     "\\[\\frac{4.55}{14.5 \\div 60} = 18.827\\ldots\\]",
+     "Even the smallest possible speed is more than 18.5 km per hour."
+    ],
+    "answer": "Yes, she is correct. Her speed was at least 18.8 km per hour"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-006",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Luis estimates that the side of a square garden is 18 m long. His estimate is smaller than the exact length, and its percentage error is 4 %."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the exact length of the side of the garden.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Luis uses his estimate of 18 m to calculate the area of the garden. Calculate the percentage error in his value for the area.",
+    "marks": 3
+   }
+  ],
+  "idea": "Percentage error is a percentage of the exact value, not of the estimate. So you cannot find the exact length by adding 4 % to 18.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Let the exact length be \\(x\\) m. The estimate is too small, so the error is \\(x - 18\\), and it is 4 % of \\(x\\):",
+     "\\[\\frac{x - 18}{x} = 0.04\\]",
+     "So \\(x - 18 = 0.04x\\), which gives \\(0.96x = 18\\) and \\(x = 18 \\div 0.96\\).",
+     "Check: the error is \\(18.75 - 18 = 0.75\\), and \\(0.75 \\div 18.75 = 0.04\\)."
+    ],
+    "answer": "18.75 m"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Luis's area: \\(18^2 = 324\\) m\\(^2\\). Exact area: \\(18.75^2 = 351.5625\\) m\\(^2\\).",
+     "\\[\\varepsilon = \\left|\\frac{324 - 351.5625}{351.5625}\\right| \\times 100 = 7.84\\]",
+     "Squaring makes the error larger. It is close to double the 4 % error in the length, but not exactly double."
+    ],
+    "answer": "7.84 %"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-007",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "The side of a square floor tile is 30 cm, correct to the nearest centimetre."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the lower bound for the length of the side of the tile.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the lower bound for the area of the tile.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The area of the tile is recorded as 900 cm\\(^2\\). Find the largest possible percentage error in this value.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "A floor is covered with 400 of these tiles. Find the difference, in m\\(^2\\), between the upper bound and the lower bound for the area of the floor.",
+    "marks": 2
+   }
+  ],
+  "idea": "The exact area is not known, only the range it lies in. To find the largest possible percentage error, test both ends of that range and compare.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "To the nearest centimetre means within 0.5 cm: \\(30 - 0.5\\)."
+    ],
+    "answer": "29.5 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The area is smallest when the side is shortest: \\(29.5^2\\)."
+    ],
+    "answer": "870.25 cm\\(^2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The upper bound for the side is 30.5 cm, so the exact area lies between 870.25 and \\(30.5^2 = 930.25\\) cm\\(^2\\).",
+     "If the exact area is 870.25: \\(\\dfrac{900 - 870.25}{870.25} \\times 100 = 3.418\\ldots\\) %.",
+     "If the exact area is 930.25: \\(\\dfrac{930.25 - 900}{930.25} \\times 100 = 3.251\\ldots\\) %.",
+     "The first is larger. Two things make it larger: 870.25 is further from 900 than 930.25 is, and the error is divided by a smaller exact value."
+    ],
+    "answer": "3.42 %"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For one tile the bounds for the area differ by \\(930.25 - 870.25 = 60\\) cm\\(^2\\), so for 400 tiles they differ by \\(400 \\times 60 = 24\\,000\\) cm\\(^2\\).",
+     "Change to square metres. 1 m is 100 cm, so 1 m\\(^2\\) is \\(100 \\times 100 = 10\\,000\\) cm\\(^2\\): \\(24\\,000 \\div 10\\,000\\).",
+     "An uncertainty of half a centimetre in each tile becomes an uncertainty of more than two square metres in the floor."
+    ],
+    "answer": "2.4 m\\(^2\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-008",
+  "strand": "Number and Algebra",
+  "subtopic": "Approximation and error",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Rafael plans a car journey of 380 km, correct to the nearest 10 km. His car uses 6.2 litres of fuel for every 100 km, correct to one decimal place. The fuel tank contains 24 litres, correct to the nearest litre."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the upper bound for the length of the journey.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the upper bound for the amount of fuel needed for the journey.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Determine whether Rafael can be certain that he has enough fuel for the journey.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the greatest actual distance that Rafael can be certain of travelling with the fuel in the tank.",
+    "marks": 2
+   }
+  ],
+  "idea": "To be certain, plan for the worst case in every measurement at once: the longest journey, the thirstiest car and the least fuel in the tank.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "To the nearest 10 km means within 5 km: \\(380 + 5\\)."
+    ],
+    "answer": "385 km"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The upper bound for the fuel used per 100 km is \\(6.2 + 0.05 = 6.25\\) litres.",
+     "The most fuel is needed for the longest journey in the thirstiest car: \\(\\dfrac{385}{100} \\times 6.25\\)."
+    ],
+    "answer": "24.0625 litres"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The least amount of fuel that could be in the tank is the lower bound, \\(24 - 0.5 = 23.5\\) litres.",
+     "Compare the worst cases: the journey could need 24.0625 litres, and the tank could hold only 23.5 litres."
+    ],
+    "answer": "No, he cannot be certain, because \\(23.5 < 24.0625\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Use the worst case for the car and the tank: 23.5 litres of fuel, used at 6.25 litres per 100 km.",
+     "\\[\\frac{23.5}{6.25} \\times 100 = 376\\]"
+    ],
+    "answer": "376 km"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-009",
+  "strand": "Number and Algebra",
+  "subtopic": "Standard form, exponents and logarithms",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The mass of one molecule of water is approximately \\(3.0 \\times 10^{-23}\\) g. A raindrop has a mass of 0.06 g.",
+   "In this question, give each answer in the form \\(a \\times 10^{k}\\), where \\(1 \\le a < 10\\) and \\(k \\in \\mathbb{Z}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the mass of the raindrop, in grams.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the number of molecules of water in the raindrop.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "During a storm, \\(4.5 \\times 10^{9}\\) of these raindrops fall on a town. Find the total number of molecules of water that fall on the town.",
+    "marks": 2
+   }
+  ],
+  "idea": "“How many of these fit into that” is a division. To divide numbers in standard form, divide the front numbers and subtract the powers of 10. To multiply, multiply the front numbers and add the powers.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Move the decimal point two places to the right to get 6. This is balanced by \\(10^{-2}\\)."
+    ],
+    "answer": "\\(6 \\times 10^{-2}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Divide the mass of the raindrop by the mass of one molecule:",
+     "\\[\\frac{6 \\times 10^{-2}}{3.0 \\times 10^{-23}} = \\frac{6}{3.0} \\times 10^{-2-(-23)} = 2 \\times 10^{21}\\]",
+     "On a calculator, put each number in brackets or use the \\(\\times 10^{x}\\) key."
+    ],
+    "answer": "\\(2 \\times 10^{21}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Multiply the number of molecules in one raindrop by the number of raindrops:",
+     "\\[\\left(2 \\times 10^{21}\\right) \\times \\left(4.5 \\times 10^{9}\\right) = 9 \\times 10^{21+9}\\]"
+    ],
+    "answer": "\\(9 \\times 10^{30}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-010",
+  "strand": "Number and Algebra",
+  "subtopic": "Standard form, exponents and logarithms",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write \\(2^{5} \\times 2^{-8}\\) as a fraction.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Simplify \\(\\dfrac{\\left(3a^{2}b\\right)^{3}}{9a^{4}b^{5}}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(n\\) for which \\(5^{n} \\div 5^{3} = 5^{-4}\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "When you multiply powers of the same number, add the exponents. When you divide, subtract them. A power of a power multiplies the exponents, and a negative exponent means “one over”.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Add the exponents: \\(2^{5} \\times 2^{-8} = 2^{5 + (-8)} = 2^{-3}\\).",
+     "A negative exponent means one over: \\(2^{-3} = \\dfrac{1}{2^{3}}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{8}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Cube every factor in the bracket: \\(\\left(3a^{2}b\\right)^{3} = 3^{3}\\,a^{2 \\times 3}\\,b^{3} = 27a^{6}b^{3}\\).",
+     "Now divide numbers by numbers and letters by the same letters: \\(\\dfrac{27}{9} = 3\\), \\(\\ \\dfrac{a^{6}}{a^{4}} = a^{2}\\), \\(\\ \\dfrac{b^{3}}{b^{5}} = b^{-2}\\)."
+    ],
+    "answer": "\\(\\dfrac{3a^{2}}{b^{2}}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Dividing subtracts the exponents: \\(5^{n-3} = 5^{-4}\\), so \\(n - 3 = -4\\)."
+    ],
+    "answer": "\\(n = -1\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-011",
+  "strand": "Number and Algebra",
+  "subtopic": "Standard form, exponents and logarithms",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the value of (i) \\(\\log_{10} 1000\\); (ii) \\(\\ln\\left(\\mathrm{e}^{4}\\right)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Solve the equation \\(10^{x} = 250\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Solve the equation \\(\\mathrm{e}^{2x} = 7\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "A logarithm answers the question “what power?”. \\(\\log_{10} b\\) is the power of 10 that gives \\(b\\), and \\(\\ln b\\) is the power of e that gives \\(b\\). So a logarithm undoes a power.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "(i) \\(1000 = 10^{3}\\), so the power of 10 that gives 1000 is 3.",
+     "(ii) The power of e that gives \\(\\mathrm{e}^{4}\\) is 4."
+    ],
+    "answer": "(i) 3  (ii) 4"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(x\\) is the power of 10 that gives 250, which is exactly what \\(\\log_{10} 250\\) means.",
+     "\\(x = \\log_{10} 250 = 2.39794\\ldots\\)",
+     "This makes sense: \\(10^{2} = 100\\) and \\(10^{3} = 1000\\), and 250 lies between them."
+    ],
+    "answer": "\\(x = 2.40\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2x\\) is the power of e that gives 7, so \\(2x = \\ln 7 = 1.94591\\ldots\\)",
+     "Halve it: \\(x = 0.97295\\ldots\\)"
+    ],
+    "answer": "\\(x = 0.973\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-012",
+  "strand": "Number and Algebra",
+  "subtopic": "Standard form, exponents and logarithms",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The pH of a liquid is given by \\(\\text{pH} = -\\log_{10} C\\), where \\(C\\) is the concentration of hydrogen ions in the liquid, in moles per litre."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "For lemon juice, \\(C = 6.3 \\times 10^{-3}\\). Find the pH of lemon juice.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "The pH of blood is 7.4. Find the value of \\(C\\) for blood. Give your answer in the form \\(a \\times 10^{k}\\), where \\(1 \\le a < 10\\) and \\(k \\in \\mathbb{Z}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find how many times greater the concentration of hydrogen ions is in lemon juice than in blood.",
+    "marks": 2
+   }
+  ],
+  "idea": "The formula turns a concentration into a pH with a logarithm. To go backwards, from a pH to a concentration, undo the logarithm with a power of 10.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\text{pH} = -\\log_{10}\\left(6.3 \\times 10^{-3}\\right) = -(-2.2006\\ldots)\\)"
+    ],
+    "answer": "2.20"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(7.4 = -\\log_{10} C\\), so \\(\\log_{10} C = -7.4\\).",
+     "\\(\\log_{10} C\\) is the power of 10 that gives \\(C\\), so \\(C = 10^{-7.4} = 0.0000000398107\\ldots\\)"
+    ],
+    "answer": "\\(3.98 \\times 10^{-8}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "“How many times greater” is a division:",
+     "\\[\\frac{6.3 \\times 10^{-3}}{10^{-7.4}} = 158\\,248.8\\ldots\\]",
+     "A difference of about 5 in pH is a factor of about \\(10^{5}\\) in concentration."
+    ],
+    "answer": "158 000 times (3 significant figures)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-013",
+  "strand": "Number and Algebra",
+  "subtopic": "Standard form, exponents and logarithms",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Light travels at a speed of \\(3.00 \\times 10^{5}\\) km per second."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that light travels approximately \\(9.46 \\times 10^{12}\\) km in one year of 365 days.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "A star is \\(4.0 \\times 10^{13}\\) km from Earth. Find the time, in years, that light from the star takes to reach Earth.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A spacecraft travels at 17 km per second. Find the time, in years, that the spacecraft would take to travel to the star. Give your answer in the form \\(a \\times 10^{k}\\), where \\(1 \\le a < 10\\) and \\(k \\in \\mathbb{Z}\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Distance is speed multiplied by time, and time is distance divided by speed. Before you multiply or divide, make the units match: here everything is turned into seconds.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Number of seconds in a year: \\(365 \\times 24 \\times 60 \\times 60 = 31\\,536\\,000 = 3.1536 \\times 10^{7}\\).",
+     "Distance: \\(\\left(3.00 \\times 10^{5}\\right) \\times \\left(3.1536 \\times 10^{7}\\right) = 9.4608 \\times 10^{12}\\) km, which is \\(9.46 \\times 10^{12}\\) km to 3 significant figures."
+    ],
+    "answer": "\\(9.4608 \\times 10^{12} \\approx 9.46 \\times 10^{12}\\) km, as required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Divide the distance to the star by the distance that light travels in one year:",
+     "\\[\\frac{4.0 \\times 10^{13}}{9.4608 \\times 10^{12}} = 4.2279\\ldots\\]"
+    ],
+    "answer": "4.23 years"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Time in seconds: \\(\\dfrac{4.0 \\times 10^{13}}{17} = 2.3529\\ldots \\times 10^{12}\\).",
+     "Change to years by dividing by the number of seconds in a year: \\(\\dfrac{2.3529\\ldots \\times 10^{12}}{3.1536 \\times 10^{7}} = 74\\,611.2\\ldots\\)"
+    ],
+    "answer": "\\(7.46 \\times 10^{4}\\) years"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-014",
+  "strand": "Number and Algebra",
+  "subtopic": "Standard form, exponents and logarithms",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "In many large sets of real data, such as the amounts on a company's invoices, small first digits are more common than large ones. Benford's law states that the proportion of the numbers whose first digit is \\(d\\) is",
+   "\\[P(d) = \\log_{10}\\left(1 + \\frac{1}{d}\\right), \\qquad d = 1, 2, \\ldots, 9.\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the proportion of the numbers whose first digit is 1.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(P(1) + P(2) + \\cdots + P(9)\\), and explain why the answer is expected.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A company has 2400 invoices. Find the expected number of invoices whose amount has first digit 7.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the smallest value of \\(d\\) for which fewer than 10 % of the numbers have first digit \\(d\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The formula is used nine times, once for each digit. Put it in your calculator as a function of \\(d\\) and read the nine values from a table.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(1) = \\log_{10}\\left(1 + \\frac{1}{1}\\right) = \\log_{10} 2 = 0.30102\\ldots\\)",
+     "So about 30 % of the numbers start with a 1."
+    ],
+    "answer": "0.301"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "From the table, the nine values are 0.3010, 0.1761, 0.1249, 0.0969, 0.0792, 0.0669, 0.0580, 0.0512 and 0.0458, to four decimal places. Add the unrounded values on your calculator: the total is 1.",
+     "Every number has a first digit from 1 to 9, so the nine proportions together must account for all of the numbers."
+    ],
+    "answer": "1, because every number has exactly one of the nine first digits"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(7) = \\log_{10}\\left(1 + \\frac{1}{7}\\right) = 0.05799\\ldots\\)",
+     "Expected number: \\(2400 \\times 0.05799\\ldots = 139.18\\ldots\\) The answer is a number of invoices, so give a whole number."
+    ],
+    "answer": "139 invoices"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "10 % is a proportion of 0.1. The values of \\(P(d)\\) get smaller as \\(d\\) gets larger, so look down the table for the first value below 0.1.",
+     "\\(P(3) = 0.1249\\ldots\\) is more than 0.1.",
+     "\\(P(4) = 0.0969\\ldots\\) is less than 0.1."
+    ],
+    "answer": "\\(d = 4\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-015",
+  "strand": "Number and Algebra",
+  "subtopic": "Standard form, exponents and logarithms",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "Let \\(p = 3.2 \\times 10^{a}\\) and \\(q = 5 \\times 10^{b}\\), where \\(a\\) and \\(b\\) are integers."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write \\(pq\\) in the form \\(A \\times 10^{k}\\), where \\(1 \\le A < 10\\) and \\(k\\) is an expression in terms of \\(a\\) and \\(b\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write \\(\\dfrac{p}{q}\\) in the same form.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Given that \\(pq = 1.6 \\times 10^{9}\\) and \\(\\dfrac{p}{q} = 6.4 \\times 10^{3}\\), find the value of \\(a\\) and the value of \\(b\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "For these values of \\(a\\) and \\(b\\), write the exact value of \\(p + q\\) in the form \\(A \\times 10^{k}\\), where \\(1 \\le A < 10\\) and \\(k \\in \\mathbb{Z}\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Work with the front numbers and the powers of 10 separately. If the front number comes out as 10 or more, or less than 1, move one power of 10 across to fix it.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Multiply the front numbers and add the powers: \\(pq = (3.2 \\times 5) \\times 10^{a+b} = 16 \\times 10^{a+b}\\).",
+     "16 is not between 1 and 10. Write it as \\(1.6 \\times 10^{1}\\), which adds 1 to the power."
+    ],
+    "answer": "\\(1.6 \\times 10^{a+b+1}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Divide the front numbers and subtract the powers: \\(\\dfrac{p}{q} = \\dfrac{3.2}{5} \\times 10^{a-b} = 0.64 \\times 10^{a-b}\\).",
+     "0.64 is less than 1. Write it as \\(6.4 \\times 10^{-1}\\), which takes 1 from the power."
+    ],
+    "answer": "\\(6.4 \\times 10^{a-b-1}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Compare the powers of 10 with parts (a) and (b): \\(a + b + 1 = 9\\) and \\(a - b - 1 = 3\\).",
+     "So \\(a + b = 8\\) and \\(a - b = 4\\). Adding the two equations gives \\(2a = 12\\).",
+     "Check: \\(p = 3.2 \\times 10^{6}\\) and \\(q = 5 \\times 10^{2}\\) give \\(pq = 1.6 \\times 10^{9}\\) and \\(\\dfrac{p}{q} = 6400\\)."
+    ],
+    "answer": "\\(a = 6,\\quad b = 2\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Adding is different from multiplying: the powers of 10 are not the same, so you cannot simply add the front numbers.",
+     "Write both numbers out in full: \\(p = 3\\,200\\,000\\) and \\(q = 500\\), so \\(p + q = 3\\,200\\,500\\).",
+     "Move the decimal point 6 places to the left to get a number between 1 and 10."
+    ],
+    "answer": "\\(3.2005 \\times 10^{6}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-016",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Sami makes rows of houses from sticks of equal length. The first three patterns are shown in the diagram. Pattern 1 uses 6 sticks.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 408 160\" width=\"408\" height=\"160\" role=\"img\" aria-label=\"Three patterns made from sticks of equal length. Pattern 1 is one house: a square with a triangular roof, made from 6 sticks. Pattern 2 is two houses side by side that share a wall, made from 11 sticks. Pattern 3 is three houses in a row, each sharing a wall with the next, made from 16 sticks.\"><line x1=\"22.0\" y1=\"118.0\" x2=\"22.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"68.0\" y1=\"118.0\" x2=\"68.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"22.0\" y1=\"118.0\" x2=\"68.0\" y2=\"118.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"22.0\" y1=\"72.0\" x2=\"68.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"22.0\" y1=\"72.0\" x2=\"45.0\" y2=\"32.2\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"45.0\" y1=\"32.2\" x2=\"68.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><circle cx=\"22\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"22\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"45.0\" cy=\"32.2\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"68\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"68\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><text x=\"45.0\" y=\"146\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Pattern 1</text><line x1=\"112.0\" y1=\"118.0\" x2=\"112.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"158.0\" y1=\"118.0\" x2=\"158.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"112.0\" y1=\"118.0\" x2=\"158.0\" y2=\"118.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"112.0\" y1=\"72.0\" x2=\"158.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"112.0\" y1=\"72.0\" x2=\"135.0\" y2=\"32.2\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"135.0\" y1=\"32.2\" x2=\"158.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"204.0\" y1=\"118.0\" x2=\"204.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"158.0\" y1=\"118.0\" x2=\"204.0\" y2=\"118.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"158.0\" y1=\"72.0\" x2=\"204.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"158.0\" y1=\"72.0\" x2=\"181.0\" y2=\"32.2\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"181.0\" y1=\"32.2\" x2=\"204.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><circle cx=\"112\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"112\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"135.0\" cy=\"32.2\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"158\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"158\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"181.0\" cy=\"32.2\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"204\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"204\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><text x=\"158.0\" y=\"146\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Pattern 2</text><line x1=\"248.0\" y1=\"118.0\" x2=\"248.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"294.0\" y1=\"118.0\" x2=\"294.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"248.0\" y1=\"118.0\" x2=\"294.0\" y2=\"118.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"248.0\" y1=\"72.0\" x2=\"294.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"248.0\" y1=\"72.0\" x2=\"271.0\" y2=\"32.2\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"271.0\" y1=\"32.2\" x2=\"294.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"340.0\" y1=\"118.0\" x2=\"340.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"294.0\" y1=\"118.0\" x2=\"340.0\" y2=\"118.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"294.0\" y1=\"72.0\" x2=\"340.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"294.0\" y1=\"72.0\" x2=\"317.0\" y2=\"32.2\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"317.0\" y1=\"32.2\" x2=\"340.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"386.0\" y1=\"118.0\" x2=\"386.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"340.0\" y1=\"118.0\" x2=\"386.0\" y2=\"118.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"340.0\" y1=\"72.0\" x2=\"386.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"340.0\" y1=\"72.0\" x2=\"363.0\" y2=\"32.2\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><line x1=\"363.0\" y1=\"32.2\" x2=\"386.0\" y2=\"72.0\" stroke=\"#0b0d12\" stroke-width=\"3.2\" stroke-linecap=\"round\"/><circle cx=\"248\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"248\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"271.0\" cy=\"32.2\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"294\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"294\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"317.0\" cy=\"32.2\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"340\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"340\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"363.0\" cy=\"32.2\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"386\" cy=\"72\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><circle cx=\"386\" cy=\"118\" r=\"3.4\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><text x=\"317.0\" y=\"146\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Pattern 3</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the number of sticks in pattern 4.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find an expression for the number of sticks in pattern \\(n\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the number of sticks in pattern 40.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Sami has 250 sticks. Find the number of the largest pattern that he can make.",
+    "marks": 2
+   }
+  ],
+  "idea": "Count how many sticks are added each time. If the same number is added every time, the numbers of sticks form an arithmetic sequence.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The patterns use 6, 11 and 16 sticks. Each new house shares a wall with the house before it, so it adds only 5 sticks: \\(16 + 5\\)."
+    ],
+    "answer": "21 sticks"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "This is an arithmetic sequence with \\(u_1 = 6\\) and \\(d = 5\\).",
+     "\\[u_n = u_1 + (n-1)d = 6 + 5(n - 1) = 5n + 1\\]"
+    ],
+    "answer": "\\(5n + 1\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(5 \\times 40 + 1\\)"
+    ],
+    "answer": "201 sticks"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The pattern must not need more than 250 sticks: \\(5n + 1 \\le 250\\), so \\(n \\le 49.8\\).",
+     "\\(n\\) is a whole number, so round down. Pattern 49 uses \\(5 \\times 49 + 1 = 246\\) sticks and pattern 50 would need 251."
+    ],
+    "answer": "Pattern 49"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-017",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "Farah invests $6000 in an account that pays simple interest at a rate of 3.5 % per year."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the interest that is paid each year.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the value of the investment after 8 years.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the number of complete years needed for the value of the investment to be more than $8000.",
+    "marks": 2
+   }
+  ],
+  "idea": "Simple interest is worked out on the original amount only, so the same interest is added every year. The values of the investment form an arithmetic sequence.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "3.5 % of 6000 is \\(0.035 \\times 6000\\)."
+    ],
+    "answer": "$210"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Eight lots of interest are added to the original amount: \\(6000 + 8 \\times 210 = 6000 + 1680\\)."
+    ],
+    "answer": "$7680"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "After \\(n\\) years the value is \\(6000 + 210n\\). Solve \\(6000 + 210n > 8000\\): \\(210n > 2000\\), so \\(n > 9.52\\ldots\\)",
+     "Interest is added once a year, so round up. After 9 years the value is $7890, and after 10 years it is $8100."
+    ],
+    "answer": "10 years"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-018",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A ladder is wider at the bottom than at the top. The bottom rung is 50 cm long, and each rung is 1.5 cm shorter than the rung below it. The top rung is 30.5 cm long.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 340\" width=\"330\" height=\"340\" role=\"img\" aria-label=\"A ladder that is wider at the bottom than at the top. The bottom rung is labelled 50 cm, the rung above it 48.5 cm and the top rung 30.5 cm. The diagram does not label the number of rungs.\"><line x1=\"73.2\" y1=\"315.6\" x2=\"106.0\" y2=\"30.9\" stroke=\"#0b0d12\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"226.8\" y1=\"315.6\" x2=\"193.9\" y2=\"30.9\" stroke=\"#0b0d12\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"75.0\" y1=\"300.0\" x2=\"225.0\" y2=\"300.0\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"77.2\" y1=\"280.5\" x2=\"222.8\" y2=\"280.5\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"79.5\" y1=\"261.0\" x2=\"220.5\" y2=\"261.0\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"81.8\" y1=\"241.5\" x2=\"218.2\" y2=\"241.5\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"84.0\" y1=\"222.0\" x2=\"216.0\" y2=\"222.0\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"86.2\" y1=\"202.5\" x2=\"213.8\" y2=\"202.5\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"88.5\" y1=\"183.0\" x2=\"211.5\" y2=\"183.0\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"90.8\" y1=\"163.5\" x2=\"209.2\" y2=\"163.5\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"93.0\" y1=\"144.0\" x2=\"207.0\" y2=\"144.0\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"95.2\" y1=\"124.5\" x2=\"204.8\" y2=\"124.5\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"97.5\" y1=\"105.0\" x2=\"202.5\" y2=\"105.0\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"99.8\" y1=\"85.5\" x2=\"200.2\" y2=\"85.5\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"102.0\" y1=\"66.0\" x2=\"198.0\" y2=\"66.0\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"104.2\" y1=\"46.5\" x2=\"195.8\" y2=\"46.5\" stroke=\"#0b0d12\" stroke-width=\"2.6\"/><line x1=\"233.0\" y1=\"300.0\" x2=\"246.0\" y2=\"300.0\" stroke=\"#0b0d12\" stroke-width=\"0.9\" stroke-dasharray=\"3 3\"/><text x=\"252.0\" y=\"305.0\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">50 cm</text><line x1=\"230.8\" y1=\"280.5\" x2=\"246.0\" y2=\"280.5\" stroke=\"#0b0d12\" stroke-width=\"0.9\" stroke-dasharray=\"3 3\"/><text x=\"252.0\" y=\"285.5\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">48.5 cm</text><line x1=\"203.8\" y1=\"46.5\" x2=\"246.0\" y2=\"46.5\" stroke=\"#0b0d12\" stroke-width=\"0.9\" stroke-dasharray=\"3 3\"/><text x=\"252.0\" y=\"51.5\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">30.5 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the number of rungs on the ladder.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the total length of all the rungs.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The wood for the rungs costs $4.20 per metre. Find the cost of the wood for the rungs. Give your answer correct to two decimal places.",
+    "marks": 1
+   }
+  ],
+  "idea": "The lengths of the rungs form an arithmetic sequence that goes down: \\(u_1 = 50\\) and \\(d = -1.5\\). The top rung is the last term.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Set the \\(n\\)th term equal to the length of the top rung: \\(50 + (n - 1)(-1.5) = 30.5\\).",
+     "\\(-1.5(n - 1) = -19.5\\), so \\(n - 1 = 13\\)."
+    ],
+    "answer": "14 rungs"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "You know the first term and the last term, so use \\(S_n = \\dfrac{n}{2}\\left(u_1 + u_n\\right)\\):",
+     "\\[S_{14} = \\frac{14}{2}(50 + 30.5) = 7 \\times 80.5\\]"
+    ],
+    "answer": "563.5 cm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Change the length to metres first: \\(563.5 \\text{ cm} = 5.635 \\text{ m}\\).",
+     "\\(5.635 \\times 4.20 = 23.667\\)"
+    ],
+    "answer": "$23.67"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-019",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Consider the series \\(\\displaystyle\\sum_{n=1}^{15} (50 - 4n)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the first three terms of the series.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the value of the sum.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(p\\) for which \\(\\displaystyle\\sum_{n=1}^{15} (p - 4n) = 0\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The sigma sign means “add up”. Put \\(n = 1, 2, 3, \\ldots\\) into the bracket, one after another, up to the number on top of the sigma. The terms here go down by 4 each time, so this is an arithmetic series.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(n = 1\\): \\(50 - 4 = 46\\). \\(\\ n = 2\\): \\(50 - 8 = 42\\). \\(\\ n = 3\\): \\(50 - 12 = 38\\)."
+    ],
+    "answer": "46, 42, 38"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "There are 15 terms. The first is 46 and the last is \\(50 - 4 \\times 15 = -10\\).",
+     "\\[S_{15} = \\frac{15}{2}\\bigl(46 + (-10)\\bigr) = 7.5 \\times 36\\]"
+    ],
+    "answer": "270"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Split the sum into two parts. Each of the 15 terms contains one \\(p\\), which gives \\(15p\\). Each term also takes away \\(4n\\), and \\(4(1 + 2 + \\cdots + 15) = 4 \\times 120 = 480\\).",
+     "So the sum is \\(15p - 480\\). Check with part (b): \\(p = 50\\) gives \\(750 - 480 = 270\\).",
+     "Solve \\(15p - 480 = 0\\)."
+    ],
+    "answer": "\\(p = 32\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-020",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "In an arithmetic sequence, the sum of the first 8 terms is 148 and the sum of the first 20 terms is 790."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(2u_1 + 7d = 37\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down a second equation in \\(u_1\\) and \\(d\\), and hence find the value of \\(u_1\\) and the value of \\(d\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the least value of \\(n\\) for which \\(u_n > 100\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Each sum gives one equation in the two unknowns \\(u_1\\) and \\(d\\). Two equations are enough to find both, and your calculator can solve them.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Use \\(S_n = \\dfrac{n}{2}\\bigl(2u_1 + (n-1)d\\bigr)\\) with \\(n = 8\\): \\(\\dfrac{8}{2}\\left(2u_1 + 7d\\right) = 148\\).",
+     "Divide both sides by 4."
+    ],
+    "answer": "\\(2u_1 + 7d = 37\\), as required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "With \\(n = 20\\): \\(\\dfrac{20}{2}\\left(2u_1 + 19d\\right) = 790\\), so \\(2u_1 + 19d = 79\\).",
+     "Solve the two equations with the simultaneous equation solver, or subtract the first from the second: \\(12d = 42\\), so \\(d = 3.5\\).",
+     "Then \\(2u_1 = 37 - 7 \\times 3.5 = 12.5\\)."
+    ],
+    "answer": "\\(2u_1 + 19d = 79;\\quad u_1 = 6.25,\\quad d = 3.5\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(u_n = 6.25 + 3.5(n - 1)\\). Solve \\(6.25 + 3.5(n - 1) > 100\\): \\(n - 1 > 26.78\\ldots\\), so \\(n > 27.78\\ldots\\)",
+     "Check: \\(u_{27} = 97.25\\) and \\(u_{28} = 100.75\\)."
+    ],
+    "answer": "\\(n = 28\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-021",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "Two companies drill wells. Company A charges $250 to drill the first metre, and each metre after the first costs $18 more than the metre before it. Company B charges $700 for every metre."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the total amount that company A charges for a well that is 30 m deep.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Show that company A charges \\(9n^{2} + 241n\\) dollars for a well that is \\(n\\) metres deep.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the depth of the well for which the two companies charge the same amount.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "A farmer needs a well that is 60 m deep. Determine which company is cheaper for this well, and by how much.",
+    "marks": 2
+   }
+  ],
+  "idea": "With company A, the cost of each metre is a term of an arithmetic sequence, so the cost of a whole well is a sum of terms. With company B, the cost is simply 700 dollars for each metre.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(u_1 = 250\\) and \\(d = 18\\). The 30th metre costs \\(u_{30} = 250 + 29 \\times 18 = 772\\) dollars.",
+     "\\[S_{30} = \\frac{30}{2}(250 + 772) = 15 \\times 1022\\]"
+    ],
+    "answer": "$15 330"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\[S_n = \\frac{n}{2}\\bigl(2(250) + 18(n - 1)\\bigr) = \\frac{n}{2}(18n + 482)\\]",
+     "Multiply out. Check with part (a): \\(9 \\times 30^{2} + 241 \\times 30 = 8100 + 7230 = 15\\,330\\)."
+    ],
+    "answer": "\\(9n^{2} + 241n\\), as required"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Company B charges \\(700n\\) dollars for \\(n\\) metres. Solve \\(9n^{2} + 241n = 700n\\).",
+     "A well has \\(n > 0\\), so divide both sides by \\(n\\): \\(9n + 241 = 700\\), which gives \\(9n = 459\\).",
+     "Check: both companies charge $35 700 for this depth."
+    ],
+    "answer": "51 m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Company A: \\(9 \\times 60^{2} + 241 \\times 60 = 32\\,400 + 14\\,460 = 46\\,860\\) dollars.",
+     "Company B: \\(700 \\times 60 = 42\\,000\\) dollars.",
+     "This fits part (c): for wells deeper than 51 m, company B is cheaper."
+    ],
+    "answer": "Company B is cheaper, by $4860"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-022",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Two teams dig a tunnel that will be 630 m long. They start from opposite ends. Team A digs 20 m in the first week, and in each week after the first it digs 2 m more than in the week before. Team B digs 25 m every week."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the first week in which team A digs further than team B.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the total distance dug by the two teams in the first \\(n\\) weeks is \\(n^{2} + 44n\\) metres.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the week in which the tunnel is completed.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the distance that still has to be dug at the start of that week.",
+    "marks": 1
+   }
+  ],
+  "idea": "Team A's weekly distances form an arithmetic sequence, so its total is a sum of that sequence. Team B's total is just 25 m for each week. The tunnel is finished when the two totals add up to 630 m.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "In week \\(n\\) team A digs \\(20 + 2(n - 1)\\) metres. Solve \\(20 + 2(n - 1) > 25\\): \\(2(n - 1) > 5\\), so \\(n > 3.5\\).",
+     "Check: in week 3 team A digs 24 m, and in week 4 it digs 26 m."
+    ],
+    "answer": "Week 4"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Team A: \\(S_n = \\dfrac{n}{2}\\bigl(2(20) + 2(n - 1)\\bigr) = \\dfrac{n}{2}(2n + 38) = n^{2} + 19n\\).",
+     "Team B: \\(25n\\).",
+     "Together: \\(n^{2} + 19n + 25n\\)."
+    ],
+    "answer": "\\(n^{2} + 44n\\), as required"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(n^{2} + 44n = 630\\) on your calculator: the positive solution is \\(n = 11.37\\ldots\\)",
+     "So 11 weeks are not enough, and the tunnel is finished during week 12."
+    ],
+    "answer": "Week 12"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "After 11 weeks the teams have dug \\(11^{2} + 44 \\times 11 = 605\\) m.",
+     "\\(630 - 605\\)"
+    ],
+    "answer": "25 m"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-023",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 10,
+  "stem": [
+   "Imran borrows $5400 from his aunt, who charges no interest. He repays $80 in the first month, and in each month after the first he repays $15 more than in the month before."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the total amount repaid after \\(n\\) months is \\(7.5n^{2} + 72.5n\\) dollars.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the number of months that Imran needs to repay the whole loan.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "In the final month Imran repays only the amount that he still owes. Find this amount.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Imran's aunt suggests a different plan. The repayments still increase by $15 each month, but the first repayment is larger, so that the loan is repaid in exactly 18 months and every repayment follows the pattern. Find the first repayment in this plan.",
+    "marks": 3
+   }
+  ],
+  "idea": "The monthly repayments form an arithmetic sequence, and the total repaid is its sum. The loan is repaid in the first month in which that sum reaches $5400. The sum will usually go past $5400, which is why the final repayment is smaller.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(u_1 = 80\\) and \\(d = 15\\).",
+     "\\[S_n = \\frac{n}{2}\\bigl(2(80) + 15(n - 1)\\bigr) = \\frac{n}{2}(15n + 145)\\]",
+     "Multiply out the bracket."
+    ],
+    "answer": "\\(7.5n^{2} + 72.5n\\), as required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Solve \\(7.5n^{2} + 72.5n = 5400\\) on your calculator: the positive solution is \\(n = 22.43\\ldots\\)",
+     "So 22 months are not enough: \\(S_{22} = 7.5 \\times 22^{2} + 72.5 \\times 22 = 5225\\). The loan is finished in month 23."
+    ],
+    "answer": "23 months"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "After 22 months Imran has repaid $5225, so he still owes \\(5400 - 5225\\).",
+     "The pattern would give \\(80 + 22 \\times 15 = 410\\) dollars in month 23, but he only needs to pay what is left."
+    ],
+    "answer": "$175"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Let the first repayment be \\(a\\) dollars. The 18 repayments must add up to exactly 5400:",
+     "\\[\\frac{18}{2}\\bigl(2a + 17 \\times 15\\bigr) = 5400\\]",
+     "So \\(9(2a + 255) = 5400\\), which gives \\(2a + 255 = 600\\) and \\(2a = 345\\).",
+     "Check: the repayments run from 172.50 to \\(172.50 + 255 = 427.50\\), and \\(9 \\times (172.50 + 427.50) = 5400\\)."
+    ],
+    "answer": "$172.50"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-024",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A water tank on a farm contains 12 000 litres at the start of day 1. The farm uses 150 litres on day 1, and on each day after the first it uses 20 litres more than on the day before."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the first day on which the farm uses more than 500 litres.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the volume of water left in the tank at the end of day \\(n\\) is \\(12\\,000 - 140n - 10n^{2}\\) litres.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the first day on which the tank does not contain enough water for the farm's needs.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The farmer decides to have 5000 litres added to the tank at the end of day 10. Find the total number of complete days, counted from day 1, for which the tank can now supply all the water that the farm needs.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Suppose instead that nothing is added to the tank, and that the farm uses 150 litres on day 1 and \\(k\\) litres more on each day than on the day before, where \\(k\\) is a whole number. Find the greatest value of \\(k\\) for which the 12 000 litres last for at least 40 complete days.",
+    "marks": 3
+   }
+  ],
+  "idea": "The volume used each day is a term of an arithmetic sequence. The volume left in the tank is what it started with minus the sum of the terms so far.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "On day \\(n\\) the farm uses \\(150 + 20(n - 1)\\) litres. Solve \\(150 + 20(n - 1) > 500\\): \\(n - 1 > 17.5\\), so \\(n > 18.5\\).",
+     "Check: day 18 uses 490 litres and day 19 uses 510 litres."
+    ],
+    "answer": "Day 19"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Total used in \\(n\\) days: \\(S_n = \\dfrac{n}{2}\\bigl(2(150) + 20(n - 1)\\bigr) = \\dfrac{n}{2}(20n + 280) = 10n^{2} + 140n\\).",
+     "Volume left = volume at the start − volume used \\(= 12\\,000 - \\left(10n^{2} + 140n\\right)\\)."
+    ],
+    "answer": "\\(12\\,000 - 140n - 10n^{2}\\), as required"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(12\\,000 - 140n - 10n^{2} = 0\\) on your calculator: the positive solution is \\(n = 28.34\\ldots\\)",
+     "At the end of day 28 there are \\(12\\,000 - 140 \\times 28 - 10 \\times 28^{2} = 240\\) litres left.",
+     "Day 29 needs \\(150 + 28 \\times 20 = 710\\) litres, which is more than 240, so the tank runs out during day 29."
+    ],
+    "answer": "Day 29"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "First check that the tank lasts until the water is added: at the end of day 10 it holds \\(12\\,000 - 1400 - 1000 = 9600\\) litres, so it does.",
+     "From then on there are 5000 more litres, so the volume left at the end of day \\(n\\) is \\(17\\,000 - 140n - 10n^{2}\\). Solve \\(17\\,000 - 140n - 10n^{2} = 0\\): the positive solution is \\(n = 34.82\\ldots\\)",
+     "Check: at the end of day 34 there are 680 litres left, and day 35 needs 830 litres. So day 34 is the last complete day."
+    ],
+    "answer": "34 days"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The common difference is now \\(k\\). The total used in 40 days is \\(S_{40} = \\dfrac{40}{2}\\bigl(2(150) + 39k\\bigr) = 6000 + 780k\\).",
+     "This must not be more than what the tank holds: \\(6000 + 780k \\le 12\\,000\\), so \\(k \\le 7.69\\ldots\\)",
+     "\\(k\\) is a whole number, so round down. Check: \\(k = 7\\) uses 11 460 litres in 40 days, and \\(k = 8\\) would use 12 240 litres."
+    ],
+    "answer": "\\(k = 7\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-025",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 11,
+  "stem": [
+   "An arithmetic sequence has first term 57 and common difference \\(-3\\). The sum of the first \\(n\\) terms is \\(S_n\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(S_n = \\dfrac{117n - 3n^{2}}{2}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the two values of \\(n\\) for which \\(S_n = 540\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "By considering the terms from \\(u_{16}\\) to \\(u_{24}\\), explain why these two values of \\(n\\) give the same sum.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the value of \\(n\\), where \\(n > 0\\), for which \\(S_n = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the value of \\(n\\), where \\(n > 0\\), for which \\(S_{2n} = S_n\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The terms of this sequence start positive, pass through zero and then become negative. Adding negative terms makes the sum go back down, so the same sum can appear twice.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\[\\begin{aligned}S_n &= \\frac{n}{2}\\bigl(2(57) + (n - 1)(-3)\\bigr) \\\\[4pt] &= \\frac{n}{2}(114 - 3n + 3) = \\frac{n}{2}(117 - 3n)\\end{aligned}\\]",
+     "Multiply out the bracket."
+    ],
+    "answer": "\\(S_n = \\dfrac{117n - 3n^{2}}{2}\\), as required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Solve \\(\\dfrac{117n - 3n^{2}}{2} = 540\\) on your calculator. In the form the polynomial solver needs, this is \\(3n^{2} - 117n + 1080 = 0\\)."
+    ],
+    "answer": "\\(n = 15\\) and \\(n = 24\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(S_{24}\\) is \\(S_{15}\\) with nine more terms added, \\(u_{16}\\) to \\(u_{24}\\).",
+     "These terms are \\(12,\\ 9,\\ 6,\\ 3,\\ 0,\\ -3,\\ -6,\\ -9,\\ -12\\). Each positive term is cancelled by a negative term, so they add up to 0."
+    ],
+    "answer": "The nine extra terms add up to zero, so \\(S_{24} = S_{15} + 0\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{n}{2}(117 - 3n) = 0\\) when \\(n = 0\\) or \\(117 - 3n = 0\\). Since \\(n > 0\\), \\(n = 117 \\div 3\\).",
+     "This fits part (c): \\(u_{20} = 0\\) is the middle of the first 39 terms, and the 19 terms before it cancel the 19 terms after it."
+    ],
+    "answer": "\\(n = 39\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Replace \\(n\\) by \\(2n\\) in the formula: \\(S_{2n} = \\dfrac{117(2n) - 3(2n)^{2}}{2} = \\dfrac{234n - 12n^{2}}{2}\\).",
+     "Set this equal to \\(S_n\\) and multiply both sides by 2: \\(234n - 12n^{2} = 117n - 3n^{2}\\), so \\(117n = 9n^{2}\\).",
+     "Since \\(n > 0\\), divide by \\(n\\): \\(9n = 117\\).",
+     "Check: \\(S_{13} = \\dfrac{117 \\times 13 - 3 \\times 169}{2} = 507\\) and \\(S_{26} = \\dfrac{117 \\times 26 - 3 \\times 676}{2} = 507\\). The terms from \\(u_{14}\\) to \\(u_{26}\\) are centred on \\(u_{20} = 0\\), so they add up to zero."
+    ],
+    "answer": "\\(n = 13\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-026",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A sheet of paper is 0.1 mm thick and has an area of 600 cm\\(^2\\). It is folded in half again and again. Each fold doubles the thickness and halves the area of the top face."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the thickness after 10 folds. Give your answer in centimetres.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the area of the top face after 6 folds.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The volume of the folded paper is its thickness multiplied by the area of its top face. Show that the volume is the same after every fold.",
+    "marks": 2
+   }
+  ],
+  "idea": "There are two geometric sequences here. Doubling again and again has common ratio 2, and halving again and again has common ratio \\(\\frac{1}{2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "After \\(n\\) folds the thickness is \\(0.1 \\times 2^{n}\\) mm, so after 10 folds it is \\(0.1 \\times 2^{10} = 0.1 \\times 1024 = 102.4\\) mm.",
+     "There are 10 mm in 1 cm, so divide by 10."
+    ],
+    "answer": "10.24 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "After \\(n\\) folds the area is \\(600 \\times \\left(\\frac{1}{2}\\right)^{n}\\) cm\\(^2\\).",
+     "\\(600 \\times \\left(\\frac{1}{2}\\right)^{6} = \\dfrac{600}{64}\\)"
+    ],
+    "answer": "9.375 cm\\(^2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Use the same units for both: 0.1 mm is 0.01 cm. After \\(n\\) folds the thickness is \\(0.01 \\times 2^{n}\\) cm and the area is \\(600 \\times \\left(\\frac{1}{2}\\right)^{n}\\) cm\\(^2\\).",
+     "\\[\\begin{aligned}\\text{volume} &= 0.01 \\times 2^{n} \\times 600 \\times \\left(\\tfrac{1}{2}\\right)^{n} \\\\[4pt] &= 6 \\times \\left(2 \\times \\tfrac{1}{2}\\right)^{n} = 6 \\times 1^{n} = 6\\end{aligned}\\]",
+     "The doubling and the halving cancel, so \\(n\\) disappears. This makes sense: folding does not add or remove any paper."
+    ],
+    "answer": "The volume is 6 cm\\(^3\\) for every value of \\(n\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-027",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The first five terms of a geometric sequence are \\(2,\\ a,\\ 18,\\ b,\\ 162\\). All of the terms are positive."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the common ratio, and the value of \\(a\\) and the value of \\(b\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the sum of the terms from the 6th term to the 10th term, inclusive.",
+    "marks": 2
+   }
+  ],
+  "idea": "In a geometric sequence you multiply by the common ratio \\(r\\) to get from each term to the next. Getting from the first term to the third takes two steps, so it multiplies by \\(r^{2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "From 2 to 18 is two steps: \\(2r^{2} = 18\\), so \\(r^{2} = 9\\) and \\(r = 3\\) or \\(r = -3\\).",
+     "The terms are all positive, so \\(r = 3\\).",
+     "\\(a = 2 \\times 3 = 6\\) and \\(b = 18 \\times 3 = 54\\). Check: \\(54 \\times 3 = 162\\)."
+    ],
+    "answer": "\\(r = 3,\\quad a = 6,\\quad b = 54\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The sum of the first \\(n\\) terms is \\(S_n = \\dfrac{u_1\\left(r^{n} - 1\\right)}{r - 1} = \\dfrac{2\\left(3^{n} - 1\\right)}{3 - 1} = 3^{n} - 1\\).",
+     "To add only the 6th to the 10th terms, take the sum of the first 10 terms and remove the first 5 terms: \\(S_{10} - S_5 = 59\\,048 - 242\\).",
+     "Check by adding the five terms: \\(486 + 1458 + 4374 + 13\\,122 + 39\\,366 = 58\\,806\\)."
+    ],
+    "answer": "58 806"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-028",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The rent for a flat is $9600 in the first year. The rent increases by 5 % each year."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the rent in the second year.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the total rent paid in the first six years. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A tenant had planned for the rent to stay at $9600 every year. Find how much more than planned the tenant pays in the six years.",
+    "marks": 2
+   }
+  ],
+  "idea": "An increase of 5 % is the same as multiplying by 1.05. The yearly rents form a geometric sequence with \\(u_1 = 9600\\) and \\(r = 1.05\\), and the total rent is the sum of its terms.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(9600 \\times 1.05\\)"
+    ],
+    "answer": "$10 080"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\[S_6 = \\frac{9600\\left(1.05^{6} - 1\\right)}{1.05 - 1} = 65\\,298.363\\]"
+    ],
+    "answer": "$65 298.36"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Planned total: \\(6 \\times 9600 = 57\\,600\\) dollars.",
+     "\\(65\\,298.36 - 57\\,600\\)"
+    ],
+    "answer": "$7698.36"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-029",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "On a piano, the frequency of each note is 1.0595 times the frequency of the note immediately below it. The note A has a frequency of 440 Hz."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the frequency of the note that is 5 notes above A.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the note that is 12 notes above A has a frequency that is approximately double the frequency of A.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The first note with a frequency of more than 2000 Hz is \\(n\\) notes above A. Find the value of \\(n\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Each step up multiplies the frequency by 1.0595, so the frequencies form a geometric sequence. The note \\(n\\) steps above A has frequency \\(440 \\times 1.0595^{n}\\) Hz.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(440 \\times 1.0595^{5} = 587.43\\ldots\\)"
+    ],
+    "answer": "587 Hz"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Twelve steps multiply the frequency by \\(1.0595^{12} = 2.0008\\ldots\\)",
+     "This is very close to 2, so the frequency is approximately doubled: \\(440 \\times 2.0008\\ldots = 880.3\\ldots\\) Hz, and \\(2 \\times 440 = 880\\) Hz."
+    ],
+    "answer": "\\(1.0595^{12} \\approx 2\\), so the frequency is approximately doubled"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(440 \\times 1.0595^{n} > 2000\\). Use a table on your calculator, or solve \\(440 \\times 1.0595^{n} = 2000\\) to get \\(n = 26.19\\ldots\\)",
+     "\\(n\\) is a whole number of notes, so round up. Check: 26 notes above gives \\(1977.3\\ldots\\) Hz and 27 notes above gives \\(2094.9\\ldots\\) Hz."
+    ],
+    "answer": "\\(n = 27\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-030",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A shape is built in stages. Stage 0 is an equilateral triangle with sides of length 9 cm. At each new stage, every side of the shape is replaced by four sides, each one third as long as the side it replaces. Stages 0, 1 and 2 are shown in the diagram.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 470 190\" width=\"470\" height=\"190\" role=\"img\" aria-label=\"Three shapes. Stage 0 is an equilateral triangle with sides of 9 cm. Stage 1 is a six-pointed star with 12 equal sides: each side of the triangle has been replaced by four shorter sides, with a triangular point in the middle. Stage 2 is the same star with every side again replaced by four shorter sides, so it has 48 sides.\"><polygon points=\"35.0,136.0 84.5,50.3 134.0,136.0\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/><text x=\"84.5\" y=\"182\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Stage 0</text><polygon points=\"185.0,136.0 201.5,107.4 185.0,78.8 218.0,78.8 234.5,50.3 251.0,78.8 284.0,78.8 267.5,107.4 284.0,136.0 251.0,136.0 234.5,164.6 218.0,136.0\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/><text x=\"234.5\" y=\"182\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Stage 1</text><polygon points=\"335.0,136.0 340.5,126.5 335.0,116.9 346.0,116.9 351.5,107.4 346.0,97.9 335.0,97.9 340.5,88.4 335.0,78.8 346.0,78.8 351.5,69.3 357.0,78.8 368.0,78.8 373.5,69.3 368.0,59.8 379.0,59.8 384.5,50.3 390.0,59.8 401.0,59.8 395.5,69.3 401.0,78.8 412.0,78.8 417.5,69.3 423.0,78.8 434.0,78.8 428.5,88.4 434.0,97.9 423.0,97.9 417.5,107.4 423.0,116.9 434.0,116.9 428.5,126.5 434.0,136.0 423.0,136.0 417.5,145.5 412.0,136.0 401.0,136.0 395.5,145.5 401.0,155.1 390.0,155.1 384.5,164.6 379.0,155.1 368.0,155.1 373.5,145.5 368.0,136.0 357.0,136.0 351.5,145.5 346.0,136.0\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/><text x=\"384.5\" y=\"182\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Stage 2</text><text x=\"84.5\" y=\"153.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">9 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the perimeter of the shape at stage 0 and at stage 1.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Explain why the perimeters of the stages form a geometric sequence with common ratio \\(\\dfrac{4}{3}\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the perimeter of the shape at stage 6.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the first stage at which the perimeter is more than 5 metres.",
+    "marks": 2
+   }
+  ],
+  "idea": "Look at what happens to one side. It is replaced by 4 pieces that are each \\(\\frac{1}{3}\\) of its length, so its length is multiplied by \\(\\frac{4}{3}\\). The same thing happens to every side at every stage.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Stage 0: three sides of 9 cm, so \\(3 \\times 9 = 27\\) cm.",
+     "Stage 1: each side becomes four sides of \\(9 \\div 3 = 3\\) cm. There are \\(3 \\times 4 = 12\\) sides, so \\(12 \\times 3 = 36\\) cm."
+    ],
+    "answer": "27 cm and 36 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "At every stage each side is replaced by 4 sides of \\(\\frac{1}{3}\\) of its length, so each side, and therefore the whole perimeter, is multiplied by \\(4 \\times \\frac{1}{3} = \\frac{4}{3}\\).",
+     "Multiplying by the same number each time is what makes a sequence geometric. (Check: \\(36 \\div 27 = \\frac{4}{3}\\).)"
+    ],
+    "answer": "Every stage multiplies the perimeter by \\(\\dfrac{4}{3}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Stage 0 has perimeter 27 cm, and stage 6 is six multiplications later: \\(27 \\times \\left(\\dfrac{4}{3}\\right)^{6} = 151.70\\ldots\\)"
+    ],
+    "answer": "152 cm"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "5 metres is 500 cm. Solve \\(27 \\times \\left(\\dfrac{4}{3}\\right)^{n} > 500\\) with a table on your calculator.",
+     "Stage 10 gives \\(479.4\\ldots\\) cm, which is not enough. Stage 11 gives \\(639.2\\ldots\\) cm."
+    ],
+    "answer": "Stage 11"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-031",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A charity counts the donations that it receives each week. It receives 256 donations in week 1 and 576 donations in week 3. The numbers of donations each week form an increasing geometric sequence."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the common ratio of the sequence.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find how many more donations the charity receives in week 6 than in week 5.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the percentage of all the donations in the first 9 weeks that are received in week 9.",
+    "marks": 3
+   }
+  ],
+  "idea": "Week 1 to week 3 is two steps of the sequence, so the number of donations is multiplied by \\(r^{2}\\). Part (c) compares one term of the sequence with the sum of the terms so far.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(256r^{2} = 576\\), so \\(r^{2} = 2.25\\) and \\(r = 1.5\\) or \\(r = -1.5\\).",
+     "The sequence is increasing, so \\(r\\) is positive."
+    ],
+    "answer": "\\(r = 1.5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Week 5: \\(256 \\times 1.5^{4} = 1296\\). Week 6: \\(256 \\times 1.5^{5} = 1944\\).",
+     "\\(1944 - 1296\\)"
+    ],
+    "answer": "648 more donations"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Week 9: \\(u_9 = 256 \\times 1.5^{8} = 6561\\).",
+     "First 9 weeks: \\(S_9 = \\dfrac{256\\left(1.5^{9} - 1\\right)}{1.5 - 1} = 19\\,171\\).",
+     "\\(\\dfrac{6561}{19\\,171} \\times 100 = 34.22\\ldots\\)",
+     "More than a third of everything received so far arrives in the latest week. That is typical of fast geometric growth."
+    ],
+    "answer": "34.2 %"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-032",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 12,
+  "stem": [
+   "A patient is given a 250 mg dose of a medicine every 8 hours. During each 8-hour period, the patient's body removes 60 % of the medicine that was in it at the start of the period."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the amount of the medicine in the patient's body just before the second dose.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that the amount in the body just after the third dose is 390 mg.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The amount in the body just after the \\(n\\)th dose is the sum of the first \\(n\\) terms of a geometric sequence. Write down the first term and the common ratio of this sequence.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the amount in the body just after the sixth dose.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "By finding the amount in the body just after the \\(n\\)th dose for large values of \\(n\\), write down the amount that it approaches. Give your answer correct to the nearest mg.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "The medicine only works while the amount in the body is more than 150 mg. Find the number of the first dose after which the amount is still more than 150 mg just before the next dose is given.",
+    "marks": 3
+   }
+  ],
+  "idea": "Removing 60 % leaves 40 %, so every 8 hours the amount in the body is multiplied by 0.4. Each dose is then worn down by this multiplier again and again, and the amount in the body is all the doses so far added together.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "40 % of the first dose is left after 8 hours: \\(0.4 \\times 250\\)."
+    ],
+    "answer": "100 mg"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Just after the second dose: \\(100 + 250 = 350\\) mg.",
+     "Eight hours later, 40 % of this is left: \\(0.4 \\times 350 = 140\\) mg.",
+     "The third dose is then added: \\(140 + 250\\)."
+    ],
+    "answer": "390 mg, as required"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Just after the third dose the body holds the newest dose (250), what is left of the dose before (\\(250 \\times 0.4\\)) and what is left of the first dose (\\(250 \\times 0.4^{2}\\)).",
+     "So the amount is \\(250 + 250(0.4) + 250(0.4)^{2} + \\cdots\\), a geometric series. Check: \\(250 + 100 + 40 = 390\\)."
+    ],
+    "answer": "First term 250, common ratio 0.4"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\[S_6 = \\frac{250\\left(1 - 0.4^{6}\\right)}{1 - 0.4} = 414.96\\]"
+    ],
+    "answer": "415 mg (414.96 mg)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Put \\(S_n = \\dfrac{250\\left(1 - 0.4^{n}\\right)}{0.6}\\) in a table on your calculator and look at large values of \\(n\\): \\(S_{10} = 416.62\\ldots\\) and \\(S_{20} = 416.666\\ldots\\)",
+     "The values stop changing because \\(0.4^{n}\\) becomes tiny, which leaves \\(250 \\div 0.6 = 416.66\\ldots\\)"
+    ],
+    "answer": "417 mg"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The amount is lowest just before the next dose, when 40 % of the amount just after the last dose is left.",
+     "After dose 1: \\(0.4 \\times 250 = 100\\) mg. After dose 2: \\(0.4 \\times 350 = 140\\) mg. Both are below 150 mg.",
+     "After dose 3: \\(0.4 \\times 390 = 156\\) mg, which is above 150 mg.",
+     "The amounts just after a dose keep increasing (part (e)), so the lowest point is above 150 mg after every later dose as well."
+    ],
+    "answer": "The third dose"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-033",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "All of the terms of a geometric sequence are positive. The sum of the first two terms is 45, and the sum of the third and fourth terms is 20."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the common ratio, \\(r\\), satisfies \\(r^{2} = \\dfrac{4}{9}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the first term of the sequence.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the sum of the first 10 terms of the sequence.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Show that the sum of the first \\(n\\) terms is less than 81 for every value of \\(n\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Write each sum in terms of \\(u_1\\) and \\(r\\). The third and fourth terms are the first and second terms multiplied by \\(r^{2}\\), so dividing one sum by the other removes \\(u_1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "First two terms: \\(u_1 + u_1r = 45\\), so \\(u_1(1 + r) = 45\\).",
+     "Third and fourth terms: \\(u_1r^{2} + u_1r^{3} = 20\\), so \\(u_1r^{2}(1 + r) = 20\\).",
+     "Divide the second equation by the first. The factor \\(u_1(1 + r)\\) cancels:",
+     "\\[r^{2} = \\frac{20}{45} = \\frac{4}{9}\\]"
+    ],
+    "answer": "\\(r^{2} = \\dfrac{4}{9}\\), as required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The terms are all positive, so \\(r = \\dfrac{2}{3}\\) (not \\(-\\dfrac{2}{3}\\)).",
+     "\\(u_1\\left(1 + \\dfrac{2}{3}\\right) = 45\\), so \\(u_1 = 45 \\div \\dfrac{5}{3}\\).",
+     "Check: the terms are \\(27,\\ 18,\\ 12,\\ 8\\), and \\(27 + 18 = 45\\), \\(12 + 8 = 20\\)."
+    ],
+    "answer": "\\(u_1 = 27\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\[S_{10} = \\frac{27\\left(1 - \\left(\\frac{2}{3}\\right)^{10}\\right)}{1 - \\frac{2}{3}} = 79.595\\ldots\\]"
+    ],
+    "answer": "79.6"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\[S_n = \\frac{27\\left(1 - \\left(\\frac{2}{3}\\right)^{n}\\right)}{1 - \\frac{2}{3}} = 81\\left(1 - \\left(\\tfrac{2}{3}\\right)^{n}\\right) = 81 - 81\\left(\\tfrac{2}{3}\\right)^{n}\\]",
+     "\\(\\left(\\frac{2}{3}\\right)^{n}\\) is positive for every \\(n\\), so something positive is always taken away from 81.",
+     "Part (c) fits this: the sum of 10 terms is already 79.6, and it keeps creeping up towards 81 without reaching it."
+    ],
+    "answer": "\\(S_n = 81 - 81\\left(\\tfrac{2}{3}\\right)^{n} < 81\\), as required"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-034",
+  "strand": "Number and Algebra",
+  "subtopic": "Compound interest and depreciation",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Three banks each pay a nominal annual interest rate of 6 %. Bank A compounds the interest annually, bank B compounds it quarterly and bank C compounds it daily. Tomás has $5000 to invest for 4 years.",
+   "In this question, take one year to be 365 days and give money answers correct to two decimal places."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of the investment after 4 years in bank A.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of the investment after 4 years in bank B.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find how much more interest Tomás earns in bank C than in bank A.",
+    "marks": 2
+   }
+  ],
+  "idea": "A nominal rate is shared equally between the compounding periods in a year. Use \\(FV = PV\\left(1 + \\dfrac{r}{100k}\\right)^{kn}\\), where \\(k\\) is the number of compounding periods per year and \\(n\\) is the number of years.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(k = 1\\): \\(FV = 5000 \\times 1.06^{4} = 6312.3848\\)."
+    ],
+    "answer": "$6312.38"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(k = 4\\): each quarter the rate is \\(6 \\div 4 = 1.5\\) %, and 4 years is 16 quarters.",
+     "\\(FV = 5000 \\times 1.015^{16} = 6344.927\\ldots\\)",
+     "On the finance solver: \\(N = 4\\), \\(I\\% = 6\\), \\(PV = -5000\\), \\(PMT = 0\\), \\(P/Y = 1\\), \\(C/Y = 4\\)."
+    ],
+    "answer": "$6344.93"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(k = 365\\): \\(FV = 5000\\left(1 + \\dfrac{6}{36\\,500}\\right)^{365 \\times 4} = 6356.120\\ldots\\)",
+     "Both investments start at $5000, so the difference in interest is the difference in final value: \\(6356.120\\ldots - 6312.3848 = 43.735\\ldots\\)",
+     "Compounding more often earns more, but the gain is small."
+    ],
+    "answer": "$43.74"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-035",
+  "strand": "Number and Algebra",
+  "subtopic": "Compound interest and depreciation",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "An investment is worth $5000 at the start. It is worth $5200 after one year and $5408 after two years. Interest is compounded annually at a fixed rate."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the annual interest rate is 4 %.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of the investment after 10 years. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the total interest earned in the 10 years.",
+    "marks": 1
+   }
+  ],
+  "idea": "With compound interest the value is multiplied by the same number every year. Find that multiplier by dividing one year's value by the value of the year before.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "First year: \\(5200 \\div 5000 = 1.04\\). Second year: \\(5408 \\div 5200 = 1.04\\).",
+     "The value is multiplied by 1.04 each year, which is an increase of 4 %."
+    ],
+    "answer": "The multiplier is 1.04 in both years, so the rate is 4 %"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(5000 \\times 1.04^{10} = 7401.221\\ldots\\)"
+    ],
+    "answer": "$7401.22"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Interest is the final value minus the amount invested: \\(7401.22 - 5000\\)."
+    ],
+    "answer": "$2401.22"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-036",
+  "strand": "Number and Algebra",
+  "subtopic": "Compound interest and depreciation",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A laptop is bought for $1450. Its value decreases by the same percentage each year. After 3 years the laptop is worth $742.40."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the annual rate of depreciation.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the value of the laptop 5 years after it was bought. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the amount by which the value of the laptop falls during the fourth year.",
+    "marks": 2
+   }
+  ],
+  "idea": "Depreciation by a fixed percentage multiplies the value by the same number, less than 1, every year. Find that multiplier first. The rate is how far it is below 1.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Let the yearly multiplier be \\(m\\). Three years give \\(1450m^{3} = 742.40\\), so \\(m^{3} = 0.512\\).",
+     "Take the cube root: \\(m = 0.8\\). The laptop keeps 80 % of its value each year, so it loses 20 %.",
+     "On the finance solver: \\(N = 3\\), \\(PV = -1450\\), \\(PMT = 0\\), \\(FV = 742.40\\), \\(P/Y = 1\\), \\(C/Y = 1\\) gives \\(I\\% = -20\\)."
+    ],
+    "answer": "20 % per year"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(1450 \\times 0.8^{5} = 475.136\\)"
+    ],
+    "answer": "$475.14"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The fourth year runs from the end of year 3 to the end of year 4. At the end of year 3 the laptop is worth $742.40.",
+     "At the end of year 4 it is worth \\(742.40 \\times 0.8 = 593.92\\) dollars.",
+     "\\(742.40 - 593.92\\). This is 20 % of 742.40, as it should be."
+    ],
+    "answer": "$148.48"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-037",
+  "strand": "Number and Algebra",
+  "subtopic": "Compound interest and depreciation",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Prices in a country are rising at a rate of 2.8 % per year. A basket of food costs $150 today.",
+   "Lin's salary is $42 000 today, and it will rise by 2 % each year."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the cost of the same basket of food in 5 years' time. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find Lin's salary in 5 years' time. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the amount of money that, at today's prices, would buy the same as Lin's salary in 5 years' time. Give your answer correct to the nearest dollar.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "State, with a reason, whether Lin will be better off or worse off in 5 years' time.",
+    "marks": 1
+   }
+  ],
+  "idea": "Prices and salary both grow like compound interest, each with its own multiplier. To turn money from a future year back into today's prices, divide by the growth in prices.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(150 \\times 1.028^{5} = 172.209\\ldots\\)"
+    ],
+    "answer": "$172.21"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(42\\,000 \\times 1.02^{5} = 46\\,371.393\\ldots\\)"
+    ],
+    "answer": "$46 371.39"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "In 5 years everything costs \\(1.028^{5} = 1.1480\\ldots\\) times as much as today, so each dollar buys less.",
+     "Divide the future salary by this number: \\(46\\,371.393\\ldots \\div 1.028^{5} = 40\\,390.99\\ldots\\)"
+    ],
+    "answer": "$40 391"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Compare like with like, in today's prices: the future salary buys what $40 391 buys today, and the salary today is $42 000.",
+     "The salary rises by 2 % a year but prices rise faster, by 2.8 % a year."
+    ],
+    "answer": "Worse off, because \\(40\\,391 < 42\\,000\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-038",
+  "strand": "Number and Algebra",
+  "subtopic": "Compound interest and depreciation",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Olu has $10 000 to invest for 5 years. Account A pays 5 % interest per year and account B pays 3 % interest per year. Both accounts compound the interest annually.",
+   "Olu puts \\(x\\) dollars into account A and the rest of the money into account B."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of the investment after 5 years if Olu puts all of the money into account A. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down an expression, in terms of \\(x\\), for the total value of the two accounts after 5 years.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "After 5 years the total value of the two accounts is $12 294.79. Find the value of \\(x\\). Give your answer correct to the nearest dollar.",
+    "marks": 3
+   }
+  ],
+  "idea": "Each account grows on its own. If \\(x\\) dollars go into account A, then \\(10\\,000 - x\\) dollars go into account B, and the total is the two final values added together.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(10\\,000 \\times 1.05^{5} = 12\\,762.815\\ldots\\)"
+    ],
+    "answer": "$12 762.82"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Account A grows to \\(x \\times 1.05^{5}\\). Account B holds \\(10\\,000 - x\\) and grows to \\((10\\,000 - x) \\times 1.03^{5}\\)."
+    ],
+    "answer": "\\(1.05^{5}\\,x + 1.03^{5}\\,(10\\,000 - x)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Set the expression equal to 12 294.79 and solve with your calculator's equation solver, keeping \\(1.05^{5}\\) and \\(1.03^{5}\\) unrounded:",
+     "\\[1.05^{5}\\,x + 1.03^{5}\\,(10\\,000 - x) = 12\\,294.79\\]",
+     "The solver gives \\(x = 6000.03\\ldots\\)",
+     "Check: \\(6000 \\times 1.05^{5} + 4000 \\times 1.03^{5} = 7657.68\\ldots + 4637.09\\ldots = 12\\,294.78\\ldots\\), which is 12 294.79 to the nearest cent."
+    ],
+    "answer": "\\(x = 6000\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-039",
+  "strand": "Number and Algebra",
+  "subtopic": "Compound interest and depreciation",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 11,
+  "stem": [
+   "Kemal invests $8000 in an account. For the first 4 years the account pays a nominal annual interest rate of 3.6 %, compounded monthly. The rate then changes to 4.8 %, compounded monthly, for the next 3 years."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of the investment after 4 years. Give your answer correct to two decimal places.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the value of the investment after 7 years. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the single nominal annual interest rate, compounded monthly, that would give the same value after 7 years.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The rate stays at 4.8 % after the 7 years. Find the total number of complete months, counted from the start of the investment, needed for the investment to be worth more than $12 000.",
+    "marks": 3
+   }
+  ],
+  "idea": "Work in months. Each stage has its own monthly multiplier, and the value at the end of the first stage is the starting value for the second stage.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Monthly rate: \\(3.6 \\div 12 = 0.3\\) %, so the monthly multiplier is 1.003. Four years is 48 months.",
+     "\\(8000 \\times 1.003^{48} = 9237.081\\ldots\\)"
+    ],
+    "answer": "$9237.08"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "New monthly rate: \\(4.8 \\div 12 = 0.4\\) %, so the multiplier is 1.004. Three years is 36 months.",
+     "Carry on from the unrounded answer to part (a): \\(9237.081\\ldots \\times 1.004^{36} = 10\\,664.694\\ldots\\)"
+    ],
+    "answer": "$10 664.69"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Find the one rate that turns $8000 into $10 664.69 in 84 months.",
+     "On the finance solver: \\(N = 84\\), \\(PV = -8000\\), \\(PMT = 0\\), \\(FV = 10\\,664.69\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(I\\%\\): \\(4.114\\ldots\\)",
+     "The answer lies between 3.6 % and 4.8 %, and nearer to 3.6 % because that rate was paid for longer."
+    ],
+    "answer": "4.11 %"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "After 7 years the value is still below $12 000, so the target is reached during the 4.8 % stage. Count months from the end of year 4, when the value is \\(9237.081\\ldots\\) dollars.",
+     "Solve \\(9237.081\\ldots \\times 1.004^{m} = 12\\,000\\). The solver gives \\(m = 65.5\\ldots\\), so 66 months at the new rate are needed.",
+     "Add the first 48 months: \\(48 + 66\\).",
+     "Check: after 113 months the value is \\(11\\,973.6\\ldots\\) dollars, and after 114 months it is \\(12\\,021.5\\ldots\\) dollars."
+    ],
+    "answer": "114 months"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-040",
+  "strand": "Number and Algebra",
+  "subtopic": "Compound interest and depreciation",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "Zara invests $12 000 in an account that pays a nominal annual interest rate of 3.9 %, compounded quarterly."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the interest rate for each quarter.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the value of the investment after 5 years. Give your answer correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the interest earned during the fifth year. Give your answer correct to two decimal places.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "At the end of the 5 years Zara withdraws \\(W\\) dollars. She leaves the rest in the account for another 5 years, and at the end of that time the account contains exactly $12 000. Find the value of \\(W\\). Give your answer correct to the nearest dollar.",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Find the annual interest rate, compounded annually, that gives the same growth as this account.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Suppose instead that Zara makes no withdrawal. Find the number of complete years needed for the original investment to become three times as large.",
+    "marks": 2
+   }
+  ],
+  "idea": "Every quarter the balance is multiplied by 1.00975. Five years is 20 quarters, so five years multiplies the balance by \\(1.00975^{20}\\). Most parts of this question use that one multiplier, forwards or backwards.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The nominal rate is shared between 4 quarters: \\(3.9 \\div 4\\)."
+    ],
+    "answer": "0.975 %"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(12\\,000 \\times 1.00975^{20} = 14\\,569.964\\ldots\\)"
+    ],
+    "answer": "$14 569.96"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The fifth year runs from the end of year 4 to the end of year 5.",
+     "Value after 4 years (16 quarters): \\(12\\,000 \\times 1.00975^{16} = 14\\,015.320\\ldots\\)",
+     "Interest in the fifth year: \\(14\\,569.964\\ldots - 14\\,015.320\\ldots = 554.643\\ldots\\)"
+    ],
+    "answer": "$554.64"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Work backwards. The amount left in the account after the withdrawal grows for 20 quarters and becomes 12 000.",
+     "So the amount left is \\(12\\,000 \\div 1.00975^{20} = 9883.346\\ldots\\)",
+     "The withdrawal is the difference between what was there and what was left: \\(W = 14\\,569.964\\ldots - 9883.346\\ldots = 4686.617\\ldots\\)"
+    ],
+    "answer": "\\(W = 4687\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "In one year the account multiplies the balance by \\(1.00975^{4} = 1.039574\\ldots\\)",
+     "A multiplier of 1.039574… is an increase of 3.9574… %. This is a little more than the nominal 3.9 %, because interest is added during the year and then earns interest itself."
+    ],
+    "answer": "3.96 %"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Three times as large means the multiplier reaches 3: solve \\(1.00975^{4n} = 3\\), where \\(n\\) is the number of years. The solver gives \\(n = 28.30\\ldots\\)",
+     "Round up to a complete year. Check: after 28 years the value is \\(35\\,574.08\\ldots\\) dollars, and after 29 years it is \\(36\\,981.89\\ldots\\) dollars, which is more than 36 000."
+    ],
+    "answer": "29 years"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-041",
+  "strand": "Number and Algebra",
+  "subtopic": "Loans and annuities",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Hana takes out a loan of $9000. Interest is charged at a nominal annual rate of 6 %, compounded monthly. Hana pays $275 at the end of each month."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the interest charged in the first month is $45.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the amount that Hana owes just after her first payment.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the amount that Hana owes just after her second payment.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the number of payments that Hana needs to make to repay the loan. The final payment is smaller than the others.",
+    "marks": 2
+   }
+  ],
+  "idea": "Each month two things happen to a loan: interest is added to what is owed, and then the payment is taken off. Only the part of the payment that is more than the interest makes the loan smaller.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The monthly rate is \\(6 \\div 12 = 0.5\\) %.",
+     "\\(0.005 \\times 9000 = 45\\)"
+    ],
+    "answer": "$45, as required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Add the interest, then take off the payment: \\(9000 + 45 - 275\\).",
+     "So only \\(275 - 45 = 230\\) dollars of the first payment reduces the loan."
+    ],
+    "answer": "$8770"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Interest in the second month is charged on what is owed now: \\(0.005 \\times 8770 = 43.85\\).",
+     "\\(8770 + 43.85 - 275\\)"
+    ],
+    "answer": "$8538.85"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Use the finance (TVM) solver on your calculator. Money that you pay out is entered as a negative number, and money that you receive as a positive number.",
+     "\\(I\\% = 6\\), \\(PV = 9000\\), \\(PMT = -275\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(N\\): \\(35.82\\ldots\\)",
+     "35 full payments are not enough, so a 36th, smaller, payment is needed."
+    ],
+    "answer": "36 payments"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-042",
+  "strand": "Number and Algebra",
+  "subtopic": "Loans and annuities",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Chidi wants a loan to buy a van. He can pay $650 at the end of each month for 5 years. The bank charges a nominal annual interest rate of 7.5 %, compounded monthly.",
+   "In this question, give your answers correct to the nearest dollar."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the amount that Chidi can borrow.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the total interest that Chidi pays over the 5 years.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The van costs $38 000. Find the deposit that Chidi needs.",
+    "marks": 1
+   }
+  ],
+  "idea": "The payments are known and the size of the loan is not, so this time you solve for the present value, \\(PV\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Use the finance (TVM) solver on your calculator. Money that you pay out is entered as a negative number, and money that you receive as a positive number.",
+     "\\(N = 60\\), \\(I\\% = 7.5\\), \\(PMT = -650\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PV\\): \\(32\\,438.45\\ldots\\)"
+    ],
+    "answer": "$32 438"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Chidi pays 60 payments of $650: \\(60 \\times 650 = 39\\,000\\).",
+     "The interest is what he pays back on top of what he borrowed: \\(39\\,000 - 32\\,438\\)."
+    ],
+    "answer": "$6562"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The loan covers $32 438 of the price, and the deposit covers the rest: \\(38\\,000 - 32\\,438\\)."
+    ],
+    "answer": "$5562"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-043",
+  "strand": "Number and Algebra",
+  "subtopic": "Loans and annuities",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A shop sells a sofa for $2400. Bao can take the sofa home now and pay the shop $75.50 at the end of each month for 36 months."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the total amount that Bao pays the shop.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the nominal annual interest rate, compounded monthly, that the shop is charging.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "A bank offers Bao a loan of $2400 at a nominal annual interest rate of 6.5 %, compounded monthly, to be repaid in 36 equal payments at the end of each month. Find the monthly payment, correct to the nearest cent.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Using your answer to part (c), find how much less Bao pays in total with the bank loan than with the shop's offer.",
+    "marks": 1
+   }
+  ],
+  "idea": "The shop's offer is a loan of $2400, even though no interest rate is mentioned. The rate is hidden in the payments, and the finance solver can find it.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(36 \\times 75.50\\)"
+    ],
+    "answer": "$2718"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Use the finance (TVM) solver on your calculator. Money that you pay out is entered as a negative number, and money that you receive as a positive number.",
+     "\\(N = 36\\), \\(PV = 2400\\), \\(PMT = -75.50\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(I\\%\\): \\(8.264\\ldots\\)"
+    ],
+    "answer": "8.26 %"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Change the rate and solve for the payment: \\(N = 36\\), \\(I\\% = 6.5\\), \\(PV = 2400\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PMT\\): \\(-73.557\\ldots\\)",
+     "The minus sign only shows that the money is paid out."
+    ],
+    "answer": "$73.56"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Total paid to the bank: \\(36 \\times 73.56 = 2648.16\\).",
+     "\\(2718 - 2648.16\\)"
+    ],
+    "answer": "$69.84"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-044",
+  "strand": "Number and Algebra",
+  "subtopic": "Loans and annuities",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Amara retires with $240 000 in a fund that pays a nominal annual interest rate of 3.6 %, compounded monthly. She withdraws $1800 at the end of each month."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the number of full withdrawals of $1800 that Amara can make.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the amount that Amara should withdraw each month instead if the fund is to last exactly 25 years. Give your answer correct to the nearest cent.",
+    "marks": 3
+   }
+  ],
+  "idea": "A fund that pays out a regular amount works like a loan in reverse: Amara is the lender, and the fund pays her back with interest. The fund is finished when its future value is 0.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Use the finance (TVM) solver on your calculator. Money that you pay out is entered as a negative number, and money that you receive as a positive number.",
+     "\\(I\\% = 3.6\\), \\(PV = -240\\,000\\), \\(PMT = 1800\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(N\\): \\(170.5\\ldots\\)",
+     "Only complete withdrawals count, so round down. After 170 withdrawals there is less than $1800 left. (170 months is 14 years and 2 months.)"
+    ],
+    "answer": "170 withdrawals"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "25 years is \\(25 \\times 12 = 300\\) months.",
+     "\\(N = 300\\), \\(I\\% = 3.6\\), \\(PV = -240\\,000\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PMT\\): \\(1214.40\\ldots\\)",
+     "A smaller withdrawal makes the fund last much longer, because more of the money stays in the fund and earns interest."
+    ],
+    "answer": "$1214.41"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-045",
+  "strand": "Number and Algebra",
+  "subtopic": "Loans and annuities",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Diego borrows $30 000 to buy a car. The loan lasts 4 years, and the nominal annual interest rate is 5.4 %, compounded monthly. Diego makes equal payments at the end of each month. At the end of the 4 years, in addition to his last monthly payment, he must make one final payment of $10 000."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the monthly payment, correct to the nearest cent.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Using your answer to part (a), find the total interest that Diego pays.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A different loan of $30 000, at the same interest rate and also lasting 4 years, has no final payment of $10 000. Find the monthly payment for this loan, correct to the nearest cent, and the total interest paid.",
+    "marks": 3
+   }
+  ],
+  "idea": "The monthly payments do not bring this loan down to zero. They bring it down to $10 000, which is then paid off in one go. In the finance solver, this means the future value is not 0.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Use the finance (TVM) solver on your calculator. Money that you pay out is entered as a negative number, and money that you receive as a positive number.",
+     "After 48 months Diego still owes $10 000, so \\(FV = -10\\,000\\).",
+     "\\(N = 48\\), \\(I\\% = 5.4\\), \\(PV = 30\\,000\\), \\(FV = -10\\,000\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PMT\\): \\(-509.21\\ldots\\)"
+    ],
+    "answer": "$509.22"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Total paid: \\(48 \\times 509.22 + 10\\,000 = 34\\,442.56\\).",
+     "Interest is the total paid minus the amount borrowed: \\(34\\,442.56 - 30\\,000\\)."
+    ],
+    "answer": "$4442.56"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Change the future value to 0: \\(N = 48\\), \\(I\\% = 5.4\\), \\(PV = 30\\,000\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PMT\\): \\(-696.32\\ldots\\)",
+     "Total paid: \\(48 \\times 696.33 = 33\\,423.84\\), so the interest is \\(33\\,423.84 - 30\\,000\\).",
+     "The first loan has smaller monthly payments but costs about $1019 more in interest, because $10 000 stays owed, and is charged interest, for the whole 4 years."
+    ],
+    "answer": "Monthly payment $696.33; total interest $3423.84"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-046",
+  "strand": "Number and Algebra",
+  "subtopic": "Loans and annuities",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "Mina pays $400 into a pension fund at the end of each month. Her first payment is one month after her 30th birthday and her last payment is on her 65th birthday. The fund pays a nominal annual interest rate of 5.4 %, compounded monthly.",
+   "In this question, give money answers correct to two decimal places."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of the fund on Mina's 65th birthday.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the total interest that the fund has earned by then.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "On her 65th birthday Mina moves all of the money into an account that pays a nominal annual interest rate of 3 %, compounded monthly. She takes out the same amount at the end of each month for 20 years, and the account is then empty. Find the amount that she takes out each month.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Mina would prefer to take out $3000 each month for the 20 years. Find the amount that she would need in the fund on her 65th birthday.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the amount that Mina would need to pay into the fund each month, from the age of 30, to have the amount in part (d) on her 65th birthday.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Prices rise by 2 % each year. Find the amount of money that, at the prices on Mina's 30th birthday, would buy the same as $3000 on her 65th birthday.",
+    "marks": 2
+   }
+  ],
+  "idea": "There are two stages. From 30 to 65 Mina builds the fund up with regular payments (35 years, so 420 months). From 65 to 85 the fund is paid back to her (20 years, so 240 months). The amount at 65 links the two stages.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Use the finance (TVM) solver on your calculator. Money that you pay out is entered as a negative number, and money that you receive as a positive number.",
+     "\\(N = 420\\), \\(I\\% = 5.4\\), \\(PV = 0\\), \\(PMT = -400\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(FV\\): \\(497\\,010.07\\ldots\\)"
+    ],
+    "answer": "$497 010.08"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Mina pays in \\(420 \\times 400 = 168\\,000\\) dollars. Everything else in the fund is interest: \\(497\\,010.08 - 168\\,000\\).",
+     "About two thirds of the fund is interest. That is the effect of compounding over 35 years."
+    ],
+    "answer": "$329 010.08"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Now the fund is the starting amount and the payments come out of it until nothing is left.",
+     "\\(N = 240\\), \\(I\\% = 3\\), \\(PV = -497\\,010.08\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PMT\\): \\(2756.40\\ldots\\)"
+    ],
+    "answer": "$2756.41"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Keep the second stage but fix the payment and solve for the starting amount.",
+     "\\(N = 240\\), \\(I\\% = 3\\), \\(PMT = 3000\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PV\\): \\(-540\\,932.74\\ldots\\)"
+    ],
+    "answer": "$540 932.74"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Go back to the first stage, with the new target as the future value.",
+     "\\(N = 420\\), \\(I\\% = 5.4\\), \\(PV = 0\\), \\(FV = 540\\,932.74\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Solve for \\(PMT\\): \\(-435.34\\ldots\\)"
+    ],
+    "answer": "$435.35"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "From her 30th to her 65th birthday is 35 years, so prices are multiplied by \\(1.02^{35} = 1.9998\\ldots\\)",
+     "Divide to go back to the earlier prices: \\(3000 \\div 1.02^{35} = 1500.08\\ldots\\)",
+     "Prices almost exactly double in 35 years, so $3000 at 65 buys only what about $1500 buys at 30."
+    ],
+    "answer": "$1500.08"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-047",
+  "strand": "Number and Algebra",
+  "subtopic": "Equations and systems",
+  "level": {
+   "SL AI": "Easy",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "At a café, 3 coffees and 2 teas cost $15.90. At the same café, 2 coffees and 5 teas cost $19.40.",
+   "Let \\(c\\) be the price of a coffee and \\(t\\) be the price of a tea, in dollars."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down two equations in \\(c\\) and \\(t\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the price of a coffee and the price of a tea.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the cost of 4 coffees and 3 teas.",
+    "marks": 1
+   }
+  ],
+  "idea": "Each sentence about a total cost becomes one equation. Two unknown prices need two equations, and your calculator's simultaneous equation solver does the rest.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The cost of the coffees plus the cost of the teas equals the total, once for each order."
+    ],
+    "answer": "\\(3c + 2t = 15.90\\) and \\(2c + 5t = 19.40\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Enter the two equations in the simultaneous equation solver: \\(c = 3.7\\), \\(t = 2.4\\).",
+     "Check in the second equation: \\(2 \\times 3.70 + 5 \\times 2.40 = 7.40 + 12.00 = 19.40\\)."
+    ],
+    "answer": "Coffee $3.70, tea $2.40"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(4 \\times 3.70 + 3 \\times 2.40 = 14.80 + 7.20\\)"
+    ],
+    "answer": "$22.00"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-048",
+  "strand": "Number and Algebra",
+  "subtopic": "Equations and systems",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A cinema sells adult tickets for $12, child tickets for $7 and senior tickets for $8. One evening it sells 420 tickets and takes $4050. It sells 60 more adult tickets than child tickets.",
+   "Let \\(a\\), \\(c\\) and \\(s\\) be the numbers of adult, child and senior tickets sold."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down three equations in \\(a\\), \\(c\\) and \\(s\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the number of tickets of each type that were sold.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the percentage of the money taken that came from child tickets.",
+    "marks": 2
+   }
+  ],
+  "idea": "There are three unknowns, so you need three equations: one from the number of tickets, one from the money and one from the comparison between adult and child tickets.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Number of tickets: \\(a + c + s = 420\\).",
+     "Money taken: \\(12a + 7c + 8s = 4050\\).",
+     "60 more adult tickets than child tickets: \\(a = c + 60\\). To enter this in the solver, write it as \\(a - c = 60\\), which is \\(1a - 1c + 0s = 60\\)."
+    ],
+    "answer": "\\(a + c + s = 420\\), \\(\\ 12a + 7c + 8s = 4050\\), \\(\\ a - c = 60\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Enter the three equations in the simultaneous equation solver.",
+     "Check: \\(210 + 150 + 60 = 420\\) and \\(12 \\times 210 + 7 \\times 150 + 8 \\times 60 = 2520 + 1050 + 480 = 4050\\)."
+    ],
+    "answer": "210 adult, 150 child and 60 senior tickets"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Money from child tickets: \\(150 \\times 7 = 1050\\) dollars.",
+     "\\(\\dfrac{1050}{4050} \\times 100 = 25.92\\ldots\\)"
+    ],
+    "answer": "25.9 %"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-049",
+  "strand": "Number and Algebra",
+  "subtopic": "Equations and systems",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Oranges are stacked in a pyramid with square layers. The top layer has 1 orange, the second layer has 4 oranges and the third layer has 9 oranges. The diagram shows these three layers from above.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 150\" width=\"400\" height=\"150\" role=\"img\" aria-label=\"The top three layers of the pyramid seen from above. Layer 1 is a single orange. Layer 2 is a square of 2 by 2 oranges, 4 in total. Layer 3 is a square of 3 by 3 oranges, 9 in total.\"><circle cx=\"48.0\" cy=\"62.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><text x=\"48.0\" y=\"136\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Layer 1</text><circle cx=\"138.0\" cy=\"48.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"138.0\" cy=\"76.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"166.0\" cy=\"48.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"166.0\" cy=\"76.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><text x=\"152.0\" y=\"136\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Layer 2</text><circle cx=\"256.0\" cy=\"34.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"256.0\" cy=\"62.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"256.0\" cy=\"90.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"284.0\" cy=\"34.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"284.0\" cy=\"62.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"284.0\" cy=\"90.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"312.0\" cy=\"34.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"312.0\" cy=\"62.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><circle cx=\"312.0\" cy=\"90.0\" r=\"13\" fill=\"#f6c27a\" stroke=\"#0b0d12\" stroke-width=\"1.3\"/><text x=\"284.0\" y=\"136\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Layer 3</text></svg>"
+   },
+   "The total number of oranges in a pyramid with \\(n\\) layers is \\[T = \\frac{n(n+1)(2n+1)}{6}.\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the total number of oranges in a pyramid with 6 layers.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "A pyramid contains 1240 oranges. Show that \\(2n^{3} + 3n^{2} + n - 7440 = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence find the number of layers in this pyramid.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "A shopkeeper has 2000 oranges. Find the number of layers in the largest complete pyramid that the shopkeeper can make, and the number of oranges left over.",
+    "marks": 3
+   }
+  ],
+  "idea": "The formula gives the total from the number of layers. Going the other way, from a total to the number of layers, means solving a cubic equation, which is a job for the polynomial solver on your calculator.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(T = \\dfrac{6 \\times 7 \\times 13}{6} = 91\\). Check: \\(1 + 4 + 9 + 16 + 25 + 36 = 91\\)."
+    ],
+    "answer": "91 oranges"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Set the formula equal to 1240 and multiply both sides by 6: \\(n(n+1)(2n+1) = 7440\\).",
+     "Expand: \\(n(n + 1) = n^{2} + n\\), and \\(\\left(n^{2} + n\\right)(2n + 1) = 2n^{3} + n^{2} + 2n^{2} + n = 2n^{3} + 3n^{2} + n\\).",
+     "So \\(2n^{3} + 3n^{2} + n = 7440\\). Take 7440 from both sides."
+    ],
+    "answer": "\\(2n^{3} + 3n^{2} + n - 7440 = 0\\), as required"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Enter the coefficients 2, 3, 1 and −7440 in the polynomial solver. The only real solution is \\(n = 15\\).",
+     "Check: \\(\\dfrac{15 \\times 16 \\times 31}{6} = 1240\\)."
+    ],
+    "answer": "15 layers"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Put the formula in a table on your calculator and look for the largest total that is not more than 2000.",
+     "\\(n = 17\\) gives \\(\\dfrac{17 \\times 18 \\times 35}{6} = 1785\\). \\(\\ n = 18\\) gives \\(\\dfrac{18 \\times 19 \\times 37}{6} = 2109\\), which is too many.",
+     "Left over: \\(2000 - 1785\\)."
+    ],
+    "answer": "17 layers, with 215 oranges left over"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-050",
+  "strand": "Number and Algebra",
+  "subtopic": "Equations and systems",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Deniz invests a total of $50 000 in three funds. In one year, fund A pays 2 %, fund B pays 4.5 % and fund C pays 7 % of the amount invested in it. The amount in fund A is equal to the total of the amounts in funds B and C. At the end of the year Deniz receives $2010 in total from the three funds.",
+   "Let \\(a\\), \\(b\\) and \\(c\\) be the amounts, in dollars, invested in funds A, B and C."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down three equations in \\(a\\), \\(b\\) and \\(c\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the amount invested in each fund.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The next year Deniz again invests $50 000, and the amount in fund A is again equal to the total of the amounts in funds B and C. She wants to receive at least $2150 from the three funds. Find the least amount that she must invest in fund C.",
+    "marks": 3
+   }
+  ],
+  "idea": "Turn each sentence into an equation. A percentage of an amount is a decimal multiplied by the amount, so 4.5 % of \\(b\\) is \\(0.045b\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Total invested: \\(a + b + c = 50\\,000\\).",
+     "Money received: \\(0.02a + 0.045b + 0.07c = 2010\\).",
+     "Fund A equals funds B and C together: \\(a = b + c\\), which is \\(a - b - c = 0\\) in the form the solver needs."
+    ],
+    "answer": "\\(a + b + c = 50\\,000\\), \\(\\ 0.02a + 0.045b + 0.07c = 2010\\), \\(\\ a - b - c = 0\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Enter the three equations in the simultaneous equation solver.",
+     "Check: \\(0.02 \\times 25\\,000 + 0.045 \\times 9600 + 0.07 \\times 15\\,400 = 500 + 432 + 1078 = 2010\\)."
+    ],
+    "answer": "A: $25 000, B: $9600, C: $15 400"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Fund A is still half of the money, $25 000, and pays \\(0.02 \\times 25\\,000 = 500\\) dollars. The other $25 000 is shared between B and C, so \\(b = 25\\,000 - c\\).",
+     "Money received: \\(500 + 0.045(25\\,000 - c) + 0.07c = 1625 + 0.025c\\).",
+     "Solve \\(1625 + 0.025c \\ge 2150\\): \\(0.025c \\ge 525\\), so \\(c \\ge 21\\,000\\).",
+     "This is possible, because it is less than the $25 000 available for funds B and C."
+    ],
+    "answer": "$21 000"
+   }
+  ]
+ }
+]
