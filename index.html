@@ -1104,6 +1104,187 @@ body {
   font-size: 1rem;
 }
 
+/* ─── QUESTION BANK ─── */
+.qb-filter-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  display: block;
+}
+.qb-filter-group { margin-bottom: 16px; }
+.qb-filter-group:last-child { margin-bottom: 0; }
+.qb-filter-group .seg-pill { margin-bottom: 0; }
+.qb-filter-row { display: flex; flex-wrap: wrap; gap: 4px 28px; }
+.qb-hint { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
+.qb-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.qb-chip {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 9999px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.7);
+  color: var(--text-sec);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.qb-chip:hover:not(:disabled) { background: var(--blue-light); border-color: var(--blue-mid); }
+.qb-chip.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+.qb-chip:disabled { opacity: 0.5; cursor: not-allowed; }
+.qb-chip-count {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0 6px;
+  border-radius: 9999px;
+  background: rgba(0,0,0,0.06);
+}
+.qb-chip.active .qb-chip-count { background: rgba(255,255,255,0.25); }
+
+.qb-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 4px 2px 14px;
+}
+
+.qb-q { padding: 20px 22px; }
+.qb-q-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.qb-q-num {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--text);
+}
+.qb-q-sub { font-size: 0.74rem; color: var(--text-muted); margin-top: 2px; }
+.qb-tags { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
+.qb-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(118,118,128,0.12);
+  color: var(--text-sec);
+  white-space: nowrap;
+}
+.qb-tag.easy { background: rgba(52,199,89,0.15); color: #1a7f3c; }
+.qb-tag.medium { background: rgba(255,149,0,0.15); color: #a05c00; }
+.qb-tag.hard { background: rgba(255,59,48,0.12); color: #b01c14; }
+.qb-tag.hl { background: var(--blue-light); color: var(--blue); }
+
+.qb-body { font-size: 0.92rem; line-height: 1.65; color: var(--text); }
+.qb-body p { margin-bottom: 8px; }
+.qb-fig { margin: 8px 0 12px; text-align: center; }
+.qb-fig svg { max-width: 100%; height: auto; background: #fff; border-radius: var(--radius-sm); }
+.qb-part {
+  display: grid;
+  grid-template-columns: 30px 1fr auto;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.qb-part-label { font-weight: 700; color: var(--text-sec); }
+.qb-part-marks { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; padding-top: 2px; }
+.qb-body .katex-display { margin: 6px 0; overflow-x: auto; overflow-y: hidden; padding: 2px 0; }
+
+.qb-ms-btn {
+  margin-top: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid var(--blue-mid);
+  background: var(--blue-light);
+  color: var(--blue);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.qb-ms-btn:hover { background: var(--blue); color: #fff; }
+
+.qb-empty { text-align: center; padding: 28px 16px; color: var(--text-muted); font-size: 0.87rem; line-height: 1.6; }
+
+/* Markscheme pop-up */
+.qb-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(0,0,0,0.35);
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  overflow-y: auto;
+}
+.qb-modal.open { display: flex; }
+.qb-sheet {
+  background: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 680px;
+  padding: 22px;
+  animation: fadeUp 0.25s ease both;
+}
+.qb-sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.qb-sheet-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.05rem; }
+.qb-close {
+  border: none;
+  background: rgba(118,118,128,0.12);
+  color: var(--text-sec);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.qb-idea {
+  background: var(--blue-light);
+  border: 1px solid var(--blue-mid);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.87rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.qb-idea strong { color: var(--blue-dark); }
+.qb-sol-part { margin-bottom: 16px; }
+.qb-sol-label { font-weight: 800; color: var(--blue); margin-bottom: 4px; }
+.qb-sol-step { margin-bottom: 6px; }
+.qb-answer {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(52,199,89,0.12);
+  border: 1px solid rgba(52,199,89,0.35);
+  font-weight: 600;
+}
+@media (max-width: 420px) {
+  .qb-q { padding: 16px; }
+  .qb-sheet { padding: 16px; }
+  .qb-modal { padding: 16px 8px; }
+  .qb-filter-row { gap: 4px 16px; }
+}
+
 /* ─── FOOTER ─── */
 footer {
   text-align: center;
@@ -1170,7 +1351,7 @@ footer .blue { color: var(--blue); font-weight: 700; }
     <button class="tab-btn active" data-tab="home" onclick="showTab('home')">Home</button>
     <button class="tab-btn" data-tab="ia" onclick="showTab('ia')">IA Marking</button>
     <button class="tab-btn" data-tab="worksheets" onclick="showTab('worksheets')">Worksheets</button>
-    <button class="tab-btn" data-tab="exam" disabled>Exam Questions <span class="tab-soon">soon</span></button>
+    <button class="tab-btn" data-tab="qbank" onclick="showTab('qbank')">Question Bank</button>
   </div>
 </nav>
 
@@ -1845,6 +2026,48 @@ footer .blue { color: var(--blue); font-weight: 700; }
 
   </div><!-- /worksheetsPanel -->
 
+  <div id="qbankPanel" style="display:none;">
+
+    <div class="glass-card">
+      <div class="section-label">FREE QUESTION BANK</div>
+      <div class="card-heading">Exam-style questions with worked solutions</div>
+      <div class="card-intro">Original IB-style questions for every topic, labelled by difficulty. Choose your course, your level and a topic, then open the markscheme on any question to see a full worked solution.</div>
+
+      <div class="qb-filter-row">
+        <div class="qb-filter-group">
+          <span class="qb-filter-label">Course</span>
+          <div class="seg-pill">
+            <button class="seg-pill-btn qb-course-btn" data-course="AA">AA</button>
+            <button class="seg-pill-btn qb-course-btn" data-course="AI">AI</button>
+          </div>
+        </div>
+        <div class="qb-filter-group" id="qbLevelGroup" style="display:none;">
+          <span class="qb-filter-label">Level</span>
+          <div class="seg-pill">
+            <button class="seg-pill-btn qb-level-btn" data-level="SL">SL</button>
+            <button class="seg-pill-btn qb-level-btn" data-level="HL">HL</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="qb-filter-group" id="qbTopicGroup" style="display:none;">
+        <span class="qb-filter-label">Topic</span>
+        <div class="qb-chips" id="qbTopics"></div>
+      </div>
+
+      <div class="qb-filter-group" id="qbDiffGroup" style="display:none;">
+        <span class="qb-filter-label">Difficulty</span>
+        <div class="qb-chips" id="qbDiffs"></div>
+      </div>
+
+      <div class="qb-hint" id="qbHint">Pick AA or AI to start.</div>
+    </div>
+
+    <div class="qb-meta" id="qbMeta"></div>
+    <div id="qbList"></div>
+
+  </div><!-- /qbankPanel -->
+
 </main><!-- /shell -->
 
 <!-- ─── FOOTER ─── -->
@@ -1898,7 +2121,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 // Tab switching
 function showTab(name) {
-  ['home','ia','worksheets'].forEach(t => {
+  ['home','ia','worksheets','qbank'].forEach(t => {
     const el = document.getElementById(t + 'Panel');
     if (el) el.style.display = (t === name) ? 'block' : 'none';
   });
@@ -2322,5 +2545,245 @@ function initWorksheetFilter() {
   </div>
 </div>
 
+
+<!-- Question bank -->
+<div class="qb-modal" id="qbModal" onclick="if (event.target === this) closeQbModal()">
+  <div class="qb-sheet" role="dialog" aria-modal="true" aria-labelledby="qbModalTitle">
+    <div class="qb-sheet-head">
+      <div class="qb-sheet-title" id="qbModalTitle">Markscheme</div>
+      <button class="qb-close" onclick="closeQbModal()" aria-label="Close">✕</button>
+    </div>
+    <div class="qb-body" id="qbModalBody"></div>
+  </div>
+</div>
+
+<script>
+// ─── QUESTION BANK ───
+// To release a strand: copy its JSON from the question-bank repo into /questions
+// and add the file name to the topic below. A question appears under a level when
+// its "level" object has a key such as "SL AA" or "HL AA"; HL-only questions carry
+// only the HL key and so never show under SL.
+const QB_TOPICS = {
+  AA: [
+    { key: 'na',    name: 'Number & Algebra',         files: ['sl_aa_number_algebra.json'] },
+    { key: 'fn',    name: 'Functions',                files: ['sl_aa_functions.json'] },
+    { key: 'gt',    name: 'Geometry & Trigonometry',  files: [] },
+    { key: 'sp',    name: 'Statistics & Probability', files: [] },
+    { key: 'calc',  name: 'Calculus',                 files: [] }
+  ],
+  AI: [
+    { key: 'na',    name: 'Number & Algebra',         files: ['sl_ai_number_algebra.json'] },
+    { key: 'fn',    name: 'Functions',                files: [] },
+    { key: 'gt',    name: 'Geometry & Trigonometry',  files: [] },
+    { key: 'sp',    name: 'Statistics & Probability', files: [] },
+    { key: 'calc',  name: 'Calculus',                 files: [] }
+  ]
+};
+const QB_DIFFS = ['Easy', 'Medium', 'Hard'];
+const qbState = { course: null, level: null, topic: null, diff: 'All' };
+const qbCache = {};
+let qbShown = [];
+let qbKatexPromise = null;
+
+function qbEsc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function qbLoadKatex() {
+  if (window.renderMathInElement) return Promise.resolve();
+  if (qbKatexPromise) return qbKatexPromise;
+  const base = 'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/';
+  const css = document.createElement('link');
+  css.rel = 'stylesheet';
+  css.href = base + 'katex.min.css';
+  document.head.appendChild(css);
+  const load = src => new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+  qbKatexPromise = load(base + 'katex.min.js').then(() => load(base + 'contrib/auto-render.min.js'));
+  return qbKatexPromise;
+}
+
+function qbTypeset(el) {
+  qbLoadKatex().then(() => {
+    renderMathInElement(el, {
+      delimiters: [
+        { left: '\\[', right: '\\]', display: true },
+        { left: '\\(', right: '\\)', display: false }
+      ],
+      throwOnError: false
+    });
+  }).catch(() => {});
+}
+
+function qbFetch(file) {
+  if (!qbCache[file]) {
+    qbCache[file] = fetch('questions/' + file).then(r => {
+      if (!r.ok) throw new Error(file);
+      return r.json();
+    }).catch(err => { delete qbCache[file]; throw err; });
+  }
+  return qbCache[file];
+}
+
+function qbLevelKey() { return qbState.level + ' ' + qbState.course; }
+
+// Render one stem/step item: plain text, or a diagram object { svg }
+function qbItem(item, tag, cls) {
+  if (item && typeof item === 'object' && item.svg) return '<div class="qb-fig">' + item.svg + '</div>';
+  return '<' + tag + (cls ? ' class="' + cls + '"' : '') + '>' + qbEsc(item) + '</' + tag + '>';
+}
+
+function qbSetActive(selector, attr, value) {
+  document.querySelectorAll(selector).forEach(b => b.classList.toggle('active', b.dataset[attr] === value));
+}
+
+function qbRenderTopics() {
+  const topics = QB_TOPICS[qbState.course];
+  document.getElementById('qbTopics').innerHTML = topics.map(t => {
+    const ready = t.files.length > 0;
+    return '<button class="qb-chip' + (qbState.topic === t.key ? ' active' : '') + '" data-topic="' + t.key + '"' +
+      (ready ? '' : ' disabled') + '>' + t.name + (ready ? '' : ' <span class="tab-soon">soon</span>') + '</button>';
+  }).join('');
+  document.querySelectorAll('#qbTopics .qb-chip').forEach(b => b.addEventListener('click', () => {
+    qbState.topic = b.dataset.topic;
+    qbState.diff = 'All';
+    qbRenderTopics();
+    qbLoadQuestions();
+  }));
+}
+
+function qbRenderDiffs(questions) {
+  const key = qbLevelKey();
+  const counts = { All: questions.length };
+  QB_DIFFS.forEach(d => { counts[d] = questions.filter(q => q.level[key] === d).length; });
+  document.getElementById('qbDiffs').innerHTML = ['All'].concat(QB_DIFFS).map(d =>
+    '<button class="qb-chip' + (qbState.diff === d ? ' active' : '') + '" data-diff="' + d + '"' +
+    (counts[d] ? '' : ' disabled') + '>' + d + ' <span class="qb-chip-count">' + counts[d] + '</span></button>'
+  ).join('');
+  document.querySelectorAll('#qbDiffs .qb-chip').forEach(b => b.addEventListener('click', () => {
+    qbState.diff = b.dataset.diff;
+    qbRenderDiffs(questions);
+    qbRenderList(questions);
+  }));
+}
+
+function qbUpdateSteps() {
+  const { course, level, topic } = qbState;
+  document.getElementById('qbLevelGroup').style.display = course ? '' : 'none';
+  document.getElementById('qbTopicGroup').style.display = (course && level) ? '' : 'none';
+  document.getElementById('qbDiffGroup').style.display = (course && level && topic) ? '' : 'none';
+  const hint = document.getElementById('qbHint');
+  hint.textContent = !course ? 'Pick AA or AI to start.' : !level ? 'Now pick SL or HL.' : !topic ? 'Choose a topic to see its questions.' : '';
+  hint.style.display = hint.textContent ? '' : 'none';
+  if (course && level) qbRenderTopics();
+  if (!topic) {
+    document.getElementById('qbList').innerHTML = '';
+    document.getElementById('qbMeta').textContent = '';
+  }
+}
+
+function qbLoadQuestions() {
+  qbUpdateSteps();
+  const t = QB_TOPICS[qbState.course].find(x => x.key === qbState.topic);
+  if (!t) return;
+  const list = document.getElementById('qbList');
+  list.innerHTML = '<div class="glass-card qb-empty">Loading questions…</div>';
+  const want = { course: qbState.course, level: qbState.level, topic: qbState.topic };
+  Promise.all(t.files.map(qbFetch)).then(sets => {
+    if (want.course !== qbState.course || want.level !== qbState.level || want.topic !== qbState.topic) return;
+    const key = qbLevelKey();
+    const questions = [].concat(...sets).filter(q => q.level && q.level[key]);
+    qbRenderDiffs(questions);
+    qbRenderList(questions);
+  }).catch(() => {
+    list.innerHTML = '<div class="glass-card qb-empty">Sorry, these questions could not be loaded. Check your connection and try again.</div>';
+  });
+}
+
+function qbRenderList(questions) {
+  const key = qbLevelKey();
+  const slKey = 'SL ' + qbState.course;
+  const t = QB_TOPICS[qbState.course].find(x => x.key === qbState.topic);
+  // Question numbers stay fixed within the topic, whatever the difficulty filter
+  const numbered = questions.map((q, i) => ({ q, n: i + 1 }));
+  qbShown = qbState.diff === 'All' ? numbered : numbered.filter(x => x.q.level[key] === qbState.diff);
+  document.getElementById('qbMeta').textContent =
+    qbShown.length + ' question' + (qbShown.length === 1 ? '' : 's') + ' · ' + qbState.level + ' ' + qbState.course + ' · ' + t.name;
+  const list = document.getElementById('qbList');
+  if (!qbShown.length) {
+    list.innerHTML = '<div class="glass-card qb-empty">No ' + qbState.level + ' questions for this topic yet. More are on the way.</div>';
+    return;
+  }
+  list.innerHTML = qbShown.map((x, i) => {
+    const q = x.q;
+    const diff = q.level[key];
+    const tags =
+      '<span class="qb-tag ' + diff.toLowerCase() + '">' + diff + '</span>' +
+      (q.level[slKey] ? '' : '<span class="qb-tag hl">HL only</span>') +
+      '<span class="qb-tag">' + (q.calculator ? 'Calculator' : 'No calculator') + '</span>' +
+      '<span class="qb-tag">' + q.marks + ' marks</span>';
+    const stem = (q.stem || []).map(s => qbItem(s, 'p')).join('');
+    const parts = (q.parts || []).map(p =>
+      '<div class="qb-part"><span class="qb-part-label">(' + qbEsc(p.label) + ')</span><span>' + qbEsc(p.text) +
+      '</span><span class="qb-part-marks">[' + p.marks + ']</span></div>'
+    ).join('');
+    return '<div class="glass-card qb-q">' +
+      '<div class="qb-q-head"><div><div class="qb-q-num">Question ' + x.n + '</div>' +
+      '<div class="qb-q-sub">' + qbEsc(q.subtopic || '') + '</div></div><div class="qb-tags">' + tags + '</div></div>' +
+      '<div class="qb-body">' + stem + parts + '</div>' +
+      '<button class="qb-ms-btn" onclick="openQbModal(' + i + ')">Markscheme</button>' +
+      '</div>';
+  }).join('');
+  qbTypeset(list);
+}
+
+function openQbModal(i) {
+  const x = qbShown[i];
+  if (!x) return;
+  const q = x.q;
+  document.getElementById('qbModalTitle').textContent = 'Question ' + x.n + ': worked solution';
+  const idea = q.idea ? '<div class="qb-idea"><strong>Key idea.</strong> ' + qbEsc(q.idea) + '</div>' : '';
+  const sol = (q.solution || []).map(s =>
+    '<div class="qb-sol-part">' + (s.label ? '<div class="qb-sol-label">(' + qbEsc(s.label) + ')</div>' : '') +
+    (s.steps || []).map(st => qbItem(st, 'div', 'qb-sol-step')).join('') +
+    (s.answer ? '<div class="qb-answer">' + qbEsc(s.answer) + '</div>' : '') +
+    '</div>'
+  ).join('');
+  const body = document.getElementById('qbModalBody');
+  body.innerHTML = idea + sol;
+  const modal = document.getElementById('qbModal');
+  modal.classList.add('open');
+  modal.scrollTop = 0;
+  document.body.style.overflow = 'hidden';
+  qbTypeset(body);
+}
+
+function closeQbModal() {
+  document.getElementById('qbModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeQbModal(); });
+
+document.querySelectorAll('.qb-course-btn').forEach(b => b.addEventListener('click', () => {
+  if (qbState.course === b.dataset.course) return;
+  qbState.course = b.dataset.course;
+  qbState.topic = null;
+  qbState.diff = 'All';
+  qbSetActive('.qb-course-btn', 'course', qbState.course);
+  qbUpdateSteps();
+}));
+
+document.querySelectorAll('.qb-level-btn').forEach(b => b.addEventListener('click', () => {
+  if (qbState.level === b.dataset.level) return;
+  qbState.level = b.dataset.level;
+  qbState.diff = 'All';
+  qbSetActive('.qb-level-btn', 'level', qbState.level);
+  if (qbState.topic) qbLoadQuestions(); else qbUpdateSteps();
+}));
+</script>
 </body>
 </html>
