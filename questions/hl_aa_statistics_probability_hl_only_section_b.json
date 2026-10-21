@@ -1,0 +1,668 @@
+[
+ {
+  "id": "aa-sp-hl-b-001",
+  "strand": "Statistics and Probability",
+  "subtopic": "Bayes’ theorem",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "A rare bird may be living in a wood. A birdwatcher believes that there is a probability of 0.4 that it is there. She visits the wood once each day.",
+   "If the bird is there, she reports seeing it on any one day with probability 0.25. If the bird is not there, she wrongly reports seeing it on any one day with probability 0.02. Given whether or not the bird is there, her reports on different days are independent."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that she reports seeing the bird on the first day.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "She reports seeing the bird on the first day. Find the probability that the bird is there.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that she does not report seeing the bird on any of the first three days.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "She does not report seeing the bird on any of the first three days. Find the probability that the bird is there.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Given that she does not report seeing the bird on any of the first three days, find the probability that she reports seeing it on the fourth day.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "She gives up when the probability that the bird is there, given that she has not reported seeing it on any day so far, falls below 0.05. Find the number of days without a report after which she gives up.",
+    "marks": 3
+   }
+  ],
+  "idea": "Each report, or each day without one, is evidence: Bayes’ theorem updates the probability that the bird is there. Over \\(n\\) days, “no report” has probability \\(0.75^n\\) if the bird is there and \\(0.98^n\\) if not, so the updated probability falls as \\(n\\) grows.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(0.4 \\times 0.25 + 0.6 \\times 0.02 = 0.1 + 0.012\\)."
+    ],
+    "answer": "\\(0.112\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{0.1}{0.112} = 0.89285\\ldots\\)"
+    ],
+    "answer": "\\(0.893\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(0.4 \\times 0.75^3 + 0.6 \\times 0.98^3 = 0.16875 + 0.56471\\ldots = 0.73346\\ldots\\)"
+    ],
+    "answer": "\\(0.733\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{0.16875}{0.73346\\ldots} = 0.23007\\ldots\\)"
+    ],
+    "answer": "\\(0.230\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Use the updated probability from (d) as the new chance that the bird is there:",
+     "\\(0.23007\\ldots \\times 0.25 + (1 - 0.23007\\ldots) \\times 0.02 = 0.07291\\ldots\\)"
+    ],
+    "answer": "\\(0.0729\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "After \\(n\\) days without a report, \\(P(\\text{there}) = \\dfrac{0.4 \\times 0.75^n}{0.4 \\times 0.75^n + 0.6 \\times 0.98^n}\\).",
+     "\\(n = 9\\): \\(0.05663\\ldots\\) \\(n = 10\\): \\(0.04392\\ldots\\) The probability decreases as \\(n\\) increases, so it first falls below 0.05 after 10 days."
+    ],
+    "answer": "10 days"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-b-002",
+  "strand": "Statistics and Probability",
+  "subtopic": "Variance of discrete random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 16,
+  "stem": [
+   "A bag contains 2 red balls and 3 blue balls. Balls are taken from the bag one at a time, at random and without replacement, until a red ball is taken. Let \\(X\\) be the number of balls taken."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(P(X = 3) = \\dfrac{1}{5}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability distribution of \\(X\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Show that \\(E(X) = 2\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "A second bag contains 2 red balls and \\(n\\) blue balls, where \\(n \\geq 3\\). Balls are taken in the same way until a red ball is taken, and \\(Y\\) is the number of balls taken.",
+    "marks": null
+   },
+   {
+    "label": "e",
+    "text": "Show that \\(P(Y = k) = \\dfrac{2(n + 2 - k)}{(n + 1)(n + 2)}\\) for \\(k = 1, 2, \\ldots, n + 1\\).",
+    "marks": 4
+   },
+   {
+    "label": "f",
+    "text": "Find the least value of \\(n\\) for which \\(P(Y > 3) > \\dfrac{1}{2}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(X = k\\) means the first \\(k - 1\\) balls are blue and the \\(k\\)th is red; multiply the conditional probabilities, which change as balls are removed. In (e) most factors cancel. \\(Y > 3\\) means the first three balls are all blue.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Blue, blue, red: \\(\\dfrac{3}{5} \\times \\dfrac{2}{4} \\times \\dfrac{2}{3} = \\dfrac{12}{60} = \\dfrac{1}{5}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X = 1) = \\dfrac{2}{5}\\), \\(P(X = 2) = \\dfrac{3}{5} \\times \\dfrac{2}{4} = \\dfrac{3}{10}\\), \\(P(X = 4) = \\dfrac{3}{5} \\times \\dfrac{2}{4} \\times \\dfrac{1}{3} \\times 1 = \\dfrac{1}{10}\\).",
+     "Check: \\(\\dfrac{4 + 3 + 2 + 1}{10} = 1\\)."
+    ],
+    "answer": "\\(P(X = 1) = \\dfrac{2}{5}\\), \\(P(X = 2) = \\dfrac{3}{10}\\), \\(P(X = 3) = \\dfrac{1}{5}\\), \\(P(X = 4) = \\dfrac{1}{10}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(X) = \\dfrac{1 \\times 4 + 2 \\times 3 + 3 \\times 2 + 4 \\times 1}{10} = \\dfrac{20}{10} = 2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(E(X^2) = \\dfrac{1 \\times 4 + 4 \\times 3 + 9 \\times 2 + 16 \\times 1}{10} = \\dfrac{50}{10} = 5\\).",
+     "\\(\\mathrm{Var}(X) = 5 - 2^2\\)."
+    ],
+    "answer": "\\(1\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The first \\(k - 1\\) balls are blue, then a red ball:",
+     "\\[\\begin{aligned} P(Y = k) &= \\frac{n}{n + 2} \\times \\frac{n - 1}{n + 1} \\times \\cdots \\\\[4pt] &\\qquad \\times \\frac{n - k + 2}{n - k + 4} \\times \\frac{2}{n - k + 3}. \\end{aligned}\\]",
+     "The numerators of the blue factors are \\(n, n - 1, \\ldots, n - k + 2\\); the denominators are \\(n + 2, n + 1, \\ldots, n - k + 4\\). After cancelling, the blue factors leave \\(\\dfrac{(n - k + 3)(n - k + 2)}{(n + 2)(n + 1)}\\).",
+     "Multiply by \\(\\dfrac{2}{n - k + 3}\\): \\(P(Y = k) = \\dfrac{2(n - k + 2)}{(n + 1)(n + 2)}\\). (Check: \\(k = 1\\) gives \\(\\dfrac{2}{n + 2}\\).)"
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(P(Y > 3) = \\dfrac{n}{n + 2} \\times \\dfrac{n - 1}{n + 1} \\times \\dfrac{n - 2}{n} = \\dfrac{(n - 1)(n - 2)}{(n + 1)(n + 2)}\\).",
+     "\\(\\dfrac{(n - 1)(n - 2)}{(n + 1)(n + 2)} > \\dfrac{1}{2} \\iff 2(n^2 - 3n + 2) > n^2 + 3n + 2 \\iff n^2 - 9n + 2 > 0\\).",
+     "The roots of \\(n^2 - 9n + 2 = 0\\) are \\(\\dfrac{9 \\pm \\sqrt{73}}{2}\\), about \\(0.23\\) and \\(8.77\\). So \\(n > 8.77\\). (Check: \\(n = 8\\) gives \\(\\dfrac{42}{90} < \\dfrac{1}{2}\\); \\(n = 9\\) gives \\(\\dfrac{56}{110} > \\dfrac{1}{2}\\).)"
+    ],
+    "answer": "\\(n = 9\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-b-003",
+  "strand": "Statistics and Probability",
+  "subtopic": "Linear transformations of random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "The length, \\(T\\) minutes, of a phone call made by a customer has probability density function \\(f(t) = \\dfrac{1}{2} - \\dfrac{t}{8}\\) for \\(0 \\leq t \\leq 4\\), and \\(f(t) = 0\\) otherwise.",
+   "On tariff A, a call costs \\(C = 0.3T + 0.2\\) dollars."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(f\\) is a probability density function.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(E(T) = \\dfrac{4}{3}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\mathrm{Var}(T)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the mean and the exact standard deviation of \\(C\\).",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "On tariff B, a call costs \\(D = aT + b\\) dollars, where \\(a > 0\\). Tariff B has the same mean cost as tariff A and half its standard deviation.",
+    "marks": null
+   },
+   {
+    "label": "e",
+    "text": "Find the value of \\(a\\) and the value of \\(b\\).",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find the probability that a call costs more on tariff B than on tariff A.",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(E(aT + b) = aE(T) + b\\) and the standard deviation of \\(aT + b\\) is \\(a\\) times that of \\(T\\). For (f), compare the two costs for the same call: the inequality \\(D > C\\) is a condition on \\(T\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "For \\(0 \\leq t \\leq 4\\), \\(f(t) = \\dfrac{4 - t}{8} \\geq 0\\).",
+     "\\(\\displaystyle\\int_0^4 \\left(\\frac{1}{2} - \\frac{t}{8}\\right) dt = \\left[\\frac{t}{2} - \\frac{t^2}{16}\\right]_0^4 = 2 - 1 = 1\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle E(T) = \\int_0^4 \\left(\\frac{t}{2} - \\frac{t^2}{8}\\right) dt = \\left[\\frac{t^2}{4} - \\frac{t^3}{24}\\right]_0^4 = 4 - \\frac{8}{3} = \\frac{4}{3}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle E(T^2) = \\int_0^4 \\left(\\frac{t^2}{2} - \\frac{t^3}{8}\\right) dt = \\left[\\frac{t^3}{6} - \\frac{t^4}{32}\\right]_0^4 = \\frac{32}{3} - 8 = \\frac{8}{3}\\).",
+     "\\(\\mathrm{Var}(T) = \\dfrac{8}{3} - \\dfrac{16}{9}\\)."
+    ],
+    "answer": "\\(\\dfrac{8}{9}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(E(C) = 0.3 \\times \\dfrac{4}{3} + 0.2 = 0.6\\).",
+     "The standard deviation of \\(T\\) is \\(\\dfrac{2\\sqrt{2}}{3}\\), so that of \\(C\\) is \\(0.3 \\times \\dfrac{2\\sqrt{2}}{3} = 0.2\\sqrt{2}\\)."
+    ],
+    "answer": "Mean $0.60; standard deviation \\(0.2\\sqrt{2} \\approx 0.283\\) dollars"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Standard deviation: \\(a \\times \\dfrac{2\\sqrt{2}}{3} = 0.1\\sqrt{2}\\), so \\(a = 0.15\\).",
+     "Mean: \\(0.15 \\times \\dfrac{4}{3} + b = 0.6\\), so \\(b = 0.4\\)."
+    ],
+    "answer": "\\(a = 0.15\\), \\(b = 0.4\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(D > C \\iff 0.15T + 0.4 > 0.3T + 0.2 \\iff 0.2 > 0.15T \\iff T < \\dfrac{4}{3}\\).",
+     "\\(\\displaystyle P\\left(T < \\frac{4}{3}\\right) = \\left[\\frac{t}{2} - \\frac{t^2}{16}\\right]_0^{4/3} = \\frac{2}{3} - \\frac{1}{9}\\)."
+    ],
+    "answer": "\\(\\dfrac{5}{9}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-b-004",
+  "strand": "Statistics and Probability",
+  "subtopic": "Continuous random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "The lifetime, \\(T\\) years, of the cooling fan in a type of computer has probability density function \\(f(t) = kt\\mathrm{e}^{-t/2}\\) for \\(0 \\leq t \\leq 10\\), and \\(f(t) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "By differentiating, find the mode of \\(T\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the median of \\(T\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find \\(P(T > 4)\\).",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "A fan has lasted 4 years. Find the probability that it lasts at least another 2 years.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "A server contains three of these fans, which fail independently. The server keeps running as long as at least two of its fans work. Find the probability that the server is still running after 4 years.",
+    "marks": 4
+   }
+  ],
+  "idea": "The mode is where \\(f'(t) = 0\\); use the product rule. “Lasts another 2 years, given that it has lasted 4” is \\(P(T > 6 \\mid T > 4)\\). For the server, the number of fans still working after 4 years is binomial.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^{10} t\\mathrm{e}^{-t/2} \\, dt = 3.8382\\ldots\\) (exactly \\(4 - 24\\mathrm{e}^{-5}\\)), so \\(k = \\dfrac{1}{3.8382\\ldots} = 0.26053\\ldots\\)"
+    ],
+    "answer": "\\(k = 0.261\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(f'(t) = k\\left(\\mathrm{e}^{-t/2} - \\dfrac{t}{2}\\mathrm{e}^{-t/2}\\right) = k\\mathrm{e}^{-t/2}\\left(1 - \\dfrac{t}{2}\\right)\\).",
+     "\\(f'(t) = 0\\) at \\(t = 2\\); \\(f' > 0\\) for \\(t < 2\\) and \\(f' < 0\\) for \\(t > 2\\), so \\(f\\) has its maximum at \\(t = 2\\)."
+    ],
+    "answer": "\\(2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(\\displaystyle\\int_0^m kt\\mathrm{e}^{-t/2} \\, dt = 0.5\\) with a calculator: \\(m = 3.2292\\ldots\\)"
+    ],
+    "answer": "\\(3.23\\) years"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\displaystyle\\int_4^{10} kt\\mathrm{e}^{-t/2} \\, dt = 0.38098\\ldots\\)"
+    ],
+    "answer": "\\(0.381\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(P(T > 6 \\mid T > 4) = \\dfrac{P(T > 6)}{P(T > 4)} = \\dfrac{0.16540\\ldots}{0.38098\\ldots} = 0.43416\\ldots\\)"
+    ],
+    "answer": "\\(0.434\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The number of fans still working after 4 years is \\(W \\sim \\mathrm{B}(3,\\ 0.38098\\ldots)\\).",
+     "\\(P(W \\geq 2) = 3 \\times 0.38098\\ldots^2 \\times 0.61901\\ldots + 0.38098\\ldots^3 = 0.32484\\ldots\\)"
+    ],
+    "answer": "\\(0.325\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-b-005",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = a + bx\\) for \\(0 \\leq x \\leq 3\\), and \\(f(x) = 0\\) otherwise, where \\(a\\) and \\(b\\) are constants."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(6a + 9b = 2\\).",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "It is given that \\(E(X) = \\dfrac{7}{4}\\).",
+    "marks": null
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(a\\) and the value of \\(b\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the exact median of \\(X\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find \\(E\\left(\\dfrac{1}{3 + 2X}\\right)\\), and show that it is not equal to \\(\\dfrac{1}{3 + 2E(X)}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The total area and the mean give two linear equations in \\(a\\) and \\(b\\). In (e), \\(E\\left(g(X)\\right) = \\displaystyle\\int g(x) f(x)\\,dx\\); for a function that is not linear, this is not \\(g\\left(E(X)\\right)\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^3 (a + bx) \\, dx = 3a + \\frac{9b}{2} = 1\\). Multiply by 2."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle E(X) = \\int_0^3 (ax + bx^2) \\, dx = \\frac{9a}{2} + 9b = \\frac{7}{4}\\), so \\(18a + 36b = 7\\).",
+     "From (a), \\(18a + 27b = 6\\). Subtract: \\(9b = 1\\), so \\(b = \\dfrac{1}{9}\\), and then \\(6a = 2 - 1 = 1\\)."
+    ],
+    "answer": "\\(a = \\dfrac{1}{6}\\), \\(b = \\dfrac{1}{9}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(f(x) = \\dfrac{3 + 2x}{18}\\). \\(\\displaystyle E(X^2) = \\int_0^3 \\frac{3x^2 + 2x^3}{18} \\, dx = \\frac{1}{18}\\left[x^3 + \\frac{x^4}{2}\\right]_0^3 = \\frac{1}{18}\\left(27 + \\frac{81}{2}\\right) = \\frac{15}{4}\\).",
+     "\\(\\mathrm{Var}(X) = \\dfrac{15}{4} - \\dfrac{49}{16}\\)."
+    ],
+    "answer": "\\(\\dfrac{11}{16}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\displaystyle\\int_0^m \\frac{3 + 2x}{18} \\, dx = \\frac{3m + m^2}{18} = \\frac{1}{2}\\), so \\(m^2 + 3m - 9 = 0\\).",
+     "\\(m = \\dfrac{-3 \\pm \\sqrt{45}}{2}\\); the median lies in \\([0, 3]\\), so take the positive root."
+    ],
+    "answer": "\\(\\dfrac{3\\sqrt{5} - 3}{2} \\approx 1.85\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\displaystyle E\\left(\\frac{1}{3 + 2X}\\right) = \\int_0^3 \\frac{1}{3 + 2x} \\times \\frac{3 + 2x}{18} \\, dx = \\int_0^3 \\frac{1}{18} \\, dx = \\frac{1}{6}\\).",
+     "\\(\\dfrac{1}{3 + 2E(X)} = \\dfrac{1}{3 + \\frac{7}{2}} = \\dfrac{2}{13}\\), and \\(\\dfrac{1}{6} \\neq \\dfrac{2}{13}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{6}\\); not equal to \\(\\dfrac{2}{13}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-b-006",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = \\ln x\\) for \\(1 \\leq x \\leq \\mathrm{e}\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use integration by parts to show that \\(\\displaystyle\\int_1^x \\ln t \\, dt = x\\ln x - x + 1\\), and hence show that \\(f\\) is a probability density function.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write down the mode of \\(X\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Show that \\(E(X) = \\dfrac{\\mathrm{e}^2 + 1}{4}\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find the median of \\(X\\).",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find \\(P\\left(X < E(X)\\right)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Integrate \\(\\ln t\\) as \\(1 \\times \\ln t\\) by parts. For \\(E(X)\\) and \\(E(X^2)\\), integrate \\(x\\ln x\\) and \\(x^2\\ln x\\) by parts, differentiating the logarithm. The integral in (a) is the cumulative distribution, which gives the median and part (f).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int \\ln t \\, dt = t\\ln t - \\int t \\times \\frac{1}{t} \\, dt = t\\ln t - t\\), so \\(\\displaystyle\\int_1^x \\ln t \\, dt = x\\ln x - x + 1\\).",
+     "\\(\\ln x \\geq 0\\) for \\(x \\geq 1\\), and at \\(x = \\mathrm{e}\\) the integral is \\(\\mathrm{e} - \\mathrm{e} + 1 = 1\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\ln x\\) is increasing, so \\(f\\) is greatest at the right end."
+    ],
+    "answer": "\\(\\mathrm{e}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int x\\ln x \\, dx = \\frac{x^2}{2}\\ln x - \\int \\frac{x}{2} \\, dx = \\frac{x^2}{2}\\ln x - \\frac{x^2}{4}\\).",
+     "\\(\\displaystyle E(X) = \\left[\\frac{x^2}{2}\\ln x - \\frac{x^2}{4}\\right]_1^{\\mathrm{e}} = \\frac{\\mathrm{e}^2}{2} - \\frac{\\mathrm{e}^2}{4} + \\frac{1}{4} = \\frac{\\mathrm{e}^2 + 1}{4}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\displaystyle E(X^2) = \\left[\\frac{x^3}{3}\\ln x - \\frac{x^3}{9}\\right]_1^{\\mathrm{e}} = \\frac{2\\mathrm{e}^3 + 1}{9} = 4.5745\\ldots\\)",
+     "\\(\\mathrm{Var}(X) = 4.5745\\ldots - \\left(\\dfrac{\\mathrm{e}^2 + 1}{4}\\right)^2 = 4.5745\\ldots - 4.3985\\ldots = 0.17604\\ldots\\)"
+    ],
+    "answer": "\\(0.176\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Solve \\(m\\ln m - m + 1 = 0.5\\) with a calculator: \\(m = 2.1555\\ldots\\)"
+    ],
+    "answer": "\\(2.16\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(E(X) = 2.0972\\ldots\\), so \\(P\\left(X < E(X)\\right) = 2.0972\\ldots \\times \\ln 2.0972\\ldots - 2.0972\\ldots + 1 = 0.45604\\ldots\\)"
+    ],
+    "answer": "\\(0.456\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-b-007",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability with counting methods",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "A playlist has 12 different songs: 5 by the singer Aria and 7 by other singers. The songs are shuffled, so that all orders are equally likely, and then played in that order."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the probability that the first song is by Aria.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the first three songs are all by Aria.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "Let \\(X\\) be the number of songs by Aria among the first four songs played.",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "Show that \\(P(X = 2) = \\dfrac{14}{33}\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the probability distribution of \\(X\\), and hence find \\(E(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find the probability that the five songs by Aria are played one after another.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find the probability that no two songs by Aria are played one after another.",
+    "marks": 3
+   }
+  ],
+  "idea": "The first four songs are equally likely to be any 4 of the 12, so \\(X\\) can be counted with combinations. For (e), treat Aria’s songs as one block. For (f), place the other 7 songs first: they make 8 gaps, and Aria’s songs go in 5 different gaps.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Each of the 12 songs is equally likely to be first."
+    ],
+    "answer": "\\(\\dfrac{5}{12}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{5}{12} \\times \\dfrac{4}{11} \\times \\dfrac{3}{10} = \\dfrac{60}{1320}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{22}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(X = 2) = \\dfrac{\\binom{5}{2}\\binom{7}{2}}{\\binom{12}{4}} = \\dfrac{10 \\times 21}{495} = \\dfrac{210}{495} = \\dfrac{14}{33}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "In the same way, with denominator 495: \\(P(X = 0) = \\dfrac{35}{495}\\), \\(P(X = 1) = \\dfrac{5 \\times 35}{495} = \\dfrac{175}{495}\\), \\(P(X = 3) = \\dfrac{10 \\times 7}{495} = \\dfrac{70}{495}\\), \\(P(X = 4) = \\dfrac{5}{495}\\).",
+     "\\(E(X) = \\dfrac{0 + 175 + 2 \\times 210 + 3 \\times 70 + 4 \\times 5}{495} = \\dfrac{825}{495}\\)."
+    ],
+    "answer": "\\(P(X = 0) = \\dfrac{7}{99}\\), \\(P(X = 1) = \\dfrac{35}{99}\\), \\(P(X = 2) = \\dfrac{14}{33}\\), \\(P(X = 3) = \\dfrac{14}{99}\\), \\(P(X = 4) = \\dfrac{1}{99}\\); \\(E(X) = \\dfrac{5}{3}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The block and the 7 other songs: \\(8!\\) orders; Aria’s songs within the block: \\(5!\\) orders.",
+     "\\(\\dfrac{8! \\times 5!}{12!} = \\dfrac{5!}{12 \\times 11 \\times 10 \\times 9} = \\dfrac{120}{11\\,880}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{99}\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Order the other 7 songs: \\(7!\\) ways. Choose 5 of the 8 gaps: \\(\\dbinom{8}{5} = 56\\). Put Aria’s songs in them in order: \\(5!\\).",
+     "\\(\\dfrac{7! \\times 56 \\times 5!}{12!} = \\dfrac{56 \\times 120}{12 \\times 11 \\times 10 \\times 9 \\times 8} = \\dfrac{6720}{95\\,040}\\)."
+    ],
+    "answer": "\\(\\dfrac{7}{99}\\)"
+   }
+  ]
+ }
+]

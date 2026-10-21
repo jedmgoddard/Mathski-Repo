@@ -1,0 +1,644 @@
+[
+ {
+  "id": "aa-sp-b-001",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "Two groups of students sat the same test. Group A has 12 students, with mean mark 64 and standard deviation 8. Group B has 18 students, with mean mark 70 and standard deviation 5. Standard deviations here are calculated using \\(\\sigma^2 = \\dfrac{\\sum x^2}{n} - \\bar{x}^2\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the mean mark of all 30 students.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "By first finding \\(\\sum x^2\\) for each group, find the standard deviation of the marks of all 30 students.",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "The teacher scales the marks of group A using \\(y = 1.2x - 5\\), where \\(x\\) is the original mark. Write down the mean and the standard deviation of the scaled marks of group A.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "For group B, the lower quartile is 66 and the upper quartile is 74. Determine whether a mark of 52 in group B is an outlier, using the 1.5 × IQR rule.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "A student who missed the test sits it later and joins group B. The mean of group B becomes 69.5. Find this student’s mark, and state whether the standard deviation of group B increases or decreases. Justify your answer.",
+    "marks": 3
+   }
+  ],
+  "idea": "Combine groups through their totals: \\(\\sum x = n\\bar{x}\\) and \\(\\sum x^2 = n\\left(\\sigma^2 + \\bar{x}^2\\right)\\). A linear scaling \\(y = ax + b\\) multiplies the mean by \\(a\\) and adds \\(b\\), but only multiplies the standard deviation by \\(|a|\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Totals: \\(12 \\times 64 = 768\\) and \\(18 \\times 70 = 1260\\). Combined: \\(\\dfrac{768 + 1260}{30} = \\dfrac{2028}{30}\\)."
+    ],
+    "answer": "\\(67.6\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\sum x^2 = n\\left(\\sigma^2 + \\bar{x}^2\\right)\\). Group A: \\(12(64 + 4096) = 49\\,920\\). Group B: \\(18(25 + 4900) = 88\\,650\\).",
+     "All 30: \\(\\sum x^2 = 138\\,570\\), so \\(\\sigma^2 = \\dfrac{138\\,570}{30} - 67.6^2 = 4619 - 4569.76 = 49.24\\).",
+     "\\(\\sigma = \\sqrt{49.24} = 7.017\\ldots\\)"
+    ],
+    "answer": "\\(7.02\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Mean: \\(1.2 \\times 64 - 5 = 71.8\\). Standard deviation: \\(1.2 \\times 8 = 9.6\\) (subtracting 5 does not change the spread)."
+    ],
+    "answer": "Mean \\(71.8\\), standard deviation \\(9.6\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "IQR \\(= 74 - 66 = 8\\). Lower fence: \\(66 - 1.5 \\times 8 = 54\\).",
+     "\\(52 < 54\\), so the mark is below the lower fence."
+    ],
+    "answer": "Yes, 52 is an outlier"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "New total: \\(19 \\times 69.5 = 1320.5\\). The mark is \\(1320.5 - 1260 = 60.5\\).",
+     "The new mark is 9.5 below the old mean, nearly two standard deviations away, much further than a typical mark, so it widens the spread.",
+     "Check: the new \\(\\sum x^2 = 88\\,650 + 60.5^2 = 92\\,310.25\\), so \\(\\sigma^2 = \\dfrac{92\\,310.25}{19} - 69.5^2 = 28.1\\ldots\\), which is more than \\(5^2 = 25\\)."
+    ],
+    "answer": "\\(60.5\\); the standard deviation increases"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-b-002",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "The table shows the distance from the city centre, \\(x\\) km, and the monthly rent, \\(y\\) dollars, of ten one-bedroom flats.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline x\\ (\\text{km}) & y\\ (\\$) \\\\ \\hline 1.5 & 1820 \\\\ \\hline 2.5 & 1750 \\\\ \\hline 3 & 1690 \\\\ \\hline 4.5 & 1610 \\\\ \\hline 5 & 1640 \\\\ \\hline 6.5 & 1480 \\\\ \\hline 8 & 1420 \\\\ \\hline 9.5 & 1330 \\\\ \\hline 11 & 1290 \\\\ \\hline 12.5 & 1200 \\\\ \\hline\\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of Pearson’s product-moment correlation coefficient, \\(r\\), and describe the correlation.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the equation of the regression line of \\(y\\) on \\(x\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Interpret the gradient of the line in this context.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Use your line to estimate the rent of a one-bedroom flat 5.5 km from the centre.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Explain why the line should not be used to estimate the rent of a flat 30 km from the centre.",
+    "marks": 1
+   },
+   {
+    "label": "f",
+    "text": "The rents are converted to euros, using 1 dollar = 0.92 euros. Write down the new value of \\(r\\), and find the equation of the regression line of rent in euros on distance.",
+    "marks": 3
+   },
+   {
+    "label": "g",
+    "text": "Instead, the distances are converted to miles, using 1 mile = 1.6 km, and the rents stay in dollars. Find the gradient of the new regression line of \\(y\\) on distance in miles.",
+    "marks": 2
+   }
+  ],
+  "idea": "Changing units multiplies every \\(x\\) or every \\(y\\) by a positive constant. That does not change the shape of the scatter, so \\(r\\) is unchanged; the line changes in the same way as the data.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "With a GDC: \\(r = -0.9925\\ldots\\)"
+    ],
+    "answer": "\\(r = -0.993\\): a strong negative linear correlation"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "With a GDC: gradient \\(-55.53\\ldots\\), intercept \\(1878.4\\ldots\\)"
+    ],
+    "answer": "\\(y = -55.5x + 1878\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The gradient is the change in \\(y\\) for each increase of 1 in \\(x\\)."
+    ],
+    "answer": "Each extra km from the centre lowers the rent by about \\$55.50 a month"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(y = -55.53\\ldots \\times 5.5 + 1878.4\\ldots = 1572.9\\ldots\\). The value 5.5 km is inside the data range, so this is interpolation."
+    ],
+    "answer": "About \\$1570"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "30 km is far outside the data (1.5 km to 12.5 km). The line would give \\(-55.5 \\times 30 + 1878 = 213\\) dollars, and there is no evidence that the linear pattern continues so far."
+    ],
+    "answer": "It is extrapolation, far outside the data range"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Multiplying every \\(y\\) by 0.92 changes the scale on one axis only, so the points keep the same pattern and \\(r\\) is unchanged.",
+     "Every point is scaled the same way, so the least-squares line is scaled too: \\(0.92 \\times (-55.53\\ldots) = -51.08\\ldots\\) and \\(0.92 \\times 1878.4\\ldots = 1728.1\\ldots\\). (A GDC on the converted data gives the same.)"
+    ],
+    "answer": "\\(r = -0.993\\); \\(y_{\\text{€}} = -51.1x + 1728\\)"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "A distance of \\(m\\) miles is \\(1.6m\\) km. So \\(y = -55.53\\ldots \\times 1.6m + 1878.4\\ldots\\), and the gradient is \\(-55.53\\ldots \\times 1.6 = -88.85\\ldots\\)"
+    ],
+    "answer": "\\(-88.9\\) dollars per mile"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-b-003",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "Ana and Bea play a table-tennis match. The first player to win two games wins the match, so the match lasts two or three games. Ana wins each game with probability 0.6, independently of other games."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the probability that Ana wins the match is 0.648.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the expected number of games in the match.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Given that Ana wins the match, find the probability that the match lasted three games.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Now let Ana win each game with probability \\(p\\), where \\(0 < p < 1\\). Show that the probability that she wins the match is \\(p^2(3 - 2p)\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the set of values of \\(p\\) for which Ana is more likely to win the match than to win a single game.",
+    "marks": 4
+   }
+  ],
+  "idea": "List the ways the match can go: AA, ABA, BAA (Ana wins) and BB, ABB, BAB (Bea wins). Each way is a product of game probabilities. For part (e) compare \\(p^2(3 - 2p)\\) with \\(p\\) and factorise.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 560 268\" width=\"560\" height=\"268\" role=\"img\" aria-label=\"Tree diagram for a best-of-three match. Game 1: A wins with probability 0.6, B with 0.4. After A wins game 1, game 2: A wins (A wins the match) with 0.6, or B wins with 0.4, and then game 3 decides: A with 0.6, B with 0.4. After B wins game 1, game 2: A wins with 0.6, and then game 3 decides, or B wins (B wins the match) with 0.4.\"><line x1=\"334\" y1=\"90.0\" x2=\"424\" y2=\"68.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"383.5\" y=\"69.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.6</text><text x=\"430.0\" y=\"73.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A wins</text><line x1=\"334\" y1=\"90.0\" x2=\"424\" y2=\"112.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"383.5\" y=\"121.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.4</text><text x=\"430.0\" y=\"117.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B wins</text><line x1=\"174\" y1=\"57.0\" x2=\"264\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"223.5\" y=\"30.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.6</text><text x=\"270.0\" y=\"29.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A wins</text><line x1=\"174\" y1=\"57.0\" x2=\"264\" y2=\"90.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"223.5\" y=\"94.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.4</text><text x=\"270.0\" y=\"95.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><line x1=\"334\" y1=\"178.0\" x2=\"424\" y2=\"156.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"383.5\" y=\"157.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.6</text><text x=\"430.0\" y=\"161.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A wins</text><line x1=\"334\" y1=\"178.0\" x2=\"424\" y2=\"200.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"383.5\" y=\"209.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.4</text><text x=\"430.0\" y=\"205.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B wins</text><line x1=\"174\" y1=\"211.0\" x2=\"264\" y2=\"178.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"223.5\" y=\"184.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.6</text><text x=\"270.0\" y=\"183.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><line x1=\"174\" y1=\"211.0\" x2=\"264\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"223.5\" y=\"248.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.4</text><text x=\"270.0\" y=\"249.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B wins</text><line x1=\"14\" y1=\"134.0\" x2=\"104\" y2=\"57.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"63.5\" y=\"83.7\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.6</text><text x=\"110.0\" y=\"62.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><line x1=\"14\" y1=\"134.0\" x2=\"104\" y2=\"211.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"63.5\" y=\"195.3\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.4</text><text x=\"110.0\" y=\"216.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text></svg>"
+     },
+     "Ana wins by AA, ABA or BAA: \\(0.6^2 + 0.6 \\times 0.4 \\times 0.6 + 0.4 \\times 0.6 \\times 0.6 = 0.36 + 0.144 + 0.144 = 0.648\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Two games when the same player wins the first two: \\(0.6^2 + 0.4^2 = 0.52\\). Otherwise three games: \\(1 - 0.52 = 0.48\\).",
+     "\\(E = 2 \\times 0.52 + 3 \\times 0.48 = 1.04 + 1.44 = 2.48\\)."
+    ],
+    "answer": "\\(2.48\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(\\text{three games and Ana wins}) = 0.144 + 0.144 = 0.288\\).",
+     "\\(P(\\text{three games} \\mid \\text{Ana wins}) = \\dfrac{0.288}{0.648} = \\dfrac{288}{648} = \\dfrac{4}{9}\\)."
+    ],
+    "answer": "\\(\\dfrac{4}{9}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P = p^2 + p(1 - p)p + (1 - p)p \\cdot p = p^2 + 2p^2(1 - p) = p^2(1 + 2 - 2p) = p^2(3 - 2p)\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "We need \\(p^2(3 - 2p) > p\\). Divide by \\(p > 0\\): \\(p(3 - 2p) > 1\\), that is \\(2p^2 - 3p + 1 < 0\\).",
+     "\\((2p - 1)(p - 1) < 0\\), which holds between the roots: \\(\\frac{1}{2} < p < 1\\).",
+     "So a best-of-three match helps the stronger player. Check with \\(p = 0.6\\): \\(0.648 > 0.6\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{2} < p < 1\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-b-004",
+  "strand": "Statistics and Probability",
+  "subtopic": "Discrete random variables",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "In a game, a player rolls two fair six-sided dice. The score \\(M\\) is the larger of the two numbers shown (if both show the same number, \\(M\\) is that number)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(P(M = 3) = \\dfrac{5}{36}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(P(M = m) = \\dfrac{2m - 1}{36}\\), for \\(m = 1, 2, \\ldots, 6\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(M)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The player pays \\(\\$k\\) to play and receives \\(\\$M\\). Find the value of \\(k\\) that makes the game fair.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "A player plays repeatedly until \\(M \\ge 5\\) for the first time. Find the probability that this happens on the third game.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "The organiser changes the rules. The player now pays \\$6 and receives \\(\\$2M\\) if the dice show the same number, and \\(\\$M\\) otherwise. Find the organiser’s expected profit per game.",
+    "marks": 4
+   }
+  ],
+  "idea": "\\(M \\le m\\) exactly when both dice show at most \\(m\\), so \\(P(M \\le m) = \\left(\\frac{m}{6}\\right)^2\\), and \\(P(M = m) = P(M \\le m) - P(M \\le m - 1)\\). Expected winnings are a sum of value times probability over every outcome.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The 36 equally likely outcomes with larger number 3 are (1, 3), (2, 3), (3, 3), (3, 2), (3, 1): five outcomes."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(M \\le m) = \\dfrac{m^2}{36}\\), so \\(P(M = m) = \\dfrac{m^2 - (m - 1)^2}{36} = \\dfrac{2m - 1}{36}\\).",
+     "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|c|c|}\\hline m & 1 & 2 & 3 & 4 & 5 & 6 \\\\ \\hline P(M = m) & \\frac{1}{36} & \\frac{3}{36} & \\frac{5}{36} & \\frac{7}{36} & \\frac{9}{36} & \\frac{11}{36} \\\\ \\hline\\end{array}\\]"
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(M) = \\dfrac{1 \\times 1 + 2 \\times 3 + 3 \\times 5 + 4 \\times 7 + 5 \\times 9 + 6 \\times 11}{36} = \\dfrac{1 + 6 + 15 + 28 + 45 + 66}{36} = \\dfrac{161}{36}\\)."
+    ],
+    "answer": "\\(\\dfrac{161}{36} \\approx 4.47\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Fair means the expected gain is zero: \\(k = E(M)\\)."
+    ],
+    "answer": "\\(k = \\dfrac{161}{36} \\approx 4.47\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(P(M \\ge 5) = \\dfrac{9 + 11}{36} = \\dfrac{5}{9}\\), so \\(P(M \\le 4) = \\dfrac{4}{9}\\).",
+     "Fail, fail, then succeed: \\(\\left(\\dfrac{4}{9}\\right)^2 \\times \\dfrac{5}{9} = \\dfrac{80}{729}\\)."
+    ],
+    "answer": "\\(\\dfrac{80}{729}\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The payout is \\(M\\), plus an extra \\(M\\) when the dice match. A double \\(m\\) has probability \\(\\frac{1}{36}\\) for each \\(m\\).",
+     "Expected extra: \\(\\dfrac{1 + 2 + 3 + 4 + 5 + 6}{36} = \\dfrac{21}{36}\\). Expected payout: \\(\\dfrac{161}{36} + \\dfrac{21}{36} = \\dfrac{182}{36} = \\dfrac{91}{18}\\).",
+     "Expected profit: \\(6 - \\dfrac{91}{18} = \\dfrac{17}{18}\\) dollars, about 94 cents per game."
+    ],
+    "answer": "\\(\\$\\dfrac{17}{18} \\approx \\$0.94\\) per game"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-b-005",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "In a large lake, 15% of the fish carry a tag. An angler catches fish one at a time; each fish caught is tagged with probability 0.15, independently. On one day she catches 12 fish. Let \\(X\\) be the number of tagged fish she catches."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(P(X = 2)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that she catches more than two tagged fish.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Given that she catches at least one tagged fish, find the probability that she catches exactly one.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find the least number of fish she must catch for the probability of catching at least one tagged fish to be greater than 0.95.",
+    "marks": 4
+   },
+   {
+    "label": "f",
+    "text": "On a second day she again catches 12 fish. Find the probability that she catches at least 5 tagged fish in the two days altogether.",
+    "marks": 3
+   }
+  ],
+  "idea": "With a fixed number of independent catches and a constant probability, the number of tagged fish is binomial. “At least one” is best found as 1 minus “none”. Over two days, the 24 catches together are still binomial.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(X \\sim \\mathrm{B}(12, 0.15)\\). \\(P(X = 2) = \\binom{12}{2}(0.15)^2(0.85)^{10} = 0.2923\\ldots\\)"
+    ],
+    "answer": "\\(0.292\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X > 2) = 1 - P(X \\le 2) = 0.2641\\ldots\\)"
+    ],
+    "answer": "\\(0.264\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(X) = np = 12 \\times 0.15\\)."
+    ],
+    "answer": "\\(1.8\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P(X = 1 \\mid X \\ge 1) = \\dfrac{P(X = 1)}{1 - P(X = 0)} = \\dfrac{0.3012\\ldots}{1 - 0.1422\\ldots} = 0.3511\\ldots\\)"
+    ],
+    "answer": "\\(0.351\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "With \\(n\\) fish, \\(P(\\text{at least one}) = 1 - 0.85^n\\). We need \\(1 - 0.85^n > 0.95\\), so \\(0.85^n < 0.05\\).",
+     "\\(n > \\dfrac{\\ln 0.05}{\\ln 0.85} = 18.43\\ldots\\) (the inequality turns round because \\(\\ln 0.85 < 0\\)).",
+     "Check: \\(1 - 0.85^{18} = 0.9463\\ldots\\) and \\(1 - 0.85^{19} = 0.9544\\ldots\\)"
+    ],
+    "answer": "19 fish"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The total over the two days is the number of tagged fish in 24 independent catches: \\(T \\sim \\mathrm{B}(24, 0.15)\\).",
+     "\\(P(T \\ge 5) = 1 - P(T \\le 4) = 0.2866\\ldots\\)"
+    ],
+    "answer": "\\(0.287\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-b-006",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "The times, \\(T\\) minutes, taken by riders to complete a cycling time trial are normally distributed with mean 62 minutes and standard deviation 4.5 minutes."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that a randomly chosen rider takes less than 55 minutes.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "The fastest 5% of riders receive a medal. Find the longest time that earns a medal.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Given that a rider takes less than 60 minutes, find the probability that the rider takes less than 55 minutes.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Ten riders from a club take part. Find the probability that at least two of them take less than 55 minutes.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "The next year the course is changed. The standard deviation stays at 4.5 minutes, but 20% of riders now take less than 55 minutes. Find the new mean time.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "Find the probability that a rider on the new course takes more than 63 minutes.",
+    "marks": 2
+   }
+  ],
+  "idea": "Standardise with \\(z = \\dfrac{t - \\mu}{\\sigma}\\) and use the inverse normal to go from a probability back to a time. A conditional probability is a ratio of two normal probabilities. The number of fast riders among ten is binomial, with \\(p\\) from part (a).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(T \\sim \\mathrm{N}(62, 4.5^2)\\). \\(P(T < 55) = 0.05990\\ldots\\)"
+    ],
+    "answer": "\\(0.0599\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "We need \\(t\\) with \\(P(T < t) = 0.05\\). Inverse normal: \\(t = 54.59\\ldots\\)"
+    ],
+    "answer": "\\(54.6\\) minutes"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Taking less than 55 minutes already means less than 60, so \\(P(T < 55 \\mid T < 60) = \\dfrac{P(T < 55)}{P(T < 60)} = \\dfrac{0.05990\\ldots}{0.3283\\ldots} = 0.1824\\ldots\\)"
+    ],
+    "answer": "\\(0.182\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Let \\(Y\\) be the number of the ten who take less than 55 minutes: \\(Y \\sim \\mathrm{B}(10, 0.05990\\ldots)\\), assuming the riders’ times are independent.",
+     "\\(P(Y \\ge 2) = 1 - P(Y \\le 1) = 0.1172\\ldots\\) (using \\(p = 0.0599\\) gives the same 3 s.f. answer)."
+    ],
+    "answer": "\\(0.117\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(P(T < 55) = 0.2\\), so \\(\\dfrac{55 - \\mu}{4.5} = z\\), where \\(P(Z < z) = 0.2\\): \\(z = -0.8416\\ldots\\)",
+     "\\(\\mu = 55 + 0.8416\\ldots \\times 4.5 = 58.78\\ldots\\)"
+    ],
+    "answer": "\\(58.8\\) minutes"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(T \\sim \\mathrm{N}(58.78\\ldots, 4.5^2)\\). \\(P(T > 63) = 0.1745\\ldots\\) (with \\(\\mu = 58.8\\) the answer is still \\(0.175\\) to 3 s.f.)."
+    ],
+    "answer": "\\(0.175\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-b-007",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "Events \\(A\\) and \\(B\\) are independent, with \\(P(A) = 2P(B)\\) and \\(P(A \\cup B) = 0.72\\). Let \\(P(B) = p\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(P(A)\\) and \\(P(B)\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(A \\cap B')\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(P(A \\mid A \\cup B)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Show that \\(A'\\) and \\(B'\\) are independent.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "The experiment is carried out twice, independently. Given that \\(A \\cup B\\) occurs in at least one of the two experiments, find the probability that it occurs in exactly one of them.",
+    "marks": 4
+   }
+  ],
+  "idea": "For independent events \\(P(A \\cap B) = P(A)P(B)\\), so the addition rule gives an equation in \\(p\\). Reject any solution that does not make every probability lie between 0 and 1. In the last part, “exactly one” is contained in “at least one”, so the conditional probability is a ratio.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(A \\cup B) = P(A) + P(B) - P(A)P(B) = 2p + p - 2p^2\\), so \\(3p - 2p^2 = 0.72\\), that is \\(2p^2 - 3p + 0.72 = 0\\).",
+     "\\(p = \\dfrac{3 \\pm \\sqrt{9 - 5.76}}{4} = \\dfrac{3 \\pm 1.8}{4}\\), so \\(p = 0.3\\) or \\(p = 1.2\\).",
+     "\\(p = 1.2\\) is not a probability, and would also give \\(P(A) = 2.4\\). So \\(p = 0.3\\)."
+    ],
+    "answer": "\\(P(A) = 0.6\\), \\(P(B) = 0.3\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(A\\) and \\(B'\\) are also independent (or: \\(P(A) - P(A \\cap B) = 0.6 - 0.18\\)). \\(0.6 \\times 0.7 = 0.42\\)."
+    ],
+    "answer": "\\(0.42\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(A\\) is contained in \\(A \\cup B\\), so \\(A \\cap (A \\cup B) = A\\).",
+     "\\(P(A \\mid A \\cup B) = \\dfrac{P(A)}{P(A \\cup B)} = \\dfrac{0.6}{0.72} = \\dfrac{5}{6}\\)."
+    ],
+    "answer": "\\(\\dfrac{5}{6}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P(A' \\cap B') = 1 - P(A \\cup B) = 0.28\\).",
+     "\\(P(A')P(B') = 0.4 \\times 0.7 = 0.28\\). These are equal, so \\(A'\\) and \\(B'\\) are independent."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "In each experiment \\(P(A \\cup B) = 0.72\\) and \\(P\\left((A \\cup B)'\\right) = 0.28\\).",
+     "Exactly once: \\(2 \\times 0.72 \\times 0.28 = 0.4032\\). At least once: \\(1 - 0.28^2 = 0.9216\\).",
+     "“Exactly once” is part of “at least once”, so the probability is \\(\\dfrac{0.4032}{0.9216} = \\dfrac{4032}{9216} = \\dfrac{7}{16}\\)."
+    ],
+    "answer": "\\(\\dfrac{7}{16}\\)"
+   }
+  ]
+ }
+]

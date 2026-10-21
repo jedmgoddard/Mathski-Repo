@@ -1,0 +1,584 @@
+[
+ {
+  "id": "aa-na-hl-b-001",
+  "strand": "Number and Algebra",
+  "subtopic": "Counting principles",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 16,
+  "stem": [
+   "The diagram shows a grid of streets. A delivery rider travels from A to B along the streets, moving only right or up at each junction, so that every route is as short as possible.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 260\" width=\"360\" height=\"260\" role=\"img\" aria-label=\"A rectangular grid of streets, 6 blocks wide and 4 blocks high. A is the bottom-left corner and B is the top-right corner. The junction P is 2 blocks right and 1 block up from A. The junction Q is 4 blocks right and 3 blocks up from A.\"><path d=\"M40.0 215.0 L40.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M86.0 215.0 L86.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M132.0 215.0 L132.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M178.0 215.0 L178.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M224.0 215.0 L224.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M270.0 215.0 L270.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M316.0 215.0 L316.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M40.0 215.0 L316.0 215.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M40.0 169.0 L316.0 169.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M40.0 123.0 L316.0 123.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M40.0 77.0 L316.0 77.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M40.0 31.0 L316.0 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"40.0\" cy=\"215.0\" r=\"4.5\" fill=\"#111\"/><text x=\"28.0\" y=\"231.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#111\">A</text><circle cx=\"316.0\" cy=\"31.0\" r=\"4.5\" fill=\"#111\"/><text x=\"328.0\" y=\"25.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#111\">B</text><circle cx=\"132.0\" cy=\"169.0\" r=\"4.5\" fill=\"#1f5fd6\"/><text x=\"142.0\" y=\"161.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#1f5fd6\">P</text><circle cx=\"224.0\" cy=\"77.0\" r=\"4.5\" fill=\"#1f5fd6\"/><text x=\"234.0\" y=\"69.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#1f5fd6\">Q</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that there are 210 different routes from A to B.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the number of routes that pass through P.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the number of routes that pass through both P and Q.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the number of routes that pass through P or Q (or both).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "A route is chosen at random. Find the probability that it passes through neither P nor Q.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Road works now close the street from P to the junction immediately to the right of P. Find the number of routes from A to B that are still possible, and the number of these that pass through Q.",
+    "marks": 3
+   }
+  ],
+  "idea": "Every shortest route is a list of moves, some R (right) and some U (up); choosing which places hold the U moves fixes the route. A route through P is a route to P followed by a route from P, so the counts multiply. For “P or Q”, add and subtract the overlap.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Every route has 6 moves right and 4 moves up, 10 moves in all, in some order. Choose which 4 of the 10 moves are up: \\(\\binom{10}{4} = 210\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "A to P: 2 right and 1 up, \\(\\binom{3}{1} = 3\\) ways. P to B: 4 right and 3 up, \\(\\binom{7}{3} = 35\\) ways.",
+     "\\(3 \\times 35 = 105\\)."
+    ],
+    "answer": "105"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "A to P: 3 ways. P to Q: 2 right and 2 up, \\(\\binom{4}{2} = 6\\) ways. Q to B: 2 right and 1 up, 3 ways.",
+     "\\(3 \\times 6 \\times 3 = 54\\)."
+    ],
+    "answer": "54"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Through Q: A to Q is 4 right and 3 up, 35 ways; Q to B is 3 ways; so 105 routes.",
+     "\\(n(P \\cup Q) = n(P) + n(Q) - n(P \\cap Q) = 105 + 105 - 54 = 156\\)."
+    ],
+    "answer": "156"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Routes through neither: \\(210 - 156 = 54\\). Every route is equally likely, so the probability is \\(\\dfrac{54}{210} = \\dfrac{9}{35}\\)."
+    ],
+    "answer": "\\(\\dfrac{9}{35}\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Let R be the junction immediately to the right of P, 3 right and 1 up from A. Routes using the closed street go A to P (3 ways), then P to R, then R to B (3 right and 3 up, \\(\\binom{6}{3} = 20\\) ways): \\(3 \\times 20 = 60\\). Routes still possible: \\(210 - 60 = 150\\).",
+     "Routes through Q that use the closed street: A to P (3), P to R, R to Q (1 right and 2 up, 3 ways), Q to B (3): \\(3 \\times 3 \\times 3 = 27\\). So \\(105 - 27 = 78\\) possible routes pass through Q."
+    ],
+    "answer": "150 routes; 78 of them pass through Q"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-hl-b-002",
+  "strand": "Number and Algebra",
+  "subtopic": "Extended binomial theorem and partial fractions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "Let \\(f(x) = \\dfrac{1 + 2x}{(1 - x)^2}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the expansion of \\((1 - x)^{-2}\\) in ascending powers of \\(x\\) up to the term in \\(x^3\\), and write down the coefficient of \\(x^n\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence show that the coefficient of \\(x^n\\) in the expansion of \\(f(x)\\) is \\(3n + 1\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "State the values of \\(x\\) for which the expansion of \\(f(x)\\) is valid.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Express \\(f(x)\\) in the form \\(\\dfrac{A}{1 - x} + \\dfrac{B}{(1 - x)^2}\\), and use this form to confirm the result in part (b).",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Hence find the exact value of \\(\\displaystyle\\sum_{n=0}^{\\infty} \\frac{3n + 1}{2^n}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The extended binomial theorem gives \\((1 - x)^{-2} = 1 + 2x + 3x^2 + \\cdots\\), valid for \\(|x| < 1\\). Multiplying by \\(1 + 2x\\) mixes neighbouring coefficients. A series whose terms match the expansion can be summed by substituting the right value of \\(x\\) into \\(f\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\((1 - x)^{-2} = 1 + (-2)(-x) + \\dfrac{(-2)(-3)}{2!}(-x)^2 + \\dfrac{(-2)(-3)(-4)}{3!}(-x)^3 + \\cdots = 1 + 2x + 3x^2 + 4x^3 + \\cdots\\)"
+    ],
+    "answer": "\\(1 + 2x + 3x^2 + 4x^3\\); coefficient of \\(x^n\\) is \\(n + 1\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(f(x) = (1 + 2x)\\left(1 + 2x + 3x^2 + \\cdots + (n + 1)x^n + \\cdots\\right)\\).",
+     "The term in \\(x^n\\) comes from \\(1 \\times (n + 1)x^n\\) and \\(2x \\times nx^{n-1}\\): coefficient \\((n + 1) + 2n = 3n + 1\\). (For \\(n = 0\\) it is 1, which also fits.)"
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The expansion of \\((1 - x)^{-2}\\) is valid for \\(|x| < 1\\)."
+    ],
+    "answer": "\\(-1 < x < 1\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(1 + 2x = A(1 - x) + B\\). \\(x = 1\\): \\(B = 3\\). Compare the \\(x\\) terms: \\(-A = 2\\), so \\(A = -2\\).",
+     "\\(f(x) = -\\dfrac{2}{1 - x} + \\dfrac{3}{(1 - x)^2}\\). Coefficient of \\(x^n\\): \\(-2 \\times 1 + 3(n + 1) = 3n + 1\\), as in part (b)."
+    ],
+    "answer": "\\(f(x) = -\\dfrac{2}{1 - x} + \\dfrac{3}{(1 - x)^2}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\displaystyle\\sum_{n=0}^{\\infty} (3n + 1)x^n = f(x)\\) for \\(|x| < 1\\). Take \\(x = \\frac{1}{2}\\), which is in this interval:",
+     "\\(f\\left(\\frac{1}{2}\\right) = \\dfrac{1 + 1}{\\left(\\frac{1}{2}\\right)^2} = 8\\)."
+    ],
+    "answer": "\\(8\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-hl-b-003",
+  "strand": "Number and Algebra",
+  "subtopic": "Complex numbers",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "Let \\(P(z) = z^4 - 4z^3 + 14z^2 - 4z + 13\\), where \\(z \\in \\mathbb{C}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "The equation \\(P(z) = 0\\) has a root \\(z = bi\\), where \\(b \\in \\mathbb{R}\\). By considering real and imaginary parts, find the possible values of \\(b\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Hence write \\(P(z)\\) as the product of two quadratic factors with real coefficients.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find all four roots of \\(P(z) = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "The four roots are shown on an Argand diagram. Find the area of the quadrilateral that has the four roots as its vertices.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Show that the four roots lie on a circle, and find its centre and radius.",
+    "marks": 3
+   }
+  ],
+  "idea": "Substitute \\(z = bi\\) and set both the real and the imaginary part to zero; \\(b\\) must satisfy both. Non-real roots of a polynomial with real coefficients come in conjugate pairs, and each pair gives a real quadratic factor.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\((bi)^2 = -b^2\\), \\((bi)^3 = -b^3i\\), \\((bi)^4 = b^4\\). So \\(P(bi) = b^4 + 4b^3i - 14b^2 - 4bi + 13\\).",
+     "Real part: \\(b^4 - 14b^2 + 13 = (b^2 - 1)(b^2 - 13) = 0\\). Imaginary part: \\(4b^3 - 4b = 4b(b^2 - 1) = 0\\).",
+     "Both hold only when \\(b^2 = 1\\)."
+    ],
+    "answer": "\\(b = 1\\) or \\(b = -1\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(i\\) and \\(-i\\) are roots, so \\(z^2 + 1\\) is a factor.",
+     "\\(P(z) = \\left(z^2 + 1\\right)\\left(z^2 + pz + q\\right)\\). Compare: \\(z^3\\): \\(p = -4\\); constant: \\(q = 13\\). Check \\(z^2\\): \\(q + 1 = 14\\), and \\(z\\): \\(p = -4\\)."
+    ],
+    "answer": "\\(P(z) = \\left(z^2 + 1\\right)\\left(z^2 - 4z + 13\\right)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(z^2 - 4z + 13 = 0\\) gives \\(z = \\dfrac{4 \\pm \\sqrt{16 - 52}}{2} = 2 \\pm 3i\\)."
+    ],
+    "answer": "\\(z = i, -i, 2 + 3i, 2 - 3i\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The points are \\((0, 1)\\), \\((0, -1)\\), \\((2, 3)\\), \\((2, -3)\\). The sides joining \\(\\pm i\\) and joining \\(2 \\pm 3i\\) are vertical, with lengths 2 and 6, and they are 2 apart: a trapezium.",
+     "Area \\(= \\dfrac{2 + 6}{2} \\times 2 = 8\\)."
+    ],
+    "answer": "8"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "By symmetry in the real axis, try a centre \\(c\\) on the real axis. Equal distances to \\(i\\) and to \\(2 + 3i\\): \\(c^2 + 1 = (2 - c)^2 + 9\\), so \\(c^2 + 1 = c^2 - 4c + 13\\) and \\(c = 3\\).",
+     "Radius: \\(\\sqrt{3^2 + 1} = \\sqrt{10}\\). The conjugate points \\(-i\\) and \\(2 - 3i\\) are the same distance from the real point 3, so all four lie on this circle.",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 320\" width=\"340\" height=\"320\" role=\"img\" aria-label=\"Argand diagram showing the points i, -i, 2 + 3i and 2 - 3i. They lie on a dashed circle with centre 3 on the real axis and radius root 10. The four points are the vertices of an isosceles trapezium.\"><path d=\"M15.2 160.0 L311.0 160.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M90.0 302.8 L90.0 17.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"315.0\" y=\"178.0\" text-anchor=\"end\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Re</text><text x=\"98.0\" y=\"21.2\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Im</text><circle cx=\"192.0\" cy=\"160.0\" r=\"107.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-dasharray=\"5 4\"/><path d=\"M90.0 126.0 L158.0 58.0 L158.0 262.0 L90.0 194.0 Z\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"90.0\" cy=\"126.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"82.0\" y=\"120.0\" text-anchor=\"end\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">i</text><circle cx=\"158.0\" cy=\"58.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"170.0\" y=\"48.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2 + 3i</text><circle cx=\"158.0\" cy=\"262.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"170.0\" y=\"282.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2 − 3i</text><circle cx=\"90.0\" cy=\"194.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"82.0\" y=\"210.0\" text-anchor=\"end\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−i</text><circle cx=\"192.0\" cy=\"160.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"198.0\" y=\"176.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text></svg>"
+     }
+    ],
+    "answer": "Centre 3 (the point \\((3, 0)\\)), radius \\(\\sqrt{10}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-hl-b-004",
+  "strand": "Number and Algebra",
+  "subtopic": "De Moivre's theorem",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "Let \\(z = \\cos\\theta + i\\sin\\theta\\), where \\(0 \\le \\theta < \\pi\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(1 + z = 2\\cos\\dfrac{\\theta}{2}\\left(\\cos\\dfrac{\\theta}{2} + i\\sin\\dfrac{\\theta}{2}\\right)\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence show that the real part of \\((1 + z)^n\\) is \\(2^n\\cos^n\\dfrac{\\theta}{2}\\cos\\dfrac{n\\theta}{2}\\), for \\(n \\in \\mathbb{Z}^+\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "By expanding \\((1 + z)^n\\) with the binomial theorem, show that \\(\\displaystyle\\sum_{k=0}^{n} \\binom{n}{k}\\cos k\\theta = 2^n\\cos^n\\frac{\\theta}{2}\\cos\\frac{n\\theta}{2}\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Hence find the exact value of \\(\\displaystyle\\sum_{k=0}^{6} \\binom{6}{k}\\cos\\frac{k\\pi}{3}\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Write down a similar formula for \\(\\displaystyle\\sum_{k=0}^{n} \\binom{n}{k}\\sin k\\theta\\), and use it to find the exact value of \\(\\displaystyle\\sum_{k=0}^{4} \\binom{4}{k}\\sin\\frac{k\\pi}{3}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Use the double angle formulas with \\(\\frac{\\theta}{2}\\): \\(1 + \\cos\\theta = 2\\cos^2\\frac{\\theta}{2}\\) and \\(\\sin\\theta = 2\\sin\\frac{\\theta}{2}\\cos\\frac{\\theta}{2}\\). Then de Moivre’s theorem raises \\(1 + z\\) to a power, and the binomial theorem gives the same power as a sum; compare real parts and imaginary parts.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(1 + z = (1 + \\cos\\theta) + i\\sin\\theta = 2\\cos^2\\dfrac{\\theta}{2} + 2i\\sin\\dfrac{\\theta}{2}\\cos\\dfrac{\\theta}{2} = 2\\cos\\dfrac{\\theta}{2}\\left(\\cos\\dfrac{\\theta}{2} + i\\sin\\dfrac{\\theta}{2}\\right)\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "By de Moivre’s theorem, \\((1 + z)^n = 2^n\\cos^n\\dfrac{\\theta}{2}\\left(\\cos\\dfrac{n\\theta}{2} + i\\sin\\dfrac{n\\theta}{2}\\right)\\).",
+     "\\(2^n\\cos^n\\frac{\\theta}{2}\\) is real, so the real part is \\(2^n\\cos^n\\dfrac{\\theta}{2}\\cos\\dfrac{n\\theta}{2}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((1 + z)^n = \\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}z^k\\), and \\(z^k = \\cos k\\theta + i\\sin k\\theta\\) by de Moivre’s theorem.",
+     "The real part of the sum is \\(\\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}\\cos k\\theta\\). Equate with part (b)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(n = 6\\), \\(\\theta = \\frac{\\pi}{3}\\): \\(2^6\\cos^6\\dfrac{\\pi}{6}\\cos\\pi = 64 \\times \\left(\\dfrac{\\sqrt{3}}{2}\\right)^6 \\times (-1) = 64 \\times \\dfrac{27}{64} \\times (-1)\\)."
+    ],
+    "answer": "\\(-27\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Imaginary parts: \\(\\displaystyle\\sum_{k=0}^{n}\\binom{n}{k}\\sin k\\theta = 2^n\\cos^n\\frac{\\theta}{2}\\sin\\frac{n\\theta}{2}\\).",
+     "\\(n = 4\\), \\(\\theta = \\frac{\\pi}{3}\\): \\(16\\cos^4\\dfrac{\\pi}{6}\\sin\\dfrac{2\\pi}{3} = 16 \\times \\dfrac{9}{16} \\times \\dfrac{\\sqrt{3}}{2} = \\dfrac{9\\sqrt{3}}{2}\\)."
+    ],
+    "answer": "\\(2^n\\cos^n\\frac{\\theta}{2}\\sin\\frac{n\\theta}{2}\\); \\(\\dfrac{9\\sqrt{3}}{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-hl-b-005",
+  "strand": "Number and Algebra",
+  "subtopic": "Proof",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "A sequence is defined by \\(u_1 = 2\\) and \\(u_{n+1} = 3u_n - 2\\), for \\(n \\in \\mathbb{Z}^+\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(u_2\\), \\(u_3\\), \\(u_4\\) and \\(u_5\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Suggest a formula for \\(u_n\\) in terms of \\(n\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Prove your formula by mathematical induction.",
+    "marks": 5
+   },
+   {
+    "label": "d",
+    "text": "Prove that no term of the sequence is divisible by 3, and that every term is even.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find an expression for \\(\\displaystyle\\sum_{k=1}^{n} u_k\\) in terms of \\(n\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Look at \\(u_n - 1\\): it is multiplied by 3 at each step, because \\(u_{n+1} - 1 = 3(u_n - 1)\\). In the induction step, assume the formula for \\(n = k\\) and use the recurrence to reach \\(n = k + 1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(u_2 = 3 \\times 2 - 2 = 4\\), \\(u_3 = 10\\), \\(u_4 = 28\\), \\(u_5 = 82\\)."
+    ],
+    "answer": "\\(4, 10, 28, 82\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Subtract 1: \\(1, 3, 9, 27, 81\\), the powers of 3."
+    ],
+    "answer": "\\(u_n = 3^{\\,n-1} + 1\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Let \\(P(n)\\) be the statement \\(u_n = 3^{\\,n-1} + 1\\).",
+     "\\(n = 1\\): \\(3^0 + 1 = 2 = u_1\\), so \\(P(1)\\) is true.",
+     "Assume \\(P(k)\\) is true for some \\(k \\in \\mathbb{Z}^+\\): \\(u_k = 3^{\\,k-1} + 1\\).",
+     "Then \\(u_{k+1} = 3u_k - 2 = 3\\left(3^{\\,k-1} + 1\\right) - 2 = 3^k + 3 - 2 = 3^k + 1\\), which is \\(P(k + 1)\\).",
+     "\\(P(1)\\) is true, and \\(P(k)\\) true implies \\(P(k + 1)\\) true, so by mathematical induction \\(P(n)\\) is true for all \\(n \\in \\mathbb{Z}^+\\)."
+    ],
+    "answer": "Proved"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(u_1 = 2\\) is not divisible by 3. For \\(n \\ge 2\\), \\(3^{\\,n-1}\\) is a multiple of 3, so \\(u_n = 3^{\\,n-1} + 1\\) leaves remainder 1 when divided by 3.",
+     "\\(3^{\\,n-1}\\) is a product of odd numbers, so it is odd, and odd + 1 is even. So every term is even."
+    ],
+    "answer": "Proved"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\displaystyle\\sum_{k=1}^{n}\\left(3^{\\,k-1} + 1\\right) = \\left(1 + 3 + \\cdots + 3^{\\,n-1}\\right) + n = \\frac{3^n - 1}{3 - 1} + n\\).",
+     "Check with \\(n = 3\\): \\(2 + 4 + 10 = 16\\) and \\(\\frac{27 - 1}{2} + 3 = 16\\)."
+    ],
+    "answer": "\\(\\dfrac{3^n - 1}{2} + n\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-hl-b-006",
+  "strand": "Number and Algebra",
+  "subtopic": "Systems of linear equations",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "The points \\((1, 2)\\), \\((2, 3)\\) and \\((3, 6)\\) are given."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "The curve \\(y = ax^2 + bx + c\\) passes through all three points. Write down a system of three linear equations in \\(a\\), \\(b\\) and \\(c\\), and solve it.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "The curve \\(y = px^3 + qx^2 + rx + s\\) also passes through all three points. Show that the system of equations for \\(p\\), \\(q\\), \\(r\\) and \\(s\\) has infinitely many solutions, and that every such curve can be written as \\(y = x^2 - 2x + 3 + p(x - 1)(x - 2)(x - 3)\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find the curve of this family that also passes through \\((0, 9)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the value of \\(p\\) for which the curve has a stationary point at \\(x = 2\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Each point on the curve gives one linear equation in the unknown coefficients. Three points fix a quadratic. With four unknowns and three equations there is one free parameter: any cubic through the points differs from the quadratic by a cubic that is zero at \\(x = 1, 2, 3\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(a + b + c = 2\\), \\(4a + 2b + c = 3\\), \\(9a + 3b + c = 6\\).",
+     "Subtract consecutive equations: \\(3a + b = 1\\) and \\(5a + b = 3\\). So \\(2a = 2\\), \\(a = 1\\), \\(b = -2\\), and \\(c = 2 - 1 + 2 = 3\\)."
+    ],
+    "answer": "\\(a = 1\\), \\(b = -2\\), \\(c = 3\\): \\(y = x^2 - 2x + 3\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The equations are \\(p + q + r + s = 2\\), \\(8p + 4q + 2r + s = 3\\), \\(27p + 9q + 3r + s = 6\\): three equations in four unknowns.",
+     "For any value of \\(p\\), put \\(p x^3\\) on the right: the equations for \\(q, r, s\\) have the same left sides as in part (a), so they have exactly one solution. So there is one solution for each \\(p\\): infinitely many.",
+     "Let \\(g(x) = x^2 - 2x + 3 + p(x - 1)(x - 2)(x - 3)\\). This is a cubic with leading coefficient \\(p\\), and \\(g(1) = 2\\), \\(g(2) = 3\\), \\(g(3) = 6\\) because the product is zero at \\(x = 1, 2, 3\\). For each \\(p\\) the solution is unique, so every such curve is this \\(g\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "At \\(x = 0\\): \\(3 + p(-1)(-2)(-3) = 3 - 6p = 9\\), so \\(p = -1\\).",
+     "\\(y = x^2 - 2x + 3 - (x - 1)(x - 2)(x - 3) = x^2 - 2x + 3 - \\left(x^3 - 6x^2 + 11x - 6\\right)\\)."
+    ],
+    "answer": "\\(y = -x^3 + 7x^2 - 13x + 9\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{dy}{dx} = 2x - 2 + p\\,\\dfrac{d}{dx}\\left[(x - 1)(x - 2)(x - 3)\\right]\\).",
+     "At \\(x = 2\\), the product rule leaves only the term in which \\((x - 2)\\) is differentiated: \\((2 - 1)(2 - 3) = -1\\). So \\(\\dfrac{dy}{dx} = 2 - p\\) at \\(x = 2\\).",
+     "\\(2 - p = 0\\)."
+    ],
+    "answer": "\\(p = 2\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-hl-b-007",
+  "strand": "Number and Algebra",
+  "subtopic": "Complex numbers",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "Let \\(z_1 = 1 + \\sqrt{3}\\,i\\) and \\(z_2 = 1 + i\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write \\(z_1\\) and \\(z_2\\) in the form \\(re^{i\\theta}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(z_1z_2\\) in the form \\(re^{i\\theta}\\) and in the form \\(a + bi\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Hence find the exact values of \\(\\cos\\dfrac{7\\pi}{12}\\) and \\(\\sin\\dfrac{7\\pi}{12}\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Hence show that \\(\\tan\\dfrac{7\\pi}{12} = -\\left(2 + \\sqrt{3}\\right)\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find the two solutions of \\(w^2 = z_1z_2\\), giving your answers in the form \\(re^{i\\theta}\\), where \\(r > 0\\) and \\(-\\pi < \\theta \\le \\pi\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Moduli multiply and arguments add, so \\(z_1z_2\\) has argument \\(\\frac{\\pi}{3} + \\frac{\\pi}{4} = \\frac{7\\pi}{12}\\). Multiplying out in Cartesian form gives the same number, and comparing the two forms gives the cosine and sine of \\(\\frac{7\\pi}{12}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(|z_1| = \\sqrt{1 + 3} = 2\\), \\(\\arg z_1 = \\dfrac{\\pi}{3}\\). \\(|z_2| = \\sqrt{2}\\), \\(\\arg z_2 = \\dfrac{\\pi}{4}\\)."
+    ],
+    "answer": "\\(z_1 = 2e^{i\\pi/3}\\), \\(z_2 = \\sqrt{2}\\,e^{i\\pi/4}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(z_1z_2 = 2\\sqrt{2}\\,e^{i(\\pi/3 + \\pi/4)} = 2\\sqrt{2}\\,e^{7\\pi i/12}\\).",
+     "\\(\\left(1 + \\sqrt{3}\\,i\\right)(1 + i) = 1 + i + \\sqrt{3}\\,i - \\sqrt{3} = \\left(1 - \\sqrt{3}\\right) + \\left(1 + \\sqrt{3}\\right)i\\)."
+    ],
+    "answer": "\\(2\\sqrt{2}\\,e^{7\\pi i/12} = \\left(1 - \\sqrt{3}\\right) + \\left(1 + \\sqrt{3}\\right)i\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2\\sqrt{2}\\cos\\dfrac{7\\pi}{12} = 1 - \\sqrt{3}\\) and \\(2\\sqrt{2}\\sin\\dfrac{7\\pi}{12} = 1 + \\sqrt{3}\\).",
+     "Divide by \\(2\\sqrt{2}\\) and rationalise: \\(\\dfrac{1 - \\sqrt{3}}{2\\sqrt{2}} = \\dfrac{\\sqrt{2} - \\sqrt{6}}{4}\\)."
+    ],
+    "answer": "\\(\\cos\\dfrac{7\\pi}{12} = \\dfrac{\\sqrt{2} - \\sqrt{6}}{4}\\), \\(\\sin\\dfrac{7\\pi}{12} = \\dfrac{\\sqrt{2} + \\sqrt{6}}{4}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\tan\\dfrac{7\\pi}{12} = \\dfrac{1 + \\sqrt{3}}{1 - \\sqrt{3}} = \\dfrac{\\left(1 + \\sqrt{3}\\right)^2}{1 - 3} = \\dfrac{4 + 2\\sqrt{3}}{-2} = -\\left(2 + \\sqrt{3}\\right)\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Write \\(z_1z_2 = 2\\sqrt{2}\\,e^{i(7\\pi/12 + 2k\\pi)}\\). Then \\(w = \\left(2\\sqrt{2}\\right)^{1/2}e^{i(7\\pi/24 + k\\pi)}\\), with \\(k = 0, 1\\). The second argument, \\(\\frac{31\\pi}{24}\\), is outside the interval, so subtract \\(2\\pi\\): \\(-\\frac{17\\pi}{24}\\).",
+     "\\(\\left(2\\sqrt{2}\\right)^{1/2} = \\left(2^{3/2}\\right)^{1/2} = 2^{3/4}\\)."
+    ],
+    "answer": "\\(w = 2^{3/4}e^{7\\pi i/24}\\) and \\(w = 2^{3/4}e^{-17\\pi i/24}\\)"
+   }
+  ]
+ }
+]

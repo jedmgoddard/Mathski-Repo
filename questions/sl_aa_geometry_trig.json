@@ -1,0 +1,3182 @@
+[
+ {
+  "id": "aa-gt-001",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The points A and B have coordinates \\(\\mathrm{A}(1,\\,4,\\,-2)\\) and \\(\\mathrm{B}(7,\\,-2,\\,1)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the coordinates of M, the midpoint of [AB].",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the distance AB.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The point C is such that B is the midpoint of [AC]. Find the coordinates of C.",
+    "marks": 2
+   }
+  ],
+  "idea": "In three dimensions the midpoint and distance formulas work exactly as in two dimensions, with one more coordinate.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Average each pair of coordinates:",
+     "\\[\\mathrm{M} = \\left(\\frac{1 + 7}{2},\\ \\frac{4 + (-2)}{2},\\ \\frac{-2 + 1}{2}\\right)\\]"
+    ],
+    "answer": "\\(\\mathrm{M}(4,\\,1,\\,-0.5)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The differences in the coordinates are \\(7 - 1 = 6\\), \\(-2 - 4 = -6\\) and \\(1 - (-2) = 3\\).",
+     "\\[\\mathrm{AB} = \\sqrt{6^2 + (-6)^2 + 3^2} = \\sqrt{36 + 36 + 9} = \\sqrt{81}\\]"
+    ],
+    "answer": "\\(\\mathrm{AB} = 9\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Going from A to B changes the coordinates by \\((6,\\,-6,\\,3)\\). Because B is half-way from A to C, the same step again takes you from B to C.",
+     "\\(\\mathrm{C} = (7 + 6,\\ -2 - 6,\\ 1 + 3)\\).",
+     "Check: the midpoint of A and C is \\(\\left(\\frac{1 + 13}{2},\\ \\frac{4 - 8}{2},\\ \\frac{-2 + 4}{2}\\right) = (7,\\,-2,\\,1)\\), which is B."
+    ],
+    "answer": "\\(\\mathrm{C}(13,\\,-8,\\,4)\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-002",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Three tennis balls, each of radius 3.3 cm, fit exactly inside a closed cylindrical tube. The balls touch the curved side of the tube, each other, and the two ends of the tube."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the height of the tube.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the volume of the tube.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the total volume of the three balls.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Show that exactly one third of the space inside the tube is empty.",
+    "marks": 2
+   }
+  ],
+  "idea": "The tube has the same radius as a ball, and its height is three ball diameters. Writing both volumes in terms of the radius \\(r\\) shows how they compare.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Each ball has diameter \\(2 \\times 3.3 = 6.6\\) cm, and three balls are stacked: \\(3 \\times 6.6\\)."
+    ],
+    "answer": "19.8 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The tube is a cylinder with radius 3.3 cm and height 19.8 cm.",
+     "\\[V = \\pi r^2 h = \\pi \\times 3.3^2 \\times 19.8 = 677.39\\ldots\\]"
+    ],
+    "answer": "677 cm³"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "One ball has volume \\(\\dfrac{4}{3}\\pi r^3\\), so three balls have volume \\(3 \\times \\dfrac{4}{3}\\pi r^3 = 4\\pi r^3\\).",
+     "\\[4\\pi \\times 3.3^3 = 451.59\\ldots\\]"
+    ],
+    "answer": "452 cm³"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Work with the radius \\(r\\) so that nothing is rounded. The tube has height \\(6r\\), so its volume is \\(\\pi r^2 \\times 6r = 6\\pi r^3\\).",
+     "The balls fill \\(4\\pi r^3\\), so the empty space is \\(6\\pi r^3 - 4\\pi r^3 = 2\\pi r^3\\).",
+     "As a fraction of the tube: \\(\\dfrac{2\\pi r^3}{6\\pi r^3} = \\dfrac{1}{3}\\). This is true for balls of any radius."
+    ],
+    "answer": "\\(\\dfrac{2\\pi r^3}{6\\pi r^3} = \\dfrac{1}{3}\\) (shown)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-003",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A box has the shape of a cuboid. Its base is a rectangle 12 cm by 9 cm, and its height is 8 cm. A thin straight rod just fits inside the box, from one bottom corner to the opposite top corner."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the length of a diagonal of the base of the box.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the length of the rod.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the angle that the rod makes with the base of the box.",
+    "marks": 2
+   }
+  ],
+  "idea": "A length that runs through the inside of a box is found with two right-angled triangles: one lying in the base, and one standing up on the diagonal of the base.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The diagonal of the base is the hypotenuse of a right-angled triangle with sides 12 cm and 9 cm.",
+     "\\[\\sqrt{12^2 + 9^2} = \\sqrt{225}\\]"
+    ],
+    "answer": "15 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The rod, the base diagonal and a vertical edge make another right-angled triangle, with sides 15 cm and 8 cm.",
+     "\\[\\sqrt{15^2 + 8^2} = \\sqrt{289}\\]"
+    ],
+    "answer": "17 cm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The angle between the rod and the base is the angle between the rod and the base diagonal, in the triangle from part (b).",
+     "The side opposite this angle is 8 cm and the side next to it is 15 cm: \\(\\tan\\theta = \\dfrac{8}{15}\\).",
+     "\\(\\theta = \\tan^{-1}\\left(\\dfrac{8}{15}\\right) = 28.07\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(28.1^\\circ\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-004",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A solid marker buoy is made of a cone joined to a hemisphere. The base of the cone and the flat face of the hemisphere are the same circle, of radius 12 cm. The cone has a vertical height of 35 cm.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 330\" width=\"320\" height=\"330\" role=\"img\" aria-label=\"Side view of a solid made of a cone on top of a hemisphere. The flat face of the hemisphere and the base of the cone are the same circle, of radius 12 cm. The cone points upwards and has vertical height 35 cm. The hemisphere curves downwards.\"><path d=\"M67.6 232.0 L67.7 236.1 L68.1 240.1 L68.8 244.2 L69.7 248.2 L70.9 252.1 L72.3 255.9 L74.0 259.6 L76.0 263.2 L78.1 266.7 L80.5 270.0 L83.1 273.1 L85.9 276.1 L88.9 278.9 L92.0 281.5 L95.3 283.9 L98.8 286.0 L102.4 288.0 L106.1 289.7 L109.9 291.1 L113.8 292.3 L117.8 293.2 L121.9 293.9 L125.9 294.3 L130.0 294.4 L134.1 294.3 L138.1 293.9 L142.2 293.2 L146.2 292.3 L150.1 291.1 L153.9 289.7 L157.6 288.0 L161.2 286.0 L164.7 283.9 L168.0 281.5 L171.1 278.9 L174.1 276.1 L176.9 273.1 L179.5 270.0 L181.9 266.7 L184.0 263.2 L186.0 259.6 L187.7 255.9 L189.1 252.1 L190.3 248.2 L191.2 244.2 L191.9 240.1 L192.3 236.1 L192.4 232.0\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M67.6 232.0 L130.0 50.0 L192.4 232.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><ellipse cx=\"130.0\" cy=\"232.0\" rx=\"62.4\" ry=\"13.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-dasharray=\"5 4\"/><path d=\"M130.0 232.0 L130.0 50.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M130.0 232.0 L192.4 232.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M218.4 232.0 L218.4 50.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M210.6 232.0 L226.2 232.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M210.6 50.0 L226.2 50.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"226.4\" y=\"146.0\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">35 cm</text><text x=\"161.2\" y=\"265.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">12 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the slant height of the cone.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the total surface area of the buoy.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the volume of the buoy.",
+    "marks": 3
+   }
+  ],
+  "idea": "A compound solid is handled piece by piece. For the surface area, count only the surfaces on the outside: the circle where the two pieces join is hidden.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The slant height \\(l\\), the radius and the vertical height make a right-angled triangle.",
+     "\\[l = \\sqrt{12^2 + 35^2} = \\sqrt{1369}\\]"
+    ],
+    "answer": "37 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Curved surface of the cone: \\(\\pi r l = \\pi \\times 12 \\times 37 = 444\\pi\\).",
+     "Curved surface of the hemisphere (half of a sphere): \\(2\\pi r^2 = 2\\pi \\times 12^2 = 288\\pi\\).",
+     "Total: \\(444\\pi + 288\\pi = 732\\pi = 2299.6\\ldots\\)"
+    ],
+    "answer": "\\(732\\pi \\approx 2300\\) cm²"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Cone: \\(\\dfrac{1}{3}\\pi r^2 h = \\dfrac{1}{3}\\pi \\times 12^2 \\times 35 = 1680\\pi\\).",
+     "Hemisphere: \\(\\dfrac{2}{3}\\pi r^3 = \\dfrac{2}{3}\\pi \\times 12^3 = 1152\\pi\\).",
+     "Total: \\(1680\\pi + 1152\\pi = 2832\\pi = 8896.9\\ldots\\)"
+    ],
+    "answer": "\\(2832\\pi \\approx 8900\\) cm³"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-005",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "The diagram shows a right pyramid with a square base ABCD of side 10 cm. The apex V is 12 cm vertically above O, the centre of the base. M is the midpoint of [BC].",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 320\" width=\"360\" height=\"320\" role=\"img\" aria-label=\"A right pyramid with square base ABCD and apex V. O is the centre of the base, directly below V. M is the midpoint of the edge BC. The base has side 10 cm and the height VO is 12 cm. The lines VO, OM and VM are drawn.\"><path d=\"M46.0 286.0 L236.0 286.0 L304.4 206.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M46.0 286.0 L114.4 206.2 L304.4 206.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M175.2 27.6 L46.0 286.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M175.2 27.6 L236.0 286.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M175.2 27.6 L304.4 206.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M175.2 27.6 L114.4 206.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M175.2 27.6 L175.2 246.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M175.2 246.1 L270.2 246.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M175.2 27.6 L270.2 246.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"175.2\" cy=\"246.1\" r=\"2.8\" fill=\"#0b0d12\"/><circle cx=\"270.2\" cy=\"246.1\" r=\"2.8\" fill=\"#0b0d12\"/><text x=\"38.0\" y=\"300.0\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"242.0\" y=\"302.0\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"313.4\" y=\"208.2\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><text x=\"105.4\" y=\"206.2\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><text x=\"175.2\" y=\"19.6\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">V</text><text x=\"166.2\" y=\"260.1\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">O</text><text x=\"280.2\" y=\"254.1\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">M</text><text x=\"141.0\" y=\"307.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">10 cm</text><text x=\"147.6\" y=\"187.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">12 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the length VM.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the angle between [VM] and the base of the pyramid.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the total surface area of the pyramid, including the base.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the angle between the edge [VB] and the base of the pyramid.",
+    "marks": 3
+   }
+  ],
+  "idea": "Every length and angle in a pyramid sits in some right-angled triangle that contains the height VO. Choose the triangle, then draw it flat.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "OM joins the centre of the square to the middle of a side, so \\(\\mathrm{OM} = 5\\) cm. Triangle VOM has a right angle at O.",
+     "\\[\\mathrm{VM} = \\sqrt{12^2 + 5^2} = \\sqrt{169}\\]"
+    ],
+    "answer": "13 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The angle between [VM] and the base is the angle VMO in triangle VOM.",
+     "\\(\\tan(\\mathrm{V\\hat{M}O}) = \\dfrac{\\mathrm{VO}}{\\mathrm{OM}} = \\dfrac{12}{5}\\), so the angle is \\(\\tan^{-1}(2.4) = 67.38\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(67.4^\\circ\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Each sloping face is a triangle with base 10 cm and height \\(\\mathrm{VM} = 13\\) cm: area \\(\\dfrac{1}{2} \\times 10 \\times 13 = 65\\) cm².",
+     "Four faces and the square base: \\(4 \\times 65 + 10^2 = 260 + 100\\)."
+    ],
+    "answer": "360 cm²"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Use triangle VOB, which has a right angle at O. OB is half of a diagonal of the square: \\(\\mathrm{OB} = \\dfrac{1}{2}\\sqrt{10^2 + 10^2} = 5\\sqrt{2} = 7.0710\\ldots\\)",
+     "\\(\\tan(\\mathrm{V\\hat{B}O}) = \\dfrac{12}{5\\sqrt{2}}\\), so the angle is \\(59.49\\ldots^\\circ\\)",
+     "The edge is less steep than the line VM, which makes sense: B is further from O than M is."
+    ],
+    "answer": "\\(59.5^\\circ\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-006",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 13,
+  "stem": [
+   "A sector of a circle has radius 15 cm and angle \\(\\dfrac{6\\pi}{5}\\) radians. Its two straight edges are joined, without overlap, to make the curved surface of a cone.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 250\" width=\"300\" height=\"250\" role=\"img\" aria-label=\"A sector of a circle with radius 15 cm. The angle of the sector is 6 pi over 5 radians, which is more than half of the circle. The two straight edges are joined to make a cone.\"><path d=\"M150.0 150.0 L244.2 180.6 L246.3 173.1 L247.8 165.5 L248.7 157.8 L249.0 150.0 L248.7 142.2 L247.8 134.5 L246.3 126.9 L244.2 119.4 L241.5 112.1 L238.2 105.1 L234.4 98.3 L230.1 91.8 L225.3 85.7 L220.0 80.0 L214.3 74.7 L208.2 69.9 L201.7 65.6 L194.9 61.8 L187.9 58.5 L180.6 55.8 L173.1 53.7 L165.5 52.2 L157.8 51.3 L150.0 51.0 L142.2 51.3 L134.5 52.2 L126.9 53.7 L119.4 55.8 L112.1 58.5 L105.1 61.8 L98.3 65.6 L91.8 69.9 L85.7 74.7 L80.0 80.0 L74.7 85.7 L69.9 91.8 L65.6 98.3 L61.8 105.1 L58.5 112.1 L55.8 119.4 L53.7 126.9 L52.2 134.5 L51.3 142.2 L51.0 150.0 L51.3 157.8 L52.2 165.5 L53.7 173.1 L55.8 180.6 Z\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M170.1 156.5 L170.7 154.0 L171.1 151.3 L171.1 148.7 L170.7 146.0 L170.1 143.5 L169.1 141.0 L167.8 138.7 L166.3 136.5 L164.5 134.6 L162.4 132.9 L160.2 131.5 L157.8 130.4 L155.3 129.5 L152.6 129.0 L150.0 128.9 L147.4 129.0 L144.7 129.5 L142.2 130.4 L139.8 131.5 L137.6 132.9 L135.5 134.6 L133.7 136.5 L132.2 138.7 L130.9 141.0 L129.9 143.5 L129.3 146.0 L128.9 148.7 L128.9 151.3 L129.3 154.0 L129.9 156.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"150.0\" y=\"123.6\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6π/5</text><text x=\"192.4\" y=\"184.6\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">15 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the arc length of the sector, in terms of \\(\\pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the radius of the base of the cone.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the volume of the cone, in terms of \\(\\pi\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The rest of the circle is a second sector. It is made into a second cone in the same way. Show that the height of the second cone is \\(3\\sqrt{21}\\) cm.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "A different sector, also of radius 15 cm, is made into a cone whose height is equal to the radius of its base. Find the angle of this sector, in radians. Give your answer in the form \\(\\pi\\sqrt{k}\\), where \\(k \\in \\mathbb{Z}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "When a sector is rolled into a cone, two things carry over: the radius of the sector becomes the slant height, and the arc of the sector becomes the circumference of the base.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Arc length is \\(r\\theta\\) when \\(\\theta\\) is in radians: \\(15 \\times \\dfrac{6\\pi}{5}\\)."
+    ],
+    "answer": "\\(18\\pi\\) cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The arc becomes the circumference of the base of the cone. If the base radius is \\(R\\), then \\(2\\pi R = 18\\pi\\)."
+    ],
+    "answer": "9 cm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The slant height of the cone is the radius of the sector, 15 cm. The height \\(h\\), the base radius and the slant height make a right-angled triangle:",
+     "\\(h = \\sqrt{15^2 - 9^2} = \\sqrt{144} = 12\\) cm.",
+     "\\[V = \\frac{1}{3}\\pi R^2 h = \\frac{1}{3}\\pi \\times 81 \\times 12\\]"
+    ],
+    "answer": "\\(324\\pi\\) cm³"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The whole circle is \\(2\\pi\\) radians, so the second sector has angle \\(2\\pi - \\dfrac{6\\pi}{5} = \\dfrac{4\\pi}{5}\\). Its arc length is \\(15 \\times \\dfrac{4\\pi}{5} = 12\\pi\\) cm.",
+     "For the second cone, \\(2\\pi R = 12\\pi\\), so its base radius is 6 cm. Its slant height is again 15 cm.",
+     "\\(h = \\sqrt{15^2 - 6^2} = \\sqrt{189} = \\sqrt{9 \\times 21} = 3\\sqrt{21}\\) cm."
+    ],
+    "answer": "\\(h = \\sqrt{189} = 3\\sqrt{21}\\) cm (shown)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Let the base radius and the height both be \\(R\\). The slant height is still 15 cm, so \\(R^2 + R^2 = 15^2\\), which gives \\(R^2 = \\dfrac{225}{2}\\) and \\(R = \\dfrac{15}{\\sqrt{2}}\\).",
+     "The arc of the sector is the circumference of the base: \\(15\\theta = 2\\pi R = \\dfrac{30\\pi}{\\sqrt{2}}\\).",
+     "\\(\\theta = \\dfrac{2\\pi}{\\sqrt{2}} = \\pi\\sqrt{2}\\). This is about 4.44 radians, which is less than a full turn, so the sector exists."
+    ],
+    "answer": "\\(\\theta = \\pi\\sqrt{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-007",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "A vertical mast [BT] of height \\(h\\) metres stands on horizontal ground. The point A is on the ground due south of B, and the point C is on the ground due east of B. The angle of elevation of T is \\(35^\\circ\\) from A and \\(25^\\circ\\) from C. The distance AC is 150 m.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 300\" width=\"400\" height=\"300\" role=\"img\" aria-label=\"A vertical mast BT stands on horizontal ground, with B at its base and T at its top. Point A on the ground is due south of B and point C on the ground is due east of B, so angle ABC is a right angle. The angle of elevation of T is 35 degrees from A and 25 degrees from C. AC is 150 m. The height BT is h metres.\"><path d=\"M34.8 285.4 L136.0 204.0 L338.4 184.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M34.8 285.4 L338.4 184.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M136.0 204.0 L136.0 23.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M34.8 285.4 L136.0 23.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M338.4 184.2 L136.0 23.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M55.1 269.1 L54.7 268.7 L54.3 268.2 L53.9 267.8 L53.6 267.4 L53.2 267.0 L52.8 266.6 L52.3 266.2 L51.9 265.8 L51.5 265.5 L51.0 265.1 L50.6 264.7 L50.1 264.4 L49.7 264.1 L49.2 263.8 L48.7 263.4 L48.3 263.1 L47.8 262.9 L47.3 262.6 L46.8 262.3 L46.3 262.1 L45.7 261.8 L45.2 261.6 L44.7 261.4 L44.2 261.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"59.6\" y=\"256.5\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">35°</text><path d=\"M304.6 187.5 L304.5 186.4 L304.4 185.3 L304.4 184.3 L304.4 183.2 L304.5 182.1 L304.6 181.0 L304.7 179.9 L304.8 178.8 L305.0 177.8 L305.2 176.7 L305.5 175.6 L305.8 174.6 L306.1 173.5 L306.5 172.5 L306.9 171.5 L307.3 170.5 L307.7 169.5 L308.2 168.5 L308.7 167.6 L309.3 166.6 L309.9 165.7 L310.5 164.8 L311.1 163.9 L311.8 163.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"288.5\" y=\"174.5\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">25°</text><text x=\"26.8\" y=\"299.4\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"126.0\" y=\"208.0\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"347.4\" y=\"190.2\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><text x=\"136.0\" y=\"15.6\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">T</text><text x=\"191.7\" y=\"255.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">150 m</text><text x=\"145.0\" y=\"115.8\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">h</tspan></text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down an expression for AB in terms of \\(h\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(h^2\\left(\\dfrac{1}{\\tan^2 35^\\circ} + \\dfrac{1}{\\tan^2 25^\\circ}\\right) = 22\\,500\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(h\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "M is the midpoint of [AC]. Show that \\(\\mathrm{BM} = 75\\) m.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the angle of elevation of T from M.",
+    "marks": 2
+   }
+  ],
+  "idea": "There are three right angles here: two in the vertical triangles ABT and CBT, and one on the ground at B. Each vertical triangle gives a ground distance in terms of \\(h\\), and the ground triangle links them.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Triangle ABT has a right angle at B, with BT opposite the \\(35^\\circ\\) angle and AB next to it: \\(\\tan 35^\\circ = \\dfrac{h}{\\mathrm{AB}}\\)."
+    ],
+    "answer": "\\(\\mathrm{AB} = \\dfrac{h}{\\tan 35^\\circ}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "In the same way, \\(\\mathrm{CB} = \\dfrac{h}{\\tan 25^\\circ}\\).",
+     "South and east are at right angles, so triangle ABC on the ground has a right angle at B. By Pythagoras, \\(\\mathrm{AB}^2 + \\mathrm{CB}^2 = \\mathrm{AC}^2\\):",
+     "\\[\\frac{h^2}{\\tan^2 35^\\circ} + \\frac{h^2}{\\tan^2 25^\\circ} = 150^2\\]",
+     "Take out the common factor \\(h^2\\), and \\(150^2 = 22\\,500\\)."
+    ],
+    "answer": "\\(h^2\\left(\\dfrac{1}{\\tan^2 35^\\circ} + \\dfrac{1}{\\tan^2 25^\\circ}\\right) = 22\\,500\\) (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The bracket is \\(\\dfrac{1}{\\tan^2 35^\\circ} + \\dfrac{1}{\\tan^2 25^\\circ} = 6.6385\\ldots\\)",
+     "\\(h^2 = \\dfrac{22\\,500}{6.6385\\ldots}\\), so \\(h = 58.217\\ldots\\)"
+    ],
+    "answer": "\\(h = 58.2\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Use coordinates on the ground with B as the origin, A at \\((0,\\,-a)\\) and C at \\((c,\\,0)\\). Then M is \\(\\left(\\dfrac{c}{2},\\,-\\dfrac{a}{2}\\right)\\).",
+     "\\(\\mathrm{BM} = \\sqrt{\\dfrac{c^2}{4} + \\dfrac{a^2}{4}} = \\dfrac{1}{2}\\sqrt{a^2 + c^2} = \\dfrac{1}{2}\\,\\mathrm{AC} = 75\\) m.",
+     "In words: the midpoint of the hypotenuse of a right-angled triangle is the same distance from all three corners."
+    ],
+    "answer": "\\(\\mathrm{BM} = \\dfrac{1}{2}\\,\\mathrm{AC} = 75\\) m (shown)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Triangle MBT has a right angle at B, with \\(\\mathrm{BT} = h\\) and \\(\\mathrm{BM} = 75\\).",
+     "\\(\\tan\\theta = \\dfrac{58.217\\ldots}{75}\\), so \\(\\theta = 37.81\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(37.8^\\circ\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-008",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A straight ramp leads up to the door of a building. The ramp rises 0.9 m over a horizontal distance of 10.8 m."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the length of the ramp.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the angle that the ramp makes with the horizontal.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A second ramp covers the same horizontal distance and makes an angle of \\(7^\\circ\\) with the horizontal. Find the height that the second ramp rises.",
+    "marks": 2
+   }
+  ],
+  "idea": "The ramp, its rise and its horizontal run make a right-angled triangle. The rise is opposite the angle of the ramp and the run is adjacent to it, so the tangent ratio links them.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The ramp is the hypotenuse:",
+     "\\[\\sqrt{0.9^2 + 10.8^2} = \\sqrt{117.45} = 10.837\\ldots\\]"
+    ],
+    "answer": "10.8 m"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\tan\\theta = \\dfrac{\\text{rise}}{\\text{run}} = \\dfrac{0.9}{10.8}\\), so \\(\\theta = \\tan^{-1}\\left(\\dfrac{0.9}{10.8}\\right) = 4.763\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(4.76^\\circ\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Now the angle is known and the rise is not: \\(\\tan 7^\\circ = \\dfrac{\\text{rise}}{10.8}\\).",
+     "\\(\\text{rise} = 10.8 \\times \\tan 7^\\circ = 1.3260\\ldots\\)"
+    ],
+    "answer": "1.33 m"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-009",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Two coastguard stations, A and B, are 15 km apart on a straight coast. A boat is at the point C, where \\(\\mathrm{C\\hat{A}B} = 50^\\circ\\) and \\(\\mathrm{C\\hat{B}A} = 70^\\circ\\).",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 320\" width=\"400\" height=\"320\" role=\"img\" aria-label=\"Triangle ABC. A and B are two stations on a straight coast, 15 km apart. C is a boat out at sea. Angle CAB is 50 degrees and angle CBA is 70 degrees.\"><rect x=\"20\" y=\"276\" width=\"360\" height=\"26\" fill=\"#eaf0fb\"/><path d=\"M21.8 276.0 L375.2 276.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M56.0 276.0 L254.8 39.1 L341.0 276.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M82.0 276.0 L82.0 275.1 L81.9 274.1 L81.8 273.2 L81.7 272.2 L81.6 271.3 L81.4 270.4 L81.2 269.5 L80.9 268.5 L80.6 267.6 L80.3 266.8 L79.9 265.9 L79.6 265.0 L79.1 264.2 L78.7 263.3 L78.2 262.5 L77.7 261.7 L77.2 260.9 L76.6 260.2 L76.0 259.4 L75.4 258.7 L74.8 258.0 L74.1 257.3 L73.4 256.7 L72.7 256.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"94.1\" y=\"263.3\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">50°</text><path d=\"M332.8 253.4 L331.7 253.9 L330.5 254.4 L329.5 255.0 L328.4 255.6 L327.4 256.2 L326.4 257.0 L325.4 257.7 L324.5 258.5 L323.7 259.4 L322.8 260.3 L322.1 261.3 L321.3 262.2 L320.7 263.3 L320.0 264.3 L319.5 265.4 L319.0 266.5 L318.5 267.6 L318.1 268.8 L317.8 270.0 L317.5 271.1 L317.3 272.3 L317.1 273.6 L317.0 274.8 L317.0 276.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"308.2\" y=\"258.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">70°</text><circle cx=\"56.0\" cy=\"276.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"341.0\" cy=\"276.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"254.8\" cy=\"39.1\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"50.0\" y=\"296.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"347.0\" y=\"296.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"254.8\" y=\"29.1\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><text x=\"198.5\" y=\"296.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">15 km</text><text x=\"375.4\" y=\"268.0\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">coast</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the size of angle ACB.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the distance of the boat from station A.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the shortest distance from the boat to the coast.",
+    "marks": 2
+   }
+  ],
+  "idea": "When you know two angles and one side of a triangle, the sine rule gives the other sides: each side divided by the sine of the angle opposite it gives the same number.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The angles of a triangle add up to \\(180^\\circ\\): \\(180 - 50 - 70\\)."
+    ],
+    "answer": "\\(60^\\circ\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "AC is opposite the angle at B, and the known side AB is opposite the angle at C.",
+     "\\[\\frac{\\mathrm{AC}}{\\sin 70^\\circ} = \\frac{15}{\\sin 60^\\circ}\\]",
+     "\\(\\mathrm{AC} = \\dfrac{15\\sin 70^\\circ}{\\sin 60^\\circ} = 16.275\\ldots\\)"
+    ],
+    "answer": "16.3 km"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The shortest distance is along the perpendicular from C to the coast. This makes a right-angled triangle with hypotenuse AC and the \\(50^\\circ\\) angle at A.",
+     "\\(\\text{distance} = \\mathrm{AC} \\times \\sin 50^\\circ = 16.275\\ldots \\times \\sin 50^\\circ = 12.468\\ldots\\)"
+    ],
+    "answer": "12.5 km"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-010",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A triangular flag has two sides of length 1.2 m and 0.9 m. The angle between these two sides is \\(\\theta\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the area of the flag when \\(\\theta = 50^\\circ\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down the value of \\(\\theta\\) for which the area of the flag is as large as possible, and find this area.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the length of the third side of the flag when its area is as large as possible.",
+    "marks": 2
+   }
+  ],
+  "idea": "The area of a triangle is \\(\\frac{1}{2}ab\\sin C\\), where \\(C\\) is the angle between the sides \\(a\\) and \\(b\\). With the two sides fixed, the area depends only on \\(\\sin C\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\[\\begin{aligned}\\text{Area} &= \\frac{1}{2} \\times 1.2 \\times 0.9 \\times \\sin 50^\\circ\\\\[4pt] &= 0.54\\sin 50^\\circ = 0.41366\\ldots\\end{aligned}\\]"
+    ],
+    "answer": "0.414 m²"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The area is \\(0.54\\sin\\theta\\). The largest value that \\(\\sin\\theta\\) can take is 1, when \\(\\theta = 90^\\circ\\).",
+     "Then the area is \\(0.54 \\times 1\\)."
+    ],
+    "answer": "\\(\\theta = 90^\\circ\\); area 0.54 m²"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "With \\(\\theta = 90^\\circ\\) the triangle is right-angled, and the third side is the hypotenuse.",
+     "\\[\\sqrt{1.2^2 + 0.9^2} = \\sqrt{2.25}\\]"
+    ],
+    "answer": "1.5 m"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-011",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Two ships leave a port P at the same time. Ship A sails on a bearing of \\(070^\\circ\\) at 18 km per hour. Ship B sails on a bearing of \\(155^\\circ\\) at 24 km per hour. The diagram shows the positions of the ships after 2.5 hours.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 400\" width=\"360\" height=\"400\" role=\"img\" aria-label=\"Port P with a north line. Ship A is 45 km from P on a bearing of 070 degrees. Ship B is 60 km from P on a bearing of 155 degrees. The line AB is dashed.\"><path d=\"M80.0 122.0 L80.0 30.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M80.0 23.0 l-4 9 h8 z\" fill=\"#0b0d12\"/><text x=\"80.0\" y=\"18.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">N</text><path d=\"M80.0 122.0 L274.5 51.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M80.0 122.0 L196.6 372.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M274.5 51.2 L196.6 372.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"6 4\"/><path d=\"M80.0 100.0 L81.1 100.0 L82.2 100.1 L83.3 100.3 L84.4 100.5 L85.5 100.7 L86.6 101.0 L87.7 101.4 L88.7 101.8 L89.7 102.3 L90.7 102.8 L91.7 103.4 L92.6 104.0 L93.5 104.6 L94.4 105.4 L95.2 106.1 L96.0 106.9 L96.7 107.7 L97.5 108.6 L98.1 109.5 L98.7 110.5 L99.3 111.4 L99.8 112.4 L100.3 113.4 L100.7 114.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"105.8\" y=\"61.3\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">70°</text><path d=\"M80.0 78.0 L83.0 78.1 L85.9 78.4 L88.9 78.9 L91.8 79.6 L94.6 80.5 L97.4 81.6 L100.1 82.8 L102.7 84.3 L105.2 85.9 L107.5 87.7 L109.8 89.6 L111.9 91.7 L113.9 93.9 L115.7 96.3 L117.4 98.8 L118.8 101.3 L120.2 104.0 L121.3 106.8 L122.2 109.6 L123.0 112.5 L123.5 115.4 L123.8 118.4 L124.0 121.3 L123.9 124.3 L123.7 127.3 L123.2 130.2 L122.6 133.1 L121.7 136.0 L120.7 138.7 L119.5 141.5 L118.1 144.1 L116.5 146.6 L114.7 149.0 L112.8 151.3 L110.8 153.5 L108.6 155.5 L106.2 157.3 L103.8 159.0 L101.2 160.5 L98.6 161.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"143.8\" y=\"140.4\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">155°</text><circle cx=\"80.0\" cy=\"122.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"274.5\" cy=\"51.2\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"196.6\" cy=\"372.1\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"71.0\" y=\"127.0\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P</text><text x=\"283.5\" y=\"51.2\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"205.6\" y=\"380.1\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"172.8\" y=\"79.4\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">45 km</text><text x=\"114.8\" y=\"263.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">60 km</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the size of angle APB.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the distance of each ship from P after 2.5 hours.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the distance between the two ships after 2.5 hours.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the bearing of ship B from ship A at this time. Give your answer to the nearest degree.",
+    "marks": 3
+   }
+  ],
+  "idea": "Bearings are measured clockwise from north, so the angle between two directions from the same point is the difference of their bearings. That angle and the two distances give a triangle you can solve.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Both bearings are measured from the same north line at P: \\(155 - 70\\)."
+    ],
+    "answer": "\\(85^\\circ\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Distance is speed multiplied by time: \\(18 \\times 2.5\\) and \\(24 \\times 2.5\\)."
+    ],
+    "answer": "\\(\\mathrm{PA} = 45\\) km, \\(\\mathrm{PB} = 60\\) km"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "You know two sides and the angle between them, so use the cosine rule:",
+     "\\[\\mathrm{AB}^2 = 45^2 + 60^2 - 2 \\times 45 \\times 60 \\times \\cos 85^\\circ = 5154.3\\ldots\\]",
+     "\\(\\mathrm{AB} = 71.793\\ldots\\)"
+    ],
+    "answer": "71.8 km"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "First find angle PAB with the sine rule: \\(\\dfrac{\\sin(\\mathrm{P\\hat{A}B})}{60} = \\dfrac{\\sin 85^\\circ}{71.793\\ldots}\\), so \\(\\mathrm{P\\hat{A}B} = 56.36\\ldots^\\circ\\). (It is acute, because the largest angle of the triangle is the \\(85^\\circ\\) at P, opposite the longest side.)",
+     "The bearing of P from A is the reverse of the bearing of A from P: \\(70 + 180 = 250^\\circ\\).",
+     "From A, the direction to B is \\(56.36\\ldots^\\circ\\) anticlockwise from the direction to P, because B is to the south. So the bearing of B from A is \\(250 - 56.36\\ldots = 193.6\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(194^\\circ\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-012",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "In triangle PQR, \\(\\mathrm{PQ} = 6\\) cm, \\(\\mathrm{Q\\hat{P}R} = 45^\\circ\\) and \\(\\mathrm{P\\hat{Q}R} = 75^\\circ\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the size of angle PRQ.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the exact length of [QR]. Give your answer in the form \\(a\\sqrt{b}\\), where \\(a, b \\in \\mathbb{Z}^{+}\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find the exact length of the perpendicular from Q to [PR].",
+    "marks": 2
+   }
+  ],
+  "idea": "The sine rule works with exact values just as well as with decimals. Use the angles whose sines you know exactly, \\(45^\\circ\\) and \\(60^\\circ\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(180 - 45 - 75\\)."
+    ],
+    "answer": "\\(60^\\circ\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "QR is opposite the \\(45^\\circ\\) angle at P, and PQ is opposite the \\(60^\\circ\\) angle at R.",
+     "\\[\\frac{\\mathrm{QR}}{\\sin 45^\\circ} = \\frac{6}{\\sin 60^\\circ}\\]",
+     "\\(\\mathrm{QR} = \\dfrac{6\\sin 45^\\circ}{\\sin 60^\\circ} = 6 \\times \\dfrac{\\sqrt{2}}{2} \\div \\dfrac{\\sqrt{3}}{2} = \\dfrac{6\\sqrt{2}}{\\sqrt{3}}\\).",
+     "Multiply top and bottom by \\(\\sqrt{3}\\): \\(\\dfrac{6\\sqrt{2}\\sqrt{3}}{3} = 2\\sqrt{6}\\)."
+    ],
+    "answer": "\\(\\mathrm{QR} = 2\\sqrt{6}\\) cm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The perpendicular from Q meets [PR] at a right angle. It is opposite the \\(45^\\circ\\) angle at P in a right-angled triangle whose hypotenuse is PQ.",
+     "\\(\\text{length} = \\mathrm{PQ} \\times \\sin 45^\\circ = 6 \\times \\dfrac{\\sqrt{2}}{2}\\)."
+    ],
+    "answer": "\\(3\\sqrt{2}\\) cm"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-013",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "A triangle has sides of length 5 cm, 7 cm and 8 cm."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the angle opposite the side of length 7 cm is \\(60^\\circ\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the exact area of the triangle.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the exact value of the sine of the smallest angle of the triangle.",
+    "marks": 2
+   }
+  ],
+  "idea": "With three sides known, the cosine rule gives any angle. Rearranged for the angle it reads \\(\\cos A = \\dfrac{b^2 + c^2 - a^2}{2bc}\\), where \\(a\\) is the side opposite \\(A\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Let \\(\\theta\\) be the angle opposite the 7 cm side. The other two sides are 5 cm and 8 cm.",
+     "\\[\\cos\\theta = \\frac{5^2 + 8^2 - 7^2}{2 \\times 5 \\times 8} = \\frac{25 + 64 - 49}{80} = \\frac{40}{80} = \\frac{1}{2}\\]",
+     "The angle in a triangle with cosine \\(\\dfrac{1}{2}\\) is \\(60^\\circ\\)."
+    ],
+    "answer": "\\(\\cos\\theta = \\dfrac{1}{2}\\), so \\(\\theta = 60^\\circ\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The \\(60^\\circ\\) angle lies between the sides of length 5 cm and 8 cm.",
+     "\\[\\text{Area} = \\frac{1}{2} \\times 5 \\times 8 \\times \\sin 60^\\circ = 20 \\times \\frac{\\sqrt{3}}{2}\\]"
+    ],
+    "answer": "\\(10\\sqrt{3}\\) cm²"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The smallest angle is opposite the shortest side, 5 cm. Call it \\(\\alpha\\) and use the sine rule with the \\(60^\\circ\\) angle and its opposite side:",
+     "\\[\\frac{\\sin\\alpha}{5} = \\frac{\\sin 60^\\circ}{7}\\]",
+     "\\(\\sin\\alpha = \\dfrac{5}{7} \\times \\dfrac{\\sqrt{3}}{2}\\)."
+    ],
+    "answer": "\\(\\dfrac{5\\sqrt{3}}{14}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-014",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "In triangle ABC, \\(\\mathrm{AB} = 8\\) cm, \\(\\mathrm{AC} = 11\\) cm and \\(\\mathrm{B\\hat{A}C} = 64^\\circ\\). The point D is the midpoint of [BC].",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 290\" width=\"360\" height=\"290\" role=\"img\" aria-label=\"Triangle ABC with AB = 8 cm, AC = 11 cm and angle BAC = 64 degrees. D is the midpoint of BC.\"><path d=\"M106.1 44.4 L40.0 250.0 L320.4 250.0 Z\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M99.4 65.3 L100.3 65.6 L101.3 65.8 L102.3 66.0 L103.4 66.2 L104.4 66.3 L105.4 66.4 L106.4 66.4 L107.4 66.3 L108.5 66.2 L109.5 66.1 L110.5 65.9 L111.5 65.7 L112.5 65.4 L113.4 65.1 L114.4 64.7 L115.3 64.3 L116.3 63.9 L117.2 63.4 L118.0 62.8 L118.9 62.3 L119.7 61.7 L120.5 61.0 L121.2 60.3 L122.0 59.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"115.4\" y=\"86.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">64°</text><circle cx=\"180.2\" cy=\"250.0\" r=\"2.8\" fill=\"#0b0d12\"/><text x=\"106.1\" y=\"35.4\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"32.0\" y=\"266.0\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"328.4\" y=\"266.0\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><text x=\"180.2\" y=\"269.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><text x=\"55.9\" y=\"146.7\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">8 cm</text><text x=\"225.0\" y=\"139.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">11 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find BC.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the size of angle ABC.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find AD.",
+    "marks": 3
+   }
+  ],
+  "idea": "The line AD splits the triangle into two smaller triangles. Once you know a side, a side and the angle between them in one of those triangles, the cosine rule gives AD.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Two sides and the angle between them are known, so use the cosine rule:",
+     "\\[\\mathrm{BC}^2 = 8^2 + 11^2 - 2 \\times 8 \\times 11 \\times \\cos 64^\\circ = 107.84\\ldots\\]",
+     "\\(\\mathrm{BC} = 10.384\\ldots\\)"
+    ],
+    "answer": "10.4 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "All three sides are now known. Use the cosine rule for the angle at B, which is opposite AC:",
+     "\\[\\cos B = \\frac{8^2 + \\mathrm{BC}^2 - 11^2}{2 \\times 8 \\times \\mathrm{BC}} = 0.30601\\ldots\\]",
+     "\\(B = 72.18\\ldots^\\circ\\). Keep the unrounded values of BC and \\(B\\) in your calculator for part (c)."
+    ],
+    "answer": "\\(72.2^\\circ\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "In triangle ABD: \\(\\mathrm{AB} = 8\\), \\(\\mathrm{BD} = \\dfrac{1}{2}\\mathrm{BC} = 5.1924\\ldots\\) and the angle between them is \\(B = 72.18\\ldots^\\circ\\)",
+     "\\[\\begin{aligned}\\mathrm{AD}^2 &= 8^2 + \\mathrm{BD}^2 - 2 \\times 8 \\times \\mathrm{BD} \\times \\cos B\\\\[4pt] &= 65.538\\ldots\\end{aligned}\\]",
+     "\\(\\mathrm{AD} = 8.0955\\ldots\\)"
+    ],
+    "answer": "8.10 cm"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-015",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A drone D hovers above a straight, level road. Two observers, P and Q, stand on the road 240 m apart, one on each side of the drone. The angle of elevation of the drone is \\(50^\\circ\\) from P and \\(40^\\circ\\) from Q.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 250\" width=\"400\" height=\"250\" role=\"img\" aria-label=\"A drone D is above a straight level road between two observers P and Q, who are 240 m apart. The angle of elevation of the drone is 50 degrees from P and 40 degrees from Q. A dashed vertical line joins D to the road.\"><path d=\"M17.4 206.0 L386.6 206.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M46.0 206.0 L174.9 52.4 L358.0 206.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M174.9 52.4 L174.9 206.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M183.9 206.0 L183.9 197.0 L174.9 197.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M74.0 206.0 L74.0 205.0 L73.9 204.0 L73.8 203.0 L73.7 201.9 L73.5 200.9 L73.3 199.9 L73.1 198.9 L72.8 198.0 L72.5 197.0 L72.2 196.0 L71.8 195.1 L71.4 194.2 L70.9 193.3 L70.4 192.4 L69.9 191.5 L69.4 190.6 L68.8 189.8 L68.2 189.0 L67.6 188.2 L66.9 187.4 L66.2 186.6 L65.5 185.9 L64.8 185.2 L64.0 184.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"86.8\" y=\"192.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">50°</text><path d=\"M330.4 182.9 L329.8 183.7 L329.1 184.5 L328.5 185.4 L327.9 186.2 L327.4 187.1 L326.8 188.0 L326.3 188.9 L325.8 189.8 L325.4 190.8 L324.9 191.7 L324.5 192.7 L324.2 193.7 L323.8 194.7 L323.5 195.7 L323.2 196.7 L323.0 197.7 L322.7 198.7 L322.5 199.7 L322.4 200.8 L322.2 201.8 L322.1 202.9 L322.1 203.9 L322.0 205.0 L322.0 206.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"307.3\" y=\"192.5\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">40°</text><circle cx=\"46.0\" cy=\"206.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"358.0\" cy=\"206.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"174.9\" cy=\"52.4\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"42.0\" y=\"226.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P</text><text x=\"362.0\" y=\"226.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Q</text><text x=\"174.9\" y=\"42.4\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><text x=\"202.0\" y=\"226.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">240 m</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that angle PDQ is a right angle.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the distance PD.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the height of the drone above the road.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Show that the height of the drone is exactly \\(120\\sin 100^\\circ\\) metres.",
+    "marks": 2
+   }
+  ],
+  "idea": "Because the two angles of elevation add up to \\(90^\\circ\\), triangle PDQ is right-angled at D. That makes PQ its hypotenuse, so ordinary sine and cosine ratios are enough.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The angles of triangle PDQ add up to \\(180^\\circ\\): \\(\\mathrm{P\\hat{D}Q} = 180 - 50 - 40 = 90^\\circ\\)."
+    ],
+    "answer": "\\(\\mathrm{P\\hat{D}Q} = 90^\\circ\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "In the right-angled triangle PDQ, PQ is the hypotenuse and PD is adjacent to the \\(50^\\circ\\) angle at P.",
+     "\\(\\mathrm{PD} = 240\\cos 50^\\circ = 154.26\\ldots\\)"
+    ],
+    "answer": "154 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Drop a vertical line from D to the road. It is opposite the \\(50^\\circ\\) angle at P in a right-angled triangle with hypotenuse PD.",
+     "\\(\\text{height} = \\mathrm{PD}\\sin 50^\\circ = 154.26\\ldots \\times \\sin 50^\\circ = 118.17\\ldots\\)"
+    ],
+    "answer": "118 m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Put parts (b) and (c) together without rounding: \\(\\text{height} = 240\\cos 50^\\circ \\sin 50^\\circ\\).",
+     "The double angle identity \\(\\sin 2\\theta = 2\\sin\\theta\\cos\\theta\\) gives \\(\\sin 50^\\circ\\cos 50^\\circ = \\dfrac{1}{2}\\sin 100^\\circ\\).",
+     "So the height is \\(240 \\times \\dfrac{1}{2}\\sin 100^\\circ = 120\\sin 100^\\circ\\)."
+    ],
+    "answer": "\\(240\\sin 50^\\circ\\cos 50^\\circ = 120\\sin 100^\\circ\\) (shown)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-016",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "In triangle ABC, \\(\\mathrm{B\\hat{A}C} = 30^\\circ\\), \\(\\mathrm{AB} = 10\\) cm and \\(\\mathrm{BC} = a\\) cm."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(a\\) for which angle ACB is a right angle.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Explain why no triangle exists when \\(a = 4\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Given that \\(a = 7\\), find the two possible sizes of angle ACB.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Given that \\(a = 12\\), show that only one triangle is possible.",
+    "marks": 2
+   }
+  ],
+  "idea": "When you know two sides and an angle that is not between them, the sine rule gives \\(\\sin C\\), and a value of \\(\\sin C\\) can come from an acute angle or an obtuse one. Whether there are no, one or two triangles depends on that value and on the angle sum.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "If the angle at C is \\(90^\\circ\\), then AB is the hypotenuse and BC is opposite the \\(30^\\circ\\) angle: \\(\\sin 30^\\circ = \\dfrac{a}{10}\\).",
+     "\\(a = 10 \\times \\dfrac{1}{2}\\)."
+    ],
+    "answer": "\\(a = 5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The sine rule gives \\(\\dfrac{\\sin C}{10} = \\dfrac{\\sin 30^\\circ}{a}\\), so \\(\\sin C = \\dfrac{5}{a}\\).",
+     "With \\(a = 4\\) this is \\(\\sin C = 1.25\\). The sine of an angle is never greater than 1, so there is no such angle.",
+     "Geometrically: the shortest distance from B to the line through A and C is 5 cm, from part (a), and a side of 4 cm cannot reach it."
+    ],
+    "answer": "\\(\\sin C = \\dfrac{5}{4} > 1\\), which is impossible, so no triangle exists"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\sin C = \\dfrac{5}{7}\\). The acute angle is \\(\\sin^{-1}\\left(\\dfrac{5}{7}\\right) = 45.58\\ldots^\\circ\\)",
+     "The obtuse angle with the same sine is \\(180 - 45.58\\ldots = 134.41\\ldots^\\circ\\)",
+     "Both are possible: in each case the angles at A and C add up to less than \\(180^\\circ\\), leaving room for the angle at B."
+    ],
+    "answer": "\\(45.6^\\circ\\) or \\(134^\\circ\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\sin C = \\dfrac{5}{12}\\), which gives \\(C = 24.62\\ldots^\\circ\\) or \\(C = 180 - 24.62\\ldots = 155.37\\ldots^\\circ\\)",
+     "The obtuse value is impossible, because \\(155.37\\ldots + 30 > 180\\). Only the acute value gives a triangle.",
+     "Another way to see it: BC is longer than AB, so the angle at A must be larger than the angle at C. The angle at C is therefore less than \\(30^\\circ\\)."
+    ],
+    "answer": "The obtuse value \\(155.4^\\circ\\) would make the angle sum more than \\(180^\\circ\\), so only \\(C = 24.6^\\circ\\) is possible (shown)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-017",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 9,
+  "stem": [
+   "A triangle has sides of length \\(x\\) cm, \\((x + 2)\\) cm and \\((x + 4)\\) cm. The angle between the sides of length \\(x\\) cm and \\((x + 2)\\) cm is \\(120^\\circ\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(x^2 - x - 6 = 0\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(x\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the exact area of the triangle.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the exact value of the sine of the smallest angle of the triangle.",
+    "marks": 2
+   }
+  ],
+  "idea": "The cosine rule is an equation. When the sides contain an unknown, substitute them all and solve the equation that comes out.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The side of length \\((x + 4)\\) is opposite the \\(120^\\circ\\) angle. Use the cosine rule with \\(\\cos 120^\\circ = -\\dfrac{1}{2}\\):",
+     "\\[(x + 4)^2 = x^2 + (x + 2)^2 - 2x(x + 2)\\left(-\\frac{1}{2}\\right)\\]",
+     "The last term becomes \\(+\\,x(x + 2)\\). Expand both sides: \\(x^2 + 8x + 16 = x^2 + x^2 + 4x + 4 + x^2 + 2x\\).",
+     "So \\(x^2 + 8x + 16 = 3x^2 + 6x + 4\\), which gives \\(0 = 2x^2 - 2x - 12\\). Divide by 2."
+    ],
+    "answer": "\\(x^2 - x - 6 = 0\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Factorise: \\((x - 3)(x + 2) = 0\\), so \\(x = 3\\) or \\(x = -2\\). A length must be positive."
+    ],
+    "answer": "\\(x = 3\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The sides are 3 cm, 5 cm and 7 cm, and the \\(120^\\circ\\) angle is between the sides of 3 cm and 5 cm.",
+     "\\[\\text{Area} = \\frac{1}{2} \\times 3 \\times 5 \\times \\sin 120^\\circ = \\frac{15}{2} \\times \\frac{\\sqrt{3}}{2}\\]"
+    ],
+    "answer": "\\(\\dfrac{15\\sqrt{3}}{4}\\) cm²"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The smallest angle is opposite the shortest side, 3 cm. Call it \\(\\alpha\\) and use the sine rule with the \\(120^\\circ\\) angle, which is opposite the 7 cm side:",
+     "\\[\\frac{\\sin\\alpha}{3} = \\frac{\\sin 120^\\circ}{7}\\]",
+     "\\(\\sin\\alpha = \\dfrac{3}{7} \\times \\dfrac{\\sqrt{3}}{2}\\)."
+    ],
+    "answer": "\\(\\dfrac{3\\sqrt{3}}{14}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-018",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 10,
+  "stem": [
+   "A ship leaves a point P and sails in a straight line on a bearing of \\(060^\\circ\\) at a constant speed of 20 km per hour. A lighthouse L is 30 km from P on a bearing of \\(095^\\circ\\).",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 300\" width=\"420\" height=\"300\" role=\"img\" aria-label=\"Point P with a north line. The course of the ship is a straight line from P on a bearing of 060 degrees. The lighthouse L is 30 km from P on a bearing of 095 degrees.\"><path d=\"M44.0 232.0 L44.0 68.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M44.0 61.0 l-4 9 h8 z\" fill=\"#0b0d12\"/><text x=\"44.0\" y=\"56.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">N</text><path d=\"M44.0 232.0 L356.5 51.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M44.0 232.0 L289.1 253.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"6 4\"/><path d=\"M356.5 51.6 l-11 -1 l5 9 z\" fill=\"#0b0d12\" transform=\"rotate(5.0 356.5 51.6)\"/><path d=\"M44.0 208.0 L45.0 208.0 L46.1 208.1 L47.1 208.2 L48.2 208.4 L49.2 208.6 L50.2 208.8 L51.2 209.1 L52.2 209.4 L53.2 209.8 L54.1 210.2 L55.1 210.7 L56.0 211.2 L56.9 211.8 L57.8 212.3 L58.6 213.0 L59.4 213.6 L60.2 214.3 L61.0 215.0 L61.7 215.8 L62.4 216.6 L63.0 217.4 L63.7 218.2 L64.2 219.1 L64.8 220.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"63.5\" y=\"203.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">60°</text><path d=\"M44.0 166.0 L46.7 166.1 L49.5 166.2 L52.2 166.5 L54.9 166.9 L57.6 167.4 L60.2 168.0 L62.9 168.8 L65.5 169.6 L68.1 170.5 L70.6 171.6 L73.1 172.7 L75.5 174.0 L77.9 175.4 L80.2 176.8 L82.4 178.4 L84.6 180.0 L86.8 181.7 L88.8 183.5 L90.8 185.4 L92.7 187.4 L94.5 189.5 L96.2 191.6 L97.8 193.8 L99.4 196.1 L100.8 198.4 L102.1 200.8 L103.4 203.2 L104.5 205.7 L105.6 208.2 L106.5 210.8 L107.3 213.4 L108.0 216.0 L108.6 218.7 L109.1 221.4 L109.5 224.1 L109.8 226.8 L110.0 229.6 L110.0 232.3 L109.9 235.0 L109.7 237.8\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"121.3\" y=\"222.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">95°</text><circle cx=\"44.0\" cy=\"232.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"289.1\" cy=\"253.4\" r=\"4\" fill=\"#0b0d12\"/><text x=\"35.0\" y=\"238.0\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P</text><text x=\"299.1\" y=\"258.4\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">L</text><text x=\"165.1\" y=\"264.7\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">30 km</text><text x=\"247.0\" y=\"95.0\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">course of the ship</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the size of the angle between the course of the ship and [PL].",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the shortest distance between the ship and the lighthouse during the journey.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the time the ship takes to reach the point where it is closest to the lighthouse. Give your answer to the nearest minute.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The light can be seen from the ship whenever the ship is within 22 km of the lighthouse. Find the length of time for which the light can be seen from the ship. Give your answer to the nearest minute.",
+    "marks": 4
+   }
+  ],
+  "idea": "The ship is closest to the lighthouse at the foot of the perpendicular from L to its course. That perpendicular creates right-angled triangles, and all four parts use them.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Both bearings are measured from north at P: \\(95 - 60\\)."
+    ],
+    "answer": "\\(35^\\circ\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Let F be the point on the course closest to L, so that LF is perpendicular to the course. Triangle PFL has a right angle at F, hypotenuse \\(\\mathrm{PL} = 30\\) and the \\(35^\\circ\\) angle at P.",
+     "\\(\\mathrm{LF} = 30\\sin 35^\\circ = 17.207\\ldots\\)"
+    ],
+    "answer": "17.2 km"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "In the same triangle, \\(\\mathrm{PF} = 30\\cos 35^\\circ = 24.574\\ldots\\) km.",
+     "Time is distance divided by speed: \\(\\dfrac{24.574\\ldots}{20} = 1.2287\\ldots\\) hours.",
+     "In minutes: \\(1.2287\\ldots \\times 60 = 73.72\\ldots\\)"
+    ],
+    "answer": "74 minutes"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Let G be a point on the course that is exactly 22 km from L. Triangle LFG has a right angle at F, hypotenuse \\(\\mathrm{LG} = 22\\) and side \\(\\mathrm{LF} = 17.207\\ldots\\)",
+     "\\(\\mathrm{FG} = \\sqrt{22^2 - 17.207\\ldots^2} = 13.707\\ldots\\) km.",
+     "There is one such point on each side of F, so the ship is within range along a stretch of length \\(2 \\times 13.707\\ldots = 27.415\\ldots\\) km. (At P the ship is 30 km from L, so it starts out of range.)",
+     "Time: \\(\\dfrac{27.415\\ldots}{20} = 1.3707\\ldots\\) hours, which is \\(82.24\\ldots\\) minutes."
+    ],
+    "answer": "82 minutes"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-019",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "A circular pizza of radius 18 cm is cut into 8 equal slices. Each slice is a sector of the circle."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the angle of each slice, in radians.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the length of the curved edge of one slice, in terms of \\(\\pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the area of one slice, in terms of \\(\\pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Write down the perimeter of one slice.",
+    "marks": 1
+   }
+  ],
+  "idea": "With the angle \\(\\theta\\) in radians, the two sector formulas are short: arc length \\(= r\\theta\\) and area \\(= \\frac{1}{2}r^2\\theta\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "A full turn is \\(2\\pi\\) radians, shared equally between 8 slices: \\(\\dfrac{2\\pi}{8}\\)."
+    ],
+    "answer": "\\(\\dfrac{\\pi}{4}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\[\\text{arc} = r\\theta = 18 \\times \\frac{\\pi}{4}\\]"
+    ],
+    "answer": "\\(\\dfrac{9\\pi}{2}\\) cm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\[\\text{area} = \\frac{1}{2}r^2\\theta = \\frac{1}{2} \\times 18^2 \\times \\frac{\\pi}{4} = \\frac{324\\pi}{8}\\]",
+     "Check: the whole pizza has area \\(\\pi \\times 18^2 = 324\\pi\\), and one eighth of that is \\(\\dfrac{81\\pi}{2}\\)."
+    ],
+    "answer": "\\(\\dfrac{81\\pi}{2}\\) cm²"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The edge of a slice is two straight sides, each a radius, and the curved edge: \\(18 + 18 + \\dfrac{9\\pi}{2}\\)."
+    ],
+    "answer": "\\(36 + \\dfrac{9\\pi}{2}\\) cm"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-020",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A pendulum is a small bob on a string of length 80 cm, hanging from a fixed point O. As it swings between its two extreme positions, A and B, the bob moves along an arc of length 28 cm.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 260 300\" width=\"260\" height=\"300\" role=\"img\" aria-label=\"A pendulum hanging from a fixed point O. The string is 80 cm long and is shown in its two extreme positions, OA and OB. The bob moves along the arc AB, which is 28 cm long.\"><path d=\"M61.8 30.0 L198.2 30.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M130.0 30.0 L86.8 274.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M130.0 30.0 L173.2 274.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M86.8 274.2 L89.7 274.7 L92.5 275.2 L95.4 275.6 L98.3 276.0 L101.1 276.3 L104.0 276.6 L106.9 276.9 L109.8 277.2 L112.7 277.4 L115.5 277.6 L118.4 277.7 L121.3 277.8 L124.2 277.9 L127.1 278.0 L130.0 278.0 L132.9 278.0 L135.8 277.9 L138.7 277.8 L141.6 277.7 L144.5 277.6 L147.3 277.4 L150.2 277.2 L153.1 276.9 L156.0 276.6 L158.9 276.3 L161.7 276.0 L164.6 275.6 L167.5 275.2 L170.3 274.7 L173.2 274.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><circle cx=\"130.0\" cy=\"30.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"86.8\" cy=\"274.2\" r=\"6\" fill=\"#0b0d12\"/><circle cx=\"173.2\" cy=\"274.2\" r=\"6\" fill=\"#0b0d12\"/><text x=\"142.0\" y=\"24.0\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">O</text><text x=\"74.8\" y=\"279.2\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"185.2\" y=\"279.2\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"177.2\" y=\"152.6\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">80 cm</text><text x=\"130.0\" y=\"300.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">28 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the angle AOB, in radians.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write the angle AOB in degrees.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the area of the sector AOB swept out by the string.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the straight-line distance AB.",
+    "marks": 2
+   }
+  ],
+  "idea": "The formula arc length \\(= r\\theta\\) can be turned round: if you know the arc and the radius, the angle in radians is their quotient.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The string is the radius, so \\(28 = 80\\theta\\)."
+    ],
+    "answer": "\\(\\theta = 0.35\\) radians"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Multiply by \\(\\dfrac{180}{\\pi}\\): \\(0.35 \\times \\dfrac{180}{\\pi} = 20.05\\ldots\\)"
+    ],
+    "answer": "\\(20.1^\\circ\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\[\\text{area} = \\frac{1}{2}r^2\\theta = \\frac{1}{2} \\times 80^2 \\times 0.35\\]"
+    ],
+    "answer": "1120 cm²"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Triangle AOB is isosceles. The line from O to the midpoint of [AB] splits it into two right-angled triangles, each with hypotenuse 80 and angle \\(\\dfrac{0.35}{2} = 0.175\\) radians at O.",
+     "Half of AB is \\(80\\sin 0.175\\), so \\(\\mathrm{AB} = 160\\sin 0.175 = 27.857\\ldots\\) Make sure your calculator is in radians.",
+     "The chord is slightly shorter than the 28 cm arc, as it should be."
+    ],
+    "answer": "27.9 cm"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-021",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "A piece of wire of length 20 cm is bent into the shape of a sector of a circle, with radius \\(r\\) cm and angle \\(\\theta\\) radians. The wire forms the whole perimeter of the sector."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\theta = \\dfrac{20 - 2r}{r}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the area of the sector, \\(A\\) cm², is given by \\(A = 10r - r^2\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the maximum area of the sector, and the value of \\(\\theta\\) that gives this area.",
+    "marks": 3
+   }
+  ],
+  "idea": "The perimeter of a sector is two radii and an arc. Using the fixed perimeter to remove \\(\\theta\\) leaves the area as a quadratic in \\(r\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The perimeter is two straight edges and the arc: \\(r + r + r\\theta = 20\\).",
+     "So \\(r\\theta = 20 - 2r\\). Divide by \\(r\\)."
+    ],
+    "answer": "\\(\\theta = \\dfrac{20 - 2r}{r}\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(A = \\dfrac{1}{2}r^2\\theta = \\dfrac{1}{2}r^2 \\times \\dfrac{20 - 2r}{r} = \\dfrac{1}{2}r(20 - 2r)\\).",
+     "Expand: \\(10r - r^2\\)."
+    ],
+    "answer": "\\(A = 10r - r^2\\) (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Complete the square: \\(10r - r^2 = -(r^2 - 10r) = -(r - 5)^2 + 25\\).",
+     "The largest value is 25, when \\(r = 5\\).",
+     "Then \\(\\theta = \\dfrac{20 - 10}{5} = 2\\)."
+    ],
+    "answer": "Maximum area 25 cm², when \\(\\theta = 2\\) radians (and \\(r = 5\\))"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-022",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "A sector of a circle has area 48 cm² and arc length 12 cm."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the radius of the sector and its angle in radians.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the perimeter of the sector.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "A second sector has the same radius and an angle twice as large. Write down its area.",
+    "marks": 1
+   }
+  ],
+  "idea": "The two sector formulas share the product \\(r\\theta\\). Writing the area as \\(\\frac{1}{2}r \\times (r\\theta)\\) lets you use the arc length directly.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The facts are \\(r\\theta = 12\\) and \\(\\dfrac{1}{2}r^2\\theta = 48\\).",
+     "Write the area as \\(\\dfrac{1}{2}r \\times (r\\theta) = \\dfrac{1}{2}r \\times 12 = 6r\\). So \\(6r = 48\\) and \\(r = 8\\).",
+     "Then \\(8\\theta = 12\\), so \\(\\theta = 1.5\\).",
+     "Check: \\(\\dfrac{1}{2} \\times 8^2 \\times 1.5 = 48\\). Correct."
+    ],
+    "answer": "\\(r = 8\\) cm, \\(\\theta = 1.5\\) radians"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Two radii and the arc: \\(8 + 8 + 12\\)."
+    ],
+    "answer": "28 cm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "For a fixed radius the area is proportional to the angle, so doubling the angle doubles the area."
+    ],
+    "answer": "96 cm²"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-023",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A lake is a circle of radius 300 m, with centre O. Two jetties, A and B, are on the edge of the lake, and angle AOB is 1.2 radians. Tara swims in a straight line from A to B at 1.2 m per second. At the same moment Ben starts to walk from A to B along the shorter path round the edge of the lake, at 1.4 m per second."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the distance that Ben walks.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the distance that Tara swims.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Determine who reaches B first.",
+    "marks": 3
+   }
+  ],
+  "idea": "Two points on a circle are joined by an arc and by a chord. The arc comes from \\(r\\theta\\); the chord comes from splitting the isosceles triangle AOB into two right-angled triangles.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Ben walks along the arc: \\(r\\theta = 300 \\times 1.2\\)."
+    ],
+    "answer": "360 m"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Tara swims along the chord [AB]. Triangle AOB is isosceles with two sides of 300 m. The line from O to the midpoint of [AB] makes two right-angled triangles, each with angle 0.6 radians at O.",
+     "Half of the chord is \\(300\\sin 0.6\\), so \\(\\mathrm{AB} = 600\\sin 0.6 = 338.78\\ldots\\) (calculator in radians).",
+     "The cosine rule gives the same value: \\(\\mathrm{AB}^2 = 300^2 + 300^2 - 2 \\times 300^2\\cos 1.2\\)."
+    ],
+    "answer": "339 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Time is distance divided by speed.",
+     "Tara: \\(\\dfrac{338.78\\ldots}{1.2} = 282.3\\ldots\\) seconds.",
+     "Ben: \\(\\dfrac{360}{1.4} = 257.1\\ldots\\) seconds.",
+     "Ben has further to go, but he is enough faster to arrive first."
+    ],
+    "answer": "Ben reaches B first (about 257 s, against about 282 s for Tara)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-024",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "Three coins, each a circle of radius 4 cm, lie flat on a table so that each coin touches the other two. The diagram shows the coins and the triangle formed by joining their centres.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 350 310\" width=\"350\" height=\"310\" role=\"img\" aria-label=\"Three equal circles, each of radius 4 cm. Each circle touches the other two. Their centres are joined by dashed lines to make a triangle. The small region between the three circles is shaded.\"><path d=\"M168.0 232.0 L168.1 227.4 L168.6 222.9 L169.3 218.3 L170.4 213.9 L171.7 209.5 L173.3 205.2 L175.2 201.0 L177.4 197.0 L179.8 193.1 L182.5 189.4 L185.4 185.8 L188.5 182.5 L191.8 179.4 L195.4 176.5 L199.1 173.8 L203.0 171.4 L203.0 171.4 L199.0 173.5 L194.8 175.4 L190.5 177.0 L186.1 178.4 L181.7 179.4 L177.1 180.2 L172.6 180.6 L168.0 180.8 L163.4 180.6 L158.9 180.2 L154.3 179.4 L149.9 178.4 L145.5 177.0 L141.2 175.4 L137.0 173.5 L133.0 171.4 L133.0 171.4 L136.9 173.8 L140.6 176.5 L144.2 179.4 L147.5 182.5 L150.6 185.8 L153.5 189.4 L156.2 193.1 L158.6 197.0 L160.8 201.0 L162.7 205.2 L164.3 209.5 L165.6 213.9 L166.7 218.3 L167.4 222.9 L167.9 227.4 L168.0 232.0 Z\" fill=\"#b9c8e8\" stroke=\"#0b0d12\" stroke-width=\"0.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"98.0\" cy=\"232.0\" r=\"70.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\"/><circle cx=\"238.0\" cy=\"232.0\" r=\"70.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\"/><circle cx=\"168.0\" cy=\"110.8\" r=\"70.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\"/><path d=\"M98.0 232.0 L238.0 232.0 L168.0 110.8 Z\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><circle cx=\"98.0\" cy=\"232.0\" r=\"2.8\" fill=\"#0b0d12\"/><circle cx=\"238.0\" cy=\"232.0\" r=\"2.8\" fill=\"#0b0d12\"/><circle cx=\"168.0\" cy=\"110.8\" r=\"2.8\" fill=\"#0b0d12\"/><text x=\"63.0\" y=\"250.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4 cm</text><path d=\"M98.0 232.0 L28.0 232.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Explain why the triangle joining the centres is equilateral with side 8 cm.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the exact area of this triangle.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the exact area of the shaded region between the three coins.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the exact perimeter of the shaded region.",
+    "marks": 2
+   }
+  ],
+  "idea": "The triangle of centres is the shaded gap plus three identical sectors, one cut from each coin. Take the three sectors away from the triangle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "When two circles touch, the distance between their centres is the sum of their radii: \\(4 + 4 = 8\\) cm. This is true for each pair of coins, so all three sides of the triangle are 8 cm."
+    ],
+    "answer": "Each side joins the centres of two touching circles, so each side is \\(4 + 4 = 8\\) cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Each angle of an equilateral triangle is \\(60^\\circ\\).",
+     "\\[\\text{Area} = \\frac{1}{2} \\times 8 \\times 8 \\times \\sin 60^\\circ = 32 \\times \\frac{\\sqrt{3}}{2}\\]"
+    ],
+    "answer": "\\(16\\sqrt{3}\\) cm²"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Inside the triangle, each coin covers a sector of radius 4 cm and angle \\(60^\\circ = \\dfrac{\\pi}{3}\\) radians.",
+     "One sector has area \\(\\dfrac{1}{2} \\times 4^2 \\times \\dfrac{\\pi}{3} = \\dfrac{8\\pi}{3}\\), so the three together have area \\(8\\pi\\).",
+     "The shaded region is what is left of the triangle: \\(16\\sqrt{3} - 8\\pi\\). (This is about 2.58 cm², a small positive number, as the diagram suggests.)"
+    ],
+    "answer": "\\(16\\sqrt{3} - 8\\pi\\) cm²"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The shaded region is bounded by three arcs, one from each coin. Each arc has radius 4 cm and angle \\(\\dfrac{\\pi}{3}\\): length \\(4 \\times \\dfrac{\\pi}{3}\\).",
+     "Three arcs: \\(3 \\times \\dfrac{4\\pi}{3}\\)."
+    ],
+    "answer": "\\(4\\pi\\) cm"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-025",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "The diagram shows a circle with centre O and radius 6 cm. The point P is outside the circle, with \\(\\mathrm{OP} = 10\\) cm. The two tangents from P touch the circle at A and B. A tangent is perpendicular to the radius at the point where it touches the circle.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 290\" width=\"400\" height=\"290\" role=\"img\" aria-label=\"A circle with centre O and radius 6 cm. P is a point outside the circle with OP = 10 cm. The two tangents from P touch the circle at A and B. The radii OA and OB are drawn and meet the tangents at right angles. The region between the two tangents and the nearer arc AB is shaded.\"><path d=\"M350.0 145.0 L222.0 49.0 L222.0 49.0 L226.4 52.4 L230.6 56.1 L234.6 59.9 L238.5 63.9 L242.1 68.1 L245.6 72.5 L248.9 77.0 L251.9 81.6 L254.7 86.4 L257.3 91.3 L259.7 96.4 L261.8 101.5 L263.7 106.7 L265.4 112.0 L266.8 117.4 L267.9 122.9 L268.8 128.4 L269.5 133.9 L269.9 139.4 L270.0 145.0 L269.9 150.6 L269.5 156.1 L268.8 161.6 L267.9 167.1 L266.8 172.6 L265.4 178.0 L263.7 183.3 L261.8 188.5 L259.7 193.6 L257.3 198.7 L254.7 203.6 L251.9 208.4 L248.9 213.0 L245.6 217.5 L242.1 221.9 L238.5 226.1 L234.6 230.1 L230.6 233.9 L226.4 237.6 L222.0 241.0 L350.0 145.0 Z\" fill=\"#b9c8e8\" stroke=\"#0b0d12\" stroke-width=\"0.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"150.0\" cy=\"145.0\" r=\"120.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\"/><path d=\"M350.0 145.0 L222.0 49.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M350.0 145.0 L222.0 241.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M150.0 145.0 L222.0 49.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M150.0 145.0 L222.0 241.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M150.0 145.0 L350.0 145.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M216.6 56.2 L223.8 61.6 L229.2 54.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M216.6 233.8 L223.8 228.4 L229.2 235.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"150.0\" cy=\"145.0\" r=\"2.8\" fill=\"#0b0d12\"/><circle cx=\"350.0\" cy=\"145.0\" r=\"2.8\" fill=\"#0b0d12\"/><text x=\"141.0\" y=\"150.0\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">O</text><text x=\"359.0\" y=\"150.0\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P</text><text x=\"224.0\" y=\"39.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"224.0\" y=\"261.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"170.0\" y=\"90.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6 cm</text><text x=\"234.0\" y=\"161.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">10 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find PA.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that angle AOB is 1.855 radians, correct to four significant figures.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the area of the shaded region, which is bounded by [PA], [PB] and the minor arc AB.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the perimeter of the shaded region.",
+    "marks": 2
+   }
+  ],
+  "idea": "The radii OA and OB meet the tangents at right angles, so OAPB is made of two equal right-angled triangles. The shaded region is that shape with the sector AOB removed.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Triangle OAP has a right angle at A, with hypotenuse \\(\\mathrm{OP} = 10\\) and \\(\\mathrm{OA} = 6\\): \\(\\mathrm{PA} = \\sqrt{10^2 - 6^2} = \\sqrt{64}\\)."
+    ],
+    "answer": "8 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "In triangle OAP, \\(\\cos(\\mathrm{A\\hat{O}P}) = \\dfrac{6}{10}\\), so \\(\\mathrm{A\\hat{O}P} = \\cos^{-1}(0.6) = 0.92729\\ldots\\) radians.",
+     "Triangle OBP is the mirror image of triangle OAP, so angle AOB is twice this: \\(2 \\times 0.92729\\ldots = 1.8545\\ldots\\)",
+     "To four significant figures this is 1.855."
+    ],
+    "answer": "\\(\\mathrm{A\\hat{O}B} = 2\\cos^{-1}(0.6) = 1.8545\\ldots \\approx 1.855\\) radians (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The quadrilateral OAPB is two right-angled triangles, each with area \\(\\dfrac{1}{2} \\times 6 \\times 8 = 24\\) cm². Its area is 48 cm².",
+     "The sector AOB has area \\(\\dfrac{1}{2} \\times 6^2 \\times 1.8545\\ldots = 33.382\\ldots\\) cm².",
+     "Shaded area: \\(48 - 33.382\\ldots = 14.617\\ldots\\)"
+    ],
+    "answer": "14.6 cm²"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The boundary is the two tangents and the arc AB. The arc has length \\(6 \\times 1.8545\\ldots = 11.127\\ldots\\) cm.",
+     "\\(8 + 8 + 11.127\\ldots = 27.127\\ldots\\)"
+    ],
+    "answer": "27.1 cm"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-026",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Find the exact value of each of the following."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "\\(\\sin 150^\\circ\\)",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "\\(\\cos 225^\\circ\\)",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "\\(\\tan 300^\\circ\\)",
+    "marks": 2
+   }
+  ],
+  "idea": "Every angle has a related acute angle, measured to the nearest part of the \\(x\\)-axis. The trigonometric ratio has the same size as for that acute angle, and the quadrant gives the sign.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(150^\\circ\\) is in the second quadrant, \\(30^\\circ\\) short of \\(180^\\circ\\). Sine is positive there.",
+     "\\(\\sin 150^\\circ = \\sin 30^\\circ\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{2}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(225^\\circ\\) is in the third quadrant, \\(45^\\circ\\) past \\(180^\\circ\\). Cosine is negative there.",
+     "\\(\\cos 225^\\circ = -\\cos 45^\\circ\\)."
+    ],
+    "answer": "\\(-\\dfrac{\\sqrt{2}}{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(300^\\circ\\) is in the fourth quadrant, \\(60^\\circ\\) short of \\(360^\\circ\\). Tangent is negative there.",
+     "\\(\\tan 300^\\circ = -\\tan 60^\\circ\\)."
+    ],
+    "answer": "\\(-\\sqrt{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-027",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The point \\(\\mathrm{P}(-0.6,\\,0.8)\\) lies on the unit circle. The angle \\(\\theta\\) is measured anticlockwise from the positive \\(x\\)-axis to [OP].",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 320\" width=\"330\" height=\"320\" role=\"img\" aria-label=\"The unit circle with centre at the origin O, drawn on x and y axes. The point P with coordinates (-0.6, 0.8) lies on the circle, in the second quadrant. The angle theta is measured anticlockwise from the positive x-axis to the radius OP.\"><path d=\"M19.4 162.0 L312.8 162.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M165.0 307.6 L165.0 14.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M318.8 162.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M165.0 8.2 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"316.8\" y=\"180.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"153.0\" y=\"12.2\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><circle cx=\"165.0\" cy=\"162.0\" r=\"112.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\"/><path d=\"M165.0 162.0 L97.8 72.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M191.9 162.0 L191.8 160.0 L191.6 158.0 L191.2 156.1 L190.7 154.2 L190.1 152.3 L189.3 150.5 L188.4 148.7 L187.3 147.0 L186.2 145.4 L184.9 143.9 L183.5 142.5 L182.0 141.2 L180.4 140.0 L178.8 138.9 L177.0 138.0 L175.2 137.1 L173.4 136.5 L171.4 135.9 L169.5 135.5 L167.5 135.2 L165.6 135.1 L163.6 135.2 L161.6 135.3 L159.6 135.7 L157.7 136.1 L155.8 136.7 L154.0 137.5 L152.2 138.4 L150.5 139.4 L148.9 140.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"187.4\" y=\"128.4\" text-anchor=\"middle\" font-size=\"17\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">θ</tspan></text><circle cx=\"97.8\" cy=\"72.4\" r=\"4\" fill=\"#0b0d12\"/><text x=\"89.8\" y=\"63.4\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P(−0.6, 0.8)</text><text x=\"157.0\" y=\"179.0\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">O</text><text x=\"285.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><text x=\"41.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−1</text><text x=\"175.0\" y=\"44.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><text x=\"179.0\" y=\"290.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−1</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the value of \\(\\cos\\theta\\) and the value of \\(\\sin\\theta\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(\\tan\\theta\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Write down the coordinates of the point on the unit circle that corresponds to the angle \\(\\theta + \\pi\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Write down the coordinates of the point on the unit circle that corresponds to the angle \\(-\\theta\\).",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Write down the value of \\(\\sin(\\pi - \\theta)\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "On the unit circle, the point at angle \\(\\theta\\) has coordinates \\((\\cos\\theta,\\ \\sin\\theta)\\). Symmetries of the circle then give the values for related angles.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The \\(x\\)-coordinate of P is \\(\\cos\\theta\\) and the \\(y\\)-coordinate is \\(\\sin\\theta\\)."
+    ],
+    "answer": "\\(\\cos\\theta = -0.6,\\quad \\sin\\theta = 0.8\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta} = \\dfrac{0.8}{-0.6}\\)."
+    ],
+    "answer": "\\(-\\dfrac{4}{3}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Adding \\(\\pi\\) is a half-turn about O, which takes every point to the opposite end of its diameter. Both coordinates change sign."
+    ],
+    "answer": "\\((0.6,\\,-0.8)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The angle \\(-\\theta\\) is measured the same amount clockwise, so the point is the reflection of P in the \\(x\\)-axis. Only the \\(y\\)-coordinate changes sign."
+    ],
+    "answer": "\\((-0.6,\\,-0.8)\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The angle \\(\\pi - \\theta\\) gives the reflection of P in the \\(y\\)-axis, the point \\((0.6,\\,0.8)\\). Its \\(y\\)-coordinate is the same as that of P."
+    ],
+    "answer": "\\(0.8\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-028",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\dfrac{1 - \\cos 2\\theta}{\\sin 2\\theta} = \\tan\\theta\\), where \\(\\sin 2\\theta \\neq 0\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence find the exact value of \\(\\tan 15^\\circ\\). Give your answer in the form \\(a - \\sqrt{b}\\), where \\(a, b \\in \\mathbb{Z}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The identity \\(\\cos 2\\theta = 1 - 2\\sin^2\\theta\\) is the one to choose here, because the 1 then cancels and leaves a single term on top.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Start with the left-hand side. Use \\(\\cos 2\\theta = 1 - 2\\sin^2\\theta\\) on top and \\(\\sin 2\\theta = 2\\sin\\theta\\cos\\theta\\) underneath:",
+     "\\[\\frac{1 - (1 - 2\\sin^2\\theta)}{2\\sin\\theta\\cos\\theta} = \\frac{2\\sin^2\\theta}{2\\sin\\theta\\cos\\theta}\\]",
+     "Cancel \\(2\\sin\\theta\\) from top and bottom: \\(\\dfrac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta\\)."
+    ],
+    "answer": "\\(\\dfrac{1 - \\cos 2\\theta}{\\sin 2\\theta} = \\dfrac{2\\sin^2\\theta}{2\\sin\\theta\\cos\\theta} = \\tan\\theta\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Put \\(\\theta = 15^\\circ\\), so that \\(2\\theta = 30^\\circ\\), an angle with known exact values.",
+     "\\[\\tan 15^\\circ = \\frac{1 - \\cos 30^\\circ}{\\sin 30^\\circ} = \\frac{1 - \\frac{\\sqrt{3}}{2}}{\\frac{1}{2}}\\]",
+     "Dividing by \\(\\dfrac{1}{2}\\) is the same as multiplying by 2: \\(2 - \\sqrt{3}\\). (This is about 0.268, a sensible value for the tangent of a small angle.)"
+    ],
+    "answer": "\\(\\tan 15^\\circ = 2 - \\sqrt{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-029",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "It is given that \\(\\cos 2\\theta = \\dfrac{7}{25}\\), where \\(0 < \\theta < \\dfrac{\\pi}{2}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(\\sin\\theta\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(\\cos\\theta\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(\\sin 2\\theta\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The double angle identities can be read backwards. If you know \\(\\cos 2\\theta\\), the form \\(\\cos 2\\theta = 1 - 2\\sin^2\\theta\\) is an equation for \\(\\sin\\theta\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(1 - 2\\sin^2\\theta = \\dfrac{7}{25}\\), so \\(2\\sin^2\\theta = 1 - \\dfrac{7}{25} = \\dfrac{18}{25}\\) and \\(\\sin^2\\theta = \\dfrac{9}{25}\\).",
+     "So \\(\\sin\\theta = \\pm\\dfrac{3}{5}\\). The angle \\(\\theta\\) is acute, so its sine is positive."
+    ],
+    "answer": "\\(\\sin\\theta = \\dfrac{3}{5}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Use \\(\\sin^2\\theta + \\cos^2\\theta = 1\\): \\(\\cos^2\\theta = 1 - \\dfrac{9}{25} = \\dfrac{16}{25}\\). Cosine is also positive for an acute angle."
+    ],
+    "answer": "\\(\\cos\\theta = \\dfrac{4}{5}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\[\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = 2 \\times \\frac{3}{5} \\times \\frac{4}{5}\\]",
+     "Check: \\(\\left(\\dfrac{24}{25}\\right)^2 + \\left(\\dfrac{7}{25}\\right)^2 = \\dfrac{576 + 49}{625} = 1\\). Correct."
+    ],
+    "answer": "\\(\\sin 2\\theta = \\dfrac{24}{25}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-030",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "Let \\(f(x) = 2\\cos^2 x + 3\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(f(x) = \\cos 2x + 4\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down the maximum value and the minimum value of \\(f(x)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the period of \\(f\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the smallest positive value of \\(x\\) for which \\(f(x)\\) takes its minimum value.",
+    "marks": 2
+   }
+  ],
+  "idea": "A squared cosine is awkward to picture, but the identity \\(\\cos 2x = 2\\cos^2 x - 1\\) turns it into an ordinary cosine graph that has been squeezed and moved up.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "From \\(\\cos 2x = 2\\cos^2 x - 1\\), you get \\(2\\cos^2 x = \\cos 2x + 1\\).",
+     "So \\(f(x) = (\\cos 2x + 1) + 3\\)."
+    ],
+    "answer": "\\(f(x) = \\cos 2x + 4\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\cos 2x\\) takes every value from \\(-1\\) to 1, so \\(\\cos 2x + 4\\) goes from 3 to 5."
+    ],
+    "answer": "Maximum 5, minimum 3"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The period of \\(\\cos bx\\) is \\(\\dfrac{2\\pi}{b}\\). Here \\(b = 2\\)."
+    ],
+    "answer": "\\(\\pi\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The minimum happens when \\(\\cos 2x = -1\\). The smallest positive angle with cosine \\(-1\\) is \\(\\pi\\), so \\(2x = \\pi\\).",
+     "Check with the original form: \\(2\\cos^2\\left(\\dfrac{\\pi}{2}\\right) + 3 = 0 + 3 = 3\\). Correct."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-031",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\tan\\theta + \\dfrac{1}{\\tan\\theta} = \\dfrac{2}{\\sin 2\\theta}\\), where \\(\\sin 2\\theta \\neq 0\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence show that \\(t = \\tan\\dfrac{\\pi}{8}\\) satisfies the equation \\(t^2 - 2\\sqrt{2}\\,t + 1 = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence find the exact value of \\(\\tan\\dfrac{\\pi}{8}\\), giving a reason for your choice of root.",
+    "marks": 3
+   }
+  ],
+  "idea": "To prove an identity that mixes tangents with sines, write everything in terms of \\(\\sin\\theta\\) and \\(\\cos\\theta\\) and put it over a common denominator.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Write the left-hand side with sines and cosines, over the common denominator \\(\\sin\\theta\\cos\\theta\\):",
+     "\\[\\frac{\\sin\\theta}{\\cos\\theta} + \\frac{\\cos\\theta}{\\sin\\theta} = \\frac{\\sin^2\\theta + \\cos^2\\theta}{\\sin\\theta\\cos\\theta} = \\frac{1}{\\sin\\theta\\cos\\theta}\\]",
+     "Since \\(\\sin 2\\theta = 2\\sin\\theta\\cos\\theta\\), the denominator is \\(\\dfrac{1}{2}\\sin 2\\theta\\). So the expression equals \\(\\dfrac{2}{\\sin 2\\theta}\\)."
+    ],
+    "answer": "\\(\\tan\\theta + \\dfrac{1}{\\tan\\theta} = \\dfrac{1}{\\sin\\theta\\cos\\theta} = \\dfrac{2}{\\sin 2\\theta}\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Put \\(\\theta = \\dfrac{\\pi}{8}\\), so that \\(2\\theta = \\dfrac{\\pi}{4}\\) and \\(\\sin 2\\theta = \\dfrac{\\sqrt{2}}{2}\\).",
+     "The identity gives \\(t + \\dfrac{1}{t} = \\dfrac{2}{\\sqrt{2}/2} = \\dfrac{4}{\\sqrt{2}} = 2\\sqrt{2}\\).",
+     "Multiply through by \\(t\\): \\(t^2 + 1 = 2\\sqrt{2}\\,t\\), which rearranges to \\(t^2 - 2\\sqrt{2}\\,t + 1 = 0\\)."
+    ],
+    "answer": "\\(t + \\dfrac{1}{t} = 2\\sqrt{2}\\), so \\(t^2 - 2\\sqrt{2}\\,t + 1 = 0\\) (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Use the quadratic formula: \\(t = \\dfrac{2\\sqrt{2} \\pm \\sqrt{8 - 4}}{2} = \\dfrac{2\\sqrt{2} \\pm 2}{2} = \\sqrt{2} \\pm 1\\).",
+     "The two roots are about 2.41 and 0.41. Since \\(\\dfrac{\\pi}{8}\\) is less than \\(\\dfrac{\\pi}{4}\\), and \\(\\tan\\dfrac{\\pi}{4} = 1\\), the value of \\(\\tan\\dfrac{\\pi}{8}\\) must be less than 1.",
+     "(The other root, \\(\\sqrt{2} + 1\\), is \\(\\tan\\dfrac{3\\pi}{8}\\): that angle gives the same value of \\(\\sin 2\\theta\\).)"
+    ],
+    "answer": "\\(\\tan\\dfrac{\\pi}{8} = \\sqrt{2} - 1\\), because \\(0 < \\dfrac{\\pi}{8} < \\dfrac{\\pi}{4}\\) means the tangent is less than 1"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-032",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "The diagram shows an isosceles triangle ABC with \\(\\mathrm{AB} = \\mathrm{AC} = 1\\) and \\(\\mathrm{B\\hat{A}C} = 2\\theta\\), where \\(0 < \\theta < \\dfrac{\\pi}{2}\\). M is the midpoint of [BC], so that [AM] is perpendicular to [BC] and bisects angle BAC.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 280\" width=\"340\" height=\"280\" role=\"img\" aria-label=\"Isosceles triangle ABC with AB = AC = 1. M is the midpoint of BC, and the line AM meets BC at a right angle. AM divides the angle at A into two equal angles, each of size theta, so angle BAC is 2 theta.\"><path d=\"M170.0 59.9 L46.7 236.0 L293.3 236.0 Z\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M170.0 59.9 L170.0 236.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"6 4\"/><path d=\"M180.0 236.0 L180.0 226.0 L170.0 226.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M148.2 91.0 L149.0 91.6 L149.8 92.1 L150.6 92.6 L151.5 93.1 L152.3 93.5 L153.2 94.0 L154.1 94.4 L154.9 94.8 L155.8 95.1 L156.7 95.5 L157.7 95.8 L158.6 96.1 L159.5 96.4 L160.4 96.7 L161.4 96.9 L162.3 97.1 L163.3 97.3 L164.2 97.4 L165.2 97.6 L166.1 97.7 L167.1 97.8 L168.1 97.8 L169.0 97.9 L170.0 97.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"154.1\" y=\"115.4\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">θ</tspan></text><path d=\"M170.0 105.9 L171.2 105.9 L172.3 105.8 L173.5 105.7 L174.7 105.6 L175.8 105.5 L177.0 105.3 L178.2 105.2 L179.3 104.9 L180.4 104.7 L181.6 104.4 L182.7 104.1 L183.8 103.8 L184.9 103.4 L186.0 103.0 L187.1 102.6 L188.2 102.1 L189.3 101.6 L190.3 101.1 L191.4 100.6 L192.4 100.0 L193.4 99.5 L194.4 98.9 L195.4 98.2 L196.4 97.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"188.3\" y=\"123.1\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">θ</tspan></text><text x=\"170.0\" y=\"50.9\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"38.7\" y=\"252.0\" text-anchor=\"end\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"301.3\" y=\"252.0\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><text x=\"170.0\" y=\"255.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">M</text><text x=\"96.9\" y=\"144.9\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><text x=\"243.1\" y=\"144.9\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the area of triangle ABC in terms of \\(\\sin 2\\theta\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\mathrm{BM} = \\sin\\theta\\), and write down AM in terms of \\(\\theta\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence, by finding the area of triangle ABC in a second way, show that \\(\\sin 2\\theta = 2\\sin\\theta\\cos\\theta\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Use the cosine rule in triangle ABC to find \\(\\mathrm{BC}^2\\) in terms of \\(\\cos 2\\theta\\).",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Hence show that \\(\\cos 2\\theta = 1 - 2\\sin^2\\theta\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Measuring the same thing in two different ways gives an equation. Here the area of one triangle, and then the length of one side, each found twice, produce the two double angle identities.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Use \\(\\dfrac{1}{2}ab\\sin C\\) with the two sides of length 1 and the angle \\(2\\theta\\) between them."
+    ],
+    "answer": "\\(\\dfrac{1}{2}\\sin 2\\theta\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Triangle ABM has a right angle at M, hypotenuse \\(\\mathrm{AB} = 1\\) and angle \\(\\theta\\) at A.",
+     "BM is opposite the angle \\(\\theta\\): \\(\\sin\\theta = \\dfrac{\\mathrm{BM}}{1}\\). AM is adjacent to it: \\(\\cos\\theta = \\dfrac{\\mathrm{AM}}{1}\\)."
+    ],
+    "answer": "\\(\\mathrm{BM} = \\sin\\theta\\) (shown); \\(\\mathrm{AM} = \\cos\\theta\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Take BC as the base. Its length is \\(2 \\times \\mathrm{BM} = 2\\sin\\theta\\), and the height is \\(\\mathrm{AM} = \\cos\\theta\\).",
+     "\\(\\text{Area} = \\dfrac{1}{2} \\times 2\\sin\\theta \\times \\cos\\theta = \\sin\\theta\\cos\\theta\\).",
+     "Both expressions are the area of the same triangle: \\(\\dfrac{1}{2}\\sin 2\\theta = \\sin\\theta\\cos\\theta\\). Multiply by 2."
+    ],
+    "answer": "\\(\\dfrac{1}{2}\\sin 2\\theta = \\sin\\theta\\cos\\theta\\), so \\(\\sin 2\\theta = 2\\sin\\theta\\cos\\theta\\) (shown)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\mathrm{BC}^2 = 1^2 + 1^2 - 2 \\times 1 \\times 1 \\times \\cos 2\\theta\\)."
+    ],
+    "answer": "\\(\\mathrm{BC}^2 = 2 - 2\\cos 2\\theta\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "From part (b), \\(\\mathrm{BC} = 2\\sin\\theta\\), so \\(\\mathrm{BC}^2 = 4\\sin^2\\theta\\).",
+     "Set the two expressions for \\(\\mathrm{BC}^2\\) equal: \\(4\\sin^2\\theta = 2 - 2\\cos 2\\theta\\).",
+     "Divide by 2 and rearrange: \\(2\\sin^2\\theta = 1 - \\cos 2\\theta\\), so \\(\\cos 2\\theta = 1 - 2\\sin^2\\theta\\)."
+    ],
+    "answer": "\\(4\\sin^2\\theta = 2 - 2\\cos 2\\theta\\), so \\(\\cos 2\\theta = 1 - 2\\sin^2\\theta\\) (shown)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-033",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Let \\(f(x) = 4\\cos 3x - 1\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the amplitude of \\(f\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the period of \\(f\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the range of \\(f\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the exact value of \\(f\\left(\\dfrac{\\pi}{9}\\right)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "In \\(a\\cos bx + d\\), the number \\(a\\) stretches the graph vertically (amplitude), \\(b\\) squeezes it horizontally (period \\(\\frac{2\\pi}{b}\\)) and \\(d\\) moves it up or down.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The amplitude is the number multiplying the cosine."
+    ],
+    "answer": "4"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\text{period} = \\dfrac{2\\pi}{b}\\) with \\(b = 3\\)."
+    ],
+    "answer": "\\(\\dfrac{2\\pi}{3}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\cos 3x\\) goes from \\(-1\\) to 1, so \\(4\\cos 3x\\) goes from \\(-4\\) to 4.",
+     "Subtracting 1 moves everything down by 1: from \\(-5\\) to 3."
+    ],
+    "answer": "\\(-5 \\le y \\le 3\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(3 \\times \\dfrac{\\pi}{9} = \\dfrac{\\pi}{3}\\), and \\(\\cos\\dfrac{\\pi}{3} = \\dfrac{1}{2}\\).",
+     "\\(f\\left(\\dfrac{\\pi}{9}\\right) = 4 \\times \\dfrac{1}{2} - 1\\)."
+    ],
+    "answer": "1"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-034",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A tuning fork is struck. The displacement of the tip of one prong from its rest position, \\(y\\) mm, at time \\(t\\) seconds is modelled by \\(y = 0.3\\sin(880\\pi t)\\), for \\(t \\ge 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the greatest displacement of the tip from its rest position.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the period of the motion. Give your answer as an exact fraction of a second.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the number of complete vibrations the tip makes in one second.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the displacement of the tip when \\(t = 0.001\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The period is the time for one complete cycle. The number of cycles in one second, the frequency, is one divided by the period.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The amplitude of \\(0.3\\sin(880\\pi t)\\) is 0.3."
+    ],
+    "answer": "0.3 mm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\text{period} = \\dfrac{2\\pi}{b}\\) with \\(b = 880\\pi\\): \\(\\dfrac{2\\pi}{880\\pi}\\). The \\(\\pi\\) cancels."
+    ],
+    "answer": "\\(\\dfrac{1}{440}\\) seconds"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Each vibration takes \\(\\dfrac{1}{440}\\) of a second, so 440 of them fit into one second. (This is the musical note A.)"
+    ],
+    "answer": "440"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "With your calculator in radians: \\(y = 0.3\\sin(880\\pi \\times 0.001) = 0.3\\sin(0.88\\pi) = 0.11043\\ldots\\)"
+    ],
+    "answer": "0.110 mm"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-035",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Let \\(f(x) = \\tan x\\), for \\(0 \\le x \\le 2\\pi\\), \\(x \\neq \\dfrac{\\pi}{2}\\), \\(x \\neq \\dfrac{3\\pi}{2}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the period of the tangent function.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Write down the equations of the vertical asymptotes of the graph of \\(f\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the exact value of \\(f\\left(\\dfrac{\\pi}{3}\\right)\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Solve the equation \\(f(x) = 1\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Because \\(\\tan x = \\dfrac{\\sin x}{\\cos x}\\), the tangent has no value where \\(\\cos x = 0\\), and its graph has a vertical asymptote there. It repeats every \\(\\pi\\), not every \\(2\\pi\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The graph of \\(y = \\tan x\\) repeats every half-turn."
+    ],
+    "answer": "\\(\\pi\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The asymptotes are where \\(\\cos x = 0\\). Between 0 and \\(2\\pi\\) this happens at the two values excluded from the domain."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{2}\\) and \\(x = \\dfrac{3\\pi}{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\tan\\dfrac{\\pi}{3} = \\tan 60^\\circ\\)."
+    ],
+    "answer": "\\(\\sqrt{3}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The acute angle with tangent 1 is \\(\\dfrac{\\pi}{4}\\).",
+     "The tangent repeats every \\(\\pi\\), so the next solution is \\(\\dfrac{\\pi}{4} + \\pi = \\dfrac{5\\pi}{4}\\). Adding \\(\\pi\\) again goes past \\(2\\pi\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{4}\\) or \\(x = \\dfrac{5\\pi}{4}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-036",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "Let \\(f(x) = 3\\sin\\left(2x - \\dfrac{\\pi}{3}\\right) + 1\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the amplitude and the period of \\(f\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "The function can be written as \\(f(x) = 3\\sin\\big(2(x - c)\\big) + 1\\). Find the value of \\(c\\), and describe the horizontal translation that it represents.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the coordinates of the first maximum point of the graph of \\(f\\) for \\(x > 0\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "To see how far a sine graph has been moved sideways, the coefficient of \\(x\\) must first be taken outside as a factor: \\(2x - \\frac{\\pi}{3} = 2\\left(x - \\frac{\\pi}{6}\\right)\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The amplitude is the number multiplying the sine. The period is \\(\\dfrac{2\\pi}{2}\\)."
+    ],
+    "answer": "Amplitude 3; period \\(\\pi\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Factorise the bracket: \\(2x - \\dfrac{\\pi}{3} = 2\\left(x - \\dfrac{\\pi}{6}\\right)\\).",
+     "Replacing \\(x\\) by \\(x - \\dfrac{\\pi}{6}\\) moves the graph to the right. The shift is \\(\\dfrac{\\pi}{6}\\), not \\(\\dfrac{\\pi}{3}\\)."
+    ],
+    "answer": "\\(c = \\dfrac{\\pi}{6}\\); a translation of \\(\\dfrac{\\pi}{6}\\) units to the right"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The sine is largest, equal to 1, when its angle is \\(\\dfrac{\\pi}{2}\\): \\(2x - \\dfrac{\\pi}{3} = \\dfrac{\\pi}{2}\\).",
+     "\\(2x = \\dfrac{\\pi}{2} + \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{6}\\), so \\(x = \\dfrac{5\\pi}{12}\\). The previous maximum is one period earlier, at a negative value of \\(x\\), so this is the first for \\(x > 0\\).",
+     "The maximum value is \\(3 \\times 1 + 1 = 4\\)."
+    ],
+    "answer": "\\(\\left(\\dfrac{5\\pi}{12},\\ 4\\right)\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-037",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "The blood pressure of a patient, \\(P\\) mmHg, at time \\(t\\) seconds is modelled by \\(P(t) = 100 + 20\\sin(2.5\\pi t)\\), for \\(t \\ge 0\\). One complete cycle of the model is one heartbeat."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the maximum and the minimum blood pressure.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the length of time of one heartbeat.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the number of heartbeats in one minute.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the length of time, during each heartbeat, for which the blood pressure is greater than 110 mmHg.",
+    "marks": 3
+   }
+  ],
+  "idea": "The condition \\(P > 110\\) is the same as \\(\\sin(\\ldots) > \\frac{1}{2}\\). Over one full cycle, a sine is above one half between the angles \\(\\frac{\\pi}{6}\\) and \\(\\frac{5\\pi}{6}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The sine goes from \\(-1\\) to 1, so \\(P\\) goes from \\(100 - 20\\) to \\(100 + 20\\)."
+    ],
+    "answer": "Maximum 120 mmHg; minimum 80 mmHg"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "One heartbeat is one period: \\(\\dfrac{2\\pi}{2.5\\pi} = \\dfrac{2}{2.5}\\)."
+    ],
+    "answer": "0.8 seconds"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{60}{0.8}\\)."
+    ],
+    "answer": "75"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(100 + 20\\sin(2.5\\pi t) > 110\\) means \\(\\sin(2.5\\pi t) > \\dfrac{1}{2}\\).",
+     "In one cycle the angle \\(2.5\\pi t\\) runs from 0 to \\(2\\pi\\), and the sine is above \\(\\dfrac{1}{2}\\) for angles between \\(\\dfrac{\\pi}{6}\\) and \\(\\dfrac{5\\pi}{6}\\). That is a stretch of \\(\\dfrac{4\\pi}{6}\\) out of \\(2\\pi\\): one third of the cycle.",
+     "One third of 0.8 seconds is \\(0.2666\\ldots\\) seconds. (You can also graph \\(P\\) and the line \\(P = 110\\): they meet at \\(t = 0.0666\\ldots\\) and \\(t = 0.3333\\ldots\\))"
+    ],
+    "answer": "0.267 seconds"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-038",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Let \\(f(x) = 2\\sin(1.5x) + 1\\) and \\(g(x) = 0.5x\\), for \\(0 \\le x \\le 6\\), where \\(x\\) is in radians."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the number of solutions of the equation \\(f(x) = g(x)\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Solve the equation \\(f(x) = g(x)\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Hence solve the inequality \\(f(x) > g(x)\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "A sine curve and a straight line can cross several times, and no algebra will find the points. Graph both on your calculator, in radians, over the whole of the given domain.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Graph \\(y = 2\\sin(1.5x) + 1\\) and \\(y = 0.5x\\) for \\(0 \\le x \\le 6\\), with the calculator in radians. The line crosses the curve three times.",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 280\" width=\"400\" height=\"280\" role=\"img\" aria-label=\"Graphs of y = 2 sin(1.5x) + 1 and y = 0.5x for x from 0 to 6. The line crosses the sine curve three times, near x = 2.08, x = 4.68 and x = 5.55.\"><defs><clipPath id=\"ca4e0977f\"><rect x=\"30\" y=\"24\" width=\"344\" height=\"228\"/></clipPath></defs><line x1=\"30.0\" y1=\"184.4\" x2=\"386.0\" y2=\"184.4\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"50.2\" y1=\"252.0\" x2=\"50.2\" y2=\"12.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M392.0 184.4 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M50.2 6.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"390.0\" y=\"202.4\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"38.2\" y=\"10.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"100.8\" y1=\"181.4\" x2=\"100.8\" y2=\"187.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"100.8\" y=\"201.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><line x1=\"151.4\" y1=\"181.4\" x2=\"151.4\" y2=\"187.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"151.4\" y=\"201.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"202.0\" y1=\"181.4\" x2=\"202.0\" y2=\"187.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"202.0\" y=\"201.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><line x1=\"252.6\" y1=\"181.4\" x2=\"252.6\" y2=\"187.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"252.6\" y=\"201.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><line x1=\"303.2\" y1=\"181.4\" x2=\"303.2\" y2=\"187.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"303.2\" y=\"201.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">5</text><line x1=\"353.8\" y1=\"181.4\" x2=\"353.8\" y2=\"187.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"353.8\" y=\"201.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6</text><line x1=\"47.2\" y1=\"226.7\" x2=\"53.2\" y2=\"226.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"43.2\" y=\"231.2\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−1</text><line x1=\"47.2\" y1=\"142.2\" x2=\"53.2\" y2=\"142.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"43.2\" y=\"146.7\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><line x1=\"47.2\" y1=\"100.0\" x2=\"53.2\" y2=\"100.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"43.2\" y=\"104.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"47.2\" y1=\"57.8\" x2=\"53.2\" y2=\"57.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"43.2\" y=\"62.3\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><text x=\"43.2\" y=\"200.4\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><path d=\"M50.2 184.4 L50.6 184.3 L51.0 184.1 L51.4 184.0 L51.8 183.8 L52.1 183.7 L52.5 183.5 L52.9 183.3 L53.3 183.2 L53.7 183.0 L54.0 182.9 L54.4 182.7 L54.8 182.5 L55.2 182.4 L55.5 182.2 L55.9 182.1 L56.3 181.9 L56.7 181.8 L57.1 181.6 L57.4 181.4 L57.8 181.3 L58.2 181.1 L58.6 181.0 L59.0 180.8 L59.3 180.6 L59.7 180.5 L60.1 180.3 L60.5 180.2 L60.9 180.0 L61.2 179.9 L61.6 179.7 L62.0 179.5 L62.4 179.4 L62.8 179.2 L63.1 179.1 L63.5 178.9 L63.9 178.7 L64.3 178.6 L64.7 178.4 L65.0 178.3 L65.4 178.1 L65.8 178.0 L66.2 177.8 L66.5 177.6 L66.9 177.5 L67.3 177.3 L67.7 177.2 L68.1 177.0 L68.4 176.8 L68.8 176.7 L69.2 176.5 L69.6 176.4 L70.0 176.2 L70.3 176.1 L70.7 175.9 L71.1 175.7 L71.5 175.6 L71.9 175.4 L72.2 175.3 L72.6 175.1 L73.0 174.9 L73.4 174.8 L73.8 174.6 L74.1 174.5 L74.5 174.3 L74.9 174.2 L75.3 174.0 L75.7 173.8 L76.0 173.7 L76.4 173.5 L76.8 173.4 L77.2 173.2 L77.6 173.0 L77.9 172.9 L78.3 172.7 L78.7 172.6 L79.1 172.4 L79.5 172.3 L79.8 172.1 L80.2 171.9 L80.6 171.8 L81.0 171.6 L81.3 171.5 L81.7 171.3 L82.1 171.1 L82.5 171.0 L82.9 170.8 L83.2 170.7 L83.6 170.5 L84.0 170.4 L84.4 170.2 L84.8 170.0 L85.1 169.9 L85.5 169.7 L85.9 169.6 L86.3 169.4 L86.7 169.2 L87.0 169.1 L87.4 168.9 L87.8 168.8 L88.2 168.6 L88.6 168.5 L88.9 168.3 L89.3 168.1 L89.7 168.0 L90.1 167.8 L90.5 167.7 L90.8 167.5 L91.2 167.3 L91.6 167.2 L92.0 167.0 L92.3 166.9 L92.7 166.7 L93.1 166.6 L93.5 166.4 L93.9 166.2 L94.2 166.1 L94.6 165.9 L95.0 165.8 L95.4 165.6 L95.8 165.4 L96.1 165.3 L96.5 165.1 L96.9 165.0 L97.3 164.8 L97.7 164.7 L98.0 164.5 L98.4 164.3 L98.8 164.2 L99.2 164.0 L99.6 163.9 L99.9 163.7 L100.3 163.5 L100.7 163.4 L101.1 163.2 L101.5 163.1 L101.8 162.9 L102.2 162.8 L102.6 162.6 L103.0 162.4 L103.4 162.3 L103.7 162.1 L104.1 162.0 L104.5 161.8 L104.9 161.6 L105.2 161.5 L105.6 161.3 L106.0 161.2 L106.4 161.0 L106.8 160.9 L107.1 160.7 L107.5 160.5 L107.9 160.4 L108.3 160.2 L108.7 160.1 L109.0 159.9 L109.4 159.7 L109.8 159.6 L110.2 159.4 L110.6 159.3 L110.9 159.1 L111.3 159.0 L111.7 158.8 L112.1 158.6 L112.5 158.5 L112.8 158.3 L113.2 158.2 L113.6 158.0 L114.0 157.8 L114.4 157.7 L114.7 157.5 L115.1 157.4 L115.5 157.2 L115.9 157.1 L116.3 156.9 L116.6 156.7 L117.0 156.6 L117.4 156.4 L117.8 156.3 L118.2 156.1 L118.5 155.9 L118.9 155.8 L119.3 155.6 L119.7 155.5 L120.0 155.3 L120.4 155.2 L120.8 155.0 L121.2 154.8 L121.6 154.7 L121.9 154.5 L122.3 154.4 L122.7 154.2 L123.1 154.0 L123.5 153.9 L123.8 153.7 L124.2 153.6 L124.6 153.4 L125.0 153.3 L125.4 153.1 L125.7 152.9 L126.1 152.8 L126.5 152.6 L126.9 152.5 L127.3 152.3 L127.6 152.1 L128.0 152.0 L128.4 151.8 L128.8 151.7 L129.2 151.5 L129.5 151.4 L129.9 151.2 L130.3 151.0 L130.7 150.9 L131.1 150.7 L131.4 150.6 L131.8 150.4 L132.2 150.2 L132.6 150.1 L132.9 149.9 L133.3 149.8 L133.7 149.6 L134.1 149.5 L134.5 149.3 L134.8 149.1 L135.2 149.0 L135.6 148.8 L136.0 148.7 L136.4 148.5 L136.7 148.3 L137.1 148.2 L137.5 148.0 L137.9 147.9 L138.3 147.7 L138.6 147.6 L139.0 147.4 L139.4 147.2 L139.8 147.1 L140.2 146.9 L140.5 146.8 L140.9 146.6 L141.3 146.4 L141.7 146.3 L142.1 146.1 L142.4 146.0 L142.8 145.8 L143.2 145.7 L143.6 145.5 L143.9 145.3 L144.3 145.2 L144.7 145.0 L145.1 144.9 L145.5 144.7 L145.8 144.5 L146.2 144.4 L146.6 144.2 L147.0 144.1 L147.4 143.9 L147.7 143.8 L148.1 143.6 L148.5 143.4 L148.9 143.3 L149.3 143.1 L149.6 143.0 L150.0 142.8 L150.4 142.6 L150.8 142.5 L151.2 142.3 L151.5 142.2 L151.9 142.0 L152.3 141.9 L152.7 141.7 L153.1 141.5 L153.4 141.4 L153.8 141.2 L154.2 141.1 L154.6 140.9 L155.0 140.7 L155.3 140.6 L155.7 140.4 L156.1 140.3 L156.5 140.1 L156.8 140.0 L157.2 139.8 L157.6 139.6 L158.0 139.5 L158.4 139.3 L158.7 139.2 L159.1 139.0 L159.5 138.8 L159.9 138.7 L160.3 138.5 L160.6 138.4 L161.0 138.2 L161.4 138.1 L161.8 137.9 L162.2 137.7 L162.5 137.6 L162.9 137.4 L163.3 137.3 L163.7 137.1 L164.1 136.9 L164.4 136.8 L164.8 136.6 L165.2 136.5 L165.6 136.3 L166.0 136.2 L166.3 136.0 L166.7 135.8 L167.1 135.7 L167.5 135.5 L167.9 135.4 L168.2 135.2 L168.6 135.0 L169.0 134.9 L169.4 134.7 L169.7 134.6 L170.1 134.4 L170.5 134.3 L170.9 134.1 L171.3 133.9 L171.6 133.8 L172.0 133.6 L172.4 133.5 L172.8 133.3 L173.2 133.1 L173.5 133.0 L173.9 132.8 L174.3 132.7 L174.7 132.5 L175.1 132.4 L175.4 132.2 L175.8 132.0 L176.2 131.9 L176.6 131.7 L177.0 131.6 L177.3 131.4 L177.7 131.2 L178.1 131.1 L178.5 130.9 L178.9 130.8 L179.2 130.6 L179.6 130.5 L180.0 130.3 L180.4 130.1 L180.8 130.0 L181.1 129.8 L181.5 129.7 L181.9 129.5 L182.3 129.3 L182.7 129.2 L183.0 129.0 L183.4 128.9 L183.8 128.7 L184.2 128.6 L184.5 128.4 L184.9 128.2 L185.3 128.1 L185.7 127.9 L186.1 127.8 L186.4 127.6 L186.8 127.4 L187.2 127.3 L187.6 127.1 L188.0 127.0 L188.3 126.8 L188.7 126.7 L189.1 126.5 L189.5 126.3 L189.9 126.2 L190.2 126.0 L190.6 125.9 L191.0 125.7 L191.4 125.5 L191.8 125.4 L192.1 125.2 L192.5 125.1 L192.9 124.9 L193.3 124.8 L193.7 124.6 L194.0 124.4 L194.4 124.3 L194.8 124.1 L195.2 124.0 L195.5 123.8 L195.9 123.6 L196.3 123.5 L196.7 123.3 L197.1 123.2 L197.4 123.0 L197.8 122.9 L198.2 122.7 L198.6 122.5 L199.0 122.4 L199.3 122.2 L199.7 122.1 L200.1 121.9 L200.5 121.7 L200.9 121.6 L201.2 121.4 L201.6 121.3 L202.0 121.1 L202.4 121.0 L202.8 120.8 L203.1 120.6 L203.5 120.5 L203.9 120.3 L204.3 120.2 L204.7 120.0 L205.0 119.8 L205.4 119.7 L205.8 119.5 L206.2 119.4 L206.6 119.2 L206.9 119.1 L207.3 118.9 L207.7 118.7 L208.1 118.6 L208.4 118.4 L208.8 118.3 L209.2 118.1 L209.6 117.9 L210.0 117.8 L210.3 117.6 L210.7 117.5 L211.1 117.3 L211.5 117.2 L211.9 117.0 L212.2 116.8 L212.6 116.7 L213.0 116.5 L213.4 116.4 L213.8 116.2 L214.1 116.0 L214.5 115.9 L214.9 115.7 L215.3 115.6 L215.7 115.4 L216.0 115.3 L216.4 115.1 L216.8 114.9 L217.2 114.8 L217.6 114.6 L217.9 114.5 L218.3 114.3 L218.7 114.1 L219.1 114.0 L219.5 113.8 L219.8 113.7 L220.2 113.5 L220.6 113.4 L221.0 113.2 L221.3 113.0 L221.7 112.9 L222.1 112.7 L222.5 112.6 L222.9 112.4 L223.2 112.2 L223.6 112.1 L224.0 111.9 L224.4 111.8 L224.8 111.6 L225.1 111.5 L225.5 111.3 L225.9 111.1 L226.3 111.0 L226.7 110.8 L227.0 110.7 L227.4 110.5 L227.8 110.3 L228.2 110.2 L228.6 110.0 L228.9 109.9 L229.3 109.7 L229.7 109.6 L230.1 109.4 L230.5 109.2 L230.8 109.1 L231.2 108.9 L231.6 108.8 L232.0 108.6 L232.4 108.4 L232.7 108.3 L233.1 108.1 L233.5 108.0 L233.9 107.8 L234.3 107.7 L234.6 107.5 L235.0 107.3 L235.4 107.2 L235.8 107.0 L236.1 106.9 L236.5 106.7 L236.9 106.5 L237.3 106.4 L237.7 106.2 L238.0 106.1 L238.4 105.9 L238.8 105.8 L239.2 105.6 L239.6 105.4 L239.9 105.3 L240.3 105.1 L240.7 105.0 L241.1 104.8 L241.5 104.6 L241.8 104.5 L242.2 104.3 L242.6 104.2 L243.0 104.0 L243.4 103.9 L243.7 103.7 L244.1 103.5 L244.5 103.4 L244.9 103.2 L245.3 103.1 L245.6 102.9 L246.0 102.7 L246.4 102.6 L246.8 102.4 L247.2 102.3 L247.5 102.1 L247.9 102.0 L248.3 101.8 L248.7 101.6 L249.0 101.5 L249.4 101.3 L249.8 101.2 L250.2 101.0 L250.6 100.8 L250.9 100.7 L251.3 100.5 L251.7 100.4 L252.1 100.2 L252.5 100.1 L252.8 99.9 L253.2 99.7 L253.6 99.6 L254.0 99.4 L254.4 99.3 L254.7 99.1 L255.1 98.9 L255.5 98.8 L255.9 98.6 L256.3 98.5 L256.6 98.3 L257.0 98.2 L257.4 98.0 L257.8 97.8 L258.2 97.7 L258.5 97.5 L258.9 97.4 L259.3 97.2 L259.7 97.0 L260.1 96.9 L260.4 96.7 L260.8 96.6 L261.2 96.4 L261.6 96.3 L261.9 96.1 L262.3 95.9 L262.7 95.8 L263.1 95.6 L263.5 95.5 L263.8 95.3 L264.2 95.1 L264.6 95.0 L265.0 94.8 L265.4 94.7 L265.7 94.5 L266.1 94.4 L266.5 94.2 L266.9 94.0 L267.3 93.9 L267.6 93.7 L268.0 93.6 L268.4 93.4 L268.8 93.2 L269.2 93.1 L269.5 92.9 L269.9 92.8 L270.3 92.6 L270.7 92.5 L271.1 92.3 L271.4 92.1 L271.8 92.0 L272.2 91.8 L272.6 91.7 L272.9 91.5 L273.3 91.3 L273.7 91.2 L274.1 91.0 L274.5 90.9 L274.8 90.7 L275.2 90.6 L275.6 90.4 L276.0 90.2 L276.4 90.1 L276.7 89.9 L277.1 89.8 L277.5 89.6 L277.9 89.4 L278.3 89.3 L278.6 89.1 L279.0 89.0 L279.4 88.8 L279.8 88.7 L280.2 88.5 L280.5 88.3 L280.9 88.2 L281.3 88.0 L281.7 87.9 L282.1 87.7 L282.4 87.5 L282.8 87.4 L283.2 87.2 L283.6 87.1 L284.0 86.9 L284.3 86.8 L284.7 86.6 L285.1 86.4 L285.5 86.3 L285.9 86.1 L286.2 86.0 L286.6 85.8 L287.0 85.6 L287.4 85.5 L287.7 85.3 L288.1 85.2 L288.5 85.0 L288.9 84.9 L289.3 84.7 L289.6 84.5 L290.0 84.4 L290.4 84.2 L290.8 84.1 L291.2 83.9 L291.5 83.7 L291.9 83.6 L292.3 83.4 L292.7 83.3 L293.1 83.1 L293.4 83.0 L293.8 82.8 L294.2 82.6 L294.6 82.5 L295.0 82.3 L295.3 82.2 L295.7 82.0 L296.1 81.8 L296.5 81.7 L296.9 81.5 L297.2 81.4 L297.6 81.2 L298.0 81.1 L298.4 80.9 L298.8 80.7 L299.1 80.6 L299.5 80.4 L299.9 80.3 L300.3 80.1 L300.6 79.9 L301.0 79.8 L301.4 79.6 L301.8 79.5 L302.2 79.3 L302.5 79.2 L302.9 79.0 L303.3 78.8 L303.7 78.7 L304.1 78.5 L304.4 78.4 L304.8 78.2 L305.2 78.0 L305.6 77.9 L306.0 77.7 L306.3 77.6 L306.7 77.4 L307.1 77.3 L307.5 77.1 L307.9 76.9 L308.2 76.8 L308.6 76.6 L309.0 76.5 L309.4 76.3 L309.8 76.1 L310.1 76.0 L310.5 75.8 L310.9 75.7 L311.3 75.5 L311.7 75.4 L312.0 75.2 L312.4 75.0 L312.8 74.9 L313.2 74.7 L313.5 74.6 L313.9 74.4 L314.3 74.2 L314.7 74.1 L315.1 73.9 L315.4 73.8 L315.8 73.6 L316.2 73.5 L316.6 73.3 L317.0 73.1 L317.3 73.0 L317.7 72.8 L318.1 72.7 L318.5 72.5 L318.9 72.3 L319.2 72.2 L319.6 72.0 L320.0 71.9 L320.4 71.7 L320.8 71.6 L321.1 71.4 L321.5 71.2 L321.9 71.1 L322.3 70.9 L322.7 70.8 L323.0 70.6 L323.4 70.4 L323.8 70.3 L324.2 70.1 L324.6 70.0 L324.9 69.8 L325.3 69.7 L325.7 69.5 L326.1 69.3 L326.4 69.2 L326.8 69.0 L327.2 68.9 L327.6 68.7 L328.0 68.5 L328.3 68.4 L328.7 68.2 L329.1 68.1 L329.5 67.9 L329.9 67.8 L330.2 67.6 L330.6 67.4 L331.0 67.3 L331.4 67.1 L331.8 67.0 L332.1 66.8 L332.5 66.6 L332.9 66.5 L333.3 66.3 L333.7 66.2 L334.0 66.0 L334.4 65.9 L334.8 65.7 L335.2 65.5 L335.6 65.4 L335.9 65.2 L336.3 65.1 L336.7 64.9 L337.1 64.7 L337.4 64.6 L337.8 64.4 L338.2 64.3 L338.6 64.1 L339.0 64.0 L339.3 63.8 L339.7 63.6 L340.1 63.5 L340.5 63.3 L340.9 63.2 L341.2 63.0 L341.6 62.8 L342.0 62.7 L342.4 62.5 L342.8 62.4 L343.1 62.2 L343.5 62.1 L343.9 61.9 L344.3 61.7 L344.7 61.6 L345.0 61.4 L345.4 61.3 L345.8 61.1 L346.2 60.9 L346.6 60.8 L346.9 60.6 L347.3 60.5 L347.7 60.3 L348.1 60.2 L348.5 60.0 L348.8 59.8 L349.2 59.7 L349.6 59.5 L350.0 59.4 L350.4 59.2 L350.7 59.0 L351.1 58.9 L351.5 58.7 L351.9 58.6 L352.2 58.4 L352.6 58.3 L353.0 58.1 L353.4 57.9 L353.8 57.8\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#ca4e0977f)\"/><path d=\"M50.2 142.2 L50.6 141.3 L51.0 140.3 L51.4 139.4 L51.8 138.4 L52.1 137.5 L52.5 136.5 L52.9 135.6 L53.3 134.6 L53.7 133.7 L54.0 132.7 L54.4 131.8 L54.8 130.9 L55.2 129.9 L55.5 129.0 L55.9 128.0 L56.3 127.1 L56.7 126.2 L57.1 125.2 L57.4 124.3 L57.8 123.4 L58.2 122.5 L58.6 121.5 L59.0 120.6 L59.3 119.7 L59.7 118.8 L60.1 117.9 L60.5 117.0 L60.9 116.1 L61.2 115.2 L61.6 114.3 L62.0 113.4 L62.4 112.5 L62.8 111.6 L63.1 110.7 L63.5 109.8 L63.9 108.9 L64.3 108.1 L64.7 107.2 L65.0 106.3 L65.4 105.5 L65.8 104.6 L66.2 103.8 L66.5 102.9 L66.9 102.1 L67.3 101.3 L67.7 100.4 L68.1 99.6 L68.4 98.8 L68.8 98.0 L69.2 97.2 L69.6 96.4 L70.0 95.6 L70.3 94.8 L70.7 94.0 L71.1 93.2 L71.5 92.5 L71.9 91.7 L72.2 90.9 L72.6 90.2 L73.0 89.5 L73.4 88.7 L73.8 88.0 L74.1 87.3 L74.5 86.5 L74.9 85.8 L75.3 85.1 L75.7 84.4 L76.0 83.7 L76.4 83.1 L76.8 82.4 L77.2 81.7 L77.6 81.1 L77.9 80.4 L78.3 79.8 L78.7 79.1 L79.1 78.5 L79.5 77.9 L79.8 77.3 L80.2 76.7 L80.6 76.1 L81.0 75.5 L81.3 74.9 L81.7 74.3 L82.1 73.8 L82.5 73.2 L82.9 72.7 L83.2 72.2 L83.6 71.6 L84.0 71.1 L84.4 70.6 L84.8 70.1 L85.1 69.6 L85.5 69.1 L85.9 68.7 L86.3 68.2 L86.7 67.7 L87.0 67.3 L87.4 66.9 L87.8 66.4 L88.2 66.0 L88.6 65.6 L88.9 65.2 L89.3 64.8 L89.7 64.5 L90.1 64.1 L90.5 63.7 L90.8 63.4 L91.2 63.1 L91.6 62.7 L92.0 62.4 L92.3 62.1 L92.7 61.8 L93.1 61.5 L93.5 61.3 L93.9 61.0 L94.2 60.7 L94.6 60.5 L95.0 60.3 L95.4 60.0 L95.8 59.8 L96.1 59.6 L96.5 59.4 L96.9 59.3 L97.3 59.1 L97.7 58.9 L98.0 58.8 L98.4 58.6 L98.8 58.5 L99.2 58.4 L99.6 58.3 L99.9 58.2 L100.3 58.1 L100.7 58.0 L101.1 57.9 L101.5 57.9 L101.8 57.8 L102.2 57.8 L102.6 57.8 L103.0 57.8 L103.4 57.8 L103.7 57.8 L104.1 57.8 L104.5 57.8 L104.9 57.9 L105.2 57.9 L105.6 58.0 L106.0 58.1 L106.4 58.2 L106.8 58.2 L107.1 58.4 L107.5 58.5 L107.9 58.6 L108.3 58.7 L108.7 58.9 L109.0 59.0 L109.4 59.2 L109.8 59.4 L110.2 59.6 L110.6 59.8 L110.9 60.0 L111.3 60.2 L111.7 60.4 L112.1 60.7 L112.5 60.9 L112.8 61.2 L113.2 61.5 L113.6 61.8 L114.0 62.0 L114.4 62.3 L114.7 62.7 L115.1 63.0 L115.5 63.3 L115.9 63.7 L116.3 64.0 L116.6 64.4 L117.0 64.7 L117.4 65.1 L117.8 65.5 L118.2 65.9 L118.5 66.3 L118.9 66.8 L119.3 67.2 L119.7 67.6 L120.0 68.1 L120.4 68.5 L120.8 69.0 L121.2 69.5 L121.6 70.0 L121.9 70.5 L122.3 71.0 L122.7 71.5 L123.1 72.0 L123.5 72.5 L123.8 73.1 L124.2 73.6 L124.6 74.2 L125.0 74.8 L125.4 75.3 L125.7 75.9 L126.1 76.5 L126.5 77.1 L126.9 77.7 L127.3 78.3 L127.6 79.0 L128.0 79.6 L128.4 80.2 L128.8 80.9 L129.2 81.6 L129.5 82.2 L129.9 82.9 L130.3 83.6 L130.7 84.3 L131.1 85.0 L131.4 85.7 L131.8 86.4 L132.2 87.1 L132.6 87.8 L132.9 88.5 L133.3 89.3 L133.7 90.0 L134.1 90.8 L134.5 91.5 L134.8 92.3 L135.2 93.0 L135.6 93.8 L136.0 94.6 L136.4 95.4 L136.7 96.2 L137.1 97.0 L137.5 97.8 L137.9 98.6 L138.3 99.4 L138.6 100.2 L139.0 101.1 L139.4 101.9 L139.8 102.7 L140.2 103.6 L140.5 104.4 L140.9 105.3 L141.3 106.1 L141.7 107.0 L142.1 107.9 L142.4 108.7 L142.8 109.6 L143.2 110.5 L143.6 111.4 L143.9 112.3 L144.3 113.1 L144.7 114.0 L145.1 114.9 L145.5 115.8 L145.8 116.7 L146.2 117.6 L146.6 118.6 L147.0 119.5 L147.4 120.4 L147.7 121.3 L148.1 122.2 L148.5 123.1 L148.9 124.1 L149.3 125.0 L149.6 125.9 L150.0 126.9 L150.4 127.8 L150.8 128.7 L151.2 129.7 L151.5 130.6 L151.9 131.6 L152.3 132.5 L152.7 133.4 L153.1 134.4 L153.4 135.3 L153.8 136.3 L154.2 137.2 L154.6 138.2 L155.0 139.1 L155.3 140.1 L155.7 141.0 L156.1 142.0 L156.5 142.9 L156.8 143.9 L157.2 144.8 L157.6 145.8 L158.0 146.7 L158.4 147.7 L158.7 148.6 L159.1 149.6 L159.5 150.5 L159.9 151.5 L160.3 152.4 L160.6 153.3 L161.0 154.3 L161.4 155.2 L161.8 156.2 L162.2 157.1 L162.5 158.0 L162.9 159.0 L163.3 159.9 L163.7 160.8 L164.1 161.8 L164.4 162.7 L164.8 163.6 L165.2 164.5 L165.6 165.4 L166.0 166.3 L166.3 167.3 L166.7 168.2 L167.1 169.1 L167.5 170.0 L167.9 170.9 L168.2 171.7 L168.6 172.6 L169.0 173.5 L169.4 174.4 L169.7 175.3 L170.1 176.1 L170.5 177.0 L170.9 177.9 L171.3 178.7 L171.6 179.6 L172.0 180.4 L172.4 181.3 L172.8 182.1 L173.2 183.0 L173.5 183.8 L173.9 184.6 L174.3 185.4 L174.7 186.2 L175.1 187.1 L175.4 187.9 L175.8 188.7 L176.2 189.4 L176.6 190.2 L177.0 191.0 L177.3 191.8 L177.7 192.5 L178.1 193.3 L178.5 194.1 L178.9 194.8 L179.2 195.5 L179.6 196.3 L180.0 197.0 L180.4 197.7 L180.8 198.4 L181.1 199.1 L181.5 199.8 L181.9 200.5 L182.3 201.2 L182.7 201.9 L183.0 202.6 L183.4 203.2 L183.8 203.9 L184.2 204.5 L184.5 205.2 L184.9 205.8 L185.3 206.4 L185.7 207.0 L186.1 207.6 L186.4 208.2 L186.8 208.8 L187.2 209.4 L187.6 210.0 L188.0 210.5 L188.3 211.1 L188.7 211.6 L189.1 212.2 L189.5 212.7 L189.9 213.2 L190.2 213.7 L190.6 214.2 L191.0 214.7 L191.4 215.2 L191.8 215.7 L192.1 216.1 L192.5 216.6 L192.9 217.0 L193.3 217.5 L193.7 217.9 L194.0 218.3 L194.4 218.7 L194.8 219.1 L195.2 219.5 L195.5 219.9 L195.9 220.2 L196.3 220.6 L196.7 221.0 L197.1 221.3 L197.4 221.6 L197.8 221.9 L198.2 222.2 L198.6 222.5 L199.0 222.8 L199.3 223.1 L199.7 223.4 L200.1 223.6 L200.5 223.9 L200.9 224.1 L201.2 224.3 L201.6 224.6 L202.0 224.8 L202.4 225.0 L202.8 225.1 L203.1 225.3 L203.5 225.5 L203.9 225.6 L204.3 225.8 L204.7 225.9 L205.0 226.0 L205.4 226.1 L205.8 226.2 L206.2 226.3 L206.6 226.4 L206.9 226.5 L207.3 226.5 L207.7 226.6 L208.1 226.6 L208.4 226.6 L208.8 226.7 L209.2 226.7 L209.6 226.7 L210.0 226.6 L210.3 226.6 L210.7 226.6 L211.1 226.5 L211.5 226.5 L211.9 226.4 L212.2 226.3 L212.6 226.2 L213.0 226.1 L213.4 226.0 L213.8 225.9 L214.1 225.7 L214.5 225.6 L214.9 225.4 L215.3 225.3 L215.7 225.1 L216.0 224.9 L216.4 224.7 L216.8 224.5 L217.2 224.3 L217.6 224.1 L217.9 223.8 L218.3 223.6 L218.7 223.3 L219.1 223.0 L219.5 222.8 L219.8 222.5 L220.2 222.2 L220.6 221.9 L221.0 221.5 L221.3 221.2 L221.7 220.9 L222.1 220.5 L222.5 220.2 L222.9 219.8 L223.2 219.4 L223.6 219.0 L224.0 218.6 L224.4 218.2 L224.8 217.8 L225.1 217.4 L225.5 216.9 L225.9 216.5 L226.3 216.0 L226.7 215.6 L227.0 215.1 L227.4 214.6 L227.8 214.1 L228.2 213.6 L228.6 213.1 L228.9 212.6 L229.3 212.0 L229.7 211.5 L230.1 210.9 L230.5 210.4 L230.8 209.8 L231.2 209.2 L231.6 208.7 L232.0 208.1 L232.4 207.5 L232.7 206.9 L233.1 206.3 L233.5 205.6 L233.9 205.0 L234.3 204.4 L234.6 203.7 L235.0 203.1 L235.4 202.4 L235.8 201.7 L236.1 201.0 L236.5 200.4 L236.9 199.7 L237.3 199.0 L237.7 198.3 L238.0 197.5 L238.4 196.8 L238.8 196.1 L239.2 195.4 L239.6 194.6 L239.9 193.9 L240.3 193.1 L240.7 192.4 L241.1 191.6 L241.5 190.8 L241.8 190.0 L242.2 189.3 L242.6 188.5 L243.0 187.7 L243.4 186.9 L243.7 186.0 L244.1 185.2 L244.5 184.4 L244.9 183.6 L245.3 182.8 L245.6 181.9 L246.0 181.1 L246.4 180.2 L246.8 179.4 L247.2 178.5 L247.5 177.7 L247.9 176.8 L248.3 175.9 L248.7 175.1 L249.0 174.2 L249.4 173.3 L249.8 172.4 L250.2 171.5 L250.6 170.6 L250.9 169.7 L251.3 168.8 L251.7 167.9 L252.1 167.0 L252.5 166.1 L252.8 165.2 L253.2 164.3 L253.6 163.4 L254.0 162.5 L254.4 161.5 L254.7 160.6 L255.1 159.7 L255.5 158.7 L255.9 157.8 L256.3 156.9 L256.6 155.9 L257.0 155.0 L257.4 154.1 L257.8 153.1 L258.2 152.2 L258.5 151.2 L258.9 150.3 L259.3 149.3 L259.7 148.4 L260.1 147.4 L260.4 146.5 L260.8 145.6 L261.2 144.6 L261.6 143.7 L261.9 142.7 L262.3 141.8 L262.7 140.8 L263.1 139.9 L263.5 138.9 L263.8 138.0 L264.2 137.0 L264.6 136.1 L265.0 135.1 L265.4 134.2 L265.7 133.2 L266.1 132.3 L266.5 131.3 L266.9 130.4 L267.3 129.5 L267.6 128.5 L268.0 127.6 L268.4 126.6 L268.8 125.7 L269.2 124.8 L269.5 123.9 L269.9 122.9 L270.3 122.0 L270.7 121.1 L271.1 120.2 L271.4 119.2 L271.8 118.3 L272.2 117.4 L272.6 116.5 L272.9 115.6 L273.3 114.7 L273.7 113.8 L274.1 112.9 L274.5 112.0 L274.8 111.2 L275.2 110.3 L275.6 109.4 L276.0 108.5 L276.4 107.6 L276.7 106.8 L277.1 105.9 L277.5 105.1 L277.9 104.2 L278.3 103.4 L278.6 102.5 L279.0 101.7 L279.4 100.9 L279.8 100.0 L280.2 99.2 L280.5 98.4 L280.9 97.6 L281.3 96.8 L281.7 96.0 L282.1 95.2 L282.4 94.4 L282.8 93.6 L283.2 92.9 L283.6 92.1 L284.0 91.3 L284.3 90.6 L284.7 89.8 L285.1 89.1 L285.5 88.4 L285.9 87.6 L286.2 86.9 L286.6 86.2 L287.0 85.5 L287.4 84.8 L287.7 84.1 L288.1 83.4 L288.5 82.7 L288.9 82.1 L289.3 81.4 L289.6 80.7 L290.0 80.1 L290.4 79.5 L290.8 78.8 L291.2 78.2 L291.5 77.6 L291.9 77.0 L292.3 76.4 L292.7 75.8 L293.1 75.2 L293.4 74.6 L293.8 74.1 L294.2 73.5 L294.6 73.0 L295.0 72.4 L295.3 71.9 L295.7 71.4 L296.1 70.9 L296.5 70.4 L296.9 69.9 L297.2 69.4 L297.6 68.9 L298.0 68.4 L298.4 68.0 L298.8 67.5 L299.1 67.1 L299.5 66.7 L299.9 66.2 L300.3 65.8 L300.6 65.4 L301.0 65.0 L301.4 64.7 L301.8 64.3 L302.2 63.9 L302.5 63.6 L302.9 63.2 L303.3 62.9 L303.7 62.6 L304.1 62.3 L304.4 62.0 L304.8 61.7 L305.2 61.4 L305.6 61.1 L306.0 60.9 L306.3 60.6 L306.7 60.4 L307.1 60.2 L307.5 59.9 L307.9 59.7 L308.2 59.5 L308.6 59.3 L309.0 59.2 L309.4 59.0 L309.8 58.8 L310.1 58.7 L310.5 58.6 L310.9 58.4 L311.3 58.3 L311.7 58.2 L312.0 58.1 L312.4 58.0 L312.8 58.0 L313.2 57.9 L313.5 57.9 L313.9 57.8 L314.3 57.8 L314.7 57.8 L315.1 57.8 L315.4 57.8 L315.8 57.8 L316.2 57.8 L316.6 57.9 L317.0 57.9 L317.3 58.0 L317.7 58.0 L318.1 58.1 L318.5 58.2 L318.9 58.3 L319.2 58.4 L319.6 58.5 L320.0 58.7 L320.4 58.8 L320.8 59.0 L321.1 59.1 L321.5 59.3 L321.9 59.5 L322.3 59.7 L322.7 59.9 L323.0 60.1 L323.4 60.3 L323.8 60.6 L324.2 60.8 L324.6 61.1 L324.9 61.3 L325.3 61.6 L325.7 61.9 L326.1 62.2 L326.4 62.5 L326.8 62.8 L327.2 63.1 L327.6 63.5 L328.0 63.8 L328.3 64.2 L328.7 64.6 L329.1 64.9 L329.5 65.3 L329.9 65.7 L330.2 66.1 L330.6 66.5 L331.0 67.0 L331.4 67.4 L331.8 67.9 L332.1 68.3 L332.5 68.8 L332.9 69.2 L333.3 69.7 L333.7 70.2 L334.0 70.7 L334.4 71.2 L334.8 71.8 L335.2 72.3 L335.6 72.8 L335.9 73.4 L336.3 73.9 L336.7 74.5 L337.1 75.0 L337.4 75.6 L337.8 76.2 L338.2 76.8 L338.6 77.4 L339.0 78.0 L339.3 78.7 L339.7 79.3 L340.1 79.9 L340.5 80.6 L340.9 81.2 L341.2 81.9 L341.6 82.5 L342.0 83.2 L342.4 83.9 L342.8 84.6 L343.1 85.3 L343.5 86.0 L343.9 86.7 L344.3 87.4 L344.7 88.2 L345.0 88.9 L345.4 89.6 L345.8 90.4 L346.2 91.1 L346.6 91.9 L346.9 92.7 L347.3 93.4 L347.7 94.2 L348.1 95.0 L348.5 95.8 L348.8 96.6 L349.2 97.4 L349.6 98.2 L350.0 99.0 L350.4 99.8 L350.7 100.6 L351.1 101.5 L351.5 102.3 L351.9 103.2 L352.2 104.0 L352.6 104.8 L353.0 105.7 L353.4 106.6 L353.8 107.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#ca4e0977f)\"/><circle cx=\"155.5\" cy=\"140.5\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"286.9\" cy=\"85.7\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"331.2\" cy=\"67.2\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><text x=\"103.8\" y=\"51.8\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = <tspan font-style=\"italic\">f</tspan>(<tspan font-style=\"italic\">x</tspan>)</text><text x=\"213.2\" y=\"102.8\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#1f5fd6\"><tspan font-style=\"italic\">y</tspan> = <tspan font-style=\"italic\">g</tspan>(<tspan font-style=\"italic\">x</tspan>)</text></svg>"
+     }
+    ],
+    "answer": "3"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Use the intersection tool for each crossing. The \\(x\\)-coordinates are \\(2.0809\\ldots\\), \\(4.6777\\ldots\\) and \\(5.5538\\ldots\\)"
+    ],
+    "answer": "\\(x = 2.08,\\ 4.68\\) or \\(5.55\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(f(x) > g(x)\\) where the curve is above the line. At the left end of the domain, \\(f(0) = 1\\) is above \\(g(0) = 0\\), so the curve starts above the line.",
+     "It stays above until the first crossing, goes below, and is above again between the second and third crossings. After the third crossing it stays below until \\(x = 6\\)."
+    ],
+    "answer": "\\(0 \\le x < 2.08\\) or \\(4.68 < x < 5.55\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-039",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The diagram shows the graph of \\(y = \\cos x\\), for \\(0 \\le x \\le 2\\pi\\), and the line \\(y = k\\), where \\(0 < k < 1\\). The line meets the graph at the points A and B. The \\(x\\)-coordinate of A is 0.7. In this question, an answer in terms of \\(\\pi\\) may also contain decimals, for example \\(3\\pi - 0.2\\).",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 250\" width=\"420\" height=\"250\" role=\"img\" aria-label=\"Graph of y = cos x for x from 0 to 2 pi, with a horizontal line y = k, where k is between 0 and 1. The line meets the curve at two points: A, near the start of the graph, and B, near the end. The curve starts at (0, 1), falls to its minimum (pi, -1) and rises to (2 pi, 1).\"><defs><clipPath id=\"c2f85e59e\"><rect x=\"30\" y=\"24\" width=\"364\" height=\"198\"/></clipPath></defs><line x1=\"30.0\" y1=\"123.0\" x2=\"406.0\" y2=\"123.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"47.9\" y1=\"222.0\" x2=\"47.9\" y2=\"12.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M412.0 123.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M47.9 6.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"410.0\" y=\"141.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"35.9\" y=\"10.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"47.9\" y1=\"66.9\" x2=\"370.1\" y2=\"66.9\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-dasharray=\"6 4\"/><path d=\"M47.9 49.7 L48.3 49.7 L48.7 49.7 L49.2 49.7 L49.6 49.7 L50.0 49.7 L50.4 49.7 L50.8 49.8 L51.2 49.8 L51.6 49.8 L52.0 49.9 L52.4 49.9 L52.8 50.0 L53.2 50.0 L53.6 50.1 L54.0 50.2 L54.4 50.2 L54.8 50.3 L55.2 50.4 L55.6 50.5 L56.0 50.6 L56.4 50.7 L56.8 50.8 L57.2 50.9 L57.6 51.0 L58.0 51.1 L58.4 51.2 L58.8 51.3 L59.2 51.4 L59.6 51.6 L60.0 51.7 L60.4 51.8 L60.8 52.0 L61.2 52.1 L61.6 52.3 L62.0 52.4 L62.4 52.6 L62.8 52.7 L63.2 52.9 L63.6 53.1 L64.0 53.3 L64.5 53.4 L64.9 53.6 L65.3 53.8 L65.7 54.0 L66.1 54.2 L66.5 54.4 L66.9 54.6 L67.3 54.8 L67.7 55.0 L68.1 55.2 L68.5 55.5 L68.9 55.7 L69.3 55.9 L69.7 56.2 L70.1 56.4 L70.5 56.6 L70.9 56.9 L71.3 57.1 L71.7 57.4 L72.1 57.7 L72.5 57.9 L72.9 58.2 L73.3 58.5 L73.7 58.7 L74.1 59.0 L74.5 59.3 L74.9 59.6 L75.3 59.9 L75.7 60.2 L76.1 60.5 L76.5 60.8 L76.9 61.1 L77.3 61.4 L77.7 61.7 L78.1 62.0 L78.5 62.3 L78.9 62.7 L79.4 63.0 L79.8 63.3 L80.2 63.7 L80.6 64.0 L81.0 64.4 L81.4 64.7 L81.8 65.1 L82.2 65.4 L82.6 65.8 L83.0 66.1 L83.4 66.5 L83.8 66.9 L84.2 67.2 L84.6 67.6 L85.0 68.0 L85.4 68.4 L85.8 68.8 L86.2 69.1 L86.6 69.5 L87.0 69.9 L87.4 70.3 L87.8 70.7 L88.2 71.1 L88.6 71.6 L89.0 72.0 L89.4 72.4 L89.8 72.8 L90.2 73.2 L90.6 73.6 L91.0 74.1 L91.4 74.5 L91.8 74.9 L92.2 75.4 L92.6 75.8 L93.0 76.3 L93.4 76.7 L93.8 77.1 L94.2 77.6 L94.7 78.1 L95.1 78.5 L95.5 79.0 L95.9 79.4 L96.3 79.9 L96.7 80.4 L97.1 80.8 L97.5 81.3 L97.9 81.8 L98.3 82.3 L98.7 82.7 L99.1 83.2 L99.5 83.7 L99.9 84.2 L100.3 84.7 L100.7 85.2 L101.1 85.7 L101.5 86.2 L101.9 86.7 L102.3 87.2 L102.7 87.7 L103.1 88.2 L103.5 88.7 L103.9 89.2 L104.3 89.7 L104.7 90.2 L105.1 90.7 L105.5 91.3 L105.9 91.8 L106.3 92.3 L106.7 92.8 L107.1 93.3 L107.5 93.9 L107.9 94.4 L108.3 94.9 L108.7 95.5 L109.1 96.0 L109.5 96.5 L110.0 97.1 L110.4 97.6 L110.8 98.2 L111.2 98.7 L111.6 99.2 L112.0 99.8 L112.4 100.3 L112.8 100.9 L113.2 101.4 L113.6 102.0 L114.0 102.5 L114.4 103.1 L114.8 103.6 L115.2 104.2 L115.6 104.8 L116.0 105.3 L116.4 105.9 L116.8 106.4 L117.2 107.0 L117.6 107.6 L118.0 108.1 L118.4 108.7 L118.8 109.3 L119.2 109.8 L119.6 110.4 L120.0 111.0 L120.4 111.5 L120.8 112.1 L121.2 112.7 L121.6 113.2 L122.0 113.8 L122.4 114.4 L122.8 115.0 L123.2 115.5 L123.6 116.1 L124.0 116.7 L124.4 117.2 L124.9 117.8 L125.3 118.4 L125.7 119.0 L126.1 119.5 L126.5 120.1 L126.9 120.7 L127.3 121.3 L127.7 121.8 L128.1 122.4 L128.5 123.0 L128.9 123.6 L129.3 124.2 L129.7 124.7 L130.1 125.3 L130.5 125.9 L130.9 126.5 L131.3 127.0 L131.7 127.6 L132.1 128.2 L132.5 128.8 L132.9 129.3 L133.3 129.9 L133.7 130.5 L134.1 131.0 L134.5 131.6 L134.9 132.2 L135.3 132.8 L135.7 133.3 L136.1 133.9 L136.5 134.5 L136.9 135.0 L137.3 135.6 L137.7 136.2 L138.1 136.7 L138.5 137.3 L138.9 137.9 L139.3 138.4 L139.7 139.0 L140.2 139.6 L140.6 140.1 L141.0 140.7 L141.4 141.2 L141.8 141.8 L142.2 142.4 L142.6 142.9 L143.0 143.5 L143.4 144.0 L143.8 144.6 L144.2 145.1 L144.6 145.7 L145.0 146.2 L145.4 146.8 L145.8 147.3 L146.2 147.8 L146.6 148.4 L147.0 148.9 L147.4 149.5 L147.8 150.0 L148.2 150.5 L148.6 151.1 L149.0 151.6 L149.4 152.1 L149.8 152.7 L150.2 153.2 L150.6 153.7 L151.0 154.2 L151.4 154.7 L151.8 155.3 L152.2 155.8 L152.6 156.3 L153.0 156.8 L153.4 157.3 L153.8 157.8 L154.2 158.3 L154.6 158.8 L155.0 159.3 L155.5 159.8 L155.9 160.3 L156.3 160.8 L156.7 161.3 L157.1 161.8 L157.5 162.3 L157.9 162.8 L158.3 163.3 L158.7 163.7 L159.1 164.2 L159.5 164.7 L159.9 165.2 L160.3 165.6 L160.7 166.1 L161.1 166.6 L161.5 167.0 L161.9 167.5 L162.3 167.9 L162.7 168.4 L163.1 168.9 L163.5 169.3 L163.9 169.7 L164.3 170.2 L164.7 170.6 L165.1 171.1 L165.5 171.5 L165.9 171.9 L166.3 172.4 L166.7 172.8 L167.1 173.2 L167.5 173.6 L167.9 174.0 L168.3 174.4 L168.7 174.9 L169.1 175.3 L169.5 175.7 L169.9 176.1 L170.4 176.5 L170.8 176.9 L171.2 177.2 L171.6 177.6 L172.0 178.0 L172.4 178.4 L172.8 178.8 L173.2 179.1 L173.6 179.5 L174.0 179.9 L174.4 180.2 L174.8 180.6 L175.2 180.9 L175.6 181.3 L176.0 181.6 L176.4 182.0 L176.8 182.3 L177.2 182.7 L177.6 183.0 L178.0 183.3 L178.4 183.7 L178.8 184.0 L179.2 184.3 L179.6 184.6 L180.0 184.9 L180.4 185.2 L180.8 185.5 L181.2 185.8 L181.6 186.1 L182.0 186.4 L182.4 186.7 L182.8 187.0 L183.2 187.3 L183.6 187.5 L184.0 187.8 L184.4 188.1 L184.8 188.3 L185.2 188.6 L185.7 188.9 L186.1 189.1 L186.5 189.4 L186.9 189.6 L187.3 189.8 L187.7 190.1 L188.1 190.3 L188.5 190.5 L188.9 190.8 L189.3 191.0 L189.7 191.2 L190.1 191.4 L190.5 191.6 L190.9 191.8 L191.3 192.0 L191.7 192.2 L192.1 192.4 L192.5 192.6 L192.9 192.7 L193.3 192.9 L193.7 193.1 L194.1 193.3 L194.5 193.4 L194.9 193.6 L195.3 193.7 L195.7 193.9 L196.1 194.0 L196.5 194.2 L196.9 194.3 L197.3 194.4 L197.7 194.6 L198.1 194.7 L198.5 194.8 L198.9 194.9 L199.3 195.0 L199.7 195.1 L200.1 195.2 L200.5 195.3 L201.0 195.4 L201.4 195.5 L201.8 195.6 L202.2 195.7 L202.6 195.8 L203.0 195.8 L203.4 195.9 L203.8 196.0 L204.2 196.0 L204.6 196.1 L205.0 196.1 L205.4 196.2 L205.8 196.2 L206.2 196.2 L206.6 196.3 L207.0 196.3 L207.4 196.3 L207.8 196.3 L208.2 196.3 L208.6 196.3 L209.0 196.3 L209.4 196.3 L209.8 196.3 L210.2 196.3 L210.6 196.3 L211.0 196.3 L211.4 196.3 L211.8 196.2 L212.2 196.2 L212.6 196.2 L213.0 196.1 L213.4 196.1 L213.8 196.0 L214.2 196.0 L214.6 195.9 L215.0 195.8 L215.4 195.8 L215.9 195.7 L216.3 195.6 L216.7 195.5 L217.1 195.4 L217.5 195.3 L217.9 195.2 L218.3 195.1 L218.7 195.0 L219.1 194.9 L219.5 194.8 L219.9 194.7 L220.3 194.6 L220.7 194.4 L221.1 194.3 L221.5 194.2 L221.9 194.0 L222.3 193.9 L222.7 193.7 L223.1 193.6 L223.5 193.4 L223.9 193.3 L224.3 193.1 L224.7 192.9 L225.1 192.7 L225.5 192.6 L225.9 192.4 L226.3 192.2 L226.7 192.0 L227.1 191.8 L227.5 191.6 L227.9 191.4 L228.3 191.2 L228.7 191.0 L229.1 190.8 L229.5 190.5 L229.9 190.3 L230.3 190.1 L230.7 189.8 L231.2 189.6 L231.6 189.4 L232.0 189.1 L232.4 188.9 L232.8 188.6 L233.2 188.3 L233.6 188.1 L234.0 187.8 L234.4 187.5 L234.8 187.3 L235.2 187.0 L235.6 186.7 L236.0 186.4 L236.4 186.1 L236.8 185.8 L237.2 185.5 L237.6 185.2 L238.0 184.9 L238.4 184.6 L238.8 184.3 L239.2 184.0 L239.6 183.7 L240.0 183.3 L240.4 183.0 L240.8 182.7 L241.2 182.3 L241.6 182.0 L242.0 181.6 L242.4 181.3 L242.8 180.9 L243.2 180.6 L243.6 180.2 L244.0 179.9 L244.4 179.5 L244.8 179.1 L245.2 178.8 L245.6 178.4 L246.0 178.0 L246.5 177.6 L246.9 177.2 L247.3 176.9 L247.7 176.5 L248.1 176.1 L248.5 175.7 L248.9 175.3 L249.3 174.9 L249.7 174.4 L250.1 174.0 L250.5 173.6 L250.9 173.2 L251.3 172.8 L251.7 172.4 L252.1 171.9 L252.5 171.5 L252.9 171.1 L253.3 170.6 L253.7 170.2 L254.1 169.7 L254.5 169.3 L254.9 168.9 L255.3 168.4 L255.7 167.9 L256.1 167.5 L256.5 167.0 L256.9 166.6 L257.3 166.1 L257.7 165.6 L258.1 165.2 L258.5 164.7 L258.9 164.2 L259.3 163.7 L259.7 163.3 L260.1 162.8 L260.5 162.3 L260.9 161.8 L261.4 161.3 L261.8 160.8 L262.2 160.3 L262.6 159.8 L263.0 159.3 L263.4 158.8 L263.8 158.3 L264.2 157.8 L264.6 157.3 L265.0 156.8 L265.4 156.3 L265.8 155.8 L266.2 155.3 L266.6 154.7 L267.0 154.2 L267.4 153.7 L267.8 153.2 L268.2 152.7 L268.6 152.1 L269.0 151.6 L269.4 151.1 L269.8 150.5 L270.2 150.0 L270.6 149.5 L271.0 148.9 L271.4 148.4 L271.8 147.8 L272.2 147.3 L272.6 146.8 L273.0 146.2 L273.4 145.7 L273.8 145.1 L274.2 144.6 L274.6 144.0 L275.0 143.5 L275.4 142.9 L275.8 142.4 L276.2 141.8 L276.7 141.2 L277.1 140.7 L277.5 140.1 L277.9 139.6 L278.3 139.0 L278.7 138.4 L279.1 137.9 L279.5 137.3 L279.9 136.7 L280.3 136.2 L280.7 135.6 L281.1 135.0 L281.5 134.5 L281.9 133.9 L282.3 133.3 L282.7 132.8 L283.1 132.2 L283.5 131.6 L283.9 131.0 L284.3 130.5 L284.7 129.9 L285.1 129.3 L285.5 128.8 L285.9 128.2 L286.3 127.6 L286.7 127.0 L287.1 126.5 L287.5 125.9 L287.9 125.3 L288.3 124.7 L288.7 124.2 L289.1 123.6 L289.5 123.0 L289.9 122.4 L290.3 121.8 L290.7 121.3 L291.1 120.7 L291.5 120.1 L292.0 119.5 L292.4 119.0 L292.8 118.4 L293.2 117.8 L293.6 117.2 L294.0 116.7 L294.4 116.1 L294.8 115.5 L295.2 115.0 L295.6 114.4 L296.0 113.8 L296.4 113.2 L296.8 112.7 L297.2 112.1 L297.6 111.5 L298.0 111.0 L298.4 110.4 L298.8 109.8 L299.2 109.3 L299.6 108.7 L300.0 108.1 L300.4 107.6 L300.8 107.0 L301.2 106.4 L301.6 105.9 L302.0 105.3 L302.4 104.8 L302.8 104.2 L303.2 103.6 L303.6 103.1 L304.0 102.5 L304.4 102.0 L304.8 101.4 L305.2 100.9 L305.6 100.3 L306.0 99.8 L306.4 99.2 L306.9 98.7 L307.3 98.2 L307.7 97.6 L308.1 97.1 L308.5 96.5 L308.9 96.0 L309.3 95.5 L309.7 94.9 L310.1 94.4 L310.5 93.9 L310.9 93.3 L311.3 92.8 L311.7 92.3 L312.1 91.8 L312.5 91.3 L312.9 90.7 L313.3 90.2 L313.7 89.7 L314.1 89.2 L314.5 88.7 L314.9 88.2 L315.3 87.7 L315.7 87.2 L316.1 86.7 L316.5 86.2 L316.9 85.7 L317.3 85.2 L317.7 84.7 L318.1 84.2 L318.5 83.7 L318.9 83.2 L319.3 82.7 L319.7 82.3 L320.1 81.8 L320.5 81.3 L320.9 80.8 L321.3 80.4 L321.7 79.9 L322.2 79.4 L322.6 79.0 L323.0 78.5 L323.4 78.1 L323.8 77.6 L324.2 77.1 L324.6 76.7 L325.0 76.3 L325.4 75.8 L325.8 75.4 L326.2 74.9 L326.6 74.5 L327.0 74.1 L327.4 73.6 L327.8 73.2 L328.2 72.8 L328.6 72.4 L329.0 72.0 L329.4 71.6 L329.8 71.1 L330.2 70.7 L330.6 70.3 L331.0 69.9 L331.4 69.5 L331.8 69.1 L332.2 68.8 L332.6 68.4 L333.0 68.0 L333.4 67.6 L333.8 67.2 L334.2 66.9 L334.6 66.5 L335.0 66.1 L335.4 65.8 L335.8 65.4 L336.2 65.1 L336.6 64.7 L337.0 64.4 L337.5 64.0 L337.9 63.7 L338.3 63.3 L338.7 63.0 L339.1 62.7 L339.5 62.3 L339.9 62.0 L340.3 61.7 L340.7 61.4 L341.1 61.1 L341.5 60.8 L341.9 60.5 L342.3 60.2 L342.7 59.9 L343.1 59.6 L343.5 59.3 L343.9 59.0 L344.3 58.7 L344.7 58.5 L345.1 58.2 L345.5 57.9 L345.9 57.7 L346.3 57.4 L346.7 57.1 L347.1 56.9 L347.5 56.6 L347.9 56.4 L348.3 56.2 L348.7 55.9 L349.1 55.7 L349.5 55.5 L349.9 55.2 L350.3 55.0 L350.7 54.8 L351.1 54.6 L351.5 54.4 L351.9 54.2 L352.4 54.0 L352.8 53.8 L353.2 53.6 L353.6 53.4 L354.0 53.3 L354.4 53.1 L354.8 52.9 L355.2 52.7 L355.6 52.6 L356.0 52.4 L356.4 52.3 L356.8 52.1 L357.2 52.0 L357.6 51.8 L358.0 51.7 L358.4 51.6 L358.8 51.4 L359.2 51.3 L359.6 51.2 L360.0 51.1 L360.4 51.0 L360.8 50.9 L361.2 50.8 L361.6 50.7 L362.0 50.6 L362.4 50.5 L362.8 50.4 L363.2 50.3 L363.6 50.2 L364.0 50.2 L364.4 50.1 L364.8 50.0 L365.2 50.0 L365.6 49.9 L366.0 49.9 L366.4 49.8 L366.8 49.8 L367.2 49.8 L367.7 49.7 L368.1 49.7 L368.5 49.7 L368.9 49.7 L369.3 49.7 L369.7 49.7 L370.1 49.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#c2f85e59e)\"/><circle cx=\"83.8\" cy=\"66.9\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"334.2\" cy=\"66.9\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><text x=\"91.8\" y=\"58.9\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><text x=\"326.2\" y=\"58.9\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><text x=\"217.1\" y=\"58.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = <tspan font-style=\"italic\">k</tspan></text><text x=\"113.5\" y=\"141.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">π/2</text><text x=\"209.0\" y=\"141.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">π</text><text x=\"307.5\" y=\"141.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3π/2</text><text x=\"370.1\" y=\"141.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2π</text><text x=\"39.9\" y=\"54.7\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><text x=\"39.9\" y=\"201.3\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−1</text><text x=\"39.9\" y=\"139.0\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><text x=\"265.8\" y=\"190.5\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = cos <tspan font-style=\"italic\">x</tspan></text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the \\(x\\)-coordinate of B, in terms of \\(\\pi\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find, in terms of \\(\\pi\\), the two solutions of the equation \\(\\cos x = -k\\), for \\(0 \\le x \\le 2\\pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find, in terms of \\(\\pi\\), the four solutions of the equation \\(\\cos 2x = k\\), for \\(0 \\le x \\le 2\\pi\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The cosine graph has two symmetries that do most of the work: it is a mirror image of itself in the line \\(x = \\pi\\), and \\(\\cos(\\pi - x) = -\\cos x\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The graph of \\(y = \\cos x\\) on this domain is symmetric about the line \\(x = \\pi\\). A is 0.7 to the right of \\(x = 0\\), so B is 0.7 to the left of \\(x = 2\\pi\\)."
+    ],
+    "answer": "\\(2\\pi - 0.7\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Since \\(\\cos(\\pi - x) = -\\cos x\\), the value \\(x = \\pi - 0.7\\) gives \\(\\cos x = -\\cos 0.7 = -k\\).",
+     "The other solution is its mirror image in the line \\(x = \\pi\\): \\(x = \\pi + 0.7\\). Both are between 0 and \\(2\\pi\\)."
+    ],
+    "answer": "\\(x = \\pi - 0.7\\) or \\(x = \\pi + 0.7\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "As \\(x\\) goes from 0 to \\(2\\pi\\), the angle \\(2x\\) goes from 0 to \\(4\\pi\\): two full turns. So list the angles with cosine \\(k\\) between 0 and \\(4\\pi\\).",
+     "In the first turn: \\(2x = 0.7\\) and \\(2x = 2\\pi - 0.7\\). In the second turn, add \\(2\\pi\\) to each: \\(2x = 2\\pi + 0.7\\) and \\(2x = 4\\pi - 0.7\\).",
+     "Halve each value."
+    ],
+    "answer": "\\(x = 0.35,\\ \\pi - 0.35,\\ \\pi + 0.35\\) or \\(2\\pi - 0.35\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-040",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 12,
+  "stem": [
+   "A water wheel has radius 3 m. Its centre is 1.5 m above the surface of the water, so the lowest part of the wheel is under water. The wheel turns at a constant speed and makes one complete rotation every 20 seconds.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 300\" width=\"360\" height=\"300\" role=\"img\" aria-label=\"A water wheel: a circle of radius 3 m whose centre is 1.5 m above the surface of the water, so the lowest part of the wheel is under water. A bucket is marked at the top of the wheel.\"><rect x=\"20\" y=\"196\" width=\"320\" height=\"84\" fill=\"#eaf0fb\"/><circle cx=\"180.0\" cy=\"145.0\" r=\"102.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.4\"/><path d=\"M20.2 196.0 L339.8 196.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M180.0 145.0 L263.6 86.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M180.0 145.0 L180.0 196.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><circle cx=\"180.0\" cy=\"145.0\" r=\"3\" fill=\"#0b0d12\"/><circle cx=\"180.0\" cy=\"43.0\" r=\"6\" fill=\"#0b0d12\"/><text x=\"192.0\" y=\"37.0\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">bucket</text><text x=\"214.9\" y=\"110.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3 m</text><text x=\"172.0\" y=\"175.5\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1.5 m</text><text x=\"336.4\" y=\"216.0\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">water</text></svg>"
+   },
+   "A bucket on the rim of the wheel is at the top of the wheel when \\(t = 0\\). The height of the bucket above the surface of the water, \\(h\\) metres, after \\(t\\) seconds is modelled by \\(h(t) = a\\cos(bt) + d\\), where \\(a\\), \\(b\\) and \\(d\\) are positive constants. A negative value of \\(h\\) means that the bucket is under water."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the value of \\(a\\) and the value of \\(d\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(b = \\dfrac{\\pi}{10}\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the time at which the bucket first enters the water.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the percentage of each rotation for which the bucket is under water.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Write down the greatest depth of the bucket below the surface of the water.",
+    "marks": 1
+   },
+   {
+    "label": "f",
+    "text": "The wheel is raised so that the bucket is under water for only 20 % of each rotation. Find the new height of the centre of the wheel above the surface of the water.",
+    "marks": 3
+   }
+  ],
+  "idea": "For a point going round a circle at constant speed, the height is a cosine curve: its middle line is the height of the centre, its amplitude is the radius, and its period is the time for one rotation.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The bucket goes 3 m above and 3 m below the centre, so the amplitude is the radius: \\(a = 3\\).",
+     "The middle of the motion is the height of the centre: \\(d = 1.5\\). Check: at \\(t = 0\\), \\(h = 3 + 1.5 = 4.5\\), the top of the wheel."
+    ],
+    "answer": "\\(a = 3,\\quad d = 1.5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "One rotation takes 20 seconds, so the period is 20: \\(\\dfrac{2\\pi}{b} = 20\\), which gives \\(b = \\dfrac{2\\pi}{20}\\)."
+    ],
+    "answer": "\\(b = \\dfrac{2\\pi}{20} = \\dfrac{\\pi}{10}\\) (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The bucket is at the surface when \\(h = 0\\): \\(3\\cos\\left(\\dfrac{\\pi t}{10}\\right) + 1.5 = 0\\), so \\(\\cos\\left(\\dfrac{\\pi t}{10}\\right) = -\\dfrac{1}{2}\\).",
+     "The smallest positive angle with cosine \\(-\\dfrac{1}{2}\\) is \\(\\dfrac{2\\pi}{3}\\): \\(\\dfrac{\\pi t}{10} = \\dfrac{2\\pi}{3}\\).",
+     "\\(t = \\dfrac{20}{3} = 6.666\\ldots\\)"
+    ],
+    "answer": "\\(t = \\dfrac{20}{3} \\approx 6.67\\) seconds"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The bucket comes out of the water at the next angle with cosine \\(-\\dfrac{1}{2}\\), which is \\(\\dfrac{4\\pi}{3}\\).",
+     "It is under water while the angle goes from \\(\\dfrac{2\\pi}{3}\\) to \\(\\dfrac{4\\pi}{3}\\): a stretch of \\(\\dfrac{2\\pi}{3}\\) out of a full turn of \\(2\\pi\\).",
+     "\\(\\dfrac{2\\pi/3}{2\\pi} = \\dfrac{1}{3}\\)."
+    ],
+    "answer": "\\(33.3\\,\\%\\) (exactly one third)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The lowest value of \\(h\\) is \\(-3 + 1.5 = -1.5\\)."
+    ],
+    "answer": "1.5 m"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "20 % of a full turn is \\(0.2 \\times 2\\pi = 0.4\\pi\\). This stretch of angle is centred on the bottom of the wheel, where the angle is \\(\\pi\\), so the bucket enters the water at angle \\(\\pi - 0.2\\pi = 0.8\\pi\\).",
+     "Let the new height of the centre be \\(d\\). At the moment the bucket enters the water, \\(3\\cos(0.8\\pi) + d = 0\\).",
+     "\\(d = -3\\cos(0.8\\pi) = 2.4270\\ldots\\)"
+    ],
+    "answer": "2.43 m"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-041",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 10,
+  "stem": [
+   "Let \\(g(x) = 5 - 2\\cos\\left(\\dfrac{\\pi x}{6}\\right)\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the range of \\(g\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the period of \\(g\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Solve the equation \\(g(x) = 6\\), for \\(0 \\le x \\le 24\\).",
+    "marks": 4
+   },
+   {
+    "label": "d",
+    "text": "Hence solve the inequality \\(g(x) > 6\\), for \\(0 \\le x \\le 24\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Write down the number of solutions of the equation \\(g(2x) = 6\\), for \\(0 \\le x \\le 24\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "The minus sign in front of the cosine turns the graph upside down, so this function starts at its lowest value. Solve the equation over the whole domain first; the inequality then comes from the shape of the graph.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The cosine goes from \\(-1\\) to 1, so \\(-2\\cos(\\ldots)\\) goes from \\(-2\\) to 2.",
+     "Adding 5: from 3 to 7."
+    ],
+    "answer": "\\(3 \\le y \\le 7\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\text{period} = \\dfrac{2\\pi}{b}\\) with \\(b = \\dfrac{\\pi}{6}\\): \\(2\\pi \\times \\dfrac{6}{\\pi}\\)."
+    ],
+    "answer": "12"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(5 - 2\\cos\\left(\\dfrac{\\pi x}{6}\\right) = 6\\) gives \\(\\cos\\left(\\dfrac{\\pi x}{6}\\right) = -\\dfrac{1}{2}\\).",
+     "As \\(x\\) goes from 0 to 24, the angle \\(\\dfrac{\\pi x}{6}\\) goes from 0 to \\(4\\pi\\), which is two full turns.",
+     "In the first turn the angles with cosine \\(-\\dfrac{1}{2}\\) are \\(\\dfrac{2\\pi}{3}\\) and \\(\\dfrac{4\\pi}{3}\\). In the second turn they are \\(\\dfrac{8\\pi}{3}\\) and \\(\\dfrac{10\\pi}{3}\\).",
+     "Multiply each angle by \\(\\dfrac{6}{\\pi}\\) to find \\(x\\)."
+    ],
+    "answer": "\\(x = 4,\\ 8,\\ 16\\) or \\(20\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The graph starts at its minimum, \\(g(0) = 3\\), rises to its maximum 7 at \\(x = 6\\) and falls back to 3 at \\(x = 12\\). So in the first cycle it is above 6 between \\(x = 4\\) and \\(x = 8\\).",
+     "The second cycle is the same, 12 units later."
+    ],
+    "answer": "\\(4 < x < 8\\) or \\(16 < x < 20\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "As \\(x\\) goes from 0 to 24, the input \\(2x\\) goes from 0 to 48, which is four periods of \\(g\\). Each period contains two solutions."
+    ],
+    "answer": "8"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-042",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Solve the equation \\(2\\sin x = \\sqrt{3}\\), for \\(0 \\le x \\le 2\\pi\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence write down the solutions of the equation \\(2\\sin x = -\\sqrt{3}\\), for \\(0 \\le x \\le 2\\pi\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Find the acute angle first, then use the symmetry of the sine graph: sine is positive in the first and second quadrants, and negative in the third and fourth.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sin x = \\dfrac{\\sqrt{3}}{2}\\). The acute angle with this sine is \\(\\dfrac{\\pi}{3}\\).",
+     "Sine is also positive in the second quadrant: \\(x = \\pi - \\dfrac{\\pi}{3} = \\dfrac{2\\pi}{3}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{3}\\) or \\(x = \\dfrac{2\\pi}{3}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Now \\(\\sin x = -\\dfrac{\\sqrt{3}}{2}\\). The related acute angle is still \\(\\dfrac{\\pi}{3}\\), but the solutions are in the third and fourth quadrants: \\(\\pi + \\dfrac{\\pi}{3}\\) and \\(2\\pi - \\dfrac{\\pi}{3}\\).",
+     "These are the solutions of part (a) moved on by \\(\\pi\\)."
+    ],
+    "answer": "\\(x = \\dfrac{4\\pi}{3}\\) or \\(x = \\dfrac{5\\pi}{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-043",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "Solve the equation \\(\\tan^2 x = 3\\), for \\(-\\pi \\le x \\le \\pi\\)."
+  ],
+  "parts": [],
+  "idea": "Taking a square root gives two equations, one with a plus sign and one with a minus sign. Solve both, and check every answer against the given interval.",
+  "solution": [
+   {
+    "label": "",
+    "steps": [
+     "Take the square root of both sides: \\(\\tan x = \\sqrt{3}\\) or \\(\\tan x = -\\sqrt{3}\\).",
+     "\\(\\tan x = \\sqrt{3}\\): the acute angle is \\(\\dfrac{\\pi}{3}\\). The tangent repeats every \\(\\pi\\), so the other solution in the interval is \\(\\dfrac{\\pi}{3} - \\pi = -\\dfrac{2\\pi}{3}\\).",
+     "\\(\\tan x = -\\sqrt{3}\\): one solution is \\(-\\dfrac{\\pi}{3}\\), and adding \\(\\pi\\) gives \\(\\dfrac{2\\pi}{3}\\).",
+     "All four values lie between \\(-\\pi\\) and \\(\\pi\\)."
+    ],
+    "answer": "\\(x = -\\dfrac{2\\pi}{3},\\ -\\dfrac{\\pi}{3},\\ \\dfrac{\\pi}{3}\\) or \\(\\dfrac{2\\pi}{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-044",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Solve the equation \\(\\sin 2x = 0.6\\), for \\(0 \\le x \\le \\pi\\), where \\(x\\) is in radians.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Write down the number of solutions of the equation \\(\\sin 2x = 0.6\\), for \\(0 \\le x \\le 3\\pi\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "Solve for the whole angle \\(2x\\) first, over an interval twice as long, and only then divide by 2. Dividing too early loses solutions.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "As \\(x\\) goes from 0 to \\(\\pi\\), the angle \\(2x\\) goes from 0 to \\(2\\pi\\).",
+     "With the calculator in radians: \\(2x = \\sin^{-1}(0.6) = 0.64350\\ldots\\)",
+     "Sine is also positive in the second quadrant: \\(2x = \\pi - 0.64350\\ldots = 2.4980\\ldots\\)",
+     "Halve each value: \\(x = 0.32175\\ldots\\) and \\(x = 1.2490\\ldots\\)"
+    ],
+    "answer": "\\(x = 0.322\\) or \\(x = 1.25\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The function \\(\\sin 2x\\) has period \\(\\pi\\), and there are two solutions in each period. The interval from 0 to \\(3\\pi\\) contains three periods."
+    ],
+    "answer": "6"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-045",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Consider the equation \\(\\cos 3x = \\dfrac{1}{2}\\), for \\(0 \\le x \\le 2\\pi\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the interval of values that \\(3x\\) can take.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Solve the equation.",
+    "marks": 5
+   }
+  ],
+  "idea": "A multiple angle means more solutions. List every value of the whole angle \\(3x\\) in its longer interval before dividing by 3.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Multiply the interval for \\(x\\) by 3."
+    ],
+    "answer": "\\(0 \\le 3x \\le 6\\pi\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "In one full turn, the angles with cosine \\(\\dfrac{1}{2}\\) are \\(\\dfrac{\\pi}{3}\\) and \\(2\\pi - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{3}\\).",
+     "The interval \\(0 \\le 3x \\le 6\\pi\\) is three full turns, so add \\(2\\pi\\) and then \\(4\\pi\\) to each of these:",
+     "\\[3x = \\frac{\\pi}{3},\\ \\frac{5\\pi}{3},\\ \\frac{7\\pi}{3},\\ \\frac{11\\pi}{3},\\ \\frac{13\\pi}{3},\\ \\frac{17\\pi}{3}\\]",
+     "Divide each value by 3."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{9},\\ \\dfrac{5\\pi}{9},\\ \\dfrac{7\\pi}{9},\\ \\dfrac{11\\pi}{9},\\ \\dfrac{13\\pi}{9}\\) or \\(\\dfrac{17\\pi}{9}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-046",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Solve the equation \\(\\sin 2x = \\sqrt{3}\\cos x\\), for \\(0 \\le x \\le 2\\pi\\)."
+  ],
+  "parts": [],
+  "idea": "Use the double angle identity so that both sides contain \\(\\cos x\\). Then bring everything to one side and factorise. Never divide by \\(\\cos x\\): that throws away the solutions where \\(\\cos x = 0\\).",
+  "solution": [
+   {
+    "label": "",
+    "steps": [
+     "Replace \\(\\sin 2x\\) by \\(2\\sin x\\cos x\\): \\(2\\sin x\\cos x = \\sqrt{3}\\cos x\\).",
+     "Bring everything to one side and take out the common factor: \\(\\cos x\\,(2\\sin x - \\sqrt{3}) = 0\\).",
+     "Either \\(\\cos x = 0\\), which gives \\(x = \\dfrac{\\pi}{2}\\) or \\(x = \\dfrac{3\\pi}{2}\\),",
+     "or \\(\\sin x = \\dfrac{\\sqrt{3}}{2}\\), which gives \\(x = \\dfrac{\\pi}{3}\\) or \\(x = \\dfrac{2\\pi}{3}\\).",
+     "Check one of the first pair: at \\(x = \\dfrac{\\pi}{2}\\), \\(\\sin 2x = \\sin\\pi = 0\\) and \\(\\sqrt{3}\\cos x = 0\\). Correct."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{3},\\ \\dfrac{\\pi}{2},\\ \\dfrac{2\\pi}{3}\\) or \\(\\dfrac{3\\pi}{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-047",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "Solve the equation \\(4\\sin\\left(x + \\dfrac{\\pi}{6}\\right) = 2\\sqrt{2}\\), for \\(0 \\le x \\le 2\\pi\\)."
+  ],
+  "parts": [],
+  "idea": "Treat the whole bracket as one angle. Work out the interval that this angle covers, solve for the angle, and subtract \\(\\frac{\\pi}{6}\\) at the end.",
+  "solution": [
+   {
+    "label": "",
+    "steps": [
+     "Divide by 4: \\(\\sin\\left(x + \\dfrac{\\pi}{6}\\right) = \\dfrac{\\sqrt{2}}{2}\\).",
+     "Let \\(u = x + \\dfrac{\\pi}{6}\\). As \\(x\\) goes from 0 to \\(2\\pi\\), \\(u\\) goes from \\(\\dfrac{\\pi}{6}\\) to \\(\\dfrac{13\\pi}{6}\\).",
+     "The angles with sine \\(\\dfrac{\\sqrt{2}}{2}\\) are \\(\\dfrac{\\pi}{4}\\), \\(\\dfrac{3\\pi}{4}\\), and then \\(\\dfrac{9\\pi}{4}\\). The last one is larger than \\(\\dfrac{13\\pi}{6}\\), so only the first two are in the interval for \\(u\\).",
+     "Subtract \\(\\dfrac{\\pi}{6}\\): \\(x = \\dfrac{\\pi}{4} - \\dfrac{\\pi}{6} = \\dfrac{\\pi}{12}\\) and \\(x = \\dfrac{3\\pi}{4} - \\dfrac{\\pi}{6} = \\dfrac{7\\pi}{12}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{12}\\) or \\(x = \\dfrac{7\\pi}{12}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-048",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 10,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Solve the equation \\(\\cos 2x + 3\\sin x = 2\\), for \\(0 \\le x \\le 2\\pi\\).",
+    "marks": 7
+   },
+   {
+    "label": "b",
+    "text": "Hence solve the equation \\(\\cos 4\\theta + 3\\sin 2\\theta = 2\\), for \\(0 \\le \\theta \\le \\pi\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The equation contains \\(\\cos 2x\\) and \\(\\sin x\\). Choosing the form \\(\\cos 2x = 1 - 2\\sin^2 x\\) turns it into a quadratic in \\(\\sin x\\) alone.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Replace \\(\\cos 2x\\) by \\(1 - 2\\sin^2 x\\): \\(1 - 2\\sin^2 x + 3\\sin x = 2\\).",
+     "Rearrange: \\(2\\sin^2 x - 3\\sin x + 1 = 0\\).",
+     "Factorise as a quadratic in \\(\\sin x\\): \\((2\\sin x - 1)(\\sin x - 1) = 0\\).",
+     "\\(\\sin x = \\dfrac{1}{2}\\) gives \\(x = \\dfrac{\\pi}{6}\\) or \\(x = \\dfrac{5\\pi}{6}\\).",
+     "\\(\\sin x = 1\\) gives \\(x = \\dfrac{\\pi}{2}\\).",
+     "Check \\(x = \\dfrac{\\pi}{2}\\): \\(\\cos\\pi + 3\\sin\\dfrac{\\pi}{2} = -1 + 3 = 2\\). Correct."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{6},\\ \\dfrac{\\pi}{2}\\) or \\(\\dfrac{5\\pi}{6}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Compare the two equations. If \\(x = 2\\theta\\), then \\(\\cos 2x = \\cos 4\\theta\\) and \\(\\sin x = \\sin 2\\theta\\), so the new equation is the equation of part (a) with \\(x\\) replaced by \\(2\\theta\\).",
+     "As \\(\\theta\\) goes from 0 to \\(\\pi\\), \\(2\\theta\\) goes from 0 to \\(2\\pi\\), the same interval as in part (a). So \\(2\\theta = \\dfrac{\\pi}{6},\\ \\dfrac{\\pi}{2}\\) or \\(\\dfrac{5\\pi}{6}\\).",
+     "Halve each value."
+    ],
+    "answer": "\\(\\theta = \\dfrac{\\pi}{12},\\ \\dfrac{\\pi}{4}\\) or \\(\\dfrac{5\\pi}{12}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-049",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 11,
+  "stem": [
+   "Consider the equation \\(\\sin^2 x + 2\\sin x = k\\), where \\(k\\) is a real constant."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\sin^2 x + 2\\sin x = (\\sin x + 1)^2 - 1\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Hence find the set of values of \\(k\\) for which the equation has at least one solution.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Solve the equation when \\(k = \\dfrac{5}{4}\\), for \\(0 \\le x \\le 2\\pi\\).",
+    "marks": 4
+   },
+   {
+    "label": "d",
+    "text": "Find the value of \\(k\\) for which the equation has exactly three solutions, for \\(0 \\le x \\le 2\\pi\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The equation has a solution only if \\(k\\) is a value that the left-hand side can actually take. Completing the square shows what those values are, because \\(\\sin x\\) is limited to the interval from \\(-1\\) to 1.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Expand the right-hand side: \\((\\sin x + 1)^2 - 1 = \\sin^2 x + 2\\sin x + 1 - 1\\)."
+    ],
+    "answer": "\\((\\sin x + 1)^2 - 1 = \\sin^2 x + 2\\sin x\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\sin x\\) takes every value from \\(-1\\) to 1, so \\(\\sin x + 1\\) takes every value from 0 to 2.",
+     "Squaring, \\((\\sin x + 1)^2\\) takes every value from 0 to 4.",
+     "Subtracting 1, the left-hand side takes every value from \\(-1\\) to 3, and no others. The equation has a solution exactly when \\(k\\) is one of these values."
+    ],
+    "answer": "\\(-1 \\le k \\le 3\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((\\sin x + 1)^2 - 1 = \\dfrac{5}{4}\\), so \\((\\sin x + 1)^2 = \\dfrac{9}{4}\\) and \\(\\sin x + 1 = \\pm\\dfrac{3}{2}\\).",
+     "So \\(\\sin x = \\dfrac{1}{2}\\) or \\(\\sin x = -\\dfrac{5}{2}\\). The second is impossible, because a sine is never less than \\(-1\\).",
+     "\\(\\sin x = \\dfrac{1}{2}\\) gives \\(x = \\dfrac{\\pi}{6}\\) or \\(x = \\pi - \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{6}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{6}\\) or \\(x = \\dfrac{5\\pi}{6}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "From part (a), \\((\\sin x + 1)^2 = k + 1\\), so \\(\\sin x = -1 + \\sqrt{k + 1}\\). (The other root, \\(-1 - \\sqrt{k + 1}\\), is below \\(-1\\) unless \\(k = -1\\), when both roots are \\(-1\\).) So for each \\(k\\) the equation fixes one value of \\(\\sin x\\).",
+     "Count how many angles between 0 and \\(2\\pi\\) have a given sine. The values 1 and \\(-1\\) each come from one angle. The value 0 comes from three angles: \\(0\\), \\(\\pi\\) and \\(2\\pi\\). Every other value between \\(-1\\) and 1 comes from two angles.",
+     "So there are exactly three solutions only when \\(\\sin x = 0\\). Then \\(k = 0^2 + 2 \\times 0\\)."
+    ],
+    "answer": "\\(k = 0\\) (the solutions are \\(x = 0,\\ \\pi\\) and \\(2\\pi\\))"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-050",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "Consider the equation \\(2\\sin x\\tan x = 3\\), for \\(-\\pi \\le x \\le \\pi\\), where \\(\\cos x \\neq 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the equation can be written as \\(2\\cos^2 x + 3\\cos x - 2 = 0\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence solve the equation.",
+    "marks": 4
+   }
+  ],
+  "idea": "Write \\(\\tan x\\) as \\(\\dfrac{\\sin x}{\\cos x}\\). The equation then contains \\(\\sin^2 x\\), which the identity \\(\\sin^2 x = 1 - \\cos^2 x\\) turns into cosines.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(2\\sin x \\times \\dfrac{\\sin x}{\\cos x} = 3\\), so \\(\\dfrac{2\\sin^2 x}{\\cos x} = 3\\) and \\(2\\sin^2 x = 3\\cos x\\).",
+     "Replace \\(\\sin^2 x\\) by \\(1 - \\cos^2 x\\): \\(2 - 2\\cos^2 x = 3\\cos x\\).",
+     "Bring everything to one side: \\(0 = 2\\cos^2 x + 3\\cos x - 2\\)."
+    ],
+    "answer": "\\(2\\cos^2 x + 3\\cos x - 2 = 0\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Factorise as a quadratic in \\(\\cos x\\): \\((2\\cos x - 1)(\\cos x + 2) = 0\\).",
+     "\\(\\cos x = -2\\) is impossible, because a cosine is never less than \\(-1\\).",
+     "\\(\\cos x = \\dfrac{1}{2}\\): the acute angle is \\(\\dfrac{\\pi}{3}\\). The cosine graph is symmetric about the \\(y\\)-axis, so \\(-\\dfrac{\\pi}{3}\\) is also a solution, and both lie between \\(-\\pi\\) and \\(\\pi\\).",
+     "Check \\(x = \\dfrac{\\pi}{3}\\): \\(2 \\times \\dfrac{\\sqrt{3}}{2} \\times \\sqrt{3} = 3\\). Correct."
+    ],
+    "answer": "\\(x = -\\dfrac{\\pi}{3}\\) or \\(x = \\dfrac{\\pi}{3}\\)"
+   }
+  ]
+ }
+]

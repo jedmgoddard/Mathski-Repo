@@ -1,0 +1,3633 @@
+[
+ {
+  "id": "aa-sp-001",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "A library has 600 members. The table shows the number of members in each age group.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{Age group} & \\text{Number of members} \\\\ \\hline \\text{Under 18} & 180 \\\\ \\hline \\text{18 to 64} & 270 \\\\ \\hline \\text{65 and over} & 150 \\\\ \\hline\\end{array}\\]",
+   "The librarian wants to ask a sample of 40 members about the opening hours."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "The librarian first thinks of asking the first 40 members who come in on Monday morning. Write down the name of this sampling method.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Give one reason why this sample might not represent all the members.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "The librarian decides instead to take a stratified sample of 40 members, with the age groups as the strata. Find the number of members to be chosen from each age group.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Within each age group, every member is given a number, and a random number generator picks the members for the sample. Write down the name of this way of choosing members.",
+    "marks": 1
+   }
+  ],
+  "idea": "A stratified sample copies the make-up of the population: each group gets the same fraction of the sample as it has of the population.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The librarian takes whoever is easiest to reach. That is convenience sampling."
+    ],
+    "answer": "Convenience sampling"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "On a Monday morning most school pupils are in class and many adults are at work, so the under 18 group and working adults are likely to be missing. Their views on opening hours could be quite different."
+    ],
+    "answer": "For example: members who are at school or at work on Monday morning cannot be chosen, so the sample is biased towards the other members."
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The sample is \\(\\dfrac{40}{600} = \\dfrac{1}{15}\\) of the members, so take \\(\\dfrac{1}{15}\\) of each group.",
+     "Under 18: \\(\\dfrac{180}{15} = 12\\). 18 to 64: \\(\\dfrac{270}{15} = 18\\). 65 and over: \\(\\dfrac{150}{15} = 10\\).",
+     "Check: \\(12 + 18 + 10 = 40\\)."
+    ],
+    "answer": "12 members under 18, 18 members aged 18 to 64, and 10 members aged 65 and over"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Every member of the group has the same chance of being picked, and the choices are made by chance alone."
+    ],
+    "answer": "Simple random sampling"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-002",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The masses, in kg, of nine parcels are listed in increasing order.",
+   "\\[2.1 \\quad 2.4 \\quad 2.6 \\quad 2.9 \\quad 3.0 \\quad 3.3 \\quad 3.5 \\quad 3.8 \\quad 6.4\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the median mass.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the interquartile range.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Show that the parcel of mass 6.4 kg is an outlier.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "The 6.4 kg parcel is removed. State whether the mean or the median changes by more. Give a reason.",
+    "marks": 1
+   }
+  ],
+  "idea": "The median splits the ordered list in half, and the quartiles are the medians of the two halves. A value is an outlier if it is more than 1.5 interquartile ranges beyond a quartile.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "There are nine values, so the median is the 5th value."
+    ],
+    "answer": "3.0 kg"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The lower half is 2.1, 2.4, 2.6, 2.9. Its median is \\(Q_1 = \\dfrac{2.4 + 2.6}{2} = 2.5\\).",
+     "The upper half is 3.3, 3.5, 3.8, 6.4. Its median is \\(Q_3 = \\dfrac{3.5 + 3.8}{2} = 3.65\\).",
+     "\\(\\text{IQR} = 3.65 - 2.5\\)."
+    ],
+    "answer": "1.15 kg"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The upper boundary for outliers is \\(Q_3 + 1.5 \\times \\text{IQR} = 3.65 + 1.5 \\times 1.15 = 3.65 + 1.725 = 5.375\\).",
+     "Since \\(6.4 > 5.375\\), the 6.4 kg parcel is an outlier."
+    ],
+    "answer": "\\(6.4 > 5.375\\), so it is an outlier (shown)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The mean uses the size of every value, so one very large value pulls it up. The median only depends on the middle of the list.",
+     "Check with the numbers: the mean falls from \\(\\dfrac{30}{9} = 3.33\\ldots\\) to \\(\\dfrac{23.6}{8} = 2.95\\), a change of about 0.38. The median falls from 3.0 to \\(\\dfrac{2.9 + 3.0}{2} = 2.95\\), a change of only 0.05."
+    ],
+    "answer": "The mean changes by more, because it depends on the size of the extreme value and the median does not."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-003",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The histogram shows the heights, \\(h\\) cm, of the sunflower plants in a field trial. The first class is \\(100 \\le h < 120\\).",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 300\" width=\"430\" height=\"300\" role=\"img\" aria-label=\"Histogram of the heights of sunflower plants. The classes are 20 cm wide. Frequencies: 100 to 120 cm, 6 plants; 120 to 140 cm, 14 plants; 140 to 160 cm, 26 plants; 160 to 180 cm, 22 plants; 180 to 200 cm, 12 plants.\"><line x1=\"56.0\" y1=\"254.0\" x2=\"412.0\" y2=\"254.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"236.9\" x2=\"412.0\" y2=\"236.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"219.7\" x2=\"412.0\" y2=\"219.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"202.6\" x2=\"412.0\" y2=\"202.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"185.4\" x2=\"412.0\" y2=\"185.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"168.3\" x2=\"412.0\" y2=\"168.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"151.1\" x2=\"412.0\" y2=\"151.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"134.0\" x2=\"412.0\" y2=\"134.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"116.9\" x2=\"412.0\" y2=\"116.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"99.7\" x2=\"412.0\" y2=\"99.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"82.6\" x2=\"412.0\" y2=\"82.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"65.4\" x2=\"412.0\" y2=\"65.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"48.3\" x2=\"412.0\" y2=\"48.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"31.1\" x2=\"412.0\" y2=\"31.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"14.0\" x2=\"412.0\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><rect x=\"56.0\" y=\"202.6\" width=\"71.2\" height=\"51.4\" fill=\"#b9c8ea\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><rect x=\"127.2\" y=\"134.0\" width=\"71.2\" height=\"120.0\" fill=\"#b9c8ea\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><rect x=\"198.4\" y=\"31.1\" width=\"71.2\" height=\"222.9\" fill=\"#b9c8ea\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><rect x=\"269.6\" y=\"65.4\" width=\"71.2\" height=\"188.6\" fill=\"#b9c8ea\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><rect x=\"340.8\" y=\"151.1\" width=\"71.2\" height=\"102.9\" fill=\"#b9c8ea\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"56.0\" y1=\"254.0\" x2=\"412.0\" y2=\"254.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"56.0\" y1=\"254.0\" x2=\"56.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"56.0\" y1=\"254.0\" x2=\"56.0\" y2=\"258.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"56.0\" y=\"272.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">100</text><line x1=\"127.2\" y1=\"254.0\" x2=\"127.2\" y2=\"258.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"127.2\" y=\"272.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">120</text><line x1=\"198.4\" y1=\"254.0\" x2=\"198.4\" y2=\"258.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"198.4\" y=\"272.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">140</text><line x1=\"269.6\" y1=\"254.0\" x2=\"269.6\" y2=\"258.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"269.6\" y=\"272.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">160</text><line x1=\"340.8\" y1=\"254.0\" x2=\"340.8\" y2=\"258.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"340.8\" y=\"272.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">180</text><line x1=\"412.0\" y1=\"254.0\" x2=\"412.0\" y2=\"258.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"412.0\" y=\"272.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">200</text><line x1=\"52.0\" y1=\"254.0\" x2=\"56.0\" y2=\"254.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"258.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><line x1=\"52.0\" y1=\"219.7\" x2=\"56.0\" y2=\"219.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"224.2\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><line x1=\"52.0\" y1=\"185.4\" x2=\"56.0\" y2=\"185.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"189.9\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">8</text><line x1=\"52.0\" y1=\"151.1\" x2=\"56.0\" y2=\"151.1\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"155.6\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">12</text><line x1=\"52.0\" y1=\"116.9\" x2=\"56.0\" y2=\"116.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"121.4\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">16</text><line x1=\"52.0\" y1=\"82.6\" x2=\"56.0\" y2=\"82.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"87.1\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">20</text><line x1=\"52.0\" y1=\"48.3\" x2=\"56.0\" y2=\"48.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"52.8\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">24</text><line x1=\"52.0\" y1=\"14.0\" x2=\"56.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"18.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">28</text><text x=\"234.0\" y=\"292.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Height (cm)</text><g transform=\"rotate(-90 15 134.0)\"><text x=\"15.0\" y=\"139.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Frequency</text></g></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the modal class.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that there are 80 plants in the trial.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find an estimate for the mean height of the plants.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Explain why your answer to part (c) is only an estimate.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Explain why the median height must lie in the class \\(140 \\le h < 160\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "A histogram gives the number of values in each class, not the values themselves. For the mean, treat every value in a class as if it sat at the middle of the class.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The modal class is the class with the tallest bar."
+    ],
+    "answer": "\\(140 \\le h < 160\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Read the height of each bar and add: \\(6 + 14 + 26 + 22 + 12 = 80\\)."
+    ],
+    "answer": "80 plants (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The mid-interval values are 110, 130, 150, 170 and 190. Enter them in the calculator with the frequencies 6, 14, 26, 22 and 12.",
+     "The total of the heights is about \\(6(110) + 14(130) + 26(150) + 22(170) + 12(190) = 12\\,400\\), so \\(\\bar{h} \\approx \\dfrac{12\\,400}{80}\\)."
+    ],
+    "answer": "155 cm"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The exact heights are not known. The calculation assumes that every plant in a class has the mid-interval height."
+    ],
+    "answer": "The actual heights within each class are unknown; mid-interval values were used in their place."
+   },
+   {
+    "label": "e",
+    "steps": [
+     "With 80 values, the median lies between the 40th and 41st values.",
+     "There are \\(6 + 14 = 20\\) plants shorter than 140 cm, and \\(20 + 26 = 46\\) plants shorter than 160 cm.",
+     "So the 21st to the 46th plants are in the class \\(140 \\le h < 160\\), and this includes the 40th and the 41st."
+    ],
+    "answer": "The 40th and 41st values both fall in \\(140 \\le h < 160\\), because 20 plants are below 140 cm and 46 are below 160 cm."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-004",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Two couriers, A and B, each record the times, in minutes, of their deliveries in one week. The box-and-whisker plots show the results.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 210\" width=\"440\" height=\"210\" role=\"img\" aria-label=\"Two box-and-whisker plots on the same scale of delivery times in minutes. Courier A: minimum 18, lower quartile 24, median 30, upper quartile 38, maximum 52. Courier B: minimum 22, lower quartile 28, median 32, upper quartile 36, maximum 42.\"><line x1=\"78.0\" y1=\"14\" x2=\"78.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"86.6\" y1=\"14\" x2=\"86.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"95.2\" y1=\"14\" x2=\"95.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"103.8\" y1=\"14\" x2=\"103.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"112.4\" y1=\"14\" x2=\"112.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"121.0\" y1=\"14\" x2=\"121.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"129.6\" y1=\"14\" x2=\"129.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"138.2\" y1=\"14\" x2=\"138.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"146.8\" y1=\"14\" x2=\"146.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"155.4\" y1=\"14\" x2=\"155.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"164.0\" y1=\"14\" x2=\"164.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"172.6\" y1=\"14\" x2=\"172.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"181.2\" y1=\"14\" x2=\"181.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"189.8\" y1=\"14\" x2=\"189.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"198.4\" y1=\"14\" x2=\"198.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"207.0\" y1=\"14\" x2=\"207.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"215.6\" y1=\"14\" x2=\"215.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"224.2\" y1=\"14\" x2=\"224.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"232.8\" y1=\"14\" x2=\"232.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"241.4\" y1=\"14\" x2=\"241.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"250.0\" y1=\"14\" x2=\"250.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"258.6\" y1=\"14\" x2=\"258.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"267.2\" y1=\"14\" x2=\"267.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"275.8\" y1=\"14\" x2=\"275.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"284.4\" y1=\"14\" x2=\"284.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"293.0\" y1=\"14\" x2=\"293.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"301.6\" y1=\"14\" x2=\"301.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"310.2\" y1=\"14\" x2=\"310.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"318.8\" y1=\"14\" x2=\"318.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"327.4\" y1=\"14\" x2=\"327.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"336.0\" y1=\"14\" x2=\"336.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"344.6\" y1=\"14\" x2=\"344.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"353.2\" y1=\"14\" x2=\"353.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"361.8\" y1=\"14\" x2=\"361.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"370.4\" y1=\"14\" x2=\"370.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"379.0\" y1=\"14\" x2=\"379.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"387.6\" y1=\"14\" x2=\"387.6\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"396.2\" y1=\"14\" x2=\"396.2\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"404.8\" y1=\"14\" x2=\"404.8\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"413.4\" y1=\"14\" x2=\"413.4\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"0.8\"/><line x1=\"422.0\" y1=\"14\" x2=\"422.0\" y2=\"160\" stroke=\"#d5dbe6\" stroke-width=\"1.6\"/><line x1=\"78.0\" y1=\"160\" x2=\"422.0\" y2=\"160\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"78.0\" y1=\"160\" x2=\"78.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"78.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">15</text><line x1=\"121.0\" y1=\"160\" x2=\"121.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"121.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">20</text><line x1=\"164.0\" y1=\"160\" x2=\"164.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"164.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">25</text><line x1=\"207.0\" y1=\"160\" x2=\"207.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"207.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">30</text><line x1=\"250.0\" y1=\"160\" x2=\"250.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"250.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">35</text><line x1=\"293.0\" y1=\"160\" x2=\"293.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"293.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">40</text><line x1=\"336.0\" y1=\"160\" x2=\"336.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"336.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">45</text><line x1=\"379.0\" y1=\"160\" x2=\"379.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"379.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">50</text><line x1=\"422.0\" y1=\"160\" x2=\"422.0\" y2=\"165\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"422.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">55</text><text x=\"250.0\" y=\"202.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Delivery time (minutes)</text><line x1=\"103.8\" y1=\"50\" x2=\"155.4\" y2=\"50\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"275.8\" y1=\"50\" x2=\"396.2\" y2=\"50\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"103.8\" y1=\"41\" x2=\"103.8\" y2=\"59\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"396.2\" y1=\"41\" x2=\"396.2\" y2=\"59\" stroke=\"#0b0d12\" stroke-width=\"2\"/><rect x=\"155.4\" y=\"33\" width=\"120.4\" height=\"34\" fill=\"#b9c8ea\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"207.0\" y1=\"33\" x2=\"207.0\" y2=\"67\" stroke=\"#0b0d12\" stroke-width=\"2\"/><text x=\"8.0\" y=\"55.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Courier A</text><line x1=\"138.2\" y1=\"112\" x2=\"189.8\" y2=\"112\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"258.6\" y1=\"112\" x2=\"310.2\" y2=\"112\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"138.2\" y1=\"103\" x2=\"138.2\" y2=\"121\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"310.2\" y1=\"103\" x2=\"310.2\" y2=\"121\" stroke=\"#0b0d12\" stroke-width=\"2\"/><rect x=\"189.8\" y=\"95\" width=\"68.8\" height=\"34\" fill=\"#b9c8ea\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"224.2\" y1=\"95\" x2=\"224.2\" y2=\"129\" stroke=\"#0b0d12\" stroke-width=\"2\"/><text x=\"8.0\" y=\"117.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Courier B</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the median delivery time for courier A.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the interquartile range for courier B.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "One of courier A's deliveries is chosen at random. Write down the probability that it took more than 38 minutes.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Make two comparisons, in context, between the delivery times of the two couriers.",
+    "marks": 2
+   }
+  ],
+  "idea": "A box plot shows five numbers: the minimum, the lower quartile, the median, the upper quartile and the maximum. Each of the four sections holds a quarter of the data.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The median is the line inside the box for courier A."
+    ],
+    "answer": "30 minutes"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "For courier B the box runs from \\(Q_1 = 28\\) to \\(Q_3 = 36\\).",
+     "\\(\\text{IQR} = 36 - 28\\)."
+    ],
+    "answer": "8 minutes"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "38 is the upper quartile for courier A. One quarter of the deliveries took longer than the upper quartile."
+    ],
+    "answer": "\\(\\dfrac{1}{4}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Compare an average: the median for A is 30 minutes and for B it is 32 minutes.",
+     "Compare the spread: the interquartile range for A is \\(38 - 24 = 14\\) minutes and for B it is 8 minutes. (The ranges, \\(52 - 18 = 34\\) and \\(42 - 22 = 20\\), tell the same story.)"
+    ],
+    "answer": "On average courier A is slightly faster (median 30 minutes against 32). Courier B's times are more consistent (interquartile range 8 minutes against 14)."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-005",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "The marks, \\(x\\), in a test have mean 60 and standard deviation 12. The teacher scales every mark with the rule \\(y = ax + b\\), where \\(a > 0\\). The scaled marks, \\(y\\), have mean 65 and standard deviation 9."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(a\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(b\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the variance of the scaled marks.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "One student's mark is not changed by the scaling. Find this mark.",
+    "marks": 2
+   }
+  ],
+  "idea": "Multiplying every value by \\(a\\) multiplies both the mean and the standard deviation by \\(a\\). Adding \\(b\\) shifts the mean by \\(b\\) and leaves the spread alone.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Only the multiplication changes the standard deviation, so \\(12a = 9\\)."
+    ],
+    "answer": "\\(a = 0.75\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The mean follows the same rule as each mark: \\(65 = 0.75 \\times 60 + b\\).",
+     "\\(65 = 45 + b\\)."
+    ],
+    "answer": "\\(b = 20\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The variance is the square of the standard deviation: \\(9^2\\)."
+    ],
+    "answer": "81"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The mark does not change when \\(y = x\\): \\(x = 0.75x + 20\\).",
+     "\\(0.25x = 20\\), so \\(x = 80\\).",
+     "Check: \\(0.75 \\times 80 + 20 = 60 + 20 = 80\\)."
+    ],
+    "answer": "80"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-006",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "A shop records the number of items in each of 25 online orders.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|c|c|}\\hline \\text{Number of items} & 1 & 2 & 3 & 4 & 5 & 6 \\\\ \\hline \\text{Number of orders} & 3 & 6 & 7 & 5 & 3 & 1 \\\\ \\hline\\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the median number of items.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the interquartile range.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the mean and the standard deviation of the number of items.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Two of the 25 orders are chosen at random. Find the probability that both contain more than four items.",
+    "marks": 2
+   }
+  ],
+  "idea": "In a frequency table the values are already in order. Running totals of the frequencies tell you which value sits at each position.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "With 25 values, the median is the 13th value.",
+     "The running totals are 3, 9, 16, 21, 24, 25. The 10th to the 16th values are all 3, so the 13th value is 3."
+    ],
+    "answer": "3 items"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The lower half is the first 12 values. Its median is between the 6th and 7th values, which are both 2, so \\(Q_1 = 2\\).",
+     "The upper half is the 14th to the 25th values. Its median is between the 19th and 20th values. The 17th to the 21st values are all 4, so \\(Q_3 = 4\\).",
+     "\\(\\text{IQR} = 4 - 2\\)."
+    ],
+    "answer": "2 items"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Enter the numbers of items and the frequencies in the calculator and run one-variable statistics.",
+     "\\(\\bar{x} = \\dfrac{1(3) + 2(6) + 3(7) + 4(5) + 5(3) + 6(1)}{25} = \\dfrac{77}{25} = 3.08\\).",
+     "The standard deviation is \\(\\sigma = 1.324\\ldots\\) (use \\(\\sigma\\), the standard deviation of the data, not the sample value \\(s\\))."
+    ],
+    "answer": "Mean 3.08 items; standard deviation 1.32 items"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(3 + 1 = 4\\) orders contain more than four items.",
+     "The second order is chosen from the 24 that are left, so \\(P = \\dfrac{4}{25} \\times \\dfrac{3}{24} = \\dfrac{12}{600}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{50}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-007",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Five friends count the books they each read last year. In increasing order, the numbers are",
+   "\\[4, \\quad 6, \\quad 9, \\quad x, \\quad 15.\\]",
+   "The mean of the five numbers is equal to the median."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(x\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the standard deviation of the five numbers.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "A sixth friend joins the group, and the mean of the six numbers is the same as the mean of the five.",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "Write down the number of books read by the sixth friend.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Without further calculation, state whether the standard deviation of the six numbers is greater than, less than or equal to your answer to part (b). Give a reason.",
+    "marks": 2
+   }
+  ],
+  "idea": "The median of five ordered numbers is the third one. The standard deviation measures how far the values are from the mean, on average.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The numbers are in order, so the median is the third number, 9.",
+     "The mean is also 9: \\(\\dfrac{4 + 6 + 9 + x + 15}{5} = 9\\).",
+     "\\(34 + x = 45\\), so \\(x = 11\\). This fits the order, because \\(9 \\le 11 \\le 15\\)."
+    ],
+    "answer": "\\(x = 11\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Enter 4, 6, 9, 11, 15 in the calculator and read \\(\\sigma\\).",
+     "By hand: the differences from the mean are \\(-5, -3, 0, 2, 6\\), so the variance is \\(\\dfrac{25 + 9 + 0 + 4 + 36}{5} = 14.8\\) and \\(\\sigma = \\sqrt{14.8} = 3.847\\ldots\\)"
+    ],
+    "answer": "3.85"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "A new value leaves the mean unchanged only if it is equal to the mean."
+    ],
+    "answer": "9 books"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The new value is exactly at the mean, so it adds nothing to the total of the squared differences from the mean. That total is still 74.",
+     "The total is now shared between six values instead of five, so the variance is smaller: \\(\\dfrac{74}{6}\\) instead of \\(\\dfrac{74}{5}\\).",
+     "(The new standard deviation is \\(\\sqrt{12.33\\ldots} = 3.511\\ldots\\), which confirms this.)"
+    ],
+    "answer": "Less than. The new value is at the mean, so the spread about the mean is smaller on average."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-008",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "The cumulative frequency curve shows the waiting times, in minutes, of 200 patients at a clinic.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 380\" width=\"440\" height=\"380\" role=\"img\" aria-label=\"Cumulative frequency curve of the waiting times of 200 patients. The curve passes through the points (0, 0), (10, 20), (20, 50), (30, 100), (40, 150), (50, 180), (60, 190) and (70, 200), where the first number is the waiting time in minutes and the second is the cumulative frequency.\"><line x1=\"56.0\" y1=\"334.0\" x2=\"56.0\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"82.1\" y1=\"334.0\" x2=\"82.1\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"108.3\" y1=\"334.0\" x2=\"108.3\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"134.4\" y1=\"334.0\" x2=\"134.4\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"160.6\" y1=\"334.0\" x2=\"160.6\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"186.7\" y1=\"334.0\" x2=\"186.7\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"212.9\" y1=\"334.0\" x2=\"212.9\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"239.0\" y1=\"334.0\" x2=\"239.0\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"265.1\" y1=\"334.0\" x2=\"265.1\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"291.3\" y1=\"334.0\" x2=\"291.3\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"317.4\" y1=\"334.0\" x2=\"317.4\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"343.6\" y1=\"334.0\" x2=\"343.6\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"369.7\" y1=\"334.0\" x2=\"369.7\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"395.9\" y1=\"334.0\" x2=\"395.9\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"422.0\" y1=\"334.0\" x2=\"422.0\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"334.0\" x2=\"422.0\" y2=\"334.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"318.0\" x2=\"422.0\" y2=\"318.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"302.0\" x2=\"422.0\" y2=\"302.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"286.0\" x2=\"422.0\" y2=\"286.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"270.0\" x2=\"422.0\" y2=\"270.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"254.0\" x2=\"422.0\" y2=\"254.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"238.0\" x2=\"422.0\" y2=\"238.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"222.0\" x2=\"422.0\" y2=\"222.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"206.0\" x2=\"422.0\" y2=\"206.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"190.0\" x2=\"422.0\" y2=\"190.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"174.0\" x2=\"422.0\" y2=\"174.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"158.0\" x2=\"422.0\" y2=\"158.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"142.0\" x2=\"422.0\" y2=\"142.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"126.0\" x2=\"422.0\" y2=\"126.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"110.0\" x2=\"422.0\" y2=\"110.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"94.0\" x2=\"422.0\" y2=\"94.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"78.0\" x2=\"422.0\" y2=\"78.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"62.0\" x2=\"422.0\" y2=\"62.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"46.0\" x2=\"422.0\" y2=\"46.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"30.0\" x2=\"422.0\" y2=\"30.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"56.0\" y1=\"14.0\" x2=\"422.0\" y2=\"14.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><path d=\"M56.0 334.0 L56.5 333.8 L57.0 333.5 L57.6 333.3 L58.1 333.0 L58.6 332.8 L59.1 332.5 L59.7 332.3 L60.2 332.0 L60.7 331.8 L61.2 331.5 L61.8 331.2 L62.3 331.0 L62.8 330.7 L63.3 330.5 L63.8 330.2 L64.4 329.9 L64.9 329.7 L65.4 329.4 L65.9 329.1 L66.5 328.8 L67.0 328.6 L67.5 328.3 L68.0 328.0 L68.5 327.7 L69.1 327.4 L69.6 327.1 L70.1 326.9 L70.6 326.6 L71.2 326.3 L71.7 326.0 L72.2 325.7 L72.7 325.4 L73.3 325.1 L73.8 324.8 L74.3 324.5 L74.8 324.2 L75.3 323.9 L75.9 323.6 L76.4 323.3 L76.9 323.0 L77.4 322.7 L78.0 322.3 L78.5 322.0 L79.0 321.7 L79.5 321.4 L80.1 321.1 L80.6 320.8 L81.1 320.4 L81.6 320.1 L82.1 319.8 L82.7 319.5 L83.2 319.1 L83.7 318.8 L84.2 318.5 L84.8 318.2 L85.3 317.8 L85.8 317.5 L86.3 317.2 L86.8 316.8 L87.4 316.5 L87.9 316.2 L88.4 315.8 L88.9 315.5 L89.5 315.1 L90.0 314.8 L90.5 314.4 L91.0 314.1 L91.6 313.7 L92.1 313.4 L92.6 313.0 L93.1 312.7 L93.6 312.3 L94.2 312.0 L94.7 311.6 L95.2 311.3 L95.7 310.9 L96.3 310.6 L96.8 310.2 L97.3 309.8 L97.8 309.5 L98.4 309.1 L98.9 308.7 L99.4 308.4 L99.9 308.0 L100.4 307.6 L101.0 307.3 L101.5 306.9 L102.0 306.5 L102.5 306.2 L103.1 305.8 L103.6 305.4 L104.1 305.0 L104.6 304.7 L105.1 304.3 L105.7 303.9 L106.2 303.5 L106.7 303.1 L107.2 302.8 L107.8 302.4 L108.3 302.0 L108.8 301.6 L109.3 301.2 L109.9 300.8 L110.4 300.5 L110.9 300.1 L111.4 299.7 L111.9 299.3 L112.5 298.9 L113.0 298.5 L113.5 298.1 L114.0 297.7 L114.6 297.3 L115.1 296.9 L115.6 296.5 L116.1 296.1 L116.7 295.7 L117.2 295.3 L117.7 294.8 L118.2 294.4 L118.7 294.0 L119.3 293.6 L119.8 293.2 L120.3 292.8 L120.8 292.3 L121.4 291.9 L121.9 291.5 L122.4 291.1 L122.9 290.6 L123.4 290.2 L124.0 289.8 L124.5 289.3 L125.0 288.9 L125.5 288.5 L126.1 288.0 L126.6 287.6 L127.1 287.1 L127.6 286.7 L128.2 286.2 L128.7 285.8 L129.2 285.3 L129.7 284.9 L130.2 284.4 L130.8 284.0 L131.3 283.5 L131.8 283.0 L132.3 282.6 L132.9 282.1 L133.4 281.6 L133.9 281.2 L134.4 280.7 L135.0 280.2 L135.5 279.7 L136.0 279.3 L136.5 278.8 L137.0 278.3 L137.6 277.8 L138.1 277.3 L138.6 276.8 L139.1 276.3 L139.7 275.8 L140.2 275.4 L140.7 274.9 L141.2 274.4 L141.7 273.8 L142.3 273.3 L142.8 272.8 L143.3 272.3 L143.8 271.8 L144.4 271.3 L144.9 270.8 L145.4 270.2 L145.9 269.7 L146.5 269.2 L147.0 268.7 L147.5 268.1 L148.0 267.6 L148.5 267.1 L149.1 266.5 L149.6 266.0 L150.1 265.4 L150.6 264.9 L151.2 264.3 L151.7 263.8 L152.2 263.2 L152.7 262.7 L153.3 262.1 L153.8 261.6 L154.3 261.0 L154.8 260.4 L155.3 259.9 L155.9 259.3 L156.4 258.7 L156.9 258.1 L157.4 257.5 L158.0 257.0 L158.5 256.4 L159.0 255.8 L159.5 255.2 L160.0 254.6 L160.6 254.0 L161.1 253.4 L161.6 252.8 L162.1 252.2 L162.7 251.5 L163.2 250.9 L163.7 250.3 L164.2 249.6 L164.8 249.0 L165.3 248.3 L165.8 247.6 L166.3 246.9 L166.8 246.3 L167.4 245.6 L167.9 244.9 L168.4 244.2 L168.9 243.5 L169.5 242.7 L170.0 242.0 L170.5 241.3 L171.0 240.6 L171.6 239.8 L172.1 239.1 L172.6 238.3 L173.1 237.6 L173.6 236.8 L174.2 236.0 L174.7 235.3 L175.2 234.5 L175.7 233.7 L176.3 232.9 L176.8 232.2 L177.3 231.4 L177.8 230.6 L178.3 229.8 L178.9 229.0 L179.4 228.1 L179.9 227.3 L180.4 226.5 L181.0 225.7 L181.5 224.9 L182.0 224.1 L182.5 223.2 L183.1 222.4 L183.6 221.6 L184.1 220.7 L184.6 219.9 L185.1 219.0 L185.7 218.2 L186.2 217.3 L186.7 216.5 L187.2 215.6 L187.8 214.8 L188.3 213.9 L188.8 213.1 L189.3 212.2 L189.9 211.4 L190.4 210.5 L190.9 209.6 L191.4 208.8 L191.9 207.9 L192.5 207.1 L193.0 206.2 L193.5 205.3 L194.0 204.5 L194.6 203.6 L195.1 202.7 L195.6 201.9 L196.1 201.0 L196.6 200.1 L197.2 199.3 L197.7 198.4 L198.2 197.5 L198.7 196.7 L199.3 195.8 L199.8 194.9 L200.3 194.1 L200.8 193.2 L201.4 192.4 L201.9 191.5 L202.4 190.6 L202.9 189.8 L203.4 188.9 L204.0 188.1 L204.5 187.2 L205.0 186.4 L205.5 185.5 L206.1 184.7 L206.6 183.9 L207.1 183.0 L207.6 182.2 L208.2 181.3 L208.7 180.5 L209.2 179.7 L209.7 178.9 L210.2 178.0 L210.8 177.2 L211.3 176.4 L211.8 175.6 L212.3 174.8 L212.9 174.0 L213.4 173.2 L213.9 172.4 L214.4 171.6 L214.9 170.8 L215.5 170.0 L216.0 169.1 L216.5 168.3 L217.0 167.5 L217.6 166.7 L218.1 165.8 L218.6 165.0 L219.1 164.1 L219.7 163.3 L220.2 162.5 L220.7 161.6 L221.2 160.8 L221.7 159.9 L222.3 159.1 L222.8 158.2 L223.3 157.4 L223.8 156.5 L224.4 155.6 L224.9 154.8 L225.4 153.9 L225.9 153.1 L226.5 152.2 L227.0 151.3 L227.5 150.5 L228.0 149.6 L228.5 148.7 L229.1 147.9 L229.6 147.0 L230.1 146.1 L230.6 145.3 L231.2 144.4 L231.7 143.5 L232.2 142.7 L232.7 141.8 L233.2 140.9 L233.8 140.1 L234.3 139.2 L234.8 138.4 L235.3 137.5 L235.9 136.6 L236.4 135.8 L236.9 134.9 L237.4 134.1 L238.0 133.2 L238.5 132.4 L239.0 131.5 L239.5 130.7 L240.0 129.8 L240.6 129.0 L241.1 128.1 L241.6 127.3 L242.1 126.4 L242.7 125.6 L243.2 124.8 L243.7 123.9 L244.2 123.1 L244.8 122.3 L245.3 121.5 L245.8 120.7 L246.3 119.9 L246.8 119.0 L247.4 118.2 L247.9 117.4 L248.4 116.6 L248.9 115.8 L249.5 115.1 L250.0 114.3 L250.5 113.5 L251.0 112.7 L251.5 112.0 L252.1 111.2 L252.6 110.4 L253.1 109.7 L253.6 108.9 L254.2 108.2 L254.7 107.4 L255.2 106.7 L255.7 106.0 L256.3 105.3 L256.8 104.5 L257.3 103.8 L257.8 103.1 L258.3 102.4 L258.9 101.7 L259.4 101.1 L259.9 100.4 L260.4 99.7 L261.0 99.0 L261.5 98.4 L262.0 97.7 L262.5 97.1 L263.1 96.5 L263.6 95.8 L264.1 95.2 L264.6 94.6 L265.1 94.0 L265.7 93.4 L266.2 92.8 L266.7 92.2 L267.2 91.6 L267.8 91.0 L268.3 90.4 L268.8 89.8 L269.3 89.2 L269.8 88.6 L270.4 88.0 L270.9 87.4 L271.4 86.8 L271.9 86.2 L272.5 85.6 L273.0 85.0 L273.5 84.4 L274.0 83.9 L274.6 83.3 L275.1 82.7 L275.6 82.1 L276.1 81.5 L276.6 80.9 L277.2 80.3 L277.7 79.8 L278.2 79.2 L278.7 78.6 L279.3 78.0 L279.8 77.5 L280.3 76.9 L280.8 76.3 L281.4 75.8 L281.9 75.2 L282.4 74.6 L282.9 74.1 L283.4 73.5 L284.0 73.0 L284.5 72.4 L285.0 71.9 L285.5 71.3 L286.1 70.8 L286.6 70.2 L287.1 69.7 L287.6 69.2 L288.1 68.6 L288.7 68.1 L289.2 67.6 L289.7 67.0 L290.2 66.5 L290.8 66.0 L291.3 65.5 L291.8 65.0 L292.3 64.5 L292.9 64.0 L293.4 63.5 L293.9 63.0 L294.4 62.5 L294.9 62.0 L295.5 61.5 L296.0 61.1 L296.5 60.6 L297.0 60.1 L297.6 59.7 L298.1 59.2 L298.6 58.7 L299.1 58.3 L299.7 57.8 L300.2 57.4 L300.7 57.0 L301.2 56.5 L301.7 56.1 L302.3 55.7 L302.8 55.3 L303.3 54.9 L303.8 54.5 L304.4 54.1 L304.9 53.7 L305.4 53.3 L305.9 52.9 L306.4 52.5 L307.0 52.1 L307.5 51.8 L308.0 51.4 L308.5 51.1 L309.1 50.7 L309.6 50.4 L310.1 50.0 L310.6 49.7 L311.2 49.4 L311.7 49.1 L312.2 48.7 L312.7 48.4 L313.2 48.1 L313.8 47.9 L314.3 47.6 L314.8 47.3 L315.3 47.0 L315.9 46.8 L316.4 46.5 L316.9 46.2 L317.4 46.0 L318.0 45.8 L318.5 45.5 L319.0 45.3 L319.5 45.1 L320.0 44.8 L320.6 44.6 L321.1 44.4 L321.6 44.2 L322.1 44.0 L322.7 43.8 L323.2 43.5 L323.7 43.3 L324.2 43.1 L324.7 42.9 L325.3 42.7 L325.8 42.5 L326.3 42.3 L326.8 42.2 L327.4 42.0 L327.9 41.8 L328.4 41.6 L328.9 41.4 L329.5 41.2 L330.0 41.1 L330.5 40.9 L331.0 40.7 L331.5 40.5 L332.1 40.4 L332.6 40.2 L333.1 40.0 L333.6 39.9 L334.2 39.7 L334.7 39.5 L335.2 39.4 L335.7 39.2 L336.3 39.1 L336.8 38.9 L337.3 38.8 L337.8 38.6 L338.3 38.4 L338.9 38.3 L339.4 38.1 L339.9 38.0 L340.4 37.9 L341.0 37.7 L341.5 37.6 L342.0 37.4 L342.5 37.3 L343.0 37.1 L343.6 37.0 L344.1 36.9 L344.6 36.7 L345.1 36.6 L345.7 36.4 L346.2 36.3 L346.7 36.2 L347.2 36.0 L347.8 35.9 L348.3 35.8 L348.8 35.6 L349.3 35.5 L349.8 35.4 L350.4 35.2 L350.9 35.1 L351.4 35.0 L351.9 34.8 L352.5 34.7 L353.0 34.6 L353.5 34.4 L354.0 34.3 L354.6 34.2 L355.1 34.0 L355.6 33.9 L356.1 33.8 L356.6 33.6 L357.2 33.5 L357.7 33.4 L358.2 33.2 L358.7 33.1 L359.3 32.9 L359.8 32.8 L360.3 32.7 L360.8 32.5 L361.3 32.4 L361.9 32.2 L362.4 32.1 L362.9 32.0 L363.4 31.8 L364.0 31.7 L364.5 31.5 L365.0 31.4 L365.5 31.2 L366.1 31.1 L366.6 30.9 L367.1 30.8 L367.6 30.6 L368.1 30.5 L368.7 30.3 L369.2 30.2 L369.7 30.0 L370.2 29.8 L370.8 29.7 L371.3 29.5 L371.8 29.4 L372.3 29.2 L372.9 29.0 L373.4 28.9 L373.9 28.7 L374.4 28.6 L374.9 28.4 L375.5 28.2 L376.0 28.1 L376.5 27.9 L377.0 27.8 L377.6 27.6 L378.1 27.4 L378.6 27.3 L379.1 27.1 L379.6 27.0 L380.2 26.8 L380.7 26.6 L381.2 26.5 L381.7 26.3 L382.3 26.2 L382.8 26.0 L383.3 25.8 L383.8 25.7 L384.4 25.5 L384.9 25.4 L385.4 25.2 L385.9 25.0 L386.4 24.9 L387.0 24.7 L387.5 24.6 L388.0 24.4 L388.5 24.2 L389.1 24.1 L389.6 23.9 L390.1 23.8 L390.6 23.6 L391.2 23.4 L391.7 23.3 L392.2 23.1 L392.7 23.0 L393.2 22.8 L393.8 22.6 L394.3 22.5 L394.8 22.3 L395.3 22.2 L395.9 22.0 L396.4 21.8 L396.9 21.7 L397.4 21.5 L397.9 21.4 L398.5 21.2 L399.0 21.0 L399.5 20.9 L400.0 20.7 L400.6 20.6 L401.1 20.4 L401.6 20.2 L402.1 20.1 L402.7 19.9 L403.2 19.8 L403.7 19.6 L404.2 19.4 L404.7 19.3 L405.3 19.1 L405.8 19.0 L406.3 18.8 L406.8 18.6 L407.4 18.5 L407.9 18.3 L408.4 18.2 L408.9 18.0 L409.5 17.8 L410.0 17.7 L410.5 17.5 L411.0 17.4 L411.5 17.2 L412.1 17.0 L412.6 16.9 L413.1 16.7 L413.6 16.6 L414.2 16.4 L414.7 16.2 L415.2 16.1 L415.7 15.9 L416.2 15.8 L416.8 15.6 L417.3 15.4 L417.8 15.3 L418.3 15.1 L418.9 15.0 L419.4 14.8 L419.9 14.6 L420.4 14.5 L421.0 14.3 L421.5 14.2 L422.0 14.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"56.0\" y1=\"334.0\" x2=\"422.0\" y2=\"334.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"56.0\" y1=\"334.0\" x2=\"56.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"56.0\" y1=\"334.0\" x2=\"56.0\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"56.0\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><line x1=\"108.3\" y1=\"334.0\" x2=\"108.3\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"108.3\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">10</text><line x1=\"160.6\" y1=\"334.0\" x2=\"160.6\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"160.6\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">20</text><line x1=\"212.9\" y1=\"334.0\" x2=\"212.9\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"212.9\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">30</text><line x1=\"265.1\" y1=\"334.0\" x2=\"265.1\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"265.1\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">40</text><line x1=\"317.4\" y1=\"334.0\" x2=\"317.4\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"317.4\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">50</text><line x1=\"369.7\" y1=\"334.0\" x2=\"369.7\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"369.7\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">60</text><line x1=\"422.0\" y1=\"334.0\" x2=\"422.0\" y2=\"338.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"422.0\" y=\"352.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">70</text><line x1=\"52.0\" y1=\"334.0\" x2=\"56.0\" y2=\"334.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"338.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><line x1=\"52.0\" y1=\"302.0\" x2=\"56.0\" y2=\"302.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"306.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">20</text><line x1=\"52.0\" y1=\"270.0\" x2=\"56.0\" y2=\"270.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"274.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">40</text><line x1=\"52.0\" y1=\"238.0\" x2=\"56.0\" y2=\"238.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"242.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">60</text><line x1=\"52.0\" y1=\"206.0\" x2=\"56.0\" y2=\"206.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"210.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">80</text><line x1=\"52.0\" y1=\"174.0\" x2=\"56.0\" y2=\"174.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"178.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">100</text><line x1=\"52.0\" y1=\"142.0\" x2=\"56.0\" y2=\"142.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"146.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">120</text><line x1=\"52.0\" y1=\"110.0\" x2=\"56.0\" y2=\"110.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"114.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">140</text><line x1=\"52.0\" y1=\"78.0\" x2=\"56.0\" y2=\"78.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"82.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">160</text><line x1=\"52.0\" y1=\"46.0\" x2=\"56.0\" y2=\"46.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"50.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">180</text><line x1=\"52.0\" y1=\"14.0\" x2=\"56.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"48.0\" y=\"18.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">200</text><text x=\"239.0\" y=\"372.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Waiting time (minutes)</text><g transform=\"rotate(-90 15 174.0)\"><text x=\"15.0\" y=\"179.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Cumulative frequency</text></g></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the median waiting time.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the interquartile range.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Patients who waited less than 10 minutes or more than 50 minutes are asked to fill in a survey. A patient is chosen at random. Find the probability that this patient is asked to fill in the survey.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The longest waiting time was 68 minutes. Determine whether this waiting time is an outlier.",
+    "marks": 2
+   }
+  ],
+  "idea": "A cumulative frequency curve tells you how many values are less than each time. Read across from a number of patients to find a time, and up from a time to find a number of patients.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Half of 200 is 100. Read across from a cumulative frequency of 100 to the curve, then down."
+    ],
+    "answer": "30 minutes"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "A quarter of 200 is 50, and the curve reaches 50 at \\(Q_1 = 20\\). Three quarters of 200 is 150, and the curve reaches 150 at \\(Q_3 = 40\\).",
+     "\\(\\text{IQR} = 40 - 20\\)."
+    ],
+    "answer": "20 minutes"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "At 10 minutes the curve is at 20, so 20 patients waited less than 10 minutes.",
+     "At 50 minutes the curve is at 180, so \\(200 - 180 = 20\\) patients waited more than 50 minutes.",
+     "\\(20 + 20 = 40\\) patients are asked, and \\(\\dfrac{40}{200} = \\dfrac{1}{5}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{5}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The upper boundary for outliers is \\(Q_3 + 1.5 \\times \\text{IQR} = 40 + 1.5 \\times 20 = 70\\).",
+     "Since \\(68 < 70\\), the waiting time is inside the boundary."
+    ],
+    "answer": "It is not an outlier, because \\(68 < 70\\)."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-009",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 11,
+  "stem": [
+   "A bakery weighs 100 loaves. The masses, \\(m\\) grams, are shown in the table.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{Mass, } m \\text{ (g)} & \\text{Number of loaves} \\\\ \\hline 380 \\le m < 390 & 4 \\\\ \\hline 390 \\le m < 400 & p \\\\ \\hline 400 \\le m < 410 & 38 \\\\ \\hline 410 \\le m < 420 & q \\\\ \\hline 420 \\le m < 430 & 6 \\\\ \\hline\\end{array}\\]",
+   "The estimate of the mean mass, found from the table, is 404.8 g."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(p + q = 52\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(p\\) and the value of \\(q\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find an estimate for the standard deviation of the masses.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Write down the class that contains the lower quartile. Give a reason for your answer.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "As the loaves cool, each one loses 3 % of its mass. Find the estimates of the mean and the standard deviation of the masses of the cooled loaves.",
+    "marks": 2
+   }
+  ],
+  "idea": "Two unknown frequencies need two equations. One comes from the total number of loaves and the other from the mean, with each class represented by its mid-interval value.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The frequencies add to 100: \\(4 + p + 38 + q + 6 = 100\\), so \\(p + q = 100 - 48\\)."
+    ],
+    "answer": "\\(p + q = 52\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The mid-interval values are 385, 395, 405, 415 and 425. The total of all the masses is estimated by \\(100 \\times 404.8 = 40\\,480\\).",
+     "\\[4(385) + 395p + 38(405) + 415q + 6(425) = 40\\,480\\]",
+     "The known terms add to \\(1540 + 15\\,390 + 2550 = 19\\,480\\), so \\(395p + 415q = 21\\,000\\).",
+     "Substitute \\(p = 52 - q\\): \\(395(52 - q) + 415q = 21\\,000\\), so \\(20\\,540 + 20q = 21\\,000\\) and \\(q = 23\\).",
+     "Then \\(p = 52 - 23 = 29\\)."
+    ],
+    "answer": "\\(p = 29\\), \\(q = 23\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Enter the mid-interval values 385, 395, 405, 415, 425 with the frequencies 4, 29, 38, 23, 6 and run one-variable statistics.",
+     "\\(\\sigma = 9.589\\ldots\\)"
+    ],
+    "answer": "9.59 g"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "With 100 values, the lower quartile lies between the 25th and 26th values.",
+     "Four loaves are below 390 g and \\(4 + 29 = 33\\) loaves are below 400 g, so the 5th to the 33rd loaves are in the class \\(390 \\le m < 400\\)."
+    ],
+    "answer": "\\(390 \\le m < 400\\), because the 25th and 26th values are in this class."
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Each mass is multiplied by 0.97, so the mean and the standard deviation are both multiplied by 0.97.",
+     "Mean: \\(0.97 \\times 404.8 = 392.656\\). Standard deviation: \\(0.97 \\times 9.589\\ldots = 9.301\\ldots\\)"
+    ],
+    "answer": "Mean 393 g; standard deviation 9.30 g"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-010",
+  "strand": "Statistics and Probability",
+  "subtopic": "Descriptive statistics",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 9,
+  "stem": [
+   "Eight whole numbers are listed in increasing order.",
+   "\\[3, \\quad 5, \\quad a, \\quad 8, \\quad 10, \\quad b, \\quad 14, \\quad 17\\]",
+   "The interquartile range of the numbers is 7 and their mean is 9.5."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the median.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(b - a = 5\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(a\\) and the value of \\(b\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The largest number, 17, is replaced by a whole number \\(k\\). The number \\(k\\) is an outlier. Find the least possible value of \\(k\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "With eight ordered values, each half has four values, so each quartile is the mean of two neighbouring values. Write the quartiles in terms of \\(a\\) and \\(b\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The median is the mean of the 4th and 5th values: \\(\\dfrac{8 + 10}{2}\\)."
+    ],
+    "answer": "9"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The lower half is 3, 5, \\(a\\), 8, so \\(Q_1 = \\dfrac{5 + a}{2}\\). The upper half is 10, \\(b\\), 14, 17, so \\(Q_3 = \\dfrac{b + 14}{2}\\).",
+     "\\[Q_3 - Q_1 = \\frac{b + 14}{2} - \\frac{5 + a}{2} = \\frac{b - a + 9}{2} = 7\\]",
+     "So \\(b - a + 9 = 14\\), which gives \\(b - a = 5\\)."
+    ],
+    "answer": "\\(b - a = 5\\) (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The mean is 9.5, so the total is \\(8 \\times 9.5 = 76\\).",
+     "\\(3 + 5 + a + 8 + 10 + b + 14 + 17 = 76\\), so \\(a + b = 19\\).",
+     "Add this to \\(b - a = 5\\): \\(2b = 24\\), so \\(b = 12\\) and \\(a = 7\\).",
+     "Check the order: 3, 5, 7, 8, 10, 12, 14, 17 is increasing."
+    ],
+    "answer": "\\(a = 7\\), \\(b = 12\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(Q_1 = \\dfrac{5 + 7}{2} = 6\\) and \\(Q_3 = \\dfrac{12 + 14}{2} = 13\\). Replacing the largest number by a larger one does not change either quartile.",
+     "The upper boundary for outliers is \\(Q_3 + 1.5 \\times \\text{IQR} = 13 + 1.5 \\times 7 = 23.5\\).",
+     "\\(k\\) must be greater than 23.5, and it is a whole number."
+    ],
+    "answer": "\\(k = 24\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-011",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "The diagrams show three sets of data.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 540 200\" width=\"540\" height=\"200\" role=\"img\" aria-label=\"Three scatter diagrams, each with twelve points. Diagram A: the points lie close to a straight line that slopes downwards. Diagram B: the points are widely spread, with a slight upward trend. Diagram C: the points lie fairly close to a straight line that slopes upwards, with more scatter than in diagram A.\"><line x1=\"22\" y1=\"160\" x2=\"178\" y2=\"160\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"22\" y1=\"160\" x2=\"22\" y2=\"4\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><text x=\"174.0\" y=\"176.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"11.0\" y=\"8.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><circle cx=\"40.0\" cy=\"38.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"55.0\" cy=\"44.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"74.5\" cy=\"68.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"86.5\" cy=\"67.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"88.0\" cy=\"70.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"98.5\" cy=\"91.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"101.5\" cy=\"100.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"103.0\" cy=\"94.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"127.0\" cy=\"115.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"136.0\" cy=\"127.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"151.0\" cy=\"121.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"151.0\" cy=\"125.5\" r=\"3.1\" fill=\"#0b0d12\"/><text x=\"97.0\" y=\"192.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Diagram A</text><line x1=\"202\" y1=\"160\" x2=\"358\" y2=\"160\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"202\" y1=\"160\" x2=\"202\" y2=\"4\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><text x=\"354.0\" y=\"176.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"191.0\" y=\"8.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><circle cx=\"223.0\" cy=\"140.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"223.0\" cy=\"49.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"223.0\" cy=\"100.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"245.5\" cy=\"152.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"251.5\" cy=\"98.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"263.5\" cy=\"133.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"266.5\" cy=\"112.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"278.5\" cy=\"101.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"295.0\" cy=\"103.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"313.0\" cy=\"50.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"314.5\" cy=\"73.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"337.0\" cy=\"82.0\" r=\"3.1\" fill=\"#0b0d12\"/><text x=\"277.0\" y=\"192.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Diagram B</text><line x1=\"382\" y1=\"160\" x2=\"538\" y2=\"160\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"382\" y1=\"160\" x2=\"382\" y2=\"4\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><text x=\"534.0\" y=\"176.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"371.0\" y=\"8.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><circle cx=\"397.0\" cy=\"143.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"424.0\" cy=\"137.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"430.0\" cy=\"112.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"433.0\" cy=\"94.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"433.0\" cy=\"137.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"452.5\" cy=\"98.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"472.0\" cy=\"110.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"490.0\" cy=\"79.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"493.0\" cy=\"88.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"496.0\" cy=\"50.5\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"502.0\" cy=\"67.0\" r=\"3.1\" fill=\"#0b0d12\"/><circle cx=\"505.0\" cy=\"31.0\" r=\"3.1\" fill=\"#0b0d12\"/><text x=\"457.0\" y=\"192.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Diagram C</text></svg>"
+   },
+   "The values of the correlation coefficient, \\(r\\), for the three sets are, in some order, \\(-0.97\\), \\(0.39\\) and \\(0.87\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the value of \\(r\\) for each diagram.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Describe the correlation shown in diagram A.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "For a different set of data, the regression line of \\(y\\) on \\(x\\) has equation \\(y = 1.8x + 4\\), and the mean of the \\(x\\)-values is 10. Find the mean of the \\(y\\)-values.",
+    "marks": 2
+   }
+  ],
+  "idea": "The sign of \\(r\\) gives the direction of the trend, and its size gives how close the points are to a straight line. A regression line always passes through the mean point \\((\\bar{x}, \\bar{y})\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Diagram A slopes downwards, so its value is the negative one.",
+     "Diagrams B and C both slope upwards. The points in C are much closer to a line than the points in B, so C has the value nearer to 1."
+    ],
+    "answer": "A: \\(-0.97\\); B: \\(0.39\\); C: \\(0.87\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "As \\(x\\) increases, \\(y\\) decreases, and the points lie close to a straight line."
+    ],
+    "answer": "Strong negative (linear) correlation"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The regression line passes through \\((\\bar{x}, \\bar{y})\\), so substitute \\(x = 10\\): \\(\\bar{y} = 1.8 \\times 10 + 4\\)."
+    ],
+    "answer": "\\(\\bar{y} = 22\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-012",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A solar panel is tested on eight days. The table shows the number of hours of sunshine, \\(x\\), and the energy produced, \\(y\\) kWh, on each day.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|c|c|c|c|}\\hline x & 2.5 & 4.0 & 5.5 & 6.0 & 7.5 & 8.0 & 9.5 & 11.0 \\\\ \\hline y & 6.3 & 9.6 & 11.4 & 13.7 & 15.3 & 18.0 & 20.1 & 23.5 \\\\ \\hline\\end{array}\\]",
+   "The relationship between the variables is modelled by the regression line of \\(y\\) on \\(x\\), with equation \\(y = ax + b\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(a\\) and the value of \\(b\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Use the regression line to estimate the energy produced on a day with 9 hours of sunshine.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "State what the value of \\(a\\) tells you about the panel.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Explain why the regression line should not be used to estimate the energy produced on a day with 16 hours of sunshine.",
+    "marks": 1
+   }
+  ],
+  "idea": "The calculator finds the line of best fit. Its gradient is the change in \\(y\\) for each extra unit of \\(x\\), and the line can only be trusted inside the range of the data.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Enter the \\(x\\)-values and \\(y\\)-values in two lists and run linear regression \\((ax + b)\\).",
+     "\\(a = 2.0076\\ldots\\) and \\(b = 1.1858\\ldots\\)"
+    ],
+    "answer": "\\(a = 2.01\\), \\(b = 1.19\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Substitute \\(x = 9\\), keeping the full calculator values: \\(y = 2.0076\\ldots \\times 9 + 1.1858\\ldots = 19.25\\ldots\\)"
+    ],
+    "answer": "19.3 kWh"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(a\\) is the gradient: the increase in \\(y\\) when \\(x\\) increases by 1."
+    ],
+    "answer": "Each extra hour of sunshine gives about 2.01 kWh more energy."
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The data only cover days with between 2.5 and 11 hours of sunshine. There is no evidence that the same straight-line pattern continues as far as 16 hours."
+    ],
+    "answer": "16 hours is well outside the range of the data (extrapolation), so the estimate is not reliable."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-013",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A coach records, for eight runners, the number of hours of training each week, \\(x\\), and the time taken to run 10 km, \\(y\\) minutes.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|c|c|c|c|}\\hline x & 2 & 3 & 4 & 5 & 6 & 8 & 9 & 11 \\\\ \\hline y & 61 & 58 & 57 & 53 & 52 & 47 & 46 & 42 \\\\ \\hline\\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of the correlation coefficient, \\(r\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the equation of the regression line of \\(x\\) on \\(y\\). Give your answer in the form \\(x = cy + d\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Another runner wants to run 10 km in 50 minutes. Estimate, to the nearest hour, the number of hours of training each week that this runner needs.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Explain why the regression line of \\(x\\) on \\(y\\) is the right line to use in part (c).",
+    "marks": 1
+   }
+  ],
+  "idea": "There are two regression lines. Use \\(y\\) on \\(x\\) to predict \\(y\\) from a known \\(x\\), and \\(x\\) on \\(y\\) to predict \\(x\\) from a known \\(y\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Enter the two lists and run linear regression. The calculator gives \\(r = -0.9945\\ldots\\)"
+    ],
+    "answer": "\\(r = -0.995\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "For \\(x\\) on \\(y\\), swap the roles of the lists: the \\(y\\)-values are the input and the \\(x\\)-values are the output.",
+     "The calculator gives \\(c = -0.47039\\ldots\\) and \\(d = 30.460\\ldots\\)"
+    ],
+    "answer": "\\(x = -0.470y + 30.5\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Substitute \\(y = 50\\), keeping the full calculator values: \\(x = -0.47039\\ldots \\times 50 + 30.460\\ldots = 6.940\\ldots\\)"
+    ],
+    "answer": "7 hours"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "In part (c) the time \\(y\\) is known and the training \\(x\\) is the value to be predicted. The line of \\(x\\) on \\(y\\) is the one built for predicting \\(x\\) from \\(y\\)."
+    ],
+    "answer": "The value of \\(y\\) is given and \\(x\\) is being estimated, which is what the line of \\(x\\) on \\(y\\) is for."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-014",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "Ten students each record the number of hours they revised, \\(x\\), and their mark in a test, \\(y\\). For these students \\(\\sum x = 60\\) and \\(\\sum y = 620\\). The regression line of \\(y\\) on \\(x\\) has equation \\(y = 4.5x + c\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the mean of the \\(x\\)-values and the mean of the \\(y\\)-values.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(c\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "State what the number 4.5 means in this context.",
+    "marks": 1
+   },
+   {
+    "label": "",
+    "text": "The teacher then adds 5 marks to every student's mark.",
+    "marks": null
+   },
+   {
+    "label": "d",
+    "text": "Write down the equation of the regression line of the new marks on \\(x\\).",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "State how the change affects the value of the correlation coefficient.",
+    "marks": 1
+   }
+  ],
+  "idea": "The regression line of \\(y\\) on \\(x\\) always passes through the mean point \\((\\bar{x}, \\bar{y})\\). That one fact fixes the constant in the equation.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\bar{x} = \\dfrac{60}{10}\\) and \\(\\bar{y} = \\dfrac{620}{10}\\)."
+    ],
+    "answer": "\\(\\bar{x} = 6\\), \\(\\bar{y} = 62\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The line passes through \\((6, 62)\\): \\(62 = 4.5 \\times 6 + c\\).",
+     "\\(62 = 27 + c\\)."
+    ],
+    "answer": "\\(c = 35\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "4.5 is the gradient: the change in the predicted mark for one more hour of revision."
+    ],
+    "answer": "Each extra hour of revision goes with an increase of about 4.5 marks."
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Every point moves up by 5, so the whole line moves up by 5. The gradient is the same and the constant becomes \\(35 + 5\\)."
+    ],
+    "answer": "\\(y = 4.5x + 40\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Moving every point up by the same amount does not change how close the points are to a straight line."
+    ],
+    "answer": "It has no effect: \\(r\\) stays the same."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-015",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 10,
+  "stem": [
+   "A scientist measures the temperature of the water in a lake, \\(y\\) °C, at different depths, \\(x\\) metres.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|c|c|c|c|}\\hline x & 0 & 2 & 4 & 6 & 8 & 10 & 12 & 14 \\\\ \\hline y & 21.6 & 20.9 & 19.2 & 17.5 & 15.3 & 13.8 & 12.5 & 10.4 \\\\ \\hline\\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of the correlation coefficient, \\(r\\), and describe the correlation.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write down the equation of the regression line of \\(y\\) on \\(x\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Estimate the temperature of the water at a depth of 7 metres.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "A diver's thermometer shows 14 °C.",
+    "marks": null
+   },
+   {
+    "label": "d",
+    "text": "Use the regression line of \\(y\\) on \\(x\\) to estimate the diver's depth, to the nearest metre.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Give one reason why the estimate in part (d) should be treated with caution.",
+    "marks": 1
+   }
+  ],
+  "idea": "The regression line of \\(y\\) on \\(x\\) is built to predict \\(y\\) from \\(x\\). Using it backwards, from \\(y\\) to \\(x\\), still gives a number, but it is not what the line was made for.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Enter the two lists and run linear regression: \\(r = -0.9963\\ldots\\)",
+     "The value is negative and very close to \\(-1\\)."
+    ],
+    "answer": "\\(r = -0.996\\). There is a strong negative (linear) correlation: the deeper the water, the colder it is."
+   },
+   {
+    "label": "b",
+    "steps": [
+     "From the same calculator screen, \\(a = -0.82619\\ldots\\) and \\(b = 22.183\\ldots\\)"
+    ],
+    "answer": "\\(y = -0.826x + 22.2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Substitute \\(x = 7\\), keeping the full calculator values: \\(y = -0.82619\\ldots \\times 7 + 22.183\\ldots = 16.4\\)."
+    ],
+    "answer": "16.4 °C"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Put \\(y = 14\\) in the equation and solve for \\(x\\): \\(14 = -0.82619\\ldots x + 22.183\\ldots\\)",
+     "\\(x = \\dfrac{22.183\\ldots - 14}{0.82619\\ldots} = 9.904\\ldots\\)"
+    ],
+    "answer": "10 metres"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The line of \\(y\\) on \\(x\\) is designed for predicting temperature from depth. To predict depth from temperature, the line of \\(x\\) on \\(y\\) should be used."
+    ],
+    "answer": "A line of \\(y\\) on \\(x\\) is not meant for estimating \\(x\\) from \\(y\\); the line of \\(x\\) on \\(y\\) is the correct one."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-016",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "The table shows five pairs of values.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|c|}\\hline x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline y & 3 & 5 & 4 & 8 & k \\\\ \\hline\\end{array}\\]",
+   "The regression line of \\(y\\) on \\(x\\) for these data has equation \\(y = 1.1x + 2.1\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the mean of the \\(x\\)-values.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(k\\).",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "It is then found that the point \\((3, 4)\\) was recorded wrongly. It should be \\((3, 9)\\). When the point is corrected, the gradient of the regression line does not change.",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "Find the equation of the regression line for the corrected data.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Use the corrected line to estimate the value of \\(y\\) when \\(x = 4.5\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "A regression line of \\(y\\) on \\(x\\) always passes through the mean point \\((\\bar{x}, \\bar{y})\\). So the line tells you the mean of the \\(y\\)-values, and a mean tells you a total.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\bar{x} = \\dfrac{1 + 2 + 3 + 4 + 5}{5}\\)."
+    ],
+    "answer": "\\(\\bar{x} = 3\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The line passes through \\((\\bar{x}, \\bar{y})\\), so \\(\\bar{y} = 1.1 \\times 3 + 2.1 = 5.4\\).",
+     "The total of the \\(y\\)-values is \\(5 \\times 5.4 = 27\\).",
+     "\\(3 + 5 + 4 + 8 + k = 27\\), so \\(20 + k = 27\\)."
+    ],
+    "answer": "\\(k = 7\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The total of the \\(y\\)-values rises by 5, from 27 to 32, so the new mean is \\(\\bar{y} = \\dfrac{32}{5} = 6.4\\). The mean of the \\(x\\)-values is still 3.",
+     "The new line has gradient 1.1 and passes through \\((3, 6.4)\\): \\(6.4 = 1.1 \\times 3 + c\\).",
+     "\\(c = 6.4 - 3.3 = 3.1\\)."
+    ],
+    "answer": "\\(y = 1.1x + 3.1\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(y = 1.1 \\times 4.5 + 3.1 = 4.95 + 3.1\\)."
+    ],
+    "answer": "8.05"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-017",
+  "strand": "Statistics and Probability",
+  "subtopic": "Correlation and regression",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A car is tested on a track. The table shows its stopping distance, \\(d\\) metres, at different speeds, \\(v\\) km/h.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|c|c|c|c|}\\hline v & 30 & 40 & 50 & 60 & 70 & 80 & 100 & 110 \\\\ \\hline d & 15 & 26 & 34 & 50 & 61 & 85 & 122 & 153 \\\\ \\hline\\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "",
+    "text": "A first model is the regression line of \\(d\\) on \\(v\\).",
+    "marks": null
+   },
+   {
+    "label": "a",
+    "text": "Find the value of the correlation coefficient for \\(d\\) and \\(v\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down the equation of the regression line of \\(d\\) on \\(v\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Use this line to estimate the stopping distance at 20 km/h, and comment on your answer.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "A second model uses \\(w = v^2\\).",
+    "marks": null
+   },
+   {
+    "label": "d",
+    "text": "Find the value of the correlation coefficient for \\(d\\) and \\(w\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find the equation of the regression line of \\(d\\) on \\(w\\). Give your answer in the form \\(d = pw + q\\).",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "State which of the two models fits the data better. Give a reason.",
+    "marks": 1
+   },
+   {
+    "label": "g",
+    "text": "Use the better model to estimate the stopping distance at 90 km/h.",
+    "marks": 2
+   }
+  ],
+  "idea": "If a scatter of points bends, a straight line through them fits badly. Changing one variable (here, squaring the speed) can straighten the points, and then linear regression works well.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Enter the \\(v\\)-values and \\(d\\)-values in two lists and run linear regression: \\(r = 0.9850\\ldots\\)"
+    ],
+    "answer": "\\(r = 0.985\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "From the same screen, the gradient is 1.7 and the constant is \\(-46.5\\)."
+    ],
+    "answer": "\\(d = 1.7v - 46.5\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(d = 1.7 \\times 20 - 46.5 = -12.5\\).",
+     "A distance cannot be negative. Also, 20 km/h is below the lowest speed tested, so this is extrapolation."
+    ],
+    "answer": "\\(-12.5\\) m. A negative stopping distance is impossible, so the line is not a sensible model at low speeds."
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Make a new list of the values of \\(w = v^2\\): 900, 1600, 2500, 3600, 4900, 6400, 10 000, 12 100.",
+     "Run linear regression with \\(w\\) as the first list and \\(d\\) as the second: \\(r = 0.9987\\ldots\\)"
+    ],
+    "answer": "\\(r = 0.999\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "From the same screen, \\(p = 0.012055\\ldots\\) and \\(q = 4.9594\\ldots\\)"
+    ],
+    "answer": "\\(d = 0.0121w + 4.96\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Compare the two values of \\(r\\): 0.999 is closer to 1 than 0.985 is."
+    ],
+    "answer": "The second model, because its correlation coefficient is closer to 1 (and it does not give negative distances at low speeds)."
+   },
+   {
+    "label": "g",
+    "steps": [
+     "At 90 km/h, \\(w = 90^2 = 8100\\).",
+     "Keeping the full calculator values: \\(d = 0.012055\\ldots \\times 8100 + 4.9594\\ldots = 102.6\\ldots\\)"
+    ],
+    "answer": "103 m"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-018",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "A game uses a fair spinner and a fair coin. The spinner has four equal sectors numbered 1, 2, 3 and 4. The spinner is spun and the coin is tossed. If the coin shows heads, the score is double the number on the spinner. If the coin shows tails, the score is one more than the number on the spinner.",
+   "The table shows some of the scores.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|}\\hline \\text{Number on spinner} & 1 & 2 & 3 & 4 \\\\ \\hline \\text{Heads} & 2 &  & 6 &  \\\\ \\hline \\text{Tails} & 2 &  &  & 5 \\\\ \\hline\\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the four missing scores.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the score is 4.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that the score is greater than 4.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Given that the score is even, find the probability that the coin shows heads.",
+    "marks": 2
+   }
+  ],
+  "idea": "The table is a sample space: eight outcomes, all equally likely. Every probability is a count of cells divided by 8, or divided by the number of cells that meet a given condition.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Heads doubles the number: \\(2 \\times 2 = 4\\) and \\(2 \\times 4 = 8\\).",
+     "Tails adds one: \\(2 + 1 = 3\\) and \\(3 + 1 = 4\\).",
+     "The full table has heads: 2, 4, 6, 8 and tails: 2, 3, 4, 5."
+    ],
+    "answer": "Heads row: 4 and 8. Tails row: 3 and 4."
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The score 4 appears in two of the eight cells (heads with 2, tails with 3)."
+    ],
+    "answer": "\\(\\dfrac{2}{8} = \\dfrac{1}{4}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The scores greater than 4 are 6, 8 and 5: three cells."
+    ],
+    "answer": "\\(\\dfrac{3}{8}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Only look at the cells with an even score: 2, 4, 6, 8 in the heads row and 2, 4 in the tails row. That is six cells.",
+     "Four of these six cells are in the heads row."
+    ],
+    "answer": "\\(\\dfrac{4}{6} = \\dfrac{2}{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-019",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The 80 members of a climbing club were asked whether they prefer to climb indoors or outdoors. The table shows the results.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|}\\hline  & \\text{Indoors} & \\text{Outdoors} & \\text{Total} \\\\ \\hline \\text{Junior} & 18 & 12 & 30 \\\\ \\hline \\text{Adult} & 22 & 28 & 50 \\\\ \\hline \\text{Total} & 40 & 40 & 80 \\\\ \\hline\\end{array}\\]",
+   "A member of the club is chosen at random."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the member is an adult.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the member is a junior who prefers to climb outdoors.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Given that the member is a junior, find the probability that the member prefers to climb indoors.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Determine whether the events “the member is a junior” and “the member prefers to climb indoors” are independent.",
+    "marks": 2
+   }
+  ],
+  "idea": "In a two-way table, a conditional probability uses only one row or one column: the condition tells you which one. Two events are independent if the condition makes no difference to the probability.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "50 of the 80 members are adults."
+    ],
+    "answer": "\\(\\dfrac{50}{80} = \\dfrac{5}{8}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "12 of the 80 members are juniors who prefer outdoors."
+    ],
+    "answer": "\\(\\dfrac{12}{80} = \\dfrac{3}{20}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The condition restricts us to the junior row, which has 30 members. Of these, 18 prefer indoors."
+    ],
+    "answer": "\\(\\dfrac{18}{30} = \\dfrac{3}{5}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For all members, \\(P(\\text{indoors}) = \\dfrac{40}{80} = \\dfrac{1}{2}\\).",
+     "For juniors only, \\(P(\\text{indoors} \\mid \\text{junior}) = \\dfrac{3}{5}\\), from part (c).",
+     "The two values are different, so knowing that the member is a junior changes the probability."
+    ],
+    "answer": "Not independent, because \\(P(\\text{indoors} \\mid \\text{junior}) = \\dfrac{3}{5}\\) is not equal to \\(P(\\text{indoors}) = \\dfrac{1}{2}\\)."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-020",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "On each school day, the probability that Mira's bus is late is 0.15, independently of every other day."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the probability that the bus is not late on a given school day.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "There are 180 school days in a year. Find the expected number of days on which the bus is late.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that the bus is late on at least one of the next three school days.",
+    "marks": 3
+   }
+  ],
+  "idea": "“At least one” is the opposite of “none”. It is nearly always quicker to find the probability of none and subtract it from 1.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(1 - 0.15\\)."
+    ],
+    "answer": "0.85"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Expected number \\(=\\) number of days \\(\\times\\) probability \\(= 180 \\times 0.15\\)."
+    ],
+    "answer": "27 days"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The bus is late on none of the three days with probability \\(0.85 \\times 0.85 \\times 0.85 = 0.614125\\), because the days are independent.",
+     "\\(P(\\text{at least one late}) = 1 - 0.614125 = 0.385875\\)."
+    ],
+    "answer": "0.386"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-021",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "On her way to work, Ines drives through two sets of traffic lights. Each set is either green or red when she arrives. The tree diagram shows the probabilities.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 180\" width=\"400\" height=\"180\" role=\"img\" aria-label=\"Tree diagram. First set of lights: green with probability 0.7, red with probability p. If the first set is green, the second set is green with probability 0.8 and red with probability q. If the first set is red, the second set is green with probability 0.5 and red with probability r.\"><line x1=\"196\" y1=\"46.0\" x2=\"316\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"262.0\" y=\"25.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.8</text><text x=\"322.0\" y=\"29.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Green</text><line x1=\"196\" y1=\"46.0\" x2=\"316\" y2=\"68.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"262.0\" y=\"77.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">q</tspan></text><text x=\"322.0\" y=\"73.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Red</text><line x1=\"196\" y1=\"134.0\" x2=\"316\" y2=\"112.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"262.0\" y=\"113.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.5</text><text x=\"322.0\" y=\"117.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Green</text><line x1=\"196\" y1=\"134.0\" x2=\"316\" y2=\"156.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"262.0\" y=\"165.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">r</tspan></text><text x=\"322.0\" y=\"161.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Red</text><line x1=\"14\" y1=\"90.0\" x2=\"134\" y2=\"46.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"80.0\" y=\"57.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.7</text><text x=\"140.0\" y=\"51.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Green</text><line x1=\"14\" y1=\"90.0\" x2=\"134\" y2=\"134.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"80.0\" y=\"133.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">p</tspan></text><text x=\"140.0\" y=\"139.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Red</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the values of \\(p\\), \\(q\\) and \\(r\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that both sets of lights are green.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that the second set of lights is green.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the probability that at least one set of lights is red.",
+    "marks": 1
+   }
+  ],
+  "idea": "On a tree diagram, multiply along the branches to get the probability of a route, and add the routes that give the event you want.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The probabilities on each pair of branches add to 1: \\(p = 1 - 0.7\\), \\(q = 1 - 0.8\\), \\(r = 1 - 0.5\\)."
+    ],
+    "answer": "\\(p = 0.3\\), \\(q = 0.2\\), \\(r = 0.5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Follow green then green: \\(0.7 \\times 0.8\\)."
+    ],
+    "answer": "0.56"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Two routes end with a green second set: green then green, and red then green.",
+     "\\(0.7 \\times 0.8 + 0.3 \\times 0.5 = 0.56 + 0.15\\)."
+    ],
+    "answer": "0.71"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "“At least one red” is the opposite of “both green”: \\(1 - 0.56\\)."
+    ],
+    "answer": "0.44"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-022",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "In a town, 60 % of the households own a dog and 50 % own a cat. The number of households that own both a dog and a cat is twice the number that own neither. A household in the town is chosen at random."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the probability that the household owns neither a dog nor a cat is 0.1.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the household owns a dog or a cat, but not both.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Given that the household does not own a dog, find the probability that it owns a cat.",
+    "marks": 2
+   }
+  ],
+  "idea": "Give the unknown probability a letter and use \\(P(D \\cup C) = P(D) + P(C) - P(D \\cap C)\\). Once one region of the Venn diagram is known, the others follow.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Let \\(x\\) be the probability of owning neither. Then \\(P(D \\cap C) = 2x\\), and \\(P(D \\cup C) = 1 - x\\) because “at least one” is the opposite of “neither”.",
+     "\\[1 - x = 0.6 + 0.5 - 2x\\]",
+     "So \\(x = 1.1 - 1 = 0.1\\)."
+    ],
+    "answer": "\\(P(\\text{neither}) = 0.1\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(D \\cap C) = 2 \\times 0.1 = 0.2\\). Dog only: \\(0.6 - 0.2 = 0.4\\). Cat only: \\(0.5 - 0.2 = 0.3\\).",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 220\" width=\"360\" height=\"220\" role=\"img\" aria-label=\"Venn diagram of the events D, owns a dog, and C, owns a cat. Dog only 0.4, both 0.2, cat only 0.3, neither 0.1.\"><rect x=\"8\" y=\"8\" width=\"344\" height=\"204\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><circle cx=\"140\" cy=\"112\" r=\"78\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\"/><circle cx=\"220\" cy=\"112\" r=\"78\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\"/><text x=\"96.0\" y=\"117.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.4</text><text x=\"180.0\" y=\"117.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.2</text><text x=\"264.0\" y=\"117.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.3</text><text x=\"318.0\" y=\"196.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.1</text><text x=\"78.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">D</tspan></text><text x=\"284.0\" y=\"40.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">C</tspan></text></svg>"
+     },
+     "\\(0.4 + 0.3\\)."
+    ],
+    "answer": "0.7"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(\\text{no dog}) = 1 - 0.6 = 0.4\\). Inside this region, the households with a cat are the “cat only” ones, with probability 0.3.",
+     "\\[P(C \\mid D') = \\frac{P(C \\cap D')}{P(D')} = \\frac{0.3}{0.4}\\]"
+    ],
+    "answer": "\\(\\dfrac{3}{4}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-023",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Of the emails that arrive at a company, 20 % are spam. A filter flags 95 % of the spam emails. It also flags, by mistake, 2 % of the emails that are not spam. An email arriving at the company is chosen at random."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the email is flagged.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Given that the email is flagged, find the probability that it is spam.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Given that the email is not flagged, find the probability that it is spam.",
+    "marks": 2
+   }
+  ],
+  "idea": "Draw a tree with spam or not spam first, then flagged or not flagged. A “given that” probability is one route divided by the total of all the routes that fit the condition.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 180\" width=\"430\" height=\"180\" role=\"img\" aria-label=\"Tree diagram. Spam with probability 0.2, then flagged 0.95 or not flagged 0.05. Genuine with probability 0.8, then flagged 0.02 or not flagged 0.98.\"><line x1=\"204\" y1=\"46.0\" x2=\"324\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"25.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.95</text><text x=\"330.0\" y=\"29.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Flagged</text><line x1=\"204\" y1=\"46.0\" x2=\"324\" y2=\"68.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"77.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.05</text><text x=\"330.0\" y=\"73.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Not flagged</text><line x1=\"204\" y1=\"134.0\" x2=\"324\" y2=\"112.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"113.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.02</text><text x=\"330.0\" y=\"117.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Flagged</text><line x1=\"204\" y1=\"134.0\" x2=\"324\" y2=\"156.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"270.0\" y=\"165.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.98</text><text x=\"330.0\" y=\"161.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Not flagged</text><line x1=\"14\" y1=\"90.0\" x2=\"134\" y2=\"46.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"80.0\" y=\"57.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.2</text><text x=\"140.0\" y=\"51.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Spam</text><line x1=\"14\" y1=\"90.0\" x2=\"134\" y2=\"134.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"80.0\" y=\"133.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.8</text><text x=\"140.0\" y=\"139.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Genuine</text></svg>"
+     },
+     "Spam and flagged: \\(0.2 \\times 0.95 = 0.19\\). Not spam and flagged: \\(0.8 \\times 0.02 = 0.016\\).",
+     "\\(P(\\text{flagged}) = 0.19 + 0.016\\)."
+    ],
+    "answer": "0.206"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\[\\begin{aligned} P(\\text{spam} \\mid \\text{flagged}) &= \\frac{P(\\text{spam and flagged})}{P(\\text{flagged})} \\\\[4pt] &= \\frac{0.19}{0.206} = 0.9223\\ldots \\end{aligned}\\]"
+    ],
+    "answer": "0.922"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(\\text{not flagged}) = 1 - 0.206 = 0.794\\). Spam and not flagged: \\(0.2 \\times 0.05 = 0.01\\).",
+     "\\[P(\\text{spam} \\mid \\text{not flagged}) = \\frac{0.01}{0.794} = 0.01259\\ldots\\]"
+    ],
+    "answer": "0.0126"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-024",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "A bag contains six tiles numbered 1, 2, 3, 4, 5 and 6. Two tiles are taken from the bag at random, without replacement."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that both numbers are odd.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Hence find the probability that the product of the two numbers is even.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that the sum of the two numbers is 7.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Given that the product of the two numbers is even, find the probability that their sum is 7.",
+    "marks": 2
+   }
+  ],
+  "idea": "Without replacement, the second tile is chosen from the five that are left. A product is odd only when both numbers are odd, so “even product” is the opposite of “both odd”.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Three of the six tiles are odd. After one odd tile is taken, two of the remaining five are odd.",
+     "\\(\\dfrac{3}{6} \\times \\dfrac{2}{5} = \\dfrac{6}{30}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{5}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The product is even unless both numbers are odd: \\(1 - \\dfrac{1}{5}\\)."
+    ],
+    "answer": "\\(\\dfrac{4}{5}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Whatever the first tile is, exactly one of the five remaining tiles makes the sum 7 (1 needs 6, 2 needs 5, 3 needs 4, and so on)."
+    ],
+    "answer": "\\(\\dfrac{1}{5}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The pairs with sum 7 are 1 and 6, 2 and 5, 3 and 4. Each pair contains an even number, so its product is even. So \\(P(\\text{sum 7 and even product}) = P(\\text{sum 7}) = \\dfrac{1}{5}\\).",
+     "\\[P(\\text{sum 7} \\mid \\text{even product}) = \\frac{1/5}{4/5}\\]"
+    ],
+    "answer": "\\(\\dfrac{1}{4}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-025",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 12,
+  "stem": [
+   "When Sofia serves in tennis, her first serve goes in with probability 0.6. If it goes in, she wins the point with probability 0.75. If her first serve is out, she takes a second serve, which goes in with probability 0.9. If her second serve goes in, she wins the point with probability 0.5. If her second serve is also out, it is a double fault and she loses the point."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that Sofia serves a double fault on a given point.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the probability that Sofia wins a given point on her serve is 0.63.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Given that Sofia wins a point on her serve, find the probability that her first serve went in.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Sofia serves for six points, and the points are independent. Find the probability that she serves at least one double fault.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "After some coaching, the probability that Sofia's first serve goes in is \\(p\\). The other probabilities do not change. Find the least value of \\(p\\) for which the probability that she wins a point on her serve is at least 0.66.",
+    "marks": 3
+   }
+  ],
+  "idea": "Draw a tree. The second serve only happens on the branch where the first serve is out, so the tree is longer on that side. Multiply along each route and add the routes you need.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 450 224\" width=\"450\" height=\"224\" role=\"img\" aria-label=\"Tree diagram. First serve in with probability 0.6, then wins the point 0.75 or loses 0.25. First serve out with probability 0.4, then second serve in 0.9 (wins 0.5, loses 0.5) or second serve out 0.1, a double fault.\"><line x1=\"154\" y1=\"46.0\" x2=\"238\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"200.2\" y=\"25.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.75</text><text x=\"244.0\" y=\"29.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">wins</text><line x1=\"154\" y1=\"46.0\" x2=\"238\" y2=\"68.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"200.2\" y=\"77.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.25</text><text x=\"244.0\" y=\"73.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">loses</text><line x1=\"294\" y1=\"134.0\" x2=\"378\" y2=\"112.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"340.2\" y=\"113.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.5</text><text x=\"384.0\" y=\"117.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">wins</text><line x1=\"294\" y1=\"134.0\" x2=\"378\" y2=\"156.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"340.2\" y=\"165.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.5</text><text x=\"384.0\" y=\"161.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">loses</text><line x1=\"154\" y1=\"167.0\" x2=\"238\" y2=\"134.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"200.2\" y=\"140.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.9</text><text x=\"244.0\" y=\"139.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2nd in</text><line x1=\"154\" y1=\"167.0\" x2=\"238\" y2=\"200.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"200.2\" y=\"204.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.1</text><text x=\"244.0\" y=\"205.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2nd out (double fault)</text><line x1=\"14\" y1=\"106.5\" x2=\"98\" y2=\"46.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"60.2\" y=\"65.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.6</text><text x=\"104.0\" y=\"51.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1st in</text><line x1=\"14\" y1=\"106.5\" x2=\"98\" y2=\"167.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"60.2\" y=\"158.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.4</text><text x=\"104.0\" y=\"172.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1st out</text></svg>"
+     },
+     "A double fault needs the first serve out and the second serve out: \\(0.4 \\times 0.1\\)."
+    ],
+    "answer": "0.04"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "She wins after a first serve that goes in: \\(0.6 \\times 0.75 = 0.45\\).",
+     "She wins after a second serve that goes in: \\(0.4 \\times 0.9 \\times 0.5 = 0.18\\).",
+     "\\(0.45 + 0.18 = 0.63\\)."
+    ],
+    "answer": "0.63 (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\[P(\\text{first serve in} \\mid \\text{wins}) = \\frac{0.45}{0.63} = \\frac{5}{7}\\]"
+    ],
+    "answer": "\\(\\dfrac{5}{7}\\) (0.714)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P(\\text{no double fault on a point}) = 1 - 0.04 = 0.96\\).",
+     "\\(P(\\text{no double fault in six points}) = 0.96^6 = 0.7827\\ldots\\)",
+     "\\(P(\\text{at least one}) = 1 - 0.7827\\ldots = 0.2172\\ldots\\)"
+    ],
+    "answer": "0.217"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "With first-serve probability \\(p\\), she wins the point with probability \\(0.75p + (1 - p) \\times 0.9 \\times 0.5 = 0.75p + 0.45(1 - p)\\).",
+     "This simplifies to \\(0.45 + 0.3p\\). Check with \\(p = 0.6\\): \\(0.45 + 0.18 = 0.63\\).",
+     "\\(0.45 + 0.3p \\ge 0.66\\) gives \\(0.3p \\ge 0.21\\), so \\(p \\ge 0.7\\)."
+    ],
+    "answer": "\\(p = 0.7\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-026",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "Bag X contains 3 red balls and 2 blue balls. Bag Y contains 2 red balls and 4 blue balls. A ball is taken at random from bag X and placed in bag Y. A ball is then taken at random from bag Y."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the ball taken from bag Y is red.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Given that the ball taken from bag Y is red, find the probability that the ball moved from bag X was red.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The ball taken from bag Y is then placed in bag X. Find the probability that bag X again contains 3 red balls and 2 blue balls.",
+    "marks": 3
+   }
+  ],
+  "idea": "What is in bag Y depends on the colour of the ball that was moved, so split into two cases: a red ball moved, or a blue ball moved. After the move bag Y holds 7 balls.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Red moved (probability \\(\\dfrac{3}{5}\\)): bag Y then has 3 red and 4 blue, so \\(P(\\text{red from Y}) = \\dfrac{3}{7}\\).",
+     "Blue moved (probability \\(\\dfrac{2}{5}\\)): bag Y then has 2 red and 5 blue, so \\(P(\\text{red from Y}) = \\dfrac{2}{7}\\).",
+     "\\[\\begin{aligned} P(\\text{red from Y}) &= \\frac{3}{5} \\times \\frac{3}{7} + \\frac{2}{5} \\times \\frac{2}{7} \\\\[4pt] &= \\frac{9}{35} + \\frac{4}{35} \\end{aligned}\\]"
+    ],
+    "answer": "\\(\\dfrac{13}{35}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "From part (a), the probability that a red ball is moved and a red ball is then taken from bag Y is \\(\\dfrac{9}{35}\\), and \\(P(\\text{red from Y}) = \\dfrac{13}{35}\\).",
+     "Divide the first by the second: \\(\\dfrac{9/35}{13/35}\\)."
+    ],
+    "answer": "\\(\\dfrac{9}{13}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Bag X is back to 3 red and 2 blue only if the ball that returns has the same colour as the ball that left.",
+     "Red moved, then red returns: \\(\\dfrac{3}{5} \\times \\dfrac{3}{7} = \\dfrac{9}{35}\\).",
+     "Blue moved, then blue returns: \\(\\dfrac{2}{5} \\times \\dfrac{5}{7} = \\dfrac{10}{35}\\).",
+     "\\(\\dfrac{9}{35} + \\dfrac{10}{35}\\)."
+    ],
+    "answer": "\\(\\dfrac{19}{35}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-027",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 10,
+  "stem": [
+   "Kai and Lena each try, independently, to solve a puzzle. The probability that Lena solves it is \\(p\\), and the probability that Kai solves it is \\(2p\\). The probability that at least one of them solves the puzzle is 0.52."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(50p^2 - 75p + 13 = 0\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(p\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that exactly one of them solves the puzzle.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Given that exactly one of them solves the puzzle, find the probability that it is Kai.",
+    "marks": 2
+   }
+  ],
+  "idea": "“At least one solves it” is the opposite of “neither solves it”. Because they work independently, the probability that neither solves it is a product.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(\\text{neither solves it}) = 1 - 0.52 = 0.48\\).",
+     "By independence, \\(P(\\text{neither}) = (1 - p)(1 - 2p)\\), so \\((1 - p)(1 - 2p) = 0.48\\).",
+     "Expand: \\(1 - 3p + 2p^2 = 0.48\\), so \\(2p^2 - 3p + 0.52 = 0\\). Multiply by 25: \\(50p^2 - 75p + 13 = 0\\)."
+    ],
+    "answer": "\\(50p^2 - 75p + 13 = 0\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Factorise: \\(50p^2 - 75p + 13 = (5p - 1)(10p - 13)\\). Check: \\(50p^2 - 65p - 10p + 13\\).",
+     "So \\(p = \\dfrac{1}{5}\\) or \\(p = \\dfrac{13}{10}\\).",
+     "A probability cannot be greater than 1, so \\(p = \\dfrac{13}{10}\\) is rejected."
+    ],
+    "answer": "\\(p = 0.2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(\\text{Kai solves}) = 0.4\\) and \\(P(\\text{Lena solves}) = 0.2\\).",
+     "Kai only: \\(0.4 \\times 0.8 = 0.32\\). Lena only: \\(0.2 \\times 0.6 = 0.12\\).",
+     "\\(0.32 + 0.12\\)."
+    ],
+    "answer": "0.44"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\[\\begin{aligned} P(\\text{Kai} \\mid \\text{exactly one}) &= \\frac{P(\\text{Kai only})}{P(\\text{exactly one})} \\\\[4pt] &= \\frac{0.32}{0.44} \\end{aligned}\\]"
+    ],
+    "answer": "\\(\\dfrac{8}{11}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-028",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 10,
+  "stem": [
+   "A box contains \\(n\\) dark chocolates and \\(n + 2\\) milk chocolates. Two chocolates are taken from the box at random, without replacement."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the probability that the two chocolates are of different types is \\(\\dfrac{n(n + 2)}{(n + 1)(2n + 1)}\\).",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "The probability that the two chocolates are of different types is \\(\\dfrac{8}{15}\\).",
+    "marks": null
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(n^2 - 6n + 8 = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The box holds more than eight chocolates. Find the value of \\(n\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Given that the two chocolates are of the same type, find the probability that both are dark.",
+    "marks": 3
+   }
+  ],
+  "idea": "There are \\(2n + 2\\) chocolates at the start and \\(2n + 1\\) after one has been taken. “Different types” can happen in two orders, dark then milk or milk then dark.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(\\text{dark then milk}) = \\dfrac{n}{2n + 2} \\times \\dfrac{n + 2}{2n + 1}\\). The other order, milk then dark, has the same probability.",
+     "\\[\\begin{aligned} P(\\text{different}) &= \\frac{2n(n + 2)}{(2n + 2)(2n + 1)} = \\frac{2n(n + 2)}{2(n + 1)(2n + 1)} \\\\[4pt] &= \\frac{n(n + 2)}{(n + 1)(2n + 1)} \\end{aligned}\\]"
+    ],
+    "answer": "\\(\\dfrac{n(n + 2)}{(n + 1)(2n + 1)}\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Set the expression equal to \\(\\dfrac{8}{15}\\) and cross-multiply: \\(15n(n + 2) = 8(n + 1)(2n + 1)\\).",
+     "\\(15n^2 + 30n = 16n^2 + 24n + 8\\).",
+     "Bring everything to one side: \\(0 = n^2 - 6n + 8\\)."
+    ],
+    "answer": "\\(n^2 - 6n + 8 = 0\\) (shown)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((n - 2)(n - 4) = 0\\), so \\(n = 2\\) or \\(n = 4\\).",
+     "The box holds \\(2n + 2\\) chocolates: 6 if \\(n = 2\\), and 10 if \\(n = 4\\). Only 10 is more than eight."
+    ],
+    "answer": "\\(n = 4\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "There are 4 dark and 6 milk chocolates.",
+     "\\(P(\\text{both dark}) = \\dfrac{4}{10} \\times \\dfrac{3}{9} = \\dfrac{12}{90}\\) and \\(P(\\text{both milk}) = \\dfrac{6}{10} \\times \\dfrac{5}{9} = \\dfrac{30}{90}\\).",
+     "\\[\\begin{aligned} P(\\text{both dark} \\mid \\text{same type}) &= \\frac{12/90}{12/90 + 30/90} \\\\[4pt] &= \\frac{12}{42} \\end{aligned}\\]"
+    ],
+    "answer": "\\(\\dfrac{2}{7}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-029",
+  "strand": "Statistics and Probability",
+  "subtopic": "Discrete random variables",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The discrete random variable \\(X\\) has the probability distribution \\(P(X = x) = kx\\), for \\(x = 1, 2, 3, 4\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(X \\ge 3)\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Two independent values of \\(X\\) are observed. Find the probability that both are equal to 4.",
+    "marks": 1
+   }
+  ],
+  "idea": "The probabilities of all the possible values add to 1. That one equation gives \\(k\\), and everything else follows from the table of probabilities.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The probabilities are \\(k\\), \\(2k\\), \\(3k\\) and \\(4k\\). They add to 1: \\(10k = 1\\)."
+    ],
+    "answer": "\\(k = \\dfrac{1}{10}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X = 3) + P(X = 4) = \\dfrac{3}{10} + \\dfrac{4}{10}\\)."
+    ],
+    "answer": "\\(\\dfrac{7}{10}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Multiply each value by its probability and add:",
+     "\\[E(X) = \\frac{1(1) + 2(2) + 3(3) + 4(4)}{10} = \\frac{30}{10}\\]"
+    ],
+    "answer": "\\(E(X) = 3\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P(X = 4) = \\dfrac{4}{10}\\), and the two values are independent: \\(\\dfrac{4}{10} \\times \\dfrac{4}{10}\\)."
+    ],
+    "answer": "\\(\\dfrac{4}{25}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-030",
+  "strand": "Statistics and Probability",
+  "subtopic": "Discrete random variables",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The number of aces, \\(X\\), that a volleyball player serves in a set has the following probability distribution.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|c|c|c|}\\hline x & 0 & 1 & 2 & 3 \\\\ \\hline P(X = x) & 0.35 & 0.3 & 0.2 & 0.15 \\\\ \\hline\\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the player serves at least one ace in a set.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the expected total number of aces in 20 sets.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "The numbers of aces in different sets are independent. Find the probability that the player serves exactly one ace in total in two sets.",
+    "marks": 2
+   }
+  ],
+  "idea": "The expected value is the long-run average: each value times its probability, added up. For a total over two sets, list the ways the total can happen.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(1 - P(X = 0) = 1 - 0.35\\)."
+    ],
+    "answer": "0.65"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(E(X) = 0(0.35) + 1(0.3) + 2(0.2) + 3(0.15) = 0.3 + 0.4 + 0.45\\)."
+    ],
+    "answer": "\\(E(X) = 1.15\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(20 \\times 1.15\\)."
+    ],
+    "answer": "23 aces"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "One ace in total means one ace in one set and none in the other. This can happen in two orders: (1 then 0) or (0 then 1).",
+     "\\(2 \\times 0.3 \\times 0.35\\)."
+    ],
+    "answer": "0.21"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-031",
+  "strand": "Statistics and Probability",
+  "subtopic": "Discrete random variables",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "In a game, a player pays $3 and then spins a fair spinner twice. The spinner has five equal sectors numbered 1, 2, 3, 4 and 5. If the two numbers are equal, the player wins \\(k\\) dollars. If the two numbers differ by exactly 1, the player wins $5. Otherwise the player wins nothing."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the probability that the two numbers differ by exactly 1 is \\(\\dfrac{8}{25}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "For \\(k = 10\\), find the player's expected profit from one game.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(k\\) for which the game is fair.",
+    "marks": 2
+   }
+  ],
+  "idea": "Two spins give \\(5 \\times 5 = 25\\) equally likely outcomes. A game is fair when the expected winnings are equal to the cost of playing.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The pairs of numbers that differ by 1 are 1 and 2, 2 and 3, 3 and 4, 4 and 5. Each pair can come up in two orders, which gives \\(4 \\times 2 = 8\\) outcomes out of 25."
+    ],
+    "answer": "\\(\\dfrac{8}{25}\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The numbers are equal in 5 of the 25 outcomes, so \\(P(\\text{equal}) = \\dfrac{5}{25}\\).",
+     "Expected winnings \\(= 10 \\times \\dfrac{5}{25} + 5 \\times \\dfrac{8}{25} = 2 + 1.6 = 3.6\\) dollars.",
+     "Expected profit \\(=\\) expected winnings \\(-\\) cost \\(= 3.6 - 3\\)."
+    ],
+    "answer": "$0.60"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The game is fair when the expected winnings are $3: \\(k \\times \\dfrac{5}{25} + 5 \\times \\dfrac{8}{25} = 3\\).",
+     "\\(\\dfrac{k}{5} + 1.6 = 3\\), so \\(\\dfrac{k}{5} = 1.4\\)."
+    ],
+    "answer": "\\(k = 7\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-032",
+  "strand": "Statistics and Probability",
+  "subtopic": "Discrete random variables",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "A discrete random variable \\(X\\) takes the values 1, 2, 3 and 4. The probabilities \\(P(X = 1)\\), \\(P(X = 2)\\), \\(P(X = 3)\\) and \\(P(X = 4)\\), in this order, form a geometric sequence with common ratio \\(\\dfrac{1}{2}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(P(X = 1) = \\dfrac{8}{15}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(P(X \\ge 2 \\mid X \\le 3)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Call the first probability \\(a\\). The others are then \\(\\frac{a}{2}\\), \\(\\frac{a}{4}\\) and \\(\\frac{a}{8}\\), and the four must add to 1.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Let \\(P(X = 1) = a\\). The four probabilities add to 1:",
+     "\\[a + \\frac{a}{2} + \\frac{a}{4} + \\frac{a}{8} = \\frac{15a}{8} = 1\\]",
+     "So \\(a = \\dfrac{8}{15}\\)."
+    ],
+    "answer": "\\(P(X = 1) = \\dfrac{8}{15}\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The probabilities are \\(\\dfrac{8}{15}\\), \\(\\dfrac{4}{15}\\), \\(\\dfrac{2}{15}\\) and \\(\\dfrac{1}{15}\\).",
+     "\\[E(X) = \\frac{1(8) + 2(4) + 3(2) + 4(1)}{15}\\]"
+    ],
+    "answer": "\\(E(X) = \\dfrac{26}{15}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(X \\le 3) = \\dfrac{8 + 4 + 2}{15} = \\dfrac{14}{15}\\). The values that are both at least 2 and at most 3 are 2 and 3, with probability \\(\\dfrac{4 + 2}{15} = \\dfrac{6}{15}\\).",
+     "\\[P(X \\ge 2 \\mid X \\le 3) = \\frac{6/15}{14/15}\\]"
+    ],
+    "answer": "\\(\\dfrac{3}{7}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-033",
+  "strand": "Statistics and Probability",
+  "subtopic": "Discrete random variables",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 10,
+  "stem": [
+   "In a game, a fair six-sided die is rolled. If it shows 1, 2, 3 or 4, the player wins that number of dollars. If it shows 5 or 6, the die is rolled a second time, and the player wins double the number shown on the second roll. Let \\(X\\) be the number of dollars that the player wins."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(P(X = 4) = \\dfrac{2}{9}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(X \\ge 6)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Given that the player wins $2, find the probability that the die was rolled only once.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "The player pays \\(c\\) dollars to play. The organiser wants an expected profit of $0.50 from each game. Write down the value of \\(c\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "There are two ways to win: directly on the first roll, or through a second roll. Find the probability of each way separately and add. A second roll happens with probability \\(\\frac{2}{6} = \\frac{1}{3}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Directly: the first roll is 4, with probability \\(\\dfrac{1}{6}\\).",
+     "Through a second roll: the first roll is 5 or 6 and the second roll is 2 (double 2 is 4), with probability \\(\\dfrac{1}{3} \\times \\dfrac{1}{6} = \\dfrac{1}{18}\\).",
+     "\\(\\dfrac{1}{6} + \\dfrac{1}{18} = \\dfrac{3}{18} + \\dfrac{1}{18} = \\dfrac{4}{18} = \\dfrac{2}{9}\\)."
+    ],
+    "answer": "\\(P(X = 4) = \\dfrac{2}{9}\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The first roll alone gives at most 4. To win 6 or more, the player needs a second roll that shows 3, 4, 5 or 6.",
+     "\\(\\dfrac{1}{3} \\times \\dfrac{4}{6}\\)."
+    ],
+    "answer": "\\(\\dfrac{2}{9}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "From the first roll alone: \\(\\dfrac{1}{6}(1 + 2 + 3 + 4) = \\dfrac{10}{6}\\).",
+     "Through a second roll: the wins are 2, 4, 6, 8, 10, 12, each with probability \\(\\dfrac{1}{18}\\), which gives \\(\\dfrac{1}{18}(2 + 4 + 6 + 8 + 10 + 12) = \\dfrac{42}{18} = \\dfrac{14}{6}\\).",
+     "\\(E(X) = \\dfrac{10}{6} + \\dfrac{14}{6} = \\dfrac{24}{6}\\)."
+    ],
+    "answer": "\\(E(X) = 4\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P(X = 2) = \\dfrac{1}{6} + \\dfrac{1}{3} \\times \\dfrac{1}{6} = \\dfrac{3}{18} + \\dfrac{1}{18} = \\dfrac{4}{18}\\). The first term is the case with only one roll.",
+     "\\[P(\\text{one roll} \\mid X = 2) = \\frac{3/18}{4/18}\\]"
+    ],
+    "answer": "\\(\\dfrac{3}{4}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "On average the organiser pays out $4 per game, so the charge must be \\(4 + 0.50\\)."
+    ],
+    "answer": "\\(c = 4.50\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-034",
+  "strand": "Statistics and Probability",
+  "subtopic": "Discrete random variables",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "A box contains 10 batteries. Four of them are flat and six are charged. Three batteries are taken from the box at random, without replacement. Let \\(X\\) be the number of flat batteries taken."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(P(X = 1) = \\dfrac{1}{2}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(X = 0)\\), \\(P(X = 2)\\) and \\(P(X = 3)\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "The experiment is carried out once on each of 8 days. Each day starts with the same 10 batteries in the box, four flat and six charged.",
+    "marks": null
+   },
+   {
+    "label": "d",
+    "text": "Find the probability that no flat battery is taken on exactly two of the 8 days.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the probability that, on at least one of the 8 days, all three batteries taken are flat.",
+    "marks": 2
+   }
+  ],
+  "idea": "Take the batteries one at a time: the numbers left in the box change after each one. One flat battery among three can come first, second or third, so there are three orders to count.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "One order is flat, charged, charged: \\(\\dfrac{4}{10} \\times \\dfrac{6}{9} \\times \\dfrac{5}{8} = \\dfrac{120}{720}\\).",
+     "The flat battery could also be second or third. Each order has the same probability, so multiply by 3.",
+     "\\(3 \\times \\dfrac{120}{720} = \\dfrac{360}{720} = \\dfrac{1}{2}\\)."
+    ],
+    "answer": "\\(P(X = 1) = \\dfrac{1}{2}\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X = 0) = \\dfrac{6}{10} \\times \\dfrac{5}{9} \\times \\dfrac{4}{8} = \\dfrac{120}{720} = \\dfrac{1}{6}\\).",
+     "\\(P(X = 2) = 3 \\times \\dfrac{4}{10} \\times \\dfrac{3}{9} \\times \\dfrac{6}{8} = \\dfrac{216}{720} = \\dfrac{3}{10}\\) (three positions for the charged battery).",
+     "\\(P(X = 3) = \\dfrac{4}{10} \\times \\dfrac{3}{9} \\times \\dfrac{2}{8} = \\dfrac{24}{720} = \\dfrac{1}{30}\\).",
+     "Check: \\(\\dfrac{1}{6} + \\dfrac{1}{2} + \\dfrac{3}{10} + \\dfrac{1}{30} = \\dfrac{5 + 15 + 9 + 1}{30} = 1\\)."
+    ],
+    "answer": "\\(P(X = 0) = \\dfrac{1}{6}\\), \\(P(X = 2) = \\dfrac{3}{10}\\), \\(P(X = 3) = \\dfrac{1}{30}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(X) = 0\\left(\\dfrac{1}{6}\\right) + 1\\left(\\dfrac{1}{2}\\right) + 2\\left(\\dfrac{3}{10}\\right) + 3\\left(\\dfrac{1}{30}\\right) = 0.5 + 0.6 + 0.1\\)."
+    ],
+    "answer": "\\(E(X) = 1.2\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Each day, “no flat battery” happens with probability \\(\\dfrac{1}{6}\\), and the days are independent. The number of such days, \\(Y\\), is binomial: \\(Y \\sim \\mathrm{B}\\!\\left(8, \\dfrac{1}{6}\\right)\\).",
+     "Use the binomial probability function on the calculator: \\(P(Y = 2) = 0.2604\\ldots\\)"
+    ],
+    "answer": "0.260"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Each day, all three are flat with probability \\(\\dfrac{1}{30}\\), so this does not happen with probability \\(\\dfrac{29}{30}\\).",
+     "\\(P(\\text{never in 8 days}) = \\left(\\dfrac{29}{30}\\right)^8 = 0.7624\\ldots\\)",
+     "\\(P(\\text{at least once}) = 1 - 0.7624\\ldots = 0.2375\\ldots\\)"
+    ],
+    "answer": "0.238"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-035",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "A goalkeeper saves each penalty with probability 0.25, independently of the others. In one season she faces 12 penalties. Let \\(X\\) be the number of penalties that she saves."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the expected number of penalties saved.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that she saves exactly three penalties.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that she saves at least four penalties.",
+    "marks": 2
+   }
+  ],
+  "idea": "A fixed number of independent trials, each with the same probability of success, gives a binomial distribution: here \\(X \\sim \\mathrm{B}(12, 0.25)\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(E(X) = np = 12 \\times 0.25\\)."
+    ],
+    "answer": "3"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Use the binomial probability function with \\(n = 12\\), \\(p = 0.25\\), \\(x = 3\\): \\(P(X = 3) = 0.2581\\ldots\\)"
+    ],
+    "answer": "0.258"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "“At least four” is the opposite of “three or fewer”: \\(P(X \\ge 4) = 1 - P(X \\le 3)\\).",
+     "Use the cumulative binomial function: \\(P(X \\le 3) = 0.6487\\ldots\\), so \\(P(X \\ge 4) = 0.3512\\ldots\\)"
+    ],
+    "answer": "0.351"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-036",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "Each time a spinner is spun, the probability that it lands on red is \\(\\dfrac{1}{3}\\). The spinner is spun four times. Let \\(X\\) be the number of times it lands on red."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the spinner lands on red exactly once.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the spinner lands on red at least once.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the mean and the variance of \\(X\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(X \\sim \\mathrm{B}\\!\\left(4, \\frac{1}{3}\\right)\\). For exactly one red, count the positions the red can take and multiply the probabilities along one such sequence.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "One sequence with exactly one red is red, not red, not red, not red: \\(\\dfrac{1}{3} \\times \\left(\\dfrac{2}{3}\\right)^3 = \\dfrac{8}{81}\\).",
+     "The red can be in any of the 4 positions, so \\(P(X = 1) = 4 \\times \\dfrac{8}{81}\\)."
+    ],
+    "answer": "\\(\\dfrac{32}{81}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(\\text{no red}) = \\left(\\dfrac{2}{3}\\right)^4 = \\dfrac{16}{81}\\).",
+     "\\(P(X \\ge 1) = 1 - \\dfrac{16}{81}\\)."
+    ],
+    "answer": "\\(\\dfrac{65}{81}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Mean \\(= np = 4 \\times \\dfrac{1}{3}\\).",
+     "Variance \\(= np(1 - p) = 4 \\times \\dfrac{1}{3} \\times \\dfrac{2}{3}\\)."
+    ],
+    "answer": "Mean \\(\\dfrac{4}{3}\\); variance \\(\\dfrac{8}{9}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-037",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Each scratch card wins a prize with probability 0.15, independently of the other cards."
+  ],
+  "parts": [
+   {
+    "label": "",
+    "text": "Rui buys 10 cards.",
+    "marks": null
+   },
+   {
+    "label": "a",
+    "text": "Find the probability that exactly two of the cards win a prize.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that at least two of the cards win a prize.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the least number of cards that Rui must buy so that the probability of winning at least one prize is greater than 0.9.",
+    "marks": 3
+   }
+  ],
+  "idea": "The number of winning cards among \\(n\\) cards is \\(\\mathrm{B}(n, 0.15)\\). The probability of winning nothing is \\(0.85^n\\), which shrinks as \\(n\\) grows.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Let \\(X \\sim \\mathrm{B}(10, 0.15)\\). Use the binomial probability function: \\(P(X = 2) = 0.2758\\ldots\\)"
+    ],
+    "answer": "0.276"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X \\ge 2) = 1 - P(X \\le 1)\\).",
+     "\\(P(X \\le 1) = 0.5442\\ldots\\), so \\(P(X \\ge 2) = 0.4557\\ldots\\)"
+    ],
+    "answer": "0.456"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "With \\(n\\) cards, \\(P(\\text{at least one prize}) = 1 - 0.85^n\\). This must be greater than 0.9, so \\(0.85^n < 0.1\\).",
+     "Try values of \\(n\\) in a table (or use logarithms: \\(n > \\dfrac{\\ln 0.1}{\\ln 0.85} = 14.16\\ldots\\)).",
+     "\\(0.85^{14} = 0.1027\\ldots\\) is not small enough. \\(0.85^{15} = 0.0873\\ldots\\) is less than 0.1."
+    ],
+    "answer": "15 cards"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-038",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A pack contains 6 tulip bulbs. Each bulb flowers with probability 0.85, independently of the others."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that all six bulbs in a pack flower.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that at least five bulbs in a pack flower.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The shop gives a refund if fewer than four bulbs in a pack flower. Find the probability that a pack gets a refund.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "The shop sells 1000 packs. Estimate the number of packs that get a refund.",
+    "marks": 2
+   }
+  ],
+  "idea": "The number of bulbs that flower in a pack is \\(X \\sim \\mathrm{B}(6, 0.85)\\). Turn each phrase into an inequality for \\(X\\) before using the calculator.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(X = 6) = 0.85^6 = 0.3771\\ldots\\)"
+    ],
+    "answer": "0.377"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X \\ge 5) = 1 - P(X \\le 4)\\). The calculator gives \\(P(X \\ge 5) = 0.7764\\ldots\\)"
+    ],
+    "answer": "0.776"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "“Fewer than four” means \\(X \\le 3\\). Use the cumulative binomial function: \\(P(X \\le 3) = 0.04733\\ldots\\)"
+    ],
+    "answer": "0.0473"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Expected number \\(= 1000 \\times 0.04733\\ldots = 47.33\\ldots\\)"
+    ],
+    "answer": "About 47 packs (47.3)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-039",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 10,
+  "stem": [
+   "The random variable \\(X\\) has the distribution \\(\\mathrm{B}(n, p)\\). It is given that \\(E(X) = 12\\) and \\(\\mathrm{Var}(X) = 4.8\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(p = 0.6\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(n\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find \\(P(X = 12)\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the least integer \\(k\\) for which \\(P(X \\ge k) < 0.1\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "For a binomial distribution the mean is \\(np\\) and the variance is \\(np(1 - p)\\). Dividing the variance by the mean removes \\(n\\) and leaves \\(1 - p\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(np = 12\\) and \\(np(1 - p) = 4.8\\).",
+     "Divide the second equation by the first: \\(1 - p = \\dfrac{4.8}{12} = 0.4\\).",
+     "So \\(p = 1 - 0.4 = 0.6\\)."
+    ],
+    "answer": "\\(p = 0.6\\) (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(n \\times 0.6 = 12\\)."
+    ],
+    "answer": "\\(n = 20\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Use the binomial probability function with \\(n = 20\\), \\(p = 0.6\\), \\(x = 12\\): \\(P(X = 12) = 0.1797\\ldots\\)"
+    ],
+    "answer": "0.180"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P(X \\ge k) = 1 - P(X \\le k - 1)\\). Make a table of this for different values of \\(k\\).",
+     "\\(P(X \\ge 14) = 0.2500\\ldots\\), \\(P(X \\ge 15) = 0.1255\\ldots\\) and \\(P(X \\ge 16) = 0.05095\\ldots\\)",
+     "\\(k = 15\\) fails, because 0.1255 is greater than 0.1. \\(k = 16\\) is the first value that works."
+    ],
+    "answer": "\\(k = 16\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-040",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 10,
+  "stem": [
+   "The random variable \\(X\\) has the distribution \\(\\mathrm{B}(6, p)\\), where \\(0 < p < 1\\). It is given that \\(P(X = 2) = 2P(X = 1)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down expressions, in terms of \\(p\\), for \\(P(X = 1)\\) and \\(P(X = 2)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(p\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\) and \\(\\mathrm{Var}(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "By considering the ratios \\(\\dfrac{P(X = 3)}{P(X = 2)}\\) and \\(\\dfrac{P(X = 4)}{P(X = 3)}\\), or otherwise, show that \\(P(X = 3) > P(X = 2)\\) and that \\(P(X = 4) < P(X = 3)\\). Hence write down the most likely value of \\(X\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Write each probability with the binomial formula. When two of them are compared, most of the factors cancel, and what is left is a simple equation or ratio in \\(p\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(X = r) = \\dbinom{6}{r} p^r (1 - p)^{6 - r}\\), with \\(\\dbinom{6}{1} = 6\\) and \\(\\dbinom{6}{2} = 15\\)."
+    ],
+    "answer": "\\(P(X = 1) = 6p(1 - p)^5\\) and \\(P(X = 2) = 15p^2(1 - p)^4\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(15p^2(1 - p)^4 = 2 \\times 6p(1 - p)^5\\).",
+     "Since \\(0 < p < 1\\), divide both sides by \\(3p(1 - p)^4\\): \\(5p = 4(1 - p)\\).",
+     "\\(9p = 4\\)."
+    ],
+    "answer": "\\(p = \\dfrac{4}{9}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(X) = np = 6 \\times \\dfrac{4}{9} = \\dfrac{8}{3}\\).",
+     "\\(\\mathrm{Var}(X) = np(1 - p) = \\dfrac{8}{3} \\times \\dfrac{5}{9} = \\dfrac{40}{27}\\)."
+    ],
+    "answer": "\\(E(X) = \\dfrac{8}{3}\\), \\(\\mathrm{Var}(X) = \\dfrac{40}{27}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Here \\(\\dfrac{p}{1 - p} = \\dfrac{4/9}{5/9} = \\dfrac{4}{5}\\). Compare neighbouring probabilities by dividing one by the other.",
+     "\\[\\begin{aligned} \\frac{P(X = 3)}{P(X = 2)} &= \\frac{20p^3(1 - p)^3}{15p^2(1 - p)^4} = \\frac{4}{3} \\times \\frac{p}{1 - p} \\\\[4pt] &= \\frac{4}{3} \\times \\frac{4}{5} = \\frac{16}{15} > 1 \\end{aligned}\\]",
+     "\\[\\begin{aligned} \\frac{P(X = 4)}{P(X = 3)} &= \\frac{15p^4(1 - p)^2}{20p^3(1 - p)^3} = \\frac{3}{4} \\times \\frac{p}{1 - p} \\\\[4pt] &= \\frac{3}{4} \\times \\frac{4}{5} = \\frac{3}{5} < 1 \\end{aligned}\\]",
+     "So the probabilities rise up to \\(X = 3\\) and fall after it."
+    ],
+    "answer": "Both inequalities are shown; the most likely value is \\(X = 3\\)."
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-041",
+  "strand": "Statistics and Probability",
+  "subtopic": "Binomial distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 12,
+  "stem": [
+   "A plane has 120 seats. For one flight the airline sells 126 tickets. Each ticket holder turns up for the flight with probability 0.93, independently of the others. Let \\(X\\) be the number of ticket holders who turn up."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the distribution of \\(X\\), and find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that exactly 120 ticket holders turn up.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that more ticket holders turn up than there are seats.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "The airline wants the probability in part (c) to be less than 0.05. Find the greatest number of tickets that it can sell for the flight.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "The airline sells 126 tickets for each of four flights on this plane. Find the probability that, on at least one of the four flights, more ticket holders turn up than there are seats.",
+    "marks": 3
+   }
+  ],
+  "idea": "Each ticket holder is an independent trial with success probability 0.93, so \\(X\\) is binomial. “More than there are seats” means \\(X \\ge 121\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "There are 126 independent trials, each with probability 0.93.",
+     "\\(E(X) = np = 126 \\times 0.93 = 117.18\\)."
+    ],
+    "answer": "\\(X \\sim \\mathrm{B}(126, 0.93)\\); \\(E(X) = 117.18\\), about 117"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Use the binomial probability function with \\(n = 126\\), \\(p = 0.93\\), \\(x = 120\\): \\(P(X = 120) = 0.09571\\ldots\\)"
+    ],
+    "answer": "0.0957"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(X \\ge 121) = 1 - P(X \\le 120)\\).",
+     "\\(P(X \\le 120) = 0.8818\\ldots\\), so \\(P(X \\ge 121) = 0.1181\\ldots\\)"
+    ],
+    "answer": "0.118"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "With \\(n\\) tickets sold, the number who turn up is \\(\\mathrm{B}(n, 0.93)\\). Find \\(P(X \\ge 121)\\) for values of \\(n\\) below 126.",
+     "\\(n = 125\\): \\(P(X \\ge 121) = 0.05755\\ldots\\), which is too large.",
+     "\\(n = 124\\): \\(P(X \\ge 121) = 0.02295\\ldots\\), which is less than 0.05."
+    ],
+    "answer": "124 tickets"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "On one flight, the probability that everyone who turns up gets a seat is \\(1 - 0.1181\\ldots = 0.8818\\ldots\\)",
+     "For all four flights: \\(0.8818\\ldots^4 = 0.6048\\ldots\\)",
+     "\\(P(\\text{at least one flight is over-full}) = 1 - 0.6048\\ldots = 0.3951\\ldots\\)"
+    ],
+    "answer": "0.395"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-042",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The lengths, \\(L\\) mm, of the nails made by a machine are normally distributed with mean 40 mm and standard deviation 0.5 mm. In any normal distribution, about 95 % of the values lie within two standard deviations of the mean. The diagram shows this region for the lengths of the nails.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 190\" width=\"420\" height=\"190\" role=\"img\" aria-label=\"Normal curve for the lengths of nails, symmetric about the mean, 40 mm. A region centred on the mean is shaded and labelled about 95 %. It reaches two standard deviations either side of the mean.\"><path d=\"M95.9 150 L95.9 131.6 L99.7 129.0 L103.5 126.2 L107.3 123.1 L111.1 119.7 L114.9 116.1 L118.7 112.2 L122.5 108.0 L126.3 103.6 L130.1 99.0 L133.9 94.1 L137.7 89.0 L141.5 83.8 L145.3 78.4 L149.1 73.0 L152.9 67.5 L156.7 62.0 L160.5 56.6 L164.4 51.2 L168.2 46.1 L172.0 41.1 L175.8 36.4 L179.6 32.0 L183.4 28.0 L187.2 24.5 L191.0 21.3 L194.8 18.8 L198.6 16.7 L202.4 15.2 L206.2 14.3 L210.0 14.0 L213.8 14.3 L217.6 15.2 L221.4 16.7 L225.2 18.8 L229.0 21.3 L232.8 24.5 L236.6 28.0 L240.4 32.0 L244.2 36.4 L248.0 41.1 L251.8 46.1 L255.6 51.2 L259.5 56.6 L263.3 62.0 L267.1 67.5 L270.9 73.0 L274.7 78.4 L278.5 83.8 L282.3 89.0 L286.1 94.1 L289.9 99.0 L293.7 103.6 L297.5 108.0 L301.3 112.2 L305.1 116.1 L308.9 119.7 L312.7 123.1 L316.5 126.2 L320.3 129.0 L324.1 131.6 L324.1 150 Z\" fill=\"#b9c8ea\" stroke=\"none\"/><path d=\"M16.0 149.6 L17.6 149.5 L19.2 149.5 L20.8 149.4 L22.5 149.4 L24.1 149.3 L25.7 149.3 L27.3 149.2 L28.9 149.1 L30.5 149.0 L32.2 148.9 L33.8 148.8 L35.4 148.7 L37.0 148.6 L38.6 148.5 L40.2 148.4 L41.9 148.2 L43.5 148.1 L45.1 147.9 L46.7 147.7 L48.3 147.5 L49.9 147.3 L51.6 147.1 L53.2 146.9 L54.8 146.6 L56.4 146.4 L58.0 146.1 L59.6 145.8 L61.3 145.4 L62.9 145.1 L64.5 144.7 L66.1 144.3 L67.7 143.9 L69.4 143.5 L71.0 143.0 L72.6 142.5 L74.2 142.0 L75.8 141.4 L77.4 140.9 L79.1 140.2 L80.7 139.6 L82.3 138.9 L83.9 138.2 L85.5 137.4 L87.1 136.6 L88.8 135.8 L90.4 134.9 L92.0 134.0 L93.6 133.0 L95.2 132.0 L96.8 131.0 L98.5 129.9 L100.1 128.7 L101.7 127.6 L103.3 126.3 L104.9 125.1 L106.5 123.7 L108.2 122.4 L109.8 120.9 L111.4 119.5 L113.0 117.9 L114.6 116.4 L116.2 114.8 L117.8 113.1 L119.5 111.4 L121.1 109.6 L122.7 107.8 L124.3 106.0 L125.9 104.1 L127.5 102.1 L129.2 100.1 L130.8 98.1 L132.4 96.1 L134.0 94.0 L135.6 91.8 L137.2 89.7 L138.9 87.5 L140.5 85.3 L142.1 83.0 L143.7 80.7 L145.3 78.4 L146.9 76.1 L148.6 73.8 L150.2 71.5 L151.8 69.2 L153.4 66.8 L155.0 64.5 L156.6 62.2 L158.3 59.8 L159.9 57.5 L161.5 55.2 L163.1 53.0 L164.7 50.7 L166.4 48.5 L168.0 46.3 L169.6 44.2 L171.2 42.1 L172.8 40.0 L174.4 38.0 L176.1 36.1 L177.7 34.2 L179.3 32.3 L180.9 30.6 L182.5 28.9 L184.1 27.3 L185.8 25.7 L187.4 24.3 L189.0 22.9 L190.6 21.6 L192.2 20.4 L193.8 19.4 L195.5 18.4 L197.1 17.4 L198.7 16.6 L200.3 16.0 L201.9 15.4 L203.5 14.9 L205.2 14.5 L206.8 14.2 L208.4 14.1 L210.0 14.0 L211.6 14.1 L213.2 14.2 L214.8 14.5 L216.5 14.9 L218.1 15.4 L219.7 16.0 L221.3 16.6 L222.9 17.4 L224.5 18.4 L226.2 19.4 L227.8 20.4 L229.4 21.6 L231.0 22.9 L232.6 24.3 L234.2 25.7 L235.9 27.3 L237.5 28.9 L239.1 30.6 L240.7 32.3 L242.3 34.2 L243.9 36.1 L245.6 38.0 L247.2 40.0 L248.8 42.1 L250.4 44.2 L252.0 46.3 L253.6 48.5 L255.3 50.7 L256.9 53.0 L258.5 55.2 L260.1 57.5 L261.7 59.8 L263.4 62.2 L265.0 64.5 L266.6 66.8 L268.2 69.2 L269.8 71.5 L271.4 73.8 L273.1 76.1 L274.7 78.4 L276.3 80.7 L277.9 83.0 L279.5 85.3 L281.1 87.5 L282.8 89.7 L284.4 91.8 L286.0 94.0 L287.6 96.1 L289.2 98.1 L290.8 100.1 L292.5 102.1 L294.1 104.1 L295.7 106.0 L297.3 107.8 L298.9 109.6 L300.5 111.4 L302.2 113.1 L303.8 114.8 L305.4 116.4 L307.0 117.9 L308.6 119.5 L310.2 120.9 L311.8 122.4 L313.5 123.7 L315.1 125.1 L316.7 126.3 L318.3 127.6 L319.9 128.7 L321.5 129.9 L323.2 131.0 L324.8 132.0 L326.4 133.0 L328.0 134.0 L329.6 134.9 L331.2 135.8 L332.9 136.6 L334.5 137.4 L336.1 138.2 L337.7 138.9 L339.3 139.6 L340.9 140.2 L342.6 140.9 L344.2 141.4 L345.8 142.0 L347.4 142.5 L349.0 143.0 L350.6 143.5 L352.3 143.9 L353.9 144.3 L355.5 144.7 L357.1 145.1 L358.7 145.4 L360.4 145.8 L362.0 146.1 L363.6 146.4 L365.2 146.6 L366.8 146.9 L368.4 147.1 L370.1 147.3 L371.7 147.5 L373.3 147.7 L374.9 147.9 L376.5 148.1 L378.1 148.2 L379.8 148.4 L381.4 148.5 L383.0 148.6 L384.6 148.7 L386.2 148.8 L387.8 148.9 L389.5 149.0 L391.1 149.1 L392.7 149.2 L394.3 149.3 L395.9 149.3 L397.5 149.4 L399.2 149.4 L400.8 149.5 L402.4 149.5 L404.0 149.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"16\" y1=\"150\" x2=\"404\" y2=\"150\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"210.0\" y1=\"150\" x2=\"210.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"210.0\" y=\"168.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">40</text><text x=\"267.1\" y=\"122.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">about 95 %</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the lengths at the two ends of the shaded region.",
+    "marks": 1
+   },
+   {
+    "label": "",
+    "text": "In the rest of this question, take the area of the shaded region to be exactly 0.95.",
+    "marks": null
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that a nail is longer than 41 mm.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(P(39 < L < 40)\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "The machine makes a batch of 2000 nails. Find the expected number of nails in the batch that are shorter than 39 mm.",
+    "marks": 2
+   }
+  ],
+  "idea": "A normal curve is symmetric about the mean. The total area under it is 1, so whatever is not shaded is shared equally between the two tails.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Two standard deviations is \\(2 \\times 0.5 = 1\\) mm, so the region runs from \\(40 - 1\\) to \\(40 + 1\\)."
+    ],
+    "answer": "39 mm and 41 mm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The area outside the shaded region is \\(1 - 0.95 = 0.05\\).",
+     "By symmetry, half of this is above 41 mm: \\(0.05 \\div 2\\)."
+    ],
+    "answer": "0.025"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The shaded region is split in half by the mean: \\(0.95 \\div 2\\)."
+    ],
+    "answer": "0.475"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "By symmetry, \\(P(L < 39) = 0.025\\), the same as the upper tail.",
+     "\\(2000 \\times 0.025\\)."
+    ],
+    "answer": "50 nails"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-043",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Easy",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The time, \\(T\\) seconds, that a kettle takes to boil is normally distributed with mean 150 seconds and standard deviation 8 seconds."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the kettle takes less than 144 seconds to boil.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(146 < T < 162)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "On 10 % of occasions the kettle takes longer than \\(t\\) seconds to boil. Find the value of \\(t\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Use the normal cumulative function to go from values to a probability, and the inverse normal function to go from a probability back to a value.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Normal cumulative function with lower bound very small (for example \\(-10^{99}\\)), upper bound 144, \\(\\mu = 150\\), \\(\\sigma = 8\\): \\(P(T < 144) = 0.2266\\ldots\\)"
+    ],
+    "answer": "0.227"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Normal cumulative function with lower bound 146 and upper bound 162: \\(P(146 < T < 162) = 0.6246\\ldots\\)"
+    ],
+    "answer": "0.625"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "If 10 % of the times are longer than \\(t\\), then 90 % are shorter: \\(P(T < t) = 0.9\\).",
+     "Inverse normal with area 0.9, \\(\\mu = 150\\), \\(\\sigma = 8\\): \\(t = 160.2\\ldots\\)"
+    ],
+    "answer": "\\(t = 160\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-044",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The lifetime, \\(X\\) hours, of a type of light bulb is normally distributed with mean \\(\\mu\\). The standard deviation of the lifetimes is one fifth of the mean."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that a bulb lasts longer than \\(1.3\\mu\\) hours.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "It is found that 10 % of the bulbs last less than 444 hours. Find the value of \\(\\mu\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "Change to the standard normal variable \\(Z = \\dfrac{X - \\mu}{\\sigma}\\). With \\(\\sigma = \\dfrac{\\mu}{5}\\), the unknown \\(\\mu\\) cancels in part (a) and can be found in part (b).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sigma = 0.2\\mu\\). The value \\(1.3\\mu\\) is \\(0.3\\mu\\) above the mean, so its z-value is \\(z = \\dfrac{1.3\\mu - \\mu}{0.2\\mu} = 1.5\\).",
+     "\\(P(X > 1.3\\mu) = P(Z > 1.5) = 0.06680\\ldots\\) (normal cumulative function with \\(\\mu = 0\\), \\(\\sigma = 1\\))."
+    ],
+    "answer": "0.0668"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X < 444) = 0.1\\). Inverse normal with area 0.1 for the standard normal gives \\(z = -1.2815\\ldots\\)",
+     "So \\(\\dfrac{444 - \\mu}{0.2\\mu} = -1.2815\\ldots\\), which gives \\(444 = \\mu - 0.2563\\ldots\\mu = 0.7436\\ldots\\mu\\).",
+     "\\(\\mu = \\dfrac{444}{0.7436\\ldots} = 597.0\\ldots\\)"
+    ],
+    "answer": "\\(\\mu = 597\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-045",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The amount of electricity, \\(X\\) kWh, that a house uses in a day is normally distributed with mean \\(\\mu\\) and standard deviation \\(\\sigma\\). It is given that \\(P(X < 12) = 0.2\\) and \\(P(X > 20) = 0.2\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the value of \\(\\mu\\). Give a reason for your answer.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(\\sigma\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find \\(P(X > 25)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Equal areas in the two tails of a normal curve are cut off at equal distances from the mean. So the mean is half-way between 12 and 20.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 420 190\" width=\"420\" height=\"190\" role=\"img\" aria-label=\"Normal curve with the region to the left of 12 and the region to the right of 20 shaded. Each shaded region has area 0.2, and the mean is half-way between 12 and 20.\"><path d=\"M16.0 150 L16.0 149.6 L18.4 149.5 L20.9 149.4 L23.3 149.4 L25.7 149.3 L28.2 149.2 L30.6 149.0 L33.0 148.9 L35.5 148.7 L37.9 148.6 L40.3 148.4 L42.8 148.1 L45.2 147.9 L47.6 147.6 L50.1 147.3 L52.5 147.0 L54.9 146.6 L57.4 146.2 L59.8 145.7 L62.2 145.2 L64.7 144.7 L67.1 144.1 L69.5 143.4 L71.9 142.7 L74.4 141.9 L76.8 141.1 L79.2 140.2 L81.7 139.2 L84.1 138.1 L86.5 136.9 L89.0 135.7 L91.4 134.3 L93.8 132.9 L96.3 131.3 L98.7 129.7 L101.1 128.0 L103.6 126.1 L106.0 124.2 L108.4 122.1 L110.9 119.9 L113.3 117.7 L115.7 115.3 L118.2 112.8 L120.6 110.1 L123.0 107.4 L125.5 104.6 L127.9 101.7 L130.3 98.7 L132.8 95.6 L135.2 92.4 L137.6 89.2 L140.1 85.8 L142.5 82.5 L144.9 79.0 L147.4 75.6 L149.8 72.1 L152.2 68.6 L154.7 65.0 L157.1 61.5 L159.5 58.0 L162.0 54.6 L162.0 150 Z\" fill=\"#b9c8ea\" stroke=\"none\"/><path d=\"M258.0 150 L258.0 54.6 L260.5 58.0 L262.9 61.5 L265.3 65.0 L267.8 68.6 L270.2 72.1 L272.6 75.6 L275.1 79.0 L277.5 82.5 L279.9 85.8 L282.4 89.2 L284.8 92.4 L287.2 95.6 L289.7 98.7 L292.1 101.7 L294.5 104.6 L297.0 107.4 L299.4 110.1 L301.8 112.8 L304.3 115.3 L306.7 117.7 L309.1 119.9 L311.6 122.1 L314.0 124.2 L316.4 126.1 L318.9 128.0 L321.3 129.7 L323.7 131.3 L326.2 132.9 L328.6 134.3 L331.0 135.7 L333.5 136.9 L335.9 138.1 L338.3 139.2 L340.8 140.2 L343.2 141.1 L345.6 141.9 L348.1 142.7 L350.5 143.4 L352.9 144.1 L355.3 144.7 L357.8 145.2 L360.2 145.7 L362.6 146.2 L365.1 146.6 L367.5 147.0 L369.9 147.3 L372.4 147.6 L374.8 147.9 L377.2 148.1 L379.7 148.4 L382.1 148.6 L384.5 148.7 L387.0 148.9 L389.4 149.0 L391.8 149.2 L394.3 149.3 L396.7 149.4 L399.1 149.4 L401.6 149.5 L404.0 149.6 L404.0 150 Z\" fill=\"#b9c8ea\" stroke=\"none\"/><path d=\"M16.0 149.6 L17.6 149.5 L19.2 149.5 L20.9 149.4 L22.5 149.4 L24.1 149.3 L25.7 149.3 L27.3 149.2 L28.9 149.1 L30.6 149.0 L32.2 148.9 L33.8 148.8 L35.4 148.7 L37.0 148.6 L38.6 148.5 L40.2 148.4 L41.9 148.2 L43.5 148.1 L45.1 147.9 L46.7 147.7 L48.3 147.5 L50.0 147.3 L51.6 147.1 L53.2 146.9 L54.8 146.6 L56.4 146.4 L58.0 146.1 L59.6 145.8 L61.3 145.4 L62.9 145.1 L64.5 144.7 L66.1 144.3 L67.7 143.9 L69.3 143.5 L71.0 143.0 L72.6 142.5 L74.2 142.0 L75.8 141.4 L77.4 140.9 L79.1 140.2 L80.7 139.6 L82.3 138.9 L83.9 138.2 L85.5 137.4 L87.1 136.6 L88.8 135.8 L90.4 134.9 L92.0 134.0 L93.6 133.0 L95.2 132.0 L96.8 131.0 L98.5 129.9 L100.1 128.7 L101.7 127.6 L103.3 126.3 L104.9 125.1 L106.5 123.7 L108.2 122.4 L109.8 120.9 L111.4 119.5 L113.0 117.9 L114.6 116.4 L116.2 114.8 L117.9 113.1 L119.5 111.4 L121.1 109.6 L122.7 107.8 L124.3 106.0 L125.9 104.1 L127.6 102.1 L129.2 100.1 L130.8 98.1 L132.4 96.1 L134.0 94.0 L135.6 91.8 L137.2 89.7 L138.9 87.5 L140.5 85.3 L142.1 83.0 L143.7 80.7 L145.3 78.4 L147.0 76.1 L148.6 73.8 L150.2 71.5 L151.8 69.2 L153.4 66.8 L155.0 64.5 L156.7 62.2 L158.3 59.8 L159.9 57.5 L161.5 55.2 L163.1 53.0 L164.7 50.7 L166.3 48.5 L168.0 46.3 L169.6 44.2 L171.2 42.1 L172.8 40.0 L174.4 38.0 L176.1 36.1 L177.7 34.2 L179.3 32.3 L180.9 30.6 L182.5 28.9 L184.1 27.3 L185.8 25.7 L187.4 24.3 L189.0 22.9 L190.6 21.6 L192.2 20.4 L193.8 19.4 L195.5 18.4 L197.1 17.4 L198.7 16.6 L200.3 16.0 L201.9 15.4 L203.5 14.9 L205.2 14.5 L206.8 14.2 L208.4 14.1 L210.0 14.0 L211.6 14.1 L213.2 14.2 L214.8 14.5 L216.5 14.9 L218.1 15.4 L219.7 16.0 L221.3 16.6 L222.9 17.4 L224.6 18.4 L226.2 19.4 L227.8 20.4 L229.4 21.6 L231.0 22.9 L232.6 24.3 L234.3 25.7 L235.9 27.3 L237.5 28.9 L239.1 30.6 L240.7 32.3 L242.3 34.2 L243.9 36.1 L245.6 38.0 L247.2 40.0 L248.8 42.1 L250.4 44.2 L252.0 46.3 L253.7 48.5 L255.3 50.7 L256.9 53.0 L258.5 55.2 L260.1 57.5 L261.7 59.8 L263.4 62.2 L265.0 64.5 L266.6 66.8 L268.2 69.2 L269.8 71.5 L271.4 73.8 L273.1 76.1 L274.7 78.4 L276.3 80.7 L277.9 83.0 L279.5 85.3 L281.1 87.5 L282.8 89.7 L284.4 91.8 L286.0 94.0 L287.6 96.1 L289.2 98.1 L290.8 100.1 L292.5 102.1 L294.1 104.1 L295.7 106.0 L297.3 107.8 L298.9 109.6 L300.5 111.4 L302.2 113.1 L303.8 114.8 L305.4 116.4 L307.0 117.9 L308.6 119.5 L310.2 120.9 L311.9 122.4 L313.5 123.7 L315.1 125.1 L316.7 126.3 L318.3 127.6 L319.9 128.7 L321.6 129.9 L323.2 131.0 L324.8 132.0 L326.4 133.0 L328.0 134.0 L329.6 134.9 L331.2 135.8 L332.9 136.6 L334.5 137.4 L336.1 138.2 L337.7 138.9 L339.3 139.6 L340.9 140.2 L342.6 140.9 L344.2 141.4 L345.8 142.0 L347.4 142.5 L349.0 143.0 L350.7 143.5 L352.3 143.9 L353.9 144.3 L355.5 144.7 L357.1 145.1 L358.7 145.4 L360.4 145.8 L362.0 146.1 L363.6 146.4 L365.2 146.6 L366.8 146.9 L368.4 147.1 L370.1 147.3 L371.7 147.5 L373.3 147.7 L374.9 147.9 L376.5 148.1 L378.1 148.2 L379.8 148.4 L381.4 148.5 L383.0 148.6 L384.6 148.7 L386.2 148.8 L387.8 148.9 L389.5 149.0 L391.1 149.1 L392.7 149.2 L394.3 149.3 L395.9 149.3 L397.5 149.4 L399.2 149.4 L400.8 149.5 L402.4 149.5 L404.0 149.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\"/><line x1=\"16\" y1=\"150\" x2=\"404\" y2=\"150\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"162.0\" y1=\"150\" x2=\"162.0\" y2=\"54.6\" stroke=\"#0b0d12\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"162.0\" y=\"168.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">12</text><line x1=\"210.0\" y1=\"150\" x2=\"210.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"210.0\" y=\"168.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">μ</tspan></text><line x1=\"258.0\" y1=\"150\" x2=\"258.0\" y2=\"54.6\" stroke=\"#0b0d12\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><text x=\"258.0\" y=\"168.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">20</text><text x=\"121.1\" y=\"139.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.2</text><text x=\"298.9\" y=\"139.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.2</text></svg>"
+     },
+     "The two tails have the same area, 0.2, and the curve is symmetric about the mean. So 12 and 20 are the same distance from the mean: \\(\\mu = \\dfrac{12 + 20}{2}\\)."
+    ],
+    "answer": "\\(\\mu = 16\\), by the symmetry of the normal curve"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X < 20) = 1 - 0.2 = 0.8\\). Inverse normal with area 0.8 for the standard normal gives \\(z = 0.8416\\ldots\\)",
+     "\\(\\dfrac{20 - 16}{\\sigma} = 0.8416\\ldots\\), so \\(\\sigma = \\dfrac{4}{0.8416\\ldots} = 4.752\\ldots\\)"
+    ],
+    "answer": "\\(\\sigma = 4.75\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Normal cumulative function with lower bound 25, upper bound very large, \\(\\mu = 16\\), \\(\\sigma = 4.752\\ldots\\): \\(P(X > 25) = 0.02913\\ldots\\)"
+    ],
+    "answer": "0.0291"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-046",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "The masses of the apples from an orchard are normally distributed with mean 165 g and standard deviation 20 g. An apple is graded as small if its mass is less than 140 g, large if its mass is more than 185 g, and medium otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that an apple is small.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that an apple is medium.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "Small apples are sold for $0.20 each, medium apples for $0.35 each and large apples for $0.50 each.",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "Find the expected selling price of an apple chosen at random from the orchard.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the expected total income from 2000 apples. Give your answer to the nearest dollar.",
+    "marks": 1
+   }
+  ],
+  "idea": "The normal distribution gives the probability of each grade. The selling price is then a discrete random variable with three values, and its expected value is found in the usual way.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Normal cumulative function with upper bound 140, \\(\\mu = 165\\), \\(\\sigma = 20\\): \\(P(M < 140) = 0.1056\\ldots\\)"
+    ],
+    "answer": "0.106"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Normal cumulative function with lower bound 140 and upper bound 185: \\(P(140 < M < 185) = 0.7356\\ldots\\)"
+    ],
+    "answer": "0.736"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(\\text{large}) = 1 - 0.1056\\ldots - 0.7356\\ldots = 0.1586\\ldots\\)",
+     "Expected price \\(= 0.20 \\times 0.1056\\ldots + 0.35 \\times 0.7356\\ldots + 0.50 \\times 0.1586\\ldots = 0.3579\\ldots\\) dollars."
+    ],
+    "answer": "$0.358 (about 36 cents)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(2000 \\times 0.3579\\ldots = 715.9\\ldots\\)"
+    ],
+    "answer": "$716"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-047",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Medium",
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "The marks in a mathematics test are normally distributed with mean 60 and standard deviation 8. The marks in a physics test are normally distributed with mean 57 and standard deviation 5. Asha scores 72 in mathematics and 66 in physics."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the z-value of each of Asha's marks.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "State, with a reason, in which test Asha did better compared with the other students.",
+    "marks": 1
+   },
+   {
+    "label": "",
+    "text": "For the standard normal variable \\(Z\\), it is given that \\(P(Z < 1.5) = 0.933\\).",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "Write down the probability that a student chosen at random scored less than Asha in mathematics.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the probability that a student chosen at random scored between 48 and 72 in mathematics.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Ben's physics mark has a z-value of \\(-0.4\\). Find Ben's physics mark.",
+    "marks": 1
+   }
+  ],
+  "idea": "A z-value says how many standard deviations a mark is above or below the mean: \\(z = \\dfrac{x - \\mu}{\\sigma}\\). It lets you compare marks from different tests fairly.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Mathematics: \\(z = \\dfrac{72 - 60}{8} = 1.5\\).",
+     "Physics: \\(z = \\dfrac{66 - 57}{5} = 1.8\\)."
+    ],
+    "answer": "Mathematics 1.5; physics 1.8"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The larger z-value is the mark that is further above the mean, measured in standard deviations."
+    ],
+    "answer": "Physics, because its z-value (1.8) is greater than the z-value in mathematics (1.5)."
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Asha's mathematics mark has \\(z = 1.5\\), so this is \\(P(Z < 1.5)\\)."
+    ],
+    "answer": "0.933"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "48 is \\(\\dfrac{48 - 60}{8} = -1.5\\) as a z-value, so the probability is \\(P(-1.5 < Z < 1.5)\\).",
+     "By symmetry, \\(P(Z < -1.5) = 1 - 0.933 = 0.067\\).",
+     "\\(P(-1.5 < Z < 1.5) = 0.933 - 0.067\\)."
+    ],
+    "answer": "0.866"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(x = \\mu + z\\sigma = 57 + (-0.4) \\times 5 = 57 - 2\\)."
+    ],
+    "answer": "55"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-048",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 10,
+  "stem": [
+   "The time, \\(X\\) minutes, that a customer spends in a shop is normally distributed. The lower quartile of the times is 45 minutes and the interquartile range is 12 minutes."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the mean of \\(X\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the standard deviation of \\(X\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that a customer spends more than 60 minutes in the shop.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "A time is an outlier if it is more than 1.5 interquartile ranges above the upper quartile. Find the percentage of customers whose times are outliers of this kind. Give your answer correct to two significant figures.",
+    "marks": 3
+   }
+  ],
+  "idea": "The quartiles of a normal distribution are the same distance either side of the mean. The upper quartile has 75 % of the distribution below it, which fixes its z-value.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The upper quartile is \\(45 + 12 = 57\\).",
+     "By symmetry the mean is half-way between the quartiles: \\(\\dfrac{45 + 57}{2}\\)."
+    ],
+    "answer": "51 minutes"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X < 57) = 0.75\\). Inverse normal with area 0.75 for the standard normal gives \\(z = 0.6744\\ldots\\)",
+     "\\(\\dfrac{57 - 51}{\\sigma} = 0.6744\\ldots\\), so \\(\\sigma = \\dfrac{6}{0.6744\\ldots} = 8.895\\ldots\\)"
+    ],
+    "answer": "8.90 minutes"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Normal cumulative function with lower bound 60, \\(\\mu = 51\\), \\(\\sigma = 8.895\\ldots\\): \\(P(X > 60) = 0.1558\\ldots\\)"
+    ],
+    "answer": "0.156"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The boundary is \\(Q_3 + 1.5 \\times \\text{IQR} = 57 + 1.5 \\times 12 = 75\\).",
+     "\\(P(X > 75) = 0.003488\\ldots\\), which is \\(0.3488\\ldots\\) %."
+    ],
+    "answer": "0.35 %"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-049",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "For healthy adults, the result, \\(X\\) units, of a blood test is normally distributed with mean 90 and standard deviation 8. The reference range for the test is the interval, symmetric about the mean, that contains the results of 95 % of healthy adults."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the reference range. Give each end of the range correct to one decimal place.",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "A healthy adult has three different blood tests. Each test has its own reference range, which contains the results of 95 % of healthy adults. The results of the three tests are independent.",
+    "marks": null
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that at least one of the three results is outside its reference range.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Twelve healthy adults each have the three tests. Find the probability that exactly two of the twelve have at least one result outside its reference range.",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "The laboratory decides to use wider ranges. Each new range contains the results of a proportion \\(p\\) of healthy adults, where \\(p\\) is chosen so that the probability in part (b) becomes 0.05.",
+    "marks": null
+   },
+   {
+    "label": "d",
+    "text": "Show that \\(p = 0.983\\), correct to three significant figures.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the new reference range for \\(X\\). Give each end of the range correct to one decimal place.",
+    "marks": 3
+   }
+  ],
+  "idea": "A symmetric range that holds 95 % of results leaves 2.5 % in each tail, so its upper end has 97.5 % of results below it. With several independent tests, use “at least one outside” \\(= 1 -\\) “all inside”.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The two tails share \\(1 - 0.95 = 0.05\\), so each tail is 0.025 and \\(P(X < \\text{upper end}) = 0.975\\).",
+     "Inverse normal with area 0.975, \\(\\mu = 90\\), \\(\\sigma = 8\\): upper end \\(= 105.67\\ldots\\) (this is \\(90 + 1.9599\\ldots \\times 8\\)).",
+     "By symmetry the lower end is the same distance below the mean: \\(90 - 15.67\\ldots = 74.32\\ldots\\)"
+    ],
+    "answer": "74.3 to 105.7"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(\\text{all three inside}) = 0.95^3 = 0.857375\\).",
+     "\\(P(\\text{at least one outside}) = 1 - 0.857375 = 0.142625\\)."
+    ],
+    "answer": "0.143"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Each adult is a trial with success probability 0.142625, so the number of such adults is \\(Y \\sim \\mathrm{B}(12, 0.142625)\\).",
+     "Use the binomial probability function: \\(P(Y = 2) = 0.2881\\ldots\\)"
+    ],
+    "answer": "0.288"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Now \\(P(\\text{all three inside}) = p^3\\), and this must be \\(1 - 0.05 = 0.95\\).",
+     "\\(p = \\sqrt[3]{0.95} = 0.98304\\ldots\\), which is 0.983 correct to three significant figures."
+    ],
+    "answer": "\\(p = 0.983\\) (shown)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The new range leaves \\(1 - p\\) outside, split equally between the tails, so \\(P(X < \\text{upper end}) = \\dfrac{1 + p}{2} = 0.99152\\ldots\\)",
+     "Inverse normal with this area, \\(\\mu = 90\\), \\(\\sigma = 8\\): upper end \\(= 109.10\\ldots\\) (this is \\(90 + 2.387\\ldots \\times 8\\)).",
+     "Lower end: \\(90 - 19.10\\ldots = 70.89\\ldots\\)"
+    ],
+    "answer": "70.9 to 109.1"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-050",
+  "strand": "Statistics and Probability",
+  "subtopic": "Normal distribution",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 10,
+  "stem": [
+   "Tomas can drive to work by two routes. The journey time on route A is normally distributed with mean 31 minutes and standard deviation 3 minutes. The journey time on route B is normally distributed with mean 28 minutes and standard deviation 6 minutes."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "One morning Tomas has 35 minutes to get to work. Find the probability that he arrives on time if he takes route A, and the probability that he arrives on time if he takes route B.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the number of minutes, \\(t\\), for which the probability of arriving within \\(t\\) minutes is the same on both routes.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "On another morning Tomas has only 30 minutes. State which route gives him the better chance of arriving on time. Give a reason.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Tomas takes route A on 12 mornings, with 35 minutes available each time. The journey times on different mornings are independent. Find the probability that he is late on at most two of the mornings.",
+    "marks": 3
+   }
+  ],
+  "idea": "Route A is slower on average but more predictable. To compare the routes for a given time allowance, compare z-values: the larger z-value gives the larger probability of arriving in time.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Route A: normal cumulative function with upper bound 35, \\(\\mu = 31\\), \\(\\sigma = 3\\): \\(P(A < 35) = 0.9087\\ldots\\)",
+     "Route B: upper bound 35, \\(\\mu = 28\\), \\(\\sigma = 6\\): \\(P(B < 35) = 0.8783\\ldots\\)"
+    ],
+    "answer": "Route A: 0.909; route B: 0.878"
+   },
+   {
+    "label": "b",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 430 200\" width=\"430\" height=\"200\" role=\"img\" aria-label=\"Two normal curves on the same axis. Route A is centred at 31 minutes and is tall and narrow. Route B is centred at 28 minutes and is lower and wider.\"><path d=\"M16.0 158.0 L17.7 158.0 L19.3 158.0 L21.0 158.0 L22.6 158.0 L24.3 158.0 L25.9 158.0 L27.6 158.0 L29.3 158.0 L30.9 158.0 L32.6 158.0 L34.2 158.0 L35.9 158.0 L37.6 158.0 L39.2 158.0 L40.9 158.0 L42.5 158.0 L44.2 158.0 L45.8 158.0 L47.5 158.0 L49.2 158.0 L50.8 158.0 L52.5 158.0 L54.1 158.0 L55.8 158.0 L57.5 158.0 L59.1 158.0 L60.8 158.0 L62.4 158.0 L64.1 158.0 L65.8 158.0 L67.4 158.0 L69.1 158.0 L70.7 158.0 L72.4 158.0 L74.0 158.0 L75.7 158.0 L77.4 158.0 L79.0 158.0 L80.7 158.0 L82.3 158.0 L84.0 158.0 L85.6 158.0 L87.3 158.0 L89.0 158.0 L90.6 158.0 L92.3 158.0 L93.9 158.0 L95.6 158.0 L97.3 158.0 L98.9 158.0 L100.6 158.0 L102.2 158.0 L103.9 158.0 L105.5 158.0 L107.2 158.0 L108.9 158.0 L110.5 158.0 L112.2 158.0 L113.8 158.0 L115.5 158.0 L117.2 158.0 L118.8 158.0 L120.5 158.0 L122.1 158.0 L123.8 158.0 L125.4 158.0 L127.1 157.9 L128.8 157.9 L130.4 157.9 L132.1 157.9 L133.7 157.9 L135.4 157.8 L137.1 157.8 L138.7 157.7 L140.4 157.7 L142.0 157.6 L143.7 157.5 L145.3 157.4 L147.0 157.3 L148.7 157.2 L150.3 157.0 L152.0 156.9 L153.6 156.6 L155.3 156.4 L157.0 156.1 L158.6 155.8 L160.3 155.4 L161.9 155.0 L163.6 154.5 L165.2 153.9 L166.9 153.2 L168.6 152.5 L170.2 151.7 L171.9 150.7 L173.5 149.7 L175.2 148.5 L176.9 147.2 L178.5 145.8 L180.2 144.2 L181.8 142.5 L183.5 140.6 L185.1 138.5 L186.8 136.3 L188.5 133.8 L190.1 131.2 L191.8 128.3 L193.4 125.3 L195.1 122.1 L196.8 118.7 L198.4 115.1 L200.1 111.3 L201.7 107.3 L203.4 103.1 L205.0 98.8 L206.7 94.3 L208.4 89.8 L210.0 85.1 L211.7 80.3 L213.3 75.5 L215.0 70.7 L216.7 65.8 L218.3 61.0 L220.0 56.2 L221.6 51.6 L223.3 47.1 L224.9 42.7 L226.6 38.5 L228.3 34.6 L229.9 30.9 L231.6 27.5 L233.2 24.5 L234.9 21.8 L236.6 19.4 L238.2 17.5 L239.9 16.0 L241.5 14.9 L243.2 14.2 L244.8 14.0 L246.5 14.2 L248.2 14.9 L249.8 16.0 L251.5 17.5 L253.1 19.4 L254.8 21.8 L256.5 24.5 L258.1 27.5 L259.8 30.9 L261.4 34.6 L263.1 38.5 L264.8 42.7 L266.4 47.1 L268.1 51.6 L269.7 56.2 L271.4 61.0 L273.0 65.8 L274.7 70.7 L276.4 75.5 L278.0 80.3 L279.7 85.1 L281.3 89.8 L283.0 94.3 L284.6 98.8 L286.3 103.1 L288.0 107.3 L289.6 111.3 L291.3 115.1 L292.9 118.7 L294.6 122.1 L296.3 125.3 L297.9 128.3 L299.6 131.2 L301.2 133.8 L302.9 136.3 L304.5 138.5 L306.2 140.6 L307.9 142.5 L309.5 144.2 L311.2 145.8 L312.8 147.2 L314.5 148.5 L316.2 149.7 L317.8 150.7 L319.5 151.7 L321.1 152.5 L322.8 153.2 L324.4 153.9 L326.1 154.5 L327.8 155.0 L329.4 155.4 L331.1 155.8 L332.7 156.1 L334.4 156.4 L336.1 156.6 L337.7 156.9 L339.4 157.0 L341.0 157.2 L342.7 157.3 L344.3 157.4 L346.0 157.5 L347.7 157.6 L349.3 157.7 L351.0 157.7 L352.6 157.8 L354.3 157.8 L356.0 157.9 L357.6 157.9 L359.3 157.9 L360.9 157.9 L362.6 157.9 L364.2 158.0 L365.9 158.0 L367.6 158.0 L369.2 158.0 L370.9 158.0 L372.5 158.0 L374.2 158.0 L375.9 158.0 L377.5 158.0 L379.2 158.0 L380.8 158.0 L382.5 158.0 L384.1 158.0 L385.8 158.0 L387.5 158.0 L389.1 158.0 L390.8 158.0 L392.4 158.0 L394.1 158.0 L395.8 158.0 L397.4 158.0 L399.1 158.0 L400.7 158.0 L402.4 158.0 L404.0 158.0 L405.7 158.0 L407.4 158.0 L409.0 158.0 L410.7 158.0 L412.3 158.0 L414.0 158.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2\"/><path d=\"M16.0 157.7 L17.7 157.7 L19.3 157.7 L21.0 157.6 L22.6 157.6 L24.3 157.6 L25.9 157.5 L27.6 157.5 L29.3 157.4 L30.9 157.4 L32.6 157.3 L34.2 157.3 L35.9 157.2 L37.6 157.1 L39.2 157.1 L40.9 157.0 L42.5 156.9 L44.2 156.8 L45.8 156.7 L47.5 156.6 L49.2 156.5 L50.8 156.4 L52.5 156.2 L54.1 156.1 L55.8 155.9 L57.5 155.8 L59.1 155.6 L60.8 155.4 L62.4 155.3 L64.1 155.0 L65.8 154.8 L67.4 154.6 L69.1 154.4 L70.7 154.1 L72.4 153.8 L74.0 153.6 L75.7 153.3 L77.4 153.0 L79.0 152.6 L80.7 152.3 L82.3 151.9 L84.0 151.5 L85.6 151.1 L87.3 150.7 L89.0 150.2 L90.6 149.8 L92.3 149.3 L93.9 148.8 L95.6 148.3 L97.3 147.7 L98.9 147.1 L100.6 146.5 L102.2 145.9 L103.9 145.3 L105.5 144.6 L107.2 143.9 L108.9 143.2 L110.5 142.4 L112.2 141.7 L113.8 140.9 L115.5 140.0 L117.2 139.2 L118.8 138.3 L120.5 137.4 L122.1 136.5 L123.8 135.6 L125.4 134.6 L127.1 133.6 L128.8 132.6 L130.4 131.6 L132.1 130.6 L133.7 129.5 L135.4 128.4 L137.1 127.3 L138.7 126.2 L140.4 125.0 L142.0 123.9 L143.7 122.7 L145.3 121.5 L147.0 120.4 L148.7 119.2 L150.3 118.0 L152.0 116.8 L153.6 115.5 L155.3 114.3 L157.0 113.1 L158.6 111.9 L160.3 110.7 L161.9 109.5 L163.6 108.3 L165.2 107.1 L166.9 105.9 L168.6 104.8 L170.2 103.7 L171.9 102.5 L173.5 101.4 L175.2 100.3 L176.9 99.3 L178.5 98.3 L180.2 97.3 L181.8 96.3 L183.5 95.4 L185.1 94.5 L186.8 93.6 L188.5 92.8 L190.1 92.0 L191.8 91.2 L193.4 90.5 L195.1 89.9 L196.8 89.3 L198.4 88.7 L200.1 88.2 L201.7 87.8 L203.4 87.3 L205.0 87.0 L206.7 86.7 L208.4 86.4 L210.0 86.2 L211.7 86.1 L213.3 86.0 L215.0 86.0 L216.7 86.0 L218.3 86.1 L220.0 86.2 L221.6 86.4 L223.3 86.7 L224.9 87.0 L226.6 87.3 L228.3 87.8 L229.9 88.2 L231.6 88.7 L233.2 89.3 L234.9 89.9 L236.6 90.5 L238.2 91.2 L239.9 92.0 L241.5 92.8 L243.2 93.6 L244.8 94.5 L246.5 95.4 L248.2 96.3 L249.8 97.3 L251.5 98.3 L253.1 99.3 L254.8 100.3 L256.5 101.4 L258.1 102.5 L259.8 103.7 L261.4 104.8 L263.1 105.9 L264.8 107.1 L266.4 108.3 L268.1 109.5 L269.7 110.7 L271.4 111.9 L273.0 113.1 L274.7 114.3 L276.4 115.5 L278.0 116.8 L279.7 118.0 L281.3 119.2 L283.0 120.4 L284.6 121.5 L286.3 122.7 L288.0 123.9 L289.6 125.0 L291.3 126.2 L292.9 127.3 L294.6 128.4 L296.3 129.5 L297.9 130.6 L299.6 131.6 L301.2 132.6 L302.9 133.6 L304.5 134.6 L306.2 135.6 L307.9 136.5 L309.5 137.4 L311.2 138.3 L312.8 139.2 L314.5 140.0 L316.2 140.9 L317.8 141.7 L319.5 142.4 L321.1 143.2 L322.8 143.9 L324.4 144.6 L326.1 145.3 L327.8 145.9 L329.4 146.5 L331.1 147.1 L332.7 147.7 L334.4 148.3 L336.1 148.8 L337.7 149.3 L339.4 149.8 L341.0 150.2 L342.7 150.7 L344.3 151.1 L346.0 151.5 L347.7 151.9 L349.3 152.3 L351.0 152.6 L352.6 153.0 L354.3 153.3 L356.0 153.6 L357.6 153.8 L359.3 154.1 L360.9 154.4 L362.6 154.6 L364.2 154.8 L365.9 155.0 L367.6 155.3 L369.2 155.4 L370.9 155.6 L372.5 155.8 L374.2 155.9 L375.9 156.1 L377.5 156.2 L379.2 156.4 L380.8 156.5 L382.5 156.6 L384.1 156.7 L385.8 156.8 L387.5 156.9 L389.1 157.0 L390.8 157.1 L392.4 157.1 L394.1 157.2 L395.8 157.3 L397.4 157.3 L399.1 157.4 L400.7 157.4 L402.4 157.5 L404.0 157.5 L405.7 157.6 L407.4 157.6 L409.0 157.6 L410.7 157.7 L412.3 157.7 L414.0 157.7\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"2\"/><line x1=\"16\" y1=\"158\" x2=\"414\" y2=\"158\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"35.9\" y1=\"158\" x2=\"35.9\" y2=\"162\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"35.9\" y=\"176.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">10</text><line x1=\"135.4\" y1=\"158\" x2=\"135.4\" y2=\"162\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"135.4\" y=\"176.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">20</text><line x1=\"234.9\" y1=\"158\" x2=\"234.9\" y2=\"162\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"234.9\" y=\"176.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">30</text><line x1=\"334.4\" y1=\"158\" x2=\"334.4\" y2=\"162\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"334.4\" y=\"176.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">40</text><text x=\"215.0\" y=\"194.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Journey time (minutes)</text><text x=\"290.6\" y=\"54.2\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Route A</text><text x=\"90.6\" y=\"122.4\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#1f5fd6\">Route B</text></svg>"
+     },
+     "The probabilities are equal when the two z-values are equal: \\(\\dfrac{t - 31}{3} = \\dfrac{t - 28}{6}\\).",
+     "Multiply by 6: \\(2(t - 31) = t - 28\\), so \\(2t - 62 = t - 28\\) and \\(t = 34\\).",
+     "Check: both z-values are 1."
+    ],
+    "answer": "\\(t = 34\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "30 minutes is less than the mean for route A, so \\(P(A < 30) < 0.5\\). It is more than the mean for route B, so \\(P(B < 30) > 0.5\\)."
+    ],
+    "answer": "Route B, because 30 minutes is above the mean time for route B but below the mean time for route A."
+   },
+   {
+    "label": "d",
+    "steps": [
+     "On one morning, \\(P(\\text{late}) = 1 - 0.9087\\ldots = 0.09121\\ldots\\)",
+     "The number of late mornings is \\(Y \\sim \\mathrm{B}(12, 0.09121\\ldots)\\).",
+     "Use the cumulative binomial function: \\(P(Y \\le 2) = 0.9105\\ldots\\)"
+    ],
+    "answer": "0.911"
+   }
+  ]
+ }
+]

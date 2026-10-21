@@ -1,0 +1,646 @@
+[
+ {
+  "id": "aa-gt-b-001",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Solids and 3D geometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 16,
+  "stem": [
+   "A grain silo stands on level ground. It is a cylinder of radius 3 m and height 10 m, with a roof in the shape of a cone of radius 3 m and vertical height 4 m.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 330\" width=\"360\" height=\"330\" role=\"img\" aria-label=\"Side view of a grain silo standing on level ground. It is a cylinder of radius 3 m and height 10 m with a cone on top. The cone has the same radius, 3 m, and a vertical height of 4 m, so the top of the cone is 14 m above the ground. A point P on the ground is to the right of the silo, on a line through the centre of the base.\"><path d=\"M69.0 300.0 L69.0 130.0 L120.0 62.0 L171.0 130.0 L171.0 300.0\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M69.0 130.0 L171.0 130.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M120.0 300.0 L120.0 62.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.1\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M26.5 300.0 L341.0 300.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"307.0\" cy=\"300.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"307.0\" y=\"320.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P</text><text x=\"145.5\" y=\"149.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3 m</text><text x=\"179.0\" y=\"220.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">10 m</text><text x=\"126.0\" y=\"107.8\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4 m</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the slant height of the roof is 5 m.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the total volume of the silo.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "The curved surface of the roof is made by bending a flat sector of sheet metal of radius 5 m, without overlap. Find the angle of the sector, in radians.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Grain is poured in until it fills 75% of the total volume of the silo. The top of the grain is level. Find the depth of the grain.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "A point P on the ground is 12 m from the wall of the silo, measured along a line through the centre of the base. Find the angle of elevation of the top of the roof from P.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find the least distance from the wall of the silo at which a point on the ground has a clear line of sight to the top of the roof. (The line of sight may touch the roof.)",
+    "marks": 3
+   }
+  ],
+  "idea": "Split the silo into a cylinder and a cone. When the roof is unrolled, its slant height becomes the radius of the sector and the circumference of the base becomes the arc length. For the line of sight, work in the vertical cross-section through the centre: the line must pass above the corner where the roof meets the wall.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The radius, the vertical height and the slant height form a right-angled triangle: \\(l = \\sqrt{3^2 + 4^2} = 5\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Cylinder: \\(\\pi \\times 3^2 \\times 10 = 90\\pi\\). Cone: \\(\\frac{1}{3}\\pi \\times 3^2 \\times 4 = 12\\pi\\).",
+     "Total: \\(102\\pi = 320.44\\ldots\\)"
+    ],
+    "answer": "\\(320\\) m\\(^3\\) (\\(102\\pi\\))"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The arc of the sector becomes the circumference of the base of the cone: arc length \\(= 2\\pi \\times 3 = 6\\pi\\).",
+     "\\(r\\theta = 6\\pi\\) with \\(r = 5\\), so \\(\\theta = \\dfrac{6\\pi}{5} = 3.769\\ldots\\)"
+    ],
+    "answer": "\\(\\dfrac{6\\pi}{5} = 3.77\\) radians"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "75% of \\(102\\pi\\) is \\(76.5\\pi\\). This is less than the volume of the cylinder, \\(90\\pi\\), so the grain lies within the cylinder.",
+     "\\(\\pi \\times 3^2 \\times d = 76.5\\pi\\), so \\(d = \\dfrac{76.5}{9} = 8.5\\)."
+    ],
+    "answer": "\\(8.5\\) m"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The top of the roof is 14 m above the centre of the base. P is \\(12 + 3 = 15\\) m from the centre.",
+     "\\(\\tan\\alpha = \\dfrac{14}{15}\\), so \\(\\alpha = 43.02\\ldots°\\)"
+    ],
+    "answer": "\\(43.0°\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "In the cross-section, put the centre of the base at the origin. The top of the roof is \\((0, 14)\\) and the corner of the roof nearest the observer is \\((3, 10)\\). Let the observer be at \\((x, 0)\\), with \\(x > 3\\).",
+     "The line of sight from \\((x, 0)\\) to \\((0, 14)\\) has height \\(14\\left(1 - \\dfrac{u}{x}\\right)\\) at horizontal distance \\(u\\) from the centre. The roof edge has height \\(14 - \\dfrac{4u}{3}\\) for \\(0 \\le u \\le 3\\).",
+     "The line is clear of the roof when \\(14 - \\dfrac{14u}{x} \\ge 14 - \\dfrac{4u}{3}\\) for these \\(u\\), that is when \\(\\dfrac{14}{x} \\le \\dfrac{4}{3}\\), so \\(x \\ge 10.5\\). (Equivalently, the line must pass above the corner \\((3, 10)\\): \\(14\\left(1 - \\frac{3}{x}\\right) \\ge 10\\).)",
+     "So the observer must be at least 10.5 m from the centre, which is \\(10.5 - 3 = 7.5\\) m from the wall. At exactly 7.5 m the line of sight runs along the sloping side of the roof."
+    ],
+    "answer": "\\(7.5\\) m"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-b-002",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "A surveyor measures a river with straight, parallel banks. The points A and B are on one bank, 80 m apart. A tree C is on the other bank, with \\(\\mathrm{C\\hat{A}B} = 52°\\) and \\(\\mathrm{C\\hat{B}A} = 71°\\).",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 250\" width=\"380\" height=\"250\" role=\"img\" aria-label=\"Two parallel straight river banks. A and B are on the near bank, 80 m apart, with B to the right of A. A tree C is on the far bank. Angle CAB is 52 degrees and angle CBA is 71 degrees. The river and the far bank lie above AB.\"><rect x=\"43.0\" y=\"6.9\" width=\"283.5\" height=\"218.9\" fill=\"none\"/><path d=\"M43.0 215.0 L326.5 215.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M43.0 23.1 L326.5 23.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M70.0 215.0 L219.9 23.1 L286.0 215.0\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><circle cx=\"70.0\" cy=\"215.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"66.0\" y=\"235.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"286.0\" cy=\"215.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"290.0\" y=\"235.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"219.9\" cy=\"23.1\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"219.9\" y=\"13.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><path d=\"M100.0 215.0 L100.0 213.9 L99.9 212.7 L99.8 211.6 L99.7 210.5 L99.5 209.4 L99.2 208.3 L99.0 207.2 L98.6 206.1 L98.3 205.0 L97.9 203.9 L97.4 202.9 L97.0 201.8 L96.4 200.8 L95.9 199.8 L95.3 198.9 L94.7 197.9 L94.0 197.0 L93.3 196.1 L92.6 195.3 L91.8 194.4 L91.0 193.6 L90.2 192.8 L89.4 192.1 L88.5 191.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"113.1\" y=\"199.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">52°</text><path d=\"M276.2 186.6 L274.8 187.2 L273.4 187.8 L272.0 188.5 L270.6 189.2 L269.3 190.1 L268.1 191.0 L266.8 191.9 L265.7 192.9 L264.6 194.0 L263.5 195.2 L262.5 196.3 L261.6 197.6 L260.7 198.9 L259.9 200.2 L259.2 201.6 L258.5 203.0 L257.9 204.4 L257.4 205.9 L257.0 207.3 L256.6 208.8 L256.4 210.4 L256.2 211.9 L256.0 213.5 L256.0 215.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"246.9\" y=\"192.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">71°</text><text x=\"178.0\" y=\"238.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">80 m</text><text x=\"48.4\" y=\"119.1\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">river</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the size of \\(\\mathrm{A\\hat{C}B}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find AC.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the width of the river.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "A second tree D is on the same bank as C, 35 m from C and further from B than C is. Explain why \\(\\mathrm{B\\hat{C}D} = 109°\\), and find BD.",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Find \\(\\mathrm{D\\hat{B}A}\\).",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find the area of the quadrilateral ABCD.",
+    "marks": 3
+   }
+  ],
+  "idea": "Use the sine rule in triangle ABC, then right-angled trigonometry for the width. The banks are parallel, so angles made by a line crossing them are related: alternate angles are equal, and co-interior angles add to 180°.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(180° - 52° - 71° = 57°\\)."
+    ],
+    "answer": "\\(57°\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Sine rule: \\(\\dfrac{\\mathrm{AC}}{\\sin 71°} = \\dfrac{80}{\\sin 57°}\\), so \\(\\mathrm{AC} = \\dfrac{80\\sin 71°}{\\sin 57°} = 90.19\\ldots\\)"
+    ],
+    "answer": "\\(90.2\\) m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The width is the perpendicular distance from C to the line AB: \\(\\mathrm{AC}\\sin 52° = 90.19\\ldots \\times \\sin 52° = 71.07\\ldots\\)"
+    ],
+    "answer": "\\(71.1\\) m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "CB crosses the two parallel banks. \\(\\mathrm{C\\hat{B}A}\\) and the angle at C between CB and the bank on the far side from D are alternate angles, so that angle is \\(71°\\). The angles at C on a straight line add to \\(180°\\), so \\(\\mathrm{B\\hat{C}D} = 180° - 71° = 109°\\).",
+     "\\(\\mathrm{BC} = \\dfrac{80\\sin 52°}{\\sin 57°} = 75.16\\ldots\\)",
+     "Cosine rule in triangle BCD: \\(\\mathrm{BD}^2 = 75.16\\ldots^2 + 35^2 - 2 \\times 75.16\\ldots \\times 35\\cos 109° = 8588.2\\ldots\\)",
+     "\\(\\mathrm{BD} = 92.67\\ldots\\)"
+    ],
+    "answer": "\\(92.7\\) m"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Measured along the bank, C is \\(\\mathrm{AC}\\cos 52° = 55.52\\ldots\\) m from A, so D is \\(55.52\\ldots - 35 = 20.52\\ldots\\) m from A, and \\(80 - 20.52\\ldots = 59.47\\ldots\\) m from B.",
+     "D is \\(71.07\\ldots\\) m from the line AB, so \\(\\tan\\left(\\mathrm{D\\hat{B}A}\\right) = \\dfrac{71.07\\ldots}{59.47\\ldots}\\), giving \\(\\mathrm{D\\hat{B}A} = 50.07\\ldots°\\).",
+     "Check with the sine of the angle: \\(\\dfrac{71.07\\ldots}{92.67\\ldots} = 0.766\\ldots = \\sin 50.07\\ldots°\\)."
+    ],
+    "answer": "\\(50.1°\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "AB and DC are parallel, so ABCD is a trapezium with parallel sides 80 m and 35 m, a distance \\(71.07\\ldots\\) m apart.",
+     "Area \\(= \\dfrac{80 + 35}{2} \\times 71.07\\ldots = 57.5 \\times 71.07\\ldots = 4086.6\\ldots\\)"
+    ],
+    "answer": "\\(4090\\) m\\(^2\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-b-003",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Arcs and sectors",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "A shape is made from an equilateral triangle ABC with sides of 6 cm. Each side is replaced by an arc of radius 6 cm centred at the opposite vertex.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 300\" width=\"300\" height=\"300\" role=\"img\" aria-label=\"A shape made from an equilateral triangle ABC with sides of 6 cm. Each side of the triangle is replaced by an arc of a circle centred at the opposite vertex: arc BC has centre A, arc CA has centre B, and arc AB has centre C. Each arc has radius 6 cm. The triangle is drawn dashed inside the shape.\"><path d=\"M252.0 250.0 L252.0 245.5 L251.8 241.1 L251.6 236.7 L251.2 232.2 L250.8 227.8 L250.3 223.4 L249.6 219.0 L248.9 214.6 L248.1 210.2 L247.2 205.8 L246.2 201.5 L245.0 197.2 L243.9 192.9 L242.6 188.7 L241.2 184.4 L239.7 180.2 L238.1 176.1 L236.5 171.9 L234.7 167.8 L232.9 163.8 L231.0 159.8 L229.0 155.8 L226.9 151.9 L224.7 148.0 L222.4 144.2 L220.1 140.4 L217.6 136.7 L215.1 133.0 L212.5 129.4 L209.8 125.8 L207.1 122.3 L204.3 118.9 L201.4 115.5 L198.4 112.2 L195.4 108.9 L192.2 105.8 L189.1 102.6 L185.8 99.6 L182.5 96.6 L179.1 93.7 L175.7 90.9 L172.2 88.2 L168.6 85.5 L165.0 82.9 L161.3 80.4 L157.6 77.9 L153.8 75.6 L150.0 73.3 L146.2 75.6 L142.4 77.9 L138.7 80.4 L135.0 82.9 L131.4 85.5 L127.8 88.2 L124.3 90.9 L120.9 93.7 L117.5 96.6 L114.2 99.6 L110.9 102.6 L107.8 105.8 L104.6 108.9 L101.6 112.2 L98.6 115.5 L95.7 118.9 L92.9 122.3 L90.2 125.8 L87.5 129.4 L84.9 133.0 L82.4 136.7 L79.9 140.4 L77.6 144.2 L75.3 148.0 L73.1 151.9 L71.0 155.8 L69.0 159.8 L67.1 163.8 L65.3 167.8 L63.5 171.9 L61.9 176.1 L60.3 180.2 L58.8 184.4 L57.4 188.7 L56.1 192.9 L55.0 197.2 L53.8 201.5 L52.8 205.8 L51.9 210.2 L51.1 214.6 L50.4 219.0 L49.7 223.4 L49.2 227.8 L48.8 232.2 L48.4 236.7 L48.2 241.1 L48.0 245.5 L48.0 250.0 L51.9 252.2 L55.8 254.3 L59.8 256.3 L63.8 258.2 L67.8 260.1 L71.9 261.8 L76.1 263.5 L80.2 265.0 L84.4 266.5 L88.7 267.9 L92.9 269.2 L97.2 270.4 L101.5 271.5 L105.8 272.5 L110.2 273.4 L114.6 274.2 L119.0 275.0 L123.4 275.6 L127.8 276.1 L132.2 276.6 L136.7 276.9 L141.1 277.1 L145.5 277.3 L150.0 277.3 L154.5 277.3 L158.9 277.1 L163.3 276.9 L167.8 276.6 L172.2 276.1 L176.6 275.6 L181.0 275.0 L185.4 274.2 L189.8 273.4 L194.2 272.5 L198.5 271.5 L202.8 270.4 L207.1 269.2 L211.3 267.9 L215.6 266.5 L219.8 265.0 L223.9 263.5 L228.1 261.8 L232.2 260.1 L236.2 258.2 L240.2 256.3 L244.2 254.3 L248.1 252.2 L252.0 250.0 Z\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M48.0 250.0 L252.0 250.0 L150.0 73.3 Z\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><circle cx=\"48.0\" cy=\"250.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"36.0\" y=\"262.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"252.0\" cy=\"250.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"264.0\" y=\"262.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"150.0\" cy=\"73.3\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"150.0\" y=\"63.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><text x=\"150.0\" y=\"241.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6 cm</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the perimeter of the shape is \\(6\\pi\\) cm.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the area of the region between the side BC and the arc BC. Give your answer in the form \\(p\\pi + q\\sqrt{3}\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Show that the area of the shape is \\(18\\left(\\pi - \\sqrt{3}\\right)\\) cm\\(^2\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "A circle has the same perimeter as the shape. Without using a calculator, show that the shape has a smaller area than the circle.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "The smallest circle that contains the shape passes through A, B and C. Find the area inside this circle but outside the shape, in the form \\(a\\sqrt{3} + b\\pi\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Each arc subtends \\(\\frac{\\pi}{3}\\) at its centre, the angle of the equilateral triangle. The shape is the triangle plus three circular segments, and a segment is a sector minus a triangle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Each arc has radius 6 and angle \\(\\frac{\\pi}{3}\\), so length \\(6 \\times \\frac{\\pi}{3} = 2\\pi\\). Three arcs: \\(6\\pi\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Sector ABC (centre A): \\(\\frac{1}{2} \\times 6^2 \\times \\frac{\\pi}{3} = 6\\pi\\).",
+     "Triangle ABC: \\(\\frac{1}{2} \\times 6 \\times 6 \\times \\sin\\frac{\\pi}{3} = 18 \\times \\frac{\\sqrt{3}}{2} = 9\\sqrt{3}\\).",
+     "Segment: \\(6\\pi - 9\\sqrt{3}\\)."
+    ],
+    "answer": "\\(6\\pi - 9\\sqrt{3}\\) cm\\(^2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Area \\(= 9\\sqrt{3} + 3\\left(6\\pi - 9\\sqrt{3}\\right) = 18\\pi - 18\\sqrt{3} = 18\\left(\\pi - \\sqrt{3}\\right)\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "A circle of perimeter \\(6\\pi\\) has radius 3 and area \\(9\\pi\\).",
+     "\\(18\\pi - 18\\sqrt{3} < 9\\pi \\iff 9\\pi < 18\\sqrt{3} \\iff \\pi < 2\\sqrt{3}\\).",
+     "\\(\\pi < 3.2\\), so \\(\\pi^2 < 3.2^2 = 10.24\\), while \\(\\left(2\\sqrt{3}\\right)^2 = 12\\). Both numbers are positive and \\(\\pi^2 < 12\\), so \\(\\pi < 2\\sqrt{3}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The circle through A, B and C is centred at the centre of the triangle. Its radius is \\(\\dfrac{2}{3}\\) of the height of the triangle: \\(\\dfrac{2}{3} \\times 3\\sqrt{3} = 2\\sqrt{3}\\).",
+     "Circle area: \\(\\pi\\left(2\\sqrt{3}\\right)^2 = 12\\pi\\).",
+     "Area outside the shape: \\(12\\pi - \\left(18\\pi - 18\\sqrt{3}\\right) = 18\\sqrt{3} - 6\\pi\\)."
+    ],
+    "answer": "\\(18\\sqrt{3} - 6\\pi\\) cm\\(^2\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-b-004",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric identities",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "Let \\(f(x) = \\sin^4 x + \\cos^4 x\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "By considering \\(\\left(\\sin^2 x + \\cos^2 x\\right)^2\\), show that \\(f(x) = 1 - \\dfrac{1}{2}\\sin^2 2x\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence show that \\(f(x) = \\dfrac{3 + \\cos 4x}{4}\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Write down the range of \\(f\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Write down the period of \\(f\\), and find the number of solutions of \\(f(x) = \\dfrac{3}{4}\\) for \\(0 \\le x < \\pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Solve the equation \\(f(x) = \\dfrac{5}{8}\\) for \\(0 \\le x \\le \\pi\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "\\(\\sin^2 x + \\cos^2 x = 1\\) and \\(2\\sin x\\cos x = \\sin 2x\\) turn the fourth powers into a double angle; then \\(\\cos 2\\theta = 1 - 2\\sin^2\\theta\\) with \\(\\theta = 2x\\) gives a single cosine, whose range and period can be read off.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(1 = \\left(\\sin^2 x + \\cos^2 x\\right)^2 = \\sin^4 x + \\cos^4 x + 2\\sin^2 x\\cos^2 x\\).",
+     "So \\(f(x) = 1 - 2\\sin^2 x\\cos^2 x = 1 - \\dfrac{1}{2}\\left(2\\sin x\\cos x\\right)^2 = 1 - \\dfrac{1}{2}\\sin^2 2x\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\cos 4x = 1 - 2\\sin^2 2x\\), so \\(\\sin^2 2x = \\dfrac{1 - \\cos 4x}{2}\\).",
+     "\\(f(x) = 1 - \\dfrac{1 - \\cos 4x}{4} = \\dfrac{4 - 1 + \\cos 4x}{4} = \\dfrac{3 + \\cos 4x}{4}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\cos 4x\\) takes every value from \\(-1\\) to 1, so \\(f(x)\\) takes every value from \\(\\frac{2}{4}\\) to \\(\\frac{4}{4}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{2} \\le f(x) \\le 1\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The period of \\(\\cos 4x\\) is \\(\\dfrac{2\\pi}{4} = \\dfrac{\\pi}{2}\\).",
+     "\\(f(x) = \\frac{3}{4}\\) means \\(\\cos 4x = 0\\): with \\(0 \\le 4x < 4\\pi\\), \\(4x = \\frac{\\pi}{2}, \\frac{3\\pi}{2}, \\frac{5\\pi}{2}, \\frac{7\\pi}{2}\\)."
+    ],
+    "answer": "Period \\(\\dfrac{\\pi}{2}\\); 4 solutions"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\dfrac{3 + \\cos 4x}{4} = \\dfrac{5}{8}\\) gives \\(\\cos 4x = -\\dfrac{1}{2}\\).",
+     "\\(0 \\le x \\le \\pi\\), so \\(0 \\le 4x \\le 4\\pi\\). \\(\\cos\\theta = -\\frac{1}{2}\\) for \\(\\theta = \\frac{2\\pi}{3}, \\frac{4\\pi}{3}, \\frac{8\\pi}{3}, \\frac{10\\pi}{3}\\) in this interval.",
+     "Divide by 4."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{6}, \\dfrac{\\pi}{3}, \\dfrac{2\\pi}{3}, \\dfrac{5\\pi}{6}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-b-005",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric functions",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "In a city, the time of sunrise on day \\(d\\) of the year is modelled by \\(S(d) = 6.5 + 1.4\\cos\\left(\\dfrac{2\\pi(d + 10)}{365}\\right)\\), where \\(S\\) is in hours after midnight and \\(d = 1\\) is 1 January. The time of sunset is modelled by \\(T(d) = 18.2 - 1.6\\cos\\left(\\dfrac{2\\pi(d + 10)}{365}\\right)\\). Use \\(d = 1, 2, \\ldots, 365\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the period of \\(S\\) and explain what it means here.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the latest time of sunrise in the year, giving your answer in hours and minutes, and the day on which it occurs.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the time of sunrise on day 100, to the nearest minute.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the number of days in the year on which the sun rises before 06:00.",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Show that the number of hours of daylight on day \\(d\\) is \\(D(d) = 11.7 - 3\\cos\\left(\\dfrac{2\\pi(d + 10)}{365}\\right)\\), and write down the greatest number of hours of daylight given by the model.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find the number of days in the year with more than 13 hours of daylight.",
+    "marks": 3
+   }
+  ],
+  "idea": "A cosine curve is greatest where the cosine is 1 and least where it is \\(-1\\). To find when a model is below a level, solve the equation for the level, then use the symmetry of the cosine graph to find the whole interval, and count the whole days inside it.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The period of \\(\\cos\\left(\\frac{2\\pi(d + 10)}{365}\\right)\\) is \\(\\dfrac{2\\pi}{2\\pi/365} = 365\\)."
+    ],
+    "answer": "365 days: the pattern of sunrise times repeats every year"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Greatest when the cosine is 1: \\(S = 6.5 + 1.4 = 7.9\\) hours. \\(0.9 \\times 60 = 54\\) minutes, so this is 07:54.",
+     "\\(\\cos\\left(\\frac{2\\pi(d + 10)}{365}\\right) = 1\\) when \\(d + 10 = 365\\), so \\(d = 355\\)."
+    ],
+    "answer": "07:54, on day 355"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(S(100) = 6.5 + 1.4\\cos\\left(\\dfrac{220\\pi}{365}\\right) = 6.055\\ldots\\) hours.",
+     "\\(0.055\\ldots \\times 60 = 3.35\\ldots\\) minutes."
+    ],
+    "answer": "06:03"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(S(d) < 6\\) when \\(\\cos\\left(\\frac{2\\pi(d + 10)}{365}\\right) < -\\frac{5}{14}\\).",
+     "Let \\(\\theta = \\frac{2\\pi(d + 10)}{365}\\), which runs from about 0.19 to \\(2\\pi + 0.17\\) over the year. \\(\\cos\\theta < -\\frac{5}{14}\\) for \\(1.936\\ldots < \\theta < 2\\pi - 1.936\\ldots = 4.347\\ldots\\)",
+     "\\(\\theta = 1.936\\ldots\\) gives \\(d = 102.46\\ldots\\); \\(\\theta = 4.347\\ldots\\) gives \\(d = 242.53\\ldots\\)",
+     "So sunrise is before 06:00 on days 103 to 242. Check: \\(S(102) = 6.010\\ldots\\), \\(S(103) = 5.987\\ldots\\), \\(S(242) = 5.987\\ldots\\), \\(S(243) = 6.010\\ldots\\)",
+     "Number of days: \\(242 - 103 + 1 = 140\\)."
+    ],
+    "answer": "140 days"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(D = T - S = 18.2 - 6.5 - 1.6\\cos\\theta - 1.4\\cos\\theta = 11.7 - 3\\cos\\theta\\).",
+     "Greatest when \\(\\cos\\theta = -1\\): \\(11.7 + 3 = 14.7\\) hours."
+    ],
+    "answer": "Shown; 14.7 hours (14 hours 42 minutes)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(D > 13\\) when \\(\\cos\\theta < -\\dfrac{1.3}{3}\\), that is \\(2.018\\ldots < \\theta < 4.264\\ldots\\)",
+     "This gives \\(107.2\\ldots < d < 237.7\\ldots\\), so days 108 to 237.",
+     "Number of days: \\(237 - 108 + 1 = 130\\)."
+    ],
+    "answer": "130 days"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-b-006",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Trigonometric equations",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "Let \\(g(x) = 3\\cos 2x + 7\\cos x + 5\\), for \\(0 \\le x \\le 2\\pi\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(g(x) = 6\\cos^2 x + 7\\cos x + 2\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Solve the equation \\(g(x) = 0\\). Give exact answers where possible.",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Hence solve the inequality \\(g(x) < 0\\).",
+    "marks": 4
+   },
+   {
+    "label": "d",
+    "text": "Find the minimum value of \\(g(x)\\), and the values of \\(x\\) at which it occurs.",
+    "marks": 4
+   }
+  ],
+  "idea": "Use \\(\\cos 2x = 2\\cos^2 x - 1\\) to get a quadratic in \\(c = \\cos x\\). Solve or analyse the quadratic in \\(c\\) first, then turn each statement about \\(c\\) into values of \\(x\\) using the graph of \\(\\cos x\\) on \\(0 \\le x \\le 2\\pi\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(3\\left(2\\cos^2 x - 1\\right) + 7\\cos x + 5 = 6\\cos^2 x + 7\\cos x + 2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Let \\(c = \\cos x\\): \\(6c^2 + 7c + 2 = (2c + 1)(3c + 2) = 0\\), so \\(c = -\\frac{1}{2}\\) or \\(c = -\\frac{2}{3}\\).",
+     "\\(\\cos x = -\\frac{1}{2}\\): \\(x = \\dfrac{2\\pi}{3}\\) or \\(\\dfrac{4\\pi}{3}\\).",
+     "\\(\\cos x = -\\frac{2}{3}\\): \\(x = \\arccos\\left(-\\frac{2}{3}\\right) = 2.300\\ldots\\) or \\(2\\pi - 2.300\\ldots = 3.982\\ldots\\)"
+    ],
+    "answer": "\\(x = \\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}, 2.30, 3.98\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((2c + 1)(3c + 2) < 0\\) between the roots: \\(-\\frac{2}{3} < \\cos x < -\\frac{1}{2}\\).",
+     "On \\(0 \\le x \\le \\pi\\), \\(\\cos x\\) decreases from 1 to \\(-1\\): it is between \\(-\\frac{1}{2}\\) and \\(-\\frac{2}{3}\\) for \\(\\frac{2\\pi}{3} < x < 2.300\\ldots\\)",
+     "On \\(\\pi \\le x \\le 2\\pi\\), \\(\\cos x\\) increases again: \\(3.982\\ldots < x < \\frac{4\\pi}{3}\\).",
+     "Check: \\(g(2.2) = -0.041\\ldots < 0\\)."
+    ],
+    "answer": "\\(\\dfrac{2\\pi}{3} < x < 2.30\\) or \\(3.98 < x < \\dfrac{4\\pi}{3}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(6c^2 + 7c + 2\\) is least at \\(c = -\\dfrac{7}{12}\\), which is between \\(-1\\) and 1, so \\(\\cos x\\) can take this value.",
+     "Minimum value: \\(6 \\times \\dfrac{49}{144} - \\dfrac{49}{12} + 2 = \\dfrac{49}{24} - \\dfrac{98}{24} + \\dfrac{48}{24} = -\\dfrac{1}{24}\\).",
+     "\\(\\cos x = -\\frac{7}{12}\\): \\(x = 2.193\\ldots\\) or \\(2\\pi - 2.193\\ldots = 4.089\\ldots\\)"
+    ],
+    "answer": "Minimum \\(-\\dfrac{1}{24}\\), at \\(x = 2.19\\) and \\(x = 4.09\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-b-007",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Triangle trigonometry",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "A clock has a minute hand of length 12 cm and an hour hand of length 8 cm. Both hands turn about the same point. Let \\(d\\) cm be the distance between the tips of the hands."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the exact value of \\(d\\) at 2:00.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(t\\) minutes after 12:00, the minute hand is \\(5.5t\\) degrees ahead of the hour hand, measured clockwise, for \\(0 \\le t \\le 60\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence show that \\(d^2 = 208 - 192\\cos(5.5t)°\\). Explain why this holds for all \\(t \\ge 0\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the first time after 12:00 at which the tips are 16 cm apart. Give your answer to the nearest second.",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Find the greatest value of \\(d\\) and the first time after 12:00 at which it occurs, to the nearest second.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find the number of times in the 12 hours after 12:00 at which the tips are exactly 16 cm apart.",
+    "marks": 2
+   }
+  ],
+  "idea": "The hands and the line joining their tips form a triangle, so the cosine rule gives \\(d\\). The minute hand turns \\(6°\\) per minute and the hour hand \\(0.5°\\) per minute, so the angle between them grows at \\(5.5°\\) per minute.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "At 2:00 the angle between the hands is \\(2 \\times 30° = 60°\\).",
+     "\\(d^2 = 12^2 + 8^2 - 2 \\times 12 \\times 8\\cos 60° = 144 + 64 - 96 = 112\\)."
+    ],
+    "answer": "\\(d = \\sqrt{112} = 4\\sqrt{7}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The minute hand turns \\(360°\\) in 60 minutes, which is \\(6°\\) per minute. The hour hand turns \\(30°\\) in 60 minutes, which is \\(0.5°\\) per minute.",
+     "Both start together at 12:00, so after \\(t\\) minutes the minute hand is \\(6t - 0.5t = 5.5t\\) degrees ahead (at most \\(330°\\) when \\(t \\le 60\\))."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "If \\(5.5t \\le 180\\), the angle between the hands is \\(5.5t°\\). If \\(5.5t > 180\\), the angle between them is \\(360° - 5.5t°\\), and \\(\\cos(360° - \\theta) = \\cos\\theta\\). Either way the cosine rule gives \\(d^2 = 12^2 + 8^2 - 2 \\times 12 \\times 8\\cos(5.5t)° = 208 - 192\\cos(5.5t)°\\). After \\(t = \\frac{720}{11}\\) minutes the hands are together again and the pattern repeats; since \\(\\cos(\\theta - 360°) = \\cos\\theta\\), the same formula holds for all \\(t \\ge 0\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(256 = 208 - 192\\cos(5.5t)°\\) gives \\(\\cos(5.5t)° = -\\dfrac{48}{192} = -0.25\\).",
+     "The first solution: \\(5.5t = \\arccos(-0.25) = 104.47\\ldots°\\), so \\(t = 18.99\\ldots\\) minutes.",
+     "\\(0.99\\ldots\\) minutes is \\(59.75\\ldots\\) seconds, so \\(t\\) is 18 minutes 59.75… seconds, which rounds to 19 minutes 0 seconds."
+    ],
+    "answer": "12:19:00"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(d\\) is greatest when \\(\\cos(5.5t)° = -1\\), that is when the hands point in opposite directions: \\(d = \\sqrt{208 + 192} = 20\\).",
+     "\\(5.5t = 180\\) gives \\(t = 32.72\\ldots\\) minutes, which is 32 minutes 43.6… seconds."
+    ],
+    "answer": "\\(d = 20\\) cm, first at 12:32:44"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "In 12 hours (720 minutes) the angle \\(5.5t\\) increases by \\(3960° = 11 \\times 360°\\), so the minute hand laps the hour hand 11 times.",
+     "In each full turn of the relative angle, \\(\\cos(5.5t)° = -0.25\\) happens twice (once as the hands move apart, once as they close up)."
+    ],
+    "answer": "22 times"
+   }
+  ]
+ }
+]

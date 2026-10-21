@@ -1,0 +1,1559 @@
+[
+ {
+  "id": "aa-gt-hl-001",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors and the scalar product",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "The points \\(A(1, 0, 2)\\), \\(B(3, 2, 1)\\) and \\(C(2, 0, 4)\\) are given."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\overrightarrow{AB}\\) and \\(\\overrightarrow{AC}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\mathrm{B\\hat{A}C} = 90°\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the exact area of triangle ABC.",
+    "marks": 2
+   }
+  ],
+  "idea": "Two non-zero vectors are perpendicular exactly when their scalar product is zero. In a right-angled triangle, the two sides that meet at the right angle are the base and the height.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{AB} = \\mathbf{b} - \\mathbf{a}\\) and \\(\\overrightarrow{AC} = \\mathbf{c} - \\mathbf{a}\\)."
+    ],
+    "answer": "\\(\\overrightarrow{AB} = \\begin{pmatrix} 2 \\\\ 2 \\\\ -1 \\end{pmatrix}\\), \\(\\overrightarrow{AC} = \\begin{pmatrix} 1 \\\\ 0 \\\\ 2 \\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = 2 + 0 - 2 = 0\\), so the vectors are perpendicular."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\left|\\overrightarrow{AB}\\right| = \\sqrt{4 + 4 + 1} = 3\\), \\(\\left|\\overrightarrow{AC}\\right| = \\sqrt{1 + 0 + 4} = \\sqrt{5}\\).",
+     "Area \\(= \\frac{1}{2} \\times 3 \\times \\sqrt{5}\\)."
+    ],
+    "answer": "\\(\\dfrac{3\\sqrt{5}}{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-002",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors and the scalar product",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "Let \\(\\mathbf{u} = 2\\mathbf{i} - \\mathbf{j} + 2\\mathbf{k}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find a unit vector in the direction of \\(\\mathbf{u}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down a vector of length 12 in the opposite direction to \\(\\mathbf{u}\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the angle between \\(\\mathbf{u}\\) and the positive \\(x\\)-axis.",
+    "marks": 2
+   }
+  ],
+  "idea": "Divide a vector by its length to get a unit vector. The positive \\(x\\)-axis has direction \\(\\mathbf{i}\\), so the angle comes from \\(\\mathbf{u} \\cdot \\mathbf{i}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(|\\mathbf{u}| = \\sqrt{4 + 1 + 4} = 3\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{3}\\left(2\\mathbf{i} - \\mathbf{j} + 2\\mathbf{k}\\right)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Multiply the unit vector by \\(-12\\)."
+    ],
+    "answer": "\\(-8\\mathbf{i} + 4\\mathbf{j} - 8\\mathbf{k}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\cos\\theta = \\dfrac{\\mathbf{u} \\cdot \\mathbf{i}}{|\\mathbf{u}|\\,|\\mathbf{i}|} = \\dfrac{2}{3}\\), so \\(\\theta = 48.18\\ldots°\\)."
+    ],
+    "answer": "\\(48.2°\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-003",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors and the scalar product",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The vectors \\(\\mathbf{a}\\) and \\(\\mathbf{b}\\) satisfy \\(|\\mathbf{a}| = 3\\), \\(|\\mathbf{b}| = 4\\), and the angle between them is \\(60°\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\mathbf{a} \\cdot \\mathbf{b}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the exact value of \\(|\\mathbf{a} + \\mathbf{b}|\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(|\\mathbf{a} - 2\\mathbf{b}|\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Expand a squared length as a scalar product: \\(|\\mathbf{v}|^2 = \\mathbf{v} \\cdot \\mathbf{v}\\). The scalar product distributes like ordinary multiplication, and \\(\\mathbf{a} \\cdot \\mathbf{a} = |\\mathbf{a}|^2\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\mathbf{a} \\cdot \\mathbf{b} = 3 \\times 4 \\times \\cos 60° = 6\\)."
+    ],
+    "answer": "\\(6\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(|\\mathbf{a} + \\mathbf{b}|^2 = \\mathbf{a} \\cdot \\mathbf{a} + 2\\,\\mathbf{a} \\cdot \\mathbf{b} + \\mathbf{b} \\cdot \\mathbf{b} = 9 + 12 + 16 = 37\\)."
+    ],
+    "answer": "\\(\\sqrt{37}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(|\\mathbf{a} - 2\\mathbf{b}|^2 = |\\mathbf{a}|^2 - 4\\,\\mathbf{a} \\cdot \\mathbf{b} + 4|\\mathbf{b}|^2 = 9 - 24 + 64 = 49\\)."
+    ],
+    "answer": "\\(7\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-004",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors and the scalar product",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The diagram shows a cube OABCDEFG with edges of length 2, with O at the origin and A, C and D on the \\(x\\)-, \\(y\\)- and \\(z\\)-axes.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 300\" width=\"330\" height=\"300\" role=\"img\" aria-label=\"A cube OABCDEFG with edges of length 2, drawn in 3D. O is the origin; A is on the x-axis, C on the y-axis and D on the z-axis. A = (2, 0, 0), B = (2, 2, 0), C = (0, 2, 0), D = (0, 0, 2), E = (2, 0, 2), F = (2, 2, 2), G = (0, 2, 2). The space diagonal OF and the face diagonal OB are drawn.\"><path d=\"M70.0 240.0 L194.0 240.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M194.0 240.0 L253.1 205.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M253.1 205.9 L129.1 205.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M129.1 205.9 L70.0 240.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M70.0 116.0 L194.0 116.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M194.0 116.0 L253.1 81.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M253.1 81.9 L129.1 81.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M129.1 81.9 L70.0 116.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M70.0 240.0 L70.0 116.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M194.0 240.0 L194.0 116.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M253.1 205.9 L253.1 81.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M129.1 205.9 L129.1 81.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M70.0 240.0 L253.1 81.9\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M70.0 240.0 L253.1 205.9\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"7 4\"/><circle cx=\"70.0\" cy=\"240.0\" r=\"3\" fill=\"#0b0d12\"/><text x=\"60.0\" y=\"256.0\" text-anchor=\"end\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">O</text><circle cx=\"194.0\" cy=\"240.0\" r=\"3\" fill=\"#0b0d12\"/><text x=\"200.0\" y=\"256.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"253.1\" cy=\"205.9\" r=\"3\" fill=\"#0b0d12\"/><text x=\"263.1\" y=\"213.9\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"129.1\" cy=\"205.9\" r=\"3\" fill=\"#0b0d12\"/><text x=\"119.1\" y=\"199.9\" text-anchor=\"end\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><circle cx=\"70.0\" cy=\"116.0\" r=\"3\" fill=\"#0b0d12\"/><text x=\"58.0\" y=\"116.0\" text-anchor=\"end\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><circle cx=\"194.0\" cy=\"116.0\" r=\"3\" fill=\"#0b0d12\"/><text x=\"202.0\" y=\"116.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">E</text><circle cx=\"253.1\" cy=\"81.9\" r=\"3\" fill=\"#0b0d12\"/><text x=\"263.1\" y=\"77.9\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">F</text><circle cx=\"129.1\" cy=\"81.9\" r=\"3\" fill=\"#0b0d12\"/><text x=\"119.1\" y=\"73.9\" text-anchor=\"end\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">G</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the angle between the space diagonal \\([\\mathrm{OF}]\\) and the edge \\([\\mathrm{OA}]\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the angle between the space diagonal \\([\\mathrm{OF}]\\) and the face diagonal \\([\\mathrm{OB}]\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the acute angle between the space diagonals \\([\\mathrm{OF}]\\) and \\([\\mathrm{AG}]\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Write each segment as a vector from the coordinates, then use \\(\\cos\\theta = \\dfrac{\\mathbf{u} \\cdot \\mathbf{v}}{|\\mathbf{u}|\\,|\\mathbf{v}|}\\). For the angle between two lines, take the acute angle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{OF} = (2, 2, 2)\\), \\(\\overrightarrow{OA} = (2, 0, 0)\\): \\(\\cos\\theta = \\dfrac{4}{\\sqrt{12} \\times 2} = \\dfrac{1}{\\sqrt{3}}\\), so \\(\\theta = 54.73\\ldots°\\)"
+    ],
+    "answer": "\\(54.7°\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\overrightarrow{OB} = (2, 2, 0)\\): \\(\\cos\\theta = \\dfrac{8}{\\sqrt{12}\\sqrt{8}} = \\dfrac{8}{\\sqrt{96}}\\), so \\(\\theta = 35.26\\ldots°\\)"
+    ],
+    "answer": "\\(35.3°\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\overrightarrow{AG} = (0, 2, 2) - (2, 0, 0) = (-2, 2, 2)\\). \\(\\cos\\theta = \\dfrac{-4 + 4 + 4}{\\sqrt{12}\\sqrt{12}} = \\dfrac{1}{3}\\), so \\(\\theta = 70.52\\ldots°\\), which is acute."
+    ],
+    "answer": "\\(70.5°\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-005",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors and the scalar product",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "OACB is a parallelogram with \\(\\overrightarrow{OA} = \\mathbf{a}\\) and \\(\\overrightarrow{OB} = \\mathbf{b}\\), so that \\(\\overrightarrow{OC} = \\mathbf{a} + \\mathbf{b}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down \\(\\overrightarrow{BA}\\) in terms of \\(\\mathbf{a}\\) and \\(\\mathbf{b}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\overrightarrow{OC} \\cdot \\overrightarrow{BA} = |\\mathbf{a}|^2 - |\\mathbf{b}|^2\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence prove that the diagonals of the parallelogram are perpendicular if and only if it is a rhombus.",
+    "marks": 2
+   }
+  ],
+  "idea": "The diagonals are \\(\\mathbf{a} + \\mathbf{b}\\) and \\(\\mathbf{a} - \\mathbf{b}\\). Expanding their scalar product, the cross terms cancel because \\(\\mathbf{a} \\cdot \\mathbf{b} = \\mathbf{b} \\cdot \\mathbf{a}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{BA} = \\overrightarrow{BO} + \\overrightarrow{OA}\\)."
+    ],
+    "answer": "\\(\\mathbf{a} - \\mathbf{b}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\((\\mathbf{a} + \\mathbf{b}) \\cdot (\\mathbf{a} - \\mathbf{b}) = \\mathbf{a} \\cdot \\mathbf{a} - \\mathbf{a} \\cdot \\mathbf{b} + \\mathbf{b} \\cdot \\mathbf{a} - \\mathbf{b} \\cdot \\mathbf{b} = |\\mathbf{a}|^2 - |\\mathbf{b}|^2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The diagonals are perpendicular \\(\\iff \\overrightarrow{OC} \\cdot \\overrightarrow{BA} = 0 \\iff |\\mathbf{a}|^2 = |\\mathbf{b}|^2 \\iff |\\mathbf{a}| = |\\mathbf{b}|\\).",
+     "\\(|\\mathbf{a}| = |\\mathbf{b}|\\) means two adjacent sides are equal, so all four sides are equal: the parallelogram is a rhombus."
+    ],
+    "answer": "Proved"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-006",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The vector product",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "Let \\(\\mathbf{u} = \\begin{pmatrix} 1 \\\\ 1 \\\\ 0 \\end{pmatrix}\\) and \\(\\mathbf{v} = \\begin{pmatrix} 0 \\\\ 1 \\\\ 1 \\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\mathbf{u} \\times \\mathbf{v}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Hence find the two unit vectors that are perpendicular to both \\(\\mathbf{u}\\) and \\(\\mathbf{v}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the angle between \\(\\mathbf{u}\\) and \\(\\mathbf{v}\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "\\(\\mathbf{u} \\times \\mathbf{v}\\) is perpendicular to both \\(\\mathbf{u}\\) and \\(\\mathbf{v}\\); scaling it to length 1, in either direction, gives the unit vectors.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\mathbf{u} \\times \\mathbf{v} = \\begin{pmatrix} 1 \\times 1 - 0 \\times 1 \\\\ 0 \\times 0 - 1 \\times 1 \\\\ 1 \\times 1 - 1 \\times 0 \\end{pmatrix}\\)."
+    ],
+    "answer": "\\(\\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(|\\mathbf{u} \\times \\mathbf{v}| = \\sqrt{3}\\). Divide by \\(\\sqrt{3}\\), and take both directions."
+    ],
+    "answer": "\\(\\pm\\dfrac{1}{\\sqrt{3}}\\begin{pmatrix} 1 \\\\ -1 \\\\ 1 \\end{pmatrix}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\cos\\theta = \\dfrac{\\mathbf{u} \\cdot \\mathbf{v}}{|\\mathbf{u}|\\,|\\mathbf{v}|} = \\dfrac{1}{\\sqrt{2}\\sqrt{2}} = \\dfrac{1}{2}\\)."
+    ],
+    "answer": "\\(60°\\) \\(\\left(\\frac{\\pi}{3}\\right)\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-007",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The vector product",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Three vertices of a parallelogram are \\(A(1, 0, 1)\\), \\(B(2, 3, 1)\\) and \\(C(0, 1, 3)\\). The fourth vertex is D."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the three possible positions of D.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Show that every one of these parallelograms has the same area, and find this area.",
+    "marks": 3
+   }
+  ],
+  "idea": "D is opposite one of A, B or C, so there are three cases; in each, opposite sides are equal vectors. Each parallelogram is made of two copies of triangle ABC, so its area is \\(\\left|\\overrightarrow{AB} \\times \\overrightarrow{AC}\\right|\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "D opposite B (parallelogram ABCD): \\(\\mathbf{d} = \\mathbf{a} + \\mathbf{c} - \\mathbf{b} = (-1, -2, 3)\\).",
+     "D opposite C (ACBD): \\(\\mathbf{d} = \\mathbf{a} + \\mathbf{b} - \\mathbf{c} = (3, 2, -1)\\). D opposite A (ABDC): \\(\\mathbf{d} = \\mathbf{b} + \\mathbf{c} - \\mathbf{a} = (1, 4, 3)\\)."
+    ],
+    "answer": "\\((-1, -2, 3)\\), \\((3, 2, -1)\\), \\((1, 4, 3)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "In each case two adjacent sides of the parallelogram are two sides of triangle ABC, so the parallelogram is two copies of triangle ABC.",
+     "\\(\\overrightarrow{AB} = (1, 3, 0)\\), \\(\\overrightarrow{AC} = (-1, 1, 2)\\): \\(\\overrightarrow{AB} \\times \\overrightarrow{AC} = (6, -2, 4)\\), with length \\(\\sqrt{36 + 4 + 16} = \\sqrt{56}\\)."
+    ],
+    "answer": "Area \\(\\sqrt{56} = 2\\sqrt{14}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-008",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The vector product",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "The vectors \\(\\mathbf{a}\\), \\(\\mathbf{b}\\) and \\(\\mathbf{c}\\) are the sides of a triangle taken in order, so that \\(\\mathbf{a} + \\mathbf{b} + \\mathbf{c} = \\mathbf{0}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\mathbf{a} \\times \\mathbf{b} = \\mathbf{b} \\times \\mathbf{c} = \\mathbf{c} \\times \\mathbf{a}\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Hence prove the sine rule, \\(\\dfrac{\\sin A}{|\\mathbf{a}|} = \\dfrac{\\sin B}{|\\mathbf{b}|} = \\dfrac{\\sin C}{|\\mathbf{c}|}\\), where \\(A\\), \\(B\\), \\(C\\) are the angles of the triangle opposite the sides \\(\\mathbf{a}\\), \\(\\mathbf{b}\\), \\(\\mathbf{c}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Use \\(\\mathbf{c} = -\\mathbf{a} - \\mathbf{b}\\), with \\(\\mathbf{v} \\times \\mathbf{v} = \\mathbf{0}\\) and \\(\\mathbf{u} \\times \\mathbf{v} = -\\mathbf{v} \\times \\mathbf{u}\\). The length of each cross product is \\(|\\mathbf{u}|\\,|\\mathbf{v}|\\sin\\theta\\), and the angle between two side vectors taken in order is \\(180°\\) minus the angle of the triangle, which has the same sine.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\mathbf{b} \\times \\mathbf{c} = \\mathbf{b} \\times (-\\mathbf{a} - \\mathbf{b}) = -\\mathbf{b} \\times \\mathbf{a} - \\mathbf{b} \\times \\mathbf{b} = \\mathbf{a} \\times \\mathbf{b}\\).",
+     "\\(\\mathbf{c} \\times \\mathbf{a} = (-\\mathbf{a} - \\mathbf{b}) \\times \\mathbf{a} = -\\mathbf{a} \\times \\mathbf{a} - \\mathbf{b} \\times \\mathbf{a} = \\mathbf{a} \\times \\mathbf{b}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The angle between \\(\\mathbf{a}\\) and \\(\\mathbf{b}\\) (placed tail to tail) is \\(180° - C\\), and \\(\\sin(180° - C) = \\sin C\\). So \\(|\\mathbf{a} \\times \\mathbf{b}| = |\\mathbf{a}|\\,|\\mathbf{b}|\\sin C\\); likewise \\(|\\mathbf{b} \\times \\mathbf{c}| = |\\mathbf{b}|\\,|\\mathbf{c}|\\sin A\\) and \\(|\\mathbf{c} \\times \\mathbf{a}| = |\\mathbf{c}|\\,|\\mathbf{a}|\\sin B\\).",
+     "By part (a) these three lengths are equal. Divide each by \\(|\\mathbf{a}|\\,|\\mathbf{b}|\\,|\\mathbf{c}|\\): \\(\\dfrac{\\sin C}{|\\mathbf{c}|} = \\dfrac{\\sin A}{|\\mathbf{a}|} = \\dfrac{\\sin B}{|\\mathbf{b}|}\\)."
+    ],
+    "answer": "Proved"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-009",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The vector product",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "The tetrahedron OABC has vertices \\(O(0, 0, 0)\\), \\(A(2, 0, 0)\\), \\(B(0, 3, 0)\\) and \\(C(0, 0, 4)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the areas of the faces OAB, OBC and OCA.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\overrightarrow{AB} \\times \\overrightarrow{AC}\\), and hence find the exact area of face ABC.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Show that the square of the area of face ABC equals the sum of the squares of the areas of the other three faces.",
+    "marks": 2
+   }
+  ],
+  "idea": "The three faces at O are right-angled triangles in the coordinate planes. The slanted face needs \\(\\frac{1}{2}\\left|\\overrightarrow{AB} \\times \\overrightarrow{AC}\\right|\\); its components turn out to be twice the areas of the other faces.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "OAB: \\(\\frac{1}{2} \\times 2 \\times 3 = 3\\). OBC: \\(\\frac{1}{2} \\times 3 \\times 4 = 6\\). OCA: \\(\\frac{1}{2} \\times 4 \\times 2 = 4\\)."
+    ],
+    "answer": "\\(3\\), \\(6\\) and \\(4\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\overrightarrow{AB} = (-2, 3, 0)\\), \\(\\overrightarrow{AC} = (-2, 0, 4)\\).",
+     "\\(\\overrightarrow{AB} \\times \\overrightarrow{AC} = (3 \\times 4 - 0 \\times 0,\\ 0 \\times (-2) - (-2) \\times 4,\\ (-2) \\times 0 - 3 \\times (-2)) = (12, 8, 6)\\).",
+     "Length \\(\\sqrt{144 + 64 + 36} = \\sqrt{244} = 2\\sqrt{61}\\); area \\(= \\frac{1}{2} \\times 2\\sqrt{61}\\)."
+    ],
+    "answer": "\\((12, 8, 6)\\); area \\(\\sqrt{61}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\left(\\sqrt{61}\\right)^2 = 61\\) and \\(3^2 + 6^2 + 4^2 = 9 + 36 + 16 = 61\\). (The components 12, 8, 6 are twice the areas 6, 4, 3.)"
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-010",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector equations of lines",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "The line \\(L\\) passes through \\(A(1, -2, 3)\\) and is parallel to \\(\\begin{pmatrix} 2 \\\\ 1 \\\\ -1 \\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down a vector equation of \\(L\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that the point \\(P(5, 0, 1)\\) lies on \\(L\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write the equation of \\(L\\) in Cartesian form.",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\mathbf{r} = \\mathbf{a} + \\lambda\\mathbf{d}\\). A point is on the line when one value of \\(\\lambda\\) gives all three coordinates. For Cartesian form, make \\(\\lambda\\) the subject of each coordinate equation and set them equal.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Position vector of A plus a multiple of the direction."
+    ],
+    "answer": "\\(\\mathbf{r} = \\begin{pmatrix} 1 \\\\ -2 \\\\ 3 \\end{pmatrix} + \\lambda\\begin{pmatrix} 2 \\\\ 1 \\\\ -1 \\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(1 + 2\\lambda = 5\\) gives \\(\\lambda = 2\\). Then \\(y = -2 + 2 = 0\\) and \\(z = 3 - 2 = 1\\): all three match."
+    ],
+    "answer": "Shown (\\(\\lambda = 2\\))"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\lambda = \\dfrac{x - 1}{2} = y + 2 = \\dfrac{z - 3}{-1}\\)."
+    ],
+    "answer": "\\(\\dfrac{x - 1}{2} = \\dfrac{y + 2}{1} = \\dfrac{z - 3}{-1}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-011",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector equations of lines",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The points \\(A(1, 2, 3)\\), \\(B(3, 6, 1)\\) and \\(C(6, 12, -2)\\) are given."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that A, B and C lie on a straight line, and find the ratio \\(\\mathrm{AB} : \\mathrm{BC}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the coordinates of the point where this line meets the plane \\(x = 0\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Three points are collinear when \\(\\overrightarrow{AC}\\) is a multiple of \\(\\overrightarrow{AB}\\). A line meets the plane \\(x = 0\\) where the \\(x\\)-coordinate of its general point is zero.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{AB} = (2, 4, -2)\\) and \\(\\overrightarrow{AC} = (5, 10, -5) = \\frac{5}{2}\\overrightarrow{AB}\\). They are parallel and share A, so the points are collinear.",
+     "\\(\\overrightarrow{BC} = (3, 6, -3) = \\frac{3}{2}\\overrightarrow{AB}\\), so \\(\\mathrm{AB} : \\mathrm{BC} = 1 : \\frac{3}{2} = 2 : 3\\)."
+    ],
+    "answer": "Collinear; \\(\\mathrm{AB} : \\mathrm{BC} = 2 : 3\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Line: \\(\\mathbf{r} = (1, 2, 3) + t(1, 2, -1)\\) (using \\(\\frac{1}{2}\\overrightarrow{AB}\\)). \\(x = 1 + t = 0\\) gives \\(t = -1\\)."
+    ],
+    "answer": "\\((0, 0, 4)\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-012",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector equations of lines",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The line \\(L\\) has equation \\(\\mathbf{r} = \\begin{pmatrix} 2 \\\\ -1 \\\\ 3 \\end{pmatrix} + t\\begin{pmatrix} 1 \\\\ 2 \\\\ -1 \\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the coordinates of the point where \\(L\\) meets the \\(xy\\)-plane.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the acute angle between \\(L\\) and the \\(z\\)-axis.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence write down the acute angle between \\(L\\) and the \\(xy\\)-plane.",
+    "marks": 2
+   }
+  ],
+  "idea": "The \\(xy\\)-plane is \\(z = 0\\). The \\(z\\)-axis is normal to the \\(xy\\)-plane, so the angle between the line and the plane is \\(90°\\) minus the angle between the line and the normal.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(z = 3 - t = 0\\) gives \\(t = 3\\): \\((2 + 3,\\ -1 + 6,\\ 0)\\)."
+    ],
+    "answer": "\\((5, 5, 0)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\cos\\theta = \\dfrac{|(1, 2, -1) \\cdot (0, 0, 1)|}{\\sqrt{6} \\times 1} = \\dfrac{1}{\\sqrt{6}}\\), so \\(\\theta = 65.90\\ldots°\\)"
+    ],
+    "answer": "\\(65.9°\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(90° - 65.90\\ldots° = 24.09\\ldots°\\)"
+    ],
+    "answer": "\\(24.1°\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-013",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector equations of lines",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "In this question distances are in metres. A drone leaves the point \\((0, 0, 10)\\) and flies in a straight line, at constant height, in the direction \\(\\begin{pmatrix} 3 \\\\ 4 \\\\ 0 \\end{pmatrix}\\). A vertical mast stands with its base at \\((12, 10, 0)\\) and its top at \\((12, 10, 30)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the path of the drone does not meet the mast.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the shortest distance between the path of the drone and the mast.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A second drone leaves \\((0, 0, 10)\\) and flies in a straight line to the point \\((12, 10, 10)\\) on the mast. Find the angle between the two paths.",
+    "marks": 2
+   }
+  ],
+  "idea": "Both the drone's path and the mast's foot point can be seen from above: the path is a line through the origin in the \\(xy\\)-plane, and the mast is the point \\((12, 10)\\). The shortest distance is the perpendicular distance from that point to the line.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The drone is at \\((3t, 4t, 10)\\). To be on the mast it needs \\(3t = 12\\) and \\(4t = 10\\), so \\(t = 4\\) and \\(t = 2.5\\): impossible."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The mast is vertical and the drone flies at height 10, within the mast’s height, so the shortest distance is horizontal: the distance from \\((12, 10)\\) to the line through the origin with direction \\((3, 4)\\).",
+     "Component of \\((12, 10)\\) along \\(\\frac{1}{5}(3, 4)\\): \\(\\frac{36 + 40}{5} = 15.2\\). Distance \\(= \\sqrt{12^2 + 10^2 - 15.2^2} = \\sqrt{244 - 231.04} = \\sqrt{12.96}\\)."
+    ],
+    "answer": "\\(3.6\\) m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Second direction \\((12, 10, 0)\\). \\(\\cos\\theta = \\dfrac{36 + 40}{5\\sqrt{244}} = 0.9730\\ldots\\), so \\(\\theta = 13.32\\ldots°\\)"
+    ],
+    "answer": "\\(13.3°\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-014",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector equations of lines",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "Three lines are given by",
+   "\\[\\begin{aligned} L_1&: \\mathbf{r} = \\begin{pmatrix} -1 \\\\ 0 \\\\ -1 \\end{pmatrix} + \\lambda\\begin{pmatrix} 2 \\\\ 1 \\\\ 2 \\end{pmatrix}, \\\\[4pt] L_2&: \\mathbf{r} = \\begin{pmatrix} 0 \\\\ -1 \\\\ 3 \\end{pmatrix} + \\mu\\begin{pmatrix} 1 \\\\ 2 \\\\ -2 \\end{pmatrix}, \\\\[4pt] L_3&: \\mathbf{r} = \\begin{pmatrix} 4 \\\\ 1 \\\\ 7 \\end{pmatrix} + \\nu\\begin{pmatrix} -1 \\\\ 1 \\\\ -4 \\end{pmatrix}. \\end{aligned}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(L_1\\) and \\(L_2\\) intersect, and find the point of intersection, P.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "\\(L_3\\) meets \\(L_1\\) at Q and \\(L_2\\) at R. Find Q and R.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the exact area of triangle PQR.",
+    "marks": 2
+   }
+  ],
+  "idea": "Two lines meet if one pair \\((\\lambda, \\mu)\\) satisfies all three coordinate equations: solve two of them and check the third. A zero scalar product between the directions of \\(L_1\\) and \\(L_2\\) shows the triangle has a right angle at P.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(-1 + 2\\lambda = \\mu\\) and \\(\\lambda = -1 + 2\\mu\\). Substitute: \\(\\lambda = -1 + 2(-1 + 2\\lambda) = -3 + 4\\lambda\\), so \\(\\lambda = 1\\), \\(\\mu = 1\\).",
+     "Check \\(z\\): \\(-1 + 2 = 1\\) and \\(3 - 2 = 1\\). They agree, so the lines meet at \\(\\lambda = 1\\)."
+    ],
+    "answer": "\\(P(1, 1, 1)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(L_1 = L_3\\): \\(-1 + 2\\lambda = 4 - \\nu\\), \\(\\lambda = 1 + \\nu\\). So \\(-1 + 2 + 2\\nu = 4 - \\nu\\), \\(\\nu = 1\\), \\(\\lambda = 2\\). Check \\(z\\): \\(-1 + 4 = 3\\) and \\(7 - 4 = 3\\). Q is \\((3, 2, 3)\\).",
+     "\\(L_2 = L_3\\): \\(\\mu = 4 - \\nu\\), \\(-1 + 2\\mu = 1 + \\nu\\). So \\(-1 + 8 - 2\\nu = 1 + \\nu\\), \\(\\nu = 2\\), \\(\\mu = 2\\). Check \\(z\\): \\(3 - 4 = -1\\) and \\(7 - 8 = -1\\). R is \\((2, 3, -1)\\)."
+    ],
+    "answer": "\\(Q(3, 2, 3)\\), \\(R(2, 3, -1)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\overrightarrow{PQ} = (2, 1, 2)\\), \\(\\overrightarrow{PR} = (1, 2, -2)\\), and \\(\\overrightarrow{PQ} \\cdot \\overrightarrow{PR} = 2 + 2 - 4 = 0\\): a right angle at P.",
+     "Area \\(= \\frac{1}{2} \\times |\\overrightarrow{PQ}| \\times |\\overrightarrow{PR}| = \\frac{1}{2} \\times 3 \\times 3\\)."
+    ],
+    "answer": "\\(\\dfrac{9}{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-015",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Planes",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "The plane \\(\\Pi\\) passes through the point \\(A(2, -1, 3)\\) and has normal vector \\(\\begin{pmatrix} 3 \\\\ 2 \\\\ -1 \\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the Cartesian equation of \\(\\Pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the coordinates of the points where \\(\\Pi\\) meets the three coordinate axes.",
+    "marks": 3
+   }
+  ],
+  "idea": "A plane with normal \\((a, b, c)\\) has equation \\(ax + by + cz = d\\); substitute the known point to find \\(d\\). On the \\(x\\)-axis, \\(y = z = 0\\), and so on.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(3x + 2y - z = d\\). At A: \\(6 - 2 - 3 = 1\\), so \\(d = 1\\)."
+    ],
+    "answer": "\\(3x + 2y - z = 1\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(x\\)-axis: \\(3x = 1\\). \\(y\\)-axis: \\(2y = 1\\). \\(z\\)-axis: \\(-z = 1\\)."
+    ],
+    "answer": "\\(\\left(\\frac{1}{3}, 0, 0\\right)\\), \\(\\left(0, \\frac{1}{2}, 0\\right)\\), \\((0, 0, -1)\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-016",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Planes",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The points \\(A(1, -1, 2)\\) and \\(B(5, 3, -2)\\) lie on opposite sides of the plane \\(\\Pi: 2x + y + z = 7\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find a vector equation of the line \\(\\mathrm{(AB)}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the coordinates of the point where \\(\\mathrm{(AB)}\\) meets \\(\\Pi\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "State the ratio in which \\(\\Pi\\) divides the segment \\([\\mathrm{AB}]\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "Substitute the general point of the line into the equation of the plane and solve for the parameter. The parameter also tells you how far along \\([\\mathrm{AB}]\\) the point is.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{AB} = (4, 4, -4)\\)."
+    ],
+    "answer": "\\(\\mathbf{r} = \\begin{pmatrix} 1 \\\\ -1 \\\\ 2 \\end{pmatrix} + t\\begin{pmatrix} 4 \\\\ 4 \\\\ -4 \\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(2(1 + 4t) + (-1 + 4t) + (2 - 4t) = 3 + 8t = 7\\), so \\(t = \\frac{1}{2}\\)."
+    ],
+    "answer": "\\((3, 1, 0)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(t = 0\\) at A and \\(t = 1\\) at B, so \\(t = \\frac{1}{2}\\) is the midpoint."
+    ],
+    "answer": "\\(1 : 1\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-017",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Planes",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The planes \\(\\Pi_1: x + y + z = 6\\) and \\(\\Pi_2: x - y + 2z = 3\\) meet in the line \\(L\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "By letting \\(z = \\lambda\\), find a vector equation of \\(L\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Verify that the direction of \\(L\\) is parallel to the vector product of the two normal vectors.",
+    "marks": 2
+   }
+  ],
+  "idea": "With \\(z = \\lambda\\), the two plane equations become two equations in \\(x\\) and \\(y\\). The line lies in both planes, so it is perpendicular to both normals, which is the direction of their vector product.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(x + y = 6 - \\lambda\\) and \\(x - y = 3 - 2\\lambda\\). Add: \\(2x = 9 - 3\\lambda\\). Subtract: \\(2y = 3 + \\lambda\\).",
+     "So \\(x = \\frac{9}{2} - \\frac{3}{2}\\lambda\\), \\(y = \\frac{3}{2} + \\frac{1}{2}\\lambda\\), \\(z = \\lambda\\)."
+    ],
+    "answer": "\\(\\mathbf{r} = \\begin{pmatrix} 9/2 \\\\ 3/2 \\\\ 0 \\end{pmatrix} + \\lambda\\begin{pmatrix} -3/2 \\\\ 1/2 \\\\ 1 \\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\begin{pmatrix} 1 \\\\ 1 \\\\ 1 \\end{pmatrix} \\times \\begin{pmatrix} 1 \\\\ -1 \\\\ 2 \\end{pmatrix} = \\begin{pmatrix} 2 + 1 \\\\ 1 - 2 \\\\ -1 - 1 \\end{pmatrix} = \\begin{pmatrix} 3 \\\\ -1 \\\\ -2 \\end{pmatrix} = -2\\begin{pmatrix} -3/2 \\\\ 1/2 \\\\ 1 \\end{pmatrix}\\)."
+    ],
+    "answer": "Verified"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-018",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Planes",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The planes \\(\\Pi_1: x + 2y - 2z = 3\\) and \\(\\Pi_2: 2x + 4y - 4z = -12\\) are given."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\Pi_1\\) and \\(\\Pi_2\\) are parallel.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "The point \\(P(3, 0, 0)\\) lies on \\(\\Pi_1\\). The line through P perpendicular to \\(\\Pi_1\\) meets \\(\\Pi_2\\) at Q. Find Q, and hence the distance between the planes.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the equation of the plane that is parallel to both and halfway between them.",
+    "marks": 2
+   }
+  ],
+  "idea": "Parallel planes have parallel normal vectors. The distance between them is measured along a normal, from a point on one plane to the other.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The normals \\((1, 2, -2)\\) and \\((2, 4, -4)\\) are parallel, and \\(\\Pi_2\\) is \\(x + 2y - 2z = -6\\), which is a different plane."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Line: \\((3 + \\lambda, 2\\lambda, -2\\lambda)\\). In \\(\\Pi_2\\): \\(2(3 + \\lambda) + 8\\lambda + 8\\lambda = -12\\), so \\(18\\lambda = -18\\), \\(\\lambda = -1\\). Q is \\((2, -2, 2)\\).",
+     "\\(PQ = |\\lambda| \\times |(1, 2, -2)| = 1 \\times 3\\)."
+    ],
+    "answer": "\\(Q(2, -2, 2)\\); distance 3"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "In the form \\(x + 2y - 2z = d\\), the planes have \\(d = 3\\) and \\(d = -6\\); halfway is \\(d = -\\frac{3}{2}\\). (Check: the midpoint of PQ, \\(\\left(\\frac{5}{2}, -1, 1\\right)\\), gives \\(\\frac{5}{2} - 2 - 2 = -\\frac{3}{2}\\).)"
+    ],
+    "answer": "\\(2x + 4y - 4z = -3\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-019",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Planes",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 9,
+  "stem": [
+   "A flat mirror lies in the plane \\(\\Pi: x + y + z = 3\\). The points \\(A(3, 3, 3)\\) and \\(B(5, 2, 2)\\) are on the same side of \\(\\Pi\\). A ray of light from \\(A(3, 3, 3)\\) reflects off the mirror at the point R and passes through \\(B(5, 2, 2)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the coordinates of the foot of the perpendicular from A to \\(\\Pi\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence find the coordinates of \\(A'\\), the reflection of A in \\(\\Pi\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "The point R lies on the line \\(A'B\\). Find the coordinates of R.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the exact total length of the path of the ray from A to R to B.",
+    "marks": 2
+   }
+  ],
+  "idea": "The perpendicular from A to the plane runs along the normal \\((1, 1, 1)\\). Reflecting A in the plane turns the bent path A to R to B into the straight segment from \\(A'\\) to B, which has the same length because \\(AR = A'R\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Line from A along the normal: \\((3 + \\lambda, 3 + \\lambda, 3 + \\lambda)\\). In \\(\\Pi\\): \\(9 + 3\\lambda = 3\\), so \\(\\lambda = -2\\)."
+    ],
+    "answer": "\\((1, 1, 1)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The foot is the midpoint of \\(AA'\\), so go the same distance again: \\(\\lambda = -4\\)."
+    ],
+    "answer": "\\(A'(-1, -1, -1)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\overrightarrow{A'B} = (6, 3, 3)\\). Line: \\((-1 + 6s, -1 + 3s, -1 + 3s)\\). In \\(\\Pi\\): \\(-3 + 12s = 3\\), so \\(s = \\frac{1}{2}\\)."
+    ],
+    "answer": "\\(R\\left(2, \\frac{1}{2}, \\frac{1}{2}\\right)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(AR = A'R\\), so the path has length \\(A'B = \\sqrt{36 + 9 + 9} = \\sqrt{54}\\).",
+     "Check: \\(AR = \\sqrt{1 + \\frac{25}{4} + \\frac{25}{4}} = \\sqrt{13.5}\\) and \\(RB = \\sqrt{9 + \\frac{9}{4} + \\frac{9}{4}} = \\sqrt{13.5}\\); \\(2\\sqrt{13.5} = \\sqrt{54}\\)."
+    ],
+    "answer": "\\(3\\sqrt{6}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-020",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Compound angle and reciprocal identities",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "In this question, \\(0 < x < \\dfrac{\\pi}{2}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Simplify \\(\\left(1 - \\cos^2 x\\right)\\operatorname{cosec} x\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\tan x + \\cot x = \\sec x \\operatorname{cosec} x\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Write every reciprocal function in terms of \\(\\sin\\) and \\(\\cos\\): \\(\\operatorname{cosec} x = \\frac{1}{\\sin x}\\), \\(\\sec x = \\frac{1}{\\cos x}\\), \\(\\cot x = \\frac{\\cos x}{\\sin x}\\). Then use \\(\\sin^2 x + \\cos^2 x = 1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(1 - \\cos^2 x = \\sin^2 x\\), so the expression is \\(\\sin^2 x \\times \\dfrac{1}{\\sin x}\\)."
+    ],
+    "answer": "\\(\\sin x\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\tan x + \\cot x = \\dfrac{\\sin x}{\\cos x} + \\dfrac{\\cos x}{\\sin x} = \\dfrac{\\sin^2 x + \\cos^2 x}{\\sin x\\cos x} = \\dfrac{1}{\\sin x\\cos x} = \\sec x\\operatorname{cosec} x\\)."
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-021",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Compound angle and reciprocal identities",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "This question is about the equation \\(\\sec^2 x + \\operatorname{cosec}^2 x = 8\\), for \\(0 < x < \\dfrac{\\pi}{2}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\sec^2 x + \\operatorname{cosec}^2 x = \\sec^2 x \\operatorname{cosec}^2 x\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Hence show that the equation can be written as \\(\\sin^2 2x = \\dfrac{1}{2}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find all the solutions of the equation.",
+    "marks": 2
+   }
+  ],
+  "idea": "Put both fractions over the common denominator \\(\\sin^2 x\\cos^2 x\\). Then \\(\\sin x\\cos x = \\frac{1}{2}\\sin 2x\\) turns the product into a single double-angle term.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{1}{\\cos^2 x} + \\dfrac{1}{\\sin^2 x} = \\dfrac{\\sin^2 x + \\cos^2 x}{\\cos^2 x\\sin^2 x} = \\dfrac{1}{\\cos^2 x\\sin^2 x} = \\sec^2 x\\operatorname{cosec}^2 x\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\sin^2 x\\cos^2 x = \\left(\\frac{1}{2}\\sin 2x\\right)^2 = \\frac{1}{4}\\sin^2 2x\\), so the equation is \\(\\dfrac{4}{\\sin^2 2x} = 8\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(0 < 2x < \\pi\\), so \\(\\sin 2x > 0\\) and \\(\\sin 2x = \\dfrac{1}{\\sqrt{2}}\\): \\(2x = \\dfrac{\\pi}{4}\\) or \\(\\dfrac{3\\pi}{4}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{8}\\) or \\(x = \\dfrac{3\\pi}{8}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-022",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Compound angle and reciprocal identities",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The angle \\(A\\) is acute with \\(\\sin A = \\dfrac{3}{5}\\), and the angle \\(B\\) is obtuse with \\(\\cos B = -\\dfrac{5}{13}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the exact value of \\(\\cos(A + B)\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the exact value of \\(\\tan(A + B)\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Find the missing ratios first, choosing the sign from the quadrant: \\(\\cos A > 0\\) for acute \\(A\\), \\(\\sin B > 0\\) for obtuse \\(B\\). Then use the compound angle formulas.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\cos A = \\dfrac{4}{5}\\) and \\(\\sin B = \\dfrac{12}{13}\\).",
+     "\\(\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B = \\dfrac{4}{5} \\times \\left(-\\dfrac{5}{13}\\right) - \\dfrac{3}{5} \\times \\dfrac{12}{13} = -\\dfrac{20}{65} - \\dfrac{36}{65}\\)."
+    ],
+    "answer": "\\(-\\dfrac{56}{65}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B = -\\dfrac{15}{65} + \\dfrac{48}{65} = \\dfrac{33}{65}\\).",
+     "\\(\\tan(A + B) = \\dfrac{33/65}{-56/65}\\). (Or: \\(\\tan A = \\frac{3}{4}\\), \\(\\tan B = -\\frac{12}{5}\\), and \\(\\dfrac{\\frac{3}{4} - \\frac{12}{5}}{1 + \\frac{9}{5}} = -\\dfrac{33}{56}\\).)"
+    ],
+    "answer": "\\(-\\dfrac{33}{56}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-023",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Compound angle and reciprocal identities",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "Let \\(t = \\tan x\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use compound angle formulas to show that \\(\\tan 3x = \\dfrac{3t - t^3}{1 - 3t^2}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence show that \\(\\tan\\dfrac{\\pi}{12}\\), \\(\\tan\\dfrac{5\\pi}{12}\\) and \\(\\tan\\dfrac{3\\pi}{4}\\) are the roots of \\(t^3 - 3t^2 - 3t + 1 = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence find the exact value of \\(\\tan\\dfrac{\\pi}{12}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Write \\(3x = 2x + x\\) and use \\(\\tan 2x = \\frac{2t}{1 - t^2}\\). Each of the three angles makes \\(\\tan 3x = 1\\), and \\(\\tan\\frac{3\\pi}{4} = -1\\) gives a known root to factor out.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\[\\tan 3x = \\frac{\\tan 2x + \\tan x}{1 - \\tan 2x\\tan x} = \\frac{\\frac{2t}{1 - t^2} + t}{1 - \\frac{2t^2}{1 - t^2}}\\]",
+     "Multiply top and bottom by \\(1 - t^2\\): \\(\\dfrac{2t + t - t^3}{1 - t^2 - 2t^2} = \\dfrac{3t - t^3}{1 - 3t^2}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "For each angle, \\(3x\\) is \\(\\frac{\\pi}{4}\\), \\(\\frac{5\\pi}{4}\\) or \\(\\frac{9\\pi}{4}\\), so \\(\\tan 3x = 1\\). None of the three has \\(1 - 3t^2 = 0\\).",
+     "\\(\\dfrac{3t - t^3}{1 - 3t^2} = 1\\) gives \\(3t - t^3 = 1 - 3t^2\\), that is \\(t^3 - 3t^2 - 3t + 1 = 0\\). The three values of \\(t\\) are different, so they are all three roots."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(t = \\tan\\frac{3\\pi}{4} = -1\\) is a root: \\(t^3 - 3t^2 - 3t + 1 = (t + 1)\\left(t^2 - 4t + 1\\right)\\).",
+     "\\(t^2 - 4t + 1 = 0\\) gives \\(t = 2 \\pm \\sqrt{3}\\). \\(\\tan\\frac{\\pi}{12} < \\tan\\frac{5\\pi}{12}\\), so \\(\\tan\\frac{\\pi}{12}\\) is the smaller root."
+    ],
+    "answer": "\\(\\tan\\dfrac{\\pi}{12} = 2 - \\sqrt{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-024",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Compound angle and reciprocal identities",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Let \\(t = \\tan\\dfrac{x}{2}\\), where \\(x \\ne \\pi\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Using double angle formulas with \\(\\frac{x}{2}\\), show that \\(\\sin x = \\dfrac{2t}{1 + t^2}\\) and \\(\\cos x = \\dfrac{1 - t^2}{1 + t^2}\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Hence solve the equation \\(3\\sin x + 4\\cos x = 4\\), for \\(0 \\le x < 2\\pi\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "Write \\(\\sin x = 2\\sin\\frac{x}{2}\\cos\\frac{x}{2}\\) and \\(\\cos x = \\cos^2\\frac{x}{2} - \\sin^2\\frac{x}{2}\\), then divide top and bottom by \\(\\cos^2\\frac{x}{2}\\), using \\(\\sec^2 = 1 + \\tan^2\\). The substitution misses \\(x = \\pi\\), so check that value separately.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sin x = 2\\sin\\frac{x}{2}\\cos\\frac{x}{2} = \\dfrac{2\\tan\\frac{x}{2}}{\\sec^2\\frac{x}{2}} = \\dfrac{2t}{1 + t^2}\\) (dividing by \\(\\cos^2\\frac{x}{2}\\) and multiplying by it again).",
+     "\\(\\cos x = \\cos^2\\frac{x}{2} - \\sin^2\\frac{x}{2} = \\cos^2\\frac{x}{2}\\left(1 - t^2\\right) = \\dfrac{1 - t^2}{1 + t^2}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{6t}{1 + t^2} + \\dfrac{4 - 4t^2}{1 + t^2} = 4\\) gives \\(6t + 4 - 4t^2 = 4 + 4t^2\\), so \\(8t^2 - 6t = 0\\): \\(t = 0\\) or \\(t = \\frac{3}{4}\\).",
+     "\\(\\tan\\frac{x}{2} = 0\\) with \\(0 \\le \\frac{x}{2} < \\pi\\): \\(x = 0\\). \\(\\tan\\frac{x}{2} = \\frac{3}{4}\\): \\(x = 2\\arctan\\frac{3}{4} = 1.287\\ldots\\)",
+     "Check \\(x = \\pi\\), which the substitution excludes: \\(3(0) + 4(-1) = -4 \\ne 4\\)."
+    ],
+    "answer": "\\(x = 0\\) or \\(x = 2\\arctan\\frac{3}{4} = 1.29\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-025",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Compound angle and reciprocal identities",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "In this question, \\(\\cos 2x \\ne 0\\) and \\(\\cos x \\ne \\sin x\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\sec 2x + \\tan 2x = \\dfrac{\\cos x + \\sin x}{\\cos x - \\sin x}\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Hence show that \\(\\sec 2x + \\tan 2x = \\tan\\left(\\dfrac{\\pi}{4} + x\\right)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Solve the equation \\(\\sec 2x + \\tan 2x = \\sqrt{3}\\), for \\(0 < x < \\dfrac{\\pi}{4}\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Combine into one fraction: \\(\\dfrac{1 + \\sin 2x}{\\cos 2x}\\). The top is \\((\\cos x + \\sin x)^2\\) and the bottom is a difference of two squares. Then divide top and bottom by \\(\\cos x\\) and recognise the formula for \\(\\tan(A + B)\\) with \\(\\tan\\frac{\\pi}{4} = 1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sec 2x + \\tan 2x = \\dfrac{1 + \\sin 2x}{\\cos 2x}\\).",
+     "\\(1 + \\sin 2x = \\cos^2 x + \\sin^2 x + 2\\sin x\\cos x = (\\cos x + \\sin x)^2\\), and \\(\\cos 2x = (\\cos x + \\sin x)(\\cos x - \\sin x)\\).",
+     "Cancel one factor \\(\\cos x + \\sin x\\) (not zero, since \\(\\cos 2x \\ne 0\\))."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Divide top and bottom by \\(\\cos x\\): \\(\\dfrac{1 + \\tan x}{1 - \\tan x} = \\dfrac{\\tan\\frac{\\pi}{4} + \\tan x}{1 - \\tan\\frac{\\pi}{4}\\tan x} = \\tan\\left(\\dfrac{\\pi}{4} + x\\right)\\). (If \\(\\cos x = 0\\), then \\(\\sin x = \\pm 1\\) and both sides equal \\(-1\\), so the identity still holds.)"
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\tan\\left(\\frac{\\pi}{4} + x\\right) = \\sqrt{3}\\), with \\(\\frac{\\pi}{4} < \\frac{\\pi}{4} + x < \\frac{\\pi}{2}\\). So \\(\\frac{\\pi}{4} + x = \\frac{\\pi}{3}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\pi}{12}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-026",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Inverse trigonometric functions",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "Find the exact value of each of the following."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "\\(\\arcsin\\left(-\\dfrac{1}{2}\\right)\\)",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "\\(\\arccos\\left(\\cos\\dfrac{5\\pi}{3}\\right)\\)",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "\\(\\tan\\left(\\arcsin\\dfrac{3}{5}\\right)\\)",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "\\(\\sin\\left(2\\arccos\\dfrac{1}{3}\\right)\\)",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\arcsin\\) gives an angle in \\(\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]\\) and \\(\\arccos\\) an angle in \\([0, \\pi]\\). For a ratio of an inverse function, draw the right-angled triangle for the angle and read off the other ratios.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sin\\left(-\\frac{\\pi}{6}\\right) = -\\frac{1}{2}\\), and \\(-\\frac{\\pi}{6}\\) is in the range of \\(\\arcsin\\)."
+    ],
+    "answer": "\\(-\\dfrac{\\pi}{6}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\cos\\frac{5\\pi}{3} = \\frac{1}{2}\\), and the angle in \\([0, \\pi]\\) with cosine \\(\\frac{1}{2}\\) is \\(\\frac{\\pi}{3}\\). (It is not \\(\\frac{5\\pi}{3}\\), which is outside the range.)"
+    ],
+    "answer": "\\(\\dfrac{\\pi}{3}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Let \\(\\theta = \\arcsin\\frac{3}{5}\\), an acute angle: opposite 3, hypotenuse 5, adjacent 4."
+    ],
+    "answer": "\\(\\dfrac{3}{4}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Let \\(\\theta = \\arccos\\frac{1}{3}\\): \\(\\cos\\theta = \\frac{1}{3}\\) and \\(\\sin\\theta = \\sqrt{1 - \\frac{1}{9}} = \\frac{2\\sqrt{2}}{3}\\) (positive, since \\(0 \\le \\theta \\le \\pi\\)).",
+     "\\(\\sin 2\\theta = 2 \\times \\dfrac{2\\sqrt{2}}{3} \\times \\dfrac{1}{3}\\)."
+    ],
+    "answer": "\\(\\dfrac{4\\sqrt{2}}{9}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-027",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Inverse trigonometric functions",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(f(x) = 2\\arccos(x - 1)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the largest possible domain of \\(f\\), and the range of \\(f\\) on this domain.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(f^{-1}(x)\\), stating its domain.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Solve the equation \\(f(x) = 1.5\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\arccos u\\) needs \\(-1 \\le u \\le 1\\) and gives values from 0 to \\(\\pi\\). To invert, undo each step in reverse order: halve, take cosine, add 1.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(-1 \\le x - 1 \\le 1\\) gives \\(0 \\le x \\le 2\\). \\(\\arccos\\) takes every value in \\([0, \\pi]\\), so \\(f\\) takes every value in \\([0, 2\\pi]\\)."
+    ],
+    "answer": "Domain \\(0 \\le x \\le 2\\); range \\(0 \\le f(x) \\le 2\\pi\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(y = 2\\arccos(x - 1)\\) gives \\(\\frac{y}{2} = \\arccos(x - 1)\\), so \\(x - 1 = \\cos\\frac{y}{2}\\). The domain of \\(f^{-1}\\) is the range of \\(f\\)."
+    ],
+    "answer": "\\(f^{-1}(x) = 1 + \\cos\\dfrac{x}{2}\\), for \\(0 \\le x \\le 2\\pi\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(x = f^{-1}(1.5) = 1 + \\cos 0.75 = 1.731\\ldots\\)"
+    ],
+    "answer": "\\(x = 1.73\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-028",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Inverse trigonometric functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "This question is about sums of inverse tangents."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\arctan\\dfrac{1}{2} + \\arctan\\dfrac{1}{3} = \\dfrac{\\pi}{4}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\arctan x + \\arctan\\dfrac{1}{x} = \\dfrac{\\pi}{2}\\) for \\(x > 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence find the exact value of \\(\\arctan 2 + \\arctan 3\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Take the tangent of the sum with the compound angle formula. Knowing \\(\\tan\\) of an angle fixes the angle only once you know which interval it is in, so bound the sum first.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Let \\(\\alpha = \\arctan\\frac{1}{2}\\), \\(\\beta = \\arctan\\frac{1}{3}\\). \\(\\tan(\\alpha + \\beta) = \\dfrac{\\frac{1}{2} + \\frac{1}{3}}{1 - \\frac{1}{6}} = \\dfrac{5/6}{5/6} = 1\\).",
+     "Both angles are in \\(\\left(0, \\frac{\\pi}{4}\\right)\\), since \\(\\frac{1}{2}, \\frac{1}{3} < 1\\), so \\(0 < \\alpha + \\beta < \\frac{\\pi}{2}\\). The only angle there with tangent 1 is \\(\\frac{\\pi}{4}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Let \\(\\theta = \\arctan x\\), with \\(0 < \\theta < \\frac{\\pi}{2}\\). Then \\(\\tan\\left(\\frac{\\pi}{2} - \\theta\\right) = \\cot\\theta = \\frac{1}{x}\\), and \\(\\frac{\\pi}{2} - \\theta\\) is also in \\(\\left(0, \\frac{\\pi}{2}\\right)\\), so \\(\\arctan\\frac{1}{x} = \\frac{\\pi}{2} - \\theta\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\arctan 2 = \\frac{\\pi}{2} - \\arctan\\frac{1}{2}\\) and \\(\\arctan 3 = \\frac{\\pi}{2} - \\arctan\\frac{1}{3}\\).",
+     "Sum: \\(\\pi - \\left(\\arctan\\frac{1}{2} + \\arctan\\frac{1}{3}\\right) = \\pi - \\frac{\\pi}{4}\\)."
+    ],
+    "answer": "\\(\\dfrac{3\\pi}{4}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-029",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Inverse trigonometric functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "Solve the equation \\(\\arctan 2x + \\arctan x = \\dfrac{\\pi}{4}\\)."
+  ],
+  "parts": [],
+  "idea": "Take the tangent of both sides and use the compound angle formula. Taking the tangent can bring in false solutions, so check the sign of each answer: the left side has the sign of \\(x\\).",
+  "solution": [
+   {
+    "label": "",
+    "steps": [
+     "Let \\(\\alpha = \\arctan 2x\\), \\(\\beta = \\arctan x\\). \\(\\tan(\\alpha + \\beta) = \\dfrac{2x + x}{1 - 2x^2} = 1\\), so \\(3x = 1 - 2x^2\\) and \\(2x^2 + 3x - 1 = 0\\).",
+     "\\(x = \\dfrac{-3 \\pm \\sqrt{9 + 8}}{4} = \\dfrac{-3 \\pm \\sqrt{17}}{4}\\).",
+     "If \\(x < 0\\), both arctangents are negative, so their sum cannot be \\(\\frac{\\pi}{4}\\): reject \\(\\frac{-3 - \\sqrt{17}}{4}\\).",
+     "For \\(x = \\frac{-3 + \\sqrt{17}}{4} \\approx 0.28\\): \\(2x^2 < 1\\), so \\(\\tan(\\alpha + \\beta) = 1\\) with \\(0 < \\alpha + \\beta < \\frac{\\pi}{2}\\), giving \\(\\alpha + \\beta = \\frac{\\pi}{4}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\sqrt{17} - 3}{4}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-030",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Inverse trigonometric functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "In this question, \\(-1 \\le x \\le 1\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "By letting \\(\\theta = \\arcsin x\\), show that \\(\\arcsin x + \\arccos x = \\dfrac{\\pi}{2}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence solve the equation \\(\\arcsin x = 2\\arccos x\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Solve the equation \\(\\arcsin x - \\arccos x = \\dfrac{\\pi}{3}\\), giving your answer in the form \\(\\dfrac{\\sqrt{a} + \\sqrt{b}}{4}\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\cos\\left(\\frac{\\pi}{2} - \\theta\\right) = \\sin\\theta\\), and \\(\\frac{\\pi}{2} - \\theta\\) lies in the range of \\(\\arccos\\). Then replace \\(\\arccos x\\) by \\(\\frac{\\pi}{2} - \\arcsin x\\) to get an equation in \\(\\arcsin x\\) alone.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\theta = \\arcsin x\\) gives \\(\\sin\\theta = x\\) with \\(-\\frac{\\pi}{2} \\le \\theta \\le \\frac{\\pi}{2}\\).",
+     "Then \\(\\cos\\left(\\frac{\\pi}{2} - \\theta\\right) = \\sin\\theta = x\\), and \\(0 \\le \\frac{\\pi}{2} - \\theta \\le \\pi\\), which is the range of \\(\\arccos\\). So \\(\\arccos x = \\frac{\\pi}{2} - \\theta\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\arcsin x = 2\\left(\\frac{\\pi}{2} - \\arcsin x\\right)\\), so \\(3\\arcsin x = \\pi\\) and \\(\\arcsin x = \\frac{\\pi}{3}\\).",
+     "Check: \\(\\arccos\\frac{\\sqrt{3}}{2} = \\frac{\\pi}{6}\\), and \\(2 \\times \\frac{\\pi}{6} = \\frac{\\pi}{3}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\sqrt{3}}{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\arcsin x - \\left(\\frac{\\pi}{2} - \\arcsin x\\right) = \\frac{\\pi}{3}\\), so \\(2\\arcsin x = \\frac{5\\pi}{6}\\) and \\(\\arcsin x = \\frac{5\\pi}{12}\\).",
+     "\\(x = \\sin 75° = \\sin 45°\\cos 30° + \\cos 45°\\sin 30° = \\dfrac{\\sqrt{2}}{2} \\times \\dfrac{\\sqrt{3}}{2} + \\dfrac{\\sqrt{2}}{2} \\times \\dfrac{1}{2}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{\\sqrt{6} + \\sqrt{2}}{4}\\)"
+   }
+  ]
+ }
+]

@@ -1,0 +1,703 @@
+[
+ {
+  "id": "ai-sp-p2-001",
+  "strand": "Statistics and Probability",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "A student grows eight bean plants under lamps. Each plant gets a different number of hours of light per day, \\(x\\), and its growth over four weeks, \\(y\\) cm, is recorded.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{Light, x (hours)} & \\text{Growth, y (cm)} \\\\ \\hline 8 & 3.0 \\\\ \\hline 9 & 3.8 \\\\ \\hline 10 & 4.6 \\\\ \\hline 11 & 4.9 \\\\ \\hline 12 & 5.8 \\\\ \\hline 13 & 6.3 \\\\ \\hline 14 & 6.6 \\\\ \\hline 15 & 7.4 \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "State which of the two variables is the independent variable.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find Pearson's product-moment correlation coefficient, \\(r\\), and describe the correlation.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the equation of the regression line of \\(y\\) on \\(x\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Interpret the gradient of the regression line in this context.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Use the regression line to estimate the growth of a plant given 10.5 hours of light per day.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Explain why the regression line should not be used to estimate the growth of a plant given 20 hours of light per day.",
+    "marks": 1
+   },
+   {
+    "label": "g",
+    "text": "Write down the value of Spearman's rank correlation coefficient for these eight plants. Give a reason.",
+    "marks": 1
+   },
+   {
+    "label": "h",
+    "text": "A ninth plant gets 16 hours of light per day, but it is damaged by insects and grows only 5.0 cm. For all nine plants, find the value of \\(r\\) and the value of Spearman's rank correlation coefficient, \\(r_{s}\\).",
+    "marks": 3
+   },
+   {
+    "label": "i",
+    "text": "Explain why \\(r_{s}\\) changes less than \\(r\\) when the ninth plant is included.",
+    "marks": 1
+   }
+  ],
+  "idea": "Pearson's \\(r\\) measures how close the points are to a straight line; Spearman's \\(r_{s}\\) only uses the order of the values. One unusual point can pull \\(r\\) down a long way, but it can only move a few ranks.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The student chooses the hours of light and measures the growth."
+    ],
+    "answer": "The hours of light, \\(x\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "From the calculator: \\(r = 0.9942\\ldots\\)"
+    ],
+    "answer": "\\(r = 0.994\\): a strong positive linear correlation"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "From the calculator: gradient \\(0.6047\\ldots\\), intercept \\(-1.654\\ldots\\)"
+    ],
+    "answer": "\\(y = 0.605x - 1.65\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The gradient is the change in \\(y\\) for each increase of 1 in \\(x\\)."
+    ],
+    "answer": "Each extra hour of light per day goes with about 0.605 cm more growth"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(0.6047\\ldots \\times 10.5 - 1.654\\ldots = 4.695\\ldots\\)"
+    ],
+    "answer": "4.70 cm"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "20 hours is far outside the measured range of 8 to 15 hours."
+    ],
+    "answer": "It would be extrapolation; the pattern may not continue"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "As the hours of light increase, the growth increases every time, so the two sets of ranks are the same."
+    ],
+    "answer": "\\(r_{s} = 1\\)"
+   },
+   {
+    "label": "h",
+    "steps": [
+     "Add \\((16, 5.0)\\) to the lists. From the calculator: \\(r = 0.7904\\ldots\\)",
+     "Ranks of \\(x\\): 1 to 9. Ranks of \\(y\\) (smallest = 1): 1, 2, 3, 4, 6, 7, 8, 9, 5.",
+     "Pearson's coefficient for the ranks: \\(r_{s} = 0.8333\\ldots\\)"
+    ],
+    "answer": "\\(r = 0.790\\), \\(r_{s} = 0.833\\)"
+   },
+   {
+    "label": "i",
+    "steps": [
+     "The damaged plant is far below the line, which has a big effect on \\(r\\). Its growth is only the fifth smallest, so it moves only a few places in the ranking."
+    ],
+    "answer": "\\(r_{s}\\) uses only the ranks, so one extreme value changes it less"
+   }
+  ]
+ },
+ {
+  "id": "ai-sp-p2-002",
+  "strand": "Statistics and Probability",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "The masses of 160 parcels sent from depot A are shown in the table and in the cumulative frequency graph.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{Mass, } m \\text{ (kg)} & \\text{Frequency} \\\\ \\hline 0 \\le m < 2 & 10 \\\\ \\hline 2 \\le m < 4 & 30 \\\\ \\hline 4 \\le m < 6 & 60 \\\\ \\hline 6 \\le m < 8 & 40 \\\\ \\hline 8 \\le m < 10 & 20 \\\\ \\hline \\end{array}\\]",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 440 340\" width=\"440\" height=\"340\" role=\"img\" aria-label=\"A cumulative frequency graph for the masses of 160 parcels at depot A. The points are joined by straight lines: (0, 0), (2, 10), (4, 40), (6, 100), (8, 140) and (10, 160). The horizontal axis shows mass in kg from 0 to 10, and the vertical axis shows cumulative frequency from 0 to 160.\"><defs><clipPath id=\"aifn31\"><rect x=\"58\" y=\"18\" width=\"360\" height=\"274\"/></clipPath></defs><line x1=\"58.0\" y1=\"292.0\" x2=\"58.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"76.0\" y1=\"292.0\" x2=\"76.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"94.0\" y1=\"292.0\" x2=\"94.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"112.0\" y1=\"292.0\" x2=\"112.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"130.0\" y1=\"292.0\" x2=\"130.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"148.0\" y1=\"292.0\" x2=\"148.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"166.0\" y1=\"292.0\" x2=\"166.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"184.0\" y1=\"292.0\" x2=\"184.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"202.0\" y1=\"292.0\" x2=\"202.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"220.0\" y1=\"292.0\" x2=\"220.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"238.0\" y1=\"292.0\" x2=\"238.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"256.0\" y1=\"292.0\" x2=\"256.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"274.0\" y1=\"292.0\" x2=\"274.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"292.0\" y1=\"292.0\" x2=\"292.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"310.0\" y1=\"292.0\" x2=\"310.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"328.0\" y1=\"292.0\" x2=\"328.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"346.0\" y1=\"292.0\" x2=\"346.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"364.0\" y1=\"292.0\" x2=\"364.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"382.0\" y1=\"292.0\" x2=\"382.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"400.0\" y1=\"292.0\" x2=\"400.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"418.0\" y1=\"292.0\" x2=\"418.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"292.0\" x2=\"418.0\" y2=\"292.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"274.9\" x2=\"418.0\" y2=\"274.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"257.8\" x2=\"418.0\" y2=\"257.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"240.6\" x2=\"418.0\" y2=\"240.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"223.5\" x2=\"418.0\" y2=\"223.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"206.4\" x2=\"418.0\" y2=\"206.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"189.2\" x2=\"418.0\" y2=\"189.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"172.1\" x2=\"418.0\" y2=\"172.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"155.0\" x2=\"418.0\" y2=\"155.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"137.9\" x2=\"418.0\" y2=\"137.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"120.8\" x2=\"418.0\" y2=\"120.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"103.6\" x2=\"418.0\" y2=\"103.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"86.5\" x2=\"418.0\" y2=\"86.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"69.4\" x2=\"418.0\" y2=\"69.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"52.2\" x2=\"418.0\" y2=\"52.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"35.1\" x2=\"418.0\" y2=\"35.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"18.0\" x2=\"418.0\" y2=\"18.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.0\" y1=\"292.0\" x2=\"428.0\" y2=\"292.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"58.0\" y1=\"292.0\" x2=\"58.0\" y2=\"8.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M434.0 292.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M58.0 2.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"430.0\" y=\"311.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"></text><text x=\"45.0\" y=\"7.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"></text><line x1=\"94.0\" y1=\"289.0\" x2=\"94.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"130.0\" y1=\"289.0\" x2=\"130.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"166.0\" y1=\"289.0\" x2=\"166.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"202.0\" y1=\"289.0\" x2=\"202.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"238.0\" y1=\"289.0\" x2=\"238.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"274.0\" y1=\"289.0\" x2=\"274.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"310.0\" y1=\"289.0\" x2=\"310.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"346.0\" y1=\"289.0\" x2=\"346.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"382.0\" y1=\"289.0\" x2=\"382.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"418.0\" y1=\"289.0\" x2=\"418.0\" y2=\"295.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"257.8\" x2=\"61.0\" y2=\"257.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"223.5\" x2=\"61.0\" y2=\"223.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"189.2\" x2=\"61.0\" y2=\"189.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"155.0\" x2=\"61.0\" y2=\"155.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"120.8\" x2=\"61.0\" y2=\"120.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"86.5\" x2=\"61.0\" y2=\"86.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"52.2\" x2=\"61.0\" y2=\"52.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"55.0\" y1=\"18.0\" x2=\"61.0\" y2=\"18.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M58.0 292.0 L130.0 274.9 L202.0 223.5 L274.0 120.8 L346.0 52.2 L418.0 18.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"94.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"130.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"166.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"202.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"238.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"274.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"310.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">7</text><text x=\"346.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">8</text><text x=\"382.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">9</text><text x=\"418.0\" y=\"308.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">10</text><text x=\"52.0\" y=\"262.2\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">20</text><text x=\"52.0\" y=\"228.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">40</text><text x=\"52.0\" y=\"193.8\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">60</text><text x=\"52.0\" y=\"159.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">80</text><text x=\"52.0\" y=\"125.2\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">100</text><text x=\"52.0\" y=\"91.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">120</text><text x=\"52.0\" y=\"56.8\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">140</text><text x=\"52.0\" y=\"22.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">160</text><text x=\"52.0\" y=\"307.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><circle cx=\"58.0\" cy=\"292.0\" r=\"3.2\" fill=\"#0b0d12\"/><circle cx=\"130.0\" cy=\"274.9\" r=\"3.2\" fill=\"#0b0d12\"/><circle cx=\"202.0\" cy=\"223.5\" r=\"3.2\" fill=\"#0b0d12\"/><circle cx=\"274.0\" cy=\"120.8\" r=\"3.2\" fill=\"#0b0d12\"/><circle cx=\"346.0\" cy=\"52.2\" r=\"3.2\" fill=\"#0b0d12\"/><circle cx=\"418.0\" cy=\"18.0\" r=\"3.2\" fill=\"#0b0d12\"/><text x=\"238.0\" y=\"332.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">mass (kg)</text><g transform=\"translate(16,155.0) rotate(-90)\"><text x=\"0.0\" y=\"0.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">cumulative frequency</text></g></svg>"
+   },
+   "The box-and-whisker diagram shows the masses of the parcels sent from a second depot, B.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 484 114\" width=\"484\" height=\"114\" role=\"img\" aria-label=\"A box-and-whisker diagram for the masses of parcels at depot B, on a scale from 0 to 12 kg marked every 1 kg with small marks every 0.2 kg. The lower whisker starts at 0.5, the box runs from 3.2 to 5.6 with the median at 4.4, and the upper whisker ends at 11.5.\"><path d=\"M52.0 59.3 L432.0 59.3\" stroke=\"#0b0d12\" stroke-width=\"1.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M52.0 59.3 L52.0 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M83.7 59.3 L83.7 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M115.3 59.3 L115.3 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M147.0 59.3 L147.0 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M178.7 59.3 L178.7 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M210.3 59.3 L210.3 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M242.0 59.3 L242.0 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M273.7 59.3 L273.7 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M305.3 59.3 L305.3 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M337.0 59.3 L337.0 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M368.7 59.3 L368.7 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M400.3 59.3 L400.3 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M432.0 59.3 L432.0 63.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M52.0 59.3 L52.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M58.3 59.3 L58.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M64.7 59.3 L64.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M71.0 59.3 L71.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M77.3 59.3 L77.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M83.7 59.3 L83.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M90.0 59.3 L90.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M96.3 59.3 L96.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M102.7 59.3 L102.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M109.0 59.3 L109.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M115.3 59.3 L115.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M121.7 59.3 L121.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M128.0 59.3 L128.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M134.3 59.3 L134.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M140.7 59.3 L140.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M147.0 59.3 L147.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M153.3 59.3 L153.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M159.7 59.3 L159.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M166.0 59.3 L166.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M172.3 59.3 L172.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M178.7 59.3 L178.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M185.0 59.3 L185.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M191.3 59.3 L191.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M197.7 59.3 L197.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M204.0 59.3 L204.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M210.3 59.3 L210.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M216.7 59.3 L216.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M223.0 59.3 L223.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M229.3 59.3 L229.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M235.7 59.3 L235.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M242.0 59.3 L242.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M248.3 59.3 L248.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M254.7 59.3 L254.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M261.0 59.3 L261.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M267.3 59.3 L267.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M273.7 59.3 L273.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M280.0 59.3 L280.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M286.3 59.3 L286.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M292.7 59.3 L292.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M299.0 59.3 L299.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M305.3 59.3 L305.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M311.7 59.3 L311.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M318.0 59.3 L318.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M324.3 59.3 L324.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M330.7 59.3 L330.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M337.0 59.3 L337.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M343.3 59.3 L343.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M349.7 59.3 L349.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M356.0 59.3 L356.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M362.3 59.3 L362.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M368.7 59.3 L368.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M375.0 59.3 L375.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M381.3 59.3 L381.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M387.7 59.3 L387.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M394.0 59.3 L394.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M400.3 59.3 L400.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M406.7 59.3 L406.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M413.0 59.3 L413.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M419.3 59.3 L419.3 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M425.7 59.3 L425.7 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M432.0 59.3 L432.0 61.7\" stroke=\"#0b0d12\" stroke-width=\"0.9\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M153.3 37.9 L229.3 37.9 L229.3 16.1 L153.3 16.1 Z\" fill=\"#eaf0fb\" stroke=\"#0b0d12\" stroke-width=\"1.8\" stroke-linejoin=\"round\"/><path d=\"M191.3 37.9 L191.3 16.1\" stroke=\"#0b0d12\" stroke-width=\"2.2\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M67.8 27.0 L153.3 27.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M229.3 27.0 L416.2 27.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M67.8 32.1 L67.8 21.9\" stroke=\"#0b0d12\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M416.2 32.1 L416.2 21.9\" stroke=\"#0b0d12\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><text x=\"52.0\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><text x=\"83.7\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><text x=\"115.3\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><text x=\"147.0\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><text x=\"178.7\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><text x=\"210.3\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">5</text><text x=\"242.0\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6</text><text x=\"273.7\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">7</text><text x=\"305.3\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">8</text><text x=\"337.0\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">9</text><text x=\"368.7\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">10</text><text x=\"400.3\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">11</text><text x=\"432.0\" y=\"80.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">12</text><text x=\"242.0\" y=\"98.7\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">mass (kg)</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find an estimate of the mean and the standard deviation of the masses of the parcels from depot A.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Explain why your answers to part (a) are estimates.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Use the graph to find the median, the lower quartile and the upper quartile of the masses at depot A.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Parcels heavier than 8.5 kg must be lifted by two people. Use the graph to estimate the number of these parcels.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Sending a parcel costs $12 if it is 6 kg or heavier, and $7 otherwise. Find the total cost of sending the 160 parcels.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Show that the heaviest parcel from depot B, 11.5 kg, is an outlier.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "Compare the masses of the parcels from the two depots.",
+    "marks": 2
+   }
+  ],
+  "idea": "Grouped data are estimated with the mid-interval values. A cumulative frequency graph drawn with straight lines between the points is read by going across from a cumulative frequency, or up from a mass.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Mid-interval values 1, 3, 5, 7, 9 with frequencies 10, 30, 60, 40, 20 on the calculator.",
+     "\\(\\bar{x} = \\dfrac{10 + 90 + 300 + 280 + 180}{160} = 5.375\\), \\(\\sigma = 2.146\\ldots\\)"
+    ],
+    "answer": "Mean 5.375 kg; standard deviation 2.15 kg"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The exact masses are not known; each parcel is taken to be at the middle of its group."
+    ],
+    "answer": "The mid-interval values are used in place of the real masses"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Median: cumulative frequency 80, which is \\(\\dfrac{40}{60}\\) of the way from 4 to 6: \\(4 + \\dfrac{2}{3} \\times 2 = 5.333\\ldots\\)",
+     "Lower quartile: cumulative frequency 40, at 4 kg. Upper quartile: cumulative frequency 120, half way from 6 to 8, at 7 kg."
+    ],
+    "answer": "Median 5.33 kg; lower quartile 4 kg; upper quartile 7 kg"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "At 8.5 kg the cumulative frequency is \\(140 + \\dfrac{0.5}{2} \\times 20 = 145\\).",
+     "\\(160 - 145\\)"
+    ],
+    "answer": "15 parcels"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "60 parcels are 6 kg or heavier (40 + 20), and 100 are lighter.",
+     "\\(60 \\times 12 + 100 \\times 7 = 720 + 700\\)"
+    ],
+    "answer": "$1420"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Depot B: \\(\\mathrm{IQR} = 5.6 - 3.2 = 2.4\\). Upper fence \\(= 5.6 + 1.5 \\times 2.4 = 9.2\\).",
+     "\\(11.5 > 9.2\\)"
+    ],
+    "answer": "11.5 is more than 9.2, so it is an outlier"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "Medians: A 5.33 kg, B 4.4 kg. IQRs: A 3 kg, B 2.4 kg."
+    ],
+    "answer": "Parcels from A are heavier on average (higher median), and their masses are more spread out (larger IQR)"
+   }
+  ]
+ },
+ {
+  "id": "ai-sp-p2-003",
+  "strand": "Statistics and Probability",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "The masses of the loaves made by a bakery are normally distributed with mean 808 g and standard deviation 10 g. A loaf with a mass of less than 790 g is rejected."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that a loaf is rejected.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that a loaf has a mass of more than 820 g.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "A loaf is chosen at random from those that are not rejected. Find the probability that its mass is more than 820 g.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The loaves are baked in trays of 24. Find the expected number of rejected loaves in a tray.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Find the probability that a tray has (i) no rejected loaves; (ii) at least two rejected loaves.",
+    "marks": 4
+   },
+   {
+    "label": "f",
+    "text": "Find the probability that, in 5 trays, at least one tray has no rejected loaves.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "The bakery prints a mass \\(m\\) grams on its labels so that 99 % of its loaves weigh more than \\(m\\). Find \\(m\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The probability that a loaf is rejected is the \\(p\\) of a binomial model for the number rejected in a tray. A conditional probability divides by the probability of the condition, here \\(\\mathrm{P}(\\text{not rejected})\\). Every loaf heavier than 820 g is also not rejected.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\mathrm{P}(M < 790) = 0.03593\\ldots\\) (calculator, normal cdf)"
+    ],
+    "answer": "0.0359"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\mathrm{P}(M > 820) = 0.1150\\ldots\\)"
+    ],
+    "answer": "0.115"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\mathrm{P}(M > 820 \\mid M \\ge 790) = \\dfrac{\\mathrm{P}(M > 820)}{\\mathrm{P}(M \\ge 790)} = \\dfrac{0.1150\\ldots}{1 - 0.03593\\ldots} = 0.1193\\ldots\\)"
+    ],
+    "answer": "0.119"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The number rejected, \\(R\\), is binomial with \\(n = 24\\) and \\(p = 0.03593\\ldots\\), so \\(\\mathrm{E}(R) = 24 \\times 0.03593\\ldots = 0.8623\\ldots\\)"
+    ],
+    "answer": "0.862"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "(i) \\(\\mathrm{P}(R = 0) = (1 - 0.03593\\ldots)^{24} = 0.4155\\ldots\\)",
+     "(ii) \\(\\mathrm{P}(R \\ge 2) = 1 - \\mathrm{P}(R \\le 1) = 0.2127\\ldots\\)"
+    ],
+    "answer": "(i) 0.416 (ii) 0.213"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The number of trays with no rejects is binomial with \\(n = 5\\) and \\(p = 0.4155\\ldots\\)",
+     "\\(1 - (1 - 0.4155\\ldots)^{5} = 0.9317\\ldots\\)"
+    ],
+    "answer": "0.932"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "\\(\\mathrm{P}(M < m) = 0.01\\). Inverse normal: \\(m = 784.7\\ldots\\)"
+    ],
+    "answer": "785 g (784.7 g)"
+   }
+  ]
+ },
+ {
+  "id": "ai-sp-p2-004",
+  "strand": "Statistics and Probability",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "200 students, 100 in Year 12 and 100 in Year 13, were asked which revision method they use most.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|l|c|c|c|}\\hline & \\text{Flashcards} & \\text{Past papers} & \\text{Notes} \\\\ \\hline \\text{Year 12} & 30 & 28 & 42 \\\\ \\hline \\text{Year 13} & 18 & 52 & 30 \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "A student is chosen at random. Find the probability that the student uses past papers.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "A student who uses past papers is chosen at random. Find the probability that the student is in Year 13.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Two different students are chosen at random. Find the probability that both are Year 13 students who use notes.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "A \\(\\chi^{2}\\) test for independence is carried out at the 1 % significance level. Write down the null hypothesis.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Find the expected frequency of Year 12 students who use flashcards.",
+    "marks": 1
+   },
+   {
+    "label": "f",
+    "text": "Write down the number of degrees of freedom.",
+    "marks": 1
+   },
+   {
+    "label": "g",
+    "text": "Find the \\(\\chi^{2}\\) statistic and the \\(p\\)-value.",
+    "marks": 2
+   },
+   {
+    "label": "h",
+    "text": "State the conclusion of the test.",
+    "marks": 1
+   },
+   {
+    "label": "i",
+    "text": "For each cell, \\(\\dfrac{(O - E)^{2}}{E}\\) is the part of the \\(\\chi^{2}\\) statistic from that cell. Find which revision method contributes most to the statistic, and describe what the data show about it.",
+    "marks": 2
+   }
+  ],
+  "idea": "Probabilities from a table divide by the size of the group being chosen from. Without replacement, the second choice comes from one fewer student. The expected frequency of a cell is the row total times the column total, divided by the grand total.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{28 + 52}{200}\\)"
+    ],
+    "answer": "0.4"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "80 students use past papers, and 52 of them are in Year 13: \\(\\dfrac{52}{80}\\)."
+    ],
+    "answer": "0.65"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "30 of the 200 are Year 13 students who use notes: \\(\\dfrac{30}{200} \\times \\dfrac{29}{199} = 0.02185\\ldots\\)"
+    ],
+    "answer": "0.0219"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The null hypothesis says there is no link."
+    ],
+    "answer": "\\(\\mathrm{H_0}\\): the revision method is independent of the year group"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\dfrac{100 \\times 48}{200}\\)"
+    ],
+    "answer": "24"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\((2 - 1)(3 - 1)\\)"
+    ],
+    "answer": "2"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "From the calculator: \\(\\chi^{2} = 12.2\\), \\(p = 0.002242\\ldots\\)"
+    ],
+    "answer": "\\(\\chi^{2} = 12.2\\), \\(p = 0.00224\\)"
+   },
+   {
+    "label": "h",
+    "steps": [
+     "\\(0.00224 < 0.01\\)"
+    ],
+    "answer": "Reject \\(\\mathrm{H_0}\\): the revision method depends on the year group"
+   },
+   {
+    "label": "i",
+    "steps": [
+     "Expected values are 24, 40, 36 in each row. Contributions: flashcards \\(1.5 + 1.5 = 3\\); past papers \\(\\dfrac{144}{40} + \\dfrac{144}{40} = 7.2\\); notes \\(1 + 1 = 2\\)."
+    ],
+    "answer": "Past papers (7.2 of the 12.2): Year 13 students use them much more than expected (52 against 40), and Year 12 much less (28 against 40)"
+   }
+  ]
+ },
+ {
+  "id": "ai-sp-p2-005",
+  "strand": "Statistics and Probability",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "At an airport, every bag goes through a scanner. 2 % of bags contain a banned item. The scanner sounds an alarm for 95 % of the bags that contain a banned item, and for 8 % of the bags that do not."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the scanner sounds an alarm for a randomly chosen bag.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "The scanner sounds an alarm. Find the probability that the bag contains a banned item.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Comment on your answer to part (b).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "60 bags are scanned. Find the expected number of alarms.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Find the probability that there are at least 8 alarms for the 60 bags.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Each bag that causes an alarm is searched by hand, which takes 3 minutes. Find the expected time spent searching bags for every 60 bags scanned.",
+    "marks": 1
+   },
+   {
+    "label": "g",
+    "text": "A new scanner still sounds an alarm for 95 % of bags with a banned item. Find the largest false-alarm rate it can have if, when it sounds an alarm, the bag contains a banned item with probability at least 0.5.",
+    "marks": 3
+   }
+  ],
+  "idea": "Draw a tree with banned item or not first, then alarm or not. The probability of an alarm adds the two branches that end in an alarm, and a conditional probability divides one branch by that total.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\mathrm{P}(\\text{alarm}) = 0.02 \\times 0.95 + 0.98 \\times 0.08 = 0.019 + 0.0784\\)"
+    ],
+    "answer": "0.0974"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{0.019}{0.0974} = 0.1950\\ldots\\)"
+    ],
+    "answer": "0.195"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Banned items are rare, so most alarms come from the many bags without one."
+    ],
+    "answer": "Only about 1 in 5 alarms is for a bag that really contains a banned item"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(A \\sim \\mathrm{B}(60, 0.0974)\\): \\(60 \\times 0.0974\\)"
+    ],
+    "answer": "5.84 alarms"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\mathrm{P}(A \\ge 8) = 1 - \\mathrm{P}(A \\le 7) = 0.2265\\ldots\\)"
+    ],
+    "answer": "0.227"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(3 \\times 5.844\\)"
+    ],
+    "answer": "17.5 minutes"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "Let the false-alarm rate be \\(f\\). Then \\(\\dfrac{0.019}{0.019 + 0.98f} \\ge 0.5\\).",
+     "\\(0.019 \\ge 0.0095 + 0.49f\\), so \\(0.49f \\le 0.0095\\) and \\(f \\le 0.01938\\ldots\\)"
+    ],
+    "answer": "\\(f \\le \\dfrac{19}{980} = 0.01938\\ldots\\), so at most about 1.94 %"
+   }
+  ]
+ },
+ {
+  "id": "ai-sp-p2-006",
+  "strand": "Statistics and Probability",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "A café has two coffee machines, A and B. The volume of coffee, in ml, in eight cups from each machine is recorded.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{A} & \\text{B} \\\\ \\hline 348 & 345 \\\\ \\hline 355 & 352 \\\\ \\hline 351 & 347 \\\\ \\hline 349 & 350 \\\\ \\hline 356 & 343 \\\\ \\hline 353 & 349 \\\\ \\hline 350 & 351 \\\\ \\hline 350 & 346 \\\\ \\hline \\end{array}\\]",
+   "The owner tests whether the two machines give different mean volumes, using a two-sample \\(t\\)-test at the 5 % significance level. The volumes from each machine are assumed to be normally distributed with equal variances."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the mean volume for each machine.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down the null and alternative hypotheses.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the \\(p\\)-value for the test.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "State the conclusion of the test. State also whether the conclusion would be the same at the 1 % significance level.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Explain why a one-tailed test would not be appropriate here.",
+    "marks": 1
+   },
+   {
+    "label": "f",
+    "text": "The volumes from machine A are now modelled by a normal distribution with mean 351.5 ml and standard deviation 4 ml. The cups hold 360 ml. Find the probability that a cup from machine A overflows.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "For 100 cups from machine A, find the expected number that overflow, and the probability that at least 2 overflow.",
+    "marks": 3
+   },
+   {
+    "label": "h",
+    "text": "Find the size of cup, to the nearest ml, needed so that only 0.1 % of cups from machine A overflow.",
+    "marks": 2
+   }
+  ],
+  "idea": "A two-sample \\(t\\)-test compares two means; the alternative hypothesis is two-tailed when the question is whether the means differ, in either direction. The \\(p\\)-value is compared with each significance level in turn.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "A: \\(\\dfrac{2812}{8}\\). B: \\(\\dfrac{2783}{8}\\)."
+    ],
+    "answer": "A 351.5 ml; B 347.875 ml"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The test asks whether the means differ."
+    ],
+    "answer": "\\(\\mathrm{H_0}: \\mu_{A} = \\mu_{B}\\); \\(\\mathrm{H_1}: \\mu_{A} \\ne \\mu_{B}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Pooled two-sample \\(t\\)-test on the calculator: \\(t = 2.408\\ldots\\), \\(p = 0.03038\\ldots\\)"
+    ],
+    "answer": "\\(p = 0.0304\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(0.0304 < 0.05\\), so reject \\(\\mathrm{H_0}\\). But \\(0.0304 > 0.01\\)."
+    ],
+    "answer": "There is evidence at 5 % that the means differ; at 1 % \\(\\mathrm{H_0}\\) would not be rejected, so the conclusion would change"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Before the test there was no reason to expect one particular machine to give more."
+    ],
+    "answer": "The owner is testing for a difference in either direction"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(\\mathrm{P}(V > 360) = 0.01679\\ldots\\)"
+    ],
+    "answer": "0.0168"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "The number that overflow, \\(X\\), is binomial with \\(n = 100\\) and \\(p = 0.01679\\ldots\\): \\(\\mathrm{E}(X) = 1.679\\ldots\\)",
+     "\\(\\mathrm{P}(X \\ge 2) = 1 - \\mathrm{P}(X \\le 1) = 0.5021\\ldots\\)"
+    ],
+    "answer": "1.68 cups; 0.502"
+   },
+   {
+    "label": "h",
+    "steps": [
+     "\\(\\mathrm{P}(V > c) = 0.001\\), so \\(\\mathrm{P}(V < c) = 0.999\\). Inverse normal: \\(c = 363.8\\ldots\\)"
+    ],
+    "answer": "364 ml"
+   }
+  ]
+ }
+]

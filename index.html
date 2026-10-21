@@ -1137,7 +1137,7 @@ body {
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 .qb-chip:hover:not(:disabled) { background: var(--blue-light); border-color: var(--blue-mid); }
-.qb-chip.active { background: var(--blue); border-color: var(--blue); color: #fff; }
+.qb-chip.active, .qb-chip.active:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
 .qb-chip:disabled { opacity: 0.5; cursor: not-allowed; }
 .qb-chip-count {
   font-size: 0.68rem;
@@ -1195,6 +1195,7 @@ body {
   margin-bottom: 8px;
 }
 .qb-part-label { font-weight: 700; color: var(--text-sec); }
+.qb-body p.qb-part-lead { margin: 4px 0 10px; }
 .qb-part-marks { font-size: 0.78rem; color: var(--text-muted); white-space: nowrap; padding-top: 2px; }
 .qb-body .katex-display { margin: 6px 0; overflow-x: auto; overflow-y: hidden; padding: 2px 0; }
 
@@ -2045,7 +2046,7 @@ footer .blue { color: var(--blue); font-weight: 700; }
           <span class="qb-filter-label">Level</span>
           <div class="seg-pill">
             <button class="seg-pill-btn qb-level-btn" data-level="SL">SL</button>
-            <button class="seg-pill-btn qb-level-btn" data-level="HL">HL</button>
+            <button class="seg-pill-btn qb-level-btn" data-level="HL">HL only</button>
           </div>
         </div>
       </div>
@@ -2053,6 +2054,11 @@ footer .blue { color: var(--blue); font-weight: 700; }
       <div class="qb-filter-group" id="qbTopicGroup" style="display:none;">
         <span class="qb-filter-label">Topic</span>
         <div class="qb-chips" id="qbTopics"></div>
+      </div>
+
+      <div class="qb-filter-group" id="qbStyleGroup" style="display:none;">
+        <span class="qb-filter-label">Question type</span>
+        <div class="qb-chips" id="qbStyles"></div>
       </div>
 
       <div class="qb-filter-group" id="qbDiffGroup" style="display:none;">
@@ -2559,28 +2565,36 @@ function initWorksheetFilter() {
 
 <script>
 // ─── QUESTION BANK ───
-// To release a strand: copy its JSON from the question-bank repo into /questions
-// and add the file name to the topic below. A question appears under a level when
-// its "level" object has a key such as "SL AA" or "HL AA"; HL-only questions carry
-// only the HL key and so never show under SL.
-const QB_TOPICS = {
-  AA: [
-    { key: 'na',    name: 'Number & Algebra',         files: ['sl_aa_number_algebra.json'] },
-    { key: 'fn',    name: 'Functions',                files: ['sl_aa_functions.json'] },
-    { key: 'gt',    name: 'Geometry & Trigonometry',  files: [] },
-    { key: 'sp',    name: 'Statistics & Probability', files: [] },
-    { key: 'calc',  name: 'Calculus',                 files: [] }
-  ],
-  AI: [
-    { key: 'na',    name: 'Number & Algebra',         files: ['sl_ai_number_algebra.json'] },
-    { key: 'fn',    name: 'Functions',                files: [] },
-    { key: 'gt',    name: 'Geometry & Trigonometry',  files: [] },
-    { key: 'sp',    name: 'Statistics & Probability', files: [] },
-    { key: 'calc',  name: 'Calculus',                 files: [] }
-  ]
-};
+// Question data lives in /questions (copied from the mathski-question-bank repo).
+// Each topic lists, per level, its short-question file and (optionally) its long-question file.
+// SL shows the SL questions; "HL only" shows the HL-extension questions.
+// To hide a strand, remove its file name below; an empty list shows the topic as "soon".
+const QB_TOPIC_LIST = [
+  { key: 'na',   name: 'Number & Algebra',         slug: 'number_algebra' },
+  { key: 'fn',   name: 'Functions',                slug: 'functions' },
+  { key: 'gt',   name: 'Geometry & Trigonometry',  slug: 'geometry_trig' },
+  { key: 'sp',   name: 'Statistics & Probability', slug: 'statistics_probability' },
+  { key: 'calc', name: 'Calculus',                 slug: 'calculus' }
+];
+const QB_LONG_LABEL = { AA: 'Section B style', AI: 'Paper 2 style' };
+function qbFilesFor(course, level, slug) {
+  const c = course.toLowerCase();
+  if (level === 'SL') {
+    return { short: ['sl_' + c + '_' + slug + '.json'],
+             long:  [course === 'AA' ? 'sl_aa_' + slug + '_section_b.json' : 'sl_ai_' + slug + '_paper2.json'] };
+  }
+  return { short: ['hl_' + c + '_' + slug + '_hl_only.json'],
+           long:  course === 'AA' ? ['hl_aa_' + slug + '_hl_only_section_b.json'] : [] };
+}
+const QB_TOPICS = {};
+['AA', 'AI'].forEach(course => {
+  QB_TOPICS[course] = QB_TOPIC_LIST.map(t => ({
+    key: t.key, name: t.name,
+    files: { SL: qbFilesFor(course, 'SL', t.slug), HL: qbFilesFor(course, 'HL', t.slug) }
+  }));
+});
 const QB_DIFFS = ['Easy', 'Medium', 'Hard'];
-const qbState = { course: null, level: null, topic: null, diff: 'All' };
+const qbState = { course: null, level: null, topic: null, diff: 'All', style: 'All' };
 const qbCache = {};
 let qbShown = [];
 let qbKatexPromise = null;
@@ -2640,34 +2654,54 @@ function qbSetActive(selector, attr, value) {
   document.querySelectorAll(selector).forEach(b => b.classList.toggle('active', b.dataset[attr] === value));
 }
 
+function qbTopicFiles(t) {
+  const f = t.files[qbState.level];
+  return f.short.map(file => ({ file, long: false })).concat(f.long.map(file => ({ file, long: true })));
+}
+
 function qbRenderTopics() {
   const topics = QB_TOPICS[qbState.course];
   document.getElementById('qbTopics').innerHTML = topics.map(t => {
-    const ready = t.files.length > 0;
+    const ready = qbTopicFiles(t).length > 0;
     return '<button class="qb-chip' + (qbState.topic === t.key ? ' active' : '') + '" data-topic="' + t.key + '"' +
       (ready ? '' : ' disabled') + '>' + t.name + (ready ? '' : ' <span class="tab-soon">soon</span>') + '</button>';
   }).join('');
   document.querySelectorAll('#qbTopics .qb-chip').forEach(b => b.addEventListener('click', () => {
     qbState.topic = b.dataset.topic;
     qbState.diff = 'All';
+    qbState.style = 'All';
     qbRenderTopics();
     qbLoadQuestions();
   }));
 }
 
-function qbRenderDiffs(questions) {
-  const key = qbLevelKey();
-  const counts = { All: questions.length };
-  QB_DIFFS.forEach(d => { counts[d] = questions.filter(q => q.level[key] === d).length; });
-  document.getElementById('qbDiffs').innerHTML = ['All'].concat(QB_DIFFS).map(d =>
-    '<button class="qb-chip' + (qbState.diff === d ? ' active' : '') + '" data-diff="' + d + '"' +
-    (counts[d] ? '' : ' disabled') + '>' + d + ' <span class="qb-chip-count">' + counts[d] + '</span></button>'
+function qbChipRow(id, items, current, attr, onPick) {
+  const el = document.getElementById(id);
+  el.innerHTML = items.map(it =>
+    '<button class="qb-chip' + (current === it.value ? ' active' : '') + '" data-' + attr + '="' + it.value + '"' +
+    (it.count ? '' : ' disabled') + '>' + it.label + ' <span class="qb-chip-count">' + it.count + '</span></button>'
   ).join('');
-  document.querySelectorAll('#qbDiffs .qb-chip').forEach(b => b.addEventListener('click', () => {
-    qbState.diff = b.dataset.diff;
-    qbRenderDiffs(questions);
-    qbRenderList(questions);
-  }));
+  el.querySelectorAll('.qb-chip').forEach(b => b.addEventListener('click', () => onPick(b.dataset[attr])));
+}
+
+function qbStyleMatch(x) { return qbState.style === 'All' || (qbState.style === 'long') === x.long; }
+function qbDiffMatch(x) { return qbState.diff === 'All' || x.q.level[qbLevelKey()] === qbState.diff; }
+
+function qbRenderFilters(items) {
+  const key = qbLevelKey();
+  const hasLong = items.some(x => x.long);
+  document.getElementById('qbStyleGroup').style.display = hasLong ? '' : 'none';
+  if (!hasLong) qbState.style = 'All';
+  const byDiff = items.filter(qbDiffMatch);
+  qbChipRow('qbStyles', [
+    { value: 'All', label: 'All', count: byDiff.length },
+    { value: 'short', label: 'Short questions', count: byDiff.filter(x => !x.long).length },
+    { value: 'long', label: 'Long questions', count: byDiff.filter(x => x.long).length }
+  ], qbState.style, 'style', v => { qbState.style = v; qbRenderFilters(items); qbRenderList(items); });
+  const byStyle = items.filter(qbStyleMatch);
+  qbChipRow('qbDiffs', [{ value: 'All', label: 'All', count: byStyle.length }].concat(
+    QB_DIFFS.map(d => ({ value: d, label: d, count: byStyle.filter(x => x.q.level[key] === d).length }))
+  ), qbState.diff, 'diff', v => { qbState.diff = v; qbRenderFilters(items); qbRenderList(items); });
 }
 
 function qbUpdateSteps() {
@@ -2675,8 +2709,9 @@ function qbUpdateSteps() {
   document.getElementById('qbLevelGroup').style.display = course ? '' : 'none';
   document.getElementById('qbTopicGroup').style.display = (course && level) ? '' : 'none';
   document.getElementById('qbDiffGroup').style.display = (course && level && topic) ? '' : 'none';
+  if (!(course && level && topic)) document.getElementById('qbStyleGroup').style.display = 'none';
   const hint = document.getElementById('qbHint');
-  hint.textContent = !course ? 'Pick AA or AI to start.' : !level ? 'Now pick SL or HL.' : !topic ? 'Choose a topic to see its questions.' : '';
+  hint.textContent = !course ? 'Pick AA or AI to start.' : !level ? 'Now pick SL or HL only.' : !topic ? 'Choose a topic to see its questions.' : '';
   hint.style.display = hint.textContent ? '' : 'none';
   if (course && level) qbRenderTopics();
   if (!topic) {
@@ -2692,29 +2727,37 @@ function qbLoadQuestions() {
   const list = document.getElementById('qbList');
   list.innerHTML = '<div class="glass-card qb-empty">Loading questions…</div>';
   const want = { course: qbState.course, level: qbState.level, topic: qbState.topic };
-  Promise.all(t.files.map(qbFetch)).then(sets => {
+  const files = qbTopicFiles(t);
+  Promise.all(files.map(f => qbFetch(f.file))).then(sets => {
     if (want.course !== qbState.course || want.level !== qbState.level || want.topic !== qbState.topic) return;
     const key = qbLevelKey();
-    const questions = [].concat(...sets).filter(q => q.level && q.level[key]);
-    qbRenderDiffs(questions);
-    qbRenderList(questions);
+    const slKey = 'SL ' + qbState.course;
+    const items = [];
+    let nShort = 0, nLong = 0;
+    sets.forEach((set, i) => set.forEach(q => {
+      if (!q.level || !q.level[key]) return;
+      if (qbState.level === 'HL' && q.level[slKey]) return;   // HL only: extension questions
+      const long = files[i].long;
+      // Numbers stay fixed whatever filter is applied
+      items.push({ q, long, title: long ? 'Long question ' + (++nLong) : 'Question ' + (++nShort) });
+    }));
+    qbRenderFilters(items);
+    qbRenderList(items);
   }).catch(() => {
     list.innerHTML = '<div class="glass-card qb-empty">Sorry, these questions could not be loaded. Check your connection and try again.</div>';
   });
 }
 
-function qbRenderList(questions) {
+function qbRenderList(items) {
   const key = qbLevelKey();
-  const slKey = 'SL ' + qbState.course;
   const t = QB_TOPICS[qbState.course].find(x => x.key === qbState.topic);
-  // Question numbers stay fixed within the topic, whatever the difficulty filter
-  const numbered = questions.map((q, i) => ({ q, n: i + 1 }));
-  qbShown = qbState.diff === 'All' ? numbered : numbered.filter(x => x.q.level[key] === qbState.diff);
+  qbShown = items.filter(x => qbStyleMatch(x) && qbDiffMatch(x));
   document.getElementById('qbMeta').textContent =
-    qbShown.length + ' question' + (qbShown.length === 1 ? '' : 's') + ' · ' + qbState.level + ' ' + qbState.course + ' · ' + t.name;
+    qbShown.length + ' question' + (qbShown.length === 1 ? '' : 's') + ' · ' +
+    (qbState.level === 'HL' ? 'HL ' + qbState.course + ' (HL only)' : 'SL ' + qbState.course) + ' · ' + t.name;
   const list = document.getElementById('qbList');
   if (!qbShown.length) {
-    list.innerHTML = '<div class="glass-card qb-empty">No ' + qbState.level + ' questions for this topic yet. More are on the way.</div>';
+    list.innerHTML = '<div class="glass-card qb-empty">No questions match these filters yet. More are on the way.</div>';
     return;
   }
   list.innerHTML = qbShown.map((x, i) => {
@@ -2722,16 +2765,17 @@ function qbRenderList(questions) {
     const diff = q.level[key];
     const tags =
       '<span class="qb-tag ' + diff.toLowerCase() + '">' + diff + '</span>' +
-      (q.level[slKey] ? '' : '<span class="qb-tag hl">HL only</span>') +
+      (x.long ? '<span class="qb-tag hl">' + QB_LONG_LABEL[qbState.course] + '</span>' : '') +
       '<span class="qb-tag">' + (q.calculator ? 'Calculator' : 'No calculator') + '</span>' +
       '<span class="qb-tag">' + q.marks + ' marks</span>';
     const stem = (q.stem || []).map(s => qbItem(s, 'p')).join('');
-    const parts = (q.parts || []).map(p =>
-      '<div class="qb-part"><span class="qb-part-label">(' + qbEsc(p.label) + ')</span><span>' + qbEsc(p.text) +
-      '</span><span class="qb-part-marks">[' + p.marks + ']</span></div>'
+    const parts = (q.parts || []).map(p => p.label
+      ? '<div class="qb-part"><span class="qb-part-label">(' + qbEsc(p.label) + ')</span><span>' + qbEsc(p.text) +
+        '</span><span class="qb-part-marks">' + (p.marks != null ? '[' + p.marks + ']' : '') + '</span></div>'
+      : '<p class="qb-part-lead">' + qbEsc(p.text) + '</p>'
     ).join('');
     return '<div class="glass-card qb-q">' +
-      '<div class="qb-q-head"><div><div class="qb-q-num">Question ' + x.n + '</div>' +
+      '<div class="qb-q-head"><div><div class="qb-q-num">' + x.title + '</div>' +
       '<div class="qb-q-sub">' + qbEsc(q.subtopic || '') + '</div></div><div class="qb-tags">' + tags + '</div></div>' +
       '<div class="qb-body">' + stem + parts + '</div>' +
       '<button class="qb-ms-btn" onclick="openQbModal(' + i + ')">Markscheme</button>' +
@@ -2744,7 +2788,7 @@ function openQbModal(i) {
   const x = qbShown[i];
   if (!x) return;
   const q = x.q;
-  document.getElementById('qbModalTitle').textContent = 'Question ' + x.n + ': worked solution';
+  document.getElementById('qbModalTitle').textContent = x.title + ': worked solution';
   const idea = q.idea ? '<div class="qb-idea"><strong>Key idea.</strong> ' + qbEsc(q.idea) + '</div>' : '';
   const sol = (q.solution || []).map(s =>
     '<div class="qb-sol-part">' + (s.label ? '<div class="qb-sol-label">(' + qbEsc(s.label) + ')</div>' : '') +
@@ -2773,6 +2817,7 @@ document.querySelectorAll('.qb-course-btn').forEach(b => b.addEventListener('cli
   qbState.course = b.dataset.course;
   qbState.topic = null;
   qbState.diff = 'All';
+  qbState.style = 'All';
   qbSetActive('.qb-course-btn', 'course', qbState.course);
   qbUpdateSteps();
 }));
@@ -2781,6 +2826,7 @@ document.querySelectorAll('.qb-level-btn').forEach(b => b.addEventListener('clic
   if (qbState.level === b.dataset.level) return;
   qbState.level = b.dataset.level;
   qbState.diff = 'All';
+  qbState.style = 'All';
   qbSetActive('.qb-level-btn', 'level', qbState.level);
   if (qbState.topic) qbLoadQuestions(); else qbUpdateSteps();
 }));

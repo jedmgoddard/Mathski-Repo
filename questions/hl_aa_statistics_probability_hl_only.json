@@ -1,0 +1,1711 @@
+[
+ {
+  "id": "aa-sp-hl-001",
+  "strand": "Statistics and Probability",
+  "subtopic": "Bayes’ theorem",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "An online shop sends its parcels with three couriers. Courier X takes 50% of the parcels, courier Y takes 30% and courier Z takes the rest. The probability that a parcel arrives late is 0.04 with X, 0.1 with Y and 0.05 with Z."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that a parcel chosen at random arrives late.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "A parcel arrives late. Find the probability that it was sent with courier Y.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A parcel arrives on time. Find the probability that it was sent with courier X.",
+    "marks": 2
+   }
+  ],
+  "idea": "Bayes’ theorem turns the probabilities around: \\(P(Y \\mid \\text{late}) = \\dfrac{P(Y \\cap \\text{late})}{P(\\text{late})}\\). The bottom line is the total probability of being late, added over all three couriers.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 268\" width=\"400\" height=\"268\" role=\"img\" aria-label=\"Tree diagram. First branches: courier X 0.5, Y 0.3, Z 0.2. Then for X: late 0.04, on time 0.96; for Y: late 0.1, on time 0.9; for Z: late 0.05, on time 0.95.\"><line x1=\"180\" y1=\"46.0\" x2=\"300\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"246.0\" y=\"25.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.04</text><text x=\"306.0\" y=\"29.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Late</text><line x1=\"180\" y1=\"46.0\" x2=\"300\" y2=\"68.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"246.0\" y=\"77.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.96</text><text x=\"306.0\" y=\"73.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">On time</text><line x1=\"180\" y1=\"134.0\" x2=\"300\" y2=\"112.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"246.0\" y=\"113.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.1</text><text x=\"306.0\" y=\"117.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Late</text><line x1=\"180\" y1=\"134.0\" x2=\"300\" y2=\"156.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"246.0\" y=\"165.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.9</text><text x=\"306.0\" y=\"161.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">On time</text><line x1=\"180\" y1=\"222.0\" x2=\"300\" y2=\"200.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"246.0\" y=\"201.9\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.05</text><text x=\"306.0\" y=\"205.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Late</text><line x1=\"180\" y1=\"222.0\" x2=\"300\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"246.0\" y=\"253.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.95</text><text x=\"306.0\" y=\"249.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">On time</text><line x1=\"14\" y1=\"134.0\" x2=\"134\" y2=\"46.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"80.0\" y=\"77.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.5</text><text x=\"140.0\" y=\"51.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">X</text><line x1=\"14\" y1=\"134.0\" x2=\"134\" y2=\"134.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"80.0\" y=\"126.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.3</text><text x=\"140.0\" y=\"139.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Y</text><line x1=\"14\" y1=\"134.0\" x2=\"134\" y2=\"222.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\"/><text x=\"80.0\" y=\"201.4\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0.2</text><text x=\"140.0\" y=\"227.0\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Z</text></svg>"
+     },
+     "\\(P(\\text{late}) = 0.5 \\times 0.04 + 0.3 \\times 0.1 + 0.2 \\times 0.05 = 0.02 + 0.03 + 0.01\\)."
+    ],
+    "answer": "\\(0.06\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(Y \\mid \\text{late}) = \\dfrac{0.03}{0.06}\\)."
+    ],
+    "answer": "\\(0.5\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(\\text{on time}) = 1 - 0.06 = 0.94\\) and \\(P(X \\cap \\text{on time}) = 0.5 \\times 0.96 = 0.48\\).",
+     "\\(P(X \\mid \\text{on time}) = \\dfrac{0.48}{0.94} = 0.5106\\ldots\\)"
+    ],
+    "answer": "\\(\\dfrac{24}{47} \\approx 0.511\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-002",
+  "strand": "Statistics and Probability",
+  "subtopic": "Bayes’ theorem",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "A disease affects 1% of the trees in a forest. A test for the disease gives a positive result for 90% of diseased trees and for 5% of healthy trees."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that a tree chosen at random gives a positive result.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "A tree gives a positive result. Find the probability that it has the disease. Give your answer as a fraction.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "Each tree that gives a positive result is tested a second time. Given whether or not a tree has the disease, the results of its two tests are independent.",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "A tree gives a positive result in both tests. Find the probability that it has the disease.",
+    "marks": 3
+   }
+  ],
+  "idea": "Most positive results come from the many healthy trees, so one positive result is weak evidence. For two tests, multiply the conditional probabilities along each branch: a diseased tree tests positive twice with probability \\(0.9^2\\), a healthy tree with probability \\(0.05^2\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(+) = 0.01 \\times 0.9 + 0.99 \\times 0.05 = 0.009 + 0.0495\\)."
+    ],
+    "answer": "\\(0.0585\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(D \\mid +) = \\dfrac{0.009}{0.0585} = \\dfrac{90}{585}\\)."
+    ],
+    "answer": "\\(\\dfrac{2}{13}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(D \\cap ++) = 0.01 \\times 0.9^2 = 0.0081\\) and \\(P(H \\cap ++) = 0.99 \\times 0.05^2 = 0.002475\\).",
+     "\\(P(D \\mid ++) = \\dfrac{0.0081}{0.0081 + 0.002475} = \\dfrac{0.0081}{0.010575} = \\dfrac{8100}{10\\,575}\\)."
+    ],
+    "answer": "\\(\\dfrac{36}{47}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-003",
+  "strand": "Statistics and Probability",
+  "subtopic": "Bayes’ theorem",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "At a school, 40% of the students walk to school, 35% cycle and the rest come by bus. The probability that a student is late is 0.05 for those who walk, 0.02 for those who cycle and \\(p\\) for those who come by bus."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find, in terms of \\(p\\), the probability that a student chosen at random is late.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "Given that a student is late, the probability that the student came by bus is 0.5.",
+    "marks": null
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(p\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "A student is late. Find the probability that the student walked to school.",
+    "marks": 2
+   }
+  ],
+  "idea": "Write the conditional probability as a fraction with the total probability of being late underneath, and solve the resulting equation for \\(p\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(L) = 0.4 \\times 0.05 + 0.35 \\times 0.02 + 0.25p = 0.02 + 0.007 + 0.25p\\)."
+    ],
+    "answer": "\\(0.027 + 0.25p\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{0.25p}{0.027 + 0.25p} = 0.5\\), so \\(0.25p = 0.0135 + 0.125p\\), giving \\(0.125p = 0.0135\\)."
+    ],
+    "answer": "\\(p = 0.108\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(L) = 0.027 + 0.027 = 0.054\\).",
+     "\\(P(W \\mid L) = \\dfrac{0.02}{0.054} = 0.3703\\ldots\\)"
+    ],
+    "answer": "\\(\\dfrac{10}{27} \\approx 0.370\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-004",
+  "strand": "Statistics and Probability",
+  "subtopic": "Bayes’ theorem",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "A box contains three coins. One coin is fair, one has a head on both sides, and one is biased so that it shows a head with probability \\(\\dfrac{1}{4}\\). A coin is taken from the box at random and tossed twice. It shows a head both times."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that a coin taken at random shows two heads in two tosses.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the coin is the one with a head on both sides.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The same coin is tossed a third time. Find the probability that it shows a head.",
+    "marks": 3
+   }
+  ],
+  "idea": "After seeing two heads, update the probability of each coin with Bayes’ theorem. The chance of a third head is then an average of the three coins’ head probabilities, weighted by these updated probabilities.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(HH) = \\dfrac{1}{3}\\left(\\dfrac{1}{4} + 1 + \\dfrac{1}{16}\\right) = \\dfrac{1}{3} \\times \\dfrac{21}{16}\\)."
+    ],
+    "answer": "\\(\\dfrac{7}{16}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(\\text{double} \\mid HH) = \\dfrac{\\frac{1}{3} \\times 1}{\\frac{7}{16}} = \\dfrac{16}{21}\\)."
+    ],
+    "answer": "\\(\\dfrac{16}{21}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "In the same way, \\(P(\\text{fair} \\mid HH) = \\dfrac{\\frac{1}{3} \\times \\frac{1}{4}}{\\frac{7}{16}} = \\dfrac{4}{21}\\) and \\(P(\\text{biased} \\mid HH) = \\dfrac{\\frac{1}{3} \\times \\frac{1}{16}}{\\frac{7}{16}} = \\dfrac{1}{21}\\).",
+     "\\(P(H) = \\dfrac{4}{21} \\times \\dfrac{1}{2} + \\dfrac{16}{21} \\times 1 + \\dfrac{1}{21} \\times \\dfrac{1}{4} = \\dfrac{8 + 64 + 1}{84}\\)."
+    ],
+    "answer": "\\(\\dfrac{73}{84}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-005",
+  "strand": "Statistics and Probability",
+  "subtopic": "Bayes’ theorem",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A factory makes components in batches. 90% of batches are good, and in a good batch each component is faulty with probability 0.02. The other 10% of batches are poor, and in a poor batch each component is faulty with probability 0.1. An inspector tests a random sample of 20 components from a batch. Components are faulty independently of each other."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the sample contains at least 2 faulty components when the batch is good, and when the batch is poor.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the sample from a batch chosen at random contains at least 2 faulty components.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The sample contains at least 2 faulty components. Find the probability that the batch is poor.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "The inspector rejects a batch when the sample contains at least 2 faulty components, and accepts it otherwise.",
+    "marks": null
+   },
+   {
+    "label": "d",
+    "text": "Find the probability that a batch chosen at random is wrongly judged, that is, a good batch is rejected or a poor batch is accepted.",
+    "marks": 2
+   }
+  ],
+  "idea": "Given the type of batch, the number of faulty components in the sample is binomial. Bayes’ theorem then reverses the condition. A wrong judgement is one of two separate events, so add their probabilities.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Good: \\(X \\sim \\mathrm{B}(20,\\ 0.02)\\), \\(P(X \\geq 2) = 1 - P(X \\leq 1) = 0.05989\\ldots\\)",
+     "Poor: \\(X \\sim \\mathrm{B}(20,\\ 0.1)\\), \\(P(X \\geq 2) = 0.60825\\ldots\\)"
+    ],
+    "answer": "\\(0.0599\\) and \\(0.608\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0.9 \\times 0.05989\\ldots + 0.1 \\times 0.60825\\ldots = 0.11473\\ldots\\)"
+    ],
+    "answer": "\\(0.115\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(\\text{poor} \\mid X \\geq 2) = \\dfrac{0.1 \\times 0.60825\\ldots}{0.11473\\ldots} = 0.53014\\ldots\\)"
+    ],
+    "answer": "\\(0.530\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Good and rejected: \\(0.9 \\times 0.05989\\ldots = 0.05390\\ldots\\) Poor and accepted: \\(0.1 \\times (1 - 0.60825\\ldots) = 0.03917\\ldots\\)",
+     "Total: \\(0.09308\\ldots\\)"
+    ],
+    "answer": "\\(0.0931\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-006",
+  "strand": "Statistics and Probability",
+  "subtopic": "Variance of discrete random variables",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "Die A is an ordinary fair six-sided die with faces 1, 2, 3, 4, 5 and 6. Die B is a fair six-sided die with faces 2, 3, 3, 4, 4 and 5. Let \\(X\\) be the score on die A and \\(Y\\) the score on die B."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(E(X) = E(Y)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\mathrm{Var}(X)\\) and \\(\\mathrm{Var}(Y)\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Use \\(\\mathrm{Var}(X) = E(X^2) - \\left[E(X)\\right]^2\\). Two dice can have the same mean but different spreads.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(E(X) = \\dfrac{1 + 2 + 3 + 4 + 5 + 6}{6} = 3.5\\) and \\(E(Y) = \\dfrac{2 + 3 + 3 + 4 + 4 + 5}{6} = 3.5\\)."
+    ],
+    "answer": "Shown: both are \\(3.5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(E(X^2) = \\dfrac{1 + 4 + 9 + 16 + 25 + 36}{6} = \\dfrac{91}{6}\\), so \\(\\mathrm{Var}(X) = \\dfrac{91}{6} - \\dfrac{49}{4} = \\dfrac{35}{12}\\).",
+     "\\(E(Y^2) = \\dfrac{4 + 9 + 9 + 16 + 16 + 25}{6} = \\dfrac{79}{6}\\), so \\(\\mathrm{Var}(Y) = \\dfrac{79}{6} - \\dfrac{49}{4} = \\dfrac{11}{12}\\)."
+    ],
+    "answer": "\\(\\mathrm{Var}(X) = \\dfrac{35}{12}\\), \\(\\mathrm{Var}(Y) = \\dfrac{11}{12}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-007",
+  "strand": "Statistics and Probability",
+  "subtopic": "Variance of discrete random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The discrete random variable \\(X\\) has \\(P(X = x) = \\dfrac{c}{x}\\), for \\(x = 1, 2, 3, 6\\), where \\(c\\) is a constant."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(c\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The probabilities add to 1. In \\(E(X) = \\sum x \\, P(X = x)\\) and \\(E(X^2) = \\sum x^2 \\, P(X = x)\\), the factor \\(\\dfrac{1}{x}\\) cancels, which makes the sums short.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(c\\left(1 + \\dfrac{1}{2} + \\dfrac{1}{3} + \\dfrac{1}{6}\\right) = 2c = 1\\)."
+    ],
+    "answer": "\\(c = \\dfrac{1}{2}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(E(X) = \\sum x \\times \\dfrac{c}{x} = 4c\\), since there are four values."
+    ],
+    "answer": "\\(2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(X^2) = \\sum x^2 \\times \\dfrac{c}{x} = c(1 + 2 + 3 + 6) = 12c = 6\\).",
+     "\\(\\mathrm{Var}(X) = 6 - 2^2\\)."
+    ],
+    "answer": "\\(2\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-008",
+  "strand": "Statistics and Probability",
+  "subtopic": "Variance of discrete random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "A fair coin is tossed until it shows a head, but it is tossed no more than three times. Let \\(X\\) be the number of tosses."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability distribution of \\(X\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(E(X)\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(X = 1\\) or \\(2\\) needs the first head on that toss. \\(X = 3\\) happens whenever the first two tosses are tails, whatever the third toss shows.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(P(X = 1) = \\dfrac{1}{2}\\), \\(P(X = 2) = \\dfrac{1}{2} \\times \\dfrac{1}{2} = \\dfrac{1}{4}\\), \\(P(X = 3) = \\dfrac{1}{2} \\times \\dfrac{1}{2} = \\dfrac{1}{4}\\)."
+    ],
+    "answer": "\\(P(X = 1) = \\dfrac{1}{2}\\), \\(P(X = 2) = \\dfrac{1}{4}\\), \\(P(X = 3) = \\dfrac{1}{4}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(E(X) = \\dfrac{1}{2} + \\dfrac{2}{4} + \\dfrac{3}{4}\\)."
+    ],
+    "answer": "\\(\\dfrac{7}{4}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(X^2) = \\dfrac{1}{2} + \\dfrac{4}{4} + \\dfrac{9}{4} = \\dfrac{15}{4}\\).",
+     "\\(\\mathrm{Var}(X) = \\dfrac{15}{4} - \\dfrac{49}{16}\\)."
+    ],
+    "answer": "\\(\\dfrac{11}{16}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-009",
+  "strand": "Statistics and Probability",
+  "subtopic": "Variance of discrete random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "The random variable \\(X\\) takes the values 1, 2 and \\(k\\), where \\(k > 2\\), with probabilities 0.5, 0.3 and 0.2 respectively."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down \\(E(X)\\) in terms of \\(k\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\mathrm{Var}(X) = 0.16k^2 - 0.44k + 0.49\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Given that \\(\\mathrm{Var}(X) = 2.29\\), find the value of \\(k\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Work out \\(E(X^2)\\) in terms of \\(k\\) and subtract the square of the mean. The variance condition then gives a quadratic in \\(k\\); the condition \\(k > 2\\) picks the root.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(E(X) = 0.5 + 0.6 + 0.2k\\)."
+    ],
+    "answer": "\\(1.1 + 0.2k\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(E(X^2) = 0.5 + 1.2 + 0.2k^2 = 1.7 + 0.2k^2\\).",
+     "\\(\\mathrm{Var}(X) = 1.7 + 0.2k^2 - (1.1 + 0.2k)^2 = 1.7 + 0.2k^2 - 1.21 - 0.44k - 0.04k^2 = 0.16k^2 - 0.44k + 0.49\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(0.16k^2 - 0.44k + 0.49 = 2.29\\), so \\(0.16k^2 - 0.44k - 1.8 = 0\\). Multiply by 25: \\(4k^2 - 11k - 45 = 0\\).",
+     "\\((k - 5)(4k + 9) = 0\\), so \\(k = 5\\) or \\(k = -\\dfrac{9}{4}\\). Since \\(k > 2\\), \\(k = 5\\)."
+    ],
+    "answer": "\\(k = 5\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-010",
+  "strand": "Statistics and Probability",
+  "subtopic": "Variance of discrete random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Two games at a fair each cost $2 to play.",
+   "In game A, the player wins $5 with probability 0.4 and otherwise wins nothing.",
+   "In game B, the player wins $\\(x\\) with probability 0.1, wins $1 with probability 0.5, and otherwise wins nothing.",
+   "The profit is the amount won minus the $2 paid."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the mean and the standard deviation of the profit in game A.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Game B is fair, which means that the expected profit is zero. Find the value of \\(x\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the standard deviation of the profit in game B.",
+    "marks": 2
+   }
+  ],
+  "idea": "List each profit with its probability. Both games have mean profit zero, so the standard deviation is what tells them apart: it measures how far a player’s results swing.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Profit 3 with probability 0.4, \\(-2\\) with probability 0.6.",
+     "Mean: \\(1.2 - 1.2 = 0\\). \\(E(G^2) = 0.4 \\times 9 + 0.6 \\times 4 = 6\\), so the variance is 6 and the standard deviation is \\(\\sqrt{6} = 2.449\\ldots\\)"
+    ],
+    "answer": "Mean $0, standard deviation $2.45"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Expected winnings must equal the $2 cost: \\(0.1x + 0.5 \\times 1 = 2\\)."
+    ],
+    "answer": "\\(x = 15\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Profit 13 with probability 0.1, \\(-1\\) with probability 0.5, \\(-2\\) with probability 0.4.",
+     "\\(E(G^2) = 0.1 \\times 169 + 0.5 \\times 1 + 0.4 \\times 4 = 19\\), and the mean is 0, so the standard deviation is \\(\\sqrt{19} = 4.358\\ldots\\)"
+    ],
+    "answer": "$4.36"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-011",
+  "strand": "Statistics and Probability",
+  "subtopic": "Linear transformations of random variables",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 4,
+  "stem": [
+   "The random variable \\(X\\) has \\(E(X) = 5\\) and \\(\\mathrm{Var}(X) = 4\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(E(3X - 2)\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\mathrm{Var}(3X - 2)\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the standard deviation of \\(10 - 2X\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(E(aX + b) = aE(X) + b\\) and \\(\\mathrm{Var}(aX + b) = a^2\\,\\mathrm{Var}(X)\\). Adding a constant moves the values but does not spread them, and a negative \\(a\\) still gives a positive variance.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(3 \\times 5 - 2\\)."
+    ],
+    "answer": "\\(13\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(3^2 \\times 4\\)."
+    ],
+    "answer": "\\(36\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\mathrm{Var}(10 - 2X) = (-2)^2 \\times 4 = 16\\), so the standard deviation is \\(\\sqrt{16}\\)."
+    ],
+    "answer": "\\(4\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-012",
+  "strand": "Statistics and Probability",
+  "subtopic": "Linear transformations of random variables",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 4,
+  "stem": [
+   "In a city in July, the daily maximum temperature, \\(C\\) °C, has mean 20 and standard deviation 5. The temperature in degrees Fahrenheit is \\(F = 1.8C + 32\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the mean of \\(F\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the standard deviation of \\(F\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the variance of \\(F\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "\\(F\\) is a linear function of \\(C\\). The added 32 shifts the mean only; the factor 1.8 multiplies the standard deviation.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(E(F) = 1.8 \\times 20 + 32\\)."
+    ],
+    "answer": "\\(68\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\mathrm{Var}(F) = 1.8^2 \\times 25\\), so the standard deviation is \\(1.8 \\times 5\\)."
+    ],
+    "answer": "\\(9\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(9^2\\)."
+    ],
+    "answer": "\\(81\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-013",
+  "strand": "Statistics and Probability",
+  "subtopic": "Linear transformations of random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The reading, \\(X\\), from a sensor has mean 12 and standard deviation 3. The sensor is recalibrated, so that the new reading for the same measurement is \\(Y = aX + b\\), where \\(a > 0\\). The new readings have mean 20 and standard deviation 4.5."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(a\\) and the value of \\(b\\).",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "The readings \\(X\\) are normally distributed.",
+    "marks": null
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(Y > 25)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the variance of \\(2Y - X\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The standard deviation scales by \\(a\\), which gives \\(a\\); the mean then gives \\(b\\). A linear function of a normal variable is normal. For part (c), write \\(2Y - X\\) in terms of \\(X\\) alone: it is one random variable, not two independent ones.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Standard deviation: \\(3a = 4.5\\), so \\(a = 1.5\\).",
+     "Mean: \\(1.5 \\times 12 + b = 20\\), so \\(b = 2\\)."
+    ],
+    "answer": "\\(a = 1.5\\), \\(b = 2\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(Y \\sim \\mathrm{N}(20,\\ 4.5^2)\\), so \\(P(Y > 25) = 0.13326\\ldots\\)"
+    ],
+    "answer": "\\(0.133\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2Y - X = 2(1.5X + 2) - X = 2X + 4\\).",
+     "\\(\\mathrm{Var}(2X + 4) = 2^2 \\times 3^2\\)."
+    ],
+    "answer": "\\(36\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-014",
+  "strand": "Statistics and Probability",
+  "subtopic": "Linear transformations of random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "The random variable \\(X\\) has mean \\(\\mu\\). It is given that \\(E\\left((X - 1)^2\\right) = 10\\) and \\(E\\left((X + 1)^2\\right) = 18\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(\\mu\\) and the value of \\(E(X^2)\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Show that \\(E\\left((X - c)^2\\right) = \\mathrm{Var}(X) + (\\mu - c)^2\\) for any constant \\(c\\), and hence find the least possible value of \\(E\\left((X - c)^2\\right)\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Expectation is linear: \\(E\\left((X - 1)^2\\right) = E(X^2) - 2E(X) + 1\\). Two such equations give \\(E(X)\\) and \\(E(X^2)\\). Part (c) shows that the mean is the point about which the average squared distance is smallest.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(E(X^2) - 2\\mu + 1 = 10\\) and \\(E(X^2) + 2\\mu + 1 = 18\\).",
+     "Subtract: \\(4\\mu = 8\\), so \\(\\mu = 2\\). Then \\(E(X^2) = 10 - 1 + 4 = 13\\)."
+    ],
+    "answer": "\\(\\mu = 2\\), \\(E(X^2) = 13\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\mathrm{Var}(X) = 13 - 2^2\\)."
+    ],
+    "answer": "\\(9\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E\\left((X - c)^2\\right) = E(X^2) - 2c\\mu + c^2 = \\left(E(X^2) - \\mu^2\\right) + \\left(\\mu^2 - 2c\\mu + c^2\\right) = \\mathrm{Var}(X) + (\\mu - c)^2\\).",
+     "\\((\\mu - c)^2 \\geq 0\\), with equality when \\(c = \\mu = 2\\). So the least value is \\(\\mathrm{Var}(X)\\)."
+    ],
+    "answer": "\\(9\\), when \\(c = 2\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-015",
+  "strand": "Statistics and Probability",
+  "subtopic": "Continuous random variables",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = kx^3\\) for \\(0 \\leq x \\leq 2\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(X < 1)\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find \\(P(1 < X < 1.5)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The total area under a probability density function is 1. A probability is the area under the curve over the interval.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^2 kx^3 \\, dx = k\\left[\\frac{x^4}{4}\\right]_0^2 = 4k = 1\\)."
+    ],
+    "answer": "\\(k = \\dfrac{1}{4}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle\\int_0^1 \\frac{x^3}{4} \\, dx = \\left[\\frac{x^4}{16}\\right]_0^1\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{16}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\left[\\dfrac{x^4}{16}\\right]_1^{1.5} = \\dfrac{5.0625 - 1}{16} = \\dfrac{4.0625}{16}\\)."
+    ],
+    "answer": "\\(\\dfrac{65}{256}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-016",
+  "strand": "Statistics and Probability",
+  "subtopic": "Continuous random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = \\dfrac{k}{x^2}\\) for \\(1 \\leq x \\leq 4\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(X > 2)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(P(X > 3 \\mid X > 2)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\displaystyle\\int \\frac{1}{x^2}\\,dx = -\\frac{1}{x}\\). For the conditional probability, the event \\(X > 3\\) lies inside \\(X > 2\\), so \\(P(X > 3 \\mid X > 2) = \\dfrac{P(X > 3)}{P(X > 2)}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_1^4 \\frac{k}{x^2} \\, dx = k\\left[-\\frac{1}{x}\\right]_1^4 = k\\left(1 - \\frac{1}{4}\\right) = \\frac{3k}{4} = 1\\)."
+    ],
+    "answer": "\\(k = \\dfrac{4}{3}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{4}{3}\\left[-\\dfrac{1}{x}\\right]_2^4 = \\dfrac{4}{3}\\left(\\dfrac{1}{2} - \\dfrac{1}{4}\\right)\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{3}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(X > 3) = \\dfrac{4}{3}\\left(\\dfrac{1}{3} - \\dfrac{1}{4}\\right) = \\dfrac{1}{9}\\).",
+     "\\(P(X > 3 \\mid X > 2) = \\dfrac{1/9}{1/3}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-017",
+  "strand": "Statistics and Probability",
+  "subtopic": "Continuous random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = k\\mathrm{e}^{-x/2}\\) for \\(0 \\leq x \\leq 2\\ln 3\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(k = \\dfrac{3}{4}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(X < 2\\ln 2)\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(\\displaystyle\\int \\mathrm{e}^{-x/2}\\,dx = -2\\mathrm{e}^{-x/2}\\), and \\(\\mathrm{e}^{-\\ln 3} = \\dfrac{1}{3}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^{2\\ln 3} k\\mathrm{e}^{-x/2} \\, dx = k\\left[-2\\mathrm{e}^{-x/2}\\right]_0^{2\\ln 3} = 2k\\left(1 - \\mathrm{e}^{-\\ln 3}\\right) = 2k\\left(1 - \\frac{1}{3}\\right) = \\frac{4k}{3}\\).",
+     "Setting this equal to 1 gives \\(k = \\dfrac{3}{4}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{3}{4}\\left[-2\\mathrm{e}^{-x/2}\\right]_0^{2\\ln 2} = \\dfrac{3}{2}\\left(1 - \\mathrm{e}^{-\\ln 2}\\right) = \\dfrac{3}{2} \\times \\dfrac{1}{2}\\)."
+    ],
+    "answer": "\\(\\dfrac{3}{4}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-018",
+  "strand": "Statistics and Probability",
+  "subtopic": "Continuous random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The continuous random variable \\(T\\) has probability density function \\(f(t) = \\dfrac{k}{1 + t^2}\\) for \\(0 \\leq t \\leq \\sqrt{3}\\), and \\(f(t) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the exact value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(P(T < 1)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(a\\) for which \\(P(T < a) = \\dfrac{1}{2}\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\displaystyle\\int \\frac{1}{1 + t^2}\\,dt = \\arctan t\\). Learn the exact values \\(\\arctan 1 = \\dfrac{\\pi}{4}\\) and \\(\\arctan\\sqrt{3} = \\dfrac{\\pi}{3}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^{\\sqrt{3}} \\frac{k}{1 + t^2} \\, dt = k\\left[\\arctan t\\right]_0^{\\sqrt{3}} = \\frac{k\\pi}{3} = 1\\)."
+    ],
+    "answer": "\\(k = \\dfrac{3}{\\pi}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{3}{\\pi}\\arctan 1 = \\dfrac{3}{\\pi} \\times \\dfrac{\\pi}{4}\\)."
+    ],
+    "answer": "\\(\\dfrac{3}{4}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{3}{\\pi}\\arctan a = \\dfrac{1}{2}\\), so \\(\\arctan a = \\dfrac{\\pi}{6}\\)."
+    ],
+    "answer": "\\(a = \\dfrac{1}{\\sqrt{3}}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-019",
+  "strand": "Statistics and Probability",
+  "subtopic": "Continuous random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = \\dfrac{k}{x + 1}\\) for \\(0 \\leq x \\leq 3\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the exact value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the median of \\(X\\) is 1.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Show that \\(P(X > 2 \\mid X > 1) = 2 - \\dfrac{\\ln 3}{\\ln 2}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(\\displaystyle\\int \\frac{1}{x + 1}\\,dx = \\ln(x + 1)\\), and \\(\\ln 4 = 2\\ln 2\\). The median \\(m\\) satisfies \\(P(X < m) = \\dfrac{1}{2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^3 \\frac{k}{x + 1} \\, dx = k\\left[\\ln(x + 1)\\right]_0^3 = k\\ln 4 = 1\\)."
+    ],
+    "answer": "\\(k = \\dfrac{1}{\\ln 4}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(X < 1) = \\dfrac{\\ln 2}{\\ln 4} = \\dfrac{\\ln 2}{2\\ln 2} = \\dfrac{1}{2}\\), so the median is 1."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P(X > 2) = \\dfrac{\\ln 4 - \\ln 3}{\\ln 4}\\) and \\(P(X > 1) = \\dfrac{1}{2}\\).",
+     "\\(P(X > 2 \\mid X > 1) = \\dfrac{P(X > 2)}{P(X > 1)} = \\dfrac{2(\\ln 4 - \\ln 3)}{\\ln 4} = 2 - \\dfrac{2\\ln 3}{2\\ln 2} = 2 - \\dfrac{\\ln 3}{\\ln 2}\\)."
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-020",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = \\dfrac{x}{8}\\) for \\(0 \\leq x \\leq 4\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the mode of \\(X\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the exact median of \\(X\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find \\(P\\left(X < E(X)\\right)\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "The mode is where the density is greatest. The median \\(m\\) cuts the area in half. The mean is \\(\\displaystyle\\int x f(x)\\,dx\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(f\\) is increasing, so it is greatest at the right end."
+    ],
+    "answer": "\\(4\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle\\int_0^m \\frac{x}{8} \\, dx = \\frac{m^2}{16} = \\frac{1}{2}\\), so \\(m^2 = 8\\)."
+    ],
+    "answer": "\\(2\\sqrt{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int_0^4 \\frac{x^2}{8} \\, dx = \\left[\\frac{x^3}{24}\\right]_0^4 = \\frac{64}{24}\\)."
+    ],
+    "answer": "\\(\\dfrac{8}{3}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P\\left(X < \\dfrac{8}{3}\\right) = \\dfrac{(8/3)^2}{16} = \\dfrac{64}{144}\\)."
+    ],
+    "answer": "\\(\\dfrac{4}{9}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-021",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = kx^2(3 - x)\\) for \\(0 \\leq x \\leq 3\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the mode of \\(X\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The mode is the value of \\(x\\) where \\(f\\) has its maximum, so differentiate and set \\(f'(x) = 0\\). Expand the brackets before integrating.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^3 k(3x^2 - x^3) \\, dx = k\\left[x^3 - \\frac{x^4}{4}\\right]_0^3 = k\\left(27 - \\frac{81}{4}\\right) = \\frac{27k}{4} = 1\\)."
+    ],
+    "answer": "\\(k = \\dfrac{4}{27}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(f'(x) = k(6x - 3x^2) = 3kx(2 - x)\\), which is zero at \\(x = 0\\) and \\(x = 2\\). \\(f(0) = 0\\), and \\(f\\) rises then falls on \\([0, 3]\\), so the maximum is at \\(x = 2\\).",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 240\" width=\"360\" height=\"240\" role=\"img\" aria-label=\"Graph of y = f(x) = (4/27) x squared (3 - x) for x from 0 to 3. It starts at the origin, rises to a maximum at x = 2 and falls to zero at x = 3. The maximum point is marked.\"><defs><clipPath id=\"c3d55ed41\"><rect x=\"30\" y=\"24\" width=\"304\" height=\"188\"/></clipPath></defs><line x1=\"30.0\" y1=\"200.2\" x2=\"346.0\" y2=\"200.2\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"60.4\" y1=\"212.0\" x2=\"60.4\" y2=\"12.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M352.0 200.2 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M60.4 6.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"350.0\" y=\"218.2\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"48.4\" y=\"10.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"136.4\" y1=\"197.2\" x2=\"136.4\" y2=\"203.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"136.4\" y=\"217.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><line x1=\"212.4\" y1=\"197.2\" x2=\"212.4\" y2=\"203.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"212.4\" y=\"217.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"288.4\" y1=\"197.2\" x2=\"288.4\" y2=\"203.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"288.4\" y=\"217.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><text x=\"53.4\" y=\"216.2\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><path d=\"M60.4 200.2 L60.7 200.2 L61.0 200.2 L61.3 200.2 L61.5 200.2 L61.8 200.2 L62.1 200.2 L62.4 200.2 L62.7 200.2 L63.0 200.1 L63.2 200.1 L63.5 200.1 L63.8 200.0 L64.1 200.0 L64.4 200.0 L64.7 199.9 L65.0 199.9 L65.2 199.8 L65.5 199.8 L65.8 199.7 L66.1 199.7 L66.4 199.6 L66.7 199.6 L67.0 199.5 L67.2 199.4 L67.5 199.4 L67.8 199.3 L68.1 199.2 L68.4 199.1 L68.7 199.1 L69.0 199.0 L69.2 198.9 L69.5 198.8 L69.8 198.7 L70.1 198.6 L70.4 198.5 L70.7 198.4 L70.9 198.3 L71.2 198.2 L71.5 198.1 L71.8 198.0 L72.1 197.9 L72.4 197.8 L72.7 197.7 L72.9 197.6 L73.2 197.4 L73.5 197.3 L73.8 197.2 L74.1 197.1 L74.4 196.9 L74.7 196.8 L74.9 196.7 L75.2 196.5 L75.5 196.4 L75.8 196.3 L76.1 196.1 L76.4 196.0 L76.6 195.8 L76.9 195.7 L77.2 195.5 L77.5 195.4 L77.8 195.2 L78.1 195.0 L78.4 194.9 L78.6 194.7 L78.9 194.5 L79.2 194.4 L79.5 194.2 L79.8 194.0 L80.1 193.9 L80.4 193.7 L80.6 193.5 L80.9 193.3 L81.2 193.1 L81.5 193.0 L81.8 192.8 L82.1 192.6 L82.3 192.4 L82.6 192.2 L82.9 192.0 L83.2 191.8 L83.5 191.6 L83.8 191.4 L84.1 191.2 L84.3 191.0 L84.6 190.8 L84.9 190.6 L85.2 190.3 L85.5 190.1 L85.8 189.9 L86.1 189.7 L86.3 189.5 L86.6 189.2 L86.9 189.0 L87.2 188.8 L87.5 188.6 L87.8 188.3 L88.0 188.1 L88.3 187.9 L88.6 187.6 L88.9 187.4 L89.2 187.2 L89.5 186.9 L89.8 186.7 L90.0 186.4 L90.3 186.2 L90.6 185.9 L90.9 185.7 L91.2 185.4 L91.5 185.2 L91.8 184.9 L92.0 184.7 L92.3 184.4 L92.6 184.1 L92.9 183.9 L93.2 183.6 L93.5 183.4 L93.7 183.1 L94.0 182.8 L94.3 182.5 L94.6 182.3 L94.9 182.0 L95.2 181.7 L95.5 181.4 L95.7 181.2 L96.0 180.9 L96.3 180.6 L96.6 180.3 L96.9 180.0 L97.2 179.7 L97.5 179.5 L97.7 179.2 L98.0 178.9 L98.3 178.6 L98.6 178.3 L98.9 178.0 L99.2 177.7 L99.4 177.4 L99.7 177.1 L100.0 176.8 L100.3 176.5 L100.6 176.2 L100.9 175.9 L101.2 175.6 L101.4 175.3 L101.7 175.0 L102.0 174.7 L102.3 174.3 L102.6 174.0 L102.9 173.7 L103.2 173.4 L103.4 173.1 L103.7 172.8 L104.0 172.4 L104.3 172.1 L104.6 171.8 L104.9 171.5 L105.1 171.2 L105.4 170.8 L105.7 170.5 L106.0 170.2 L106.3 169.8 L106.6 169.5 L106.9 169.2 L107.1 168.8 L107.4 168.5 L107.7 168.2 L108.0 167.8 L108.3 167.5 L108.6 167.2 L108.9 166.8 L109.1 166.5 L109.4 166.1 L109.7 165.8 L110.0 165.5 L110.3 165.1 L110.6 164.8 L110.8 164.4 L111.1 164.1 L111.4 163.7 L111.7 163.4 L112.0 163.0 L112.3 162.7 L112.6 162.3 L112.8 162.0 L113.1 161.6 L113.4 161.3 L113.7 160.9 L114.0 160.5 L114.3 160.2 L114.5 159.8 L114.8 159.5 L115.1 159.1 L115.4 158.7 L115.7 158.4 L116.0 158.0 L116.3 157.7 L116.5 157.3 L116.8 156.9 L117.1 156.6 L117.4 156.2 L117.7 155.8 L118.0 155.5 L118.3 155.1 L118.5 154.7 L118.8 154.3 L119.1 154.0 L119.4 153.6 L119.7 153.2 L120.0 152.9 L120.2 152.5 L120.5 152.1 L120.8 151.7 L121.1 151.4 L121.4 151.0 L121.7 150.6 L122.0 150.2 L122.2 149.8 L122.5 149.5 L122.8 149.1 L123.1 148.7 L123.4 148.3 L123.7 148.0 L124.0 147.6 L124.2 147.2 L124.5 146.8 L124.8 146.4 L125.1 146.0 L125.4 145.7 L125.7 145.3 L126.0 144.9 L126.2 144.5 L126.5 144.1 L126.8 143.7 L127.1 143.4 L127.4 143.0 L127.7 142.6 L127.9 142.2 L128.2 141.8 L128.5 141.4 L128.8 141.0 L129.1 140.6 L129.4 140.3 L129.7 139.9 L129.9 139.5 L130.2 139.1 L130.5 138.7 L130.8 138.3 L131.1 137.9 L131.4 137.5 L131.6 137.1 L131.9 136.7 L132.2 136.4 L132.5 136.0 L132.8 135.6 L133.1 135.2 L133.4 134.8 L133.6 134.4 L133.9 134.0 L134.2 133.6 L134.5 133.2 L134.8 132.8 L135.1 132.4 L135.4 132.1 L135.6 131.7 L135.9 131.3 L136.2 130.9 L136.5 130.5 L136.8 130.1 L137.1 129.7 L137.4 129.3 L137.6 128.9 L137.9 128.5 L138.2 128.1 L138.5 127.7 L138.8 127.4 L139.1 127.0 L139.3 126.6 L139.6 126.2 L139.9 125.8 L140.2 125.4 L140.5 125.0 L140.8 124.6 L141.1 124.2 L141.3 123.8 L141.6 123.5 L141.9 123.1 L142.2 122.7 L142.5 122.3 L142.8 121.9 L143.0 121.5 L143.3 121.1 L143.6 120.7 L143.9 120.3 L144.2 120.0 L144.5 119.6 L144.8 119.2 L145.0 118.8 L145.3 118.4 L145.6 118.0 L145.9 117.6 L146.2 117.2 L146.5 116.9 L146.8 116.5 L147.0 116.1 L147.3 115.7 L147.6 115.3 L147.9 114.9 L148.2 114.6 L148.5 114.2 L148.8 113.8 L149.0 113.4 L149.3 113.0 L149.6 112.7 L149.9 112.3 L150.2 111.9 L150.5 111.5 L150.7 111.1 L151.0 110.8 L151.3 110.4 L151.6 110.0 L151.9 109.6 L152.2 109.3 L152.5 108.9 L152.7 108.5 L153.0 108.1 L153.3 107.8 L153.6 107.4 L153.9 107.0 L154.2 106.7 L154.5 106.3 L154.7 105.9 L155.0 105.5 L155.3 105.2 L155.6 104.8 L155.9 104.4 L156.2 104.1 L156.4 103.7 L156.7 103.3 L157.0 103.0 L157.3 102.6 L157.6 102.3 L157.9 101.9 L158.2 101.5 L158.4 101.2 L158.7 100.8 L159.0 100.5 L159.3 100.1 L159.6 99.8 L159.9 99.4 L160.2 99.0 L160.4 98.7 L160.7 98.3 L161.0 98.0 L161.3 97.6 L161.6 97.3 L161.9 96.9 L162.1 96.6 L162.4 96.2 L162.7 95.9 L163.0 95.6 L163.3 95.2 L163.6 94.9 L163.9 94.5 L164.1 94.2 L164.4 93.9 L164.7 93.5 L165.0 93.2 L165.3 92.8 L165.6 92.5 L165.8 92.2 L166.1 91.8 L166.4 91.5 L166.7 91.2 L167.0 90.9 L167.3 90.5 L167.6 90.2 L167.8 89.9 L168.1 89.5 L168.4 89.2 L168.7 88.9 L169.0 88.6 L169.3 88.3 L169.6 87.9 L169.8 87.6 L170.1 87.3 L170.4 87.0 L170.7 86.7 L171.0 86.4 L171.3 86.1 L171.5 85.8 L171.8 85.5 L172.1 85.1 L172.4 84.8 L172.7 84.5 L173.0 84.2 L173.3 83.9 L173.5 83.6 L173.8 83.3 L174.1 83.0 L174.4 82.8 L174.7 82.5 L175.0 82.2 L175.3 81.9 L175.5 81.6 L175.8 81.3 L176.1 81.0 L176.4 80.7 L176.7 80.4 L177.0 80.2 L177.2 79.9 L177.5 79.6 L177.8 79.3 L178.1 79.1 L178.4 78.8 L178.7 78.5 L179.0 78.2 L179.2 78.0 L179.5 77.7 L179.8 77.4 L180.1 77.2 L180.4 76.9 L180.7 76.7 L181.0 76.4 L181.2 76.1 L181.5 75.9 L181.8 75.6 L182.1 75.4 L182.4 75.1 L182.7 74.9 L183.0 74.6 L183.2 74.4 L183.5 74.2 L183.8 73.9 L184.1 73.7 L184.4 73.4 L184.7 73.2 L184.9 73.0 L185.2 72.7 L185.5 72.5 L185.8 72.3 L186.1 72.1 L186.4 71.8 L186.7 71.6 L186.9 71.4 L187.2 71.2 L187.5 71.0 L187.8 70.8 L188.1 70.5 L188.4 70.3 L188.7 70.1 L188.9 69.9 L189.2 69.7 L189.5 69.5 L189.8 69.3 L190.1 69.1 L190.4 68.9 L190.6 68.7 L190.9 68.5 L191.2 68.4 L191.5 68.2 L191.8 68.0 L192.1 67.8 L192.4 67.6 L192.6 67.4 L192.9 67.3 L193.2 67.1 L193.5 66.9 L193.8 66.7 L194.1 66.6 L194.3 66.4 L194.6 66.3 L194.9 66.1 L195.2 65.9 L195.5 65.8 L195.8 65.6 L196.1 65.5 L196.3 65.3 L196.6 65.2 L196.9 65.0 L197.2 64.9 L197.5 64.8 L197.8 64.6 L198.1 64.5 L198.3 64.3 L198.6 64.2 L198.9 64.1 L199.2 64.0 L199.5 63.8 L199.8 63.7 L200.0 63.6 L200.3 63.5 L200.6 63.4 L200.9 63.3 L201.2 63.2 L201.5 63.0 L201.8 62.9 L202.0 62.8 L202.3 62.7 L202.6 62.6 L202.9 62.6 L203.2 62.5 L203.5 62.4 L203.8 62.3 L204.0 62.2 L204.3 62.1 L204.6 62.1 L204.9 62.0 L205.2 61.9 L205.5 61.8 L205.8 61.8 L206.0 61.7 L206.3 61.6 L206.6 61.6 L206.9 61.5 L207.2 61.5 L207.5 61.4 L207.7 61.4 L208.0 61.3 L208.3 61.3 L208.6 61.2 L208.9 61.2 L209.2 61.2 L209.5 61.1 L209.7 61.1 L210.0 61.1 L210.3 61.1 L210.6 61.0 L210.9 61.0 L211.2 61.0 L211.5 61.0 L211.7 61.0 L212.0 61.0 L212.3 61.0 L212.6 61.0 L212.9 61.0 L213.2 61.0 L213.4 61.0 L213.7 61.0 L214.0 61.0 L214.3 61.1 L214.6 61.1 L214.9 61.1 L215.2 61.1 L215.4 61.2 L215.7 61.2 L216.0 61.2 L216.3 61.3 L216.6 61.3 L216.9 61.4 L217.2 61.4 L217.4 61.5 L217.7 61.5 L218.0 61.6 L218.3 61.6 L218.6 61.7 L218.9 61.8 L219.1 61.8 L219.4 61.9 L219.7 62.0 L220.0 62.1 L220.3 62.2 L220.6 62.2 L220.9 62.3 L221.1 62.4 L221.4 62.5 L221.7 62.6 L222.0 62.7 L222.3 62.8 L222.6 62.9 L222.8 63.1 L223.1 63.2 L223.4 63.3 L223.7 63.4 L224.0 63.5 L224.3 63.7 L224.6 63.8 L224.8 63.9 L225.1 64.1 L225.4 64.2 L225.7 64.4 L226.0 64.5 L226.3 64.7 L226.6 64.8 L226.8 65.0 L227.1 65.2 L227.4 65.3 L227.7 65.5 L228.0 65.7 L228.3 65.9 L228.5 66.0 L228.8 66.2 L229.1 66.4 L229.4 66.6 L229.7 66.8 L230.0 67.0 L230.3 67.2 L230.5 67.4 L230.8 67.6 L231.1 67.8 L231.4 68.1 L231.7 68.3 L232.0 68.5 L232.3 68.7 L232.5 69.0 L232.8 69.2 L233.1 69.5 L233.4 69.7 L233.7 69.9 L234.0 70.2 L234.2 70.5 L234.5 70.7 L234.8 71.0 L235.1 71.2 L235.4 71.5 L235.7 71.8 L236.0 72.1 L236.2 72.3 L236.5 72.6 L236.8 72.9 L237.1 73.2 L237.4 73.5 L237.7 73.8 L238.0 74.1 L238.2 74.4 L238.5 74.7 L238.8 75.1 L239.1 75.4 L239.4 75.7 L239.7 76.0 L239.9 76.4 L240.2 76.7 L240.5 77.1 L240.8 77.4 L241.1 77.7 L241.4 78.1 L241.7 78.5 L241.9 78.8 L242.2 79.2 L242.5 79.6 L242.8 79.9 L243.1 80.3 L243.4 80.7 L243.7 81.1 L243.9 81.5 L244.2 81.9 L244.5 82.3 L244.8 82.7 L245.1 83.1 L245.4 83.5 L245.7 83.9 L245.9 84.3 L246.2 84.7 L246.5 85.2 L246.8 85.6 L247.1 86.0 L247.4 86.5 L247.6 86.9 L247.9 87.4 L248.2 87.8 L248.5 88.3 L248.8 88.7 L249.1 89.2 L249.4 89.7 L249.6 90.2 L249.9 90.6 L250.2 91.1 L250.5 91.6 L250.8 92.1 L251.1 92.6 L251.3 93.1 L251.6 93.6 L251.9 94.1 L252.2 94.6 L252.5 95.2 L252.8 95.7 L253.1 96.2 L253.3 96.8 L253.6 97.3 L253.9 97.8 L254.2 98.4 L254.5 98.9 L254.8 99.5 L255.1 100.0 L255.3 100.6 L255.6 101.2 L255.9 101.8 L256.2 102.3 L256.5 102.9 L256.8 103.5 L257.0 104.1 L257.3 104.7 L257.6 105.3 L257.9 105.9 L258.2 106.5 L258.5 107.1 L258.8 107.8 L259.0 108.4 L259.3 109.0 L259.6 109.6 L259.9 110.3 L260.2 110.9 L260.5 111.6 L260.8 112.2 L261.0 112.9 L261.3 113.6 L261.6 114.2 L261.9 114.9 L262.2 115.6 L262.5 116.3 L262.8 117.0 L263.0 117.6 L263.3 118.3 L263.6 119.0 L263.9 119.8 L264.2 120.5 L264.5 121.2 L264.7 121.9 L265.0 122.6 L265.3 123.4 L265.6 124.1 L265.9 124.9 L266.2 125.6 L266.5 126.4 L266.7 127.1 L267.0 127.9 L267.3 128.6 L267.6 129.4 L267.9 130.2 L268.2 131.0 L268.4 131.8 L268.7 132.6 L269.0 133.4 L269.3 134.2 L269.6 135.0 L269.9 135.8 L270.2 136.6 L270.4 137.4 L270.7 138.3 L271.0 139.1 L271.3 139.9 L271.6 140.8 L271.9 141.6 L272.2 142.5 L272.4 143.3 L272.7 144.2 L273.0 145.1 L273.3 146.0 L273.6 146.8 L273.9 147.7 L274.1 148.6 L274.4 149.5 L274.7 150.4 L275.0 151.3 L275.3 152.2 L275.6 153.2 L275.9 154.1 L276.1 155.0 L276.4 155.9 L276.7 156.9 L277.0 157.8 L277.3 158.8 L277.6 159.7 L277.9 160.7 L278.1 161.7 L278.4 162.6 L278.7 163.6 L279.0 164.6 L279.3 165.6 L279.6 166.6 L279.9 167.6 L280.1 168.6 L280.4 169.6 L280.7 170.6 L281.0 171.7 L281.3 172.7 L281.6 173.7 L281.8 174.8 L282.1 175.8 L282.4 176.9 L282.7 177.9 L283.0 179.0 L283.3 180.0 L283.6 181.1 L283.8 182.2 L284.1 183.3 L284.4 184.4 L284.7 185.5 L285.0 186.6 L285.3 187.7 L285.5 188.8 L285.8 189.9 L286.1 191.0 L286.4 192.2 L286.7 193.3 L287.0 194.4 L287.3 195.6 L287.5 196.8 L287.8 197.9 L288.1 199.1 L288.4 200.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#c3d55ed41)\"/><line x1=\"212.4\" y1=\"200.2\" x2=\"212.4\" y2=\"61.0\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-dasharray=\"6 4\"/><circle cx=\"212.4\" cy=\"61.0\" r=\"3.8\" fill=\"#1f5fd6\" stroke=\"#1f5fd6\" stroke-width=\"1.5\"/><text x=\"220.4\" y=\"55.0\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">mode</text></svg>"
+     }
+    ],
+    "answer": "\\(2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle E(X) = \\frac{4}{27}\\int_0^3 (3x^3 - x^4) \\, dx = \\frac{4}{27}\\left[\\frac{3x^4}{4} - \\frac{x^5}{5}\\right]_0^3 = \\frac{4}{27}\\left(\\frac{243}{4} - \\frac{243}{5}\\right) = \\frac{4}{27} \\times \\frac{243}{20}\\)."
+    ],
+    "answer": "\\(\\dfrac{9}{5}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-022",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = \\dfrac{3(x^2 + 2)}{20}\\) for \\(0 \\leq x \\leq 2\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(E(X)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the median of \\(X\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\mathrm{Var}(X) = E(X^2) - \\left[E(X)\\right]^2\\), with \\(E(X^2) = \\displaystyle\\int x^2 f(x)\\,dx\\). The median leads to a cubic equation, which a calculator solves.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle E(X) = \\frac{3}{20}\\int_0^2 (x^3 + 2x) \\, dx = \\frac{3}{20}(4 + 4)\\)."
+    ],
+    "answer": "\\(\\dfrac{6}{5} = 1.2\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle E(X^2) = \\frac{3}{20}\\int_0^2 (x^4 + 2x^2) \\, dx = \\frac{3}{20}\\left(\\frac{32}{5} + \\frac{16}{3}\\right) = \\frac{3}{20} \\times \\frac{176}{15} = 1.76\\).",
+     "\\(\\mathrm{Var}(X) = 1.76 - 1.2^2\\)."
+    ],
+    "answer": "\\(0.32\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int_0^m \\frac{3(x^2 + 2)}{20} \\, dx = \\frac{m^3 + 6m}{20} = \\frac{1}{2}\\), so \\(m^3 + 6m - 10 = 0\\).",
+     "The only real solution is \\(m = 1.3002\\ldots\\), which lies in \\([0, 2]\\)."
+    ],
+    "answer": "\\(1.30\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-023",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 9,
+  "stem": [
+   "The continuous random variable \\(X\\) has the probability density function \\(f\\) shown in the diagram. \\(f(x) = k\\) for \\(0 \\leq x < 2\\), \\(f(x) = \\dfrac{k(5 - x)}{3}\\) for \\(2 \\leq x \\leq 5\\), and \\(f(x) = 0\\) otherwise.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 230\" width=\"380\" height=\"230\" role=\"img\" aria-label=\"Graph of y = f(x). It is a horizontal line at height k from x = 0 to x = 2, then a straight line falling from (2, k) to (5, 0). The graph is zero outside 0 to 5.\"><defs><clipPath id=\"c01b922c0\"><rect x=\"30\" y=\"24\" width=\"324\" height=\"178\"/></clipPath></defs><line x1=\"30.0\" y1=\"182.2\" x2=\"366.0\" y2=\"182.2\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"59.5\" y1=\"202.0\" x2=\"59.5\" y2=\"12.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M372.0 182.2 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M59.5 6.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"370.0\" y=\"200.2\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"47.5\" y=\"10.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"108.5\" y1=\"179.2\" x2=\"108.5\" y2=\"185.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"108.5\" y=\"199.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><line x1=\"157.6\" y1=\"179.2\" x2=\"157.6\" y2=\"185.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"157.6\" y=\"199.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"206.7\" y1=\"179.2\" x2=\"206.7\" y2=\"185.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"206.7\" y=\"199.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><line x1=\"255.8\" y1=\"179.2\" x2=\"255.8\" y2=\"185.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"255.8\" y=\"199.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><line x1=\"304.9\" y1=\"179.2\" x2=\"304.9\" y2=\"185.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"304.9\" y=\"199.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">5</text><line x1=\"354.0\" y1=\"179.2\" x2=\"354.0\" y2=\"185.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"354.0\" y=\"199.2\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6</text><text x=\"52.5\" y=\"198.2\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><path d=\"M59.5 182.2 L59.5 69.2 L157.6 69.2 L304.9 182.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><line x1=\"157.6\" y1=\"182.2\" x2=\"157.6\" y2=\"69.2\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-dasharray=\"6 4\"/><text x=\"51.5\" y=\"74.2\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">k</tspan></text><text x=\"245.1\" y=\"118.9\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = <tspan font-style=\"italic\">f</tspan>(<tspan font-style=\"italic\">x</tspan>)</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the median of \\(X\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(E(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find \\(P\\left(X > E(X)\\right)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Areas of the rectangle and the triangle give \\(k\\) without integrating. Check which piece the median lies in before solving for it. The mean needs one integral for each piece.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Rectangle: \\(2k\\). Triangle: \\(\\dfrac{1}{2} \\times 3 \\times k = 1.5k\\). So \\(3.5k = 1\\)."
+    ],
+    "answer": "\\(k = \\dfrac{2}{7}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The rectangle has area \\(\\dfrac{4}{7} > \\dfrac{1}{2}\\), so the median \\(m\\) is in \\([0, 2)\\): \\(\\dfrac{2m}{7} = \\dfrac{1}{2}\\)."
+    ],
+    "answer": "\\(\\dfrac{7}{4}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int_0^2 \\frac{2x}{7} \\, dx = \\frac{4}{7}\\).",
+     "\\(\\displaystyle\\int_2^5 \\frac{2x(5 - x)}{21} \\, dx = \\frac{2}{21}\\left[\\frac{5x^2}{2} - \\frac{x^3}{3}\\right]_2^5 = \\frac{2}{21}\\left(\\frac{125}{6} - \\frac{22}{3}\\right) = \\frac{2}{21} \\times \\frac{27}{2} = \\frac{9}{7}\\).",
+     "\\(E(X) = \\dfrac{4}{7} + \\dfrac{9}{7}\\)."
+    ],
+    "answer": "\\(\\dfrac{13}{7}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{13}{7} < 2\\), so \\(P\\left(X > \\dfrac{13}{7}\\right) = \\dfrac{2}{7}\\left(2 - \\dfrac{13}{7}\\right) + \\dfrac{3}{7} = \\dfrac{2}{49} + \\dfrac{21}{49}\\), where \\(\\dfrac{3}{7}\\) is the area of the triangle."
+    ],
+    "answer": "\\(\\dfrac{23}{49}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-024",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = kx^n\\) for \\(0 \\leq x \\leq 1\\), and \\(f(x) = 0\\) otherwise, where \\(n > 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(k = n + 1\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(E(X)\\) in terms of \\(n\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The median of \\(X\\) is 0.9. Find the value of \\(n\\), and hence find \\(E(X)\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "The integrals are powers of \\(x\\), evaluated at 1. For the median, \\(P(X < 0.9) = 0.9^{n+1} = 0.5\\); take logarithms to find \\(n\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int_0^1 kx^n \\, dx = \\frac{k}{n + 1} = 1\\), so \\(k = n + 1\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle E(X) = \\int_0^1 (n + 1)x^{n+1} \\, dx = \\frac{n + 1}{n + 2}\\)."
+    ],
+    "answer": "\\(\\dfrac{n + 1}{n + 2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int_0^{0.9} (n + 1)x^n \\, dx = 0.9^{n+1} = 0.5\\), so \\(n + 1 = \\dfrac{\\ln 0.5}{\\ln 0.9} = 6.5788\\ldots\\) and \\(n = 5.5788\\ldots\\)",
+     "\\(E(X) = \\dfrac{6.5788\\ldots}{7.5788\\ldots} = 0.86805\\ldots\\)"
+    ],
+    "answer": "\\(n = 5.58\\), \\(E(X) = 0.868\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-025",
+  "strand": "Statistics and Probability",
+  "subtopic": "Averages and spread of continuous random variables",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 8,
+  "stem": [
+   "The continuous random variable \\(X\\) has probability density function \\(f(x) = \\dfrac{3(4 - x)^2}{64}\\) for \\(0 \\leq x \\leq 4\\), and \\(f(x) = 0\\) otherwise."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the mode of \\(X\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(E(X) = 1\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\mathrm{Var}(X)\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the exact median of \\(X\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The substitution \\(u = 4 - x\\) makes every integral a sum of powers of \\(u\\). For the median, the area to the right of \\(m\\) is \\(\\dfrac{(4 - m)^3}{64}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(f\\) decreases on \\([0, 4]\\), so it is greatest at \\(x = 0\\)."
+    ],
+    "answer": "\\(0\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "With \\(u = 4 - x\\): \\(\\displaystyle E(X) = \\frac{3}{64}\\int_0^4 (4 - u)u^2 \\, du = \\frac{3}{64}\\left[\\frac{4u^3}{3} - \\frac{u^4}{4}\\right]_0^4 = \\frac{3}{64}\\left(\\frac{256}{3} - 64\\right) = \\frac{3}{64} \\times \\frac{64}{3} = 1\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle E(X^2) = \\frac{3}{64}\\int_0^4 (4 - u)^2u^2 \\, du = \\frac{3}{64}\\int_0^4 (16u^2 - 8u^3 + u^4) \\, du = \\frac{3}{64}\\left(\\frac{1024}{3} - 512 + \\frac{1024}{5}\\right) = \\frac{3}{64} \\times \\frac{512}{15} = \\frac{8}{5}\\).",
+     "\\(\\mathrm{Var}(X) = \\dfrac{8}{5} - 1^2\\)."
+    ],
+    "answer": "\\(\\dfrac{3}{5}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\displaystyle P(X > m) = \\int_m^4 \\frac{3(4 - x)^2}{64} \\, dx = \\frac{(4 - m)^3}{64} = \\frac{1}{2}\\), so \\((4 - m)^3 = 32\\) and \\(4 - m = \\sqrt[3]{32} = 2\\sqrt[3]{4}\\)."
+    ],
+    "answer": "\\(4 - 2\\sqrt[3]{4}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-026",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability with counting methods",
+  "level": {
+   "HL AA": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "The six letters of the word ORANGE are arranged in a row in a random order."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the arrangement begins with a vowel.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the three vowels are next to each other.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that the vowels appear in the order A, E, O, reading from left to right (not necessarily next to each other).",
+    "marks": 2
+   }
+  ],
+  "idea": "There are \\(6! = 720\\) equally likely arrangements. Treat letters that must stay together as one block. For part (c), each of the \\(3!\\) orders of the vowels is equally likely.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "3 of the 6 letters (O, A, E) are vowels, and each letter is equally likely to come first."
+    ],
+    "answer": "\\(\\dfrac{1}{2}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Arrange the block and R, N, G: \\(4!\\) ways. Arrange the vowels in the block: \\(3!\\) ways.",
+     "\\(\\dfrac{4! \\times 3!}{6!} = \\dfrac{144}{720}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{5}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The three vowels appear in one of \\(3! = 6\\) orders, all equally likely, and only one is A, E, O."
+    ],
+    "answer": "\\(\\dfrac{1}{6}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-027",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability with counting methods",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 6,
+  "stem": [
+   "A drawer contains 5 pairs of socks, and no two pairs are alike. Four socks are taken from the drawer at random."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the number of ways of choosing four socks from the drawer.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that no two of the four socks make a pair.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that the four socks contain exactly one pair.",
+    "marks": 3
+   }
+  ],
+  "idea": "Count choices of pairs first, then choose a sock from each pair. For “no pair”, choose 4 of the 5 pairs and one sock from each.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dbinom{10}{4}\\)."
+    ],
+    "answer": "\\(210\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Choose 4 of the 5 pairs, then 1 sock from each: \\(\\dbinom{5}{4} \\times 2^4 = 80\\).",
+     "\\(\\dfrac{80}{210}\\)."
+    ],
+    "answer": "\\(\\dfrac{8}{21}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Choose the complete pair: 5 ways. Choose 2 of the other 4 pairs: \\(\\dbinom{4}{2} = 6\\) ways, and one sock from each: \\(2^2 = 4\\).",
+     "\\(\\dfrac{5 \\times 6 \\times 4}{210} = \\dfrac{120}{210}\\)."
+    ],
+    "answer": "\\(\\dfrac{4}{7}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-028",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability with counting methods",
+  "level": {
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "In a lottery, a player chooses 5 different numbers from 1 to 25. Then 5 different winning numbers are drawn at random from 1 to 25."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the number of different sets of 5 winning numbers.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that the player’s numbers match all 5 winning numbers.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the probability that exactly 3 of the player’s numbers are winning numbers.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the probability that at least 3 of the player’s numbers are winning numbers.",
+    "marks": 2
+   }
+  ],
+  "idea": "Every set of 5 winning numbers is equally likely. To match exactly 3, the draw must contain 3 of the player’s 5 numbers and 2 of the other 20 numbers.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dbinom{25}{5}\\)."
+    ],
+    "answer": "\\(53\\,130\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Only one of the sets matches."
+    ],
+    "answer": "\\(\\dfrac{1}{53\\,130} \\approx 1.88 \\times 10^{-5}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{\\binom{5}{3}\\binom{20}{2}}{53\\,130} = \\dfrac{10 \\times 190}{53\\,130} = \\dfrac{1900}{53\\,130} = 0.03576\\ldots\\)"
+    ],
+    "answer": "\\(0.0358\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Exactly 4: \\(\\dbinom{5}{4}\\dbinom{20}{1} = 100\\) sets. Exactly 5: 1 set.",
+     "\\(\\dfrac{1900 + 100 + 1}{53\\,130} = \\dfrac{2001}{53\\,130} = 0.03766\\ldots\\)"
+    ],
+    "answer": "\\(0.0377\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-029",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability with counting methods",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 7,
+  "stem": [
+   "Eight people, including three friends Amir, Bo and Cleo, sit in a row of eight seats in a random order."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the probability that the three friends sit next to each other.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the probability that no two of the three friends sit next to each other.",
+    "marks": 4
+   }
+  ],
+  "idea": "For (a), glue the three friends into one block. For (b), seat the other five people first; this makes 6 gaps (including both ends), and the friends must go in 3 different gaps.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The block and the other 5 people: \\(6!\\) orders. The friends within the block: \\(3!\\) orders.",
+     "\\(\\dfrac{6! \\times 3!}{8!} = \\dfrac{4320}{40\\,320}\\)."
+    ],
+    "answer": "\\(\\dfrac{3}{28}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Arrange the other five: \\(5! = 120\\) ways. Choose 3 of the 6 gaps: \\(\\dbinom{6}{3} = 20\\). Put the friends in them in order: \\(3! = 6\\).",
+     "\\(\\dfrac{120 \\times 20 \\times 6}{40\\,320} = \\dfrac{14\\,400}{40\\,320}\\)."
+    ],
+    "answer": "\\(\\dfrac{5}{14}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-sp-hl-030",
+  "strand": "Statistics and Probability",
+  "subtopic": "Probability with counting methods",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Assume that a person is equally likely to be born in any of the 12 months, independently of other people."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Three people are chosen. Find the probability that they were born in three different months.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Four people are chosen. Find the probability that at least two of them were born in the same month.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the least number of people for which the probability that at least two of them were born in the same month is more than 0.9.",
+    "marks": 3
+   }
+  ],
+  "idea": "Count the ways for everyone to be in different months: \\(12 \\times 11 \\times 10 \\times \\ldots\\). “At least two the same” is the complement of “all different”.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{12 \\times 11 \\times 10}{12^3} = \\dfrac{1320}{1728}\\)."
+    ],
+    "answer": "\\(\\dfrac{55}{72}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(1 - \\dfrac{12 \\times 11 \\times 10 \\times 9}{12^4} = 1 - \\dfrac{11\\,880}{20\\,736} = 0.42708\\ldots\\)"
+    ],
+    "answer": "\\(0.427\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "For \\(n\\) people the probability is \\(1 - \\dfrac{12 \\times 11 \\times \\cdots \\times (13 - n)}{12^n}\\).",
+     "\\(n = 7\\): \\(0.8885\\ldots\\). \\(n = 8\\): \\(0.9535\\ldots\\)"
+    ],
+    "answer": "\\(8\\)"
+   }
+  ]
+ }
+]
