@@ -1,0 +1,593 @@
+[
+ {
+  "id": "aa-ca-hl-b-001",
+  "strand": "Calculus",
+  "subtopic": "Limits, continuity and differentiability",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 16,
+  "stem": [
+   "Let \\(f(x) = \\dfrac{1 - \\cos x}{x^2}\\) for \\(x \\neq 0\\), and \\(f(0) = k\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use L’Hôpital’s rule to find the value of \\(k\\) for which \\(f\\) is continuous at \\(x = 0\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Use the Maclaurin series for \\(\\cos x\\) to show that, for \\(x \\neq 0\\), \\(f(x) = \\dfrac{1}{2} - \\dfrac{x^2}{24} + \\dfrac{x^4}{720} - \\ldots\\)",
+    "marks": 3
+   },
+   {
+    "label": "",
+    "text": "For the rest of the question, \\(k\\) takes the value found in part (a).",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "Use the series in part (b) to find \\(f'(0)\\) from first principles.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find \\(\\displaystyle\\lim_{x \\to 0} \\frac{f(x) - \\frac{1}{2}}{x^2}\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Given that the series in part (b) is the Maclaurin series of \\(f\\), write down the value of \\(f''(0)\\).",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "By considering \\(g(x) = \\dfrac{x^2}{2} - 1 + \\cos x\\) for \\(x \\geq 0\\), show that \\(f(x) \\leq \\dfrac{1}{2}\\) for all real \\(x\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Continuity at 0 needs \\(f(0)\\) to equal the limit. Dividing the series for \\(1 - \\cos x\\) by \\(x^2\\) gives a series for \\(f\\), which answers every later part: \\(f'(0)\\) is a limit of a difference quotient, and the coefficient of \\(x^2\\) in a Maclaurin series is \\(\\dfrac{f''(0)}{2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{0}{0}\\): \\(\\displaystyle\\lim_{x \\to 0} \\frac{\\sin x}{2x}\\), still \\(\\dfrac{0}{0}\\); then \\(\\displaystyle\\lim_{x \\to 0} \\frac{\\cos x}{2} = \\frac{1}{2}\\)."
+    ],
+    "answer": "\\(k = \\dfrac{1}{2}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(1 - \\cos x = \\dfrac{x^2}{2} - \\dfrac{x^4}{24} + \\dfrac{x^6}{720} - \\ldots\\); divide by \\(x^2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle f'(0) = \\lim_{h \\to 0} \\frac{f(h) - f(0)}{h} = \\lim_{h \\to 0} \\frac{-\\frac{h^2}{24} + \\frac{h^4}{720} - \\ldots}{h} = \\lim_{h \\to 0}\\left(-\\frac{h}{24} + \\ldots\\right)\\)."
+    ],
+    "answer": "\\(0\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{f(x) - \\frac{1}{2}}{x^2} = -\\dfrac{1}{24} + \\dfrac{x^2}{720} - \\ldots \\to -\\dfrac{1}{24}\\)."
+    ],
+    "answer": "\\(-\\dfrac{1}{24}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The coefficient of \\(x^2\\) is \\(\\dfrac{f''(0)}{2!} = -\\dfrac{1}{24}\\)."
+    ],
+    "answer": "\\(-\\dfrac{1}{12}\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(g(0) = 0\\) and \\(g'(x) = x - \\sin x \\geq 0\\) for \\(x \\geq 0\\) (since \\(\\sin x \\leq x\\) there), so \\(g(x) \\geq 0\\) for \\(x \\geq 0\\): \\(1 - \\cos x \\leq \\dfrac{x^2}{2}\\).",
+     "Dividing by \\(x^2 > 0\\) gives \\(f(x) \\leq \\dfrac{1}{2}\\) for \\(x > 0\\). Both \\(1 - \\cos x\\) and \\(x^2\\) are unchanged when \\(x\\) is replaced by \\(-x\\), so the same holds for \\(x < 0\\); and \\(f(0) = \\dfrac{1}{2}\\)."
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-ca-hl-b-002",
+  "strand": "Calculus",
+  "subtopic": "Implicit differentiation and related rates",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 13,
+  "stem": [
+   "A curve \\(C\\) has equation \\(x^2y + y^3 = 10\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\dfrac{dy}{dx} = -\\dfrac{2xy}{x^2 + 3y^2}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the equation of the tangent to \\(C\\) at the point \\(P(3, 1)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The tangent at P meets \\(C\\) again at the point Q. Find the coordinates of Q.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "A particle moves along \\(C\\). When it passes through P, its \\(x\\)-coordinate is increasing at 2 units per second. Find the rate of change of its \\(y\\)-coordinate at that moment.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Show that \\(0 < y \\leq \\sqrt[3]{10}\\) at every point of \\(C\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Use the product rule on \\(x^2y\\). For Q, substitute the tangent’s equation into the curve: the cubic in \\(x\\) must have a double root at \\(x = 3\\), because the line touches \\(C\\) there. For (e), factorise the left side as \\(y(x^2 + y^2)\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(2xy + x^2\\dfrac{dy}{dx} + 3y^2\\dfrac{dy}{dx} = 0\\), so \\((x^2 + 3y^2)\\dfrac{dy}{dx} = -2xy\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Gradient at P: \\(-\\dfrac{6}{9 + 3} = -\\dfrac{1}{2}\\). \\(y - 1 = -\\dfrac{1}{2}(x - 3)\\)."
+    ],
+    "answer": "\\(y = \\dfrac{5 - x}{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Substitute: \\(\\dfrac{x^2(5 - x)}{2} + \\dfrac{(5 - x)^3}{8} = 10\\). Multiply by 8 and simplify: \\(-5x^3 + 35x^2 - 75x + 45 = 0\\), that is \\(x^3 - 7x^2 + 15x - 9 = 0\\).",
+     "\\(x = 3\\) is a double root: \\((x - 3)^2(x - 1) = 0\\). So the other point has \\(x = 1\\), \\(y = 2\\). (Check: \\(2 + 8 = 10\\).)"
+    ],
+    "answer": "\\(\\mathrm{Q}(1, 2)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{dy}{dt} = \\dfrac{dy}{dx} \\times \\dfrac{dx}{dt} = -\\dfrac{1}{2} \\times 2\\)."
+    ],
+    "answer": "\\(-1\\) unit per second"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(y(x^2 + y^2) = 10 > 0\\) and \\(x^2 + y^2 > 0\\), so \\(y > 0\\).",
+     "Then \\(y^3 \\leq y(x^2 + y^2) = 10\\), since \\(yx^2 \\geq 0\\). So \\(y \\leq \\sqrt[3]{10}\\), with equality at \\(x = 0\\)."
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-ca-hl-b-003",
+  "strand": "Calculus",
+  "subtopic": "Further integration",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "Let \\(I = \\displaystyle\\int_0^{\\pi/2} \\frac{\\sin x}{\\sin x + \\cos x} \\, dx\\) and \\(J = \\displaystyle\\int_0^{\\pi/2} \\frac{\\cos x}{\\sin x + \\cos x} \\, dx\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the value of \\(I + J\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Use the substitution \\(u = \\dfrac{\\pi}{2} - x\\) to show that \\(I = J\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Hence write down the value of \\(I\\).",
+    "marks": 1
+   },
+   {
+    "label": "",
+    "text": "Let \\(K = \\displaystyle\\int_0^{\\pi/4} \\ln(1 + \\tan x) \\, dx\\).",
+    "marks": null
+   },
+   {
+    "label": "d",
+    "text": "Show that \\(1 + \\tan\\left(\\dfrac{\\pi}{4} - x\\right) = \\dfrac{2}{1 + \\tan x}\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Use the substitution \\(u = \\dfrac{\\pi}{4} - x\\) to show that \\(K = \\dfrac{\\pi}{8}\\ln 2\\).",
+    "marks": 4
+   },
+   {
+    "label": "f",
+    "text": "Use the substitution \\(x = \\tan\\theta\\) to find the exact value of \\(\\displaystyle\\int_0^1 \\frac{\\ln(1 + x)}{1 + x^2} \\, dx\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Neither integral can be found directly. A substitution that reflects the interval (\\(x \\to \\pi/2 - x\\), or \\(x \\to \\pi/4 - x\\)) turns the integral into something related to itself, and an equation for the integral follows.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle I + J = \\int_0^{\\pi/2} 1 \\, dx\\)."
+    ],
+    "answer": "\\(\\dfrac{\\pi}{2}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(dx = -du\\); \\(x = 0 \\to u = \\dfrac{\\pi}{2}\\), \\(x = \\dfrac{\\pi}{2} \\to u = 0\\). \\(\\sin x = \\cos u\\), \\(\\cos x = \\sin u\\).",
+     "\\(\\displaystyle I = \\int_{\\pi/2}^{0} \\frac{\\cos u}{\\cos u + \\sin u}(-du) = \\int_0^{\\pi/2} \\frac{\\cos u}{\\sin u + \\cos u} \\, du = J\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2I = \\dfrac{\\pi}{2}\\)."
+    ],
+    "answer": "\\(I = \\dfrac{\\pi}{4}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\tan\\left(\\dfrac{\\pi}{4} - x\\right) = \\dfrac{1 - \\tan x}{1 + \\tan x}\\), so \\(1 + \\tan\\left(\\dfrac{\\pi}{4} - x\\right) = \\dfrac{(1 + \\tan x) + (1 - \\tan x)}{1 + \\tan x} = \\dfrac{2}{1 + \\tan x}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\displaystyle K = \\int_{\\pi/4}^{0} \\ln\\left(1 + \\tan\\left(\\frac{\\pi}{4} - u\\right)\\right)(-du) = \\int_0^{\\pi/4} \\ln\\frac{2}{1 + \\tan u} \\, du\\).",
+     "\\(\\displaystyle = \\int_0^{\\pi/4} \\ln 2 \\, du - \\int_0^{\\pi/4} \\ln(1 + \\tan u) \\, du = \\frac{\\pi}{4}\\ln 2 - K\\).",
+     "So \\(2K = \\dfrac{\\pi}{4}\\ln 2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(dx = \\sec^2\\theta \\, d\\theta\\) and \\(1 + x^2 = \\sec^2\\theta\\); \\(x = 0 \\to \\theta = 0\\), \\(x = 1 \\to \\theta = \\dfrac{\\pi}{4}\\).",
+     "\\(\\displaystyle\\int_0^{\\pi/4} \\frac{\\ln(1 + \\tan\\theta)}{\\sec^2\\theta}\\sec^2\\theta \\, d\\theta = K\\)."
+    ],
+    "answer": "\\(\\dfrac{\\pi}{8}\\ln 2\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-ca-hl-b-004",
+  "strand": "Calculus",
+  "subtopic": "Areas and volumes of revolution",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "The region \\(R\\) is enclosed by the curves \\(y = 2\\sin x\\) and \\(y = \\tan x\\), for \\(0 \\leq x < \\dfrac{\\pi}{2}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the curves meet at \\(x = 0\\) and \\(x = \\dfrac{\\pi}{3}\\), and at no other point with \\(0 \\leq x < \\dfrac{\\pi}{2}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the area of \\(R\\) is \\(1 - \\ln 2\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the exact volume of the solid formed when \\(R\\) is rotated through \\(360°\\) about the \\(x\\)-axis.",
+    "marks": 4
+   },
+   {
+    "label": "d",
+    "text": "Write down an integral with respect to \\(y\\) for the volume of the solid formed when \\(R\\) is rotated through \\(360°\\) about the \\(y\\)-axis, and find its value.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "The line \\(x = k\\), where \\(0 < k < \\dfrac{\\pi}{3}\\), divides \\(R\\) into two parts of equal area. Find the value of \\(k\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(2\\sin x = \\tan x\\) gives \\(\\sin x(2\\cos x - 1) = 0\\). On the region \\(2\\sin x \\geq \\tan x\\), so the upper curve is \\(2\\sin x\\). For a rotation about the \\(y\\)-axis, write each curve as \\(x\\) in terms of \\(y\\): \\(x = \\arcsin\\dfrac{y}{2}\\) and \\(x = \\arctan y\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(2\\sin x = \\dfrac{\\sin x}{\\cos x}\\) gives \\(\\sin x\\,(2\\cos x - 1) = 0\\). On \\(0 \\leq x < \\dfrac{\\pi}{2}\\): \\(\\sin x = 0\\) only at \\(x = 0\\), and \\(\\cos x = \\dfrac{1}{2}\\) only at \\(x = \\dfrac{\\pi}{3}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "For \\(0 < x < \\dfrac{\\pi}{3}\\), \\(\\cos x > \\dfrac{1}{2}\\), so \\(2\\sin x > \\tan x\\).",
+     "\\(\\displaystyle\\int_0^{\\pi/3} (2\\sin x - \\tan x) \\, dx = \\left[-2\\cos x + \\ln(\\cos x)\\right]_0^{\\pi/3} = \\left(-1 + \\ln\\frac{1}{2}\\right) - (-2) = 1 - \\ln 2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle V = \\pi\\int_0^{\\pi/3} \\left(4\\sin^2 x - \\tan^2 x\\right) dx\\), with \\(4\\sin^2 x = 2 - 2\\cos 2x\\) and \\(\\tan^2 x = \\sec^2 x - 1\\).",
+     "\\(\\displaystyle = \\pi\\left[3x - \\sin 2x - \\tan x\\right]_0^{\\pi/3} = \\pi\\left(\\pi - \\frac{\\sqrt{3}}{2} - \\sqrt{3}\\right)\\)."
+    ],
+    "answer": "\\(\\pi\\left(\\pi - \\dfrac{3\\sqrt{3}}{2}\\right) \\approx 1.71\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For \\(0 \\leq y \\leq \\sqrt{3}\\), the region runs from \\(x = \\arcsin\\dfrac{y}{2}\\) to \\(x = \\arctan y\\).",
+     "\\(\\displaystyle V = \\pi\\int_0^{\\sqrt{3}} \\left((\\arctan y)^2 - \\left(\\arcsin\\frac{y}{2}\\right)^2\\right) dy = 1.1145\\ldots\\)"
+    ],
+    "answer": "\\(1.11\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Solve \\(\\displaystyle\\int_0^{k} (2\\sin x - \\tan x) \\, dx = \\frac{1 - \\ln 2}{2}\\), that is \\(2 - 2\\cos k + \\ln(\\cos k) = 0.15342\\ldots\\): \\(k = 0.59113\\ldots\\)"
+    ],
+    "answer": "\\(k = 0.591\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-ca-hl-b-005",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A lake holds a population of \\(P\\) fish, \\(t\\) years after a fishing licence is introduced. A model for the population is \\(\\dfrac{dP}{dt} = 0.16P\\left(1 - \\dfrac{P}{800}\\right) - 24\\), where 24 fish per year are caught."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the two values of \\(P\\) for which the population does not change.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\dfrac{dP}{dt} = 0.0002(P - 200)(600 - P)\\), and hence state the values of \\(P\\) for which the population increases.",
+    "marks": 2
+   },
+   {
+    "label": "",
+    "text": "When the licence is introduced there are 400 fish.",
+    "marks": null
+   },
+   {
+    "label": "c",
+    "text": "Solve the differential equation to show that \\(P = \\dfrac{200 + 600\\mathrm{e}^{0.08t}}{1 + \\mathrm{e}^{0.08t}}\\).",
+    "marks": 5
+   },
+   {
+    "label": "d",
+    "text": "Find the time it takes for the population to reach 550.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "In a second lake with the same model, there are 150 fish when the licence is introduced. Show that this population dies out, and find the time it takes.",
+    "marks": 3
+   }
+  ],
+  "idea": "Write the right side as a product of two factors, then separate the variables and use partial fractions: \\(\\dfrac{1}{(P - 200)(600 - P)} = \\dfrac{1}{400}\\left(\\dfrac{1}{P - 200} + \\dfrac{1}{600 - P}\\right)\\). Below 200 both factors keep the same signs, so the population keeps falling.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(0.16P - 0.0002P^2 - 24 = 0\\), so \\(P^2 - 800P + 120\\,000 = 0\\), \\((P - 200)(P - 600) = 0\\)."
+    ],
+    "answer": "\\(P = 200\\) and \\(P = 600\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0.0002(P - 200)(600 - P) = 0.0002(-P^2 + 800P - 120\\,000) = 0.16P - 0.0002P^2 - 24\\), which is the right side of the model.",
+     "\\(\\dfrac{dP}{dt} > 0\\) when the two factors have the same sign."
+    ],
+    "answer": "Shown; it increases for \\(200 < P < 600\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int \\frac{dP}{(P - 200)(600 - P)} = \\int 0.0002 \\, dt\\). With partial fractions: \\(\\dfrac{1}{400}\\ln\\left|\\dfrac{P - 200}{600 - P}\\right| = 0.0002t + C\\).",
+     "At \\(t = 0\\), \\(P = 400\\): \\(\\dfrac{400 - 200}{600 - 400} = 1\\), so \\(C = 0\\). Multiply by 400: \\(\\ln\\dfrac{P - 200}{600 - P} = 0.08t\\) (positive while \\(200 < P < 600\\)).",
+     "\\(P - 200 = (600 - P)\\mathrm{e}^{0.08t}\\), so \\(P\\left(1 + \\mathrm{e}^{0.08t}\\right) = 200 + 600\\mathrm{e}^{0.08t}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{550 - 200}{600 - 550} = 7 = \\mathrm{e}^{0.08t}\\), so \\(t = \\dfrac{\\ln 7}{0.08} = 24.32\\ldots\\)"
+    ],
+    "answer": "\\(24.3\\) years"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "For \\(P < 200\\), \\(\\dfrac{dP}{dt} = 0.0002(P - 200)(600 - P) < 0\\), so \\(P\\) keeps decreasing and cannot climb back to 200.",
+     "With \\(P(0) = 150\\): \\(\\dfrac{200 - P}{600 - P} = \\dfrac{50}{450}\\mathrm{e}^{0.08t} = \\dfrac{1}{9}\\mathrm{e}^{0.08t}\\). (The formula from (c) does not apply: the constant is different.) At \\(P = 0\\): \\(\\dfrac{1}{3} = \\dfrac{1}{9}\\mathrm{e}^{0.08t}\\), so \\(t = \\dfrac{\\ln 3}{0.08} = 13.73\\ldots\\)"
+    ],
+    "answer": "It dies out after \\(13.7\\) years"
+   }
+  ]
+ },
+ {
+  "id": "aa-ca-hl-b-006",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 13,
+  "stem": [
+   "Consider the differential equation \\(\\dfrac{dy}{dx} = \\dfrac{y^2 - x^2}{2xy}\\), for \\(x > 0\\) and \\(y > 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use the substitution \\(y = vx\\) to show that \\(x\\dfrac{dv}{dx} = -\\dfrac{1 + v^2}{2v}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence show that the general solution is \\(x^2 + y^2 = Ax\\), where \\(A\\) is a constant.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the particular solution that passes through \\((1, 1)\\), and describe the curve.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "For a constant \\(B\\), the curve \\(x^2 + y^2 = By\\) is a circle with its centre on the \\(y\\)-axis. Show that, at any point with \\(x > 0\\), \\(y > 0\\) and \\(x \\neq y\\) where such a circle meets a solution curve from part (b), the two curves cross at right angles.",
+    "marks": 4
+   }
+  ],
+  "idea": "The equation is homogeneous: the right side depends only on \\(\\dfrac{y}{x}\\). After separating, \\(\\displaystyle\\int \\frac{2v}{1 + v^2}\\,dv = \\ln(1 + v^2)\\). Two curves cross at right angles when the product of their gradients at the crossing point is \\(-1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{dy}{dx} = v + x\\dfrac{dv}{dx}\\) and \\(\\dfrac{v^2x^2 - x^2}{2vx^2} = \\dfrac{v^2 - 1}{2v}\\).",
+     "\\(x\\dfrac{dv}{dx} = \\dfrac{v^2 - 1}{2v} - v = \\dfrac{v^2 - 1 - 2v^2}{2v} = -\\dfrac{1 + v^2}{2v}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle\\int \\frac{2v}{1 + v^2}\\,dv = -\\int \\frac{dx}{x}\\), so \\(\\ln(1 + v^2) = -\\ln x + C\\), and \\(1 + v^2 = \\dfrac{A}{x}\\) with \\(A = \\mathrm{e}^C\\).",
+     "\\(1 + \\dfrac{y^2}{x^2} = \\dfrac{A}{x}\\); multiply by \\(x^2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((1, 1)\\): \\(1 + 1 = A\\), so \\(x^2 + y^2 = 2x\\), that is \\((x - 1)^2 + y^2 = 1\\)."
+    ],
+    "answer": "\\(x^2 + y^2 = 2x\\): part of the circle with centre \\((1, 0)\\) and radius 1 (the part with \\(y > 0\\))"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Solution curves: \\(\\dfrac{dy}{dx} = \\dfrac{y^2 - x^2}{2xy}\\).",
+     "Circle \\(x^2 + y^2 = By\\): \\(2x + 2y\\dfrac{dy}{dx} = B\\dfrac{dy}{dx}\\), so \\(\\dfrac{dy}{dx} = \\dfrac{2x}{B - 2y}\\). On the circle \\(B = \\dfrac{x^2 + y^2}{y}\\), so \\(B - 2y = \\dfrac{x^2 - y^2}{y}\\) and \\(\\dfrac{dy}{dx} = \\dfrac{2xy}{x^2 - y^2}\\).",
+     "Product of the gradients: \\(\\dfrac{y^2 - x^2}{2xy} \\times \\dfrac{2xy}{x^2 - y^2} = -1\\)."
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-ca-hl-b-007",
+  "strand": "Calculus",
+  "subtopic": "Maclaurin series",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 13,
+  "stem": [],
+  "parts": [
+   {
+    "label": "a",
+    "text": "By writing \\(\\dfrac{1}{1 + t^2}\\) as the sum of a geometric series and integrating from 0 to \\(x\\), show that \\(\\arctan x = x - \\dfrac{x^3}{3} + \\dfrac{x^5}{5} - \\ldots\\) for \\(|x| < 1\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\arctan\\dfrac{1}{2} + \\arctan\\dfrac{1}{3} = \\dfrac{\\pi}{4}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence, using the first two terms of the series for each arctan, find an approximation to \\(\\pi\\) as a fraction.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find \\(\\displaystyle\\lim_{x \\to 0} \\frac{x - \\arctan x}{x^3}\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the Maclaurin series for \\(\\mathrm{e}^x\\arctan x\\) up to and including the term in \\(x^3\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(\\dfrac{1}{1 + t^2} = 1 - t^2 + t^4 - \\ldots\\) is geometric with ratio \\(-t^2\\), valid for \\(|t| < 1\\). For a product of two series, multiply them and keep only the powers you need.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{1}{1 + t^2} = 1 - t^2 + t^4 - \\ldots\\) (first term 1, ratio \\(-t^2\\), \\(|t| < 1\\)).",
+     "\\(\\displaystyle\\arctan x = \\int_0^x \\frac{dt}{1 + t^2} = \\left[t - \\frac{t^3}{3} + \\frac{t^5}{5} - \\ldots\\right]_0^x\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\tan(A + B) = \\dfrac{\\frac{1}{2} + \\frac{1}{3}}{1 - \\frac{1}{6}} = \\dfrac{5/6}{5/6} = 1\\). Both angles are between 0 and \\(\\dfrac{\\pi}{4}\\), so the sum is between 0 and \\(\\dfrac{\\pi}{2}\\), and must be \\(\\dfrac{\\pi}{4}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\arctan\\dfrac{1}{2} \\approx \\dfrac{1}{2} - \\dfrac{1}{24} = \\dfrac{11}{24}\\) and \\(\\arctan\\dfrac{1}{3} \\approx \\dfrac{1}{3} - \\dfrac{1}{81} = \\dfrac{26}{81}\\).",
+     "\\(\\pi \\approx 4\\left(\\dfrac{11}{24} + \\dfrac{26}{81}\\right) = 4 \\times \\dfrac{297 + 208}{648} = \\dfrac{505}{162}\\) (about 3.117)."
+    ],
+    "answer": "\\(\\dfrac{505}{162}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(x - \\arctan x = \\dfrac{x^3}{3} - \\dfrac{x^5}{5} + \\ldots\\), so the quotient is \\(\\dfrac{1}{3} - \\dfrac{x^2}{5} + \\ldots\\)"
+    ],
+    "answer": "\\(\\dfrac{1}{3}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\left(1 + x + \\dfrac{x^2}{2} + \\ldots\\right)\\left(x - \\dfrac{x^3}{3} + \\ldots\\right) = x + x^2 + \\dfrac{x^3}{2} - \\dfrac{x^3}{3} + \\ldots\\)"
+    ],
+    "answer": "\\(x + x^2 + \\dfrac{x^3}{6}\\)"
+   }
+  ]
+ }
+]

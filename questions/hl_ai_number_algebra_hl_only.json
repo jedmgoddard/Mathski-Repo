@@ -1,0 +1,1783 @@
+[
+ {
+  "id": "ai-na-hl-001",
+  "strand": "Number and Algebra",
+  "subtopic": "Logarithms and exponents",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Use the laws of logarithms to answer each part."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(\\log_{3} 81 - \\log_{3}\\dfrac{1}{9}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Write \\(2\\log x + \\log 5 - \\log 10\\) as a single logarithm.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Solve \\(\\log_{2} x + \\log_{2}(x + 6) = 4\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(\\log a + \\log b = \\log ab\\), \\(\\log a - \\log b = \\log\\dfrac{a}{b}\\) and \\(n\\log a = \\log a^{n}\\), in any base. A logarithm is defined only for positive numbers, so check every solution.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(81 = 3^{4}\\) and \\(\\dfrac{1}{9} = 3^{-2}\\): \\(4 - (-2)\\)."
+    ],
+    "answer": "6"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\log x^{2} + \\log 5 - \\log 10 = \\log\\dfrac{5x^{2}}{10}\\)"
+    ],
+    "answer": "\\(\\log\\dfrac{x^{2}}{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\log_{2} x(x + 6) = 4\\), so \\(x(x + 6) = 2^{4} = 16\\) and \\(x^{2} + 6x - 16 = 0\\).",
+     "\\((x + 8)(x - 2) = 0\\). \\(x = -8\\) is rejected, because \\(\\log_{2}(-8)\\) is not defined."
+    ],
+    "answer": "\\(x = 2\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-002",
+  "strand": "Number and Algebra",
+  "subtopic": "Logarithms and exponents",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Answer each part using the laws of exponents."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Simplify \\((8x^{6})^{\\frac{2}{3}}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Solve \\(4^{x + 1} = 8^{x - 1}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Solve \\(27^{x} = 9 \\times 3^{x}\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "A power \\(\\frac{p}{q}\\) means the \\(q\\)th root, raised to the power \\(p\\). Writing both sides as powers of the same base turns an equation into an equation between the indices.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(8^{\\frac{2}{3}} = (\\sqrt[3]{8})^{2} = 4\\) and \\((x^{6})^{\\frac{2}{3}} = x^{4}\\)."
+    ],
+    "answer": "\\(4x^{4}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(2^{2(x + 1)} = 2^{3(x - 1)}\\), so \\(2x + 2 = 3x - 3\\)."
+    ],
+    "answer": "\\(x = 5\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(3^{3x} = 3^{2} \\times 3^{x} = 3^{x + 2}\\), so \\(3x = x + 2\\)."
+    ],
+    "answer": "\\(x = 1\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-003",
+  "strand": "Number and Algebra",
+  "subtopic": "Logarithms and exponents",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The number of bacteria in a culture, \\(N\\), \\(t\\) hours after the start of an experiment is modelled by \\(N = 500 \\times 2^{\\frac{t}{3}}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the initial number of bacteria and the time it takes for the number to double.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that the number reaches 20 000 when \\(t = \\dfrac{3\\log 40}{\\log 2}\\), and find this time.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "A second culture is modelled by \\(M = 800 \\times 1.15^{t}\\). Find the time at which the two cultures have the same number of bacteria.",
+    "marks": 3
+   }
+  ],
+  "idea": "To solve an equation with the unknown in the index, take logarithms of both sides: \\(\\log a^{x} = x\\log a\\). Change of base: \\(\\log_{2} 40 = \\dfrac{\\log 40}{\\log 2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "At \\(t = 0\\), \\(N = 500\\). \\(N\\) doubles each time \\(\\dfrac{t}{3}\\) increases by 1."
+    ],
+    "answer": "500 bacteria; 3 hours"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(500 \\times 2^{\\frac{t}{3}} = 20\\,000\\), so \\(2^{\\frac{t}{3}} = 40\\).",
+     "\\(\\dfrac{t}{3}\\log 2 = \\log 40\\), so \\(t = \\dfrac{3\\log 40}{\\log 2} = 15.96\\ldots\\)"
+    ],
+    "answer": "16.0 hours"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(500 \\times 2^{\\frac{t}{3}} = 800 \\times 1.15^{t}\\). Take logarithms: \\(\\log 500 + \\dfrac{t}{3}\\log 2 = \\log 800 + t\\log 1.15\\).",
+     "\\(t\\left(\\dfrac{\\log 2}{3} - \\log 1.15\\right) = \\log 1.6\\), so \\(t = 5.148\\ldots\\) (or solve with the calculator)."
+    ],
+    "answer": "5.15 hours"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-004",
+  "strand": "Number and Algebra",
+  "subtopic": "Logarithms and exponents",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "This question is about logarithms in different bases."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Solve \\(\\log_{3}(x + 1) + \\log_{3}(x - 1) = 1 + \\log_{3}(x + 3)\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\log_{4} x = \\dfrac{1}{2}\\log_{2} x\\) for \\(x > 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence solve \\(\\log_{2} x + \\log_{4} x = 6\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Write 1 as \\(\\log_{3} 3\\) so that every term is a logarithm in base 3, then combine. Change of base: \\(\\log_{4} x = \\dfrac{\\log_{2} x}{\\log_{2} 4}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\log_{3}(x + 1)(x - 1) = \\log_{3} 3(x + 3)\\), so \\(x^{2} - 1 = 3x + 9\\) and \\(x^{2} - 3x - 10 = 0\\).",
+     "\\((x - 5)(x + 2) = 0\\). \\(x = -2\\) is rejected, because \\(\\log_{3}(x - 1)\\) needs \\(x > 1\\)."
+    ],
+    "answer": "\\(x = 5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\log_{4} x = \\dfrac{\\log_{2} x}{\\log_{2} 4} = \\dfrac{\\log_{2} x}{2}\\)"
+    ],
+    "answer": "\\(\\log_{4} x = \\dfrac{1}{2}\\log_{2} x\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\log_{2} x + \\dfrac{1}{2}\\log_{2} x = \\dfrac{3}{2}\\log_{2} x = 6\\), so \\(\\log_{2} x = 4\\)."
+    ],
+    "answer": "\\(x = 16\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-005",
+  "strand": "Number and Algebra",
+  "subtopic": "Infinite geometric series",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "A geometric series is \\(24 + 18 + 13.5 + \\cdots\\)"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the common ratio.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the sum to infinity.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the smallest number of terms for which the sum is more than 95.",
+    "marks": 2
+   }
+  ],
+  "idea": "A geometric series with \\(|r| < 1\\) has a sum to infinity \\(S_{\\infty} = \\dfrac{u_{1}}{1 - r}\\). The partial sums get closer and closer to it.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{18}{24}\\)"
+    ],
+    "answer": "\\(r = 0.75\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{24}{1 - 0.75}\\)"
+    ],
+    "answer": "96"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(S_{n} = \\dfrac{24(1 - 0.75^{n})}{0.25} = 96(1 - 0.75^{n}) > 95\\), so \\(0.75^{n} < \\dfrac{1}{96}\\).",
+     "A table gives \\(S_{15} = 94.7\\ldots\\) and \\(S_{16} = 95.0\\ldots\\) (or \\(n > 15.86\\ldots\\))."
+    ],
+    "answer": "16 terms"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-006",
+  "strand": "Number and Algebra",
+  "subtopic": "Infinite geometric series",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A recurring decimal can be written as an infinite geometric series."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write \\(0.272727\\ldots\\) as an infinite geometric series, and hence show that it is equal to \\(\\dfrac{3}{11}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write \\(0.4666\\ldots\\) as a fraction in its lowest terms.",
+    "marks": 3
+   }
+  ],
+  "idea": "Split the decimal into its repeating blocks: each block is the previous one divided by a power of 10, so the blocks form a geometric series with \\(|r| < 1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(0.2727\\ldots = \\dfrac{27}{100} + \\dfrac{27}{10\\,000} + \\cdots\\), with \\(u_{1} = \\dfrac{27}{100}\\) and \\(r = \\dfrac{1}{100}\\).",
+     "\\(S_{\\infty} = \\dfrac{27/100}{1 - 1/100} = \\dfrac{27}{99}\\)"
+    ],
+    "answer": "\\(\\dfrac{27}{99} = \\dfrac{3}{11}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0.4666\\ldots = 0.4 + (0.06 + 0.006 + \\cdots)\\). The series has \\(u_{1} = 0.06\\) and \\(r = 0.1\\): sum \\(\\dfrac{0.06}{0.9} = \\dfrac{1}{15}\\).",
+     "\\(\\dfrac{2}{5} + \\dfrac{1}{15} = \\dfrac{6}{15} + \\dfrac{1}{15}\\)"
+    ],
+    "answer": "\\(\\dfrac{7}{15}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-007",
+  "strand": "Number and Algebra",
+  "subtopic": "Infinite geometric series",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A patient takes a 50 mg tablet every morning. By the next morning, 40 % of the amount of the drug in the body is still there; the rest has gone."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the amount of the drug in the body just after the second tablet.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the amount just after the fifth tablet.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the amount just after a tablet in the long term.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the amount just before a tablet in the long term.",
+    "marks": 1
+   }
+  ],
+  "idea": "Just after the \\(n\\)th tablet the body holds \\(50 + 50(0.4) + 50(0.4)^{2} + \\cdots + 50(0.4)^{n - 1}\\): the newest tablet in full, and older ones reduced by 0.4 for each day. In the long term this is a sum to infinity.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(50 + 0.4 \\times 50\\)"
+    ],
+    "answer": "70 mg"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{50(1 - 0.4^{5})}{1 - 0.4} = 82.48\\)"
+    ],
+    "answer": "82.48 mg"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{50}{1 - 0.4} = 83.33\\ldots\\)"
+    ],
+    "answer": "83.3 mg"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "40 % of the long-term amount: \\(0.4 \\times 83.33\\ldots = 33.33\\ldots\\)"
+    ],
+    "answer": "33.3 mg"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-008",
+  "strand": "Number and Algebra",
+  "subtopic": "Infinite geometric series",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Consider the geometric series \\(1 + (2x - 1) + (2x - 1)^{2} + (2x - 1)^{3} + \\cdots\\)"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the values of \\(x\\) for which the series has a sum to infinity.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the sum to infinity in terms of \\(x\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(x\\) for which the sum to infinity is 4.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Explain why the sum to infinity cannot be 0.4.",
+    "marks": 1
+   }
+  ],
+  "idea": "The common ratio is \\(r = 2x - 1\\), and a sum to infinity exists only when \\(-1 < r < 1\\). Then \\(S_{\\infty} = \\dfrac{1}{1 - r}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(-1 < 2x - 1 < 1\\), so \\(0 < 2x < 2\\)."
+    ],
+    "answer": "\\(0 < x < 1\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{1}{1 - (2x - 1)}\\)"
+    ],
+    "answer": "\\(\\dfrac{1}{2 - 2x}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{1}{2 - 2x} = 4\\), so \\(2 - 2x = \\dfrac{1}{4}\\) and \\(2x = \\dfrac{7}{4}\\)."
+    ],
+    "answer": "\\(x = \\dfrac{7}{8}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For \\(0 < x < 1\\), \\(0 < 2 - 2x < 2\\), so \\(\\dfrac{1}{2 - 2x} > \\dfrac{1}{2}\\)."
+    ],
+    "answer": "The sum to infinity is always more than 0.5"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-009",
+  "strand": "Number and Algebra",
+  "subtopic": "Complex numbers",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(z = 3 - 4i\\) and \\(w = 1 + 2i\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(z + w\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(zw\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(|z|\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find \\(\\dfrac{z}{w}\\) in the form \\(a + bi\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Multiply out brackets as usual and use \\(i^{2} = -1\\). To divide, multiply the top and bottom by the conjugate of the bottom, which makes the denominator real.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\((3 + 1) + (-4 + 2)i\\)"
+    ],
+    "answer": "\\(4 - 2i\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(3 + 6i - 4i - 8i^{2} = 3 + 2i + 8\\)"
+    ],
+    "answer": "\\(11 + 2i\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\sqrt{3^{2} + 4^{2}}\\)"
+    ],
+    "answer": "5"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{(3 - 4i)(1 - 2i)}{(1 + 2i)(1 - 2i)} = \\dfrac{3 - 6i - 4i + 8i^{2}}{5} = \\dfrac{-5 - 10i}{5}\\)"
+    ],
+    "answer": "\\(-1 - 2i\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-010",
+  "strand": "Number and Algebra",
+  "subtopic": "Complex numbers",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "Consider the equation \\(z^{2} + 4z + 13 = 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Solve the equation.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show the two solutions on an Argand diagram.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the distance between the two points on the Argand diagram.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the sum and the product of the two solutions.",
+    "marks": 1
+   }
+  ],
+  "idea": "A quadratic with a negative discriminant has two complex solutions, which are conjugates of each other: mirror images in the real axis.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(z = \\dfrac{-4 \\pm \\sqrt{16 - 52}}{2} = \\dfrac{-4 \\pm \\sqrt{-36}}{2} = \\dfrac{-4 \\pm 6i}{2}\\)"
+    ],
+    "answer": "\\(z = -2 + 3i\\) or \\(z = -2 - 3i\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 369\" width=\"340\" height=\"369\" role=\"img\" aria-label=\"Argand diagram showing the two points -2 + 3i and -2 - 3i. They lie on the vertical line Re = -2, one above and one below the real axis.\"><defs><clipPath id=\"aifn18\"><rect x=\"34\" y=\"24\" width=\"276\" height=\"315\"/></clipPath></defs><line x1=\"34.0\" y1=\"339.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"73.4\" y1=\"339.0\" x2=\"73.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"112.9\" y1=\"339.0\" x2=\"112.9\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"152.3\" y1=\"339.0\" x2=\"152.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"191.7\" y1=\"339.0\" x2=\"191.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"231.1\" y1=\"339.0\" x2=\"231.1\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"270.6\" y1=\"339.0\" x2=\"270.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"310.0\" y1=\"339.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"339.0\" x2=\"310.0\" y2=\"339.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"299.6\" x2=\"310.0\" y2=\"299.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"260.2\" x2=\"310.0\" y2=\"260.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"220.9\" x2=\"310.0\" y2=\"220.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"181.5\" x2=\"310.0\" y2=\"181.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"142.1\" x2=\"310.0\" y2=\"142.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"102.8\" x2=\"310.0\" y2=\"102.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"63.4\" x2=\"310.0\" y2=\"63.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"181.5\" x2=\"320.0\" y2=\"181.5\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"231.1\" y1=\"339.0\" x2=\"231.1\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M326.0 181.5 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M231.1 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"322.0\" y=\"200.5\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Re</text><text x=\"218.1\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Im</text><line x1=\"34.0\" y1=\"178.5\" x2=\"34.0\" y2=\"184.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"73.4\" y1=\"178.5\" x2=\"73.4\" y2=\"184.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"112.9\" y1=\"178.5\" x2=\"112.9\" y2=\"184.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"152.3\" y1=\"178.5\" x2=\"152.3\" y2=\"184.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"191.7\" y1=\"178.5\" x2=\"191.7\" y2=\"184.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"270.6\" y1=\"178.5\" x2=\"270.6\" y2=\"184.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"310.0\" y1=\"178.5\" x2=\"310.0\" y2=\"184.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"339.0\" x2=\"234.1\" y2=\"339.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"299.6\" x2=\"234.1\" y2=\"299.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"260.2\" x2=\"234.1\" y2=\"260.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"220.9\" x2=\"234.1\" y2=\"220.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"142.1\" x2=\"234.1\" y2=\"142.1\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"102.8\" x2=\"234.1\" y2=\"102.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"63.4\" x2=\"234.1\" y2=\"63.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"228.1\" y1=\"24.0\" x2=\"234.1\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M152.3 63.4 L152.3 299.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"34.0\" y=\"197.5\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−5</text><text x=\"73.4\" y=\"197.5\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−4</text><text x=\"112.9\" y=\"197.5\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"152.3\" y=\"197.5\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"191.7\" y=\"197.5\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"270.6\" y=\"197.5\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"310.0\" y=\"197.5\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"225.1\" y=\"343.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−4</text><text x=\"225.1\" y=\"304.1\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"225.1\" y=\"264.8\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"225.1\" y=\"225.4\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"225.1\" y=\"146.6\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"225.1\" y=\"107.2\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"225.1\" y=\"67.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"225.1\" y=\"28.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"225.1\" y=\"196.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><circle cx=\"152.3\" cy=\"63.4\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"160.3\" y=\"57.4\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−2 + 3i</text><circle cx=\"152.3\" cy=\"299.6\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"160.3\" y=\"313.6\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−2 − 3i</text></svg>"
+     }
+    ],
+    "answer": "The points \\((-2, 3)\\) and \\((-2, -3)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Both points are on the line Re \\(= -2\\), from 3 to \\(-3\\)."
+    ],
+    "answer": "6"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Sum: \\((-2 + 3i) + (-2 - 3i)\\). Product: \\((-2)^{2} - (3i)^{2} = 4 + 9\\)."
+    ],
+    "answer": "Sum \\(-4\\); product 13"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-011",
+  "strand": "Number and Algebra",
+  "subtopic": "Complex numbers",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The complex number \\(z = a + bi\\), where \\(a, b \\in \\mathbb{R}\\), satisfies \\(z(2 - i) = 7 + 4i\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(a\\) and \\(b\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find \\(z^{2}\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Hence write down both complex numbers whose square is \\(-5 + 12i\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Divide by \\(2 - i\\) using the conjugate, or expand \\((a + bi)(2 - i)\\) and compare real and imaginary parts. If \\(z^{2} = c\\), then \\((-z)^{2} = c\\) too.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(z = \\dfrac{7 + 4i}{2 - i} = \\dfrac{(7 + 4i)(2 + i)}{5} = \\dfrac{14 + 7i + 8i - 4}{5} = \\dfrac{10 + 15i}{5}\\)"
+    ],
+    "answer": "\\(a = 2\\), \\(b = 3\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\((2 + 3i)^{2} = 4 + 12i + 9i^{2}\\)"
+    ],
+    "answer": "\\(-5 + 12i\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(z^{2} = -5 + 12i\\) and \\((-z)^{2} = z^{2}\\)."
+    ],
+    "answer": "\\(2 + 3i\\) and \\(-2 - 3i\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-012",
+  "strand": "Number and Algebra",
+  "subtopic": "Complex numbers",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(z = 3 + 2i\\). The points O, \\(z\\), \\(z + iz\\) and \\(iz\\) on an Argand diagram are the vertices of a quadrilateral, where O is the origin."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(iz\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(|iz| = |z|\\), and that the lines from O to \\(z\\) and from O to \\(iz\\) are perpendicular.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(z + iz\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Hence find the area of the quadrilateral.",
+    "marks": 2
+   }
+  ],
+  "idea": "Multiplying by \\(i\\) rotates a point on the Argand diagram through \\(90^\\circ\\) anticlockwise about O, and keeps its distance from O. So O, \\(z\\), \\(z + iz\\) and \\(iz\\) form a square.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(i(3 + 2i) = 3i + 2i^{2}\\)"
+    ],
+    "answer": "\\(-2 + 3i\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(|z| = \\sqrt{9 + 4} = \\sqrt{13}\\) and \\(|iz| = \\sqrt{4 + 9} = \\sqrt{13}\\).",
+     "Gradient from O to \\(z\\): \\(\\dfrac{2}{3}\\). Gradient from O to \\(iz\\): \\(-\\dfrac{3}{2}\\). Their product is \\(-1\\)."
+    ],
+    "answer": "Both have length \\(\\sqrt{13}\\), and the gradients multiply to \\(-1\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((3 + 2i) + (-2 + 3i)\\)"
+    ],
+    "answer": "\\(1 + 5i\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Two equal perpendicular sides from O, with the fourth vertex \\(z + iz\\), make a square of side \\(\\sqrt{13}\\).",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 330\" width=\"340\" height=\"330\" role=\"img\" aria-label=\"Argand diagram showing a square with vertices O, z = 3 + 2i, z + iz = 1 + 5i and iz = -2 + 3i.\"><defs><clipPath id=\"aifn19\"><rect x=\"34\" y=\"24\" width=\"276\" height=\"276\"/></clipPath></defs><line x1=\"34.0\" y1=\"300.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"73.4\" y1=\"300.0\" x2=\"73.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"112.9\" y1=\"300.0\" x2=\"112.9\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"152.3\" y1=\"300.0\" x2=\"152.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"191.7\" y1=\"300.0\" x2=\"191.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"231.1\" y1=\"300.0\" x2=\"231.1\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"270.6\" y1=\"300.0\" x2=\"270.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"310.0\" y1=\"300.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"300.0\" x2=\"310.0\" y2=\"300.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"260.6\" x2=\"310.0\" y2=\"260.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"221.1\" x2=\"310.0\" y2=\"221.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"181.7\" x2=\"310.0\" y2=\"181.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"142.3\" x2=\"310.0\" y2=\"142.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"102.9\" x2=\"310.0\" y2=\"102.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"63.4\" x2=\"310.0\" y2=\"63.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"260.6\" x2=\"320.0\" y2=\"260.6\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"152.3\" y1=\"300.0\" x2=\"152.3\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M326.0 260.6 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M152.3 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"322.0\" y=\"279.6\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Re</text><text x=\"139.3\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Im</text><line x1=\"34.0\" y1=\"257.6\" x2=\"34.0\" y2=\"263.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"73.4\" y1=\"257.6\" x2=\"73.4\" y2=\"263.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"112.9\" y1=\"257.6\" x2=\"112.9\" y2=\"263.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"191.7\" y1=\"257.6\" x2=\"191.7\" y2=\"263.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"231.1\" y1=\"257.6\" x2=\"231.1\" y2=\"263.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"270.6\" y1=\"257.6\" x2=\"270.6\" y2=\"263.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"310.0\" y1=\"257.6\" x2=\"310.0\" y2=\"263.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"149.3\" y1=\"300.0\" x2=\"155.3\" y2=\"300.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"149.3\" y1=\"221.1\" x2=\"155.3\" y2=\"221.1\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"149.3\" y1=\"181.7\" x2=\"155.3\" y2=\"181.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"149.3\" y1=\"142.3\" x2=\"155.3\" y2=\"142.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"149.3\" y1=\"102.9\" x2=\"155.3\" y2=\"102.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"149.3\" y1=\"63.4\" x2=\"155.3\" y2=\"63.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"149.3\" y1=\"24.0\" x2=\"155.3\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M152.3 260.6 L270.6 181.7 L191.7 63.4 L73.4 142.3 L152.3 260.6 Z\" fill=\"#eaf0fb\" stroke=\"none\"/><path d=\"M152.3 260.6 L270.6 181.7 L191.7 63.4 L73.4 142.3 L152.3 260.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.8\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"34.0\" y=\"276.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"73.4\" y=\"276.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"112.9\" y=\"276.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"191.7\" y=\"276.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"231.1\" y=\"276.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"270.6\" y=\"276.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"310.0\" y=\"276.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"146.3\" y=\"304.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"146.3\" y=\"225.6\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"146.3\" y=\"186.2\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"146.3\" y=\"146.8\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"146.3\" y=\"107.4\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"146.3\" y=\"67.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"146.3\" y=\"28.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"146.3\" y=\"275.6\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><circle cx=\"270.6\" cy=\"181.7\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"278.6\" y=\"195.7\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">z = 3 + 2i</text><circle cx=\"191.7\" cy=\"63.4\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"199.7\" y=\"57.4\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">z + iz</text><circle cx=\"73.4\" cy=\"142.3\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"51.4\" y=\"136.3\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">iz</text></svg>"
+     }
+    ],
+    "answer": "13"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-013",
+  "strand": "Number and Algebra",
+  "subtopic": "Complex numbers",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Let \\(z = \\dfrac{a + 3i}{2 - i}\\), where \\(a \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write \\(z\\) in the form \\(x + yi\\), where \\(x\\) and \\(y\\) are in terms of \\(a\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(a\\) for which \\(z\\) is real.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(a\\) for which \\(z\\) is purely imaginary.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the values of \\(a\\) for which \\(|z| = \\sqrt{10}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Make the denominator real with the conjugate \\(2 + i\\). Then \\(z\\) is real when its imaginary part is 0, and purely imaginary when its real part is 0.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{(a + 3i)(2 + i)}{(2 - i)(2 + i)} = \\dfrac{2a + ai + 6i - 3}{5}\\)"
+    ],
+    "answer": "\\(z = \\dfrac{2a - 3}{5} + \\dfrac{a + 6}{5}i\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(a + 6 = 0\\)"
+    ],
+    "answer": "\\(a = -6\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2a - 3 = 0\\)"
+    ],
+    "answer": "\\(a = 1.5\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\left(\\dfrac{2a - 3}{5}\\right)^{2} + \\left(\\dfrac{a + 6}{5}\\right)^{2} = 10\\), so \\((2a - 3)^{2} + (a + 6)^{2} = 250\\).",
+     "\\(5a^{2} + 45 = 250\\), so \\(a^{2} = 41\\)."
+    ],
+    "answer": "\\(a = \\pm\\sqrt{41} = \\pm 6.40\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-014",
+  "strand": "Number and Algebra",
+  "subtopic": "Polar and Euler form",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "In this question, arguments are in radians."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write \\(z = -2 + 2\\sqrt{3}\\,i\\) in the form \\(re^{i\\theta}\\), where \\(r > 0\\) and \\(-\\pi < \\theta \\le \\pi\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write \\(w = 3e^{-\\frac{\\pi}{4}i}\\) in the form \\(a + bi\\), giving exact values.",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(r = |z|\\) and \\(\\theta = \\arg z\\), found from a sketch of the point. Going back: \\(re^{i\\theta} = r\\cos\\theta + ir\\sin\\theta\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(r = \\sqrt{4 + 12} = 4\\). The point is in the second quadrant: \\(\\theta = \\pi - \\tan^{-1}\\dfrac{2\\sqrt{3}}{2} = \\pi - \\dfrac{\\pi}{3}\\)."
+    ],
+    "answer": "\\(z = 4e^{\\frac{2\\pi}{3}i}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(3\\cos\\left(-\\dfrac{\\pi}{4}\\right) + 3i\\sin\\left(-\\dfrac{\\pi}{4}\\right) = 3 \\times \\dfrac{\\sqrt{2}}{2} - 3 \\times \\dfrac{\\sqrt{2}}{2}i\\)"
+    ],
+    "answer": "\\(w = \\dfrac{3\\sqrt{2}}{2} - \\dfrac{3\\sqrt{2}}{2}i\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-015",
+  "strand": "Number and Algebra",
+  "subtopic": "Polar and Euler form",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(z = 2e^{\\frac{\\pi}{6}i}\\) and \\(w = 3e^{\\frac{\\pi}{2}i}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(zw\\) in the form \\(re^{i\\theta}\\), and describe how multiplying \\(z\\) by \\(w\\) moves the point \\(z\\) on an Argand diagram.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write \\(zw\\) in the form \\(a + bi\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\dfrac{z}{w}\\) and \\(z^{4}\\) in the form \\(re^{i\\theta}\\), where \\(-\\pi < \\theta \\le \\pi\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "In exponential form, multiply by multiplying the moduli and adding the arguments; divide by dividing the moduli and subtracting the arguments.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(zw = 2 \\times 3e^{(\\frac{\\pi}{6} + \\frac{\\pi}{2})i} = 6e^{\\frac{2\\pi}{3}i}\\).",
+     "The distance from O is multiplied by 3, and the point turns through \\(\\dfrac{\\pi}{2}\\) anticlockwise about O."
+    ],
+    "answer": "\\(6e^{\\frac{2\\pi}{3}i}\\): an enlargement by 3 and a rotation of \\(\\dfrac{\\pi}{2}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(6\\cos\\dfrac{2\\pi}{3} + 6i\\sin\\dfrac{2\\pi}{3}\\)"
+    ],
+    "answer": "\\(-3 + 3\\sqrt{3}\\,i\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{z}{w} = \\dfrac{2}{3}e^{(\\frac{\\pi}{6} - \\frac{\\pi}{2})i}\\). \\(z^{4} = 2^{4}e^{\\frac{4\\pi}{6}i}\\)."
+    ],
+    "answer": "\\(\\dfrac{z}{w} = \\dfrac{2}{3}e^{-\\frac{\\pi}{3}i}\\); \\(z^{4} = 16e^{\\frac{2\\pi}{3}i}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-016",
+  "strand": "Number and Algebra",
+  "subtopic": "Polar and Euler form",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A survey drone starts at the origin O of an Argand diagram, where the real axis points east, the imaginary axis points north and distances are in metres. It flies three straight legs, given as complex numbers: \\[120e^{0.5i}, \\quad 80e^{2.1i}, \\quad 60e^{-1.0i}.\\] Arguments are in radians, measured anticlockwise from east."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write the first leg in the form \\(a + bi\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the position of the drone after the three legs, in the form \\(a + bi\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the distance of the drone from O, and the argument of its position.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "The drone flies straight back to O. Write this return leg in the form \\(re^{i\\theta}\\), where \\(-\\pi < \\theta \\le \\pi\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Displacements add like complex numbers: write each leg in Cartesian form, add, then turn the total back into modulus and argument. The return leg is the negative of the total.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(120\\cos 0.5 + 120i\\sin 0.5 = 105.3\\ldots + 57.53\\ldots i\\)"
+    ],
+    "answer": "\\(105 + 57.5i\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Second leg: \\(-40.38\\ldots + 69.05\\ldots i\\). Third leg: \\(32.41\\ldots - 50.48\\ldots i\\).",
+     "Total: \\(97.34\\ldots + 76.09\\ldots i\\)",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 315\" width=\"340\" height=\"315\" role=\"img\" aria-label=\"A path on an Argand diagram with axes in metres. It goes from O to A, then from A to B, then from B to C. A is at about (105, 58), B at about (65, 127) and C at about (97, 76).\"><defs><clipPath id=\"aifn20\"><rect x=\"34\" y=\"24\" width=\"276\" height=\"261\"/></clipPath></defs><line x1=\"34.0\" y1=\"285.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"49.3\" y1=\"285.0\" x2=\"49.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"64.7\" y1=\"285.0\" x2=\"64.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"80.0\" y1=\"285.0\" x2=\"80.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"95.3\" y1=\"285.0\" x2=\"95.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"110.7\" y1=\"285.0\" x2=\"110.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"126.0\" y1=\"285.0\" x2=\"126.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"141.3\" y1=\"285.0\" x2=\"141.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"156.7\" y1=\"285.0\" x2=\"156.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"172.0\" y1=\"285.0\" x2=\"172.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"187.3\" y1=\"285.0\" x2=\"187.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"202.7\" y1=\"285.0\" x2=\"202.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"218.0\" y1=\"285.0\" x2=\"218.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"233.3\" y1=\"285.0\" x2=\"233.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"248.7\" y1=\"285.0\" x2=\"248.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"264.0\" y1=\"285.0\" x2=\"264.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"279.3\" y1=\"285.0\" x2=\"279.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"294.7\" y1=\"285.0\" x2=\"294.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"310.0\" y1=\"285.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"285.0\" x2=\"310.0\" y2=\"285.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"269.6\" x2=\"310.0\" y2=\"269.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"254.3\" x2=\"310.0\" y2=\"254.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"238.9\" x2=\"310.0\" y2=\"238.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"223.6\" x2=\"310.0\" y2=\"223.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"208.2\" x2=\"310.0\" y2=\"208.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"192.9\" x2=\"310.0\" y2=\"192.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"177.5\" x2=\"310.0\" y2=\"177.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"162.2\" x2=\"310.0\" y2=\"162.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"146.8\" x2=\"310.0\" y2=\"146.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"131.5\" x2=\"310.0\" y2=\"131.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"116.1\" x2=\"310.0\" y2=\"116.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"100.8\" x2=\"310.0\" y2=\"100.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"85.4\" x2=\"310.0\" y2=\"85.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"70.1\" x2=\"310.0\" y2=\"70.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"54.7\" x2=\"310.0\" y2=\"54.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"39.4\" x2=\"310.0\" y2=\"39.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"269.6\" x2=\"320.0\" y2=\"269.6\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"64.7\" y1=\"285.0\" x2=\"64.7\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M326.0 269.6 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M64.7 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"322.0\" y=\"288.6\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Re</text><text x=\"51.7\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Im</text><line x1=\"141.3\" y1=\"266.6\" x2=\"141.3\" y2=\"272.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"218.0\" y1=\"266.6\" x2=\"218.0\" y2=\"272.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"294.7\" y1=\"266.6\" x2=\"294.7\" y2=\"272.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"61.7\" y1=\"192.9\" x2=\"67.7\" y2=\"192.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"61.7\" y1=\"116.1\" x2=\"67.7\" y2=\"116.1\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"61.7\" y1=\"39.4\" x2=\"67.7\" y2=\"39.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M64.7 269.6 L226.1 181.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M226.1 181.3 L164.2 75.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M164.2 75.3 L213.9 152.8\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.5\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"141.3\" y=\"285.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">50</text><text x=\"218.0\" y=\"285.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">100</text><text x=\"294.7\" y=\"285.6\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">150</text><text x=\"58.7\" y=\"197.4\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">50</text><text x=\"58.7\" y=\"120.6\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">100</text><text x=\"58.7\" y=\"43.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">150</text><text x=\"58.7\" y=\"284.6\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><circle cx=\"226.1\" cy=\"181.3\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"234.1\" y=\"195.3\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"164.2\" cy=\"75.3\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"148.2\" y=\"69.3\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"213.9\" cy=\"152.8\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"221.9\" y=\"166.8\" text-anchor=\"start\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text></svg>"
+     }
+    ],
+    "answer": "\\(97.3 + 76.1i\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\sqrt{97.34\\ldots^{2} + 76.09\\ldots^{2}} = 123.5\\ldots\\); argument \\(\\tan^{-1}\\dfrac{76.09\\ldots}{97.34\\ldots} = 0.6635\\ldots\\)"
+    ],
+    "answer": "124 m; argument 0.664"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The return leg is \\(-(97.34\\ldots + 76.09\\ldots i)\\): the same length, in the opposite direction.",
+     "Argument \\(0.6635\\ldots - \\pi = -2.478\\ldots\\)"
+    ],
+    "answer": "\\(124e^{-2.48i}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-017",
+  "strand": "Number and Algebra",
+  "subtopic": "Polar and Euler form",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Two loudspeakers play the same note. At a listener's position, the pressure changes from the two speakers are modelled by \\(p_{1} = 4\\sin(300t)\\) and \\(p_{2} = 3\\sin(300t + \\varphi)\\), where \\(t\\) is in seconds and angles are in radians. The combined sound is \\(p_{1} + p_{2} = A\\sin(300t + \\alpha)\\), where \\(A\\) and \\(\\alpha\\) are found from the complex number \\(4 + 3e^{i\\varphi} = Ae^{i\\alpha}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "For \\(\\varphi = 1.2\\), find \\(A\\) and \\(\\alpha\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(\\varphi\\), with \\(0 < \\varphi < \\pi\\), for which \\(A = 5\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "For \\(0 \\le \\varphi \\le \\pi\\), write down the least possible value of \\(A\\), and the value of \\(\\varphi\\) that gives it.",
+    "marks": 1
+   }
+  ],
+  "idea": "Sinusoids with the same frequency add like complex numbers (phasors): add \\(4e^{0i}\\) and \\(3e^{i\\varphi}\\), then the modulus is the new amplitude and the argument is the new phase.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(4 + 3e^{1.2i} = 4 + 3\\cos 1.2 + 3i\\sin 1.2 = 5.087\\ldots + 2.796\\ldots i\\)",
+     "\\(A = |5.087\\ldots + 2.796\\ldots i| = 5.804\\ldots\\) and \\(\\alpha = \\tan^{-1}\\dfrac{2.796\\ldots}{5.087\\ldots} = 0.5025\\ldots\\)"
+    ],
+    "answer": "\\(A = 5.80\\), \\(\\alpha = 0.503\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(|4 + 3e^{i\\varphi}|^{2} = (4 + 3\\cos\\varphi)^{2} + (3\\sin\\varphi)^{2} = 25 + 24\\cos\\varphi\\).",
+     "\\(25 + 24\\cos\\varphi = 25\\), so \\(\\cos\\varphi = 0\\)."
+    ],
+    "answer": "\\(\\varphi = \\dfrac{\\pi}{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(A^{2} = 25 + 24\\cos\\varphi\\) is least when \\(\\cos\\varphi = -1\\): \\(A^{2} = 1\\). The two waves are exactly out of step."
+    ],
+    "answer": "\\(A = 1\\), when \\(\\varphi = \\pi\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-018",
+  "strand": "Number and Algebra",
+  "subtopic": "Polar and Euler form",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "In an alternating current circuit, each component has a complex impedance \\(Z\\) ohms. Two components in series have total impedance \\(Z_{1} + Z_{2}\\); two in parallel have total impedance \\(\\dfrac{Z_{1}Z_{2}}{Z_{1} + Z_{2}}\\). The size of the current, in amps, is \\(\\dfrac{230}{|Z|}\\) for a 230 volt supply, and the phase angle is \\(\\arg Z\\).",
+   "Let \\(Z_{1} = 3 + 4i\\) and \\(Z_{2} = 6 - 8i\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "The components are connected in series. Find the total impedance, its modulus, and the size of the current.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "The components are connected in parallel. Find the total impedance in the form \\(a + bi\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "For the parallel circuit, find the size of the current and the phase angle, in radians.",
+    "marks": 2
+   }
+  ],
+  "idea": "Combine the impedances with complex arithmetic: add for series; multiply, add and divide for parallel, using the conjugate to divide. Then the modulus and argument give the size of the current and the phase angle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(Z = (3 + 6) + (4 - 8)i = 9 - 4i\\), \\(|Z| = \\sqrt{81 + 16} = \\sqrt{97} = 9.848\\ldots\\)",
+     "Current: \\(\\dfrac{230}{9.848\\ldots} = 23.35\\ldots\\)"
+    ],
+    "answer": "\\(9 - 4i\\); \\(|Z| = 9.85\\) ohms; 23.4 amps"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(Z_{1}Z_{2} = 18 - 24i + 24i - 32i^{2} = 50\\).",
+     "\\(\\dfrac{50}{9 - 4i} = \\dfrac{50(9 + 4i)}{97} = 4.639\\ldots + 2.061\\ldots i\\)"
+    ],
+    "answer": "\\(4.64 + 2.06i\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(|Z| = \\sqrt{4.639\\ldots^{2} + 2.061\\ldots^{2}} = 5.076\\ldots\\), current \\(\\dfrac{230}{5.076\\ldots} = 45.30\\ldots\\)",
+     "\\(\\arg Z = \\tan^{-1}\\dfrac{2.061\\ldots}{4.639\\ldots} = 0.4182\\ldots\\)"
+    ],
+    "answer": "45.3 amps; phase angle 0.418 radians"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-019",
+  "strand": "Number and Algebra",
+  "subtopic": "Polar and Euler form",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "A point moves on an Argand diagram in jumps. It starts at \\(z_{0} = 10\\), and each jump takes it from \\(z_{n}\\) to \\(z_{n + 1} = 0.9e^{\\frac{\\pi}{4}i}z_{n}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(z_{1}\\) in the form \\(a + bi\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(z_{8}\\) is a positive real number, and find it.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the smallest value of \\(n\\) for which \\(|z_{n}| < 1\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Each jump is a straight line from \\(z_{n}\\) to \\(z_{n + 1}\\). Find the total length of all the jumps if the point jumps for ever.",
+    "marks": 3
+   }
+  ],
+  "idea": "Each jump multiplies by \\(0.9e^{\\frac{\\pi}{4}i}\\): it shrinks the distance from O by 0.9 and turns through \\(\\dfrac{\\pi}{4}\\). So \\(z_{n} = 10(0.9)^{n}e^{\\frac{n\\pi}{4}i}\\), and the lengths of the jumps form a geometric series.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(9e^{\\frac{\\pi}{4}i} = 9\\cos\\dfrac{\\pi}{4} + 9i\\sin\\dfrac{\\pi}{4} = 6.363\\ldots + 6.363\\ldots i\\)"
+    ],
+    "answer": "\\(6.36 + 6.36i\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(z_{8} = 10(0.9)^{8}e^{2\\pi i}\\), and \\(e^{2\\pi i} = 1\\).",
+     "\\(10 \\times 0.9^{8} = 4.304\\ldots\\)"
+    ],
+    "answer": "\\(z_{8} = 4.30\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(|z_{n}| = 10 \\times 0.9^{n} < 1\\), so \\(0.9^{n} < 0.1\\). \\(n = 21\\): \\(1.09\\ldots\\); \\(n = 22\\): \\(0.984\\ldots\\)"
+    ],
+    "answer": "\\(n = 22\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Jump \\(n\\) has length \\(|z_{n + 1} - z_{n}| = |z_{n}| \\times |0.9e^{\\frac{\\pi}{4}i} - 1| = 10(0.9)^{n} \\times 0.7329\\ldots\\)",
+     "\\(|0.9e^{\\frac{\\pi}{4}i} - 1| = |(0.636\\ldots - 1) + 0.636\\ldots i| = 0.7329\\ldots\\)",
+     "Sum to infinity: \\(\\dfrac{10 \\times 0.7329\\ldots}{1 - 0.9} = 73.29\\ldots\\)"
+    ],
+    "answer": "73.3"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-020",
+  "strand": "Number and Algebra",
+  "subtopic": "Matrices and systems",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(\\boldsymbol{A} = \\begin{pmatrix}2 & -1 \\\\ 3 & 4\\end{pmatrix}\\) and \\(\\boldsymbol{B} = \\begin{pmatrix}1 & 5 \\\\ 0 & -2\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\boldsymbol{A} + \\boldsymbol{B}\\) and \\(2\\boldsymbol{A} - \\boldsymbol{B}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\boldsymbol{AB}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\det \\boldsymbol{A}\\) and \\(\\boldsymbol{A}^{-1}\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Add and subtract matrices entry by entry. In a product, each entry is a row of the first matrix times a column of the second. For \\(\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}\\), the determinant is \\(ad - bc\\) and the inverse is \\(\\dfrac{1}{ad - bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Entry by entry."
+    ],
+    "answer": "\\(\\boldsymbol{A} + \\boldsymbol{B} = \\begin{pmatrix}3 & 4 \\\\ 3 & 2\\end{pmatrix}\\), \\(2\\boldsymbol{A} - \\boldsymbol{B} = \\begin{pmatrix}3 & -7 \\\\ 6 & 10\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Top row: \\(2 \\times 1 + (-1) \\times 0 = 2\\), \\(2 \\times 5 + (-1)(-2) = 12\\). Bottom row: \\(3 \\times 1 + 4 \\times 0 = 3\\), \\(3 \\times 5 + 4(-2) = 7\\)."
+    ],
+    "answer": "\\(\\begin{pmatrix}2 & 12 \\\\ 3 & 7\\end{pmatrix}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\det \\boldsymbol{A} = 2 \\times 4 - (-1) \\times 3 = 11\\)"
+    ],
+    "answer": "\\(\\det \\boldsymbol{A} = 11\\); \\(\\boldsymbol{A}^{-1} = \\dfrac{1}{11}\\begin{pmatrix}4 & 1 \\\\ -3 & 2\\end{pmatrix}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-021",
+  "strand": "Number and Algebra",
+  "subtopic": "Matrices and systems",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The matrix \\(\\boldsymbol{N}\\) gives the grams of protein, carbohydrate and fat (columns in that order) in one portion of oats, milk and banana (rows in that order). The matrix \\(\\boldsymbol{Q}\\) gives the number of portions of each food in a breakfast (top row) and in a snack (bottom row).",
+   "\\[\\boldsymbol{N} = \\begin{pmatrix}5 & 27 & 3 \\\\ 8 & 12 & 5 \\\\ 1 & 27 & 0\\end{pmatrix}, \\qquad \\boldsymbol{Q} = \\begin{pmatrix}2 & 1 & 1 \\\\ 0 & 1 & 2\\end{pmatrix}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the order of the matrix \\(\\boldsymbol{QN}\\), and explain why \\(\\boldsymbol{NQ}\\) does not exist.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\boldsymbol{QN}\\), and state what its top row shows.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Protein and carbohydrate give 4 kcal per gram and fat gives 9 kcal per gram. Use a matrix product to find the energy in the breakfast and in the snack.",
+    "marks": 2
+   }
+  ],
+  "idea": "A product \\(\\boldsymbol{QN}\\) exists when the number of columns of \\(\\boldsymbol{Q}\\) equals the number of rows of \\(\\boldsymbol{N}\\); it then has the rows of \\(\\boldsymbol{Q}\\) and the columns of \\(\\boldsymbol{N}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\boldsymbol{Q}\\) is \\(2 \\times 3\\) and \\(\\boldsymbol{N}\\) is \\(3 \\times 3\\), so \\(\\boldsymbol{QN}\\) is \\(2 \\times 3\\). For \\(\\boldsymbol{NQ}\\), \\(\\boldsymbol{N}\\) has 3 columns but \\(\\boldsymbol{Q}\\) has only 2 rows."
+    ],
+    "answer": "\\(2 \\times 3\\); the sizes do not match for \\(\\boldsymbol{NQ}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Top row: \\(2(5, 27, 3) + (8, 12, 5) + (1, 27, 0) = (19, 93, 11)\\). Bottom row: \\((8, 12, 5) + 2(1, 27, 0) = (10, 66, 5)\\)."
+    ],
+    "answer": "\\(\\begin{pmatrix}19 & 93 & 11 \\\\ 10 & 66 & 5\\end{pmatrix}\\); the top row is the grams of protein, carbohydrate and fat in the breakfast"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\begin{pmatrix}19 & 93 & 11 \\\\ 10 & 66 & 5\\end{pmatrix}\\begin{pmatrix}4 \\\\ 4 \\\\ 9\\end{pmatrix} = \\begin{pmatrix}547 \\\\ 349\\end{pmatrix}\\)"
+    ],
+    "answer": "Breakfast 547 kcal; snack 349 kcal"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-022",
+  "strand": "Number and Algebra",
+  "subtopic": "Matrices and systems",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A jeweller has three alloys. Alloy X is 60 % gold, 30 % silver and 10 % copper; alloy Y is 40 % gold, 40 % silver and 20 % copper; alloy Z is 10 % gold, 20 % silver and 70 % copper. She melts together \\(x\\) grams of X, \\(y\\) grams of Y and \\(z\\) grams of Z to make a mixture with 40.5 g of gold, 31 g of silver and 28.5 g of copper."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down a system of three linear equations, and write it as a matrix equation.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find \\(x\\), \\(y\\) and \\(z\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The jeweller wants a 50 g piece with the same make-up. Find the mass of each alloy she needs.",
+    "marks": 1
+   }
+  ],
+  "idea": "Each metal gives one equation. The system \\(\\boldsymbol{M}\\boldsymbol{v} = \\boldsymbol{c}\\) has the unique solution \\(\\boldsymbol{v} = \\boldsymbol{M}^{-1}\\boldsymbol{c}\\) when \\(\\det \\boldsymbol{M} \\ne 0\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Gold: \\(0.6x + 0.4y + 0.1z = 40.5\\); silver: \\(0.3x + 0.4y + 0.2z = 31\\); copper: \\(0.1x + 0.2y + 0.7z = 28.5\\)."
+    ],
+    "answer": "\\(\\begin{pmatrix}0.6 & 0.4 & 0.1 \\\\ 0.3 & 0.4 & 0.2 \\\\ 0.1 & 0.2 & 0.7\\end{pmatrix}\\begin{pmatrix}x \\\\ y \\\\ z\\end{pmatrix} = \\begin{pmatrix}40.5 \\\\ 31 \\\\ 28.5\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "With the calculator, \\(\\boldsymbol{v} = \\boldsymbol{M}^{-1}\\boldsymbol{c}\\) (here \\(\\det \\boldsymbol{M} = 0.07 \\ne 0\\))."
+    ],
+    "answer": "\\(x = 40\\), \\(y = 35\\), \\(z = 25\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The mixture above has mass \\(40 + 35 + 25 = 100\\) g, so halve each mass."
+    ],
+    "answer": "20 g of X, 17.5 g of Y and 12.5 g of Z"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-023",
+  "strand": "Number and Algebra",
+  "subtopic": "Matrices and systems",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(\\boldsymbol{M} = \\begin{pmatrix}k & 2 \\\\ 3 & k - 1\\end{pmatrix}\\), where \\(k \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the values of \\(k\\) for which \\(\\boldsymbol{M}\\) has no inverse.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "For \\(k = 1\\), use \\(\\boldsymbol{M}^{-1}\\) to solve \\(\\boldsymbol{M}\\begin{pmatrix}x \\\\ y\\end{pmatrix} = \\begin{pmatrix}4 \\\\ 6\\end{pmatrix}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "A square matrix has an inverse exactly when its determinant is not zero.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\det \\boldsymbol{M} = k(k - 1) - 6 = k^{2} - k - 6 = (k - 3)(k + 2)\\)"
+    ],
+    "answer": "\\(k = 3\\) or \\(k = -2\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\boldsymbol{M} = \\begin{pmatrix}1 & 2 \\\\ 3 & 0\\end{pmatrix}\\), \\(\\det \\boldsymbol{M} = -6\\), \\(\\boldsymbol{M}^{-1} = -\\dfrac{1}{6}\\begin{pmatrix}0 & -2 \\\\ -3 & 1\\end{pmatrix}\\).",
+     "\\(-\\dfrac{1}{6}\\begin{pmatrix}0 & -2 \\\\ -3 & 1\\end{pmatrix}\\begin{pmatrix}4 \\\\ 6\\end{pmatrix} = -\\dfrac{1}{6}\\begin{pmatrix}-12 \\\\ -6\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(x = 2\\), \\(y = 1\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-024",
+  "strand": "Number and Algebra",
+  "subtopic": "Matrices and systems",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Let \\(\\boldsymbol{A} = \\begin{pmatrix}3 & 1 \\\\ 2 & 2\\end{pmatrix}\\), and let \\(\\boldsymbol{I}\\) be the \\(2 \\times 2\\) identity matrix."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\boldsymbol{A}^{2}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the values of \\(p\\) and \\(q\\) such that \\(\\boldsymbol{A}^{2} = p\\boldsymbol{A} + q\\boldsymbol{I}\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Hence show that \\(\\boldsymbol{A}^{-1} = \\dfrac{1}{4}(5\\boldsymbol{I} - \\boldsymbol{A})\\), and check your answer.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Use the result of part (b) to find \\(\\boldsymbol{A}^{3}\\) without multiplying three matrices.",
+    "marks": 2
+   }
+  ],
+  "idea": "Compare the matrices entry by entry to find \\(p\\) and \\(q\\). Multiplying the equation by \\(\\boldsymbol{A}^{-1}\\) gives the inverse; multiplying it by \\(\\boldsymbol{A}\\) gives \\(\\boldsymbol{A}^{3}\\) in terms of \\(\\boldsymbol{A}^{2}\\) and \\(\\boldsymbol{A}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\begin{pmatrix}11 & 5 \\\\ 10 & 6\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\begin{pmatrix}11 & 5 \\\\ 10 & 6\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(p\\boldsymbol{A} + q\\boldsymbol{I} = \\begin{pmatrix}3p + q & p \\\\ 2p & 2p + q\\end{pmatrix}\\). Top right: \\(p = 5\\). Top left: \\(15 + q = 11\\).",
+     "Check: \\(2p = 10\\) and \\(2p + q = 6\\)."
+    ],
+    "answer": "\\(p = 5\\), \\(q = -4\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\boldsymbol{A}^{2} = 5\\boldsymbol{A} - 4\\boldsymbol{I}\\). Multiply by \\(\\boldsymbol{A}^{-1}\\): \\(\\boldsymbol{A} = 5\\boldsymbol{I} - 4\\boldsymbol{A}^{-1}\\), so \\(\\boldsymbol{A}^{-1} = \\dfrac{1}{4}(5\\boldsymbol{I} - \\boldsymbol{A})\\).",
+     "\\(\\dfrac{1}{4}\\begin{pmatrix}2 & -1 \\\\ -2 & 3\\end{pmatrix}\\), which agrees with \\(\\dfrac{1}{\\det \\boldsymbol{A}}\\begin{pmatrix}2 & -1 \\\\ -2 & 3\\end{pmatrix}\\) since \\(\\det \\boldsymbol{A} = 4\\)."
+    ],
+    "answer": "\\(\\boldsymbol{A}^{-1} = \\dfrac{1}{4}\\begin{pmatrix}2 & -1 \\\\ -2 & 3\\end{pmatrix}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\boldsymbol{A}^{3} = 5\\boldsymbol{A}^{2} - 4\\boldsymbol{A} = \\begin{pmatrix}55 & 25 \\\\ 50 & 30\\end{pmatrix} - \\begin{pmatrix}12 & 4 \\\\ 8 & 8\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\begin{pmatrix}43 & 21 \\\\ 42 & 22\\end{pmatrix}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-025",
+  "strand": "Number and Algebra",
+  "subtopic": "Matrices and systems",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A bakery makes batches of three products, P, Q and R, using three machines. The matrix \\(\\boldsymbol{T}\\) gives the hours each machine (rows 1 to 3) spends on one batch of each product (columns P, Q, R). In one day the machines are used for 20, 19 and 27 hours.",
+   "\\[\\boldsymbol{T} = \\begin{pmatrix}1 & 2 & 1 \\\\ 2 & 1 & 1 \\\\ 1 & 1 & 3\\end{pmatrix}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down a matrix equation for the numbers of batches \\(p\\), \\(q\\) and \\(r\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\det \\boldsymbol{T}\\), and explain what it tells you about the solution.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the numbers of batches.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Machine 1 can be used for 2 more hours. Find the change in the numbers of batches, using \\(\\boldsymbol{T}^{-1}\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Comment on your answer to part (d).",
+    "marks": 1
+   }
+  ],
+  "idea": "\\(\\boldsymbol{T}\\boldsymbol{v} = \\boldsymbol{h}\\), so \\(\\boldsymbol{v} = \\boldsymbol{T}^{-1}\\boldsymbol{h}\\). Because the system is linear, a change \\(\\Delta\\boldsymbol{h}\\) in the hours changes the batches by \\(\\boldsymbol{T}^{-1}\\Delta\\boldsymbol{h}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Each row: hours used on that machine."
+    ],
+    "answer": "\\(\\begin{pmatrix}1 & 2 & 1 \\\\ 2 & 1 & 1 \\\\ 1 & 1 & 3\\end{pmatrix}\\begin{pmatrix}p \\\\ q \\\\ r\\end{pmatrix} = \\begin{pmatrix}20 \\\\ 19 \\\\ 27\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "From the calculator: \\(\\det \\boldsymbol{T} = -7\\)."
+    ],
+    "answer": "\\(-7 \\ne 0\\), so \\(\\boldsymbol{T}^{-1}\\) exists and there is exactly one solution"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\boldsymbol{T}^{-1}\\begin{pmatrix}20 \\\\ 19 \\\\ 27\\end{pmatrix}\\) with the calculator."
+    ],
+    "answer": "\\(p = 4\\), \\(q = 5\\), \\(r = 6\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\boldsymbol{T}^{-1} = \\dfrac{1}{7}\\begin{pmatrix}-2 & 5 & -1 \\\\ 5 & -2 & -1 \\\\ -1 & -1 & 3\\end{pmatrix}\\)",
+     "\\(\\boldsymbol{T}^{-1}\\begin{pmatrix}2 \\\\ 0 \\\\ 0\\end{pmatrix} = \\dfrac{1}{7}\\begin{pmatrix}-4 \\\\ 10 \\\\ -2\\end{pmatrix}\\)"
+    ],
+    "answer": "P: \\(-0.571\\); Q: \\(+1.43\\); R: \\(-0.286\\) batches"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Using all the extra time on machine 1 means making more Q and less P and R, and the changes are not whole batches."
+    ],
+    "answer": "In practice the bakery cannot make part batches, so it would round, and not every machine would be fully used"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-026",
+  "strand": "Number and Algebra",
+  "subtopic": "Eigenvalues and Markov chains",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(\\boldsymbol{A} = \\begin{pmatrix}4 & 1 \\\\ 2 & 3\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the characteristic polynomial of \\(\\boldsymbol{A}\\), and hence its eigenvalues.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find an eigenvector for each eigenvalue.",
+    "marks": 3
+   }
+  ],
+  "idea": "The eigenvalues \\(\\lambda\\) solve \\(\\det(\\boldsymbol{A} - \\lambda\\boldsymbol{I}) = 0\\). An eigenvector \\(\\boldsymbol{v}\\) for \\(\\lambda\\) is any non-zero solution of \\((\\boldsymbol{A} - \\lambda\\boldsymbol{I})\\boldsymbol{v} = \\boldsymbol{0}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\det\\begin{pmatrix}4 - \\lambda & 1 \\\\ 2 & 3 - \\lambda\\end{pmatrix} = (4 - \\lambda)(3 - \\lambda) - 2 = \\lambda^{2} - 7\\lambda + 10\\)",
+     "\\((\\lambda - 5)(\\lambda - 2) = 0\\)"
+    ],
+    "answer": "\\(\\lambda^{2} - 7\\lambda + 10\\); eigenvalues 5 and 2"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\lambda = 5\\): \\(\\begin{pmatrix}-1 & 1 \\\\ 2 & -2\\end{pmatrix}\\begin{pmatrix}x \\\\ y\\end{pmatrix} = \\boldsymbol{0}\\) gives \\(y = x\\).",
+     "\\(\\lambda = 2\\): \\(\\begin{pmatrix}2 & 1 \\\\ 2 & 1\\end{pmatrix}\\begin{pmatrix}x \\\\ y\\end{pmatrix} = \\boldsymbol{0}\\) gives \\(y = -2x\\)."
+    ],
+    "answer": "\\(\\lambda = 5\\): \\(\\begin{pmatrix}1 \\\\ 1\\end{pmatrix}\\); \\(\\lambda = 2\\): \\(\\begin{pmatrix}1 \\\\ -2\\end{pmatrix}\\) (or any non-zero multiples)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-027",
+  "strand": "Number and Algebra",
+  "subtopic": "Eigenvalues and Markov chains",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The matrix \\(\\boldsymbol{A} = \\begin{pmatrix}4 & 1 \\\\ 2 & 3\\end{pmatrix}\\) has eigenvalues 5 and 2, with eigenvectors \\(\\begin{pmatrix}1 \\\\ 1\\end{pmatrix}\\) and \\(\\begin{pmatrix}1 \\\\ -2\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down matrices \\(\\boldsymbol{P}\\) and \\(\\boldsymbol{D}\\), where \\(\\boldsymbol{D}\\) is diagonal, such that \\(\\boldsymbol{A} = \\boldsymbol{PDP}^{-1}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Hence find \\(\\boldsymbol{A}^{5}\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Show that the sum of the eigenvalues equals the sum of the diagonal entries of \\(\\boldsymbol{A}\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "Put the eigenvectors in the columns of \\(\\boldsymbol{P}\\) and the eigenvalues, in the same order, on the diagonal of \\(\\boldsymbol{D}\\). Then \\(\\boldsymbol{A}^{n} = \\boldsymbol{PD}^{n}\\boldsymbol{P}^{-1}\\), and \\(\\boldsymbol{D}^{n}\\) just raises each diagonal entry to the power \\(n\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Columns of \\(\\boldsymbol{P}\\): the eigenvectors for 5 and for 2."
+    ],
+    "answer": "\\(\\boldsymbol{P} = \\begin{pmatrix}1 & 1 \\\\ 1 & -2\\end{pmatrix}\\), \\(\\boldsymbol{D} = \\begin{pmatrix}5 & 0 \\\\ 0 & 2\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\boldsymbol{P}^{-1} = -\\dfrac{1}{3}\\begin{pmatrix}-2 & -1 \\\\ -1 & 1\\end{pmatrix} = \\dfrac{1}{3}\\begin{pmatrix}2 & 1 \\\\ 1 & -1\\end{pmatrix}\\), \\(\\boldsymbol{D}^{5} = \\begin{pmatrix}3125 & 0 \\\\ 0 & 32\\end{pmatrix}\\)",
+     "\\(\\boldsymbol{PD}^{5}\\boldsymbol{P}^{-1} = \\dfrac{1}{3}\\begin{pmatrix}3125 & 32 \\\\ 3125 & -64\\end{pmatrix}\\begin{pmatrix}2 & 1 \\\\ 1 & -1\\end{pmatrix} = \\dfrac{1}{3}\\begin{pmatrix}6282 & 3093 \\\\ 6186 & 3189\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\begin{pmatrix}2094 & 1031 \\\\ 2062 & 1063\\end{pmatrix}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(5 + 2 = 7\\) and \\(4 + 3 = 7\\)."
+    ],
+    "answer": "Both are 7"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-028",
+  "strand": "Number and Algebra",
+  "subtopic": "Eigenvalues and Markov chains",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A town has 120 hire bikes, kept at two docking stations, North and South. Each day, 80 % of the bikes that start at North end the day at North and 20 % end at South; 70 % of those that start at South stay there and 30 % end at North. On Monday morning there are 70 bikes at North and 50 at South."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down a transition matrix \\(\\boldsymbol{T}\\), with columns for the starting station.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the expected number of bikes at each station after 3 days.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the long-term number of bikes at each station, and explain your method.",
+    "marks": 3
+   }
+  ],
+  "idea": "Each column of a transition matrix shows where the bikes from one station go, so each column adds up to 1. The state after \\(n\\) days is \\(\\boldsymbol{T}^{n}\\boldsymbol{s}_{0}\\), and the long-term state is the eigenvector for eigenvalue 1, scaled to the total.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Column 1: from North; column 2: from South."
+    ],
+    "answer": "\\(\\boldsymbol{T} = \\begin{pmatrix}0.8 & 0.3 \\\\ 0.2 & 0.7\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\boldsymbol{T}^{3}\\begin{pmatrix}70 \\\\ 50\\end{pmatrix} = \\begin{pmatrix}71.75 \\\\ 48.25\\end{pmatrix}\\)"
+    ],
+    "answer": "About 71.75 bikes at North and 48.25 at South"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The long-term state \\(\\boldsymbol{s}\\) satisfies \\(\\boldsymbol{Ts} = \\boldsymbol{s}\\): an eigenvector for eigenvalue 1. From \\(0.8n + 0.3s = n\\): \\(0.2n = 0.3s\\), so \\(n : s = 3 : 2\\).",
+     "\\(120 \\times \\dfrac{3}{5} = 72\\) and \\(120 \\times \\dfrac{2}{5} = 48\\)."
+    ],
+    "answer": "72 at North and 48 at South"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-029",
+  "strand": "Number and Algebra",
+  "subtopic": "Eigenvalues and Markov chains",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "A simple weather model has two states, sunny and rainy. If a day is sunny, the next day is sunny with probability 0.7; if a day is rainy, the next day is sunny with probability 0.4. The transition matrix, with columns for today's weather (sunny, rainy), is \\(\\boldsymbol{T} = \\begin{pmatrix}0.7 & 0.4 \\\\ 0.3 & 0.6\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the eigenvalues of \\(\\boldsymbol{T}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find an eigenvector for each eigenvalue.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Day 0 is sunny. Use \\(\\boldsymbol{T} = \\boldsymbol{PDP}^{-1}\\) to show that the probability that day \\(n\\) is sunny is \\(\\dfrac{4}{7} + \\dfrac{3}{7}(0.3)^{n}\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the probability that day 2 is sunny, and the long-term proportion of sunny days.",
+    "marks": 2
+   }
+  ],
+  "idea": "Every transition matrix has 1 as an eigenvalue; its eigenvector gives the long-term state. Writing the starting state in terms of the eigenvectors shows how the other part dies away as \\((0.3)^{n}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\((0.7 - \\lambda)(0.6 - \\lambda) - 0.12 = \\lambda^{2} - 1.3\\lambda + 0.3 = (\\lambda - 1)(\\lambda - 0.3)\\)"
+    ],
+    "answer": "1 and 0.3"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\lambda = 1\\): \\(-0.3x + 0.4y = 0\\), so \\(\\begin{pmatrix}4 \\\\ 3\\end{pmatrix}\\). \\(\\lambda = 0.3\\): \\(0.4x + 0.4y = 0\\), so \\(\\begin{pmatrix}1 \\\\ -1\\end{pmatrix}\\)."
+    ],
+    "answer": "\\(\\begin{pmatrix}4 \\\\ 3\\end{pmatrix}\\) for 1; \\(\\begin{pmatrix}1 \\\\ -1\\end{pmatrix}\\) for 0.3"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\boldsymbol{P} = \\begin{pmatrix}4 & 1 \\\\ 3 & -1\\end{pmatrix}\\), \\(\\boldsymbol{D} = \\begin{pmatrix}1 & 0 \\\\ 0 & 0.3\\end{pmatrix}\\), \\(\\boldsymbol{P}^{-1} = \\dfrac{1}{7}\\begin{pmatrix}1 & 1 \\\\ 3 & -4\\end{pmatrix}\\).",
+     "\\(\\boldsymbol{T}^{n}\\begin{pmatrix}1 \\\\ 0\\end{pmatrix} = \\boldsymbol{PD}^{n}\\boldsymbol{P}^{-1}\\begin{pmatrix}1 \\\\ 0\\end{pmatrix} = \\boldsymbol{P}\\begin{pmatrix}\\frac{1}{7} \\\\ \\frac{3}{7}(0.3)^{n}\\end{pmatrix} = \\begin{pmatrix}\\frac{4}{7} + \\frac{3}{7}(0.3)^{n} \\\\ \\frac{3}{7} - \\frac{3}{7}(0.3)^{n}\\end{pmatrix}\\)"
+    ],
+    "answer": "The top entry is \\(\\dfrac{4}{7} + \\dfrac{3}{7}(0.3)^{n}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{4}{7} + \\dfrac{3}{7}(0.09) = 0.61\\). As \\(n\\) grows, \\((0.3)^{n} \\to 0\\)."
+    ],
+    "answer": "0.61; \\(\\dfrac{4}{7}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-hl-030",
+  "strand": "Number and Algebra",
+  "subtopic": "Eigenvalues and Markov chains",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A town library has three branches, A, B and C. Each week, a borrowed book is returned to a branch as follows.",
+   "Of the books borrowed from A, 70 % are returned to A, 20 % to B and 10 % to C. Of those borrowed from B, 15 % go to A, 75 % to B and 10 % to C. Of those borrowed from C, 10 % go to A, 20 % to B and 70 % to C. Assume every book is borrowed and returned once a week."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the transition matrix \\(\\boldsymbol{T}\\), with columns for the branch a book is borrowed from (A, B, C).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "A book starts at branch B. Find the probability that it is at branch A after two weeks.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the long-term proportion of books at each branch.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "The library has 720 books. Find the long-term number at each branch.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "The other two eigenvalues of \\(\\boldsymbol{T}\\) are 0.6 and 0.55. Explain what this tells you about how quickly the numbers settle.",
+    "marks": 1
+   }
+  ],
+  "idea": "The probabilities after two weeks are in \\(\\boldsymbol{T}^{2}\\). The long-term proportions form the eigenvector for eigenvalue 1, scaled so that its entries add to 1. The other eigenvalues control how fast the differences die away.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Each column adds up to 1."
+    ],
+    "answer": "\\(\\boldsymbol{T} = \\begin{pmatrix}0.7 & 0.15 & 0.1 \\\\ 0.2 & 0.75 & 0.2 \\\\ 0.1 & 0.1 & 0.7\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The entry in row A, column B of \\(\\boldsymbol{T}^{2}\\): \\(0.7 \\times 0.15 + 0.15 \\times 0.75 + 0.1 \\times 0.1 = 0.105 + 0.1125 + 0.01\\)"
+    ],
+    "answer": "0.2275"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(\\boldsymbol{Ts} = \\boldsymbol{s}\\) with \\(a + b + c = 1\\) (calculator): \\(a = 0.3055\\ldots\\), \\(b = 0.4444\\ldots\\), \\(c = 0.25\\)."
+    ],
+    "answer": "A \\(\\dfrac{11}{36}\\), B \\(\\dfrac{4}{9}\\), C \\(\\dfrac{1}{4}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(720 \\times \\dfrac{11}{36}\\), \\(720 \\times \\dfrac{4}{9}\\), \\(720 \\times \\dfrac{1}{4}\\)"
+    ],
+    "answer": "A 220, B 320, C 180"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The distance from the long-term state shrinks roughly by a factor of 0.6 each week, so after 10 weeks it is about \\(0.6^{10} \\approx 0.006\\) of what it was."
+    ],
+    "answer": "The numbers settle quickly, within a few weeks"
+   }
+  ]
+ }
+]

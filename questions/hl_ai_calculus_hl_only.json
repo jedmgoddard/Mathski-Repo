@@ -1,0 +1,1727 @@
+[
+ {
+  "id": "ai-ca-hl-001",
+  "strand": "Calculus",
+  "subtopic": "Differentiation rules and related rates",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(f(x) = x^{2}e^{-0.5x}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(f'(x) = (2x - 0.5x^{2})e^{-0.5x}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the equation of the tangent to the graph of \\(f\\) at \\(x = 1\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the \\(x\\)-coordinates of the stationary points of \\(f\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Product rule: \\((uv)' = u'v + uv'\\). Chain rule: the derivative of \\(e^{-0.5x}\\) is \\(-0.5e^{-0.5x}\\). Since \\(e^{-0.5x}\\) is never 0, \\(f'(x) = 0\\) only when the bracket is 0.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(u = x^{2}\\), \\(v = e^{-0.5x}\\): \\(f'(x) = 2xe^{-0.5x} + x^{2}(-0.5e^{-0.5x})\\)"
+    ],
+    "answer": "\\(f'(x) = (2x - 0.5x^{2})e^{-0.5x}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(f(1) = e^{-0.5} = 0.6065\\ldots\\) and \\(f'(1) = 1.5e^{-0.5} = 0.9097\\ldots\\)",
+     "\\(y - 0.6065\\ldots = 0.9097\\ldots(x - 1)\\)"
+    ],
+    "answer": "\\(y = 0.910x - 0.303\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2x - 0.5x^{2} = 0.5x(4 - x) = 0\\)"
+    ],
+    "answer": "\\(x = 0\\) and \\(x = 4\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-002",
+  "strand": "Calculus",
+  "subtopic": "Differentiation rules and related rates",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The output of a solar water heater depends on the temperature difference \\(T\\) °C between the panel and the air. A model for its efficiency is \\(E(T) = \\dfrac{50T}{T^{2} + 400}\\), for \\(T > 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use the quotient rule to show that \\(E'(T) = \\dfrac{50(400 - T^{2})}{(T^{2} + 400)^{2}}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence find the temperature difference that gives the greatest efficiency, and justify that it is a maximum.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the greatest efficiency.",
+    "marks": 1
+   }
+  ],
+  "idea": "Quotient rule: \\(\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v - uv'}{v^{2}}\\). The denominator of \\(E'\\) is always positive, so the sign of \\(E'\\) is the sign of \\(400 - T^{2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(u = 50T\\), \\(u' = 50\\); \\(v = T^{2} + 400\\), \\(v' = 2T\\).",
+     "\\(E'(T) = \\dfrac{50(T^{2} + 400) - 50T \\times 2T}{(T^{2} + 400)^{2}} = \\dfrac{50(400 - T^{2})}{(T^{2} + 400)^{2}}\\)"
+    ],
+    "answer": "As required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(E'(T) = 0\\) when \\(T^{2} = 400\\), so \\(T = 20\\) (\\(T > 0\\)).",
+     "For \\(T < 20\\), \\(E' > 0\\); for \\(T > 20\\), \\(E' < 0\\). So \\(E\\) increases then decreases."
+    ],
+    "answer": "\\(T = 20\\) °C; \\(E'\\) changes from positive to negative there"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(E(20) = \\dfrac{1000}{800}\\)"
+    ],
+    "answer": "1.25"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-003",
+  "strand": "Calculus",
+  "subtopic": "Differentiation rules and related rates",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A company's monthly profit, \\(P\\) thousand dollars, when it spends \\(x\\) thousand dollars on advertising is modelled by \\(P(x) = -x^{3} + 18x^{2} + 60x - 200\\), for \\(0 \\le x \\le 15\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(P'(x)\\) and \\(P''(x)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the point of inflection of the graph of \\(P\\), and explain what it means for the company.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the interval on which the graph of \\(P\\) is concave up.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the advertising spend that gives the greatest profit.",
+    "marks": 1
+   }
+  ],
+  "idea": "At a point of inflection \\(P''\\) changes sign. There \\(P'\\), the extra profit from each extra thousand dollars of advertising, is greatest: after it, each extra dollar is worth less (the ‘point of diminishing returns’).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Differentiate term by term, twice."
+    ],
+    "answer": "\\(P'(x) = -3x^{2} + 36x + 60\\); \\(P''(x) = -6x + 36\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P''(x) = 0\\) at \\(x = 6\\), and \\(P''\\) changes from positive to negative there. \\(P(6) = -216 + 648 + 360 - 200 = 592\\).",
+     "\\(P'(6) = 168\\), the greatest rate of increase of profit."
+    ],
+    "answer": "\\((6, 592)\\): spending beyond $6000 still raises profit, but by less and less each time"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(P''(x) > 0\\) when \\(x < 6\\)."
+    ],
+    "answer": "\\(0 \\le x < 6\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(P'(x) = 0\\): \\(x^{2} - 12x - 20 = 0\\), so \\(x = 6 + \\sqrt{56} = 13.48\\ldots\\) (the other root is negative); \\(P''\\) is negative there."
+    ],
+    "answer": "About $13 500 (\\(x = 13.5\\))"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-004",
+  "strand": "Calculus",
+  "subtopic": "Differentiation rules and related rates",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "After a car goes over a bump, the vertical displacement of its body, \\(y\\) cm, \\(t\\) seconds later is modelled by \\(y = e^{-0.2t}\\sin t\\), for \\(0 \\le t \\le 2\\pi\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\dfrac{dy}{dt} = e^{-0.2t}(\\cos t - 0.2\\sin t)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\dfrac{d^{2}y}{dt^{2}} = e^{-0.2t}(-0.96\\sin t - 0.4\\cos t)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the times at which \\(y\\) has a local maximum and a local minimum, and use part (b) to classify them.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the times of the points of inflection of the graph of \\(y\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Stationary points need \\(\\cos t - 0.2\\sin t = 0\\), that is \\(\\tan t = 5\\); points of inflection need \\(-0.96\\sin t - 0.4\\cos t = 0\\). In each case \\(e^{-0.2t} \\ne 0\\), and \\(\\tan t = k\\) has two solutions in \\([0, 2\\pi]\\), \\(\\pi\\) apart.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Product rule with \\(\\dfrac{d}{dt}e^{-0.2t} = -0.2e^{-0.2t}\\): \\(\\dfrac{dy}{dt} = -0.2e^{-0.2t}\\sin t + e^{-0.2t}\\cos t\\)"
+    ],
+    "answer": "As required"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{d^{2}y}{dt^{2}} = -0.2e^{-0.2t}(\\cos t - 0.2\\sin t) + e^{-0.2t}(-\\sin t - 0.2\\cos t)\\)",
+     "\\(= e^{-0.2t}(-0.2\\cos t + 0.04\\sin t - \\sin t - 0.2\\cos t)\\)"
+    ],
+    "answer": "As required"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\tan t = 5\\): \\(t = 1.373\\ldots\\) or \\(t = 1.373\\ldots + \\pi = 4.514\\ldots\\)",
+     "At \\(t = 1.373\\ldots\\), \\(\\dfrac{d^{2}y}{dt^{2}} = -0.7748\\ldots < 0\\); at \\(t = 4.514\\ldots\\), \\(\\dfrac{d^{2}y}{dt^{2}} = 0.4133\\ldots > 0\\)."
+    ],
+    "answer": "Maximum at \\(t = 1.37\\); minimum at \\(t = 4.51\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\tan t = -\\dfrac{0.4}{0.96} = -\\dfrac{5}{12}\\): \\(t = \\pi - 0.3947\\ldots = 2.746\\ldots\\) or \\(t = 2\\pi - 0.3947\\ldots = 5.888\\ldots\\); \\(\\dfrac{d^{2}y}{dt^{2}}\\) changes sign at each."
+    ],
+    "answer": "\\(t = 2.75\\) and \\(t = 5.89\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-005",
+  "strand": "Calculus",
+  "subtopic": "Differentiation rules and related rates",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A person 1.8 m tall walks directly away from a 6 m lamppost at 1.2 m s⁻¹. At time \\(t\\), the person is \\(x\\) m from the post and their shadow is \\(s\\) m long.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 268\" width=\"448\" height=\"268\" role=\"img\" aria-label=\"A vertical lamppost 6 m tall on the left. A person 1.8 m tall stands x m from the post. A straight light ray from the top of the post passes over the person's head and meets the ground at the tip of the shadow, s m beyond the person.\"><path d=\"M29.0 224.0 L419.0 224.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M44.0 224.0 L44.0 44.0\" stroke=\"#0b0d12\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M194.0 224.0 L194.0 170.0\" stroke=\"#0b0d12\" stroke-width=\"3\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M44.0 44.0 L258.3 224.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"6 4\"/><path d=\"M56.0 224.0 L56.0 212.0 L44.0 212.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M206.0 224.0 L206.0 212.0 L194.0 212.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><circle cx=\"44.0\" cy=\"44.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"194.0\" cy=\"170.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"258.3\" cy=\"224.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"24.0\" y=\"139.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6 m</text><text x=\"218.0\" y=\"202.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1.8 m</text><text x=\"119.0\" y=\"243.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">x</text><text x=\"226.1\" y=\"243.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">s</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use similar triangles to show that \\(s = \\dfrac{3x}{7}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the rate at which the shadow is getting longer.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the speed at which the tip of the shadow is moving.",
+    "marks": 2
+   }
+  ],
+  "idea": "The big triangle (post) and the small triangle (person) share the angle at the tip of the shadow. Differentiate the relation with respect to time, using \\(\\dfrac{dx}{dt} = 1.2\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{s}{1.8} = \\dfrac{x + s}{6}\\), so \\(6s = 1.8x + 1.8s\\) and \\(4.2s = 1.8x\\)."
+    ],
+    "answer": "\\(s = \\dfrac{1.8}{4.2}x = \\dfrac{3x}{7}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{ds}{dt} = \\dfrac{3}{7}\\dfrac{dx}{dt} = \\dfrac{3}{7} \\times 1.2\\)"
+    ],
+    "answer": "\\(\\dfrac{18}{35} = 0.514\\) m s⁻¹"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The tip is \\(x + s = \\dfrac{10x}{7}\\) from the post: \\(\\dfrac{10}{7} \\times 1.2\\)."
+    ],
+    "answer": "\\(\\dfrac{12}{7} = 1.71\\) m s⁻¹"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-006",
+  "strand": "Calculus",
+  "subtopic": "Differentiation rules and related rates",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A camera on the ground is 50 m from a launch pad and tracks a model rocket that rises vertically. When the rocket is 120 m high, it is rising at 20 m s⁻¹. Let \\(h\\) m be the height of the rocket and \\(\\theta\\) the angle of elevation of the camera."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the rate at which \\(\\theta\\) is increasing at that moment, in radians per second.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the rate at which the distance from the camera to the rocket is increasing at that moment.",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(\\tan\\theta = \\dfrac{h}{50}\\). Differentiate both sides with respect to \\(t\\): \\(\\sec^{2}\\theta\\,\\dfrac{d\\theta}{dt} = \\dfrac{1}{50}\\dfrac{dh}{dt}\\). For the distance, \\(d^{2} = 50^{2} + h^{2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sec^{2}\\theta = 1 + \\tan^{2}\\theta = 1 + 2.4^{2} = 6.76\\) at \\(h = 120\\).",
+     "\\(\\dfrac{d\\theta}{dt} = \\dfrac{1}{6.76} \\times \\dfrac{20}{50} = 0.05917\\ldots\\)"
+    ],
+    "answer": "0.0592 rad s⁻¹"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(2d\\dfrac{dd}{dt} = 2h\\dfrac{dh}{dt}\\), and \\(d = \\sqrt{2500 + 14\\,400} = 130\\).",
+     "\\(\\dfrac{dd}{dt} = \\dfrac{120}{130} \\times 20 = 18.46\\ldots\\)"
+    ],
+    "answer": "18.5 m s⁻¹"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-007",
+  "strand": "Calculus",
+  "subtopic": "Integration, areas and volumes",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": false,
+  "marks": 5,
+  "stem": [
+   "Answer this question without a calculator."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\displaystyle\\int e^{3x - 1}\\,dx\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\displaystyle\\int \\dfrac{x}{x^{2} + 4}\\,dx\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the exact value of \\(\\displaystyle\\int_{0}^{\\pi/6} \\cos 3x\\,dx\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Reverse the chain rule. Differentiating \\(e^{3x - 1}\\) gives \\(3e^{3x - 1}\\), so divide by 3. The numerator \\(x\\) is half the derivative of \\(x^{2} + 4\\), which suggests \\(\\ln(x^{2} + 4)\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Check: \\(\\dfrac{d}{dx}\\dfrac{1}{3}e^{3x - 1} = e^{3x - 1}\\)."
+    ],
+    "answer": "\\(\\dfrac{1}{3}e^{3x - 1} + C\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{d}{dx}\\ln(x^{2} + 4) = \\dfrac{2x}{x^{2} + 4}\\), so halve it."
+    ],
+    "answer": "\\(\\dfrac{1}{2}\\ln(x^{2} + 4) + C\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\left[\\dfrac{1}{3}\\sin 3x\\right]_{0}^{\\pi/6} = \\dfrac{1}{3}\\sin\\dfrac{\\pi}{2} - 0\\)"
+    ],
+    "answer": "\\(\\dfrac{1}{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-008",
+  "strand": "Calculus",
+  "subtopic": "Integration, areas and volumes",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The region R is enclosed by the \\(y\\)-axis, the \\(x\\)-axis, the line \\(y = 2\\) and the curve \\(y = \\sqrt{x - 1}\\). It lies to the left of the curve, between \\(y = 0\\) and \\(y = 2\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write \\(x\\) in terms of \\(y\\) for this curve.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Write down an integral, with respect to \\(y\\), for the area of R.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the exact area of R.",
+    "marks": 2
+   }
+  ],
+  "idea": "R lies between the \\(y\\)-axis and the curve, so it is easier to slice it horizontally: each strip has length \\(x\\) and thickness \\(dy\\), and \\(y\\) runs from 0 to 2.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(y^{2} = x - 1\\)"
+    ],
+    "answer": "\\(x = y^{2} + 1\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Integrate the horizontal distance from the \\(y\\)-axis to the curve."
+    ],
+    "answer": "\\(\\displaystyle\\int_{0}^{2}(y^{2} + 1)\\,dy\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\left[\\dfrac{y^{3}}{3} + y\\right]_{0}^{2} = \\dfrac{8}{3} + 2\\)"
+    ],
+    "answer": "\\(\\dfrac{14}{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-009",
+  "strand": "Calculus",
+  "subtopic": "Integration, areas and volumes",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "A wood turner makes a table leg by rotating the curve \\(y = 3 - 0.5\\sin\\left(\\dfrac{x}{2}\\right)\\), for \\(0 \\le x \\le 20\\), through \\(360^{\\circ}\\) about the \\(x\\)-axis. Lengths are in cm."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down an integral for the volume of the leg.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the volume of the leg.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The wood has a density of 0.7 g cm⁻³. Find the mass of the leg.",
+    "marks": 1
+   }
+  ],
+  "idea": "Volume of revolution about the \\(x\\)-axis: \\(V = \\pi\\displaystyle\\int_{a}^{b} y^{2}\\,dx\\), adding up thin discs of radius \\(y\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Each disc has radius \\(y\\)."
+    ],
+    "answer": "\\(V = \\pi\\displaystyle\\int_{0}^{20}\\left(3 - 0.5\\sin\\dfrac{x}{2}\\right)^{2}dx\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "By calculator, \\(V = 538.3\\ldots\\)"
+    ],
+    "answer": "538 cm³"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(0.7 \\times 538.3\\ldots = 376.8\\ldots\\)"
+    ],
+    "answer": "377 g"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-010",
+  "strand": "Calculus",
+  "subtopic": "Integration, areas and volumes",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The inside of a glass is formed by rotating the part of the curve \\(y = 0.5x^{2}\\) between \\(y = 0\\) and \\(y = 4.5\\) through \\(360^{\\circ}\\) about the \\(y\\)-axis. Lengths are in cm.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 320 300\" width=\"320\" height=\"300\" role=\"img\" aria-label=\"The curve y = 0.5x squared for x from -3 to 3, a U shape with its lowest point at the origin, closed off at the top by the line y = 4.5. The region inside is shaded.\"><defs><clipPath id=\"aifn31\"><rect x=\"34\" y=\"24\" width=\"256\" height=\"246\"/></clipPath></defs><line x1=\"37.6\" y1=\"270.0\" x2=\"37.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"55.3\" y1=\"270.0\" x2=\"55.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"73.1\" y1=\"270.0\" x2=\"73.1\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"90.9\" y1=\"270.0\" x2=\"90.9\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"108.7\" y1=\"270.0\" x2=\"108.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"126.4\" y1=\"270.0\" x2=\"126.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"144.2\" y1=\"270.0\" x2=\"144.2\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"162.0\" y1=\"270.0\" x2=\"162.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"179.8\" y1=\"270.0\" x2=\"179.8\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"197.6\" y1=\"270.0\" x2=\"197.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"215.3\" y1=\"270.0\" x2=\"215.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"233.1\" y1=\"270.0\" x2=\"233.1\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"250.9\" y1=\"270.0\" x2=\"250.9\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"268.7\" y1=\"270.0\" x2=\"268.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"286.4\" y1=\"270.0\" x2=\"286.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"270.0\" x2=\"290.0\" y2=\"270.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"247.2\" x2=\"290.0\" y2=\"247.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"224.4\" x2=\"290.0\" y2=\"224.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"201.7\" x2=\"290.0\" y2=\"201.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"178.9\" x2=\"290.0\" y2=\"178.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"156.1\" x2=\"290.0\" y2=\"156.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"133.3\" x2=\"290.0\" y2=\"133.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"110.6\" x2=\"290.0\" y2=\"110.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"87.8\" x2=\"290.0\" y2=\"87.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"65.0\" x2=\"290.0\" y2=\"65.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"42.2\" x2=\"290.0\" y2=\"42.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"270.0\" x2=\"300.0\" y2=\"270.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"162.0\" y1=\"270.0\" x2=\"162.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M306.0 270.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M162.0 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"302.0\" y=\"289.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"149.0\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"55.3\" y1=\"267.0\" x2=\"55.3\" y2=\"273.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"90.9\" y1=\"267.0\" x2=\"90.9\" y2=\"273.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"126.4\" y1=\"267.0\" x2=\"126.4\" y2=\"273.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"197.6\" y1=\"267.0\" x2=\"197.6\" y2=\"273.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"233.1\" y1=\"267.0\" x2=\"233.1\" y2=\"273.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"268.7\" y1=\"267.0\" x2=\"268.7\" y2=\"273.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"159.0\" y1=\"224.4\" x2=\"165.0\" y2=\"224.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"159.0\" y1=\"178.9\" x2=\"165.0\" y2=\"178.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"159.0\" y1=\"133.3\" x2=\"165.0\" y2=\"133.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"159.0\" y1=\"87.8\" x2=\"165.0\" y2=\"87.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"159.0\" y1=\"42.2\" x2=\"165.0\" y2=\"42.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M55.3 65.0 L56.0 67.7 L56.8 70.4 L57.5 73.1 L58.2 75.8 L58.9 78.4 L59.6 81.1 L60.3 83.7 L61.0 86.3 L61.7 88.9 L62.4 91.4 L63.2 94.0 L63.9 96.5 L64.6 99.0 L65.3 101.5 L66.0 103.9 L66.7 106.4 L67.4 108.8 L68.1 111.2 L68.8 113.6 L69.6 116.0 L70.3 118.4 L71.0 120.7 L71.7 123.0 L72.4 125.4 L73.1 127.6 L73.8 129.9 L74.5 132.2 L75.2 134.4 L76.0 136.6 L76.7 138.8 L77.4 141.0 L78.1 143.1 L78.8 145.3 L79.5 147.4 L80.2 149.5 L80.9 151.6 L81.6 153.7 L82.4 155.7 L83.1 157.7 L83.8 159.8 L84.5 161.8 L85.2 163.7 L85.9 165.7 L86.6 167.6 L87.3 169.6 L88.0 171.5 L88.8 173.3 L89.5 175.2 L90.2 177.1 L90.9 178.9 L91.6 180.7 L92.3 182.5 L93.0 184.3 L93.7 186.0 L94.4 187.8 L95.2 189.5 L95.9 191.2 L96.6 192.9 L97.3 194.6 L98.0 196.2 L98.7 197.8 L99.4 199.4 L100.1 201.0 L100.8 202.6 L101.6 204.2 L102.3 205.7 L103.0 207.2 L103.7 208.7 L104.4 210.2 L105.1 211.7 L105.8 213.1 L106.5 214.6 L107.2 216.0 L108.0 217.4 L108.7 218.8 L109.4 220.1 L110.1 221.4 L110.8 222.8 L111.5 224.1 L112.2 225.4 L112.9 226.6 L113.6 227.9 L114.4 229.1 L115.1 230.3 L115.8 231.5 L116.5 232.7 L117.2 233.8 L117.9 235.0 L118.6 236.1 L119.3 237.2 L120.0 238.3 L120.8 239.4 L121.5 240.4 L122.2 241.4 L122.9 242.4 L123.6 243.4 L124.3 244.4 L125.0 245.4 L125.7 246.3 L126.4 247.2 L127.2 248.1 L127.9 249.0 L128.6 249.9 L129.3 250.7 L130.0 251.6 L130.7 252.4 L131.4 253.2 L132.1 253.9 L132.8 254.7 L133.6 255.4 L134.3 256.1 L135.0 256.8 L135.7 257.5 L136.4 258.2 L137.1 258.8 L137.8 259.5 L138.5 260.1 L139.2 260.7 L140.0 261.2 L140.7 261.8 L141.4 262.3 L142.1 262.9 L142.8 263.4 L143.5 263.8 L144.2 264.3 L144.9 264.8 L145.6 265.2 L146.4 265.6 L147.1 266.0 L147.8 266.4 L148.5 266.7 L149.2 267.0 L149.9 267.4 L150.6 267.7 L151.3 267.9 L152.0 268.2 L152.8 268.5 L153.5 268.7 L154.2 268.9 L154.9 269.1 L155.6 269.3 L156.3 269.4 L157.0 269.6 L157.7 269.7 L158.4 269.8 L159.2 269.9 L159.9 269.9 L160.6 270.0 L161.3 270.0 L162.0 270.0 L162.7 270.0 L163.4 270.0 L164.1 269.9 L164.8 269.9 L165.6 269.8 L166.3 269.7 L167.0 269.6 L167.7 269.4 L168.4 269.3 L169.1 269.1 L169.8 268.9 L170.5 268.7 L171.2 268.5 L172.0 268.2 L172.7 267.9 L173.4 267.7 L174.1 267.4 L174.8 267.0 L175.5 266.7 L176.2 266.4 L176.9 266.0 L177.6 265.6 L178.4 265.2 L179.1 264.8 L179.8 264.3 L180.5 263.8 L181.2 263.4 L181.9 262.9 L182.6 262.3 L183.3 261.8 L184.0 261.2 L184.8 260.7 L185.5 260.1 L186.2 259.5 L186.9 258.8 L187.6 258.2 L188.3 257.5 L189.0 256.8 L189.7 256.1 L190.4 255.4 L191.2 254.7 L191.9 253.9 L192.6 253.2 L193.3 252.4 L194.0 251.6 L194.7 250.7 L195.4 249.9 L196.1 249.0 L196.8 248.1 L197.6 247.2 L198.3 246.3 L199.0 245.4 L199.7 244.4 L200.4 243.4 L201.1 242.4 L201.8 241.4 L202.5 240.4 L203.2 239.4 L204.0 238.3 L204.7 237.2 L205.4 236.1 L206.1 235.0 L206.8 233.8 L207.5 232.7 L208.2 231.5 L208.9 230.3 L209.6 229.1 L210.4 227.9 L211.1 226.6 L211.8 225.4 L212.5 224.1 L213.2 222.8 L213.9 221.4 L214.6 220.1 L215.3 218.8 L216.0 217.4 L216.8 216.0 L217.5 214.6 L218.2 213.1 L218.9 211.7 L219.6 210.2 L220.3 208.7 L221.0 207.2 L221.7 205.7 L222.4 204.2 L223.2 202.6 L223.9 201.0 L224.6 199.4 L225.3 197.8 L226.0 196.2 L226.7 194.6 L227.4 192.9 L228.1 191.2 L228.8 189.5 L229.6 187.8 L230.3 186.0 L231.0 184.3 L231.7 182.5 L232.4 180.7 L233.1 178.9 L233.8 177.1 L234.5 175.2 L235.2 173.3 L236.0 171.5 L236.7 169.6 L237.4 167.6 L238.1 165.7 L238.8 163.7 L239.5 161.8 L240.2 159.8 L240.9 157.7 L241.6 155.7 L242.4 153.7 L243.1 151.6 L243.8 149.5 L244.5 147.4 L245.2 145.3 L245.9 143.1 L246.6 141.0 L247.3 138.8 L248.0 136.6 L248.8 134.4 L249.5 132.2 L250.2 129.9 L250.9 127.6 L251.6 125.4 L252.3 123.0 L253.0 120.7 L253.7 118.4 L254.4 116.0 L255.2 113.6 L255.9 111.2 L256.6 108.8 L257.3 106.4 L258.0 103.9 L258.7 101.5 L259.4 99.0 L260.1 96.5 L260.8 94.0 L261.6 91.4 L262.3 88.9 L263.0 86.3 L263.7 83.7 L264.4 81.1 L265.1 78.4 L265.8 75.8 L266.5 73.1 L267.2 70.4 L268.0 67.7 L268.7 65.0 Z\" fill=\"#cfe3f7\" stroke=\"none\"/><path d=\"M55.3 65.0 L55.7 66.4 L56.0 67.7 L56.4 69.1 L56.8 70.4 L57.1 71.8 L57.5 73.1 L57.8 74.5 L58.2 75.8 L58.5 77.1 L58.9 78.4 L59.2 79.8 L59.6 81.1 L60.0 82.4 L60.3 83.7 L60.7 85.0 L61.0 86.3 L61.4 87.6 L61.7 88.9 L62.1 90.1 L62.4 91.4 L62.8 92.7 L63.2 94.0 L63.5 95.2 L63.9 96.5 L64.2 97.7 L64.6 99.0 L64.9 100.2 L65.3 101.5 L65.6 102.7 L66.0 103.9 L66.4 105.2 L66.7 106.4 L67.1 107.6 L67.4 108.8 L67.8 110.0 L68.1 111.2 L68.5 112.4 L68.8 113.6 L69.2 114.8 L69.6 116.0 L69.9 117.2 L70.3 118.4 L70.6 119.6 L71.0 120.7 L71.3 121.9 L71.7 123.0 L72.0 124.2 L72.4 125.4 L72.8 126.5 L73.1 127.6 L73.5 128.8 L73.8 129.9 L74.2 131.0 L74.5 132.2 L74.9 133.3 L75.2 134.4 L75.6 135.5 L76.0 136.6 L76.3 137.7 L76.7 138.8 L77.0 139.9 L77.4 141.0 L77.7 142.1 L78.1 143.1 L78.4 144.2 L78.8 145.3 L79.2 146.3 L79.5 147.4 L79.9 148.5 L80.2 149.5 L80.6 150.6 L80.9 151.6 L81.3 152.6 L81.6 153.7 L82.0 154.7 L82.4 155.7 L82.7 156.7 L83.1 157.7 L83.4 158.8 L83.8 159.8 L84.1 160.8 L84.5 161.8 L84.8 162.7 L85.2 163.7 L85.6 164.7 L85.9 165.7 L86.3 166.7 L86.6 167.6 L87.0 168.6 L87.3 169.6 L87.7 170.5 L88.0 171.5 L88.4 172.4 L88.8 173.3 L89.1 174.3 L89.5 175.2 L89.8 176.1 L90.2 177.1 L90.5 178.0 L90.9 178.9 L91.2 179.8 L91.6 180.7 L92.0 181.6 L92.3 182.5 L92.7 183.4 L93.0 184.3 L93.4 185.2 L93.7 186.0 L94.1 186.9 L94.4 187.8 L94.8 188.6 L95.2 189.5 L95.5 190.3 L95.9 191.2 L96.2 192.0 L96.6 192.9 L96.9 193.7 L97.3 194.6 L97.6 195.4 L98.0 196.2 L98.4 197.0 L98.7 197.8 L99.1 198.6 L99.4 199.4 L99.8 200.2 L100.1 201.0 L100.5 201.8 L100.8 202.6 L101.2 203.4 L101.6 204.2 L101.9 204.9 L102.3 205.7 L102.6 206.5 L103.0 207.2 L103.3 208.0 L103.7 208.7 L104.0 209.5 L104.4 210.2 L104.8 211.0 L105.1 211.7 L105.5 212.4 L105.8 213.1 L106.2 213.9 L106.5 214.6 L106.9 215.3 L107.2 216.0 L107.6 216.7 L108.0 217.4 L108.3 218.1 L108.7 218.8 L109.0 219.4 L109.4 220.1 L109.7 220.8 L110.1 221.4 L110.4 222.1 L110.8 222.8 L111.2 223.4 L111.5 224.1 L111.9 224.7 L112.2 225.4 L112.6 226.0 L112.9 226.6 L113.3 227.2 L113.6 227.9 L114.0 228.5 L114.4 229.1 L114.7 229.7 L115.1 230.3 L115.4 230.9 L115.8 231.5 L116.1 232.1 L116.5 232.7 L116.8 233.3 L117.2 233.8 L117.6 234.4 L117.9 235.0 L118.3 235.5 L118.6 236.1 L119.0 236.7 L119.3 237.2 L119.7 237.7 L120.0 238.3 L120.4 238.8 L120.8 239.4 L121.1 239.9 L121.5 240.4 L121.8 240.9 L122.2 241.4 L122.5 241.9 L122.9 242.4 L123.2 242.9 L123.6 243.4 L124.0 243.9 L124.3 244.4 L124.7 244.9 L125.0 245.4 L125.4 245.8 L125.7 246.3 L126.1 246.8 L126.4 247.2 L126.8 247.7 L127.2 248.1 L127.5 248.6 L127.9 249.0 L128.2 249.4 L128.6 249.9 L128.9 250.3 L129.3 250.7 L129.6 251.1 L130.0 251.6 L130.4 252.0 L130.7 252.4 L131.1 252.8 L131.4 253.2 L131.8 253.5 L132.1 253.9 L132.5 254.3 L132.8 254.7 L133.2 255.1 L133.6 255.4 L133.9 255.8 L134.3 256.1 L134.6 256.5 L135.0 256.8 L135.3 257.2 L135.7 257.5 L136.0 257.9 L136.4 258.2 L136.8 258.5 L137.1 258.8 L137.5 259.2 L137.8 259.5 L138.2 259.8 L138.5 260.1 L138.9 260.4 L139.2 260.7 L139.6 261.0 L140.0 261.2 L140.3 261.5 L140.7 261.8 L141.0 262.1 L141.4 262.3 L141.7 262.6 L142.1 262.9 L142.4 263.1 L142.8 263.4 L143.2 263.6 L143.5 263.8 L143.9 264.1 L144.2 264.3 L144.6 264.5 L144.9 264.8 L145.3 265.0 L145.6 265.2 L146.0 265.4 L146.4 265.6 L146.7 265.8 L147.1 266.0 L147.4 266.2 L147.8 266.4 L148.1 266.5 L148.5 266.7 L148.8 266.9 L149.2 267.0 L149.6 267.2 L149.9 267.4 L150.3 267.5 L150.6 267.7 L151.0 267.8 L151.3 267.9 L151.7 268.1 L152.0 268.2 L152.4 268.3 L152.8 268.5 L153.1 268.6 L153.5 268.7 L153.8 268.8 L154.2 268.9 L154.5 269.0 L154.9 269.1 L155.2 269.2 L155.6 269.3 L156.0 269.3 L156.3 269.4 L156.7 269.5 L157.0 269.6 L157.4 269.6 L157.7 269.7 L158.1 269.7 L158.4 269.8 L158.8 269.8 L159.2 269.9 L159.5 269.9 L159.9 269.9 L160.2 269.9 L160.6 270.0 L160.9 270.0 L161.3 270.0 L161.6 270.0 L162.0 270.0 L162.4 270.0 L162.7 270.0 L163.1 270.0 L163.4 270.0 L163.8 269.9 L164.1 269.9 L164.5 269.9 L164.8 269.9 L165.2 269.8 L165.6 269.8 L165.9 269.7 L166.3 269.7 L166.6 269.6 L167.0 269.6 L167.3 269.5 L167.7 269.4 L168.0 269.3 L168.4 269.3 L168.8 269.2 L169.1 269.1 L169.5 269.0 L169.8 268.9 L170.2 268.8 L170.5 268.7 L170.9 268.6 L171.2 268.5 L171.6 268.3 L172.0 268.2 L172.3 268.1 L172.7 267.9 L173.0 267.8 L173.4 267.7 L173.7 267.5 L174.1 267.4 L174.4 267.2 L174.8 267.0 L175.2 266.9 L175.5 266.7 L175.9 266.5 L176.2 266.4 L176.6 266.2 L176.9 266.0 L177.3 265.8 L177.6 265.6 L178.0 265.4 L178.4 265.2 L178.7 265.0 L179.1 264.8 L179.4 264.5 L179.8 264.3 L180.1 264.1 L180.5 263.8 L180.8 263.6 L181.2 263.4 L181.6 263.1 L181.9 262.9 L182.3 262.6 L182.6 262.3 L183.0 262.1 L183.3 261.8 L183.7 261.5 L184.0 261.2 L184.4 261.0 L184.8 260.7 L185.1 260.4 L185.5 260.1 L185.8 259.8 L186.2 259.5 L186.5 259.2 L186.9 258.8 L187.2 258.5 L187.6 258.2 L188.0 257.9 L188.3 257.5 L188.7 257.2 L189.0 256.8 L189.4 256.5 L189.7 256.1 L190.1 255.8 L190.4 255.4 L190.8 255.1 L191.2 254.7 L191.5 254.3 L191.9 253.9 L192.2 253.5 L192.6 253.2 L192.9 252.8 L193.3 252.4 L193.6 252.0 L194.0 251.6 L194.4 251.1 L194.7 250.7 L195.1 250.3 L195.4 249.9 L195.8 249.4 L196.1 249.0 L196.5 248.6 L196.8 248.1 L197.2 247.7 L197.6 247.2 L197.9 246.8 L198.3 246.3 L198.6 245.8 L199.0 245.4 L199.3 244.9 L199.7 244.4 L200.0 243.9 L200.4 243.4 L200.8 242.9 L201.1 242.4 L201.5 241.9 L201.8 241.4 L202.2 240.9 L202.5 240.4 L202.9 239.9 L203.2 239.4 L203.6 238.8 L204.0 238.3 L204.3 237.7 L204.7 237.2 L205.0 236.7 L205.4 236.1 L205.7 235.5 L206.1 235.0 L206.4 234.4 L206.8 233.8 L207.2 233.3 L207.5 232.7 L207.9 232.1 L208.2 231.5 L208.6 230.9 L208.9 230.3 L209.3 229.7 L209.6 229.1 L210.0 228.5 L210.4 227.9 L210.7 227.2 L211.1 226.6 L211.4 226.0 L211.8 225.4 L212.1 224.7 L212.5 224.1 L212.8 223.4 L213.2 222.8 L213.6 222.1 L213.9 221.4 L214.3 220.8 L214.6 220.1 L215.0 219.4 L215.3 218.8 L215.7 218.1 L216.0 217.4 L216.4 216.7 L216.8 216.0 L217.1 215.3 L217.5 214.6 L217.8 213.9 L218.2 213.1 L218.5 212.4 L218.9 211.7 L219.2 211.0 L219.6 210.2 L220.0 209.5 L220.3 208.7 L220.7 208.0 L221.0 207.2 L221.4 206.5 L221.7 205.7 L222.1 204.9 L222.4 204.2 L222.8 203.4 L223.2 202.6 L223.5 201.8 L223.9 201.0 L224.2 200.2 L224.6 199.4 L224.9 198.6 L225.3 197.8 L225.6 197.0 L226.0 196.2 L226.4 195.4 L226.7 194.6 L227.1 193.7 L227.4 192.9 L227.8 192.0 L228.1 191.2 L228.5 190.3 L228.8 189.5 L229.2 188.6 L229.6 187.8 L229.9 186.9 L230.3 186.0 L230.6 185.2 L231.0 184.3 L231.3 183.4 L231.7 182.5 L232.0 181.6 L232.4 180.7 L232.8 179.8 L233.1 178.9 L233.5 178.0 L233.8 177.1 L234.2 176.1 L234.5 175.2 L234.9 174.3 L235.2 173.3 L235.6 172.4 L236.0 171.5 L236.3 170.5 L236.7 169.6 L237.0 168.6 L237.4 167.6 L237.7 166.7 L238.1 165.7 L238.4 164.7 L238.8 163.7 L239.2 162.7 L239.5 161.8 L239.9 160.8 L240.2 159.8 L240.6 158.8 L240.9 157.7 L241.3 156.7 L241.6 155.7 L242.0 154.7 L242.4 153.7 L242.7 152.6 L243.1 151.6 L243.4 150.6 L243.8 149.5 L244.1 148.5 L244.5 147.4 L244.8 146.3 L245.2 145.3 L245.6 144.2 L245.9 143.1 L246.3 142.1 L246.6 141.0 L247.0 139.9 L247.3 138.8 L247.7 137.7 L248.0 136.6 L248.4 135.5 L248.8 134.4 L249.1 133.3 L249.5 132.2 L249.8 131.0 L250.2 129.9 L250.5 128.8 L250.9 127.6 L251.2 126.5 L251.6 125.4 L252.0 124.2 L252.3 123.0 L252.7 121.9 L253.0 120.7 L253.4 119.6 L253.7 118.4 L254.1 117.2 L254.4 116.0 L254.8 114.8 L255.2 113.6 L255.5 112.4 L255.9 111.2 L256.2 110.0 L256.6 108.8 L256.9 107.6 L257.3 106.4 L257.6 105.2 L258.0 103.9 L258.4 102.7 L258.7 101.5 L259.1 100.2 L259.4 99.0 L259.8 97.7 L260.1 96.5 L260.5 95.2 L260.8 94.0 L261.2 92.7 L261.6 91.4 L261.9 90.1 L262.3 88.9 L262.6 87.6 L263.0 86.3 L263.3 85.0 L263.7 83.7 L264.0 82.4 L264.4 81.1 L264.8 79.8 L265.1 78.4 L265.5 77.1 L265.8 75.8 L266.2 74.5 L266.5 73.1 L266.9 71.8 L267.2 70.4 L267.6 69.1 L268.0 67.7 L268.3 66.4 L268.7 65.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#aifn31)\"/><path d=\"M55.3 65.0 L268.7 65.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"55.3\" y=\"286.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"90.9\" y=\"286.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"126.4\" y=\"286.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"197.6\" y=\"286.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"233.1\" y=\"286.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"268.7\" y=\"286.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"156.0\" y=\"228.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"156.0\" y=\"183.4\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"156.0\" y=\"137.8\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"156.0\" y=\"92.3\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"156.0\" y=\"46.7\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"156.0\" y=\"285.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><text x=\"274.7\" y=\"59.0\" text-anchor=\"start\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = 4.5</text><text x=\"248.2\" y=\"173.8\" text-anchor=\"start\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = 0.5<tspan font-style=\"italic\">x</tspan>²</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the glass holds \\(20.25\\pi\\) cm³.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the depth of liquid when the glass holds half of its volume.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Juice is poured in at 5 cm³ s⁻¹. Find the rate at which the level is rising when the depth is 2 cm.",
+    "marks": 2
+   }
+  ],
+  "idea": "About the \\(y\\)-axis, \\(V = \\pi\\displaystyle\\int x^{2}\\,dy\\), so first write \\(x^{2}\\) in terms of \\(y\\). For depth \\(h\\), the volume is \\(V(h) = \\pi\\displaystyle\\int_{0}^{h} x^{2}\\,dy\\), and \\(\\dfrac{dV}{dt} = \\dfrac{dV}{dh}\\dfrac{dh}{dt}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(x^{2} = 2y\\), so \\(V = \\pi\\displaystyle\\int_{0}^{4.5} 2y\\,dy = \\pi\\left[y^{2}\\right]_{0}^{4.5} = 20.25\\pi\\)"
+    ],
+    "answer": "\\(20.25\\pi = 63.6\\) cm³"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "For depth \\(h\\), \\(V = \\pi h^{2}\\). Half full: \\(\\pi h^{2} = 10.125\\pi\\), so \\(h = \\sqrt{10.125} = 3.181\\ldots\\)"
+    ],
+    "answer": "3.18 cm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{dV}{dh} = 2\\pi h = 4\\pi\\) at \\(h = 2\\), so \\(\\dfrac{dh}{dt} = \\dfrac{5}{4\\pi} = 0.3978\\ldots\\)"
+    ],
+    "answer": "0.398 cm s⁻¹"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-011",
+  "strand": "Calculus",
+  "subtopic": "Integration, areas and volumes",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "A leaf-shaped logo is the region between the curves \\(y = \\sin x\\) and \\(y = 0.3x(\\pi - x)\\), for \\(0 \\le x \\le \\pi\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the curves meet at \\(x = 0\\) and \\(x = \\pi\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Determine which curve is above the other between these points.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the exact area of the logo.",
+    "marks": 3
+   }
+  ],
+  "idea": "Area between curves \\(= \\displaystyle\\int (\\text{upper} - \\text{lower})\\,dx\\). Check one value of \\(x\\) in between to see which curve is on top.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "At \\(x = 0\\) and \\(x = \\pi\\), both \\(\\sin x\\) and \\(0.3x(\\pi - x)\\) are 0."
+    ],
+    "answer": "Both curves pass through \\((0, 0)\\) and \\((\\pi, 0)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "At \\(x = \\dfrac{\\pi}{2}\\): \\(\\sin x = 1\\) and \\(0.3 \\times \\dfrac{\\pi}{2} \\times \\dfrac{\\pi}{2} = 0.740\\ldots\\) (and the curves do not meet in between)."
+    ],
+    "answer": "\\(y = \\sin x\\) is above"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int_{0}^{\\pi}\\left(\\sin x - 0.3\\pi x + 0.3x^{2}\\right)dx = \\left[-\\cos x - 0.15\\pi x^{2} + 0.1x^{3}\\right]_{0}^{\\pi}\\)",
+     "\\(= (1 - 0.15\\pi^{3} + 0.1\\pi^{3}) - (-1) = 2 - 0.05\\pi^{3}\\)"
+    ],
+    "answer": "\\(2 - 0.05\\pi^{3} = 0.450\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-012",
+  "strand": "Calculus",
+  "subtopic": "Integration, areas and volumes",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A napkin ring is made by rotating the region inside the circle \\(x^{2} + y^{2} = 25\\) and above the line \\(y = 3\\) through \\(360^{\\circ}\\) about the \\(x\\)-axis. Lengths are in cm.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 230\" width=\"360\" height=\"230\" role=\"img\" aria-label=\"The upper half of the circle x squared plus y squared = 25 and the horizontal line y = 3. The region inside the circle and above the line, from x = -4 to x = 4, is shaded.\"><defs><clipPath id=\"aifn32\"><rect x=\"34\" y=\"24\" width=\"296\" height=\"176\"/></clipPath></defs><line x1=\"34.0\" y1=\"200.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.7\" y1=\"200.0\" x2=\"58.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"83.3\" y1=\"200.0\" x2=\"83.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"108.0\" y1=\"200.0\" x2=\"108.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"132.7\" y1=\"200.0\" x2=\"132.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"157.3\" y1=\"200.0\" x2=\"157.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"182.0\" y1=\"200.0\" x2=\"182.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"206.7\" y1=\"200.0\" x2=\"206.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"231.3\" y1=\"200.0\" x2=\"231.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"256.0\" y1=\"200.0\" x2=\"256.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"280.7\" y1=\"200.0\" x2=\"280.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"305.3\" y1=\"200.0\" x2=\"305.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"330.0\" y1=\"200.0\" x2=\"330.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"200.0\" x2=\"330.0\" y2=\"200.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"174.9\" x2=\"330.0\" y2=\"174.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"149.7\" x2=\"330.0\" y2=\"149.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"124.6\" x2=\"330.0\" y2=\"124.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"99.4\" x2=\"330.0\" y2=\"99.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"74.3\" x2=\"330.0\" y2=\"74.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"49.1\" x2=\"330.0\" y2=\"49.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"330.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"174.9\" x2=\"340.0\" y2=\"174.9\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"182.0\" y1=\"200.0\" x2=\"182.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M346.0 174.9 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M182.0 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"342.0\" y=\"193.9\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"169.0\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"34.0\" y1=\"171.9\" x2=\"34.0\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"58.7\" y1=\"171.9\" x2=\"58.7\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"83.3\" y1=\"171.9\" x2=\"83.3\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"108.0\" y1=\"171.9\" x2=\"108.0\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"132.7\" y1=\"171.9\" x2=\"132.7\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"157.3\" y1=\"171.9\" x2=\"157.3\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"206.7\" y1=\"171.9\" x2=\"206.7\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"231.3\" y1=\"171.9\" x2=\"231.3\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"256.0\" y1=\"171.9\" x2=\"256.0\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"280.7\" y1=\"171.9\" x2=\"280.7\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"305.3\" y1=\"171.9\" x2=\"305.3\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"330.0\" y1=\"171.9\" x2=\"330.0\" y2=\"177.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"179.0\" y1=\"200.0\" x2=\"185.0\" y2=\"200.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"179.0\" y1=\"149.7\" x2=\"185.0\" y2=\"149.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"179.0\" y1=\"124.6\" x2=\"185.0\" y2=\"124.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"179.0\" y1=\"99.4\" x2=\"185.0\" y2=\"99.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"179.0\" y1=\"74.3\" x2=\"185.0\" y2=\"74.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"179.0\" y1=\"49.1\" x2=\"185.0\" y2=\"49.1\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"179.0\" y1=\"24.0\" x2=\"185.0\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M83.3 99.4 L84.6 97.8 L85.8 96.2 L87.0 94.6 L88.3 93.2 L89.5 91.7 L90.7 90.3 L92.0 88.9 L93.2 87.6 L94.4 86.3 L95.7 85.1 L96.9 83.9 L98.1 82.7 L99.4 81.5 L100.6 80.4 L101.8 79.3 L103.1 78.3 L104.3 77.2 L105.5 76.2 L106.8 75.2 L108.0 74.3 L109.2 73.4 L110.5 72.4 L111.7 71.6 L112.9 70.7 L114.2 69.9 L115.4 69.0 L116.6 68.3 L117.9 67.5 L119.1 66.7 L120.3 66.0 L121.6 65.3 L122.8 64.6 L124.0 63.9 L125.3 63.2 L126.5 62.6 L127.7 62.0 L129.0 61.4 L130.2 60.8 L131.4 60.2 L132.7 59.6 L133.9 59.1 L135.1 58.6 L136.4 58.1 L137.6 57.6 L138.8 57.1 L140.1 56.6 L141.3 56.2 L142.5 55.8 L143.8 55.3 L145.0 54.9 L146.2 54.5 L147.5 54.2 L148.7 53.8 L149.9 53.5 L151.2 53.1 L152.4 52.8 L153.6 52.5 L154.9 52.2 L156.1 51.9 L157.3 51.7 L158.6 51.4 L159.8 51.2 L161.0 51.0 L162.3 50.8 L163.5 50.6 L164.7 50.4 L166.0 50.2 L167.2 50.1 L168.4 49.9 L169.7 49.8 L170.9 49.7 L172.1 49.5 L173.4 49.5 L174.6 49.4 L175.8 49.3 L177.1 49.2 L178.3 49.2 L179.5 49.2 L180.8 49.1 L182.0 49.1 L183.2 49.1 L184.5 49.2 L185.7 49.2 L186.9 49.2 L188.2 49.3 L189.4 49.4 L190.6 49.5 L191.9 49.5 L193.1 49.7 L194.3 49.8 L195.6 49.9 L196.8 50.1 L198.0 50.2 L199.3 50.4 L200.5 50.6 L201.7 50.8 L203.0 51.0 L204.2 51.2 L205.4 51.4 L206.7 51.7 L207.9 51.9 L209.1 52.2 L210.4 52.5 L211.6 52.8 L212.8 53.1 L214.1 53.5 L215.3 53.8 L216.5 54.2 L217.8 54.5 L219.0 54.9 L220.2 55.3 L221.5 55.8 L222.7 56.2 L223.9 56.6 L225.2 57.1 L226.4 57.6 L227.6 58.1 L228.9 58.6 L230.1 59.1 L231.3 59.6 L232.6 60.2 L233.8 60.8 L235.0 61.4 L236.3 62.0 L237.5 62.6 L238.7 63.2 L240.0 63.9 L241.2 64.6 L242.4 65.3 L243.7 66.0 L244.9 66.7 L246.1 67.5 L247.4 68.3 L248.6 69.0 L249.8 69.9 L251.1 70.7 L252.3 71.6 L253.5 72.4 L254.8 73.4 L256.0 74.3 L257.2 75.2 L258.5 76.2 L259.7 77.2 L260.9 78.3 L262.2 79.3 L263.4 80.4 L264.6 81.5 L265.9 82.7 L267.1 83.9 L268.3 85.1 L269.6 86.3 L270.8 87.6 L272.0 88.9 L273.3 90.3 L274.5 91.7 L275.7 93.2 L277.0 94.6 L278.2 96.2 L279.4 97.8 L280.7 99.4 L280.7 99.4 L83.3 99.4 Z\" fill=\"#cfe3f7\" stroke=\"none\"/><path d=\"M58.7 174.9 L59.1 164.6 L59.5 160.4 L59.9 157.1 L60.3 154.4 L60.7 152.0 L61.1 149.8 L61.5 147.9 L62.0 146.0 L62.4 144.3 L62.8 142.7 L63.2 141.1 L63.6 139.7 L64.0 138.3 L64.4 136.9 L64.8 135.6 L65.2 134.4 L65.7 133.1 L66.1 132.0 L66.5 130.8 L66.9 129.7 L67.3 128.6 L67.7 127.6 L68.1 126.6 L68.5 125.6 L68.9 124.6 L69.4 123.7 L69.8 122.7 L70.2 121.8 L70.6 120.9 L71.0 120.1 L71.4 119.2 L71.8 118.4 L72.2 117.5 L72.6 116.7 L73.1 115.9 L73.5 115.1 L73.9 114.4 L74.3 113.6 L74.7 112.9 L75.1 112.1 L75.5 111.4 L75.9 110.7 L76.3 110.0 L76.8 109.3 L77.2 108.6 L77.6 108.0 L78.0 107.3 L78.4 106.6 L78.8 106.0 L79.2 105.4 L79.6 104.7 L80.0 104.1 L80.5 103.5 L80.9 102.9 L81.3 102.3 L81.7 101.7 L82.1 101.1 L82.5 100.6 L82.9 100.0 L83.3 99.4 L83.7 98.9 L84.2 98.3 L84.6 97.8 L85.0 97.2 L85.4 96.7 L85.8 96.2 L86.2 95.7 L86.6 95.2 L87.0 94.6 L87.4 94.1 L87.9 93.6 L88.3 93.2 L88.7 92.7 L89.1 92.2 L89.5 91.7 L89.9 91.2 L90.3 90.8 L90.7 90.3 L91.1 89.8 L91.6 89.4 L92.0 88.9 L92.4 88.5 L92.8 88.1 L93.2 87.6 L93.6 87.2 L94.0 86.8 L94.4 86.3 L94.8 85.9 L95.3 85.5 L95.7 85.1 L96.1 84.7 L96.5 84.3 L96.9 83.9 L97.3 83.5 L97.7 83.1 L98.1 82.7 L98.5 82.3 L99.0 81.9 L99.4 81.5 L99.8 81.2 L100.2 80.8 L100.6 80.4 L101.0 80.0 L101.4 79.7 L101.8 79.3 L102.2 79.0 L102.7 78.6 L103.1 78.3 L103.5 77.9 L103.9 77.6 L104.3 77.2 L104.7 76.9 L105.1 76.6 L105.5 76.2 L105.9 75.9 L106.4 75.6 L106.8 75.2 L107.2 74.9 L107.6 74.6 L108.0 74.3 L108.4 74.0 L108.8 73.7 L109.2 73.4 L109.6 73.1 L110.1 72.7 L110.5 72.4 L110.9 72.2 L111.3 71.9 L111.7 71.6 L112.1 71.3 L112.5 71.0 L112.9 70.7 L113.3 70.4 L113.8 70.1 L114.2 69.9 L114.6 69.6 L115.0 69.3 L115.4 69.0 L115.8 68.8 L116.2 68.5 L116.6 68.3 L117.0 68.0 L117.5 67.7 L117.9 67.5 L118.3 67.2 L118.7 67.0 L119.1 66.7 L119.5 66.5 L119.9 66.2 L120.3 66.0 L120.7 65.7 L121.2 65.5 L121.6 65.3 L122.0 65.0 L122.4 64.8 L122.8 64.6 L123.2 64.3 L123.6 64.1 L124.0 63.9 L124.4 63.7 L124.9 63.5 L125.3 63.2 L125.7 63.0 L126.1 62.8 L126.5 62.6 L126.9 62.4 L127.3 62.2 L127.7 62.0 L128.1 61.8 L128.6 61.6 L129.0 61.4 L129.4 61.2 L129.8 61.0 L130.2 60.8 L130.6 60.6 L131.0 60.4 L131.4 60.2 L131.8 60.0 L132.3 59.8 L132.7 59.6 L133.1 59.5 L133.5 59.3 L133.9 59.1 L134.3 58.9 L134.7 58.7 L135.1 58.6 L135.5 58.4 L136.0 58.2 L136.4 58.1 L136.8 57.9 L137.2 57.7 L137.6 57.6 L138.0 57.4 L138.4 57.3 L138.8 57.1 L139.2 56.9 L139.7 56.8 L140.1 56.6 L140.5 56.5 L140.9 56.3 L141.3 56.2 L141.7 56.0 L142.1 55.9 L142.5 55.8 L142.9 55.6 L143.4 55.5 L143.8 55.3 L144.2 55.2 L144.6 55.1 L145.0 54.9 L145.4 54.8 L145.8 54.7 L146.2 54.5 L146.6 54.4 L147.1 54.3 L147.5 54.2 L147.9 54.0 L148.3 53.9 L148.7 53.8 L149.1 53.7 L149.5 53.6 L149.9 53.5 L150.3 53.4 L150.8 53.2 L151.2 53.1 L151.6 53.0 L152.0 52.9 L152.4 52.8 L152.8 52.7 L153.2 52.6 L153.6 52.5 L154.0 52.4 L154.5 52.3 L154.9 52.2 L155.3 52.1 L155.7 52.0 L156.1 51.9 L156.5 51.9 L156.9 51.8 L157.3 51.7 L157.7 51.6 L158.2 51.5 L158.6 51.4 L159.0 51.4 L159.4 51.3 L159.8 51.2 L160.2 51.1 L160.6 51.0 L161.0 51.0 L161.4 50.9 L161.9 50.8 L162.3 50.8 L162.7 50.7 L163.1 50.6 L163.5 50.6 L163.9 50.5 L164.3 50.4 L164.7 50.4 L165.1 50.3 L165.6 50.3 L166.0 50.2 L166.4 50.2 L166.8 50.1 L167.2 50.1 L167.6 50.0 L168.0 50.0 L168.4 49.9 L168.8 49.9 L169.3 49.8 L169.7 49.8 L170.1 49.7 L170.5 49.7 L170.9 49.7 L171.3 49.6 L171.7 49.6 L172.1 49.5 L172.5 49.5 L173.0 49.5 L173.4 49.5 L173.8 49.4 L174.2 49.4 L174.6 49.4 L175.0 49.3 L175.4 49.3 L175.8 49.3 L176.2 49.3 L176.7 49.3 L177.1 49.2 L177.5 49.2 L177.9 49.2 L178.3 49.2 L178.7 49.2 L179.1 49.2 L179.5 49.2 L179.9 49.2 L180.4 49.2 L180.8 49.1 L181.2 49.1 L181.6 49.1 L182.0 49.1 L182.4 49.1 L182.8 49.1 L183.2 49.1 L183.6 49.2 L184.1 49.2 L184.5 49.2 L184.9 49.2 L185.3 49.2 L185.7 49.2 L186.1 49.2 L186.5 49.2 L186.9 49.2 L187.3 49.3 L187.8 49.3 L188.2 49.3 L188.6 49.3 L189.0 49.3 L189.4 49.4 L189.8 49.4 L190.2 49.4 L190.6 49.5 L191.0 49.5 L191.5 49.5 L191.9 49.5 L192.3 49.6 L192.7 49.6 L193.1 49.7 L193.5 49.7 L193.9 49.7 L194.3 49.8 L194.7 49.8 L195.2 49.9 L195.6 49.9 L196.0 50.0 L196.4 50.0 L196.8 50.1 L197.2 50.1 L197.6 50.2 L198.0 50.2 L198.4 50.3 L198.9 50.3 L199.3 50.4 L199.7 50.4 L200.1 50.5 L200.5 50.6 L200.9 50.6 L201.3 50.7 L201.7 50.8 L202.1 50.8 L202.6 50.9 L203.0 51.0 L203.4 51.0 L203.8 51.1 L204.2 51.2 L204.6 51.3 L205.0 51.4 L205.4 51.4 L205.8 51.5 L206.3 51.6 L206.7 51.7 L207.1 51.8 L207.5 51.9 L207.9 51.9 L208.3 52.0 L208.7 52.1 L209.1 52.2 L209.5 52.3 L210.0 52.4 L210.4 52.5 L210.8 52.6 L211.2 52.7 L211.6 52.8 L212.0 52.9 L212.4 53.0 L212.8 53.1 L213.2 53.2 L213.7 53.4 L214.1 53.5 L214.5 53.6 L214.9 53.7 L215.3 53.8 L215.7 53.9 L216.1 54.0 L216.5 54.2 L216.9 54.3 L217.4 54.4 L217.8 54.5 L218.2 54.7 L218.6 54.8 L219.0 54.9 L219.4 55.1 L219.8 55.2 L220.2 55.3 L220.6 55.5 L221.1 55.6 L221.5 55.8 L221.9 55.9 L222.3 56.0 L222.7 56.2 L223.1 56.3 L223.5 56.5 L223.9 56.6 L224.3 56.8 L224.8 56.9 L225.2 57.1 L225.6 57.3 L226.0 57.4 L226.4 57.6 L226.8 57.7 L227.2 57.9 L227.6 58.1 L228.0 58.2 L228.5 58.4 L228.9 58.6 L229.3 58.7 L229.7 58.9 L230.1 59.1 L230.5 59.3 L230.9 59.5 L231.3 59.6 L231.7 59.8 L232.2 60.0 L232.6 60.2 L233.0 60.4 L233.4 60.6 L233.8 60.8 L234.2 61.0 L234.6 61.2 L235.0 61.4 L235.4 61.6 L235.9 61.8 L236.3 62.0 L236.7 62.2 L237.1 62.4 L237.5 62.6 L237.9 62.8 L238.3 63.0 L238.7 63.2 L239.1 63.5 L239.6 63.7 L240.0 63.9 L240.4 64.1 L240.8 64.3 L241.2 64.6 L241.6 64.8 L242.0 65.0 L242.4 65.3 L242.8 65.5 L243.3 65.7 L243.7 66.0 L244.1 66.2 L244.5 66.5 L244.9 66.7 L245.3 67.0 L245.7 67.2 L246.1 67.5 L246.5 67.7 L247.0 68.0 L247.4 68.3 L247.8 68.5 L248.2 68.8 L248.6 69.0 L249.0 69.3 L249.4 69.6 L249.8 69.9 L250.2 70.1 L250.7 70.4 L251.1 70.7 L251.5 71.0 L251.9 71.3 L252.3 71.6 L252.7 71.9 L253.1 72.2 L253.5 72.4 L253.9 72.7 L254.4 73.1 L254.8 73.4 L255.2 73.7 L255.6 74.0 L256.0 74.3 L256.4 74.6 L256.8 74.9 L257.2 75.2 L257.6 75.6 L258.1 75.9 L258.5 76.2 L258.9 76.6 L259.3 76.9 L259.7 77.2 L260.1 77.6 L260.5 77.9 L260.9 78.3 L261.3 78.6 L261.8 79.0 L262.2 79.3 L262.6 79.7 L263.0 80.0 L263.4 80.4 L263.8 80.8 L264.2 81.2 L264.6 81.5 L265.0 81.9 L265.5 82.3 L265.9 82.7 L266.3 83.1 L266.7 83.5 L267.1 83.9 L267.5 84.3 L267.9 84.7 L268.3 85.1 L268.7 85.5 L269.2 85.9 L269.6 86.3 L270.0 86.8 L270.4 87.2 L270.8 87.6 L271.2 88.1 L271.6 88.5 L272.0 88.9 L272.4 89.4 L272.9 89.8 L273.3 90.3 L273.7 90.8 L274.1 91.2 L274.5 91.7 L274.9 92.2 L275.3 92.7 L275.7 93.2 L276.1 93.6 L276.6 94.1 L277.0 94.6 L277.4 95.2 L277.8 95.7 L278.2 96.2 L278.6 96.7 L279.0 97.2 L279.4 97.8 L279.8 98.3 L280.3 98.9 L280.7 99.4 L281.1 100.0 L281.5 100.6 L281.9 101.1 L282.3 101.7 L282.7 102.3 L283.1 102.9 L283.5 103.5 L284.0 104.1 L284.4 104.7 L284.8 105.4 L285.2 106.0 L285.6 106.6 L286.0 107.3 L286.4 108.0 L286.8 108.6 L287.2 109.3 L287.7 110.0 L288.1 110.7 L288.5 111.4 L288.9 112.1 L289.3 112.9 L289.7 113.6 L290.1 114.4 L290.5 115.1 L290.9 115.9 L291.4 116.7 L291.8 117.5 L292.2 118.4 L292.6 119.2 L293.0 120.1 L293.4 120.9 L293.8 121.8 L294.2 122.7 L294.6 123.7 L295.1 124.6 L295.5 125.6 L295.9 126.6 L296.3 127.6 L296.7 128.6 L297.1 129.7 L297.5 130.8 L297.9 132.0 L298.3 133.1 L298.8 134.4 L299.2 135.6 L299.6 136.9 L300.0 138.3 L300.4 139.7 L300.8 141.1 L301.2 142.7 L301.6 144.3 L302.0 146.0 L302.5 147.9 L302.9 149.8 L303.3 152.0 L303.7 154.4 L304.1 157.1 L304.5 160.4 L304.9 164.6 L305.3 174.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#aifn32)\"/><path d=\"M46.3 99.4 L46.8 99.4 L47.2 99.4 L47.7 99.4 L48.1 99.4 L48.6 99.4 L49.0 99.4 L49.5 99.4 L50.0 99.4 L50.4 99.4 L50.9 99.4 L51.3 99.4 L51.8 99.4 L52.2 99.4 L52.7 99.4 L53.1 99.4 L53.6 99.4 L54.0 99.4 L54.5 99.4 L54.9 99.4 L55.4 99.4 L55.8 99.4 L56.3 99.4 L56.7 99.4 L57.2 99.4 L57.6 99.4 L58.1 99.4 L58.5 99.4 L59.0 99.4 L59.4 99.4 L59.9 99.4 L60.4 99.4 L60.8 99.4 L61.3 99.4 L61.7 99.4 L62.2 99.4 L62.6 99.4 L63.1 99.4 L63.5 99.4 L64.0 99.4 L64.4 99.4 L64.9 99.4 L65.3 99.4 L65.8 99.4 L66.2 99.4 L66.7 99.4 L67.1 99.4 L67.6 99.4 L68.0 99.4 L68.5 99.4 L68.9 99.4 L69.4 99.4 L69.8 99.4 L70.3 99.4 L70.8 99.4 L71.2 99.4 L71.7 99.4 L72.1 99.4 L72.6 99.4 L73.0 99.4 L73.5 99.4 L73.9 99.4 L74.4 99.4 L74.8 99.4 L75.3 99.4 L75.7 99.4 L76.2 99.4 L76.6 99.4 L77.1 99.4 L77.5 99.4 L78.0 99.4 L78.4 99.4 L78.9 99.4 L79.3 99.4 L79.8 99.4 L80.2 99.4 L80.7 99.4 L81.2 99.4 L81.6 99.4 L82.1 99.4 L82.5 99.4 L83.0 99.4 L83.4 99.4 L83.9 99.4 L84.3 99.4 L84.8 99.4 L85.2 99.4 L85.7 99.4 L86.1 99.4 L86.6 99.4 L87.0 99.4 L87.5 99.4 L87.9 99.4 L88.4 99.4 L88.8 99.4 L89.3 99.4 L89.7 99.4 L90.2 99.4 L90.7 99.4 L91.1 99.4 L91.6 99.4 L92.0 99.4 L92.5 99.4 L92.9 99.4 L93.4 99.4 L93.8 99.4 L94.3 99.4 L94.7 99.4 L95.2 99.4 L95.6 99.4 L96.1 99.4 L96.5 99.4 L97.0 99.4 L97.4 99.4 L97.9 99.4 L98.3 99.4 L98.8 99.4 L99.2 99.4 L99.7 99.4 L100.1 99.4 L100.6 99.4 L101.1 99.4 L101.5 99.4 L102.0 99.4 L102.4 99.4 L102.9 99.4 L103.3 99.4 L103.8 99.4 L104.2 99.4 L104.7 99.4 L105.1 99.4 L105.6 99.4 L106.0 99.4 L106.5 99.4 L106.9 99.4 L107.4 99.4 L107.8 99.4 L108.3 99.4 L108.7 99.4 L109.2 99.4 L109.6 99.4 L110.1 99.4 L110.5 99.4 L111.0 99.4 L111.5 99.4 L111.9 99.4 L112.4 99.4 L112.8 99.4 L113.3 99.4 L113.7 99.4 L114.2 99.4 L114.6 99.4 L115.1 99.4 L115.5 99.4 L116.0 99.4 L116.4 99.4 L116.9 99.4 L117.3 99.4 L117.8 99.4 L118.2 99.4 L118.7 99.4 L119.1 99.4 L119.6 99.4 L120.0 99.4 L120.5 99.4 L121.0 99.4 L121.4 99.4 L121.9 99.4 L122.3 99.4 L122.8 99.4 L123.2 99.4 L123.7 99.4 L124.1 99.4 L124.6 99.4 L125.0 99.4 L125.5 99.4 L125.9 99.4 L126.4 99.4 L126.8 99.4 L127.3 99.4 L127.7 99.4 L128.2 99.4 L128.6 99.4 L129.1 99.4 L129.5 99.4 L130.0 99.4 L130.4 99.4 L130.9 99.4 L131.4 99.4 L131.8 99.4 L132.3 99.4 L132.7 99.4 L133.2 99.4 L133.6 99.4 L134.1 99.4 L134.5 99.4 L135.0 99.4 L135.4 99.4 L135.9 99.4 L136.3 99.4 L136.8 99.4 L137.2 99.4 L137.7 99.4 L138.1 99.4 L138.6 99.4 L139.0 99.4 L139.5 99.4 L139.9 99.4 L140.4 99.4 L140.8 99.4 L141.3 99.4 L141.8 99.4 L142.2 99.4 L142.7 99.4 L143.1 99.4 L143.6 99.4 L144.0 99.4 L144.5 99.4 L144.9 99.4 L145.4 99.4 L145.8 99.4 L146.3 99.4 L146.7 99.4 L147.2 99.4 L147.6 99.4 L148.1 99.4 L148.5 99.4 L149.0 99.4 L149.4 99.4 L149.9 99.4 L150.3 99.4 L150.8 99.4 L151.2 99.4 L151.7 99.4 L152.2 99.4 L152.6 99.4 L153.1 99.4 L153.5 99.4 L154.0 99.4 L154.4 99.4 L154.9 99.4 L155.3 99.4 L155.8 99.4 L156.2 99.4 L156.7 99.4 L157.1 99.4 L157.6 99.4 L158.0 99.4 L158.5 99.4 L158.9 99.4 L159.4 99.4 L159.8 99.4 L160.3 99.4 L160.7 99.4 L161.2 99.4 L161.7 99.4 L162.1 99.4 L162.6 99.4 L163.0 99.4 L163.5 99.4 L163.9 99.4 L164.4 99.4 L164.8 99.4 L165.3 99.4 L165.7 99.4 L166.2 99.4 L166.6 99.4 L167.1 99.4 L167.5 99.4 L168.0 99.4 L168.4 99.4 L168.9 99.4 L169.3 99.4 L169.8 99.4 L170.2 99.4 L170.7 99.4 L171.1 99.4 L171.6 99.4 L172.1 99.4 L172.5 99.4 L173.0 99.4 L173.4 99.4 L173.9 99.4 L174.3 99.4 L174.8 99.4 L175.2 99.4 L175.7 99.4 L176.1 99.4 L176.6 99.4 L177.0 99.4 L177.5 99.4 L177.9 99.4 L178.4 99.4 L178.8 99.4 L179.3 99.4 L179.7 99.4 L180.2 99.4 L180.6 99.4 L181.1 99.4 L181.5 99.4 L182.0 99.4 L182.5 99.4 L182.9 99.4 L183.4 99.4 L183.8 99.4 L184.3 99.4 L184.7 99.4 L185.2 99.4 L185.6 99.4 L186.1 99.4 L186.5 99.4 L187.0 99.4 L187.4 99.4 L187.9 99.4 L188.3 99.4 L188.8 99.4 L189.2 99.4 L189.7 99.4 L190.1 99.4 L190.6 99.4 L191.0 99.4 L191.5 99.4 L191.9 99.4 L192.4 99.4 L192.9 99.4 L193.3 99.4 L193.8 99.4 L194.2 99.4 L194.7 99.4 L195.1 99.4 L195.6 99.4 L196.0 99.4 L196.5 99.4 L196.9 99.4 L197.4 99.4 L197.8 99.4 L198.3 99.4 L198.7 99.4 L199.2 99.4 L199.6 99.4 L200.1 99.4 L200.5 99.4 L201.0 99.4 L201.4 99.4 L201.9 99.4 L202.4 99.4 L202.8 99.4 L203.3 99.4 L203.7 99.4 L204.2 99.4 L204.6 99.4 L205.1 99.4 L205.5 99.4 L206.0 99.4 L206.4 99.4 L206.9 99.4 L207.3 99.4 L207.8 99.4 L208.2 99.4 L208.7 99.4 L209.1 99.4 L209.6 99.4 L210.0 99.4 L210.5 99.4 L210.9 99.4 L211.4 99.4 L211.8 99.4 L212.3 99.4 L212.8 99.4 L213.2 99.4 L213.7 99.4 L214.1 99.4 L214.6 99.4 L215.0 99.4 L215.5 99.4 L215.9 99.4 L216.4 99.4 L216.8 99.4 L217.3 99.4 L217.7 99.4 L218.2 99.4 L218.6 99.4 L219.1 99.4 L219.5 99.4 L220.0 99.4 L220.4 99.4 L220.9 99.4 L221.3 99.4 L221.8 99.4 L222.2 99.4 L222.7 99.4 L223.2 99.4 L223.6 99.4 L224.1 99.4 L224.5 99.4 L225.0 99.4 L225.4 99.4 L225.9 99.4 L226.3 99.4 L226.8 99.4 L227.2 99.4 L227.7 99.4 L228.1 99.4 L228.6 99.4 L229.0 99.4 L229.5 99.4 L229.9 99.4 L230.4 99.4 L230.8 99.4 L231.3 99.4 L231.7 99.4 L232.2 99.4 L232.6 99.4 L233.1 99.4 L233.6 99.4 L234.0 99.4 L234.5 99.4 L234.9 99.4 L235.4 99.4 L235.8 99.4 L236.3 99.4 L236.7 99.4 L237.2 99.4 L237.6 99.4 L238.1 99.4 L238.5 99.4 L239.0 99.4 L239.4 99.4 L239.9 99.4 L240.3 99.4 L240.8 99.4 L241.2 99.4 L241.7 99.4 L242.1 99.4 L242.6 99.4 L243.1 99.4 L243.5 99.4 L244.0 99.4 L244.4 99.4 L244.9 99.4 L245.3 99.4 L245.8 99.4 L246.2 99.4 L246.7 99.4 L247.1 99.4 L247.6 99.4 L248.0 99.4 L248.5 99.4 L248.9 99.4 L249.4 99.4 L249.8 99.4 L250.3 99.4 L250.7 99.4 L251.2 99.4 L251.6 99.4 L252.1 99.4 L252.5 99.4 L253.0 99.4 L253.5 99.4 L253.9 99.4 L254.4 99.4 L254.8 99.4 L255.3 99.4 L255.7 99.4 L256.2 99.4 L256.6 99.4 L257.1 99.4 L257.5 99.4 L258.0 99.4 L258.4 99.4 L258.9 99.4 L259.3 99.4 L259.8 99.4 L260.2 99.4 L260.7 99.4 L261.1 99.4 L261.6 99.4 L262.0 99.4 L262.5 99.4 L262.9 99.4 L263.4 99.4 L263.9 99.4 L264.3 99.4 L264.8 99.4 L265.2 99.4 L265.7 99.4 L266.1 99.4 L266.6 99.4 L267.0 99.4 L267.5 99.4 L267.9 99.4 L268.4 99.4 L268.8 99.4 L269.3 99.4 L269.7 99.4 L270.2 99.4 L270.6 99.4 L271.1 99.4 L271.5 99.4 L272.0 99.4 L272.4 99.4 L272.9 99.4 L273.3 99.4 L273.8 99.4 L274.3 99.4 L274.7 99.4 L275.2 99.4 L275.6 99.4 L276.1 99.4 L276.5 99.4 L277.0 99.4 L277.4 99.4 L277.9 99.4 L278.3 99.4 L278.8 99.4 L279.2 99.4 L279.7 99.4 L280.1 99.4 L280.6 99.4 L281.0 99.4 L281.5 99.4 L281.9 99.4 L282.4 99.4 L282.8 99.4 L283.3 99.4 L283.8 99.4 L284.2 99.4 L284.7 99.4 L285.1 99.4 L285.6 99.4 L286.0 99.4 L286.5 99.4 L286.9 99.4 L287.4 99.4 L287.8 99.4 L288.3 99.4 L288.7 99.4 L289.2 99.4 L289.6 99.4 L290.1 99.4 L290.5 99.4 L291.0 99.4 L291.4 99.4 L291.9 99.4 L292.3 99.4 L292.8 99.4 L293.2 99.4 L293.7 99.4 L294.2 99.4 L294.6 99.4 L295.1 99.4 L295.5 99.4 L296.0 99.4 L296.4 99.4 L296.9 99.4 L297.3 99.4 L297.8 99.4 L298.2 99.4 L298.7 99.4 L299.1 99.4 L299.6 99.4 L300.0 99.4 L300.5 99.4 L300.9 99.4 L301.4 99.4 L301.8 99.4 L302.3 99.4 L302.7 99.4 L303.2 99.4 L303.6 99.4 L304.1 99.4 L304.6 99.4 L305.0 99.4 L305.5 99.4 L305.9 99.4 L306.4 99.4 L306.8 99.4 L307.3 99.4 L307.7 99.4 L308.2 99.4 L308.6 99.4 L309.1 99.4 L309.5 99.4 L310.0 99.4 L310.4 99.4 L310.9 99.4 L311.3 99.4 L311.8 99.4 L312.2 99.4 L312.7 99.4 L313.1 99.4 L313.6 99.4 L314.0 99.4 L314.5 99.4 L315.0 99.4 L315.4 99.4 L315.9 99.4 L316.3 99.4 L316.8 99.4 L317.2 99.4 L317.7 99.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#aifn32)\"/><text x=\"34.0\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−6</text><text x=\"58.7\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−5</text><text x=\"83.3\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−4</text><text x=\"108.0\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"132.7\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"157.3\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"206.7\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"231.3\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"256.0\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"280.7\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"305.3\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"330.0\" y=\"190.9\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"176.0\" y=\"204.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"176.0\" y=\"154.2\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"176.0\" y=\"129.1\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"176.0\" y=\"103.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"176.0\" y=\"78.8\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"176.0\" y=\"53.6\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"176.0\" y=\"28.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"176.0\" y=\"189.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><text x=\"310.7\" y=\"93.4\" text-anchor=\"start\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = 3</text><text x=\"36.5\" y=\"41.6\" text-anchor=\"start\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan>² + <tspan font-style=\"italic\">y</tspan>² = 25</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the \\(x\\)-coordinates where the line meets the circle.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Write down an integral for the volume of the ring.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the exact volume of the ring.",
+    "marks": 3
+   }
+  ],
+  "idea": "Each slice of the solid is a washer: a disc of radius \\(\\sqrt{25 - x^{2}}\\) with a hole of radius 3. Its area is \\(\\pi(R^{2} - r^{2})\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(x^{2} + 9 = 25\\)"
+    ],
+    "answer": "\\(x = \\pm 4\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Outer radius \\(\\sqrt{25 - x^{2}}\\), inner radius 3."
+    ],
+    "answer": "\\(V = \\pi\\displaystyle\\int_{-4}^{4}\\left[(25 - x^{2}) - 9\\right]dx\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\pi\\left[16x - \\dfrac{x^{3}}{3}\\right]_{-4}^{4} = \\pi\\left(64 - \\dfrac{64}{3}\\right) \\times 2 = \\dfrac{256\\pi}{3}\\)"
+    ],
+    "answer": "\\(\\dfrac{256\\pi}{3} = 268\\) cm³"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-013",
+  "strand": "Calculus",
+  "subtopic": "Kinematics",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A robot vacuum moves back and forth along a straight skirting board. Its velocity is \\(v(t) = 0.3t^{2} - 1.2t + 0.9\\) m s⁻¹, for \\(0 \\le t \\le 4\\) seconds."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the acceleration of the robot at \\(t = 2\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the times when the robot is at rest.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the total distance travelled in the 4 seconds.",
+    "marks": 2
+   }
+  ],
+  "idea": "Acceleration is \\(\\dfrac{dv}{dt}\\). Distance is \\(\\displaystyle\\int |v|\\,dt\\): the robot reverses when \\(v = 0\\), so add the distances of each stage.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(a(t) = 0.6t - 1.2\\), and \\(a(2) = 0\\)."
+    ],
+    "answer": "0 m s⁻²"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0.3(t^{2} - 4t + 3) = 0.3(t - 1)(t - 3) = 0\\)"
+    ],
+    "answer": "\\(t = 1\\) and \\(t = 3\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Displacement \\(s(t) = 0.1t^{3} - 0.6t^{2} + 0.9t\\): \\(s(1) = 0.4\\), \\(s(3) = 0\\), \\(s(4) = 0.4\\).",
+     "Distance \\(= 0.4 + 0.4 + 0.4\\) (or \\(\\displaystyle\\int_{0}^{4}|v|\\,dt\\) by calculator)."
+    ],
+    "answer": "1.2 m"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-014",
+  "strand": "Calculus",
+  "subtopic": "Kinematics",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A kayak drifts backwards in a current and then paddles forwards along a straight river bank. Its velocity is \\(v(t) = 2 - 3e^{-0.5t}\\) m s⁻¹, for \\(t \\ge 0\\) seconds."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the initial velocity.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the exact time at which the kayak changes direction.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the displacement of the kayak after 4 seconds.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the distance travelled by the kayak in the first 4 seconds.",
+    "marks": 2
+   }
+  ],
+  "idea": "Displacement is \\(\\displaystyle\\int_{0}^{4} v\\,dt\\), where backward motion cancels forward motion. Distance is \\(\\displaystyle\\int_{0}^{4}|v|\\,dt\\), where it does not.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(v(0) = 2 - 3\\)"
+    ],
+    "answer": "−1 m s⁻¹"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(3e^{-0.5t} = 2\\), so \\(-0.5t = \\ln\\dfrac{2}{3}\\)."
+    ],
+    "answer": "\\(t = 2\\ln 1.5 = 0.811\\) s"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int_{0}^{4}(2 - 3e^{-0.5t})\\,dt = 8 - 6(1 - e^{-2}) = 2.812\\ldots\\)"
+    ],
+    "answer": "2.81 m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\displaystyle\\int_{0}^{4}|2 - 3e^{-0.5t}|\\,dt = 3.568\\ldots\\) by calculator (the kayak goes back about 0.378 m first)."
+    ],
+    "answer": "3.57 m"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-015",
+  "strand": "Calculus",
+  "subtopic": "Kinematics",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A test sled runs along a straight rail. Its acceleration is \\(a(t) = 6 - 2t\\) m s⁻², for \\(0 \\le t \\le 6\\) seconds. At \\(t = 0\\) its velocity is \\(-7\\) m s⁻¹ and its displacement from the start is 0."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find an expression for the velocity \\(v(t)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the exact times at which the sled is at rest.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the displacement of the sled at \\(t = 6\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the total distance travelled by the sled.",
+    "marks": 2
+   }
+  ],
+  "idea": "Integrate the acceleration to get velocity, and use \\(v(0) = -7\\) to find the constant. Integrate again for displacement.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(v = 6t - t^{2} + c\\), and \\(v(0) = c = -7\\)."
+    ],
+    "answer": "\\(v(t) = 6t - t^{2} - 7\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(t^{2} - 6t + 7 = 0\\), so \\(t = \\dfrac{6 \\pm \\sqrt{8}}{2}\\)."
+    ],
+    "answer": "\\(t = 3 - \\sqrt{2}\\) and \\(t = 3 + \\sqrt{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(s(t) = 3t^{2} - \\dfrac{t^{3}}{3} - 7t\\), so \\(s(6) = 108 - 72 - 42\\)."
+    ],
+    "answer": "−6 m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(s(3 - \\sqrt{2}) = -4.885\\ldots\\) and \\(s(3 + \\sqrt{2}) = -1.114\\ldots\\)",
+     "Distance \\(= 4.885\\ldots + (4.885\\ldots - 1.114\\ldots) + (6 - 1.114\\ldots) = 13.54\\ldots\\) (or \\(\\displaystyle\\int_{0}^{6}|v|\\,dt\\))."
+    ],
+    "answer": "13.5 m"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-016",
+  "strand": "Calculus",
+  "subtopic": "Kinematics",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A speed skater starts from rest. Her speed \\(t\\) seconds after the start is modelled by \\(v(t) = 14(1 - e^{-0.6t})\\) m s⁻¹."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find her acceleration at the start.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the time at which she reaches 95 % of her top (limiting) speed.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the time she takes to skate 500 m.",
+    "marks": 3
+   }
+  ],
+  "idea": "As \\(t\\) grows, \\(e^{-0.6t} \\to 0\\), so the top speed is 14 m s⁻¹. The distance after \\(T\\) seconds is \\(\\displaystyle\\int_{0}^{T} v\\,dt\\); set it equal to 500 and solve with the calculator.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(a(t) = 14 \\times 0.6e^{-0.6t}\\), so \\(a(0) = 8.4\\)."
+    ],
+    "answer": "8.4 m s⁻²"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(1 - e^{-0.6t} = 0.95\\), so \\(e^{-0.6t} = 0.05\\) and \\(t = \\dfrac{\\ln 20}{0.6} = 4.992\\ldots\\)"
+    ],
+    "answer": "4.99 s"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\displaystyle\\int_{0}^{T} 14(1 - e^{-0.6t})\\,dt = 14T - \\dfrac{14}{0.6}(1 - e^{-0.6T})\\)",
+     "Solve \\(14T - 23.33\\ldots(1 - e^{-0.6T}) = 500\\): \\(T = 37.38\\ldots\\)"
+    ],
+    "answer": "37.4 s"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-017",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A loaf of bread comes out of the oven at 90 °C into a kitchen at 20 °C. The rate at which its temperature \\(T\\) °C falls is proportional to the difference between \\(T\\) and the kitchen temperature. Time \\(t\\) is in minutes."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down a differential equation for \\(T\\), using a constant \\(k > 0\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "For this loaf, \\(k = 0.05\\). Show that \\(T = 20 + 70e^{-0.05t}\\) satisfies your equation and the starting temperature.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the temperature of the loaf after 15 minutes.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the exact time at which the loaf reaches 30 °C.",
+    "marks": 2
+   }
+  ],
+  "idea": "‘Proportional to the difference’ gives \\(\\dfrac{dT}{dt} = -k(T - 20)\\); the minus sign is there because the temperature falls. To check a solution, differentiate it and compare both sides.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The loaf is hotter than the kitchen, so \\(T\\) decreases."
+    ],
+    "answer": "\\(\\dfrac{dT}{dt} = -k(T - 20)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{dT}{dt} = -3.5e^{-0.05t}\\), and \\(-0.05(T - 20) = -0.05 \\times 70e^{-0.05t} = -3.5e^{-0.05t}\\).",
+     "At \\(t = 0\\), \\(T = 20 + 70 = 90\\)."
+    ],
+    "answer": "Both sides match and \\(T(0) = 90\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(20 + 70e^{-0.75} = 53.06\\ldots\\)"
+    ],
+    "answer": "53.1 °C"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(70e^{-0.05t} = 10\\), so \\(e^{-0.05t} = \\dfrac{1}{7}\\) and \\(t = \\dfrac{\\ln 7}{0.05}\\)."
+    ],
+    "answer": "\\(t = 20\\ln 7 = 38.9\\) minutes"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-018",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Consider the differential equation \\(\\dfrac{dy}{dx} = 3x^{2}(y + 1)\\), for \\(y > -1\\), with \\(y = 1\\) when \\(x = 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use separation of variables to find \\(y\\) in terms of \\(x\\).",
+    "marks": 5
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(y\\) when \\(x = 1\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "Put all the \\(y\\) terms on one side and all the \\(x\\) terms on the other: \\(\\displaystyle\\int \\dfrac{1}{y + 1}\\,dy = \\int 3x^{2}\\,dx\\). Use the initial condition to find the constant.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\displaystyle\\int \\dfrac{dy}{y + 1} = \\int 3x^{2}\\,dx\\), so \\(\\ln(y + 1) = x^{3} + c\\).",
+     "At \\(x = 0\\), \\(y = 1\\): \\(c = \\ln 2\\).",
+     "\\(y + 1 = e^{x^{3} + \\ln 2} = 2e^{x^{3}}\\)"
+    ],
+    "answer": "\\(y = 2e^{x^{3}} - 1\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(2e - 1 = 4.436\\ldots\\)"
+    ],
+    "answer": "\\(2e - 1 = 4.44\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-019",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "When a promotion ends, the number of active users \\(N\\) of an app falls. A model is \\(\\dfrac{dN}{dt} = -\\dfrac{0.6N}{t + 1}\\), where \\(t\\) is the time in weeks after the promotion ends, and \\(N = 5000\\) when \\(t = 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Solve the differential equation to show that \\(N = 5000(t + 1)^{-0.6}\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the number of active users 9 weeks after the promotion ends.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find when the number of active users falls to 1000.",
+    "marks": 2
+   }
+  ],
+  "idea": "Separate: \\(\\displaystyle\\int \\dfrac{dN}{N} = \\int -\\dfrac{0.6}{t + 1}\\,dt\\). Both sides give logarithms; use \\(a\\ln b = \\ln b^{a}\\) to tidy the result.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\ln N = -0.6\\ln(t + 1) + c\\) (\\(N > 0\\), \\(t + 1 > 0\\)). At \\(t = 0\\): \\(c = \\ln 5000\\).",
+     "\\(\\ln N = \\ln\\left(5000(t + 1)^{-0.6}\\right)\\)"
+    ],
+    "answer": "\\(N = 5000(t + 1)^{-0.6}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(5000 \\times 10^{-0.6} = 1255.9\\ldots\\)"
+    ],
+    "answer": "About 1256 users"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((t + 1)^{-0.6} = 0.2\\), so \\(t + 1 = 5^{1/0.6} = 14.62\\ldots\\)"
+    ],
+    "answer": "After 13.6 weeks"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-020",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "The number of fish \\(P\\) in a fish farm changes according to \\(\\dfrac{dP}{dt} = 0.05P - 200\\), where \\(t\\) is in years. The term 200 is the number of fish harvested each year."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the equilibrium population, and explain what it means.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Given that \\(P = 5000\\) when \\(t = 0\\), use separation of variables to show that \\(P = 4000 + 1000e^{0.05t}\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "A second farm follows the same model but starts with \\(P = 3000\\) when \\(t = 0\\), so that \\(P = 4000 - 1000e^{0.05t}\\). Find when the second farm runs out of fish.",
+    "marks": 2
+   }
+  ],
+  "idea": "At equilibrium \\(\\dfrac{dP}{dt} = 0\\). Separate as \\(\\displaystyle\\int \\dfrac{dP}{0.05P - 200} = \\int dt\\); the integral on the left is \\(\\dfrac{1}{0.05}\\ln|0.05P - 200|\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(0.05P - 200 = 0\\)"
+    ],
+    "answer": "\\(P = 4000\\): the natural growth exactly replaces the fish harvested, so the population stays the same"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\displaystyle\\int \\dfrac{dP}{0.05P - 200} = \\int dt\\) gives \\(20\\ln|0.05P - 200| = t + c\\).",
+     "At \\(t = 0\\), \\(0.05P - 200 = 50\\): \\(c = 20\\ln 50\\). So \\(\\ln\\dfrac{0.05P - 200}{50} = 0.05t\\).",
+     "\\(0.05P - 200 = 50e^{0.05t}\\), and dividing by 0.05: \\(P - 4000 = 1000e^{0.05t}\\)."
+    ],
+    "answer": "\\(P = 4000 + 1000e^{0.05t}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(4000 - 1000e^{0.05t} = 0\\), so \\(e^{0.05t} = 4\\) and \\(t = 20\\ln 4\\)."
+    ],
+    "answer": "After \\(20\\ln 4 = 27.7\\) years"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-021",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The diagram shows the slope field for the differential equation \\(\\dfrac{dy}{dx} = x - y\\).",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 330\" width=\"330\" height=\"330\" role=\"img\" aria-label=\"Slope field for dy/dx = x minus y on a grid from -3 to 3. Segments are horizontal along the line y = x, slope upwards below it and downwards above it.\"><defs><clipPath id=\"aifn33\"><rect x=\"34\" y=\"24\" width=\"266\" height=\"276\"/></clipPath></defs><line x1=\"34.0\" y1=\"300.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"78.3\" y1=\"300.0\" x2=\"78.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"122.7\" y1=\"300.0\" x2=\"122.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"167.0\" y1=\"300.0\" x2=\"167.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"211.3\" y1=\"300.0\" x2=\"211.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"255.7\" y1=\"300.0\" x2=\"255.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"300.0\" y1=\"300.0\" x2=\"300.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"300.0\" x2=\"300.0\" y2=\"300.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"254.0\" x2=\"300.0\" y2=\"254.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"208.0\" x2=\"300.0\" y2=\"208.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"162.0\" x2=\"300.0\" y2=\"162.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"116.0\" x2=\"300.0\" y2=\"116.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"70.0\" x2=\"300.0\" y2=\"70.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"300.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"162.0\" x2=\"310.0\" y2=\"162.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"167.0\" y1=\"300.0\" x2=\"167.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M316.0 162.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M167.0 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"312.0\" y=\"181.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"154.0\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"34.0\" y1=\"159.0\" x2=\"34.0\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"78.3\" y1=\"159.0\" x2=\"78.3\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"122.7\" y1=\"159.0\" x2=\"122.7\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"211.3\" y1=\"159.0\" x2=\"211.3\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"255.7\" y1=\"159.0\" x2=\"255.7\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"300.0\" y1=\"159.0\" x2=\"300.0\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"300.0\" x2=\"170.0\" y2=\"300.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"254.0\" x2=\"170.0\" y2=\"254.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"208.0\" x2=\"170.0\" y2=\"208.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"116.0\" x2=\"170.0\" y2=\"116.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"70.0\" x2=\"170.0\" y2=\"70.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"24.0\" x2=\"170.0\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M26.5 300.0 L41.5 300.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M27.3 273.5 L40.7 280.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M28.7 248.5 L39.3 259.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M29.8 224.5 L38.2 237.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M30.6 201.0 L37.4 215.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M31.2 177.7 L36.8 192.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M31.6 154.6 L36.4 169.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M31.9 131.5 L36.1 146.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M32.2 108.4 L35.8 123.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M32.4 85.4 L35.6 100.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M32.5 62.3 L35.5 77.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M32.7 39.3 L35.3 54.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M32.8 16.3 L35.2 31.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M49.4 303.5 L62.9 296.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M48.6 277.0 L63.7 277.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M49.4 250.5 L62.9 257.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M50.8 225.5 L61.5 236.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M52.0 201.5 L60.3 214.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M52.8 178.0 L59.5 192.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M53.4 154.7 L59.0 169.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M53.8 131.6 L58.5 146.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M54.1 108.5 L58.2 123.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M54.3 85.4 L58.0 100.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M54.5 62.4 L57.8 77.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M54.7 39.3 L57.6 54.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M54.8 16.3 L57.5 31.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M73.0 305.5 L83.7 294.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M71.6 280.5 L85.1 273.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M70.8 254.0 L85.9 254.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M71.6 227.5 L85.1 234.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M73.0 202.5 L83.7 213.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M74.2 178.5 L82.5 191.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M75.0 155.0 L81.7 169.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M75.5 131.7 L81.1 146.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M76.0 108.6 L80.7 123.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M76.3 85.5 L80.4 100.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M76.5 62.4 L80.2 77.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M76.7 39.4 L80.0 54.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M76.9 16.3 L79.8 31.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M96.3 306.5 L104.7 293.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M95.2 282.5 L105.8 271.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M93.8 257.5 L107.2 250.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M93.0 231.0 L108.0 231.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M93.8 204.5 L107.2 211.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M95.2 179.5 L105.8 190.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M96.3 155.5 L104.7 168.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M97.1 132.0 L103.9 146.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M97.7 108.7 L103.3 123.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M98.1 85.6 L102.9 100.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M98.4 62.5 L102.6 77.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M98.7 39.4 L102.3 54.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M98.9 16.4 L102.1 31.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M119.3 307.0 L126.0 293.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M118.5 283.5 L126.8 270.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M117.3 259.5 L128.0 248.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M115.9 234.5 L129.4 227.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M115.1 208.0 L130.2 208.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M115.9 181.5 L129.4 188.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M117.3 156.5 L128.0 167.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M118.5 132.5 L126.8 145.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M119.3 109.0 L126.0 123.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M119.9 85.7 L125.5 100.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M120.3 62.6 L125.0 77.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M120.6 39.5 L124.7 54.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M120.8 16.4 L124.5 31.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M142.0 307.3 L147.6 292.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M141.5 284.0 L148.2 270.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M140.7 260.5 L149.0 247.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M139.5 236.5 L150.2 225.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M138.1 211.5 L151.6 204.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M137.3 185.0 L152.4 185.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M138.1 158.5 L151.6 165.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M139.5 133.5 L150.2 144.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M140.7 109.5 L149.0 122.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M141.5 86.0 L148.2 100.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M142.0 62.7 L147.6 77.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M142.5 39.6 L147.2 54.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M142.8 16.5 L146.9 31.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M164.6 307.4 L169.4 292.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M164.2 284.3 L169.8 269.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M163.6 261.0 L170.4 247.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M162.8 237.5 L171.2 224.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M161.7 213.5 L172.3 202.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M160.3 188.5 L173.7 181.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M159.5 162.0 L174.5 162.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M160.3 135.5 L173.7 142.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M161.7 110.5 L172.3 121.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M162.8 86.5 L171.2 99.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M163.6 63.0 L170.4 77.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M164.2 39.7 L169.8 54.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M164.6 16.6 L169.4 31.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M187.1 307.5 L191.2 292.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M186.8 284.4 L191.5 269.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M186.4 261.3 L192.0 246.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M185.8 238.0 L192.5 224.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M185.0 214.5 L193.3 201.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M183.8 190.5 L194.5 179.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M182.4 165.5 L195.9 158.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M181.6 139.0 L196.7 139.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M182.4 112.5 L195.9 119.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M183.8 87.5 L194.5 98.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M185.0 63.5 L193.3 76.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M185.8 40.0 L192.5 54.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M186.4 16.7 L192.0 31.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M209.5 307.6 L213.2 292.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M209.3 284.5 L213.4 269.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M209.0 261.4 L213.7 246.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M208.5 238.3 L214.1 223.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M208.0 215.0 L214.7 201.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M207.2 191.5 L215.5 178.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M206.0 167.5 L216.7 156.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M204.6 142.5 L218.1 135.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M203.8 116.0 L218.9 116.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M204.6 89.5 L218.1 96.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M206.0 64.5 L216.7 75.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M207.2 40.5 L215.5 53.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M208.0 17.0 L214.7 31.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M231.9 307.6 L235.1 292.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M231.7 284.6 L235.3 269.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M231.4 261.5 L235.6 246.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M231.1 238.4 L235.9 223.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M230.7 215.3 L236.3 200.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M230.1 192.0 L236.9 178.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M229.3 168.5 L237.7 155.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M228.2 144.5 L238.8 133.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M226.8 119.5 L240.2 112.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M226.0 93.0 L241.0 93.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M226.8 66.5 L240.2 73.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M228.2 41.5 L238.8 52.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M229.3 17.5 L237.7 30.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M254.2 307.7 L257.1 292.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M254.0 284.6 L257.3 269.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M253.8 261.6 L257.5 246.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M253.6 238.5 L257.7 223.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M253.3 215.4 L258.0 200.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M252.9 192.3 L258.5 177.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M252.3 169.0 L259.0 155.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M251.5 145.5 L259.8 132.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M250.3 121.5 L261.0 110.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M248.9 96.5 L262.4 89.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M248.1 70.0 L263.2 70.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M248.9 43.5 L262.4 50.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M250.3 18.5 L261.0 29.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M276.5 307.7 L279.2 292.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M276.4 284.7 L279.3 269.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M276.2 261.6 L279.5 246.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M276.0 238.6 L279.7 223.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M275.8 215.5 L279.9 200.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M275.5 192.4 L280.2 177.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M275.0 169.3 L280.6 154.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M274.5 146.0 L281.2 132.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M273.7 122.5 L282.0 109.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M272.5 98.5 L283.2 87.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M271.1 73.5 L284.6 66.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M270.3 47.0 L285.4 47.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M271.1 20.5 L284.6 27.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M298.8 307.7 L301.2 292.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M298.7 284.7 L301.3 269.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M298.5 261.7 L301.5 246.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M298.4 238.6 L301.6 223.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M298.2 215.6 L301.8 200.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M297.9 192.5 L302.1 177.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M297.6 169.4 L302.4 154.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M297.2 146.3 L302.8 131.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M296.6 123.0 L303.4 109.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M295.8 99.5 L304.2 86.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M294.7 75.5 L305.3 64.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M293.3 50.5 L306.7 43.5\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M292.5 24.0 L307.5 24.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"34.0\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"78.3\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"122.7\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"211.3\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"255.7\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"300.0\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"161.0\" y=\"304.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"161.0\" y=\"258.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"161.0\" y=\"212.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"161.0\" y=\"120.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"161.0\" y=\"74.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"161.0\" y=\"28.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"161.0\" y=\"177.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the gradient of the solution curve that passes through \\((1, 3)\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Write down the equation of the line on which every slope is horizontal.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Show that \\(y = x - 1\\) is a solution of the differential equation.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Describe the shape of the solution curve through \\((0, 2)\\) as \\(x\\) increases, and state the line it approaches.",
+    "marks": 2
+   }
+  ],
+  "idea": "The gradient at any point is \\(x - y\\). A line is a solution if its gradient equals \\(x - y\\) at every point on it. Follow the little segments from \\((0, 2)\\) to see where the curve goes.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(1 - 3\\)"
+    ],
+    "answer": "−2"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(x - y = 0\\)"
+    ],
+    "answer": "\\(y = x\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "On \\(y = x - 1\\), \\(\\dfrac{dy}{dx} = 1\\), and \\(x - y = x - (x - 1) = 1\\)."
+    ],
+    "answer": "Both sides equal 1, so it is a solution"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "At \\((0, 2)\\) the gradient is \\(-2\\), so the curve falls at first, crosses \\(y = x\\) where its gradient is 0, then rises. Above \\(y = x - 1\\) the slopes are less than 1, so the curve gets closer to that line but cannot cross it.",
+     "(The general solution is \\(y = x - 1 + Ce^{-x}\\); here \\(C = 3\\).)"
+    ],
+    "answer": "It falls to a minimum, then rises and gets closer and closer to the line \\(y = x - 1\\) from above"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-022",
+  "strand": "Calculus",
+  "subtopic": "Differential equations",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A spherical water droplet evaporates. Its volume \\(V\\) decreases at a rate proportional to its surface area \\(A\\): \\(\\dfrac{dV}{dt} = -kA\\), where \\(k > 0\\). For a sphere of radius \\(r\\), \\(V = \\dfrac{4}{3}\\pi r^{3}\\) and \\(A = 4\\pi r^{2}\\). Lengths are in mm and time in seconds."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\dfrac{dr}{dt} = -k\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "The radius falls from 2 mm to 1.4 mm in 30 seconds. Find \\(k\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find how long it takes for the droplet to evaporate completely, starting from a radius of 2 mm.",
+    "marks": 2
+   }
+  ],
+  "idea": "Use the chain rule: \\(\\dfrac{dV}{dt} = \\dfrac{dV}{dr}\\dfrac{dr}{dt}\\), and notice that \\(\\dfrac{dV}{dr}\\) is exactly the surface area.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{dV}{dt} = 4\\pi r^{2}\\dfrac{dr}{dt}\\), and this equals \\(-k \\times 4\\pi r^{2}\\). Divide by \\(4\\pi r^{2}\\)."
+    ],
+    "answer": "\\(\\dfrac{dr}{dt} = -k\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The radius falls at a constant rate: \\(\\dfrac{2 - 1.4}{30}\\)."
+    ],
+    "answer": "\\(k = 0.02\\) mm s⁻¹"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(r = 2 - 0.02t = 0\\)"
+    ],
+    "answer": "100 seconds"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-023",
+  "strand": "Calculus",
+  "subtopic": "Euler's method",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "Consider \\(\\dfrac{dy}{dx} = x + y^{2}\\), with \\(y = 0.5\\) when \\(x = 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use Euler's method with a step length of 0.1 to find an approximate value of \\(y\\) when \\(x = 0.3\\). Show each step.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "State one way to make the approximation more accurate.",
+    "marks": 1
+   }
+  ],
+  "idea": "Euler's method: \\(y_{n+1} = y_{n} + h\\,f(x_{n}, y_{n})\\) and \\(x_{n+1} = x_{n} + h\\). Keep full calculator accuracy from step to step.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(y_{1} = 0.5 + 0.1(0 + 0.25) = 0.525\\)",
+     "\\(y_{2} = 0.525 + 0.1(0.1 + 0.525^{2}) = 0.5625\\ldots\\)",
+     "\\(y_{3} = 0.5625\\ldots + 0.1(0.2 + 0.5625\\ldots^{2}) = 0.6142\\ldots\\)"
+    ],
+    "answer": "\\(y \\approx 0.614\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "A smaller step follows the curve more closely."
+    ],
+    "answer": "Use a smaller step length"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-024",
+  "strand": "Calculus",
+  "subtopic": "Euler's method",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A ball bearing is dropped into a tall jar of oil. Its velocity \\(v\\) m s⁻¹ after \\(t\\) seconds satisfies \\(\\dfrac{dv}{dt} = 9.8 - 2v\\), with \\(v = 0\\) when \\(t = 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use Euler's method with step length 0.1 to estimate \\(v\\) when \\(t = 0.3\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(v = 4.9(1 - e^{-2t})\\) is the exact solution.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the percentage error in your estimate from part (a).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Explain why Euler's method overestimates \\(v\\) here.",
+    "marks": 1
+   }
+  ],
+  "idea": "Each Euler step uses the gradient at the start of the step. Here the gradient \\(9.8 - 2v\\) gets smaller as \\(v\\) grows, so the start-of-step gradient is always too big.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(v_{1} = 0 + 0.1 \\times 9.8 = 0.98\\)",
+     "\\(v_{2} = 0.98 + 0.1(9.8 - 1.96) = 1.764\\)",
+     "\\(v_{3} = 1.764 + 0.1(9.8 - 3.528) = 2.3912\\)"
+    ],
+    "answer": "\\(v \\approx 2.39\\) m s⁻¹"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{dv}{dt} = 9.8e^{-2t}\\), and \\(9.8 - 2 \\times 4.9(1 - e^{-2t}) = 9.8e^{-2t}\\). Also \\(v(0) = 0\\)."
+    ],
+    "answer": "Both sides match and \\(v(0) = 0\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Exact: \\(4.9(1 - e^{-0.6}) = 2.210\\ldots\\). Error: \\(\\dfrac{2.3912 - 2.210\\ldots}{2.210\\ldots} \\times 100 = 8.158\\ldots\\)"
+    ],
+    "answer": "8.16 %"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The acceleration decreases as \\(v\\) increases, but each step uses the larger value from the start of the step."
+    ],
+    "answer": "The gradient decreases during each step, so using its starting value overshoots"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-025",
+  "strand": "Calculus",
+  "subtopic": "Euler's method",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "In a greenhouse, \\(x\\) aphids are eaten by \\(y\\) ladybirds. A model is",
+   "\\[\\dfrac{dx}{dt} = 0.3x - 0.002xy, \\qquad \\dfrac{dy}{dt} = -0.2y + 0.001xy,\\]",
+   "where \\(t\\) is in days. At \\(t = 0\\) there are 220 aphids and 60 ladybirds."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use Euler's method with step length 0.5 to estimate the numbers of aphids and ladybirds after 1 day.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the equilibrium point with \\(x > 0\\) and \\(y > 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Explain what this equilibrium means for the greenhouse.",
+    "marks": 1
+   }
+  ],
+  "idea": "For a coupled system, update both variables in each step using the old values of both: \\(x_{n+1} = x_{n} + h\\dfrac{dx}{dt}\\) and \\(y_{n+1} = y_{n} + h\\dfrac{dy}{dt}\\), with both rates found from \\((x_{n}, y_{n})\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Step 1: \\(\\dfrac{dx}{dt} = 66 - 26.4 = 39.6\\), \\(\\dfrac{dy}{dt} = -12 + 13.2 = 1.2\\); so \\(x_{1} = 239.8\\), \\(y_{1} = 60.6\\).",
+     "Step 2: \\(\\dfrac{dx}{dt} = 71.94 - 29.06\\ldots = 42.87\\ldots\\), \\(\\dfrac{dy}{dt} = -12.12 + 14.53\\ldots = 2.411\\ldots\\); so \\(x_{2} = 261.2\\ldots\\), \\(y_{2} = 61.80\\ldots\\)"
+    ],
+    "answer": "About 261 aphids and 62 ladybirds"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(x(0.3 - 0.002y) = 0\\) and \\(y(-0.2 + 0.001x) = 0\\) with \\(x, y > 0\\): \\(y = 150\\) and \\(x = 200\\)."
+    ],
+    "answer": "\\((200, 150)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Both rates are 0 there."
+    ],
+    "answer": "With 200 aphids and 150 ladybirds, both numbers stay the same"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-026",
+  "strand": "Calculus",
+  "subtopic": "Euler's method",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A buoy bobs up and down in still water. Its displacement \\(x\\) m above its resting level, \\(t\\) seconds after it is released, satisfies \\(\\dfrac{d^{2}x}{dt^{2}} + 0.4\\dfrac{dx}{dt} + 4x = 0\\), with \\(x = 1\\) and \\(\\dfrac{dx}{dt} = 0\\) when \\(t = 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Let \\(v = \\dfrac{dx}{dt}\\). Write the equation as a system of two first-order differential equations, and in matrix form.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Use Euler's method with step length 0.1 to estimate \\(x\\) and \\(v\\) when \\(t = 0.2\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the eigenvalues of the matrix in part (a), and explain what they show about the motion of the buoy.",
+    "marks": 3
+   }
+  ],
+  "idea": "A second-order equation becomes two first-order ones: \\(\\dot{x} = v\\) and \\(\\dot{v} = -4x - 0.4v\\). Complex eigenvalues mean oscillation; a negative real part means the oscillation dies away.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{dv}{dt} = \\dfrac{d^{2}x}{dt^{2}} = -4x - 0.4v\\)"
+    ],
+    "answer": "\\(\\dfrac{dx}{dt} = v\\), \\(\\dfrac{dv}{dt} = -4x - 0.4v\\); \\(\\begin{pmatrix}\\dot{x} \\\\ \\dot{v}\\end{pmatrix} = \\begin{pmatrix}0 & 1 \\\\ -4 & -0.4\\end{pmatrix}\\begin{pmatrix}x \\\\ v\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Step 1: \\(x_{1} = 1 + 0.1 \\times 0 = 1\\), \\(v_{1} = 0 + 0.1(-4 - 0) = -0.4\\).",
+     "Step 2: \\(x_{2} = 1 + 0.1(-0.4) = 0.96\\), \\(v_{2} = -0.4 + 0.1(-4 + 0.16) = -0.784\\)."
+    ],
+    "answer": "\\(x \\approx 0.96\\) m, \\(v \\approx -0.784\\) m s⁻¹"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\lambda^{2} + 0.4\\lambda + 4 = 0\\), so \\(\\lambda = \\dfrac{-0.4 \\pm \\sqrt{0.16 - 16}}{2} = -0.2 \\pm 1.989\\ldots i\\)."
+    ],
+    "answer": "\\(\\lambda = -0.2 \\pm 1.99i\\): the buoy oscillates (imaginary part) with decreasing amplitude (negative real part), settling at its resting level"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-027",
+  "strand": "Calculus",
+  "subtopic": "Coupled systems and phase portraits",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Consider the system \\(\\dfrac{dx}{dt} = 4x - 2y\\), \\(\\dfrac{dy}{dt} = x + y\\), with \\(x = 3\\) and \\(y = 2\\) when \\(t = 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the matrix \\(\\boldsymbol{A}\\) such that \\(\\begin{pmatrix}\\dot{x} \\\\ \\dot{y}\\end{pmatrix} = \\boldsymbol{A}\\begin{pmatrix}x \\\\ y\\end{pmatrix}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the eigenvalues of \\(\\boldsymbol{A}\\) and a corresponding eigenvector for each.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Hence find \\(x\\) and \\(y\\) in terms of \\(t\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Describe the long-term behaviour of the solution.",
+    "marks": 1
+   }
+  ],
+  "idea": "The general solution is \\(c_{1}e^{\\lambda_{1}t}\\boldsymbol{v}_{1} + c_{2}e^{\\lambda_{2}t}\\boldsymbol{v}_{2}\\). At \\(t = 0\\) the exponentials are 1, so the initial values give \\(c_{1}\\) and \\(c_{2}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Read the coefficients row by row."
+    ],
+    "answer": "\\(\\boldsymbol{A} = \\begin{pmatrix}4 & -2 \\\\ 1 & 1\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\det(\\boldsymbol{A} - \\lambda\\boldsymbol{I}) = (4 - \\lambda)(1 - \\lambda) + 2 = \\lambda^{2} - 5\\lambda + 6 = (\\lambda - 2)(\\lambda - 3)\\)",
+     "\\(\\lambda = 2\\): \\(2x - 2y = 0\\), so \\(\\begin{pmatrix}1 \\\\ 1\\end{pmatrix}\\). \\(\\lambda = 3\\): \\(x - 2y = 0\\), so \\(\\begin{pmatrix}2 \\\\ 1\\end{pmatrix}\\)."
+    ],
+    "answer": "\\(\\lambda = 2\\) with \\(\\begin{pmatrix}1 \\\\ 1\\end{pmatrix}\\); \\(\\lambda = 3\\) with \\(\\begin{pmatrix}2 \\\\ 1\\end{pmatrix}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\begin{pmatrix}x \\\\ y\\end{pmatrix} = c_{1}e^{2t}\\begin{pmatrix}1 \\\\ 1\\end{pmatrix} + c_{2}e^{3t}\\begin{pmatrix}2 \\\\ 1\\end{pmatrix}\\)",
+     "At \\(t = 0\\): \\(c_{1} + 2c_{2} = 3\\) and \\(c_{1} + c_{2} = 2\\), so \\(c_{2} = 1\\), \\(c_{1} = 1\\)."
+    ],
+    "answer": "\\(x = e^{2t} + 2e^{3t}\\), \\(y = e^{2t} + e^{3t}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Both eigenvalues are positive, and \\(e^{3t}\\) grows fastest."
+    ],
+    "answer": "\\(x\\) and \\(y\\) grow without limit, and the trajectory becomes parallel to \\(\\begin{pmatrix}2 \\\\ 1\\end{pmatrix}\\) (\\(y \\approx \\tfrac{1}{2}x\\))"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-028",
+  "strand": "Calculus",
+  "subtopic": "Coupled systems and phase portraits",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A greenhouse controller adjusts the temperature and humidity. Their deviations from the target values, \\(x\\) and \\(y\\), satisfy \\(\\dfrac{dx}{dt} = -x - 4y\\), \\(\\dfrac{dy}{dt} = x - y\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the eigenvalues of the system's matrix.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Describe the shape of the phase portrait, and state whether the controller brings the greenhouse back to its targets.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Determine whether the trajectories go round the origin clockwise or anticlockwise.",
+    "marks": 2
+   }
+  ],
+  "idea": "Complex eigenvalues \\(a \\pm bi\\) give spirals: inwards if \\(a < 0\\), outwards if \\(a > 0\\). To find the direction, work out the velocity vector at a convenient point such as \\((1, 0)\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\det\\begin{pmatrix}-1 - \\lambda & -4 \\\\ 1 & -1 - \\lambda\\end{pmatrix} = (\\lambda + 1)^{2} + 4 = 0\\), so \\(\\lambda + 1 = \\pm 2i\\)."
+    ],
+    "answer": "\\(\\lambda = -1 \\pm 2i\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The real part \\(-1\\) is negative and the imaginary part is not 0."
+    ],
+    "answer": "Trajectories spiral in towards the origin (a stable spiral), so the deviations die away and the targets are restored"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "At \\((1, 0)\\): \\(\\dfrac{dx}{dt} = -1\\), \\(\\dfrac{dy}{dt} = 1\\). On the positive \\(x\\)-axis the motion is upwards (and to the left)."
+    ],
+    "answer": "Anticlockwise"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-029",
+  "strand": "Calculus",
+  "subtopic": "Coupled systems and phase portraits",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The deviations \\(x\\) and \\(y\\) of two interacting populations from their equilibrium levels satisfy \\(\\dfrac{dx}{dt} = x + 3y\\), \\(\\dfrac{dy}{dt} = 3x + y\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the eigenvalues and corresponding eigenvectors of the system's matrix.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "State the type of equilibrium at the origin.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Describe the starting points from which the populations return to equilibrium.",
+    "marks": 2
+   }
+  ],
+  "idea": "Real eigenvalues of opposite signs give a saddle: motion along the eigenvector with the negative eigenvalue heads into the origin; any part along the other eigenvector grows.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\((1 - \\lambda)^{2} - 9 = 0\\), so \\(1 - \\lambda = \\pm 3\\).",
+     "\\(\\lambda = 4\\): \\(-3x + 3y = 0\\), so \\(\\begin{pmatrix}1 \\\\ 1\\end{pmatrix}\\). \\(\\lambda = -2\\): \\(3x + 3y = 0\\), so \\(\\begin{pmatrix}1 \\\\ -1\\end{pmatrix}\\)."
+    ],
+    "answer": "\\(\\lambda = 4\\) with \\(\\begin{pmatrix}1 \\\\ 1\\end{pmatrix}\\); \\(\\lambda = -2\\) with \\(\\begin{pmatrix}1 \\\\ -1\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "One positive and one negative eigenvalue.",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 330 330\" width=\"330\" height=\"330\" role=\"img\" aria-label=\"Phase portrait with a saddle point at the origin. Trajectories come in along the line y = -x towards the origin and leave along the line y = x. Other trajectories are curves that approach along y = -x and then turn away along y = x, in the direction of increasing x + y or decreasing x + y.\"><defs><clipPath id=\"aifn34\"><rect x=\"34\" y=\"24\" width=\"266\" height=\"276\"/></clipPath></defs><line x1=\"34.0\" y1=\"300.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"67.2\" y1=\"300.0\" x2=\"67.2\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"100.5\" y1=\"300.0\" x2=\"100.5\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"133.8\" y1=\"300.0\" x2=\"133.8\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"167.0\" y1=\"300.0\" x2=\"167.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"200.2\" y1=\"300.0\" x2=\"200.2\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"233.5\" y1=\"300.0\" x2=\"233.5\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"266.8\" y1=\"300.0\" x2=\"266.8\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"300.0\" y1=\"300.0\" x2=\"300.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"300.0\" x2=\"300.0\" y2=\"300.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"265.5\" x2=\"300.0\" y2=\"265.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"231.0\" x2=\"300.0\" y2=\"231.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"196.5\" x2=\"300.0\" y2=\"196.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"162.0\" x2=\"300.0\" y2=\"162.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"127.5\" x2=\"300.0\" y2=\"127.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"93.0\" x2=\"300.0\" y2=\"93.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"58.5\" x2=\"300.0\" y2=\"58.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"300.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"162.0\" x2=\"310.0\" y2=\"162.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"167.0\" y1=\"300.0\" x2=\"167.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M316.0 162.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M167.0 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"312.0\" y=\"181.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"154.0\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"34.0\" y1=\"159.0\" x2=\"34.0\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"67.2\" y1=\"159.0\" x2=\"67.2\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"100.5\" y1=\"159.0\" x2=\"100.5\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"133.8\" y1=\"159.0\" x2=\"133.8\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"200.2\" y1=\"159.0\" x2=\"200.2\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"233.5\" y1=\"159.0\" x2=\"233.5\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"266.8\" y1=\"159.0\" x2=\"266.8\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"300.0\" y1=\"159.0\" x2=\"300.0\" y2=\"165.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"300.0\" x2=\"170.0\" y2=\"300.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"265.5\" x2=\"170.0\" y2=\"265.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"231.0\" x2=\"170.0\" y2=\"231.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"196.5\" x2=\"170.0\" y2=\"196.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"127.5\" x2=\"170.0\" y2=\"127.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"93.0\" x2=\"170.0\" y2=\"93.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"58.5\" x2=\"170.0\" y2=\"58.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"164.0\" y1=\"24.0\" x2=\"170.0\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M34.0 300.0 L34.4 299.5 L34.9 299.1 L35.3 298.6 L35.8 298.2 L36.2 297.7 L36.7 297.2 L37.1 296.8 L37.5 296.3 L38.0 295.9 L38.4 295.4 L38.9 294.9 L39.3 294.5 L39.8 294.0 L40.2 293.6 L40.7 293.1 L41.1 292.6 L41.5 292.2 L42.0 291.7 L42.4 291.3 L42.9 290.8 L43.3 290.3 L43.8 289.9 L44.2 289.4 L44.6 289.0 L45.1 288.5 L45.5 288.0 L46.0 287.6 L46.4 287.1 L46.9 286.7 L47.3 286.2 L47.7 285.7 L48.2 285.3 L48.6 284.8 L49.1 284.4 L49.5 283.9 L50.0 283.4 L50.4 283.0 L50.8 282.5 L51.3 282.1 L51.7 281.6 L52.2 281.1 L52.6 280.7 L53.1 280.2 L53.5 279.8 L54.0 279.3 L54.4 278.8 L54.8 278.4 L55.3 277.9 L55.7 277.5 L56.2 277.0 L56.6 276.5 L57.1 276.1 L57.5 275.6 L57.9 275.2 L58.4 274.7 L58.8 274.2 L59.3 273.8 L59.7 273.3 L60.2 272.9 L60.6 272.4 L61.0 271.9 L61.5 271.5 L61.9 271.0 L62.4 270.6 L62.8 270.1 L63.3 269.6 L63.7 269.2 L64.1 268.7 L64.6 268.3 L65.0 267.8 L65.5 267.3 L65.9 266.9 L66.4 266.4 L66.8 266.0 L67.2 265.5 L67.7 265.0 L68.1 264.6 L68.6 264.1 L69.0 263.7 L69.5 263.2 L69.9 262.7 L70.4 262.3 L70.8 261.8 L71.2 261.4 L71.7 260.9 L72.1 260.4 L72.6 260.0 L73.0 259.5 L73.5 259.1 L73.9 258.6 L74.3 258.1 L74.8 257.7 L75.2 257.2 L75.7 256.8 L76.1 256.3 L76.6 255.8 L77.0 255.4 L77.4 254.9 L77.9 254.5 L78.3 254.0 L78.8 253.5 L79.2 253.1 L79.7 252.6 L80.1 252.2 L80.5 251.7 L81.0 251.2 L81.4 250.8 L81.9 250.3 L82.3 249.9 L82.8 249.4 L83.2 248.9 L83.7 248.5 L84.1 248.0 L84.5 247.6 L85.0 247.1 L85.4 246.6 L85.9 246.2 L86.3 245.7 L86.8 245.3 L87.2 244.8 L87.6 244.3 L88.1 243.9 L88.5 243.4 L89.0 243.0 L89.4 242.5 L89.9 242.0 L90.3 241.6 L90.7 241.1 L91.2 240.7 L91.6 240.2 L92.1 239.7 L92.5 239.3 L93.0 238.8 L93.4 238.4 L93.8 237.9 L94.3 237.4 L94.7 237.0 L95.2 236.5 L95.6 236.1 L96.1 235.6 L96.5 235.1 L97.0 234.7 L97.4 234.2 L97.8 233.8 L98.3 233.3 L98.7 232.8 L99.2 232.4 L99.6 231.9 L100.1 231.5 L100.5 231.0 L100.9 230.5 L101.4 230.1 L101.8 229.6 L102.3 229.2 L102.7 228.7 L103.2 228.2 L103.6 227.8 L104.0 227.3 L104.5 226.9 L104.9 226.4 L105.4 225.9 L105.8 225.5 L106.3 225.0 L106.7 224.6 L107.2 224.1 L107.6 223.6 L108.0 223.2 L108.5 222.7 L108.9 222.3 L109.4 221.8 L109.8 221.3 L110.3 220.9 L110.7 220.4 L111.1 220.0 L111.6 219.5 L112.0 219.0 L112.5 218.6 L112.9 218.1 L113.4 217.7 L113.8 217.2 L114.2 216.7 L114.7 216.3 L115.1 215.8 L115.6 215.4 L116.0 214.9 L116.5 214.4 L116.9 214.0 L117.3 213.5 L117.8 213.1 L118.2 212.6 L118.7 212.1 L119.1 211.7 L119.6 211.2 L120.0 210.8 L120.5 210.3 L120.9 209.8 L121.3 209.4 L121.8 208.9 L122.2 208.5 L122.7 208.0 L123.1 207.5 L123.6 207.1 L124.0 206.6 L124.4 206.2 L124.9 205.7 L125.3 205.2 L125.8 204.8 L126.2 204.3 L126.7 203.9 L127.1 203.4 L127.5 202.9 L128.0 202.5 L128.4 202.0 L128.9 201.6 L129.3 201.1 L129.8 200.6 L130.2 200.2 L130.6 199.7 L131.1 199.3 L131.5 198.8 L132.0 198.3 L132.4 197.9 L132.9 197.4 L133.3 197.0 L133.8 196.5 L134.2 196.0 L134.6 195.6 L135.1 195.1 L135.5 194.7 L136.0 194.2 L136.4 193.7 L136.9 193.3 L137.3 192.8 L137.7 192.4 L138.2 191.9 L138.6 191.4 L139.1 191.0 L139.5 190.5 L140.0 190.1 L140.4 189.6 L140.8 189.1 L141.3 188.7 L141.7 188.2 L142.2 187.8 L142.6 187.3 L143.1 186.8 L143.5 186.4 L143.9 185.9 L144.4 185.5 L144.8 185.0 L145.3 184.5 L145.7 184.1 L146.2 183.6 L146.6 183.2 L147.1 182.7 L147.5 182.2 L147.9 181.8 L148.4 181.3 L148.8 180.9 L149.3 180.4 L149.7 179.9 L150.2 179.5 L150.6 179.0 L151.0 178.6 L151.5 178.1 L151.9 177.6 L152.4 177.2 L152.8 176.7 L153.3 176.3 L153.7 175.8 L154.1 175.3 L154.6 174.9 L155.0 174.4 L155.5 174.0 L155.9 173.5 L156.4 173.0 L156.8 172.6 L157.2 172.1 L157.7 171.7 L158.1 171.2 L158.6 170.7 L159.0 170.3 L159.5 169.8 L159.9 169.4 L160.3 168.9 L160.8 168.4 L161.2 168.0 L161.7 167.5 L162.1 167.1 L162.6 166.6 L163.0 166.1 L163.5 165.7 L163.9 165.2 L164.3 164.8 L164.8 164.3 L165.2 163.8 L165.7 163.4 L166.1 162.9 L166.6 162.5 L167.0 162.0 L167.4 161.5 L167.9 161.1 L168.3 160.6 L168.8 160.2 L169.2 159.7 L169.7 159.2 L170.1 158.8 L170.5 158.3 L171.0 157.9 L171.4 157.4 L171.9 156.9 L172.3 156.5 L172.8 156.0 L173.2 155.6 L173.7 155.1 L174.1 154.6 L174.5 154.2 L175.0 153.7 L175.4 153.3 L175.9 152.8 L176.3 152.3 L176.8 151.9 L177.2 151.4 L177.6 151.0 L178.1 150.5 L178.5 150.0 L179.0 149.6 L179.4 149.1 L179.9 148.7 L180.3 148.2 L180.7 147.7 L181.2 147.3 L181.6 146.8 L182.1 146.4 L182.5 145.9 L183.0 145.4 L183.4 145.0 L183.8 144.5 L184.3 144.1 L184.7 143.6 L185.2 143.1 L185.6 142.7 L186.1 142.2 L186.5 141.8 L186.9 141.3 L187.4 140.8 L187.8 140.4 L188.3 139.9 L188.7 139.5 L189.2 139.0 L189.6 138.5 L190.1 138.1 L190.5 137.6 L190.9 137.2 L191.4 136.7 L191.8 136.2 L192.3 135.8 L192.7 135.3 L193.2 134.9 L193.6 134.4 L194.0 133.9 L194.5 133.5 L194.9 133.0 L195.4 132.6 L195.8 132.1 L196.3 131.6 L196.7 131.2 L197.1 130.7 L197.6 130.3 L198.0 129.8 L198.5 129.3 L198.9 128.9 L199.4 128.4 L199.8 128.0 L200.2 127.5 L200.7 127.0 L201.1 126.6 L201.6 126.1 L202.0 125.7 L202.5 125.2 L202.9 124.7 L203.4 124.3 L203.8 123.8 L204.2 123.4 L204.7 122.9 L205.1 122.4 L205.6 122.0 L206.0 121.5 L206.5 121.1 L206.9 120.6 L207.3 120.1 L207.8 119.7 L208.2 119.2 L208.7 118.8 L209.1 118.3 L209.6 117.8 L210.0 117.4 L210.4 116.9 L210.9 116.5 L211.3 116.0 L211.8 115.5 L212.2 115.1 L212.7 114.6 L213.1 114.2 L213.6 113.7 L214.0 113.2 L214.4 112.8 L214.9 112.3 L215.3 111.9 L215.8 111.4 L216.2 110.9 L216.7 110.5 L217.1 110.0 L217.5 109.6 L218.0 109.1 L218.4 108.6 L218.9 108.2 L219.3 107.7 L219.8 107.3 L220.2 106.8 L220.6 106.3 L221.1 105.9 L221.5 105.4 L222.0 105.0 L222.4 104.5 L222.9 104.0 L223.3 103.6 L223.7 103.1 L224.2 102.7 L224.6 102.2 L225.1 101.7 L225.5 101.3 L226.0 100.8 L226.4 100.4 L226.8 99.9 L227.3 99.4 L227.7 99.0 L228.2 98.5 L228.6 98.1 L229.1 97.6 L229.5 97.1 L230.0 96.7 L230.4 96.2 L230.8 95.8 L231.3 95.3 L231.7 94.8 L232.2 94.4 L232.6 93.9 L233.1 93.5 L233.5 93.0 L233.9 92.5 L234.4 92.1 L234.8 91.6 L235.3 91.2 L235.7 90.7 L236.2 90.2 L236.6 89.8 L237.0 89.3 L237.5 88.9 L237.9 88.4 L238.4 87.9 L238.8 87.5 L239.3 87.0 L239.7 86.6 L240.2 86.1 L240.6 85.6 L241.0 85.2 L241.5 84.7 L241.9 84.3 L242.4 83.8 L242.8 83.3 L243.3 82.9 L243.7 82.4 L244.1 82.0 L244.6 81.5 L245.0 81.0 L245.5 80.6 L245.9 80.1 L246.4 79.7 L246.8 79.2 L247.2 78.7 L247.7 78.3 L248.1 77.8 L248.6 77.4 L249.0 76.9 L249.5 76.4 L249.9 76.0 L250.3 75.5 L250.8 75.1 L251.2 74.6 L251.7 74.1 L252.1 73.7 L252.6 73.2 L253.0 72.8 L253.4 72.3 L253.9 71.8 L254.3 71.4 L254.8 70.9 L255.2 70.5 L255.7 70.0 L256.1 69.5 L256.6 69.1 L257.0 68.6 L257.4 68.2 L257.9 67.7 L258.3 67.2 L258.8 66.8 L259.2 66.3 L259.7 65.9 L260.1 65.4 L260.5 64.9 L261.0 64.5 L261.4 64.0 L261.9 63.6 L262.3 63.1 L262.8 62.6 L263.2 62.2 L263.6 61.7 L264.1 61.3 L264.5 60.8 L265.0 60.3 L265.4 59.9 L265.9 59.4 L266.3 59.0 L266.8 58.5 L267.2 58.0 L267.6 57.6 L268.1 57.1 L268.5 56.7 L269.0 56.2 L269.4 55.7 L269.9 55.3 L270.3 54.8 L270.7 54.4 L271.2 53.9 L271.6 53.4 L272.1 53.0 L272.5 52.5 L273.0 52.1 L273.4 51.6 L273.8 51.1 L274.3 50.7 L274.7 50.2 L275.2 49.8 L275.6 49.3 L276.1 48.8 L276.5 48.4 L276.9 47.9 L277.4 47.5 L277.8 47.0 L278.3 46.5 L278.7 46.1 L279.2 45.6 L279.6 45.2 L280.1 44.7 L280.5 44.2 L280.9 43.8 L281.4 43.3 L281.8 42.9 L282.3 42.4 L282.7 41.9 L283.2 41.5 L283.6 41.0 L284.0 40.6 L284.5 40.1 L284.9 39.6 L285.4 39.2 L285.8 38.7 L286.3 38.3 L286.7 37.8 L287.1 37.3 L287.6 36.9 L288.0 36.4 L288.5 36.0 L288.9 35.5 L289.4 35.0 L289.8 34.6 L290.2 34.1 L290.7 33.7 L291.1 33.2 L291.6 32.7 L292.0 32.3 L292.5 31.8 L292.9 31.4 L293.3 30.9 L293.8 30.4 L294.2 30.0 L294.7 29.5 L295.1 29.1 L295.6 28.6 L296.0 28.1 L296.5 27.7 L296.9 27.2 L297.3 26.8 L297.8 26.3 L298.2 25.8 L298.7 25.4 L299.1 24.9 L299.6 24.5 L300.0 24.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M34.0 24.0 L34.4 24.5 L34.9 24.9 L35.3 25.4 L35.8 25.8 L36.2 26.3 L36.7 26.8 L37.1 27.2 L37.5 27.7 L38.0 28.1 L38.4 28.6 L38.9 29.1 L39.3 29.5 L39.8 30.0 L40.2 30.4 L40.7 30.9 L41.1 31.4 L41.5 31.8 L42.0 32.3 L42.4 32.7 L42.9 33.2 L43.3 33.7 L43.8 34.1 L44.2 34.6 L44.6 35.0 L45.1 35.5 L45.5 36.0 L46.0 36.4 L46.4 36.9 L46.9 37.3 L47.3 37.8 L47.7 38.3 L48.2 38.7 L48.6 39.2 L49.1 39.6 L49.5 40.1 L50.0 40.6 L50.4 41.0 L50.8 41.5 L51.3 41.9 L51.7 42.4 L52.2 42.9 L52.6 43.3 L53.1 43.8 L53.5 44.2 L54.0 44.7 L54.4 45.2 L54.8 45.6 L55.3 46.1 L55.7 46.5 L56.2 47.0 L56.6 47.5 L57.1 47.9 L57.5 48.4 L57.9 48.8 L58.4 49.3 L58.8 49.8 L59.3 50.2 L59.7 50.7 L60.2 51.1 L60.6 51.6 L61.0 52.1 L61.5 52.5 L61.9 53.0 L62.4 53.4 L62.8 53.9 L63.3 54.4 L63.7 54.8 L64.1 55.3 L64.6 55.7 L65.0 56.2 L65.5 56.7 L65.9 57.1 L66.4 57.6 L66.8 58.0 L67.2 58.5 L67.7 59.0 L68.1 59.4 L68.6 59.9 L69.0 60.3 L69.5 60.8 L69.9 61.3 L70.4 61.7 L70.8 62.2 L71.2 62.6 L71.7 63.1 L72.1 63.6 L72.6 64.0 L73.0 64.5 L73.5 64.9 L73.9 65.4 L74.3 65.9 L74.8 66.3 L75.2 66.8 L75.7 67.2 L76.1 67.7 L76.6 68.2 L77.0 68.6 L77.4 69.1 L77.9 69.5 L78.3 70.0 L78.8 70.5 L79.2 70.9 L79.7 71.4 L80.1 71.8 L80.5 72.3 L81.0 72.8 L81.4 73.2 L81.9 73.7 L82.3 74.1 L82.8 74.6 L83.2 75.1 L83.7 75.5 L84.1 76.0 L84.5 76.4 L85.0 76.9 L85.4 77.4 L85.9 77.8 L86.3 78.3 L86.8 78.7 L87.2 79.2 L87.6 79.7 L88.1 80.1 L88.5 80.6 L89.0 81.0 L89.4 81.5 L89.9 82.0 L90.3 82.4 L90.7 82.9 L91.2 83.3 L91.6 83.8 L92.1 84.3 L92.5 84.7 L93.0 85.2 L93.4 85.6 L93.8 86.1 L94.3 86.6 L94.7 87.0 L95.2 87.5 L95.6 87.9 L96.1 88.4 L96.5 88.9 L97.0 89.3 L97.4 89.8 L97.8 90.2 L98.3 90.7 L98.7 91.2 L99.2 91.6 L99.6 92.1 L100.1 92.5 L100.5 93.0 L100.9 93.5 L101.4 93.9 L101.8 94.4 L102.3 94.8 L102.7 95.3 L103.2 95.8 L103.6 96.2 L104.0 96.7 L104.5 97.1 L104.9 97.6 L105.4 98.1 L105.8 98.5 L106.3 99.0 L106.7 99.4 L107.2 99.9 L107.6 100.4 L108.0 100.8 L108.5 101.3 L108.9 101.7 L109.4 102.2 L109.8 102.7 L110.3 103.1 L110.7 103.6 L111.1 104.0 L111.6 104.5 L112.0 105.0 L112.5 105.4 L112.9 105.9 L113.4 106.3 L113.8 106.8 L114.2 107.3 L114.7 107.7 L115.1 108.2 L115.6 108.6 L116.0 109.1 L116.5 109.6 L116.9 110.0 L117.3 110.5 L117.8 110.9 L118.2 111.4 L118.7 111.9 L119.1 112.3 L119.6 112.8 L120.0 113.2 L120.5 113.7 L120.9 114.2 L121.3 114.6 L121.8 115.1 L122.2 115.5 L122.7 116.0 L123.1 116.5 L123.6 116.9 L124.0 117.4 L124.4 117.8 L124.9 118.3 L125.3 118.8 L125.8 119.2 L126.2 119.7 L126.7 120.1 L127.1 120.6 L127.5 121.1 L128.0 121.5 L128.4 122.0 L128.9 122.4 L129.3 122.9 L129.8 123.4 L130.2 123.8 L130.6 124.3 L131.1 124.7 L131.5 125.2 L132.0 125.7 L132.4 126.1 L132.9 126.6 L133.3 127.0 L133.8 127.5 L134.2 128.0 L134.6 128.4 L135.1 128.9 L135.5 129.3 L136.0 129.8 L136.4 130.3 L136.9 130.7 L137.3 131.2 L137.7 131.6 L138.2 132.1 L138.6 132.6 L139.1 133.0 L139.5 133.5 L140.0 133.9 L140.4 134.4 L140.8 134.9 L141.3 135.3 L141.7 135.8 L142.2 136.2 L142.6 136.7 L143.1 137.2 L143.5 137.6 L143.9 138.1 L144.4 138.5 L144.8 139.0 L145.3 139.5 L145.7 139.9 L146.2 140.4 L146.6 140.8 L147.1 141.3 L147.5 141.8 L147.9 142.2 L148.4 142.7 L148.8 143.1 L149.3 143.6 L149.7 144.1 L150.2 144.5 L150.6 145.0 L151.0 145.4 L151.5 145.9 L151.9 146.4 L152.4 146.8 L152.8 147.3 L153.3 147.7 L153.7 148.2 L154.1 148.7 L154.6 149.1 L155.0 149.6 L155.5 150.0 L155.9 150.5 L156.4 151.0 L156.8 151.4 L157.2 151.9 L157.7 152.3 L158.1 152.8 L158.6 153.3 L159.0 153.7 L159.5 154.2 L159.9 154.6 L160.3 155.1 L160.8 155.6 L161.2 156.0 L161.7 156.5 L162.1 156.9 L162.6 157.4 L163.0 157.9 L163.5 158.3 L163.9 158.8 L164.3 159.2 L164.8 159.7 L165.2 160.2 L165.7 160.6 L166.1 161.1 L166.6 161.5 L167.0 162.0 L167.4 162.5 L167.9 162.9 L168.3 163.4 L168.8 163.8 L169.2 164.3 L169.7 164.8 L170.1 165.2 L170.5 165.7 L171.0 166.1 L171.4 166.6 L171.9 167.1 L172.3 167.5 L172.8 168.0 L173.2 168.4 L173.7 168.9 L174.1 169.4 L174.5 169.8 L175.0 170.3 L175.4 170.7 L175.9 171.2 L176.3 171.7 L176.8 172.1 L177.2 172.6 L177.6 173.0 L178.1 173.5 L178.5 174.0 L179.0 174.4 L179.4 174.9 L179.9 175.3 L180.3 175.8 L180.7 176.3 L181.2 176.7 L181.6 177.2 L182.1 177.6 L182.5 178.1 L183.0 178.6 L183.4 179.0 L183.8 179.5 L184.3 179.9 L184.7 180.4 L185.2 180.9 L185.6 181.3 L186.1 181.8 L186.5 182.2 L186.9 182.7 L187.4 183.2 L187.8 183.6 L188.3 184.1 L188.7 184.5 L189.2 185.0 L189.6 185.5 L190.1 185.9 L190.5 186.4 L190.9 186.8 L191.4 187.3 L191.8 187.8 L192.3 188.2 L192.7 188.7 L193.2 189.1 L193.6 189.6 L194.0 190.1 L194.5 190.5 L194.9 191.0 L195.4 191.4 L195.8 191.9 L196.3 192.4 L196.7 192.8 L197.1 193.3 L197.6 193.7 L198.0 194.2 L198.5 194.7 L198.9 195.1 L199.4 195.6 L199.8 196.0 L200.2 196.5 L200.7 197.0 L201.1 197.4 L201.6 197.9 L202.0 198.3 L202.5 198.8 L202.9 199.3 L203.4 199.7 L203.8 200.2 L204.2 200.6 L204.7 201.1 L205.1 201.6 L205.6 202.0 L206.0 202.5 L206.5 202.9 L206.9 203.4 L207.3 203.9 L207.8 204.3 L208.2 204.8 L208.7 205.2 L209.1 205.7 L209.6 206.2 L210.0 206.6 L210.4 207.1 L210.9 207.5 L211.3 208.0 L211.8 208.5 L212.2 208.9 L212.7 209.4 L213.1 209.8 L213.6 210.3 L214.0 210.8 L214.4 211.2 L214.9 211.7 L215.3 212.1 L215.8 212.6 L216.2 213.1 L216.7 213.5 L217.1 214.0 L217.5 214.4 L218.0 214.9 L218.4 215.4 L218.9 215.8 L219.3 216.3 L219.8 216.7 L220.2 217.2 L220.6 217.7 L221.1 218.1 L221.5 218.6 L222.0 219.0 L222.4 219.5 L222.9 220.0 L223.3 220.4 L223.7 220.9 L224.2 221.3 L224.6 221.8 L225.1 222.3 L225.5 222.7 L226.0 223.2 L226.4 223.6 L226.8 224.1 L227.3 224.6 L227.7 225.0 L228.2 225.5 L228.6 225.9 L229.1 226.4 L229.5 226.9 L230.0 227.3 L230.4 227.8 L230.8 228.2 L231.3 228.7 L231.7 229.2 L232.2 229.6 L232.6 230.1 L233.1 230.5 L233.5 231.0 L233.9 231.5 L234.4 231.9 L234.8 232.4 L235.3 232.8 L235.7 233.3 L236.2 233.8 L236.6 234.2 L237.0 234.7 L237.5 235.1 L237.9 235.6 L238.4 236.1 L238.8 236.5 L239.3 237.0 L239.7 237.4 L240.2 237.9 L240.6 238.4 L241.0 238.8 L241.5 239.3 L241.9 239.7 L242.4 240.2 L242.8 240.7 L243.3 241.1 L243.7 241.6 L244.1 242.0 L244.6 242.5 L245.0 243.0 L245.5 243.4 L245.9 243.9 L246.4 244.3 L246.8 244.8 L247.2 245.3 L247.7 245.7 L248.1 246.2 L248.6 246.6 L249.0 247.1 L249.5 247.6 L249.9 248.0 L250.3 248.5 L250.8 248.9 L251.2 249.4 L251.7 249.9 L252.1 250.3 L252.6 250.8 L253.0 251.2 L253.4 251.7 L253.9 252.2 L254.3 252.6 L254.8 253.1 L255.2 253.5 L255.7 254.0 L256.1 254.5 L256.6 254.9 L257.0 255.4 L257.4 255.8 L257.9 256.3 L258.3 256.8 L258.8 257.2 L259.2 257.7 L259.7 258.1 L260.1 258.6 L260.5 259.1 L261.0 259.5 L261.4 260.0 L261.9 260.4 L262.3 260.9 L262.8 261.4 L263.2 261.8 L263.6 262.3 L264.1 262.7 L264.5 263.2 L265.0 263.7 L265.4 264.1 L265.9 264.6 L266.3 265.0 L266.8 265.5 L267.2 266.0 L267.6 266.4 L268.1 266.9 L268.5 267.3 L269.0 267.8 L269.4 268.3 L269.9 268.7 L270.3 269.2 L270.7 269.6 L271.2 270.1 L271.6 270.6 L272.1 271.0 L272.5 271.5 L273.0 271.9 L273.4 272.4 L273.8 272.9 L274.3 273.3 L274.7 273.8 L275.2 274.2 L275.6 274.7 L276.1 275.2 L276.5 275.6 L276.9 276.1 L277.4 276.5 L277.8 277.0 L278.3 277.5 L278.7 277.9 L279.2 278.4 L279.6 278.8 L280.1 279.3 L280.5 279.8 L280.9 280.2 L281.4 280.7 L281.8 281.1 L282.3 281.6 L282.7 282.1 L283.2 282.5 L283.6 283.0 L284.0 283.4 L284.5 283.9 L284.9 284.4 L285.4 284.8 L285.8 285.3 L286.3 285.7 L286.7 286.2 L287.1 286.7 L287.6 287.1 L288.0 287.6 L288.5 288.0 L288.9 288.5 L289.4 289.0 L289.8 289.4 L290.2 289.9 L290.7 290.3 L291.1 290.8 L291.6 291.3 L292.0 291.7 L292.5 292.2 L292.9 292.6 L293.3 293.1 L293.8 293.6 L294.2 294.0 L294.7 294.5 L295.1 294.9 L295.6 295.4 L296.0 295.9 L296.5 296.3 L296.9 296.8 L297.3 297.2 L297.8 297.7 L298.2 298.2 L298.7 298.6 L299.1 299.1 L299.6 299.5 L300.0 300.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M-164.9 -180.8 L-162.4 -178.2 L-159.9 -175.6 L-157.4 -173.0 L-155.0 -170.4 L-152.5 -167.9 L-150.1 -165.3 L-147.7 -162.8 L-145.3 -160.3 L-143.0 -157.8 L-140.6 -155.4 L-138.3 -152.9 L-136.0 -150.5 L-133.7 -148.1 L-131.4 -145.7 L-129.2 -143.3 L-126.9 -141.0 L-124.7 -138.6 L-122.5 -136.3 L-120.3 -134.0 L-118.1 -131.7 L-116.0 -129.5 L-113.8 -127.2 L-111.7 -125.0 L-109.6 -122.7 L-107.5 -120.5 L-105.5 -118.4 L-103.4 -116.2 L-101.4 -114.0 L-99.3 -111.9 L-97.3 -109.8 L-95.3 -107.7 L-93.4 -105.6 L-91.4 -103.5 L-89.5 -101.5 L-87.5 -99.4 L-85.6 -97.4 L-83.7 -95.4 L-81.8 -93.4 L-80.0 -91.4 L-78.1 -89.4 L-76.3 -87.5 L-74.4 -85.5 L-72.6 -83.6 L-70.8 -81.7 L-69.1 -79.8 L-67.3 -77.9 L-65.5 -76.1 L-63.8 -74.2 L-62.1 -72.4 L-60.4 -70.5 L-58.7 -68.7 L-57.0 -66.9 L-55.3 -65.1 L-53.6 -63.4 L-52.0 -61.6 L-50.4 -59.8 L-48.7 -58.1 L-47.1 -56.4 L-45.5 -54.7 L-44.0 -53.0 L-42.4 -51.3 L-40.8 -49.6 L-39.3 -47.9 L-37.8 -46.3 L-36.2 -44.7 L-34.7 -43.0 L-33.3 -41.4 L-31.8 -39.8 L-30.3 -38.2 L-28.8 -36.6 L-27.4 -35.1 L-26.0 -33.5 L-24.5 -32.0 L-23.1 -30.4 L-21.7 -28.9 L-20.4 -27.4 L-19.0 -25.9 L-17.6 -24.4 L-16.3 -22.9 L-14.9 -21.4 L-13.6 -20.0 L-12.3 -18.5 L-11.0 -17.1 L-9.7 -15.6 L-8.4 -14.2 L-7.1 -12.8 L-5.8 -11.4 L-4.6 -10.0 L-3.3 -8.6 L-2.1 -7.2 L-0.9 -5.9 L0.3 -4.5 L1.5 -3.2 L2.7 -1.8 L3.9 -0.5 L5.1 0.8 L6.2 2.1 L7.4 3.4 L8.5 4.7 L9.7 6.0 L10.8 7.3 L11.9 8.5 L13.0 9.8 L14.1 11.0 L15.2 12.3 L16.2 13.5 L17.3 14.7 L18.3 16.0 L19.4 17.2 L20.4 18.4 L21.5 19.6 L22.5 20.8 L23.5 21.9 L24.5 23.1 L25.5 24.3 L26.4 25.4 L27.4 26.6 L28.4 27.7 L29.3 28.9 L30.3 30.0 L31.2 31.1 L32.1 32.2 L33.0 33.3 L34.0 34.4 L34.9 35.5 L35.7 36.6 L36.6 37.7 L37.5 38.8 L38.4 39.8 L39.2 40.9 L40.1 42.0 L40.9 43.0 L41.7 44.1 L42.6 45.1 L43.4 46.1 L44.2 47.2 L45.0 48.2 L45.8 49.2 L46.6 50.2 L47.3 51.2 L48.1 52.2 L48.8 53.2 L49.6 54.2 L50.3 55.2 L51.1 56.2 L51.8 57.1 L52.5 58.1 L53.2 59.1 L53.9 60.0 L54.6 61.0 L55.3 61.9 L56.0 62.9 L56.6 63.8 L57.3 64.8 L58.0 65.7 L58.6 66.6 L59.2 67.6 L59.9 68.5 L60.5 69.4 L61.1 70.3 L61.7 71.2 L62.3 72.1 L62.9 73.0 L63.5 73.9 L64.1 74.8 L64.6 75.7 L65.2 76.6 L65.7 77.5 L66.3 78.4 L66.8 79.3 L67.4 80.1 L67.9 81.0 L68.4 81.9 L68.9 82.8 L69.4 83.6 L69.9 84.5 L70.4 85.3 L70.8 86.2 L71.3 87.1 L71.8 87.9 L72.2 88.8 L72.7 89.6 L73.1 90.5 L73.5 91.3 L74.0 92.1 L74.4 93.0 L74.8 93.8 L75.2 94.7 L75.6 95.5 L75.9 96.3 L76.3 97.2 L76.7 98.0 L77.0 98.8 L77.4 99.7 L77.7 100.5 L78.1 101.3 L78.4 102.2 L78.7 103.0 L79.0 103.8 L79.3 104.6 L79.6 105.5 L79.9 106.3 L80.2 107.1 L80.5 107.9 L80.7 108.8 L81.0 109.6 L81.2 110.4 L81.5 111.2 L81.7 112.1 L81.9 112.9 L82.1 113.7 L82.3 114.6 L82.5 115.4 L82.7 116.2 L82.9 117.0 L83.1 117.9 L83.2 118.7 L83.4 119.5 L83.5 120.4 L83.7 121.2 L83.8 122.0 L83.9 122.9 L84.0 123.7 L84.1 124.6 L84.2 125.4 L84.3 126.3 L84.4 127.1 L84.5 128.0 L84.5 128.8 L84.6 129.7 L84.6 130.5 L84.6 131.4 L84.6 132.3 L84.7 133.2 L84.7 134.0 L84.6 134.9 L84.6 135.8 L84.6 136.7 L84.6 137.6 L84.5 138.4 L84.4 139.3 L84.4 140.2 L84.3 141.1 L84.2 142.1 L84.1 143.0 L84.0 143.9 L83.9 144.8 L83.7 145.7 L83.6 146.7 L83.4 147.6 L83.3 148.6 L83.1 149.5 L82.9 150.5 L82.7 151.4 L82.5 152.4 L82.3 153.4 L82.0 154.4 L81.8 155.3 L81.5 156.3 L81.3 157.3 L81.0 158.3 L80.7 159.4 L80.4 160.4 L80.0 161.4 L79.7 162.5 L79.4 163.5 L79.0 164.6 L78.6 165.6 L78.2 166.7 L77.9 167.8 L77.4 168.9 L77.0 170.0 L76.6 171.1 L76.1 172.2 L75.6 173.3 L75.2 174.5 L74.7 175.6 L74.2 176.8 L73.6 177.9 L73.1 179.1 L72.5 180.3 L72.0 181.5 L71.4 182.7 L70.8 184.0 L70.1 185.2 L69.5 186.4 L68.9 187.7 L68.2 189.0 L67.5 190.3 L66.8 191.6 L66.1 192.9 L65.3 194.2 L64.6 195.6 L63.8 196.9 L63.0 198.3 L62.2 199.7 L61.4 201.1 L60.5 202.5 L59.7 203.9 L58.8 205.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M33.8 25.3 L34.8 26.4 L35.8 27.4 L36.7 28.5 L37.7 29.5 L38.7 30.6 L39.7 31.6 L40.6 32.6 L41.6 33.6 L42.5 34.6 L43.4 35.6 L44.3 36.6 L45.3 37.6 L46.2 38.5 L47.1 39.5 L48.0 40.5 L48.9 41.4 L49.7 42.4 L50.6 43.3 L51.5 44.2 L52.3 45.2 L53.2 46.1 L54.0 47.0 L54.9 47.9 L55.7 48.8 L56.5 49.7 L57.3 50.6 L58.2 51.4 L59.0 52.3 L59.8 53.2 L60.6 54.0 L61.3 54.9 L62.1 55.7 L62.9 56.6 L63.7 57.4 L64.4 58.2 L65.2 59.1 L65.9 59.9 L66.7 60.7 L67.4 61.5 L68.1 62.3 L68.8 63.1 L69.6 63.9 L70.3 64.7 L71.0 65.4 L71.7 66.2 L72.4 67.0 L73.1 67.7 L73.7 68.5 L74.4 69.3 L75.1 70.0 L75.7 70.7 L76.4 71.5 L77.1 72.2 L77.7 72.9 L78.4 73.7 L79.0 74.4 L79.6 75.1 L80.2 75.8 L80.9 76.5 L81.5 77.2 L82.1 77.9 L82.7 78.6 L83.3 79.3 L83.9 79.9 L84.5 80.6 L85.1 81.3 L85.6 81.9 L86.2 82.6 L86.8 83.3 L87.3 83.9 L87.9 84.6 L88.4 85.2 L89.0 85.9 L89.5 86.5 L90.1 87.1 L90.6 87.8 L91.1 88.4 L91.7 89.0 L92.2 89.6 L92.7 90.2 L93.2 90.8 L93.7 91.4 L94.2 92.0 L94.7 92.6 L95.2 93.2 L95.7 93.8 L96.1 94.4 L96.6 95.0 L97.1 95.6 L97.6 96.2 L98.0 96.7 L98.5 97.3 L98.9 97.9 L99.4 98.4 L99.8 99.0 L100.3 99.6 L100.7 100.1 L101.1 100.7 L101.5 101.2 L102.0 101.8 L102.4 102.3 L102.8 102.9 L103.2 103.4 L103.6 103.9 L104.0 104.5 L104.4 105.0 L104.8 105.5 L105.2 106.0 L105.6 106.6 L105.9 107.1 L106.3 107.6 L106.7 108.1 L107.0 108.6 L107.4 109.1 L107.7 109.6 L108.1 110.2 L108.4 110.7 L108.8 111.2 L109.1 111.7 L109.5 112.1 L109.8 112.6 L110.1 113.1 L110.4 113.6 L110.8 114.1 L111.1 114.6 L111.4 115.1 L111.7 115.6 L112.0 116.1 L112.3 116.5 L112.6 117.0 L112.9 117.5 L113.1 118.0 L113.4 118.4 L113.7 118.9 L114.0 119.4 L114.2 119.8 L114.5 120.3 L114.8 120.8 L115.0 121.2 L115.3 121.7 L115.5 122.2 L115.7 122.6 L116.0 123.1 L116.2 123.5 L116.4 124.0 L116.7 124.5 L116.9 124.9 L117.1 125.4 L117.3 125.8 L117.5 126.3 L117.7 126.7 L117.9 127.2 L118.1 127.6 L118.3 128.1 L118.5 128.5 L118.7 129.0 L118.9 129.4 L119.0 129.9 L119.2 130.3 L119.4 130.8 L119.5 131.2 L119.7 131.7 L119.9 132.1 L120.0 132.6 L120.1 133.0 L120.3 133.5 L120.4 133.9 L120.5 134.4 L120.7 134.8 L120.8 135.3 L120.9 135.7 L121.0 136.2 L121.1 136.6 L121.2 137.1 L121.3 137.5 L121.4 138.0 L121.5 138.4 L121.6 138.9 L121.7 139.3 L121.8 139.8 L121.8 140.2 L121.9 140.7 L122.0 141.2 L122.0 141.6 L122.1 142.1 L122.1 142.5 L122.1 143.0 L122.2 143.5 L122.2 143.9 L122.2 144.4 L122.3 144.9 L122.3 145.3 L122.3 145.8 L122.3 146.3 L122.3 146.7 L122.3 147.2 L122.3 147.7 L122.3 148.2 L122.2 148.7 L122.2 149.1 L122.2 149.6 L122.2 150.1 L122.1 150.6 L122.1 151.1 L122.0 151.6 L121.9 152.1 L121.9 152.6 L121.8 153.1 L121.7 153.6 L121.6 154.1 L121.6 154.6 L121.5 155.1 L121.4 155.7 L121.3 156.2 L121.1 156.7 L121.0 157.2 L120.9 157.8 L120.8 158.3 L120.6 158.8 L120.5 159.4 L120.3 159.9 L120.2 160.5 L120.0 161.0 L119.8 161.6 L119.6 162.2 L119.5 162.7 L119.3 163.3 L119.1 163.9 L118.9 164.5 L118.6 165.0 L118.4 165.6 L118.2 166.2 L117.9 166.8 L117.7 167.4 L117.4 168.0 L117.2 168.7 L116.9 169.3 L116.6 169.9 L116.4 170.6 L116.1 171.2 L115.8 171.8 L115.5 172.5 L115.1 173.1 L114.8 173.8 L114.5 174.5 L114.1 175.2 L113.8 175.8 L113.4 176.5 L113.0 177.2 L112.7 177.9 L112.3 178.7 L111.9 179.4 L111.5 180.1 L111.0 180.8 L110.6 181.6 L110.2 182.3 L109.7 183.1 L109.3 183.9 L108.8 184.6 L108.3 185.4 L107.8 186.2 L107.3 187.0 L106.8 187.8 L106.3 188.7 L105.8 189.5 L105.2 190.3 L104.7 191.2 L104.1 192.0 L103.5 192.9 L102.9 193.8 L102.3 194.7 L101.7 195.6 L101.1 196.5 L100.4 197.4 L99.8 198.4 L99.1 199.3 L98.4 200.3 L97.7 201.2 L97.0 202.2 L96.3 203.2 L95.6 204.2 L94.8 205.2 L94.1 206.3 L93.3 207.3 L92.5 208.4 L91.7 209.5 L90.9 210.5 L90.0 211.6 L89.2 212.8 L88.3 213.9 L87.4 215.0 L86.5 216.2 L85.6 217.4 L84.7 218.6 L83.7 219.8 L82.7 221.0 L81.8 222.2 L80.8 223.5 L79.7 224.8 L78.7 226.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M298.7 300.2 L297.7 299.2 L296.7 298.2 L295.7 297.1 L294.7 296.1 L293.7 295.1 L292.7 294.1 L291.7 293.1 L290.7 292.2 L289.8 291.2 L288.8 290.2 L287.9 289.3 L286.9 288.3 L286.0 287.4 L285.1 286.4 L284.1 285.5 L283.2 284.6 L282.3 283.7 L281.4 282.8 L280.5 281.9 L279.6 281.0 L278.7 280.1 L277.9 279.2 L277.0 278.3 L276.1 277.5 L275.3 276.6 L274.4 275.8 L273.6 274.9 L272.7 274.1 L271.9 273.3 L271.1 272.5 L270.2 271.6 L269.4 270.8 L268.6 270.0 L267.8 269.2 L267.0 268.4 L266.2 267.7 L265.4 266.9 L264.6 266.1 L263.9 265.4 L263.1 264.6 L262.3 263.8 L261.6 263.1 L260.8 262.4 L260.1 261.6 L259.3 260.9 L258.6 260.2 L257.8 259.5 L257.1 258.8 L256.4 258.1 L255.7 257.4 L255.0 256.7 L254.2 256.0 L253.5 255.3 L252.8 254.6 L252.1 254.0 L251.5 253.3 L250.8 252.7 L250.1 252.0 L249.4 251.4 L248.7 250.7 L248.1 250.1 L247.4 249.5 L246.7 248.9 L246.1 248.2 L245.4 247.6 L244.8 247.0 L244.2 246.4 L243.5 245.8 L242.9 245.2 L242.3 244.7 L241.6 244.1 L241.0 243.5 L240.4 242.9 L239.8 242.4 L239.2 241.8 L238.6 241.3 L238.0 240.7 L237.4 240.2 L236.8 239.6 L236.2 239.1 L235.6 238.6 L235.0 238.1 L234.4 237.5 L233.8 237.0 L233.3 236.5 L232.7 236.0 L232.1 235.5 L231.6 235.0 L231.0 234.5 L230.4 234.1 L229.9 233.6 L229.3 233.1 L228.8 232.6 L228.3 232.2 L227.7 231.7 L227.2 231.3 L226.6 230.8 L226.1 230.4 L225.6 229.9 L225.0 229.5 L224.5 229.0 L224.0 228.6 L223.5 228.2 L223.0 227.8 L222.5 227.4 L221.9 227.0 L221.4 226.6 L220.9 226.2 L220.4 225.8 L219.9 225.4 L219.4 225.0 L218.9 224.6 L218.4 224.2 L217.9 223.8 L217.5 223.5 L217.0 223.1 L216.5 222.8 L216.0 222.4 L215.5 222.1 L215.0 221.7 L214.6 221.4 L214.1 221.0 L213.6 220.7 L213.1 220.4 L212.7 220.0 L212.2 219.7 L211.7 219.4 L211.3 219.1 L210.8 218.8 L210.4 218.5 L209.9 218.2 L209.4 217.9 L209.0 217.6 L208.5 217.3 L208.1 217.0 L207.6 216.8 L207.2 216.5 L206.7 216.2 L206.3 215.9 L205.8 215.7 L205.4 215.4 L204.9 215.2 L204.5 214.9 L204.1 214.7 L203.6 214.5 L203.2 214.2 L202.7 214.0 L202.3 213.8 L201.9 213.5 L201.4 213.3 L201.0 213.1 L200.6 212.9 L200.1 212.7 L199.7 212.5 L199.2 212.3 L198.8 212.1 L198.4 211.9 L197.9 211.8 L197.5 211.6 L197.1 211.4 L196.7 211.2 L196.2 211.1 L195.8 210.9 L195.4 210.8 L194.9 210.6 L194.5 210.5 L194.1 210.3 L193.6 210.2 L193.2 210.1 L192.8 209.9 L192.3 209.8 L191.9 209.7 L191.5 209.6 L191.0 209.5 L190.6 209.4 L190.2 209.3 L189.7 209.2 L189.3 209.1 L188.9 209.0 L188.4 208.9 L188.0 208.9 L187.5 208.8 L187.1 208.7 L186.7 208.7 L186.2 208.6 L185.8 208.6 L185.3 208.5 L184.9 208.5 L184.4 208.5 L184.0 208.4 L183.5 208.4 L183.1 208.4 L182.6 208.4 L182.2 208.4 L181.7 208.4 L181.3 208.4 L180.8 208.4 L180.3 208.4 L179.9 208.4 L179.4 208.5 L178.9 208.5 L178.5 208.5 L178.0 208.6 L177.5 208.6 L177.0 208.7 L176.6 208.7 L176.1 208.8 L175.6 208.9 L175.1 209.0 L174.6 209.1 L174.1 209.2 L173.6 209.2 L173.1 209.4 L172.6 209.5 L172.1 209.6 L171.6 209.7 L171.1 209.8 L170.6 210.0 L170.0 210.1 L169.5 210.3 L169.0 210.4 L168.5 210.6 L167.9 210.8 L167.4 211.0 L166.8 211.1 L166.3 211.3 L165.7 211.5 L165.2 211.7 L164.6 212.0 L164.1 212.2 L163.5 212.4 L162.9 212.7 L162.3 212.9 L161.8 213.2 L161.2 213.4 L160.6 213.7 L160.0 214.0 L159.4 214.3 L158.8 214.5 L158.1 214.9 L157.5 215.2 L156.9 215.5 L156.3 215.8 L155.6 216.2 L155.0 216.5 L154.3 216.9 L153.7 217.2 L153.0 217.6 L152.3 218.0 L151.6 218.4 L150.9 218.8 L150.3 219.2 L149.6 219.6 L148.8 220.1 L148.1 220.5 L147.4 221.0 L146.7 221.4 L145.9 221.9 L145.2 222.4 L144.4 222.9 L143.7 223.4 L142.9 223.9 L142.1 224.4 L141.3 225.0 L140.5 225.5 L139.7 226.1 L138.9 226.7 L138.0 227.3 L137.2 227.9 L136.4 228.5 L135.5 229.1 L134.6 229.8 L133.7 230.4 L132.9 231.1 L132.0 231.7 L131.0 232.4 L130.1 233.1 L129.2 233.9 L128.2 234.6 L127.3 235.3 L126.3 236.1 L125.3 236.9 L124.3 237.7 L123.3 238.5 L122.3 239.3 L121.3 240.1 L120.2 241.0 L119.1 241.9 L118.1 242.8 L117.0 243.7 L115.9 244.6 L114.8 245.5 L113.6 246.5 L112.5 247.4 L111.3 248.4 L110.1 249.4 L108.9 250.4 L107.7 251.5 L106.5 252.5 L105.3 253.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M497.4 506.4 L494.9 503.8 L492.4 501.2 L489.9 498.6 L487.4 496.1 L484.9 493.6 L482.5 491.0 L480.0 488.5 L477.6 486.1 L475.2 483.6 L472.9 481.2 L470.5 478.8 L468.2 476.4 L465.8 474.0 L463.5 471.6 L461.3 469.3 L459.0 467.0 L456.7 464.7 L454.5 462.4 L452.3 460.1 L450.1 457.8 L447.9 455.6 L445.7 453.4 L443.6 451.2 L441.4 449.0 L439.3 446.8 L437.2 444.7 L435.1 442.6 L433.0 440.4 L431.0 438.3 L428.9 436.3 L426.9 434.2 L424.9 432.2 L422.9 430.1 L420.9 428.1 L418.9 426.1 L417.0 424.1 L415.1 422.1 L413.1 420.2 L411.2 418.2 L409.3 416.3 L407.4 414.4 L405.6 412.5 L403.7 410.6 L401.9 408.8 L400.0 406.9 L398.2 405.1 L396.4 403.3 L394.6 401.5 L392.9 399.7 L391.1 397.9 L389.4 396.1 L387.6 394.4 L385.9 392.7 L384.2 390.9 L382.5 389.2 L380.8 387.5 L379.1 385.9 L377.5 384.2 L375.8 382.5 L374.2 380.9 L372.6 379.3 L370.9 377.7 L369.3 376.1 L367.7 374.5 L366.2 372.9 L364.6 371.3 L363.0 369.8 L361.5 368.2 L360.0 366.7 L358.4 365.2 L356.9 363.7 L355.4 362.2 L353.9 360.7 L352.4 359.3 L351.0 357.8 L349.5 356.4 L348.1 355.0 L346.6 353.6 L345.2 352.2 L343.8 350.8 L342.4 349.4 L341.0 348.0 L339.6 346.7 L338.2 345.3 L336.8 344.0 L335.5 342.7 L334.1 341.3 L332.8 340.0 L331.4 338.7 L330.1 337.5 L328.8 336.2 L327.5 334.9 L326.2 333.7 L324.9 332.5 L323.6 331.2 L322.4 330.0 L321.1 328.8 L319.8 327.6 L318.6 326.4 L317.4 325.3 L316.1 324.1 L314.9 322.9 L313.7 321.8 L312.5 320.7 L311.3 319.5 L310.1 318.4 L308.9 317.3 L307.8 316.2 L306.6 315.2 L305.4 314.1 L304.3 313.0 L303.1 312.0 L302.0 310.9 L300.9 309.9 L299.7 308.9 L298.6 307.8 L297.5 306.8 L296.4 305.8 L295.3 304.8 L294.2 303.9 L293.2 302.9 L292.1 301.9 L291.0 301.0 L289.9 300.0 L288.9 299.1 L287.8 298.2 L286.8 297.3 L285.8 296.4 L284.7 295.5 L283.7 294.6 L282.7 293.7 L281.7 292.8 L280.7 292.0 L279.7 291.1 L278.7 290.3 L277.7 289.4 L276.7 288.6 L275.7 287.8 L274.7 287.0 L273.8 286.2 L272.8 285.4 L271.8 284.6 L270.9 283.8 L269.9 283.0 L269.0 282.3 L268.1 281.5 L267.1 280.8 L266.2 280.1 L265.3 279.3 L264.3 278.6 L263.4 277.9 L262.5 277.2 L261.6 276.5 L260.7 275.8 L259.8 275.1 L258.9 274.5 L258.0 273.8 L257.1 273.2 L256.2 272.5 L255.4 271.9 L254.5 271.2 L253.6 270.6 L252.7 270.0 L251.9 269.4 L251.0 268.8 L250.1 268.2 L249.3 267.6 L248.4 267.1 L247.6 266.5 L246.7 265.9 L245.9 265.4 L245.0 264.9 L244.2 264.3 L243.4 263.8 L242.5 263.3 L241.7 262.8 L240.9 262.3 L240.1 261.8 L239.2 261.3 L238.4 260.8 L237.6 260.3 L236.8 259.9 L235.9 259.4 L235.1 259.0 L234.3 258.5 L233.5 258.1 L232.7 257.7 L231.9 257.3 L231.1 256.9 L230.3 256.5 L229.5 256.1 L228.7 255.7 L227.9 255.3 L227.1 255.0 L226.3 254.6 L225.5 254.3 L224.7 253.9 L223.9 253.6 L223.1 253.3 L222.3 253.0 L221.5 252.7 L220.7 252.4 L219.9 252.1 L219.1 251.8 L218.3 251.5 L217.5 251.2 L216.7 251.0 L215.9 250.7 L215.1 250.5 L214.3 250.3 L213.5 250.0 L212.7 249.8 L211.9 249.6 L211.1 249.4 L210.3 249.2 L209.5 249.1 L208.7 248.9 L207.9 248.7 L207.1 248.6 L206.3 248.4 L205.5 248.3 L204.7 248.2 L203.9 248.1 L203.1 248.0 L202.3 247.9 L201.4 247.8 L200.6 247.7 L199.8 247.6 L199.0 247.6 L198.1 247.5 L197.3 247.5 L196.5 247.5 L195.6 247.4 L194.8 247.4 L194.0 247.4 L193.1 247.4 L192.3 247.5 L191.4 247.5 L190.6 247.5 L189.7 247.6 L188.8 247.7 L188.0 247.7 L187.1 247.8 L186.2 247.9 L185.3 248.0 L184.5 248.1 L183.6 248.3 L182.7 248.4 L181.8 248.5 L180.9 248.7 L180.0 248.9 L179.0 249.1 L178.1 249.3 L177.2 249.5 L176.3 249.7 L175.3 249.9 L174.4 250.2 L173.4 250.4 L172.5 250.7 L171.5 251.0 L170.5 251.3 L169.5 251.6 L168.6 251.9 L167.6 252.2 L166.6 252.6 L165.6 252.9 L164.5 253.3 L163.5 253.7 L162.5 254.1 L161.4 254.5 L160.4 254.9 L159.3 255.4 L158.3 255.8 L157.2 256.3 L156.1 256.8 L155.0 257.3 L153.9 257.8 L152.8 258.3 L151.6 258.9 L150.5 259.4 L149.4 260.0 L148.2 260.6 L147.0 261.2 L145.8 261.9 L144.6 262.5 L143.4 263.2 L142.2 263.8 L141.0 264.5 L139.7 265.2 L138.5 266.0 L137.2 266.7 L135.9 267.5 L134.6 268.3 L133.3 269.1 L132.0 269.9 L130.7 270.7 L129.3 271.6 L128.0 272.5 L126.6 273.4 L125.2 274.3\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M-163.4 -182.4 L-160.9 -179.8 L-158.4 -177.2 L-155.9 -174.6 L-153.4 -172.1 L-150.9 -169.6 L-148.5 -167.0 L-146.0 -164.5 L-143.6 -162.1 L-141.2 -159.6 L-138.9 -157.2 L-136.5 -154.8 L-134.2 -152.4 L-131.8 -150.0 L-129.5 -147.6 L-127.3 -145.3 L-125.0 -143.0 L-122.7 -140.7 L-120.5 -138.4 L-118.3 -136.1 L-116.1 -133.8 L-113.9 -131.6 L-111.7 -129.4 L-109.6 -127.2 L-107.4 -125.0 L-105.3 -122.8 L-103.2 -120.7 L-101.1 -118.6 L-99.0 -116.4 L-97.0 -114.3 L-94.9 -112.3 L-92.9 -110.2 L-90.9 -108.2 L-88.9 -106.1 L-86.9 -104.1 L-84.9 -102.1 L-83.0 -100.1 L-81.1 -98.1 L-79.1 -96.2 L-77.2 -94.2 L-75.3 -92.3 L-73.4 -90.4 L-71.6 -88.5 L-69.7 -86.6 L-67.9 -84.8 L-66.0 -82.9 L-64.2 -81.1 L-62.4 -79.3 L-60.6 -77.5 L-58.9 -75.7 L-57.1 -73.9 L-55.4 -72.1 L-53.6 -70.4 L-51.9 -68.7 L-50.2 -66.9 L-48.5 -65.2 L-46.8 -63.5 L-45.1 -61.9 L-43.5 -60.2 L-41.8 -58.5 L-40.2 -56.9 L-38.6 -55.3 L-36.9 -53.7 L-35.3 -52.1 L-33.7 -50.5 L-32.2 -48.9 L-30.6 -47.3 L-29.0 -45.8 L-27.5 -44.2 L-26.0 -42.7 L-24.4 -41.2 L-22.9 -39.7 L-21.4 -38.2 L-19.9 -36.7 L-18.4 -35.3 L-17.0 -33.8 L-15.5 -32.4 L-14.1 -31.0 L-12.6 -29.6 L-11.2 -28.2 L-9.8 -26.8 L-8.4 -25.4 L-7.0 -24.0 L-5.6 -22.7 L-4.2 -21.3 L-2.8 -20.0 L-1.5 -18.7 L-0.1 -17.3 L1.2 -16.0 L2.6 -14.7 L3.9 -13.5 L5.2 -12.2 L6.5 -10.9 L7.8 -9.7 L9.1 -8.5 L10.4 -7.2 L11.6 -6.0 L12.9 -4.8 L14.2 -3.6 L15.4 -2.4 L16.6 -1.3 L17.9 -0.1 L19.1 1.1 L20.3 2.2 L21.5 3.3 L22.7 4.5 L23.9 5.6 L25.1 6.7 L26.2 7.8 L27.4 8.8 L28.6 9.9 L29.7 11.0 L30.9 12.0 L32.0 13.1 L33.1 14.1 L34.3 15.1 L35.4 16.2 L36.5 17.2 L37.6 18.2 L38.7 19.2 L39.8 20.1 L40.8 21.1 L41.9 22.1 L43.0 23.0 L44.1 24.0 L45.1 24.9 L46.2 25.8 L47.2 26.7 L48.2 27.6 L49.3 28.5 L50.3 29.4 L51.3 30.3 L52.3 31.2 L53.3 32.0 L54.3 32.9 L55.3 33.7 L56.3 34.6 L57.3 35.4 L58.3 36.2 L59.3 37.0 L60.2 37.8 L61.2 38.6 L62.2 39.4 L63.1 40.2 L64.1 41.0 L65.0 41.7 L65.9 42.5 L66.9 43.2 L67.8 43.9 L68.7 44.7 L69.7 45.4 L70.6 46.1 L71.5 46.8 L72.4 47.5 L73.3 48.2 L74.2 48.9 L75.1 49.5 L76.0 50.2 L76.9 50.8 L77.8 51.5 L78.6 52.1 L79.5 52.8 L80.4 53.4 L81.3 54.0 L82.1 54.6 L83.0 55.2 L83.9 55.8 L84.7 56.4 L85.6 56.9 L86.4 57.5 L87.3 58.1 L88.1 58.6 L89.0 59.1 L89.8 59.7 L90.6 60.2 L91.5 60.7 L92.3 61.2 L93.1 61.7 L93.9 62.2 L94.8 62.7 L95.6 63.2 L96.4 63.7 L97.2 64.1 L98.1 64.6 L98.9 65.0 L99.7 65.5 L100.5 65.9 L101.3 66.3 L102.1 66.7 L102.9 67.1 L103.7 67.5 L104.5 67.9 L105.3 68.3 L106.1 68.7 L106.9 69.0 L107.7 69.4 L108.5 69.7 L109.3 70.1 L110.1 70.4 L110.9 70.7 L111.7 71.0 L112.5 71.3 L113.3 71.6 L114.1 71.9 L114.9 72.2 L115.7 72.5 L116.5 72.8 L117.3 73.0 L118.1 73.3 L118.9 73.5 L119.7 73.7 L120.5 74.0 L121.3 74.2 L122.1 74.4 L122.9 74.6 L123.7 74.8 L124.5 74.9 L125.3 75.1 L126.1 75.3 L126.9 75.4 L127.7 75.6 L128.5 75.7 L129.3 75.8 L130.1 75.9 L130.9 76.0 L131.7 76.1 L132.6 76.2 L133.4 76.3 L134.2 76.4 L135.0 76.4 L135.9 76.5 L136.7 76.5 L137.5 76.5 L138.4 76.6 L139.2 76.6 L140.0 76.6 L140.9 76.6 L141.7 76.5 L142.6 76.5 L143.4 76.5 L144.3 76.4 L145.2 76.3 L146.0 76.3 L146.9 76.2 L147.8 76.1 L148.7 76.0 L149.5 75.9 L150.4 75.7 L151.3 75.6 L152.2 75.5 L153.1 75.3 L154.0 75.1 L155.0 74.9 L155.9 74.7 L156.8 74.5 L157.7 74.3 L158.7 74.1 L159.6 73.8 L160.6 73.6 L161.5 73.3 L162.5 73.0 L163.5 72.7 L164.5 72.4 L165.4 72.1 L166.4 71.8 L167.4 71.4 L168.4 71.1 L169.5 70.7 L170.5 70.3 L171.5 69.9 L172.6 69.5 L173.6 69.1 L174.7 68.6 L175.7 68.2 L176.8 67.7 L177.9 67.2 L179.0 66.7 L180.1 66.2 L181.2 65.7 L182.4 65.1 L183.5 64.6 L184.6 64.0 L185.8 63.4 L187.0 62.8 L188.2 62.1 L189.4 61.5 L190.6 60.8 L191.8 60.2 L193.0 59.5 L194.3 58.8 L195.5 58.0 L196.8 57.3 L198.1 56.5 L199.4 55.7 L200.7 54.9 L202.0 54.1 L203.3 53.3 L204.7 52.4 L206.0 51.5 L207.4 50.6 L208.8 49.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M35.3 23.8 L36.3 24.8 L37.3 25.8 L38.3 26.9 L39.3 27.9 L40.3 28.9 L41.3 29.9 L42.3 30.9 L43.3 31.8 L44.2 32.8 L45.2 33.8 L46.1 34.7 L47.1 35.7 L48.0 36.6 L48.9 37.6 L49.9 38.5 L50.8 39.4 L51.7 40.3 L52.6 41.2 L53.5 42.1 L54.4 43.0 L55.3 43.9 L56.1 44.8 L57.0 45.7 L57.9 46.5 L58.7 47.4 L59.6 48.2 L60.4 49.1 L61.3 49.9 L62.1 50.7 L62.9 51.5 L63.8 52.4 L64.6 53.2 L65.4 54.0 L66.2 54.8 L67.0 55.6 L67.8 56.3 L68.6 57.1 L69.4 57.9 L70.1 58.6 L70.9 59.4 L71.7 60.2 L72.4 60.9 L73.2 61.6 L73.9 62.4 L74.7 63.1 L75.4 63.8 L76.2 64.5 L76.9 65.2 L77.6 65.9 L78.3 66.6 L79.0 67.3 L79.8 68.0 L80.5 68.7 L81.2 69.4 L81.9 70.0 L82.5 70.7 L83.2 71.3 L83.9 72.0 L84.6 72.6 L85.3 73.3 L85.9 73.9 L86.6 74.5 L87.3 75.1 L87.9 75.8 L88.6 76.4 L89.2 77.0 L89.8 77.6 L90.5 78.2 L91.1 78.8 L91.7 79.3 L92.4 79.9 L93.0 80.5 L93.6 81.1 L94.2 81.6 L94.8 82.2 L95.4 82.7 L96.0 83.3 L96.6 83.8 L97.2 84.4 L97.8 84.9 L98.4 85.4 L99.0 85.9 L99.6 86.5 L100.2 87.0 L100.7 87.5 L101.3 88.0 L101.9 88.5 L102.4 89.0 L103.0 89.5 L103.6 89.9 L104.1 90.4 L104.7 90.9 L105.2 91.4 L105.7 91.8 L106.3 92.3 L106.8 92.7 L107.4 93.2 L107.9 93.6 L108.4 94.1 L109.0 94.5 L109.5 95.0 L110.0 95.4 L110.5 95.8 L111.0 96.2 L111.5 96.6 L112.1 97.0 L112.6 97.4 L113.1 97.8 L113.6 98.2 L114.1 98.6 L114.6 99.0 L115.1 99.4 L115.6 99.8 L116.1 100.2 L116.5 100.5 L117.0 100.9 L117.5 101.2 L118.0 101.6 L118.5 101.9 L119.0 102.3 L119.4 102.6 L119.9 103.0 L120.4 103.3 L120.9 103.6 L121.3 104.0 L121.8 104.3 L122.3 104.6 L122.7 104.9 L123.2 105.2 L123.6 105.5 L124.1 105.8 L124.6 106.1 L125.0 106.4 L125.5 106.7 L125.9 107.0 L126.4 107.2 L126.8 107.5 L127.3 107.8 L127.7 108.1 L128.2 108.3 L128.6 108.6 L129.1 108.8 L129.5 109.1 L129.9 109.3 L130.4 109.5 L130.8 109.8 L131.3 110.0 L131.7 110.2 L132.1 110.5 L132.6 110.7 L133.0 110.9 L133.4 111.1 L133.9 111.3 L134.3 111.5 L134.8 111.7 L135.2 111.9 L135.6 112.1 L136.1 112.2 L136.5 112.4 L136.9 112.6 L137.3 112.8 L137.8 112.9 L138.2 113.1 L138.6 113.2 L139.1 113.4 L139.5 113.5 L139.9 113.7 L140.4 113.8 L140.8 113.9 L141.2 114.1 L141.7 114.2 L142.1 114.3 L142.5 114.4 L143.0 114.5 L143.4 114.6 L143.8 114.7 L144.3 114.8 L144.7 114.9 L145.1 115.0 L145.6 115.1 L146.0 115.1 L146.5 115.2 L146.9 115.3 L147.3 115.3 L147.8 115.4 L148.2 115.4 L148.7 115.5 L149.1 115.5 L149.6 115.5 L150.0 115.6 L150.5 115.6 L150.9 115.6 L151.4 115.6 L151.8 115.6 L152.3 115.6 L152.7 115.6 L153.2 115.6 L153.7 115.6 L154.1 115.6 L154.6 115.5 L155.1 115.5 L155.5 115.5 L156.0 115.4 L156.5 115.4 L157.0 115.3 L157.4 115.3 L157.9 115.2 L158.4 115.1 L158.9 115.0 L159.4 114.9 L159.9 114.8 L160.4 114.8 L160.9 114.6 L161.4 114.5 L161.9 114.4 L162.4 114.3 L162.9 114.2 L163.4 114.0 L164.0 113.9 L164.5 113.7 L165.0 113.6 L165.5 113.4 L166.1 113.2 L166.6 113.0 L167.2 112.9 L167.7 112.7 L168.3 112.5 L168.8 112.3 L169.4 112.0 L169.9 111.8 L170.5 111.6 L171.1 111.3 L171.7 111.1 L172.2 110.8 L172.8 110.6 L173.4 110.3 L174.0 110.0 L174.6 109.7 L175.2 109.5 L175.9 109.1 L176.5 108.8 L177.1 108.5 L177.7 108.2 L178.4 107.8 L179.0 107.5 L179.7 107.1 L180.3 106.8 L181.0 106.4 L181.7 106.0 L182.4 105.6 L183.1 105.2 L183.7 104.8 L184.4 104.4 L185.2 103.9 L185.9 103.5 L186.6 103.0 L187.3 102.6 L188.1 102.1 L188.8 101.6 L189.6 101.1 L190.3 100.6 L191.1 100.1 L191.9 99.6 L192.7 99.0 L193.5 98.5 L194.3 97.9 L195.1 97.3 L196.0 96.7 L196.8 96.1 L197.6 95.5 L198.5 94.9 L199.4 94.2 L200.3 93.6 L201.1 92.9 L202.0 92.3 L203.0 91.6 L203.9 90.9 L204.8 90.1 L205.8 89.4 L206.7 88.7 L207.7 87.9 L208.7 87.1 L209.7 86.3 L210.7 85.5 L211.7 84.7 L212.7 83.9 L213.8 83.0 L214.9 82.1 L215.9 81.2 L217.0 80.3 L218.1 79.4 L219.2 78.5 L220.4 77.5 L221.5 76.6 L222.7 75.6 L223.9 74.6 L225.1 73.6 L226.3 72.5 L227.5 71.5 L228.7 70.4\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M300.2 298.7 L299.2 297.6 L298.2 296.6 L297.3 295.5 L296.3 294.5 L295.3 293.4 L294.3 292.4 L293.4 291.4 L292.4 290.4 L291.5 289.4 L290.6 288.4 L289.7 287.4 L288.7 286.4 L287.8 285.5 L286.9 284.5 L286.0 283.5 L285.1 282.6 L284.3 281.6 L283.4 280.7 L282.5 279.8 L281.7 278.8 L280.8 277.9 L280.0 277.0 L279.1 276.1 L278.3 275.2 L277.5 274.3 L276.7 273.4 L275.8 272.6 L275.0 271.7 L274.2 270.8 L273.4 270.0 L272.7 269.1 L271.9 268.3 L271.1 267.4 L270.3 266.6 L269.6 265.8 L268.8 264.9 L268.1 264.1 L267.3 263.3 L266.6 262.5 L265.9 261.7 L265.2 260.9 L264.4 260.1 L263.7 259.3 L263.0 258.6 L262.3 257.8 L261.6 257.0 L260.9 256.3 L260.3 255.5 L259.6 254.7 L258.9 254.0 L258.3 253.3 L257.6 252.5 L256.9 251.8 L256.3 251.1 L255.6 250.3 L255.0 249.6 L254.4 248.9 L253.8 248.2 L253.1 247.5 L252.5 246.8 L251.9 246.1 L251.3 245.4 L250.7 244.7 L250.1 244.1 L249.5 243.4 L248.9 242.7 L248.4 242.1 L247.8 241.4 L247.2 240.7 L246.7 240.1 L246.1 239.4 L245.6 238.8 L245.0 238.1 L244.5 237.5 L243.9 236.9 L243.4 236.2 L242.9 235.6 L242.3 235.0 L241.8 234.4 L241.3 233.8 L240.8 233.2 L240.3 232.6 L239.8 232.0 L239.3 231.4 L238.8 230.8 L238.3 230.2 L237.9 229.6 L237.4 229.0 L236.9 228.4 L236.4 227.8 L236.0 227.3 L235.5 226.7 L235.1 226.1 L234.6 225.6 L234.2 225.0 L233.7 224.4 L233.3 223.9 L232.9 223.3 L232.5 222.8 L232.0 222.2 L231.6 221.7 L231.2 221.1 L230.8 220.6 L230.4 220.1 L230.0 219.5 L229.6 219.0 L229.2 218.5 L228.8 218.0 L228.4 217.4 L228.1 216.9 L227.7 216.4 L227.3 215.9 L227.0 215.4 L226.6 214.9 L226.3 214.4 L225.9 213.8 L225.6 213.3 L225.2 212.8 L224.9 212.3 L224.5 211.9 L224.2 211.4 L223.9 210.9 L223.6 210.4 L223.2 209.9 L222.9 209.4 L222.6 208.9 L222.3 208.4 L222.0 207.9 L221.7 207.5 L221.4 207.0 L221.1 206.5 L220.9 206.0 L220.6 205.6 L220.3 205.1 L220.0 204.6 L219.8 204.2 L219.5 203.7 L219.2 203.2 L219.0 202.8 L218.7 202.3 L218.5 201.8 L218.3 201.4 L218.0 200.9 L217.8 200.5 L217.6 200.0 L217.3 199.5 L217.1 199.1 L216.9 198.6 L216.7 198.2 L216.5 197.7 L216.3 197.3 L216.1 196.8 L215.9 196.4 L215.7 195.9 L215.5 195.5 L215.3 195.0 L215.1 194.6 L215.0 194.1 L214.8 193.7 L214.6 193.2 L214.5 192.8 L214.3 192.3 L214.1 191.9 L214.0 191.4 L213.9 191.0 L213.7 190.5 L213.6 190.1 L213.5 189.6 L213.3 189.2 L213.2 188.7 L213.1 188.3 L213.0 187.8 L212.9 187.4 L212.8 186.9 L212.7 186.5 L212.6 186.0 L212.5 185.6 L212.4 185.1 L212.3 184.7 L212.2 184.2 L212.2 183.8 L212.1 183.3 L212.0 182.8 L212.0 182.4 L211.9 181.9 L211.9 181.5 L211.9 181.0 L211.8 180.5 L211.8 180.1 L211.8 179.6 L211.7 179.1 L211.7 178.7 L211.7 178.2 L211.7 177.7 L211.7 177.3 L211.7 176.8 L211.7 176.3 L211.7 175.8 L211.8 175.3 L211.8 174.9 L211.8 174.4 L211.8 173.9 L211.9 173.4 L211.9 172.9 L212.0 172.4 L212.1 171.9 L212.1 171.4 L212.2 170.9 L212.3 170.4 L212.4 169.9 L212.4 169.4 L212.5 168.9 L212.6 168.3 L212.7 167.8 L212.9 167.3 L213.0 166.8 L213.1 166.2 L213.2 165.7 L213.4 165.2 L213.5 164.6 L213.7 164.1 L213.8 163.5 L214.0 163.0 L214.2 162.4 L214.4 161.8 L214.5 161.3 L214.7 160.7 L214.9 160.1 L215.1 159.5 L215.4 159.0 L215.6 158.4 L215.8 157.8 L216.1 157.2 L216.3 156.6 L216.6 156.0 L216.8 155.3 L217.1 154.7 L217.4 154.1 L217.6 153.4 L217.9 152.8 L218.2 152.2 L218.5 151.5 L218.9 150.9 L219.2 150.2 L219.5 149.5 L219.9 148.8 L220.2 148.2 L220.6 147.5 L221.0 146.8 L221.3 146.1 L221.7 145.3 L222.1 144.6 L222.5 143.9 L223.0 143.2 L223.4 142.4 L223.8 141.7 L224.3 140.9 L224.7 140.1 L225.2 139.4 L225.7 138.6 L226.2 137.8 L226.7 137.0 L227.2 136.2 L227.7 135.3 L228.2 134.5 L228.8 133.7 L229.3 132.8 L229.9 132.0 L230.5 131.1 L231.1 130.2 L231.7 129.3 L232.3 128.4 L232.9 127.5 L233.6 126.6 L234.2 125.6 L234.9 124.7 L235.6 123.7 L236.3 122.8 L237.0 121.8 L237.7 120.8 L238.4 119.8 L239.2 118.8 L239.9 117.7 L240.7 116.7 L241.5 115.6 L242.3 114.5 L243.1 113.5 L244.0 112.4 L244.8 111.2 L245.7 110.1 L246.6 109.0 L247.5 107.8 L248.4 106.6 L249.3 105.4 L250.3 104.2 L251.3 103.0 L252.2 101.8 L253.2 100.5 L254.3 99.2 L255.3 97.9\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><path d=\"M498.9 504.8 L496.4 502.2 L493.9 499.6 L491.4 497.0 L489.0 494.4 L486.5 491.9 L484.1 489.3 L481.7 486.8 L479.3 484.3 L477.0 481.8 L474.6 479.4 L472.3 476.9 L470.0 474.5 L467.7 472.1 L465.4 469.7 L463.2 467.3 L460.9 465.0 L458.7 462.6 L456.5 460.3 L454.3 458.0 L452.1 455.7 L450.0 453.5 L447.8 451.2 L445.7 449.0 L443.6 446.7 L441.5 444.5 L439.5 442.4 L437.4 440.2 L435.4 438.0 L433.3 435.9 L431.3 433.8 L429.3 431.7 L427.4 429.6 L425.4 427.5 L423.5 425.5 L421.5 423.4 L419.6 421.4 L417.7 419.4 L415.8 417.4 L414.0 415.4 L412.1 413.4 L410.3 411.5 L408.4 409.5 L406.6 407.6 L404.8 405.7 L403.1 403.8 L401.3 401.9 L399.5 400.1 L397.8 398.2 L396.1 396.4 L394.4 394.5 L392.7 392.7 L391.0 390.9 L389.3 389.1 L387.6 387.4 L386.0 385.6 L384.4 383.8 L382.7 382.1 L381.1 380.4 L379.5 378.7 L378.0 377.0 L376.4 375.3 L374.8 373.6 L373.3 371.9 L371.8 370.3 L370.2 368.7 L368.7 367.0 L367.3 365.4 L365.8 363.8 L364.3 362.2 L362.8 360.6 L361.4 359.1 L360.0 357.5 L358.5 356.0 L357.1 354.4 L355.7 352.9 L354.4 351.4 L353.0 349.9 L351.6 348.4 L350.3 346.9 L348.9 345.4 L347.6 344.0 L346.3 342.5 L345.0 341.1 L343.7 339.6 L342.4 338.2 L341.1 336.8 L339.8 335.4 L338.6 334.0 L337.3 332.6 L336.1 331.2 L334.9 329.9 L333.7 328.5 L332.5 327.2 L331.3 325.8 L330.1 324.5 L328.9 323.2 L327.8 321.9 L326.6 320.6 L325.5 319.3 L324.3 318.0 L323.2 316.7 L322.1 315.5 L321.0 314.2 L319.9 313.0 L318.8 311.7 L317.8 310.5 L316.7 309.3 L315.7 308.0 L314.6 306.8 L313.6 305.6 L312.5 304.4 L311.5 303.2 L310.5 302.1 L309.5 300.9 L308.5 299.7 L307.6 298.6 L306.6 297.4 L305.6 296.3 L304.7 295.1 L303.7 294.0 L302.8 292.9 L301.9 291.8 L301.0 290.7 L300.0 289.6 L299.1 288.5 L298.3 287.4 L297.4 286.3 L296.5 285.2 L295.6 284.2 L294.8 283.1 L293.9 282.0 L293.1 281.0 L292.3 279.9 L291.4 278.9 L290.6 277.9 L289.8 276.8 L289.0 275.8 L288.2 274.8 L287.4 273.8 L286.7 272.8 L285.9 271.8 L285.2 270.8 L284.4 269.8 L283.7 268.8 L282.9 267.8 L282.2 266.9 L281.5 265.9 L280.8 264.9 L280.1 264.0 L279.4 263.0 L278.7 262.1 L278.0 261.1 L277.4 260.2 L276.7 259.2 L276.0 258.3 L275.4 257.4 L274.8 256.4 L274.1 255.5 L273.5 254.6 L272.9 253.7 L272.3 252.8 L271.7 251.9 L271.1 251.0 L270.5 250.1 L269.9 249.2 L269.4 248.3 L268.8 247.4 L268.3 246.5 L267.7 245.6 L267.2 244.7 L266.6 243.9 L266.1 243.0 L265.6 242.1 L265.1 241.2 L264.6 240.4 L264.1 239.5 L263.6 238.7 L263.2 237.8 L262.7 236.9 L262.2 236.1 L261.8 235.2 L261.3 234.4 L260.9 233.5 L260.5 232.7 L260.0 231.9 L259.6 231.0 L259.2 230.2 L258.8 229.3 L258.4 228.5 L258.1 227.7 L257.7 226.8 L257.3 226.0 L257.0 225.2 L256.6 224.3 L256.3 223.5 L255.9 222.7 L255.6 221.8 L255.3 221.0 L255.0 220.2 L254.7 219.4 L254.4 218.5 L254.1 217.7 L253.8 216.9 L253.5 216.1 L253.3 215.2 L253.0 214.4 L252.8 213.6 L252.5 212.8 L252.3 211.9 L252.1 211.1 L251.9 210.3 L251.7 209.4 L251.5 208.6 L251.3 207.8 L251.1 207.0 L250.9 206.1 L250.8 205.3 L250.6 204.5 L250.5 203.6 L250.3 202.8 L250.2 202.0 L250.1 201.1 L250.0 200.3 L249.9 199.4 L249.8 198.6 L249.7 197.7 L249.6 196.9 L249.5 196.0 L249.5 195.2 L249.4 194.3 L249.4 193.5 L249.4 192.6 L249.4 191.7 L249.3 190.8 L249.3 190.0 L249.4 189.1 L249.4 188.2 L249.4 187.3 L249.4 186.4 L249.5 185.6 L249.6 184.7 L249.6 183.8 L249.7 182.9 L249.8 181.9 L249.9 181.0 L250.0 180.1 L250.1 179.2 L250.3 178.3 L250.4 177.3 L250.6 176.4 L250.7 175.4 L250.9 174.5 L251.1 173.5 L251.3 172.6 L251.5 171.6 L251.7 170.6 L252.0 169.6 L252.2 168.7 L252.5 167.7 L252.7 166.7 L253.0 165.7 L253.3 164.6 L253.6 163.6 L254.0 162.6 L254.3 161.5 L254.6 160.5 L255.0 159.4 L255.4 158.4 L255.8 157.3 L256.1 156.2 L256.6 155.1 L257.0 154.0 L257.4 152.9 L257.9 151.8 L258.4 150.7 L258.8 149.5 L259.3 148.4 L259.8 147.2 L260.4 146.1 L260.9 144.9 L261.5 143.7 L262.0 142.5 L262.6 141.3 L263.2 140.0 L263.9 138.8 L264.5 137.6 L265.1 136.3 L265.8 135.0 L266.5 133.7 L267.2 132.4 L267.9 131.1 L268.7 129.8 L269.4 128.4 L270.2 127.1 L271.0 125.7 L271.8 124.3 L272.6 122.9 L273.5 121.5 L274.3 120.1 L275.2 118.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" clip-path=\"url(#aifn34)\"/><text x=\"34.0\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−4</text><text x=\"67.2\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"100.5\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"133.8\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"200.2\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"233.5\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"266.8\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"300.0\" y=\"178.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"161.0\" y=\"304.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−4</text><text x=\"161.0\" y=\"270.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"161.0\" y=\"235.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"161.0\" y=\"201.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"161.0\" y=\"132.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"161.0\" y=\"97.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"161.0\" y=\"63.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"161.0\" y=\"28.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"161.0\" y=\"177.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><path d=\"M257.7 68.1 L252.7 80.1 L245.7 73.0 Z\" fill=\"#0b0d12\"/><path d=\"M76.3 255.9 L81.3 243.9 L88.3 251.0 Z\" fill=\"#0b0d12\"/><path d=\"M249.2 247.5 L261.2 252.4 L254.2 259.5 Z\" fill=\"#0b0d12\"/><path d=\"M84.8 76.5 L72.8 71.6 L79.8 64.5 Z\" fill=\"#0b0d12\"/></svg>"
+     }
+    ],
+    "answer": "A saddle point (unstable)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The solution is \\(c_{1}e^{4t}\\begin{pmatrix}1 \\\\ 1\\end{pmatrix} + c_{2}e^{-2t}\\begin{pmatrix}1 \\\\ -1\\end{pmatrix}\\); it tends to the origin only if \\(c_{1} = 0\\)."
+    ],
+    "answer": "Only starting points on the line \\(y = -x\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-ca-hl-030",
+  "strand": "Calculus",
+  "subtopic": "Coupled systems and phase portraits",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Each system below has the form \\(\\begin{pmatrix}\\dot{x} \\\\ \\dot{y}\\end{pmatrix} = \\boldsymbol{A}\\begin{pmatrix}x \\\\ y\\end{pmatrix}\\). For each, find the eigenvalues of \\(\\boldsymbol{A}\\) and state the type of equilibrium at the origin."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "\\(\\boldsymbol{A} = \\begin{pmatrix}-3 & 1 \\\\ 0 & -2\\end{pmatrix}\\)",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "\\(\\boldsymbol{A} = \\begin{pmatrix}2 & 1 \\\\ 1 & -2\\end{pmatrix}\\)",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "\\(\\boldsymbol{A} = \\begin{pmatrix}1 & -1 \\\\ 1 & 1\\end{pmatrix}\\)",
+    "marks": 2
+   }
+  ],
+  "idea": "Two negative real eigenvalues: stable node (sink). Opposite signs: saddle. Complex with positive real part: unstable spiral (spirals outwards).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The matrix is triangular, so the eigenvalues are its diagonal entries."
+    ],
+    "answer": "\\(\\lambda = -3, -2\\): stable node"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\((2 - \\lambda)(-2 - \\lambda) - 1 = \\lambda^{2} - 5 = 0\\)"
+    ],
+    "answer": "\\(\\lambda = \\pm\\sqrt{5}\\): saddle point"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((1 - \\lambda)^{2} + 1 = 0\\), so \\(\\lambda = 1 \\pm i\\)."
+    ],
+    "answer": "\\(\\lambda = 1 \\pm i\\): unstable spiral"
+   }
+  ]
+ }
+]

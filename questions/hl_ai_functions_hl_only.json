@@ -1,0 +1,1722 @@
+[
+ {
+  "id": "ai-fn-hl-001",
+  "strand": "Functions",
+  "subtopic": "Composite and inverse functions",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "Let \\(f(x) = 2x + 3\\) and \\(g(x) = x^{2} - 1\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\((f \\circ g)(2)\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find an expression for \\((g \\circ f)(x)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find \\(f^{-1}(x)\\), and hence find \\(f^{-1}(11)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "\\((f \\circ g)(x) = f(g(x))\\): apply \\(g\\) first, then \\(f\\). To find an inverse, write \\(y = f(x)\\), swap \\(x\\) and \\(y\\), and make \\(y\\) the subject.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(g(2) = 3\\), then \\(f(3) = 9\\)."
+    ],
+    "answer": "9"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(g(2x + 3) = (2x + 3)^{2} - 1 = 4x^{2} + 12x + 9 - 1\\)"
+    ],
+    "answer": "\\(4x^{2} + 12x + 8\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(x = 2y + 3\\), so \\(y = \\dfrac{x - 3}{2}\\). Then \\(f^{-1}(11) = \\dfrac{8}{2}\\)."
+    ],
+    "answer": "\\(f^{-1}(x) = \\dfrac{x - 3}{2}\\); \\(f^{-1}(11) = 4\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-002",
+  "strand": "Functions",
+  "subtopic": "Composite and inverse functions",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A delivery van uses \\(F(d) = 0.08d + 1.5\\) litres of fuel on a trip of \\(d\\) km (the extra 1.5 litres is for starting and idling). Fuel costs \\(C(F) = 1.9F\\) dollars for \\(F\\) litres."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the cost of the fuel for a 120 km trip.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find an expression for \\((C \\circ F)(d)\\), and explain what it represents.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the inverse of \\(C \\circ F\\), and hence find the length of trip that uses $30 of fuel.",
+    "marks": 2
+   }
+  ],
+  "idea": "The output of \\(F\\) (litres) is the input of \\(C\\), so \\(C \\circ F\\) turns a distance straight into a cost. Its inverse turns a cost back into a distance.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(F(120) = 9.6 + 1.5 = 11.1\\) litres, and \\(C(11.1) = 1.9 \\times 11.1\\)."
+    ],
+    "answer": "$21.09"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(C(0.08d + 1.5) = 1.9(0.08d + 1.5)\\)"
+    ],
+    "answer": "\\((C \\circ F)(d) = 0.152d + 2.85\\): the fuel cost, in dollars, of a trip of \\(d\\) km"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(x = 0.152y + 2.85\\), so \\(y = \\dfrac{x - 2.85}{0.152}\\). At \\(x = 30\\): \\(\\dfrac{27.15}{0.152} = 178.6\\ldots\\)"
+    ],
+    "answer": "\\((C \\circ F)^{-1}(x) = \\dfrac{x - 2.85}{0.152}\\); 179 km"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-003",
+  "strand": "Functions",
+  "subtopic": "Composite and inverse functions",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Let \\(f(x) = (x - 2)^{2} + 1\\), for \\(x \\ge 2\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Explain why \\(f\\) has an inverse on this domain, but not on all of \\(\\mathbb{R}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(f^{-1}(x)\\), and state its domain and range.",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(x\\) for which \\(f(x) = f^{-1}(x)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "A function has an inverse only if it is one-to-one. The graphs of \\(f\\) and \\(f^{-1}\\) are reflections in \\(y = x\\), so for an increasing function they meet on that line.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "For \\(x \\ge 2\\) the function only increases, so each output comes from one input. On \\(\\mathbb{R}\\), \\(f(1) = f(3) = 2\\)."
+    ],
+    "answer": "It is one-to-one for \\(x \\ge 2\\), but not on \\(\\mathbb{R}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(x = (y - 2)^{2} + 1\\), so \\(y - 2 = \\sqrt{x - 1}\\) (positive root, because \\(y \\ge 2\\)).",
+     "The domain of \\(f^{-1}\\) is the range of \\(f\\), and the range of \\(f^{-1}\\) is the domain of \\(f\\)."
+    ],
+    "answer": "\\(f^{-1}(x) = 2 + \\sqrt{x - 1}\\); domain \\(x \\ge 1\\); range \\(f^{-1}(x) \\ge 2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(f(x) = x\\): \\((x - 2)^{2} + 1 = x\\), so \\(x^{2} - 5x + 5 = 0\\) and \\(x = \\dfrac{5 \\pm \\sqrt{5}}{2}\\).",
+     "Only \\(\\dfrac{5 + \\sqrt{5}}{2} = 3.618\\ldots\\) satisfies \\(x \\ge 2\\)."
+    ],
+    "answer": "\\(x = \\dfrac{5 + \\sqrt{5}}{2} = 3.62\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-004",
+  "strand": "Functions",
+  "subtopic": "Composite and inverse functions",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(f(x) = 3e^{0.5x} - 2\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the range of \\(f\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(f^{-1}(x)\\), and state its domain.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find \\(f^{-1}(10)\\), and check your answer.",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(e^{0.5x}\\) takes every positive value, so \\(3e^{0.5x} - 2\\) takes every value above \\(-2\\). The natural logarithm undoes \\(e\\): \\(\\ln e^{u} = u\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(3e^{0.5x} > 0\\)"
+    ],
+    "answer": "\\(f(x) > -2\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(x = 3e^{0.5y} - 2\\), so \\(e^{0.5y} = \\dfrac{x + 2}{3}\\) and \\(0.5y = \\ln\\dfrac{x + 2}{3}\\)."
+    ],
+    "answer": "\\(f^{-1}(x) = 2\\ln\\dfrac{x + 2}{3}\\), for \\(x > -2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2\\ln 4 = 2.772\\ldots\\) Check: \\(3e^{0.5 \\times 2\\ln 4} - 2 = 3e^{\\ln 4} - 2 = 12 - 2 = 10\\)."
+    ],
+    "answer": "\\(2\\ln 4 = 2.77\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-005",
+  "strand": "Functions",
+  "subtopic": "Composite and inverse functions",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Let \\(f(x) = \\sqrt{x - 1}\\), for \\(x \\ge 1\\), and \\(g(x) = x^{2} + 2x\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\((f \\circ g)(3)\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the values of \\(x\\) for which \\((f \\circ g)(x)\\) is defined.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find an expression for \\((g \\circ f)(x)\\), and state its domain and range.",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(f \\circ g\\) exists only where the output of \\(g\\) is in the domain of \\(f\\): here \\(g(x) \\ge 1\\). For \\(g \\circ f\\), the domain is that of \\(f\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(g(3) = 15\\), \\(f(15) = \\sqrt{14} = 3.741\\ldots\\)"
+    ],
+    "answer": "\\(\\sqrt{14} = 3.74\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Need \\(x^{2} + 2x \\ge 1\\), so \\(x^{2} + 2x - 1 \\ge 0\\). The roots are \\(x = -1 \\pm \\sqrt{2}\\).",
+     "The quadratic is positive outside its roots."
+    ],
+    "answer": "\\(x \\le -1 - \\sqrt{2}\\) or \\(x \\ge -1 + \\sqrt{2}\\) (\\(x \\le -2.41\\) or \\(x \\ge 0.414\\))"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(g(\\sqrt{x - 1}) = (x - 1) + 2\\sqrt{x - 1}\\). Domain \\(x \\ge 1\\). At \\(x = 1\\) the value is 0, and it increases from there."
+    ],
+    "answer": "\\((g \\circ f)(x) = x - 1 + 2\\sqrt{x - 1}\\); domain \\(x \\ge 1\\); range \\(y \\ge 0\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-006",
+  "strand": "Functions",
+  "subtopic": "Composite and inverse functions",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "Let \\(f(x) = \\dfrac{2x + 1}{x - 2}\\), for \\(x \\ne 2\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the equations of the asymptotes of the graph of \\(f\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(f(f(x)) = x\\), and hence write down \\(f^{-1}(x)\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the values of \\(x\\) for which \\(f(x) = x\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Explain, using a property of the graph, why your answers to part (c) are where the graph meets the line \\(y = x\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "A function with \\(f(f(x)) = x\\) is its own inverse, so its graph is symmetrical in the line \\(y = x\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The denominator is 0 at \\(x = 2\\). For large \\(|x|\\), \\(f(x) \\approx \\dfrac{2x}{x} = 2\\)."
+    ],
+    "answer": "\\(x = 2\\) and \\(y = 2\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(f(f(x)) = \\dfrac{2\\frac{2x + 1}{x - 2} + 1}{\\frac{2x + 1}{x - 2} - 2} = \\dfrac{2(2x + 1) + (x - 2)}{(2x + 1) - 2(x - 2)} = \\dfrac{5x}{5}\\)"
+    ],
+    "answer": "\\(f(f(x)) = x\\), so \\(f^{-1}(x) = \\dfrac{2x + 1}{x - 2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2x + 1 = x(x - 2)\\), so \\(x^{2} - 4x - 1 = 0\\) and \\(x = 2 \\pm \\sqrt{5}\\)."
+    ],
+    "answer": "\\(x = 2 \\pm \\sqrt{5}\\) (4.24 and \\(-0.236\\))"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The graph of a self-inverse function is its own reflection in \\(y = x\\)."
+    ],
+    "answer": "Points with \\(f(x) = x\\) lie on \\(y = x\\), the line of symmetry of the graph"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-007",
+  "strand": "Functions",
+  "subtopic": "Transformations of graphs",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The graph of \\(y = x^{2}\\) is transformed to the graph of \\(y = 3(x - 2)^{2} + 1\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Describe a sequence of transformations that does this.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write down the coordinates of the vertex of the new graph.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the image of the point \\((1, 1)\\) on \\(y = x^{2}\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "\\(y = af(x - h) + k\\): a horizontal translation by \\(h\\), a vertical stretch by factor \\(a\\), then a vertical translation by \\(k\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(x - 2\\) inside: shift right. Multiply by 3: vertical stretch. Add 1: shift up."
+    ],
+    "answer": "A translation 2 units right, a vertical stretch with scale factor 3, then a translation 1 unit up"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The vertex \\((0, 0)\\) moves right 2 and up 1; the stretch does not move it."
+    ],
+    "answer": "\\((2, 1)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\((1, 1) \\to (3, 1) \\to (3, 3) \\to (3, 4)\\). Check: \\(3(3 - 2)^{2} + 1 = 4\\)."
+    ],
+    "answer": "\\((3, 4)\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-008",
+  "strand": "Functions",
+  "subtopic": "Transformations of graphs",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The graph of \\(y = f(x)\\) for \\(-4 \\le x \\le 6\\) is shown. It is made of two straight line segments.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 360 290\" width=\"360\" height=\"290\" role=\"img\" aria-label=\"Graph of y = f(x), made of two straight line segments: from (-4, 1) down to (0, -2), then up to (6, 5).\"><defs><clipPath id=\"aifn21\"><rect x=\"34\" y=\"24\" width=\"296\" height=\"236\"/></clipPath></defs><line x1=\"34.0\" y1=\"260.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.7\" y1=\"260.0\" x2=\"58.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"83.3\" y1=\"260.0\" x2=\"83.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"108.0\" y1=\"260.0\" x2=\"108.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"132.7\" y1=\"260.0\" x2=\"132.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"157.3\" y1=\"260.0\" x2=\"157.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"182.0\" y1=\"260.0\" x2=\"182.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"206.7\" y1=\"260.0\" x2=\"206.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"231.3\" y1=\"260.0\" x2=\"231.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"256.0\" y1=\"260.0\" x2=\"256.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"280.7\" y1=\"260.0\" x2=\"280.7\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"305.3\" y1=\"260.0\" x2=\"305.3\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"330.0\" y1=\"260.0\" x2=\"330.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"260.0\" x2=\"330.0\" y2=\"260.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"233.8\" x2=\"330.0\" y2=\"233.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"207.6\" x2=\"330.0\" y2=\"207.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"181.3\" x2=\"330.0\" y2=\"181.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"155.1\" x2=\"330.0\" y2=\"155.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"128.9\" x2=\"330.0\" y2=\"128.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"102.7\" x2=\"330.0\" y2=\"102.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"76.4\" x2=\"330.0\" y2=\"76.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"50.2\" x2=\"330.0\" y2=\"50.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"330.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"181.3\" x2=\"340.0\" y2=\"181.3\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"157.3\" y1=\"260.0\" x2=\"157.3\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M346.0 181.3 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M157.3 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"342.0\" y=\"200.3\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"144.3\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"34.0\" y1=\"178.3\" x2=\"34.0\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"58.7\" y1=\"178.3\" x2=\"58.7\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"83.3\" y1=\"178.3\" x2=\"83.3\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"108.0\" y1=\"178.3\" x2=\"108.0\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"132.7\" y1=\"178.3\" x2=\"132.7\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"182.0\" y1=\"178.3\" x2=\"182.0\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"206.7\" y1=\"178.3\" x2=\"206.7\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"231.3\" y1=\"178.3\" x2=\"231.3\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"256.0\" y1=\"178.3\" x2=\"256.0\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"280.7\" y1=\"178.3\" x2=\"280.7\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"305.3\" y1=\"178.3\" x2=\"305.3\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"330.0\" y1=\"178.3\" x2=\"330.0\" y2=\"184.3\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"260.0\" x2=\"160.3\" y2=\"260.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"233.8\" x2=\"160.3\" y2=\"233.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"207.6\" x2=\"160.3\" y2=\"207.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"155.1\" x2=\"160.3\" y2=\"155.1\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"128.9\" x2=\"160.3\" y2=\"128.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"102.7\" x2=\"160.3\" y2=\"102.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"76.4\" x2=\"160.3\" y2=\"76.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"50.2\" x2=\"160.3\" y2=\"50.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"154.3\" y1=\"24.0\" x2=\"160.3\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M58.7 155.1 L157.3 233.8 L305.3 50.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"34.0\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−5</text><text x=\"58.7\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−4</text><text x=\"83.3\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"108.0\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"132.7\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"182.0\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"206.7\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"231.3\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"256.0\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"280.7\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"305.3\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"330.0\" y=\"197.3\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">7</text><text x=\"151.3\" y=\"264.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−3</text><text x=\"151.3\" y=\"238.3\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−2</text><text x=\"151.3\" y=\"212.1\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">−1</text><text x=\"151.3\" y=\"159.6\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"151.3\" y=\"133.4\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"151.3\" y=\"107.2\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"151.3\" y=\"80.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"151.3\" y=\"54.7\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"151.3\" y=\"28.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"151.3\" y=\"196.3\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><circle cx=\"58.7\" cy=\"155.1\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"48.7\" y=\"143.1\" text-anchor=\"start\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">(−4, 1)</text><circle cx=\"157.3\" cy=\"233.8\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"165.3\" y=\"249.8\" text-anchor=\"start\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">(0, −2)</text><circle cx=\"305.3\" cy=\"50.2\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"261.3\" y=\"40.2\" text-anchor=\"start\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">(6, 5)</text></svg>"
+   },
+   "The graph of \\(y = f(x)\\) is transformed to the graph of \\(y = -f(2x) + 3\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Describe the three transformations.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the images of the points \\((-4, 1)\\), \\((0, -2)\\) and \\((6, 5)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the domain of the new function.",
+    "marks": 1
+   }
+  ],
+  "idea": "\\(f(2x)\\) halves every \\(x\\)-coordinate; \\(-f\\) reflects in the \\(x\\)-axis; \\(+3\\) shifts up. A point \\((x, y)\\) goes to \\(\\left(\\dfrac{x}{2}, -y + 3\\right)\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "In order: \\(f(2x)\\), then multiply by \\(-1\\), then add 3."
+    ],
+    "answer": "A horizontal stretch with scale factor \\(\\dfrac{1}{2}\\), a reflection in the \\(x\\)-axis, then a translation 3 units up"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\((x, y) \\to \\left(\\dfrac{x}{2}, 3 - y\\right)\\)"
+    ],
+    "answer": "\\((-2, 2)\\), \\((0, 5)\\) and \\((3, -2)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The \\(x\\)-values are halved: \\(-4 \\to -2\\) and \\(6 \\to 3\\)."
+    ],
+    "answer": "\\(-2 \\le x \\le 3\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-009",
+  "strand": "Functions",
+  "subtopic": "Transformations of graphs",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The graph of \\(y = e^{x}\\) is transformed to the graph of \\(y = 2e^{x - 1} - 3\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Describe the transformations.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down the equation of the horizontal asymptote of the new graph.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the coordinates of the points where the new graph meets the axes.",
+    "marks": 3
+   }
+  ],
+  "idea": "The asymptote \\(y = 0\\) of \\(y = e^{x}\\) is moved only by vertical translations; stretches and horizontal shifts leave it where it is.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(x - 1\\): right 1. Multiply by 2: vertical stretch. Subtract 3: down 3."
+    ],
+    "answer": "A translation 1 unit right, a vertical stretch with scale factor 2, then a translation 3 units down"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(y = 0\\) moves down 3."
+    ],
+    "answer": "\\(y = -3\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(x = 0\\): \\(2e^{-1} - 3 = -2.264\\ldots\\)",
+     "\\(y = 0\\): \\(e^{x - 1} = 1.5\\), so \\(x = 1 + \\ln 1.5 = 1.405\\ldots\\)"
+    ],
+    "answer": "\\((0, -2.26)\\) and \\((1.41, 0)\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-010",
+  "strand": "Functions",
+  "subtopic": "Transformations of graphs",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The graph of \\(y = \\sin x\\) is transformed to the graph of \\(y = g(x)\\), where \\(g(x) = 4\\sin\\left(2\\left(x - \\dfrac{\\pi}{6}\\right)\\right) - 1\\) and \\(x\\) is in radians."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Describe the sequence of transformations.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write down the period, and the greatest and least values of \\(g\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the image of the point \\(\\left(\\dfrac{\\pi}{2}, 1\\right)\\), and hence the smallest positive \\(x\\) at which \\(g\\) has its greatest value.",
+    "marks": 2
+   }
+  ],
+  "idea": "Inside the bracket, the stretch acts before the shift: \\(\\sin x \\to \\sin 2x \\to \\sin 2\\left(x - \\dfrac{\\pi}{6}\\right)\\). A maximum of \\(\\sin x\\) moves to a maximum of \\(g\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sin 2x\\): horizontal stretch \\(\\dfrac{1}{2}\\). Replace \\(x\\) by \\(x - \\dfrac{\\pi}{6}\\): shift right. Multiply by 4: vertical stretch. Subtract 1: shift down."
+    ],
+    "answer": "A horizontal stretch with scale factor \\(\\dfrac{1}{2}\\), a translation \\(\\dfrac{\\pi}{6}\\) right, a vertical stretch with scale factor 4, and a translation 1 down"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Period \\(\\dfrac{2\\pi}{2}\\); values \\(4 - 1\\) and \\(-4 - 1\\)."
+    ],
+    "answer": "Period \\(\\pi\\); greatest 3; least \\(-5\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(x\\): \\(\\dfrac{\\pi}{2} \\to \\dfrac{\\pi}{4} \\to \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6} = \\dfrac{5\\pi}{12}\\). \\(y\\): \\(1 \\to 4 \\to 3\\).",
+     "\\(\\left(\\dfrac{\\pi}{2}, 1\\right)\\) is a maximum of \\(\\sin x\\), and the next one to the left, \\(-\\dfrac{3\\pi}{2}\\), goes to a negative \\(x\\)."
+    ],
+    "answer": "\\(\\left(\\dfrac{5\\pi}{12}, 3\\right)\\); \\(x = \\dfrac{5\\pi}{12} = 1.31\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-011",
+  "strand": "Functions",
+  "subtopic": "Transformations of graphs",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The graph of \\(y = x^{2}\\) is stretched vertically with scale factor \\(a\\) and then translated by \\(\\begin{pmatrix} h \\\\ k \\end{pmatrix}\\). The new graph passes through \\((1, 5)\\) and \\((3, 5)\\), and its least value is \\(-3\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(h\\), \\(k\\) and \\(a\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "The new graph is then reflected in the \\(x\\)-axis. Find the \\(x\\)-coordinates of the points where this last graph meets the \\(x\\)-axis.",
+    "marks": 3
+   }
+  ],
+  "idea": "After the stretch and translation the graph is \\(y = a(x - h)^{2} + k\\). Two points at the same height are symmetrical about the axis \\(x = h\\), and the least value is \\(k\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The axis of symmetry is half way between \\(x = 1\\) and \\(x = 3\\): \\(h = 2\\). The least value is \\(k = -3\\).",
+     "\\(a(1 - 2)^{2} - 3 = 5\\), so \\(a = 8\\)."
+    ],
+    "answer": "\\(h = 2\\), \\(k = -3\\), \\(a = 8\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Reflecting gives \\(y = -8(x - 2)^{2} + 3\\). It meets the \\(x\\)-axis where \\((x - 2)^{2} = \\dfrac{3}{8}\\), so \\(x = 2 \\pm \\sqrt{0.375} = 2 \\pm 0.6123\\ldots\\)",
+     "(These are also where the unreflected graph meets the \\(x\\)-axis: a reflection in the \\(x\\)-axis does not move points on it.)"
+    ],
+    "answer": "\\(x = 1.39\\) and \\(x = 2.61\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-012",
+  "strand": "Functions",
+  "subtopic": "Logistic and exponential models",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "A new lake is stocked with trout. The number of trout \\(t\\) years later is modelled by \\(P(t) = \\dfrac{2400}{1 + 11e^{-0.4t}}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the number of trout put into the lake.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Write down the largest number of trout the lake can support, according to the model.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the number of trout after 5 years.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the time it takes for the number of trout to reach 1200.",
+    "marks": 2
+   }
+  ],
+  "idea": "In the logistic model \\(\\dfrac{L}{1 + Ce^{-kt}}\\), \\(L\\) is the carrying capacity, the starting value is \\(\\dfrac{L}{1 + C}\\), and the population reaches \\(\\dfrac{L}{2}\\) when \\(Ce^{-kt} = 1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{2400}{1 + 11}\\)"
+    ],
+    "answer": "200 trout"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "As \\(t\\) grows, \\(e^{-0.4t} \\to 0\\)."
+    ],
+    "answer": "2400 trout"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{2400}{1 + 11e^{-2}} = 964.3\\ldots\\)"
+    ],
+    "answer": "964 trout"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(1 + 11e^{-0.4t} = 2\\), so \\(e^{-0.4t} = \\dfrac{1}{11}\\) and \\(t = \\dfrac{\\ln 11}{0.4} = 5.994\\ldots\\)"
+    ],
+    "answer": "5.99 years"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-013",
+  "strand": "Functions",
+  "subtopic": "Logistic and exponential models",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A photo app takes \\(t\\) seconds to open an album of \\(n\\) photos, where \\(t = 0.8\\ln n + 1.2\\), for \\(n \\ge 1\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the time to open an album of 1000 photos.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the largest album that opens in at most 7 seconds.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Show that doubling the number of photos always adds the same time, and find this time.",
+    "marks": 2
+   }
+  ],
+  "idea": "Undo a natural logarithm with the exponential function: \\(\\ln n = u\\) means \\(n = e^{u}\\). Since \\(\\ln 2n = \\ln 2 + \\ln n\\), doubling \\(n\\) adds a fixed amount.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(0.8\\ln 1000 + 1.2 = 6.726\\ldots\\)"
+    ],
+    "answer": "6.73 seconds"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0.8\\ln n + 1.2 \\le 7\\), so \\(\\ln n \\le 7.25\\) and \\(n \\le e^{7.25} = 1408.1\\ldots\\)",
+     "The number of photos is a whole number."
+    ],
+    "answer": "1408 photos"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(t(2n) - t(n) = 0.8(\\ln 2n - \\ln n) = 0.8\\ln 2 = 0.5545\\ldots\\), whatever \\(n\\) is."
+    ],
+    "answer": "It always adds \\(0.8\\ln 2 = 0.555\\) seconds"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-014",
+  "strand": "Functions",
+  "subtopic": "Logistic and exponential models",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "The population of a city, \\(P\\) million, \\(t\\) years after 1 January 2020 is modelled by \\(P = 1.2e^{0.018t}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the time it takes the population to double.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the year in which the population first reaches 2 million.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the equivalent annual percentage growth rate.",
+    "marks": 2
+   }
+  ],
+  "idea": "With continuous growth \\(e^{kt}\\), the population is multiplied by \\(e^{k}\\) each year, which is an annual growth of \\((e^{k} - 1) \\times 100\\) %.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(e^{0.018t} = 2\\), so \\(t = \\dfrac{\\ln 2}{0.018} = 38.50\\ldots\\)"
+    ],
+    "answer": "38.5 years"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(1.2e^{0.018t} = 2\\), so \\(t = \\dfrac{\\ln(5/3)}{0.018} = 28.37\\ldots\\), which is during the 29th year after 2020."
+    ],
+    "answer": "2048"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(e^{0.018} = 1.01816\\ldots\\)"
+    ],
+    "answer": "1.82 % a year"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-015",
+  "strand": "Functions",
+  "subtopic": "Logistic and exponential models",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The number of listeners of a new podcast, \\(N\\), \\(t\\) weeks after its launch is modelled by \\(N = \\dfrac{5000}{1 + Ce^{-kt}}\\). At launch it has 250 listeners, and after 4 weeks it has 1000."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(C\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find \\(k\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "The number of listeners grows fastest when it is half of the carrying capacity. Using your unrounded value of \\(k\\), find when this happens.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the number of listeners after 10 weeks.",
+    "marks": 1
+   }
+  ],
+  "idea": "Substitute the two known points in turn: \\(t = 0\\) gives \\(C\\), then \\(t = 4\\) gives an exponential equation for \\(k\\), solved with logarithms.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{5000}{1 + C} = 250\\), so \\(1 + C = 20\\)."
+    ],
+    "answer": "\\(C = 19\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{5000}{1 + 19e^{-4k}} = 1000\\), so \\(19e^{-4k} = 4\\) and \\(e^{-4k} = \\dfrac{4}{19}\\).",
+     "\\(k = \\dfrac{1}{4}\\ln\\dfrac{19}{4} = 0.3895\\ldots\\)"
+    ],
+    "answer": "\\(k = 0.390\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(N = 2500\\) when \\(19e^{-kt} = 1\\), so \\(t = \\dfrac{\\ln 19}{k} = 7.558\\ldots\\)"
+    ],
+    "answer": "After 7.56 weeks"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{5000}{1 + 19e^{-10 \\times 0.3895\\ldots}} = 3606.5\\ldots\\)"
+    ],
+    "answer": "3610 listeners (3607 to the nearest whole number)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-016",
+  "strand": "Functions",
+  "subtopic": "Logistic and exponential models",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A rumour spreads through a school of 1200 students. The number who have heard it \\(t\\) hours after 8 am is modelled by \\(R = \\dfrac{1200}{1 + Ce^{-kt}}\\). At 8 am, 5 students have heard it; by 10 am, 60 have."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(C\\) and \\(k\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Using your unrounded values, find the time of day, to the nearest minute, at which 90 % of the students have heard the rumour.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Explain why an exponential model \\(R = 5e^{kt}\\) would not be suitable for the whole day.",
+    "marks": 1
+   }
+  ],
+  "idea": "A logistic model levels off at its carrying capacity, here the whole school. An exponential model keeps growing, and would soon give more students than the school has.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(t = 0\\): \\(\\dfrac{1200}{1 + C} = 5\\), so \\(C = 239\\).",
+     "\\(t = 2\\): \\(1 + 239e^{-2k} = 20\\), so \\(e^{-2k} = \\dfrac{19}{239}\\) and \\(k = \\dfrac{1}{2}\\ln\\dfrac{239}{19} = 1.266\\ldots\\)"
+    ],
+    "answer": "\\(C = 239\\), \\(k = 1.27\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(R = 1080\\): \\(1 + 239e^{-kt} = \\dfrac{1200}{1080} = \\dfrac{10}{9}\\), so \\(e^{-kt} = \\dfrac{1}{2151}\\).",
+     "\\(t = \\dfrac{\\ln 2151}{k} = 6.061\\ldots\\) hours, which is 6 hours 4 minutes."
+    ],
+    "answer": "About 2:04 pm"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "For example, \\(5e^{1.266 \\times 10}\\) is far more than 1200."
+    ],
+    "answer": "It grows without limit, but only 1200 students can hear the rumour"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-017",
+  "strand": "Functions",
+  "subtopic": "Sinusoidal models",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The brightness of a variable star, \\(B\\), \\(t\\) days after observations start is modelled by \\(B(t) = 0.8\\sin(72(t - 1.5)) + 3.2\\), where \\(72(t - 1.5)\\) is in degrees."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the amplitude and find the period.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the brightness when observations start.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the first time after \\(t = 0\\) at which the star is brightest, and its brightness then.",
+    "marks": 2
+   }
+  ],
+  "idea": "In \\(a\\sin(b(t - c)) + d\\): amplitude \\(a\\), period \\(\\dfrac{360}{b}\\), and \\(c\\) is a horizontal shift. The sine is greatest when its angle is \\(90^\\circ\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Period \\(\\dfrac{360}{72}\\)."
+    ],
+    "answer": "Amplitude 0.8; period 5 days"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0.8\\sin(-108^\\circ) + 3.2 = -0.7608\\ldots + 3.2 = 2.439\\ldots\\)"
+    ],
+    "answer": "2.44"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(72(t - 1.5) = 90\\), so \\(t = 2.75\\). Brightness \\(0.8 + 3.2\\)."
+    ],
+    "answer": "\\(t = 2.75\\) days, brightness 4.0"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-018",
+  "strand": "Functions",
+  "subtopic": "Sinusoidal models",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A buoy rises and falls on the waves. Its height above the sea bed, \\(h\\) metres, \\(t\\) seconds after a recording starts is modelled by \\(h = a\\sin(b(t - c)) + d\\), with \\(a, b > 0\\) and angles in degrees. Its greatest height is 2.6 m and its least is 0.4 m, one wave takes 5 seconds, and at \\(t = 0.8\\) the buoy is at its mean height and rising."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(a\\), \\(b\\), \\(c\\) and \\(d\\), with \\(0 \\le c < 5\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the height of the buoy at \\(t = 3\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the length of time in each wave for which the buoy is more than 2 m above the sea bed.",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(d\\) is the mean of the greatest and least values, and \\(a\\) is half their difference. A sine curve passes through its mean height, rising, when its angle is 0, so \\(t = c\\) there.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(d = \\dfrac{2.6 + 0.4}{2} = 1.5\\), \\(a = \\dfrac{2.6 - 0.4}{2} = 1.1\\), \\(b = \\dfrac{360}{5} = 72\\), and \\(c = 0.8\\)."
+    ],
+    "answer": "\\(a = 1.1\\), \\(b = 72\\), \\(c = 0.8\\), \\(d = 1.5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(1.1\\sin(72 \\times 2.2) + 1.5 = 1.904\\ldots\\)"
+    ],
+    "answer": "1.90 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\sin(72(t - 0.8)) > \\dfrac{0.5}{1.1}\\): the angle is between \\(27.03\\ldots^\\circ\\) and \\(152.96\\ldots^\\circ\\).",
+     "Time: \\(\\dfrac{152.96\\ldots - 27.03\\ldots}{72} = 1.749\\ldots\\)"
+    ],
+    "answer": "1.75 seconds"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-019",
+  "strand": "Functions",
+  "subtopic": "Sinusoidal models",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A patient's blood pressure, \\(P\\) mmHg, \\(t\\) seconds after a reading starts is modelled by \\(P = 20\\sin(450(t - 0.1)) + 100\\), where the angle is in degrees."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the greatest and least blood pressure.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the length of one heartbeat, and the heart rate in beats per minute.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the length of time in each heartbeat for which the pressure is above 110 mmHg, and the fraction of the beat this is.",
+    "marks": 3
+   }
+  ],
+  "idea": "Each heartbeat is one period of the model. Within one period, \\(\\sin\\theta > 0.5\\) for \\(30^\\circ < \\theta < 150^\\circ\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(100 \\pm 20\\)"
+    ],
+    "answer": "120 and 80 mmHg"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Period \\(\\dfrac{360}{450} = 0.8\\) seconds; \\(\\dfrac{60}{0.8} = 75\\)."
+    ],
+    "answer": "0.8 seconds; 75 beats per minute"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(20\\sin\\theta + 100 > 110\\) means \\(\\sin\\theta > 0.5\\), so \\(30^\\circ < \\theta < 150^\\circ\\): \\(120^\\circ\\) of each \\(360^\\circ\\).",
+     "\\(\\dfrac{120}{450} = 0.2666\\ldots\\) seconds."
+    ],
+    "answer": "0.267 seconds, which is \\(\\dfrac{1}{3}\\) of each beat"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-020",
+  "strand": "Functions",
+  "subtopic": "Sinusoidal models",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A shop's monthly sales of sun cream, \\(s\\) units, \\(t\\) months after the start of the year are modelled by \\(s = 40\\sin(30(t - 2)) + 100\\), for \\(0 \\le t \\le 12\\), where angles are in degrees. A second shop's sales are modelled by \\(r = 30\\sin(30(t - 5)) + 90\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(t\\) at which the first shop's sales are greatest.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the value of \\(h\\), with \\(0 \\le h < 12\\), for which \\(s = 40\\cos(30(t - h)) + 100\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the values of \\(t\\) for which the first shop sells more than the second.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "State one reason why the models might not fit next year.",
+    "marks": 1
+   }
+  ],
+  "idea": "A cosine curve is a sine curve shifted so that it starts at its maximum: \\(\\cos\\theta = \\sin(\\theta + 90^\\circ)\\). Compare two models by solving \\(s = r\\) with the calculator.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(30(t - 2) = 90\\)"
+    ],
+    "answer": "\\(t = 5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The cosine form has its maximum at \\(t = h\\), and the maximum is at \\(t = 5\\). Check: \\(\\cos(30(t - 5)) = \\sin(30(t - 5) + 90) = \\sin(30(t - 2))\\)."
+    ],
+    "answer": "\\(h = 5\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(s = r\\) with the calculator: \\(t = 0.3864\\ldots\\) and \\(t = 7.155\\ldots\\)",
+     "At \\(t = 0\\), \\(s - r = -9.64\\ldots < 0\\); at \\(t = 4\\), \\(s - r > 0\\)."
+    ],
+    "answer": "\\(0.386 < t < 7.16\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For example, a very hot or wet summer, or a price change."
+    ],
+    "answer": "Weather, prices or trends may differ from year to year"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-021",
+  "strand": "Functions",
+  "subtopic": "Piecewise models",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "A car park charges \\(C(t)\\) dollars for \\(t\\) hours, where \\[C(t) = \\begin{cases} 3t, & 0 < t \\le 2 \\\\ 6 + 2(t - 2), & 2 < t \\le 6 \\\\ 14, & t > 6. \\end{cases}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(C(1.5)\\), \\(C(4)\\) and \\(C(8)\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the time for which a driver pays $10.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Explain why the model is continuous at \\(t = 6\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "Use the rule for the interval that contains \\(t\\). Check which piece a given cost belongs to before solving.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(C(1.5) = 4.5\\); \\(C(4) = 6 + 4 = 10\\); \\(C(8) = 14\\)."
+    ],
+    "answer": "$4.50, $10 and $14"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "$10 is between \\(C(2) = 6\\) and \\(C(6) = 14\\), so use the middle rule: \\(6 + 2(t - 2) = 10\\)."
+    ],
+    "answer": "4 hours"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(6 + 2(6 - 2) = 14\\), the same as the cap."
+    ],
+    "answer": "Both rules give $14 at \\(t = 6\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-022",
+  "strand": "Functions",
+  "subtopic": "Piecewise models",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(f(x) = \\begin{cases} x^{2} + 1, & x < 2 \\\\ kx - 3, & x \\ge 2. \\end{cases}\\)"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\) for which the graph of \\(f\\) has no break at \\(x = 2\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "For this value of \\(k\\), solve \\(f(x) = 10\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "State the range of \\(f\\).",
+    "marks": 1
+   }
+  ],
+  "idea": "The two pieces join if they give the same value at \\(x = 2\\). An equation with a piecewise function is solved piece by piece, keeping only solutions in each piece's own interval.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(2^{2} + 1 = 2k - 3\\), so \\(2k = 8\\)."
+    ],
+    "answer": "\\(k = 4\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "For \\(x < 2\\): \\(x^{2} = 9\\), so \\(x = -3\\) (\\(x = 3\\) is not less than 2).",
+     "For \\(x \\ge 2\\): \\(4x - 3 = 10\\), so \\(x = 3.25\\)."
+    ],
+    "answer": "\\(x = -3\\) or \\(x = 3.25\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The first piece takes every value from 1 upwards (its least value is 1 at \\(x = 0\\)); the second gives values from 5 upwards."
+    ],
+    "answer": "\\(f(x) \\ge 1\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-023",
+  "strand": "Functions",
+  "subtopic": "Piecewise models",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A 1500 m\\(^{3}\\) swimming pool is filled using two pipes. For the first 2 hours the water comes in at 300 m\\(^{3}\\) per hour; then one pipe is closed and the water comes in at 180 m\\(^{3}\\) per hour until the pool is full."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down a piecewise model for the volume \\(V\\) after \\(t\\) hours.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the time it takes to fill the pool.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the time at which the pool holds 1000 m\\(^{3}\\), in hours and minutes.",
+    "marks": 2
+   }
+  ],
+  "idea": "Each piece is linear, with gradient equal to the rate of flow. The second piece starts from the volume reached at the end of the first.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "After 2 hours, \\(V = 600\\)."
+    ],
+    "answer": "\\(V = 300t\\) for \\(0 \\le t \\le 2\\); \\(V = 600 + 180(t - 2)\\) for \\(2 < t \\le 7\\) (when the pool is full)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(600 + 180(t - 2) = 1500\\), so \\(t - 2 = 5\\)."
+    ],
+    "answer": "7 hours"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(600 + 180(t - 2) = 1000\\), so \\(t = 2 + \\dfrac{400}{180} = 4.222\\ldots\\) hours; \\(0.222\\ldots \\times 60 = 13.3\\ldots\\) minutes."
+    ],
+    "answer": "4 hours 13 minutes"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-024",
+  "strand": "Functions",
+  "subtopic": "Piecewise models",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The profile of a skateboard ramp is modelled by \\(y = \\begin{cases} ax^{2}, & 0 \\le x \\le 4 \\\\ 2x - 4, & 4 < x \\le 10, \\end{cases}\\) where \\(x\\) and \\(y\\) are in metres and the two pieces join."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(a\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the height of the ramp at \\(x = 3\\) and at \\(x = 7\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the two points of the profile at which the height is 2 m and 13 m.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "State the range of the function.",
+    "marks": 1
+   }
+  ],
+  "idea": "The pieces join at \\(x = 4\\), so they give the same height there. To find \\(x\\) from a height, first decide which piece the height lies on.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(a \\times 16 = 2 \\times 4 - 4 = 4\\)"
+    ],
+    "answer": "\\(a = 0.25\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0.25 \\times 9 = 2.25\\); \\(2 \\times 7 - 4 = 10\\)."
+    ],
+    "answer": "2.25 m and 10 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Height 2 is below 4, so it is on the curve: \\(0.25x^{2} = 2\\), \\(x = \\sqrt{8} = 2.828\\ldots\\)",
+     "Height 13 is above 4, so it is on the line: \\(2x - 4 = 13\\), \\(x = 8.5\\)."
+    ],
+    "answer": "\\((2.83, 2)\\) and \\((8.5, 13)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "From 0 at \\(x = 0\\) up to \\(2 \\times 10 - 4 = 16\\) at \\(x = 10\\), always increasing."
+    ],
+    "answer": "\\(0 \\le y \\le 16\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-025",
+  "strand": "Functions",
+  "subtopic": "Logarithmic scales and linearising data",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The masses of four animals are: mouse 0.02 kg, adult human 70 kg, elephant 6000 kg, blue whale 150 000 kg."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\log_{10}\\) of each mass, correct to two decimal places.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Explain why a logarithmic scale is useful for showing these masses on one axis.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Use the difference of the unrounded logarithms of the two masses to find how many times heavier the blue whale is than the mouse.",
+    "marks": 2
+   }
+  ],
+  "idea": "On a logarithmic scale, equal steps mean equal multiplying factors. The difference of two logarithms is the logarithm of their ratio.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\log_{10} 0.02 = -1.698\\ldots\\), \\(\\log_{10} 70 = 1.845\\ldots\\), \\(\\log_{10} 6000 = 3.778\\ldots\\), \\(\\log_{10} 150\\,000 = 5.176\\ldots\\)"
+    ],
+    "answer": "\\(-1.70\\), 1.85, 3.78, 5.18"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The masses go from hundredths to hundreds of thousands; on an ordinary scale the mouse and the human would be at the same point."
+    ],
+    "answer": "The values cover many powers of 10, which a log scale spreads evenly"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(5.176\\ldots - (-1.698\\ldots) = 6.875\\ldots\\), and \\(10^{6.875\\ldots} = 7\\,500\\,000\\)."
+    ],
+    "answer": "\\(7.5 \\times 10^{6}\\) times"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-026",
+  "strand": "Functions",
+  "subtopic": "Logarithmic scales and linearising data",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A new video channel records its number of subscribers, \\(y\\) thousand, at the end of each of its first eight weeks, \\(x\\).",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{Week, x} & \\text{Subscribers, y (thousands)} \\\\ \\hline 1 & 4.8 \\\\ \\hline 2 & 6.5 \\\\ \\hline 3 & 9.6 \\\\ \\hline 4 & 13.0 \\\\ \\hline 5 & 19.1 \\\\ \\hline 6 & 27.0 \\\\ \\hline 7 & 38.5 \\\\ \\hline 8 & 54.0 \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the equation of the regression line of \\(\\ln y\\) on \\(x\\), and the correlation coefficient for \\(\\ln y\\) and \\(x\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence write the model in the form \\(y = ae^{bx}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Use the model to estimate the number of subscribers at the end of week 10.",
+    "marks": 2
+   }
+  ],
+  "idea": "If \\(y = ae^{bx}\\), then \\(\\ln y = \\ln a + bx\\): a straight line when \\(\\ln y\\) is plotted against \\(x\\). The gradient is \\(b\\) and the intercept is \\(\\ln a\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Enter \\(x\\) and \\(\\ln y\\) in the calculator: gradient \\(0.3490\\ldots\\), intercept \\(1.198\\ldots\\), \\(r = 0.9997\\ldots\\)"
+    ],
+    "answer": "\\(\\ln y = 0.349x + 1.20\\), \\(r = 1.00\\) (0.9998)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(a = e^{1.198\\ldots} = 3.313\\ldots\\), \\(b = 0.3490\\ldots\\)"
+    ],
+    "answer": "\\(y = 3.31e^{0.349x}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(3.313\\ldots \\times e^{3.490\\ldots} = 108.7\\ldots\\) thousand."
+    ],
+    "answer": "About 109 000 subscribers"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-027",
+  "strand": "Functions",
+  "subtopic": "Logarithmic scales and linearising data",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The moons of a planet have orbital radius \\(r\\) (in units of 100 000 km) and orbital period \\(T\\) days.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{Radius, r} & \\text{Period, T (days)} \\\\ \\hline 1 & 1.2 \\\\ \\hline 2 & 3.4 \\\\ \\hline 4 & 9.6 \\\\ \\hline 8 & 27.1 \\\\ \\hline \\end{array}\\]",
+   "A model of the form \\(T = ar^{b}\\) is proposed."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\ln T = \\ln a + b\\ln r\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the regression line of \\(\\ln T\\) on \\(\\ln r\\), and hence find \\(a\\) and \\(b\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Estimate the period of a moon with orbital radius 600 000 km.",
+    "marks": 2
+   }
+  ],
+  "idea": "Taking logarithms of a power model gives a straight line in \\(\\ln r\\) and \\(\\ln T\\): the gradient is the power \\(b\\) and the intercept is \\(\\ln a\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\ln T = \\ln(ar^{b}) = \\ln a + \\ln r^{b} = \\ln a + b\\ln r\\)"
+    ],
+    "answer": "\\(\\ln T = \\ln a + b\\ln r\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Regression of \\(\\ln T\\) on \\(\\ln r\\): gradient \\(1.498\\ldots\\), intercept \\(0.1834\\ldots\\)",
+     "\\(a = e^{0.1834\\ldots} = 1.201\\ldots\\)"
+    ],
+    "answer": "\\(\\ln T = 1.50\\ln r + 0.183\\); \\(a = 1.20\\), \\(b = 1.50\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(r = 6\\): \\(1.201\\ldots \\times 6^{1.498\\ldots} = 17.62\\ldots\\)"
+    ],
+    "answer": "17.6 days"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-028",
+  "strand": "Functions",
+  "subtopic": "Logarithmic scales and linearising data",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "An experiment gives these values of \\(x\\) and \\(y\\).",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{x} & \\text{y} \\\\ \\hline 1 & 3.0 \\\\ \\hline 2 & 5.2 \\\\ \\hline 4 & 9.1 \\\\ \\hline 6 & 12.5 \\\\ \\hline 8 & 15.8 \\\\ \\hline 10 & 18.9 \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the correlation coefficient between \\(\\ln y\\) and \\(x\\), and between \\(\\ln y\\) and \\(\\ln x\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Hence state whether an exponential model \\(y = ae^{bx}\\) or a power model \\(y = ax^{b}\\) fits the data better.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the better model, and use it to estimate \\(y\\) when \\(x = 15\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "An exponential model is linear in \\((x, \\ln y)\\); a power model is linear in \\((\\ln x, \\ln y)\\). The model whose transformed data are closest to a straight line fits better.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "From the calculator: \\(\\ln y\\) against \\(x\\): \\(r = 0.9565\\ldots\\); \\(\\ln y\\) against \\(\\ln x\\): \\(r = 0.99999\\ldots\\)"
+    ],
+    "answer": "0.957 and 1.00 (0.99999)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The second is much closer to 1."
+    ],
+    "answer": "The power model"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Regression of \\(\\ln y\\) on \\(\\ln x\\): gradient \\(0.7993\\ldots\\), intercept \\(1.097\\ldots\\), so \\(a = e^{1.097\\ldots} = 2.995\\ldots\\)",
+     "\\(2.995\\ldots \\times 15^{0.7993\\ldots} = 26.09\\ldots\\)"
+    ],
+    "answer": "\\(y = 3.00x^{0.799}\\); \\(y = 26.1\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-029",
+  "strand": "Functions",
+  "subtopic": "Logarithmic scales and linearising data",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Ecologists find that the number of plant species \\(S\\) on an island and the island's area \\(A\\) km\\(^{2}\\) fit the line \\(\\log_{10} S = 0.25\\log_{10} A + 1.1\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(S = kA^{0.25}\\), and find \\(k\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Estimate the number of species on an island of area 10 000 km\\(^{2}\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Using the unrounded value of \\(k\\), estimate the area of an island with 50 species.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the factor by which \\(S\\) is multiplied when the area is doubled.",
+    "marks": 2
+   }
+  ],
+  "idea": "Undo the logarithms by raising 10 to each side: \\(10^{\\log_{10} S} = S\\). In a power law, multiplying \\(A\\) by a factor multiplies \\(S\\) by that factor to the power 0.25.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(S = 10^{0.25\\log_{10} A + 1.1} = 10^{1.1} \\times (10^{\\log_{10} A})^{0.25}\\)"
+    ],
+    "answer": "\\(S = 12.6A^{0.25}\\), \\(k = 10^{1.1} = 12.58\\ldots\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(12.58\\ldots \\times 10\\,000^{0.25} = 12.58\\ldots \\times 10\\)"
+    ],
+    "answer": "About 126 species"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(A^{0.25} = \\dfrac{50}{12.58\\ldots}\\), so \\(A = \\left(\\dfrac{50}{12.58\\ldots}\\right)^{4} = 248.8\\ldots\\)"
+    ],
+    "answer": "About 249 km\\(^{2}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{k(2A)^{0.25}}{kA^{0.25}} = 2^{0.25} = 1.189\\ldots\\)"
+    ],
+    "answer": "1.19"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-hl-030",
+  "strand": "Functions",
+  "subtopic": "Logarithmic scales and linearising data",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "The value of a car, \\(V\\) dollars, \\(t\\) years after it is bought is recorded. A dealer expects the value to approach a scrap value of $1500, using the model \\(V = 1500 + Ae^{kt}\\).",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|c|c|}\\hline \\text{Age, t (years)} & \\text{Value, V (dollars)} \\\\ \\hline 0 & 24000 \\\\ \\hline 1 & 19500 \\\\ \\hline 2 & 15800 \\\\ \\hline 3 & 12900 \\\\ \\hline 4 & 10600 \\\\ \\hline 5 & 8800 \\\\ \\hline 6 & 7350 \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\ln(V - 1500) = \\ln A + kt\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the regression line of \\(\\ln(V - 1500)\\) on \\(t\\), and hence find \\(A\\) and \\(k\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find the age at which the model predicts the car's value falls to $5000.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Explain why a model of the form \\(V = Ae^{kt}\\), without the 1500, would be less suitable in the long term.",
+    "marks": 1
+   }
+  ],
+  "idea": "Subtract the scrap value first: \\(V - 1500\\) is a pure exponential, so its logarithm is linear in \\(t\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(V - 1500 = Ae^{kt}\\), so \\(\\ln(V - 1500) = \\ln A + \\ln e^{kt} = \\ln A + kt\\)."
+    ],
+    "answer": "\\(\\ln(V - 1500) = \\ln A + kt\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Regression of \\(\\ln(V - 1500)\\) on \\(t\\): gradient \\(-0.2249\\ldots\\), intercept \\(10.01\\ldots\\)",
+     "\\(A = e^{10.01\\ldots} = 22\\,465.9\\ldots\\)"
+    ],
+    "answer": "\\(\\ln(V - 1500) = -0.225t + 10.0\\); \\(A = 22\\,500\\), \\(k = -0.225\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(1500 + 22\\,465.9\\ldots e^{-0.2249\\ldots t} = 5000\\), so \\(t = \\dfrac{\\ln(3500/22\\,465.9\\ldots)}{-0.2249\\ldots} = 8.265\\ldots\\)"
+    ],
+    "answer": "8.27 years"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Without the 1500 the value would fall towards $0."
+    ],
+    "answer": "It would predict the car becomes worthless, but a car always has some scrap value"
+   }
+  ]
+ }
+]

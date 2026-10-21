@@ -1,0 +1,620 @@
+[
+ {
+  "id": "ai-gt-p2-001",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 16,
+  "stem": [
+   "A garden shed is made of a cuboid, 3 m long, 2 m wide and 2 m high, with a roof in the shape of a triangular prism. The ridge of the roof runs along the 3 m length, 0.8 m above the top of the walls and directly above the middle of the 2 m width, as shown in the diagram.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 348 316\" width=\"348\" height=\"316\" role=\"img\" aria-label=\"A garden shed. The lower part is a cuboid 3 m long, 2 m wide and 2 m high. The roof is a triangular prism along the 3 m length: its ridge is 0.8 m above the top of the walls, directly above the middle of the 2 m width. The two sloping roof faces are rectangles, and the two ends of the roof are triangles.\"><path d=\"M69.8 264.5 L193.8 264.5 L193.8 140.5 L69.8 140.5 Z\" fill=\"#eaf0fb\" stroke=\"none\" stroke-width=\"0\" stroke-linejoin=\"round\"/><path d=\"M69.8 140.5 L193.8 140.5 L131.8 90.9 Z\" fill=\"#eaf0fb\" stroke=\"none\" stroke-width=\"0\" stroke-linejoin=\"round\"/><path d=\"M193.8 264.5 L271.9 212.4 L271.9 88.4 L193.8 140.5 Z\" fill=\"#dde6f6\" stroke=\"none\" stroke-width=\"0\" stroke-linejoin=\"round\"/><path d=\"M193.8 140.5 L271.9 88.4 L209.9 38.8 L131.8 90.9 Z\" fill=\"#f4f7fd\" stroke=\"none\" stroke-width=\"0\" stroke-linejoin=\"round\"/><path d=\"M69.8 140.5 L131.8 90.9 L209.9 38.8 L147.9 88.4 Z\" fill=\"#eef2fa\" stroke=\"none\" stroke-width=\"0\" stroke-linejoin=\"round\"/><path d=\"M69.8 264.5 L193.8 264.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M193.8 264.5 L271.9 212.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M69.8 264.5 L69.8 140.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M193.8 264.5 L193.8 140.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M271.9 212.4 L271.9 88.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M69.8 140.5 L193.8 140.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M193.8 140.5 L271.9 88.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M69.8 140.5 L131.8 90.9\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M193.8 140.5 L131.8 90.9\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M131.8 90.9 L209.9 38.8\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M271.9 88.4 L209.9 38.8\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M147.9 88.4 L209.9 38.8\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M69.8 140.5 L147.9 88.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M69.8 264.5 L147.9 212.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M147.9 212.4 L271.9 212.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M147.9 212.4 L147.9 88.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M131.8 140.5 L131.8 90.9\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"3 3\"/><text x=\"155.8\" y=\"124.8\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0.8 m</text><text x=\"131.8\" y=\"284.6\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2 m</text><text x=\"252.9\" y=\"251.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3 m</text><text x=\"49.8\" y=\"207.6\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2 m</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the volume of the shed.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the length of a sloping edge of the roof, from the top of a wall to the ridge.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the angle that a sloping edge of the roof, from part (b), makes with the horizontal.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the total area of the two sloping faces of the roof.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Roofing felt is sold in rolls that each cover 4 m\\(^{2}\\). Find the number of rolls needed for the roof.",
+    "marks": 1
+   },
+   {
+    "label": "f",
+    "text": "Find the length of the longest straight rod that fits inside the cuboid part of the shed.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "Find the angle between this rod and the floor.",
+    "marks": 2
+   },
+   {
+    "label": "h",
+    "text": "The outside walls of the shed, including the two triangular ends of the roof, are to be painted. Find the area to be painted.",
+    "marks": 2
+   }
+  ],
+  "idea": "The shed is a cuboid plus a prism whose cross-section is a triangle with base 2 m and height 0.8 m. Lengths and angles in 3D come from right-angled triangles: find one in the right plane, then use Pythagoras or trigonometry.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Cuboid: \\(3 \\times 2 \\times 2 = 12\\). Roof: triangle \\(\\dfrac{1}{2} \\times 2 \\times 0.8 = 0.8\\), times the length 3: \\(2.4\\).",
+     "\\(12 + 2.4\\)"
+    ],
+    "answer": "14.4 m\\(^{3}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Half the width is 1 m and the rise is 0.8 m: \\(\\sqrt{1^{2} + 0.8^{2}} = \\sqrt{1.64} = 1.280\\ldots\\)"
+    ],
+    "answer": "1.28 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\tan \\theta = \\dfrac{0.8}{1}\\), so \\(\\theta = 38.65\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(38.7^\\circ\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Two rectangles, each \\(3 \\times 1.280\\ldots\\): \\(2 \\times 3 \\times 1.280\\ldots = 7.683\\ldots\\)"
+    ],
+    "answer": "7.68 m\\(^{2}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(7.68\\ldots \\div 4 = 1.92\\ldots\\), so one roll is not enough."
+    ],
+    "answer": "2 rolls"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The space diagonal of the cuboid: \\(\\sqrt{3^{2} + 2^{2} + 2^{2}} = \\sqrt{17} = 4.123\\ldots\\)"
+    ],
+    "answer": "4.12 m"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "The diagonal of the floor is \\(\\sqrt{3^{2} + 2^{2}} = \\sqrt{13}\\), and the rod rises 2 m above it.",
+     "\\(\\tan \\alpha = \\dfrac{2}{\\sqrt{13}}\\), so \\(\\alpha = 29.01\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(29.0^\\circ\\)"
+   },
+   {
+    "label": "h",
+    "steps": [
+     "Walls: \\(2(3 \\times 2) + 2(2 \\times 2) = 20\\). Triangular ends: \\(2 \\times 0.8 = 1.6\\).",
+     "\\(20 + 1.6\\)"
+    ],
+    "answer": "21.6 m\\(^{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-p2-002",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A car's windscreen wiper arm is 60 cm long and turns about a pivot through an angle of \\(110^\\circ\\). The rubber blade lies along the arm, from 15 cm to 60 cm from the pivot."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the length of the arc traced by the tip of the wiper in one sweep.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the area of windscreen cleaned by the blade in one sweep.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find this area as a percentage of the area of the sector of radius 60 cm with angle \\(110^\\circ\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the straight-line distance between the positions of the tip at the two ends of a sweep.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the area between this straight line and the arc traced by the tip.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "The wiper makes 45 sweeps out and 45 sweeps back each minute. Find the mean speed of the tip, in cm per second.",
+    "marks": 2
+   }
+  ],
+  "idea": "An arc with angle \\(\\theta\\) in a circle of radius \\(r\\) has length \\(\\dfrac{\\theta}{360} \\times 2\\pi r\\), and a sector has area \\(\\dfrac{\\theta}{360} \\times \\pi r^{2}\\). The cleaned area is a large sector minus a small one. A segment is a sector minus a triangle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{110}{360} \\times 2\\pi \\times 60 = 115.1\\ldots\\)"
+    ],
+    "answer": "115 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{110}{360} \\times \\pi \\times 60^{2} - \\dfrac{110}{360} \\times \\pi \\times 15^{2} = \\dfrac{110}{360} \\times \\pi \\times 3375 = 3239.7\\ldots\\)"
+    ],
+    "answer": "3240 cm\\(^{2}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{60^{2} - 15^{2}}{60^{2}} \\times 100 = \\dfrac{3375}{3600} \\times 100\\)"
+    ],
+    "answer": "93.75 %"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The two radii and the line form an isosceles triangle. Cosine rule: \\(\\sqrt{60^{2} + 60^{2} - 2 \\times 60 \\times 60 \\cos 110^\\circ} = 98.29\\ldots\\)"
+    ],
+    "answer": "98.3 cm"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Sector: \\(\\dfrac{110}{360} \\times \\pi \\times 3600 = 3455.7\\ldots\\) Triangle: \\(\\dfrac{1}{2} \\times 60 \\times 60 \\sin 110^\\circ = 1691.4\\ldots\\)",
+     "\\(3455.7\\ldots - 1691.4\\ldots = 1764.3\\ldots\\)"
+    ],
+    "answer": "1760 cm\\(^{2}\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "In one minute the tip travels \\(90 \\times 115.1\\ldots = 10\\,367.2\\ldots\\) cm.",
+     "\\(10\\,367.2\\ldots \\div 60 = 172.7\\ldots\\)"
+    ],
+    "answer": "173 cm per second"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-p2-003",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "Three villages are joined by straight roads. Village Q is 8.4 km from village P on a bearing of \\(065^\\circ\\). Village R is 6.1 km from P on a bearing of \\(140^\\circ\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that angle QPR is \\(75^\\circ\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the distance QR.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the area of the triangle PQR.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the angle PQR.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the bearing of R from Q.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "Find the shortest distance from P to the road QR. Use your unrounded answers to parts (b) and (c).",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "A cyclist rides from Q to R at 18 km per hour. Find the time taken, to the nearest minute.",
+    "marks": 1
+   }
+  ],
+  "idea": "Bearings are measured clockwise from north, so the angle between two bearings from the same point is their difference. The shortest distance from a point to a line is along the perpendicular; it can be found from the area of the triangle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Both bearings are measured from P: \\(140^\\circ - 65^\\circ\\)."
+    ],
+    "answer": "\\(\\angle \\mathrm{QPR} = 75^\\circ\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\mathrm{QR}^{2} = 8.4^{2} + 6.1^{2} - 2 \\times 8.4 \\times 6.1 \\cos 75^\\circ\\)",
+     "\\(\\mathrm{QR} = 9.013\\ldots\\)"
+    ],
+    "answer": "9.01 km"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{1}{2} \\times 8.4 \\times 6.1 \\sin 75^\\circ = 24.74\\ldots\\)"
+    ],
+    "answer": "24.7 km\\(^{2}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Sine rule: \\(\\sin \\mathrm{PQR} = \\dfrac{6.1 \\sin 75^\\circ}{9.013\\ldots}\\), so \\(\\angle \\mathrm{PQR} = 40.82\\ldots^\\circ\\) (acute, because it is opposite the shortest side)."
+    ],
+    "answer": "\\(40.8^\\circ\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The bearing of P from Q is \\(065^\\circ + 180^\\circ = 245^\\circ\\).",
+     "R is on the other side of QP from the north line, so turn anticlockwise from QP by angle PQR: \\(245^\\circ - 40.82\\ldots^\\circ = 204.1\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(204^\\circ\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Area \\(= \\dfrac{1}{2} \\times \\mathrm{QR} \\times d\\), so \\(d = \\dfrac{2 \\times 24.74\\ldots}{9.013\\ldots} = 5.490\\ldots\\)"
+    ],
+    "answer": "5.49 km"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "\\(\\dfrac{9.013\\ldots}{18} \\times 60 = 30.04\\ldots\\)"
+    ],
+    "answer": "30 minutes"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-p2-004",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "Four food trucks park in a square park. Their positions, on a grid in units of 10 metres, are A\\((2, 2)\\), B\\((8, 2)\\), C\\((5, 8)\\) and D\\((1, 9)\\), as shown in the diagram. Each visitor goes to the nearest truck.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 330\" width=\"340\" height=\"330\" role=\"img\" aria-label=\"A square park on a grid from 0 to 10 in each direction, with units of 10 metres. Four food trucks are marked as points: A at (2, 2), B at (8, 2), C at (5, 8) and D at (1, 9). No cell edges are drawn.\"><defs><clipPath id=\"aifn25\"><rect x=\"34\" y=\"24\" width=\"276\" height=\"276\"/></clipPath></defs><line x1=\"34.0\" y1=\"300.0\" x2=\"34.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"61.6\" y1=\"300.0\" x2=\"61.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"89.2\" y1=\"300.0\" x2=\"89.2\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"116.8\" y1=\"300.0\" x2=\"116.8\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"144.4\" y1=\"300.0\" x2=\"144.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"172.0\" y1=\"300.0\" x2=\"172.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"199.6\" y1=\"300.0\" x2=\"199.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"227.2\" y1=\"300.0\" x2=\"227.2\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"254.8\" y1=\"300.0\" x2=\"254.8\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"282.4\" y1=\"300.0\" x2=\"282.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"310.0\" y1=\"300.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"300.0\" x2=\"310.0\" y2=\"300.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"272.4\" x2=\"310.0\" y2=\"272.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"244.8\" x2=\"310.0\" y2=\"244.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"217.2\" x2=\"310.0\" y2=\"217.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"189.6\" x2=\"310.0\" y2=\"189.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"162.0\" x2=\"310.0\" y2=\"162.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"134.4\" x2=\"310.0\" y2=\"134.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"106.8\" x2=\"310.0\" y2=\"106.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"79.2\" x2=\"310.0\" y2=\"79.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"51.6\" x2=\"310.0\" y2=\"51.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"24.0\" x2=\"310.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"34.0\" y1=\"300.0\" x2=\"320.0\" y2=\"300.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"34.0\" y1=\"300.0\" x2=\"34.0\" y2=\"14.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M326.0 300.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M34.0 8.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"322.0\" y=\"319.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"21.0\" y=\"13.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"61.6\" y1=\"297.0\" x2=\"61.6\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"89.2\" y1=\"297.0\" x2=\"89.2\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"116.8\" y1=\"297.0\" x2=\"116.8\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"144.4\" y1=\"297.0\" x2=\"144.4\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"172.0\" y1=\"297.0\" x2=\"172.0\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"199.6\" y1=\"297.0\" x2=\"199.6\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"227.2\" y1=\"297.0\" x2=\"227.2\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"254.8\" y1=\"297.0\" x2=\"254.8\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"282.4\" y1=\"297.0\" x2=\"282.4\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"310.0\" y1=\"297.0\" x2=\"310.0\" y2=\"303.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"272.4\" x2=\"37.0\" y2=\"272.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"244.8\" x2=\"37.0\" y2=\"244.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"217.2\" x2=\"37.0\" y2=\"217.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"189.6\" x2=\"37.0\" y2=\"189.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"162.0\" x2=\"37.0\" y2=\"162.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"134.4\" x2=\"37.0\" y2=\"134.4\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"106.8\" x2=\"37.0\" y2=\"106.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"79.2\" x2=\"37.0\" y2=\"79.2\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"51.6\" x2=\"37.0\" y2=\"51.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><line x1=\"31.0\" y1=\"24.0\" x2=\"37.0\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><path d=\"M34.0 300.0 L310.0 300.0 L310.0 24.0 L34.0 24.0 L34.0 300.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"61.6\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"89.2\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"116.8\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"144.4\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"172.0\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"199.6\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"227.2\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">7</text><text x=\"254.8\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">8</text><text x=\"282.4\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">9</text><text x=\"310.0\" y=\"316.0\" text-anchor=\"middle\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">10</text><text x=\"28.0\" y=\"276.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1</text><text x=\"28.0\" y=\"249.3\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"28.0\" y=\"221.7\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"28.0\" y=\"194.1\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"28.0\" y=\"166.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5</text><text x=\"28.0\" y=\"138.9\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">6</text><text x=\"28.0\" y=\"111.3\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">7</text><text x=\"28.0\" y=\"83.7\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">8</text><text x=\"28.0\" y=\"56.1\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">9</text><text x=\"28.0\" y=\"28.5\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">10</text><text x=\"28.0\" y=\"315.0\" text-anchor=\"end\" font-size=\"12.5\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">0</text><circle cx=\"89.2\" cy=\"244.8\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"97.2\" y=\"236.8\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"254.8\" cy=\"244.8\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"262.8\" y=\"236.8\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"172.0\" cy=\"79.2\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"180.0\" y=\"71.2\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><circle cx=\"61.6\" cy=\"51.6\" r=\"3.8\" fill=\"#0b0d12\"/><text x=\"69.6\" y=\"43.6\" text-anchor=\"start\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the equation of the perpendicular bisector of AB.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the equation of the perpendicular bisector of AC. Give your answer in the form \\(y = mx + c\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the coordinates of the point V that is the same distance from A, B and C.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Show that V is further from D than from A, so that V is a vertex of the Voronoi diagram.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "A visitor is at the point \\((4, 5)\\). Determine which truck the visitor goes to.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "A fifth truck is to be parked as far as possible from A, B and C, at V. Find its distance from each of them, in metres.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "Explain why trucks A, B and C all lose part of their cells when the fifth truck arrives.",
+    "marks": 1
+   }
+  ],
+  "idea": "A point on the perpendicular bisector of two sites is the same distance from both. Where the bisectors of AB and AC meet is equidistant from A, B and C; it is a vertex of the Voronoi diagram if no other site is nearer.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "A and B have the same \\(y\\)-coordinate, and the midpoint of AB is \\((5, 2)\\)."
+    ],
+    "answer": "\\(x = 5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Midpoint of AC: \\((3.5, 5)\\). Gradient of AC: \\(\\dfrac{8 - 2}{5 - 2} = 2\\), so the perpendicular gradient is \\(-\\dfrac{1}{2}\\).",
+     "\\(y - 5 = -0.5(x - 3.5)\\)"
+    ],
+    "answer": "\\(y = -0.5x + 6.75\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Substitute \\(x = 5\\) into \\(y = -0.5x + 6.75\\): \\(y = 4.25\\)."
+    ],
+    "answer": "V\\((5, 4.25)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\mathrm{VA} = \\sqrt{3^{2} + 2.25^{2}} = 3.75\\). \\(\\mathrm{VD} = \\sqrt{4^{2} + 4.75^{2}} = 6.209\\ldots\\)",
+     "\\(6.209\\ldots > 3.75\\), so no site is nearer to V than A, B and C."
+    ],
+    "answer": "VD = 6.21 > 3.75 = VA"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Distances from \\((4, 5)\\): A \\(\\sqrt{13} = 3.605\\ldots\\), B \\(\\sqrt{25} = 5\\), C \\(\\sqrt{10} = 3.162\\ldots\\), D \\(\\sqrt{25} = 5\\)."
+    ],
+    "answer": "Truck C"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(\\mathrm{VA} = \\mathrm{VB} = \\mathrm{VC} = 3.75\\) units, and each unit is 10 m."
+    ],
+    "answer": "37.5 m"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "Points just round V are now nearer the new truck than A, B or C, and V touches the cells of all three."
+    ],
+    "answer": "V is on the boundary of all three of their cells, so the new cell round V takes a piece of each"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-p2-005",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "A vertical floodlight mast BT stands on horizontal ground, with B at its foot. Points P and Q are on the ground, with BP = 40 m, BQ = 30 m and angle PBQ = \\(90^\\circ\\). The angle of elevation of T from P is \\(32^\\circ\\). Straight cables run from T to P and from T to Q, as shown in the diagram.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 394 245\" width=\"394\" height=\"245\" role=\"img\" aria-label=\"A vertical floodlight mast BT stands on horizontal ground, with B at its foot and T at its top. Points P and Q are on the ground. BP is 40 m long, BQ is 30 m long, and the angle PBQ is a right angle. Straight cables run from T to P and from T to Q. The angle of elevation of T from P is 32 degrees.\"><path d=\"M51.2 200.0 L299.2 200.0 L129.3 147.9 Z\" fill=\"#eaf0fb\" stroke=\"none\" stroke-width=\"0\" stroke-linejoin=\"round\"/><path d=\"M51.2 200.0 L51.2 45.0\" stroke=\"#0b0d12\" stroke-width=\"3.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M51.2 45.0 L299.2 200.0\" stroke=\"#0b0d12\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M51.2 45.0 L129.3 147.9\" stroke=\"#0b0d12\" stroke-width=\"1.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M51.2 200.0 L299.2 200.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M51.2 200.0 L129.3 147.9\" stroke=\"#0b0d12\" stroke-width=\"1.4\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M299.2 200.0 L129.3 147.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M63.6 200.0 L73.9 193.1 L61.5 193.1\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M63.6 200.0 L63.6 187.6 L51.2 187.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M275.5 185.2 L274.8 186.6 L274.0 187.9 L273.4 189.4 L272.9 190.8 L272.4 192.3 L272.0 193.8 L271.7 195.3 L271.5 196.9 L271.3 198.4 L271.3 200.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/><text x=\"41.2\" y=\"213.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">B</text><text x=\"309.2\" y=\"209.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">P</text><text x=\"139.3\" y=\"149.0\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">Q</text><text x=\"41.2\" y=\"50.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">T</text><text x=\"175.2\" y=\"219.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">40 m</text><text x=\"98.3\" y=\"191.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">30 m</text><text x=\"248.5\" y=\"190.2\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">32°</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the height of the mast.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the angle of elevation of T from Q.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the distance PQ.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the lengths of the two cables.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the angle PTQ between the two cables.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "Find the area of the triangle PTQ.",
+    "marks": 2
+   }
+  ],
+  "idea": "Use the right-angled triangles BPT, BQT and BPQ, each in its own plane. Triangle PTQ is not right-angled, so use the cosine rule with its three sides.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\tan 32^\\circ = \\dfrac{\\mathrm{BT}}{40}\\), so \\(\\mathrm{BT} = 40 \\tan 32^\\circ = 24.99\\ldots\\)"
+    ],
+    "answer": "25.0 m"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\tan \\beta = \\dfrac{24.99\\ldots}{30}\\), so \\(\\beta = 39.79\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(39.8^\\circ\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\sqrt{40^{2} + 30^{2}}\\)"
+    ],
+    "answer": "50 m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\mathrm{TP} = \\sqrt{40^{2} + 24.99\\ldots^{2}} = 47.16\\ldots\\) and \\(\\mathrm{TQ} = \\sqrt{30^{2} + 24.99\\ldots^{2}} = 39.04\\ldots\\)"
+    ],
+    "answer": "TP = 47.2 m, TQ = 39.0 m"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\cos \\angle \\mathrm{PTQ} = \\dfrac{47.16\\ldots^{2} + 39.04\\ldots^{2} - 50^{2}}{2 \\times 47.16\\ldots \\times 39.04\\ldots}\\), so \\(\\angle \\mathrm{PTQ} = 70.17\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(70.2^\\circ\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(\\dfrac{1}{2} \\times 47.16\\ldots \\times 39.04\\ldots \\sin 70.17\\ldots^\\circ = 866.2\\ldots\\)"
+    ],
+    "answer": "866 m\\(^{2}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-p2-006",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A swimming pool is 25 m long and 10 m wide. The depth of the water when the pool is full is 1.2 m at the shallow end and 2.8 m at the deep end, and the floor slopes in a straight line between them, as shown in the side view.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 457 102\" width=\"457\" height=\"102\" role=\"img\" aria-label=\"Side view of a swimming pool, 25 m long. The top edge is horizontal. The depth is 1.2 m at the shallow end and 2.8 m at the deep end, and the floor slopes in a straight line between them. The pool is 10 m wide (not shown in this view).\"><path d=\"M59.5 32.2 L384.5 32.2 L384.5 68.6 L59.5 47.8 Z\" fill=\"#cfe3f7\" stroke=\"#0b0d12\" stroke-width=\"2.2\" stroke-linejoin=\"round\"/><path d=\"M59.5 23.1 L384.5 23.1\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M59.5 28.1 L59.5 18.1\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M384.5 28.1 L384.5 18.1\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M50.4 47.8 L50.4 32.2\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M55.4 47.8 L45.4 47.8\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M55.4 32.2 L45.4 32.2\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M393.6 32.2 L393.6 68.6\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M388.6 32.2 L398.6 32.2\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M388.6 68.6 L398.6 68.6\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><text x=\"222.0\" y=\"16.2\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">25 m</text><text x=\"26.4\" y=\"45.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">1.2 m</text><text x=\"419.6\" y=\"55.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2.8 m</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the volume of the pool.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "The pool is filled at 40 m\\(^{3}\\) per hour. Find the time taken to fill it.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the length of the sloping floor.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the angle between the floor and the horizontal.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "The floor and the four walls are tiled. Find the area to be tiled.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "For a competition, the water is kept 0.2 m below the full level. Find the volume of water in the pool then, and the percentage of the full volume this is.",
+    "marks": 3
+   }
+  ],
+  "idea": "The pool is a prism: its cross-section is the trapezium in the side view, and it is 10 m wide. The two long walls are trapezia, the end walls rectangles, and the floor a rectangle whose length is the sloping edge.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Cross-section: \\(\\dfrac{1}{2}(1.2 + 2.8) \\times 25 = 50\\) m\\(^{2}\\).",
+     "\\(50 \\times 10\\)"
+    ],
+    "answer": "500 m\\(^{3}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(500 \\div 40\\)"
+    ],
+    "answer": "12.5 hours"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The floor drops \\(2.8 - 1.2 = 1.6\\) m over 25 m: \\(\\sqrt{25^{2} + 1.6^{2}} = 25.05\\ldots\\)"
+    ],
+    "answer": "25.1 m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\tan \\theta = \\dfrac{1.6}{25}\\), so \\(\\theta = 3.661\\ldots^\\circ\\)"
+    ],
+    "answer": "\\(3.66^\\circ\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Floor: \\(25.05\\ldots \\times 10 = 250.5\\ldots\\). Long walls: \\(2 \\times 50 = 100\\). End walls: \\(10 \\times 1.2 + 10 \\times 2.8 = 40\\).",
+     "\\(250.5\\ldots + 100 + 40 = 390.5\\ldots\\)"
+    ],
+    "answer": "391 m\\(^{2}\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Depths become 1.0 m and 2.6 m: \\(\\dfrac{1}{2}(1.0 + 2.6) \\times 25 \\times 10 = 450\\).",
+     "\\(\\dfrac{450}{500} \\times 100\\)"
+    ],
+    "answer": "450 m\\(^{3}\\), which is 90 %"
+   }
+  ]
+ }
+]

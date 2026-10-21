@@ -1,0 +1,1816 @@
+[
+ {
+  "id": "ai-gt-hl-001",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Radians, arcs and sectors",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The pendulum of a clock is 0.8 m long. In one swing, the end of the pendulum moves through an angle of 0.6 radians."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Convert 0.6 radians to degrees.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the length of the arc travelled by the end of the pendulum in one swing.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the area of the sector swept out by the pendulum in one swing.",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\pi\\) radians is \\(180^{\\circ}\\). With the angle \\(\\theta\\) in radians, the arc length is \\(r\\theta\\) and the sector area is \\(\\tfrac{1}{2}r^{2}\\theta\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(0.6 \\times \\dfrac{180}{\\pi} = 34.37\\ldots\\)"
+    ],
+    "answer": "\\(34.4^{\\circ}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(r\\theta = 0.8 \\times 0.6\\)"
+    ],
+    "answer": "0.48 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\tfrac{1}{2}r^{2}\\theta = \\tfrac{1}{2} \\times 0.8^{2} \\times 0.6\\)"
+    ],
+    "answer": "0.192 m²"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-002",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Radians, arcs and sectors",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A round table top has centre O and radius 60 cm. One part of it is a hinged leaf that folds down. The leaf is the segment cut off by the straight hinge AB, where angle AOB is 1.8 radians."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the length of the hinge AB.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the area of the leaf.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the percentage of the table top that folds down.",
+    "marks": 1
+   }
+  ],
+  "idea": "A segment is a sector with the triangle OAB taken away: \\(\\tfrac{1}{2}r^{2}\\theta - \\tfrac{1}{2}r^{2}\\sin\\theta\\), with \\(\\theta\\) in radians. The chord is the third side of the isosceles triangle OAB.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Triangle OAB has OA = OB = 60. Split it into two right-angled triangles: \\(\\text{AB} = 2 \\times 60\\sin 0.9 = 93.99\\ldots\\)",
+     "(Or use the cosine rule: \\(\\text{AB}^{2} = 60^{2} + 60^{2} - 2 \\times 60^{2}\\cos 1.8\\).)"
+    ],
+    "answer": "94.0 cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Sector: \\(\\tfrac{1}{2} \\times 60^{2} \\times 1.8 = 3240\\). Triangle: \\(\\tfrac{1}{2} \\times 60^{2} \\times \\sin 1.8 = 1752.9\\ldots\\) (calculator in radian mode).",
+     "Leaf: \\(3240 - 1752.9\\ldots = 1487.0\\ldots\\)"
+    ],
+    "answer": "1490 cm² (1487 cm²)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{1487.0\\ldots}{\\pi \\times 60^{2}} \\times 100 = 13.14\\ldots\\)"
+    ],
+    "answer": "13.1 %"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-003",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Radians, arcs and sectors",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A belt drives a machine. It wraps round two pulleys: a large one with centre \\(\\text{O}_{1}\\) and radius 10 cm, and a small one with centre \\(\\text{O}_{2}\\) and radius 4 cm. The centres are 20 cm apart. The straight part PQ of the belt touches the large pulley at P and the small pulley at Q, so \\(\\text{O}_{1}\\text{P}\\) and \\(\\text{O}_{2}\\text{Q}\\) are both perpendicular to PQ. The diagram is not to scale.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 389 256\" width=\"389\" height=\"256\" role=\"img\" aria-label=\"Two circles, a large one of radius 10 cm centred at O1 and a small one of radius 4 cm centred at O2, with centres 20 cm apart. A belt wraps round both, made of two straight sections, each touching both circles, and two arcs.\"><path d=\"M227.8 128.0 L227.6 123.0 L227.2 118.1 L226.6 113.1 L225.7 108.2 L224.5 103.4 L223.1 98.6 L221.4 94.0 L219.5 89.4 L217.4 84.9 L215.0 80.5 L212.4 76.3 L209.6 72.2 L206.6 68.2 L203.3 64.4 L199.9 60.8 L196.3 57.4 L192.5 54.2 L188.6 51.1 L184.5 48.3 L180.2 45.7 L175.9 43.4 L171.4 41.2 L166.8 39.3 L162.1 37.6 L157.3 36.2 L152.5 35.1 L147.6 34.2 L142.7 33.5 L137.7 33.1 L132.8 33.0 L127.8 33.1 L122.8 33.5 L117.9 34.2 L113.0 35.1 L108.2 36.2 L103.4 37.6 L98.7 39.3 L94.1 41.2 L89.6 43.4 L85.3 45.7 L81.0 48.3 L76.9 51.1 L73.0 54.2 L69.2 57.4 L65.6 60.8 L62.2 64.4 L58.9 68.2 L55.9 72.2 L53.1 76.3 L50.5 80.5 L48.1 84.9 L46.0 89.4 L44.1 94.0 L42.4 98.6 L41.0 103.4 L39.8 108.2 L38.9 113.1 L38.3 118.1 L37.9 123.0 L37.8 128.0 L37.9 133.0 L38.3 137.9 L38.9 142.9 L39.8 147.8 L41.0 152.6 L42.4 157.4 L44.1 162.0 L46.0 166.6 L48.1 171.1 L50.5 175.5 L53.1 179.7 L55.9 183.8 L58.9 187.8 L62.2 191.6 L65.6 195.2 L69.2 198.6 L73.0 201.8 L76.9 204.9 L81.0 207.7 L85.2 210.3 L89.6 212.6 L94.1 214.8 L98.7 216.7 L103.4 218.4 L108.2 219.8 L113.0 220.9 L117.9 221.8 L122.8 222.5 L127.8 222.9 L132.8 223.0 L137.7 222.9 L142.7 222.5 L147.6 221.8 L152.5 220.9 L157.3 219.8 L162.1 218.4 L166.8 216.7 L171.4 214.8 L175.9 212.6 L180.2 210.3 L184.5 207.7 L188.6 204.9 L192.5 201.8 L196.3 198.6 L199.9 195.2 L203.3 191.6 L206.6 187.8 L209.6 183.8 L212.4 179.7 L215.0 175.5 L217.4 171.1 L219.5 166.6 L221.4 162.0 L223.1 157.4 L224.5 152.6 L225.7 147.8 L226.6 142.9 L227.2 137.9 L227.6 133.0 L227.8 128.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-dasharray=\"4 4\"/><path d=\"M360.8 128.0 L360.7 126.0 L360.5 124.0 L360.3 122.1 L359.9 120.1 L359.5 118.2 L358.9 116.3 L358.2 114.4 L357.5 112.5 L356.6 110.7 L355.7 109.0 L354.6 107.3 L353.5 105.7 L352.3 104.1 L351.0 102.6 L349.6 101.1 L348.2 99.8 L346.7 98.5 L345.1 97.3 L343.4 96.1 L341.8 95.1 L340.0 94.1 L338.2 93.3 L336.4 92.5 L334.5 91.9 L332.6 91.3 L330.7 90.8 L328.7 90.5 L326.7 90.2 L324.7 90.1 L322.8 90.0 L320.8 90.1 L318.8 90.2 L316.8 90.5 L314.8 90.8 L312.9 91.3 L311.0 91.9 L309.1 92.5 L307.3 93.3 L305.5 94.1 L303.8 95.1 L302.1 96.1 L300.4 97.3 L298.8 98.5 L297.3 99.8 L295.9 101.1 L294.5 102.6 L293.2 104.1 L292.0 105.7 L290.9 107.3 L289.8 109.0 L288.9 110.7 L288.0 112.5 L287.3 114.4 L286.6 116.3 L286.0 118.2 L285.6 120.1 L285.2 122.1 L285.0 124.0 L284.8 126.0 L284.8 128.0 L284.8 130.0 L285.0 132.0 L285.2 133.9 L285.6 135.9 L286.0 137.8 L286.6 139.7 L287.3 141.6 L288.0 143.5 L288.9 145.3 L289.8 147.0 L290.9 148.7 L292.0 150.3 L293.2 151.9 L294.5 153.4 L295.9 154.9 L297.3 156.2 L298.8 157.5 L300.4 158.7 L302.1 159.9 L303.8 160.9 L305.5 161.9 L307.3 162.7 L309.1 163.5 L311.0 164.1 L312.9 164.7 L314.8 165.2 L316.8 165.5 L318.8 165.8 L320.8 165.9 L322.8 166.0 L324.7 165.9 L326.7 165.8 L328.7 165.5 L330.7 165.2 L332.6 164.7 L334.5 164.1 L336.4 163.5 L338.2 162.7 L340.0 161.9 L341.8 160.9 L343.4 159.9 L345.1 158.7 L346.7 157.5 L348.2 156.2 L349.6 154.9 L351.0 153.4 L352.3 151.9 L353.5 150.3 L354.6 148.7 L355.7 147.0 L356.6 145.3 L357.5 143.5 L358.2 141.6 L358.9 139.7 L359.5 137.8 L359.9 135.9 L360.3 133.9 L360.5 132.0 L360.7 130.0 L360.8 128.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.4\" stroke-linejoin=\"round\" stroke-dasharray=\"4 4\"/><path d=\"M161.2 37.4 L156.4 36.0 L151.5 34.9 L146.6 34.0 L141.6 33.4 L136.6 33.1 L131.6 33.0 L126.6 33.2 L121.6 33.7 L116.6 34.4 L111.7 35.4 L106.8 36.6 L102.0 38.1 L97.3 39.9 L92.7 41.8 L88.2 44.1 L83.9 46.5 L79.6 49.2 L75.5 52.2 L71.6 55.3 L67.9 58.6 L64.3 62.1 L60.9 65.8 L57.7 69.7 L54.8 73.8 L52.0 78.0 L49.5 82.3 L47.2 86.8 L45.1 91.3 L43.3 96.0 L41.7 100.8 L40.4 105.6 L39.4 110.5 L38.6 115.5 L38.0 120.5 L37.8 125.5 L37.8 130.5 L38.0 135.5 L38.6 140.5 L39.4 145.5 L40.4 150.4 L41.7 155.2 L43.3 160.0 L45.1 164.7 L47.2 169.2 L49.5 173.7 L52.0 178.0 L54.8 182.2 L57.7 186.3 L60.9 190.2 L64.3 193.9 L67.9 197.4 L71.6 200.7 L75.5 203.8 L79.6 206.8 L83.9 209.5 L88.2 211.9 L92.7 214.2 L97.3 216.1 L102.0 217.9 L106.8 219.4 L111.7 220.6 L116.6 221.6 L121.6 222.3 L126.6 222.8 L131.6 223.0 L136.6 222.9 L141.6 222.6 L146.6 222.0 L151.5 221.1 L156.4 220.0 L161.2 218.6\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><path d=\"M334.2 164.2 L336.0 163.6 L337.9 162.8 L339.7 162.0 L341.5 161.1 L343.2 160.0 L344.9 158.9 L346.5 157.7 L348.0 156.4 L349.5 155.0 L350.8 153.6 L352.2 152.1 L353.4 150.5 L354.5 148.8 L355.6 147.1 L356.5 145.4 L357.4 143.6 L358.2 141.7 L358.9 139.8 L359.4 137.9 L359.9 136.0 L360.3 134.0 L360.5 132.0 L360.7 130.0 L360.8 128.0 L360.7 126.0 L360.5 124.0 L360.3 122.0 L359.9 120.0 L359.4 118.1 L358.9 116.2 L358.2 114.3 L357.4 112.4 L356.5 110.6 L355.6 108.9 L354.5 107.2 L353.4 105.5 L352.2 103.9 L350.8 102.4 L349.5 101.0 L348.0 99.6 L346.5 98.3 L344.9 97.1 L343.2 96.0 L341.5 94.9 L339.7 94.0 L337.9 93.2 L336.0 92.4 L334.2 91.8\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.6\" stroke-linejoin=\"round\"/><path d=\"M161.2 37.4 L334.2 91.8\" stroke=\"#0b0d12\" stroke-width=\"2.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M161.2 218.6 L334.2 164.2\" stroke=\"#0b0d12\" stroke-width=\"2.6\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M132.8 128.0 L322.8 128.0\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M132.8 128.0 L161.2 37.4\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M322.8 128.0 L334.2 91.8\" stroke=\"#0b0d12\" stroke-width=\"1.1\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"132.8\" cy=\"128.0\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"322.8\" cy=\"128.0\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"126.8\" y=\"148.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">O₁</text><text x=\"326.8\" y=\"148.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">O₂</text><text x=\"275.2\" y=\"120.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">20 cm</text><text x=\"137.0\" y=\"87.1\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">10</text><text x=\"319.4\" y=\"114.3\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4</text><text x=\"155.2\" y=\"28.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">P</text><text x=\"338.2\" y=\"82.5\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">Q</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the length of PQ is \\(\\sqrt{364}\\) cm.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the angle, in radians, between \\(\\text{O}_{1}\\text{O}_{2}\\) and \\(\\text{O}_{1}\\text{P}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Hence find the total length of the belt.",
+    "marks": 4
+   }
+  ],
+  "idea": "Draw a line through \\(\\text{O}_{2}\\) parallel to PQ. It makes a right-angled triangle with hypotenuse \\(\\text{O}_{1}\\text{O}_{2}\\) and one side \\(10 - 4\\). The belt is two equal straight parts plus an arc on each pulley; the angle of each arc follows from the angle in that triangle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The line through \\(\\text{O}_{2}\\) parallel to PQ meets \\(\\text{O}_{1}\\text{P}\\) at a right angle, 4 cm from P. So it forms a right-angled triangle with hypotenuse 20 and one side \\(10 - 4 = 6\\).",
+     "Its third side equals PQ: \\(\\sqrt{20^{2} - 6^{2}} = \\sqrt{364}\\)."
+    ],
+    "answer": "\\(\\text{PQ} = \\sqrt{364} = 19.1\\) cm"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "In that triangle, \\(\\cos\\alpha = \\dfrac{6}{20}\\), where \\(\\alpha\\) is the angle at \\(\\text{O}_{1}\\) between \\(\\text{O}_{1}\\text{O}_{2}\\) and \\(\\text{O}_{1}\\text{P}\\).",
+     "\\(\\alpha = \\cos^{-1} 0.3 = 1.266\\ldots\\)"
+    ],
+    "answer": "1.27 radians"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "By symmetry the lower straight part is also \\(\\sqrt{364}\\), and the belt leaves the large pulley at the same angle below \\(\\text{O}_{1}\\text{O}_{2}\\).",
+     "Large pulley: the belt is on the far side, so its arc angle is \\(2\\pi - 2\\alpha = 3.750\\ldots\\) and the arc is \\(10 \\times 3.750\\ldots = 37.50\\ldots\\)",
+     "Small pulley: its arc angle is \\(2\\alpha = 2.532\\ldots\\) (the radii \\(\\text{O}_{2}\\text{Q}\\) and \\(\\text{O}_{1}\\text{P}\\) are parallel), and the arc is \\(4 \\times 2.532\\ldots = 10.12\\ldots\\)",
+     "Total: \\(2\\sqrt{364} + 37.50\\ldots + 10.12\\ldots = 85.79\\ldots\\)"
+    ],
+    "answer": "85.8 cm"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-004",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The unit circle and the ambiguous case",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "A point P starts at \\((1, 0)\\) and moves anticlockwise round the unit circle \\(x^{2} + y^{2} = 1\\), through an angle of \\(\\theta = 2.5\\) radians."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the coordinates of P, to 3 significant figures.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the other value of \\(\\theta\\), with \\(0 \\le \\theta < 2\\pi\\), that gives a point with the same \\(y\\)-coordinate as P.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(\\theta\\), with \\(0 \\le \\theta < 2\\pi\\), that gives the reflection of P in the \\(x\\)-axis.",
+    "marks": 1
+   }
+  ],
+  "idea": "On the unit circle, the point at angle \\(\\theta\\) is \\((\\cos\\theta, \\sin\\theta)\\). Angles \\(\\theta\\) and \\(\\pi - \\theta\\) have the same sine; \\(\\theta\\) and \\(2\\pi - \\theta\\) are reflections of each other in the \\(x\\)-axis.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\((\\cos 2.5, \\sin 2.5) = (-0.8011\\ldots, 0.5984\\ldots)\\), in radian mode."
+    ],
+    "answer": "\\((-0.801, 0.598)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The point with the same height is the reflection of P in the \\(y\\)-axis, at angle \\(\\pi - 2.5 = 0.6415\\ldots\\)"
+    ],
+    "answer": "\\(\\theta = \\pi - 2.5 = 0.642\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2\\pi - 2.5 = 3.783\\ldots\\)"
+    ],
+    "answer": "\\(\\theta = 2\\pi - 2.5 = 3.78\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-005",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The unit circle and the ambiguous case",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Let \\(f(x) = 4\\sin x - 2\\cos x\\), for \\(0 \\le x \\le 2\\pi\\), with \\(x\\) in radians."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use your graphic display calculator to solve \\(f(x) = 1\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the greatest value of \\(f(x)\\) and the value of \\(x\\) at which it occurs.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the set of values of \\(k\\) for which \\(f(x) = k\\) has no solutions.",
+    "marks": 1
+   }
+  ],
+  "idea": "Plot \\(y = 4\\sin x - 2\\cos x\\) and the line \\(y = 1\\) over \\(0 \\le x \\le 2\\pi\\), and read off the \\(x\\)-coordinates where they meet. A horizontal line above the maximum or below the minimum misses the curve.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The curve \\(y = 4\\sin x - 2\\cos x\\) crosses \\(y = 1\\) twice in the interval, at \\(x = 0.6891\\ldots\\) and \\(x = 3.379\\ldots\\)"
+    ],
+    "answer": "\\(x = 0.689\\) or \\(x = 3.38\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The maximum point of the graph is \\((2.034\\ldots, 4.472\\ldots)\\). (The exact maximum is \\(\\sqrt{4^{2} + 2^{2}} = \\sqrt{20}\\).)"
+    ],
+    "answer": "\\(4.47\\) (\\(\\sqrt{20}\\)), at \\(x = 2.03\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The minimum is \\(-\\sqrt{20}\\), at \\(x = 2.034\\ldots + \\pi\\), which is inside the interval."
+    ],
+    "answer": "\\(k > \\sqrt{20}\\) or \\(k < -\\sqrt{20}\\) (\\(|k| > 4.47\\))"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-006",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The unit circle and the ambiguous case",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A coastguard at a lighthouse L can see a buoy B, 900 m away. A small boat S is known to be exactly 650 m from the buoy, and the angle between the coastguard's lines of sight to the buoy and to the boat is \\(35^{\\circ}\\) (angle BLS = \\(35^{\\circ}\\))."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Explain why this information gives two possible positions for the boat.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the two possible distances from the lighthouse to the boat.",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Find the distance between the two possible positions of the boat.",
+    "marks": 1
+   }
+  ],
+  "idea": "Two sides and a non-included angle can fit two triangles. Use the sine rule for angle LSB: \\(\\sin\\text{S}\\) gives an acute angle and its supplement, \\(180^{\\circ} - \\text{S}\\). Check that both leave room for the angle at B.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The boat lies on the line from L at \\(35^{\\circ}\\) to LB, and on the circle of radius 650 m about B. Since 650 m is less than LB = 900 m but more than the distance from B to that line (\\(900\\sin 35^{\\circ} = 516.2\\ldots\\) m), the circle cuts the line twice."
+    ],
+    "answer": "The circle of radius 650 m about B cuts the line of sight at two points"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{\\sin\\text{S}}{900} = \\dfrac{\\sin 35^{\\circ}}{650}\\), so \\(\\sin\\text{S} = 0.7941\\ldots\\)",
+     "\\(\\text{S} = 52.57\\ldots^{\\circ}\\) or \\(\\text{S} = 127.42\\ldots^{\\circ}\\). Then angle B is \\(92.42\\ldots^{\\circ}\\) or \\(17.57\\ldots^{\\circ}\\).",
+     "\\(\\text{LS} = \\dfrac{650\\sin\\text{B}}{\\sin 35^{\\circ}}\\): \\(1132.2\\ldots\\) m or \\(342.2\\ldots\\) m.",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 412 327\" width=\"412\" height=\"327\" role=\"img\" aria-label=\"Triangle diagram. L is on the left and B is 900 m to its right. A line from L at 35 degrees above LB contains two possible positions of the ship, S1 about 342 m from L and S2 about 1132 m from L. Both are 650 m from B.\"><path d=\"M41.2 272.4 L389.3 28.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"5 4\"/><path d=\"M41.2 272.4 L347.2 272.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M347.2 272.4 L356.5 51.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M347.2 272.4 L136.5 205.7\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\" stroke-dasharray=\"6 4\"/><path d=\"M339.5 51.5 L327.8 52.3 L316.1 53.6 L304.6 55.6 L293.1 58.1 L281.8 61.3 L270.7 65.1 L259.8 69.4 L249.2 74.3 L238.8 79.8 L228.7 85.8 L219.0 92.4 L209.6 99.4 L200.6 107.0 L192.1 115.0 L183.9 123.5 L176.3 132.3 L169.1 141.6 L162.4 151.2 L156.2 161.2 L150.6 171.5 L145.5 182.1 L141.0 192.9 L137.1 204.0 L133.7 215.2\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.0\" stroke-linejoin=\"round\" stroke-dasharray=\"2 4\"/><path d=\"M82.0 272.4 L81.9 270.1 L81.7 267.9 L81.4 265.6 L81.0 263.4 L80.4 261.2 L79.8 259.1 L79.0 256.9 L78.0 254.9 L77.0 252.8 L75.9 250.9 L74.6 249.0\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.3\" stroke-linejoin=\"round\"/><circle cx=\"41.2\" cy=\"272.4\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"347.2\" cy=\"272.4\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"356.5\" cy=\"51.6\" r=\"3.4\" fill=\"#0b0d12\"/><circle cx=\"136.5\" cy=\"205.7\" r=\"3.4\" fill=\"#0b0d12\"/><text x=\"31.2\" y=\"283.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">L</text><text x=\"357.2\" y=\"283.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">B</text><text x=\"352.5\" y=\"40.7\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">S₂</text><text x=\"122.5\" y=\"202.8\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">S₁</text><text x=\"106.1\" y=\"256.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">35°</text><text x=\"194.2\" y=\"290.8\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">900 m</text><text x=\"367.9\" y=\"166.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">650</text><text x=\"241.9\" y=\"257.4\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">650</text></svg>"
+     }
+    ],
+    "answer": "1130 m or 342 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Both positions lie on the same line from L, so the distance between them is \\(1132.2\\ldots - 342.2\\ldots = 789.9\\ldots\\)"
+    ],
+    "answer": "790 m"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-007",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The unit circle and the ambiguous case",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "In triangle ABC, AB = 10 cm, angle BAC = \\(40^{\\circ}\\) and BC = \\(x\\) cm."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the least value of \\(x\\) for which such a triangle exists, and describe the triangle in that case.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the set of values of \\(x\\) for which there are two possible triangles.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Let \\(x = 8\\). Find the area of each possible triangle.",
+    "marks": 4
+   }
+  ],
+  "idea": "C lies on a fixed ray from A. Swing an arc of radius \\(x\\) about B: it misses the ray if \\(x\\) is less than the distance from B to the ray, touches it once at that distance, and cuts it twice while \\(x\\) is also less than AB (if \\(x \\ge \\text{AB}\\), the second point is behind A).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The shortest distance from B to the ray is the perpendicular: \\(10\\sin 40^{\\circ} = 6.427\\ldots\\)"
+    ],
+    "answer": "\\(x = 10\\sin 40^{\\circ} = 6.43\\); the triangle has a right angle at C"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Two triangles need the arc to cut the ray twice on the same side of A: \\(10\\sin 40^{\\circ} < x < 10\\)."
+    ],
+    "answer": "\\(6.43 < x < 10\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Sine rule: \\(\\sin\\text{C} = \\dfrac{10\\sin 40^{\\circ}}{8} = 0.8034\\ldots\\), so \\(\\text{C} = 53.46\\ldots^{\\circ}\\) or \\(126.53\\ldots^{\\circ}\\).",
+     "Then \\(\\text{B} = 180^{\\circ} - 40^{\\circ} - \\text{C} = 86.53\\ldots^{\\circ}\\) or \\(13.46\\ldots^{\\circ}\\).",
+     "Area \\(= \\tfrac{1}{2} \\times \\text{AB} \\times \\text{BC} \\times \\sin\\text{B} = 40\\sin\\text{B}\\): \\(39.92\\ldots\\) or \\(9.313\\ldots\\)"
+    ],
+    "answer": "39.9 cm² and 9.31 cm²"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-008",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Matrix transformations",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A designer transforms a logo in two steps: first a reflection in the line \\(y = x\\), then a horizontal stretch with scale factor 3."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the matrix \\(\\boldsymbol{R}\\) for the reflection and the matrix \\(\\boldsymbol{H}\\) for the stretch.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the single matrix \\(\\boldsymbol{M}\\) for the reflection followed by the stretch.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the image of the point \\((2, 5)\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "The logo has an area of 12 cm². Find the area of its image.",
+    "marks": 2
+   }
+  ],
+  "idea": "The first transformation acts first, so its matrix goes on the right: \\(\\boldsymbol{M} = \\boldsymbol{HR}\\). The absolute value of the determinant is the area scale factor.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The reflection swaps \\(x\\) and \\(y\\). The stretch multiplies \\(x\\) by 3 and leaves \\(y\\)."
+    ],
+    "answer": "\\(\\boldsymbol{R} = \\begin{pmatrix}0 & 1 \\\\ 1 & 0\\end{pmatrix}\\), \\(\\boldsymbol{H} = \\begin{pmatrix}3 & 0 \\\\ 0 & 1\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\boldsymbol{M} = \\boldsymbol{HR} = \\begin{pmatrix}3 & 0 \\\\ 0 & 1\\end{pmatrix}\\begin{pmatrix}0 & 1 \\\\ 1 & 0\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\boldsymbol{M} = \\begin{pmatrix}0 & 3 \\\\ 1 & 0\\end{pmatrix}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\begin{pmatrix}0 & 3 \\\\ 1 & 0\\end{pmatrix}\\begin{pmatrix}2 \\\\ 5\\end{pmatrix} = \\begin{pmatrix}15 \\\\ 2\\end{pmatrix}\\)"
+    ],
+    "answer": "\\((15, 2)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\det\\boldsymbol{M} = 0 \\times 0 - 3 \\times 1 = -3\\), so areas are multiplied by 3 (the minus sign shows the logo is flipped)."
+    ],
+    "answer": "36 cm²"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-009",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Matrix transformations",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A drawing app has a ‘slant’ tool, which transforms a picture by the matrix \\(\\boldsymbol{T} = \\begin{pmatrix}2 & 1 \\\\ 1 & 1\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the images of the corners \\((0, 0)\\), \\((1, 0)\\), \\((1, 1)\\) and \\((0, 1)\\) of the unit square.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the slant tool does not change the area of a shape.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the point that the slant tool moves to \\((7, 4)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "The columns of the matrix are the images of \\((1, 0)\\) and \\((0, 1)\\). The area scale factor is \\(|\\det\\boldsymbol{T}|\\). To undo a transformation, use the inverse matrix.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\boldsymbol{T}\\begin{pmatrix}1 \\\\ 0\\end{pmatrix} = \\begin{pmatrix}2 \\\\ 1\\end{pmatrix}\\), \\(\\boldsymbol{T}\\begin{pmatrix}1 \\\\ 1\\end{pmatrix} = \\begin{pmatrix}3 \\\\ 2\\end{pmatrix}\\), \\(\\boldsymbol{T}\\begin{pmatrix}0 \\\\ 1\\end{pmatrix} = \\begin{pmatrix}1 \\\\ 1\\end{pmatrix}\\)"
+    ],
+    "answer": "\\((0, 0)\\), \\((2, 1)\\), \\((3, 2)\\), \\((1, 1)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\det\\boldsymbol{T} = 2 \\times 1 - 1 \\times 1 = 1\\), so the area scale factor is 1."
+    ],
+    "answer": "\\(\\det\\boldsymbol{T} = 1\\), so areas are unchanged"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\boldsymbol{T}^{-1} = \\begin{pmatrix}1 & -1 \\\\ -1 & 2\\end{pmatrix}\\), and \\(\\boldsymbol{T}^{-1}\\begin{pmatrix}7 \\\\ 4\\end{pmatrix} = \\begin{pmatrix}3 \\\\ 1\\end{pmatrix}\\).",
+     "Check: \\(\\begin{pmatrix}2 & 1 \\\\ 1 & 1\\end{pmatrix}\\begin{pmatrix}3 \\\\ 1\\end{pmatrix} = \\begin{pmatrix}7 \\\\ 4\\end{pmatrix}\\)."
+    ],
+    "answer": "\\((3, 1)\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-010",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Matrix transformations",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "In a computer game, a character turns \\(90^{\\circ}\\) anticlockwise about the pivot point C(2, 1). This rotation can be written as \\(\\boldsymbol{x}' = \\boldsymbol{A}\\boldsymbol{x} + \\boldsymbol{b}\\), where \\(\\boldsymbol{A} = \\begin{pmatrix}0 & -1 \\\\ 1 & 0\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\boldsymbol{b} = \\begin{pmatrix}3 \\\\ -1\\end{pmatrix}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the image of the point P(5, 3).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the point Q whose image is \\((6, 5)\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "A rotation about C moves every point except C, and leaves C where it is. So C must satisfy \\(\\boldsymbol{c} = \\boldsymbol{A}\\boldsymbol{c} + \\boldsymbol{b}\\), which gives \\(\\boldsymbol{b}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "C is fixed: \\(\\begin{pmatrix}2 \\\\ 1\\end{pmatrix} = \\begin{pmatrix}0 & -1 \\\\ 1 & 0\\end{pmatrix}\\begin{pmatrix}2 \\\\ 1\\end{pmatrix} + \\boldsymbol{b} = \\begin{pmatrix}-1 \\\\ 2\\end{pmatrix} + \\boldsymbol{b}\\)",
+     "\\(\\boldsymbol{b} = \\begin{pmatrix}2 \\\\ 1\\end{pmatrix} - \\begin{pmatrix}-1 \\\\ 2\\end{pmatrix} = \\begin{pmatrix}3 \\\\ -1\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\boldsymbol{b} = \\begin{pmatrix}3 \\\\ -1\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\begin{pmatrix}0 & -1 \\\\ 1 & 0\\end{pmatrix}\\begin{pmatrix}5 \\\\ 3\\end{pmatrix} + \\begin{pmatrix}3 \\\\ -1\\end{pmatrix} = \\begin{pmatrix}-3 \\\\ 5\\end{pmatrix} + \\begin{pmatrix}3 \\\\ -1\\end{pmatrix}\\)"
+    ],
+    "answer": "\\((0, 4)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\boldsymbol{A}\\boldsymbol{x} = \\begin{pmatrix}6 \\\\ 5\\end{pmatrix} - \\begin{pmatrix}3 \\\\ -1\\end{pmatrix} = \\begin{pmatrix}3 \\\\ 6\\end{pmatrix}\\), and \\(\\boldsymbol{A}^{-1} = \\begin{pmatrix}0 & 1 \\\\ -1 & 0\\end{pmatrix}\\).",
+     "\\(\\boldsymbol{x} = \\begin{pmatrix}0 & 1 \\\\ -1 & 0\\end{pmatrix}\\begin{pmatrix}3 \\\\ 6\\end{pmatrix} = \\begin{pmatrix}6 \\\\ -3\\end{pmatrix}\\)"
+    ],
+    "answer": "Q(6, −3)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-011",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Matrix transformations",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A kaleidoscope app reflects a pattern in the line \\(y = 2x\\), using the matrix \\(\\boldsymbol{M} = \\begin{pmatrix}\\cos 2\\theta & \\sin 2\\theta \\\\ \\sin 2\\theta & -\\cos 2\\theta\\end{pmatrix}\\), where \\(\\theta\\) is the angle the line makes with the positive \\(x\\)-axis."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\boldsymbol{M} = \\begin{pmatrix}-0.6 & 0.8 \\\\ 0.8 & 0.6\\end{pmatrix}\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\boldsymbol{M}^{2}\\), and explain your answer in terms of reflections.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "After the reflection in \\(y = 2x\\), the app reflects the image in the \\(x\\)-axis. Show that the two reflections together are a rotation about the origin, and find the angle and direction of the rotation.",
+    "marks": 3
+   }
+  ],
+  "idea": "\\(\\tan\\theta\\) is the gradient of the line. A rotation by \\(\\varphi\\) anticlockwise has matrix \\(\\begin{pmatrix} \\cos\\varphi & -\\sin\\varphi \\\\ \\sin\\varphi & \\cos\\varphi \\end{pmatrix}\\); compare entries to find \\(\\varphi\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\tan\\theta = 2\\), so \\(\\theta = 63.43\\ldots^{\\circ}\\) and \\(2\\theta = 126.86\\ldots^{\\circ}\\).",
+     "\\(\\cos 2\\theta = -0.6\\) and \\(\\sin 2\\theta = 0.8\\) (exactly, because \\(\\cos 2\\theta = \\dfrac{1 - \\tan^{2}\\theta}{1 + \\tan^{2}\\theta} = -\\dfrac{3}{5}\\))."
+    ],
+    "answer": "\\(\\boldsymbol{M} = \\begin{pmatrix}-0.6 & 0.8 \\\\ 0.8 & 0.6\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\boldsymbol{M}^{2} = \\begin{pmatrix}1 & 0 \\\\ 0 & 1\\end{pmatrix}\\)",
+     "Reflecting twice in the same line puts every point back where it started."
+    ],
+    "answer": "\\(\\boldsymbol{M}^{2} = \\boldsymbol{I}\\): a second reflection undoes the first"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The reflection in the \\(x\\)-axis is \\(\\boldsymbol{N} = \\begin{pmatrix}1 & 0 \\\\ 0 & -1\\end{pmatrix}\\), and it acts second: \\(\\boldsymbol{NM} = \\begin{pmatrix}-0.6 & 0.8 \\\\ -0.8 & -0.6\\end{pmatrix}\\).",
+     "This has the rotation form with \\(\\cos\\varphi = -0.6\\) and \\(\\sin\\varphi = -0.8\\), so \\(\\varphi = -126.86\\ldots^{\\circ}\\) (twice the angle between the mirrors, from the first mirror towards the second)."
+    ],
+    "answer": "A rotation of \\(126.9^{\\circ}\\) clockwise (\\(233.1^{\\circ}\\) anticlockwise) about the origin"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-012",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Matrix transformations",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "The matrix \\(\\boldsymbol{K} = \\begin{pmatrix}k & 2 \\\\ 1 & k\\end{pmatrix}\\), where \\(k \\in \\mathbb{R}\\), transforms a shape of area 5 units² into a shape of area 35 units²."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the possible values of \\(k\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Let \\(k = 3\\). Find the point that \\(\\boldsymbol{K}\\) maps to \\((8, 5)\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the values of \\(k\\) for which \\(\\boldsymbol{K}\\) has no inverse, and describe what happens to the area of a shape in that case.",
+    "marks": 2
+   }
+  ],
+  "idea": "The area is multiplied by \\(|\\det\\boldsymbol{K}| = |k^{2} - 2|\\). Remember both signs when you remove the modulus. A determinant of 0 squashes the plane onto a line.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(|k^{2} - 2| = \\dfrac{35}{5} = 7\\).",
+     "\\(k^{2} - 2 = 7\\) gives \\(k = \\pm 3\\); \\(k^{2} - 2 = -7\\) gives \\(k^{2} = -5\\), which has no real solution."
+    ],
+    "answer": "\\(k = 3\\) or \\(k = -3\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\det\\boldsymbol{K} = 7\\), so \\(\\boldsymbol{K}^{-1} = \\dfrac{1}{7}\\begin{pmatrix}3 & -2 \\\\ -1 & 3\\end{pmatrix}\\).",
+     "\\(\\dfrac{1}{7}\\begin{pmatrix}3 & -2 \\\\ -1 & 3\\end{pmatrix}\\begin{pmatrix}8 \\\\ 5\\end{pmatrix} = \\dfrac{1}{7}\\begin{pmatrix}14 \\\\ 7\\end{pmatrix}\\)"
+    ],
+    "answer": "\\((2, 1)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "No inverse when \\(\\det\\boldsymbol{K} = k^{2} - 2 = 0\\)."
+    ],
+    "answer": "\\(k = \\pm\\sqrt{2}\\); every shape is squashed onto a line, so its image has area 0"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-013",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors, lines and vector products",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A flagpole stands vertically with its base at the origin O. Its top is T(0, 0, 8). A straight support wire runs from the top of the pole to a peg in the flat ground at A(5, −3, 0). Distances are in metres."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the vector \\(\\overrightarrow{\\text{AT}}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the length of the wire.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find a unit vector in the direction of \\(\\overrightarrow{\\text{AT}}\\).",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the angle between the wire and the ground.",
+    "marks": 2
+   }
+  ],
+  "idea": "\\(\\overrightarrow{\\text{AT}} = \\boldsymbol{t} - \\boldsymbol{a}\\). Divide a vector by its magnitude to get a unit vector. The height of T is the side opposite the angle the wire makes with the ground.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{\\text{AT}} = \\begin{pmatrix}0 \\\\ 0 \\\\ 8\\end{pmatrix} - \\begin{pmatrix}5 \\\\ -3 \\\\ 0\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\begin{pmatrix}-5 \\\\ 3 \\\\ 8\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\sqrt{(-5)^{2} + 3^{2} + 8^{2}} = \\sqrt{98} = 9.899\\ldots\\)"
+    ],
+    "answer": "9.90 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{1}{\\sqrt{98}}\\begin{pmatrix}-5 \\\\ 3 \\\\ 8\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\begin{pmatrix}-0.505 \\\\ 0.303 \\\\ 0.808\\end{pmatrix}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\sin\\alpha = \\dfrac{8}{\\sqrt{98}}\\), so \\(\\alpha = 53.91\\ldots^{\\circ}\\)"
+    ],
+    "answer": "\\(53.9^{\\circ}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-014",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors, lines and vector products",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A camera hangs above a sports pitch from two cables. The cables are fixed to the tops of two masts, A(0, 0, 30) and B(120, 0, 30), and the camera is at K(50, 30, 12). Distances are in metres."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the vectors \\(\\overrightarrow{\\text{KA}}\\) and \\(\\overrightarrow{\\text{KB}}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the length of each cable.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the angle between the two cables at the camera.",
+    "marks": 2
+   }
+  ],
+  "idea": "The angle between two vectors comes from the scalar product: \\(\\cos\\theta = \\dfrac{\\boldsymbol{u} \\cdot \\boldsymbol{v}}{|\\boldsymbol{u}||\\boldsymbol{v}|}\\). Both vectors must start at the camera.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{\\text{KA}} = \\boldsymbol{a} - \\boldsymbol{k}\\) and \\(\\overrightarrow{\\text{KB}} = \\boldsymbol{b} - \\boldsymbol{k}\\)."
+    ],
+    "answer": "\\(\\overrightarrow{\\text{KA}} = \\begin{pmatrix}-50 \\\\ -30 \\\\ 18\\end{pmatrix}\\), \\(\\overrightarrow{\\text{KB}} = \\begin{pmatrix}70 \\\\ -30 \\\\ 18\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(|\\overrightarrow{\\text{KA}}| = \\sqrt{3724} = 61.02\\ldots\\) and \\(|\\overrightarrow{\\text{KB}}| = \\sqrt{6124} = 78.25\\ldots\\)"
+    ],
+    "answer": "61.0 m and 78.3 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\overrightarrow{\\text{KA}} \\cdot \\overrightarrow{\\text{KB}} = -3500 + 900 + 324 = -2276\\)",
+     "\\(\\cos\\theta = \\dfrac{-2276}{\\sqrt{3724}\\sqrt{6124}} = -0.4765\\ldots\\), so \\(\\theta = 118.4\\ldots^{\\circ}\\)"
+    ],
+    "answer": "\\(118^{\\circ}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-015",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors, lines and vector products",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "Engineers drill two straight boreholes for a heat pump. The first starts at the ground and follows the line \\(\\boldsymbol{r} = \\begin{pmatrix}40 \\\\ 25 \\\\ 0\\end{pmatrix} + t\\begin{pmatrix}2 \\\\ 1 \\\\ -6\\end{pmatrix}\\). The \\(z\\)-axis points vertically upwards, the ground is the plane \\(z = 0\\) and distances are in metres."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the coordinates of the point of the first borehole at a depth of 300 m.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the angle between the first borehole and the vertical.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The second borehole follows the line \\(\\boldsymbol{r} = \\begin{pmatrix}100 \\\\ -20 \\\\ 0\\end{pmatrix} + s\\begin{pmatrix}1 \\\\ 3 \\\\ -5\\end{pmatrix}\\). Show that the two boreholes do not meet.",
+    "marks": 3
+   }
+  ],
+  "idea": "A depth of 300 m means \\(z = -300\\). The vertical direction is \\(\\begin{pmatrix} 0 \\\\ 0 \\\\ -1 \\end{pmatrix}\\); use the scalar product with the direction vector. Two lines meet only if one pair \\((t, s)\\) satisfies all three coordinate equations.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(-6t = -300\\), so \\(t = 50\\): \\(\\begin{pmatrix}40 \\\\ 25 \\\\ 0\\end{pmatrix} + 50\\begin{pmatrix}2 \\\\ 1 \\\\ -6\\end{pmatrix}\\)"
+    ],
+    "answer": "\\((140, 75, -300)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\cos\\theta = \\dfrac{\\begin{pmatrix}2 \\\\ 1 \\\\ -6\\end{pmatrix} \\cdot \\begin{pmatrix}0 \\\\ 0 \\\\ -1\\end{pmatrix}}{\\sqrt{41} \\times 1} = \\dfrac{6}{\\sqrt{41}}\\), so \\(\\theta = 20.43\\ldots^{\\circ}\\)"
+    ],
+    "answer": "\\(20.4^{\\circ}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Equate the coordinates: \\(40 + 2t = 100 + s\\), \\(25 + t = -20 + 3s\\), \\(-6t = -5s\\).",
+     "The third gives \\(s = 1.2t\\). Then the first gives \\(0.8t = 60\\), so \\(t = 75\\) and \\(s = 90\\).",
+     "Check the second: \\(25 + 75 = 100\\), but \\(-20 + 3 \\times 90 = 250\\). The equations are inconsistent, so the lines do not meet."
+    ],
+    "answer": "No values of \\(t\\) and \\(s\\) satisfy all three equations, so the boreholes do not meet"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-016",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors, lines and vector products",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A flat solar panel is a parallelogram OACB, with O at the origin, \\(\\overrightarrow{\\text{OA}} = \\begin{pmatrix}1.6 \\\\ 0 \\\\ 0\\end{pmatrix}\\) and \\(\\overrightarrow{\\text{OB}} = \\begin{pmatrix}0 \\\\ 1 \\\\ 0.6\\end{pmatrix}\\). Distances are in metres. At noon, sunlight arrives along the direction \\(\\boldsymbol{s} = \\begin{pmatrix}0.2 \\\\ -0.5 \\\\ 0.84\\end{pmatrix}\\) (pointing from the panel towards the Sun)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(\\overrightarrow{\\text{OA}} \\times \\overrightarrow{\\text{OB}}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Hence find the area of the panel.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the acute angle between the sunlight direction and the normal to the panel.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The panel gives 200 watts for each m² of area facing the Sun directly, multiplied by the cosine of the angle in part (c). Find the power of the panel at noon.",
+    "marks": 1
+   }
+  ],
+  "idea": "\\(\\boldsymbol{a} \\times \\boldsymbol{b}\\) is perpendicular to both \\(\\boldsymbol{a}\\) and \\(\\boldsymbol{b}\\), so it is a normal to the panel, and its magnitude is the area of the parallelogram they make.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\begin{pmatrix}1.6 \\\\ 0 \\\\ 0\\end{pmatrix} \\times \\begin{pmatrix}0 \\\\ 1 \\\\ 0.6\\end{pmatrix} = \\begin{pmatrix}0 \\times 0.6 - 0 \\times 1 \\\\ 0 \\times 0 - 1.6 \\times 0.6 \\\\ 1.6 \\times 1 - 0 \\times 0\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\begin{pmatrix}0 \\\\ -0.96 \\\\ 1.6\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\sqrt{0^{2} + 0.96^{2} + 1.6^{2}} = \\sqrt{3.4816} = 1.865\\ldots\\)"
+    ],
+    "answer": "1.87 m²"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\boldsymbol{n} \\cdot \\boldsymbol{s} = 0 + 0.48 + 1.344 = 1.824\\), and \\(|\\boldsymbol{s}| = \\sqrt{0.9956} = 0.9977\\ldots\\)",
+     "\\(\\cos\\theta = \\dfrac{1.824}{1.865\\ldots \\times 0.9977\\ldots} = 0.9796\\ldots\\), so \\(\\theta = 11.56\\ldots^{\\circ}\\)"
+    ],
+    "answer": "\\(11.6^{\\circ}\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(200 \\times 1.865\\ldots \\times 0.9796\\ldots = 365.6\\ldots\\)"
+    ],
+    "answer": "366 W"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-017",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors, lines and vector products",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A horse on a towpath pulls a barge along a straight canal with a rope. The force in the rope is \\(\\boldsymbol{F} = \\begin{pmatrix}300 \\\\ 120\\end{pmatrix}\\) newtons, and the canal runs in the direction of \\(\\boldsymbol{d} = \\begin{pmatrix}4 \\\\ 3\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the magnitude of the force.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the component of the force along the canal.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the magnitude of the component of the force perpendicular to the canal.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the work done by the component along the canal when the barge moves 50 m. (Work = force × distance.)",
+    "marks": 1
+   }
+  ],
+  "idea": "The component of \\(\\boldsymbol{F}\\) in the direction of \\(\\boldsymbol{d}\\) is \\(\\boldsymbol{F} \\cdot \\hat{\\boldsymbol{d}}\\), where \\(\\hat{\\boldsymbol{d}}\\) is the unit vector. The two components are at right angles, so Pythagoras links them to \\(|\\boldsymbol{F}|\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sqrt{300^{2} + 120^{2}} = \\sqrt{104\\,400} = 323.1\\ldots\\)"
+    ],
+    "answer": "323 N"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\hat{\\boldsymbol{d}} = \\dfrac{1}{5}\\begin{pmatrix}4 \\\\ 3\\end{pmatrix}\\), so \\(\\boldsymbol{F} \\cdot \\hat{\\boldsymbol{d}} = \\dfrac{1200 + 360}{5}\\)"
+    ],
+    "answer": "312 N"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\sqrt{104\\,400 - 312^{2}} = \\sqrt{7056}\\)"
+    ],
+    "answer": "84 N"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(312 \\times 50\\)"
+    ],
+    "answer": "15 600 J"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-018",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector kinematics",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A delivery robot moves across a flat campus. Its position, in metres, \\(t\\) seconds after it starts is \\(\\boldsymbol{r} = \\begin{pmatrix}3 \\\\ -2\\end{pmatrix} + t\\begin{pmatrix}0.6 \\\\ 0.8\\end{pmatrix}\\). The \\(y\\)-axis points north and the \\(x\\)-axis points east."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the position of the robot after 10 seconds.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the speed of the robot.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "A footpath runs along the line \\(y = 10\\). Find when and where the robot reaches the footpath.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the bearing on which the robot travels, as a three-figure bearing.",
+    "marks": 2
+   }
+  ],
+  "idea": "The constant vector is the starting position and the vector multiplied by \\(t\\) is the velocity. Speed is the magnitude of the velocity. A bearing is measured clockwise from north.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\begin{pmatrix}3 \\\\ -2\\end{pmatrix} + 10\\begin{pmatrix}0.6 \\\\ 0.8\\end{pmatrix}\\)"
+    ],
+    "answer": "\\((9, 6)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\sqrt{0.6^{2} + 0.8^{2}} = 1\\)"
+    ],
+    "answer": "1 m s⁻¹"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(-2 + 0.8t = 10\\), so \\(t = 15\\), and then \\(x = 3 + 0.6 \\times 15 = 12\\)."
+    ],
+    "answer": "After 15 seconds, at \\((12, 10)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The angle clockwise from north satisfies \\(\\tan\\beta = \\dfrac{0.6}{0.8}\\) (east part over north part), so \\(\\beta = 36.86\\ldots^{\\circ}\\)"
+    ],
+    "answer": "\\(037^{\\circ}\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-019",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector kinematics",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "Two kayaks set off at the same time on a lake. Their positions, in km, \\(t\\) hours later are \\(\\boldsymbol{r}_{1} = t\\begin{pmatrix}3 \\\\ 4\\end{pmatrix}\\) and \\(\\boldsymbol{r}_{2} = \\begin{pmatrix}10 \\\\ 2\\end{pmatrix} + t\\begin{pmatrix}-1 \\\\ 1.5\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the speed of each kayak.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the paths of the kayaks cross, and find the point where they cross. Find the time at which each kayak passes that point.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the distance between the kayaks when the first one is at the crossing point.",
+    "marks": 1
+   }
+  ],
+  "idea": "Paths cross if the two lines share a point, which may be reached at different times. Use a separate parameter for each kayak, then compare the times.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\sqrt{3^{2} + 4^{2}} = 5\\) and \\(\\sqrt{1^{2} + 1.5^{2}} = 1.802\\ldots\\)"
+    ],
+    "answer": "5 km h⁻¹ and 1.80 km h⁻¹"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Solve \\(3a = 10 - b\\) and \\(4a = 2 + 1.5b\\). From the first, \\(b = 10 - 3a\\), so \\(4a = 2 + 15 - 4.5a\\) and \\(a = 2\\), \\(b = 4\\).",
+     "Both give the point \\((6, 8)\\), so the paths cross there."
+    ],
+    "answer": "\\((6, 8)\\); the first kayak passes it after 2 hours, the second after 4 hours"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "At \\(t = 2\\) the second kayak is at \\((8, 5)\\). Distance \\(= \\sqrt{2^{2} + 3^{2}} = \\sqrt{13}\\)"
+    ],
+    "answer": "3.61 km"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-020",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector kinematics",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "A cargo ship and a patrol boat move with constant velocities. Their positions, in km, \\(t\\) hours after 09:00 are \\(\\boldsymbol{r}_{S} = \\begin{pmatrix}-10 \\\\ 4\\end{pmatrix} + t\\begin{pmatrix}12 \\\\ -2\\end{pmatrix}\\) and \\(\\boldsymbol{r}_{P} = \\begin{pmatrix}2 \\\\ -8\\end{pmatrix} + t\\begin{pmatrix}3 \\\\ 6\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that the vector from the patrol boat to the ship at time \\(t\\) is \\(\\begin{pmatrix}9t - 12 \\\\ 12 - 8t\\end{pmatrix}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the least distance between the two vessels, and the time, to the nearest minute, at which it occurs.",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "The patrol boat's radar detects vessels up to 3 km away. Find the length of time, in minutes, for which the ship is detected.",
+    "marks": 3
+   }
+  ],
+  "idea": "Write the distance squared as a quadratic in \\(t\\): \\(D^{2} = (9t - 12)^{2} + (12 - 8t)^{2}\\). Its least value is at the vertex, and the radar question asks when \\(D^{2} \\le 9\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\boldsymbol{r}_{S} - \\boldsymbol{r}_{P} = \\begin{pmatrix}-10 + 12t - 2 - 3t \\\\ 4 - 2t + 8 - 6t\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\begin{pmatrix}9t - 12 \\\\ 12 - 8t\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(D^{2} = (9t - 12)^{2} + (12 - 8t)^{2} = 145t^{2} - 408t + 288\\).",
+     "Minimum at \\(t = \\dfrac{408}{2 \\times 145} = 1.406\\ldots\\) hours, which is 1 hour \\(24.4\\ldots\\) minutes.",
+     "\\(D^{2} = 145(1.406\\ldots)^{2} - 408(1.406\\ldots) + 288 = 0.9931\\ldots\\), so \\(D = 0.9965\\ldots\\)"
+    ],
+    "answer": "0.997 km, at 10:24"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(145t^{2} - 408t + 288 = 9\\), so \\(145t^{2} - 408t + 279 = 0\\), and \\(t = 1.171\\ldots\\) or \\(t = 1.641\\ldots\\)",
+     "The ship is within 3 km between these times: \\(0.4699\\ldots\\) hours \\(= 28.19\\ldots\\) minutes."
+    ],
+    "answer": "28 minutes (28.2)"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-021",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector kinematics",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "A fountain shoots a jet of water from a nozzle beside a pond. A drop of water leaves the nozzle at \\(t = 0\\), and its position, in metres, \\(t\\) seconds later is \\(\\boldsymbol{r} = \\begin{pmatrix}4t \\\\ 1.2 + 5t - 4.9t^{2}\\end{pmatrix}\\), relative to a point on the water surface. The drop lands when it reaches height 0."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the velocity vector of the drop at time \\(t\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the speed at which the drop leaves the nozzle.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the greatest height of the drop above the water.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the horizontal distance from the nozzle to where the drop lands.",
+    "marks": 2
+   }
+  ],
+  "idea": "Differentiate each component of \\(\\boldsymbol{r}\\) to get \\(\\boldsymbol{v}\\). At the top of its path the drop is moving horizontally, so the vertical part of \\(\\boldsymbol{v}\\) is 0.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\boldsymbol{v} = \\dfrac{d\\boldsymbol{r}}{dt}\\)"
+    ],
+    "answer": "\\(\\boldsymbol{v} = \\begin{pmatrix}4 \\\\ 5 - 9.8t\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "At \\(t = 0\\), \\(\\boldsymbol{v} = \\begin{pmatrix}4 \\\\ 5\\end{pmatrix}\\), and \\(\\sqrt{41} = 6.403\\ldots\\)"
+    ],
+    "answer": "6.40 m s⁻¹"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(5 - 9.8t = 0\\) at \\(t = 0.5102\\ldots\\), and then \\(y = 1.2 + 5(0.5102\\ldots) - 4.9(0.5102\\ldots)^{2} = 2.475\\ldots\\)"
+    ],
+    "answer": "2.48 m"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(1.2 + 5t - 4.9t^{2} = 0\\) gives \\(t = 1.220\\ldots\\) (the other root is negative).",
+     "\\(x = 4 \\times 1.220\\ldots = 4.883\\ldots\\)"
+    ],
+    "answer": "4.88 m"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-022",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector kinematics",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A child sits at the edge of a playground roundabout. Her position, in metres, relative to the centre of the roundabout, \\(t\\) seconds after it starts turning at a steady rate, is \\(\\boldsymbol{r} = \\begin{pmatrix}2\\cos(1.5t) \\\\ 2\\sin(1.5t)\\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the velocity vector \\(\\boldsymbol{v}\\) at time \\(t\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the child's speed is constant, and find it.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Show that the acceleration is \\(\\boldsymbol{a} = -2.25\\boldsymbol{r}\\), and describe the direction of the acceleration.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the time the roundabout takes to turn once.",
+    "marks": 1
+   }
+  ],
+  "idea": "Differentiate each component (the chain rule brings out the factor 1.5). Use \\(\\sin^{2} + \\cos^{2} = 1\\) for the speed. A negative multiple of \\(\\boldsymbol{r}\\) points back towards the origin.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\dfrac{d}{dt}2\\cos(1.5t) = -3\\sin(1.5t)\\) and \\(\\dfrac{d}{dt}2\\sin(1.5t) = 3\\cos(1.5t)\\)."
+    ],
+    "answer": "\\(\\boldsymbol{v} = \\begin{pmatrix}-3\\sin(1.5t) \\\\ 3\\cos(1.5t)\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(|\\boldsymbol{v}| = \\sqrt{9\\sin^{2}(1.5t) + 9\\cos^{2}(1.5t)} = \\sqrt{9}\\), which does not depend on \\(t\\)."
+    ],
+    "answer": "3 m s⁻¹"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\boldsymbol{a} = \\dfrac{d\\boldsymbol{v}}{dt} = \\begin{pmatrix}-4.5\\cos(1.5t) \\\\ -4.5\\sin(1.5t)\\end{pmatrix} = -2.25\\begin{pmatrix}2\\cos(1.5t) \\\\ 2\\sin(1.5t)\\end{pmatrix}\\)"
+    ],
+    "answer": "\\(\\boldsymbol{a} = -2.25\\boldsymbol{r}\\): it always points from the child towards the centre"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "One turn is when \\(1.5t = 2\\pi\\): \\(t = \\dfrac{2\\pi}{1.5} = 4.188\\ldots\\)"
+    ],
+    "answer": "4.19 s"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-023",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graphs and adjacency matrices",
+  "level": {
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 5,
+  "stem": [
+   "The graph shows which of six students, A to F, follow each other on a study app. An edge means the two students follow each other.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 402 278\" width=\"402\" height=\"278\" role=\"img\" aria-label=\"Graph with six vertices A to F. Edges: A-B, A-C, A-D, B-C, B-E, C-D, D-E and E-F.\"><path d=\"M57.8 90.9 L136.6 51.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M57.8 103.5 L136.6 142.9\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M53.8 108.3 L140.6 221.3\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M149.2 59.2 L149.2 135.2\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M160.7 53.3 L241.7 109.9\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M149.2 163.2 L149.2 218.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M158.6 222.0 L243.8 128.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M267.2 118.0 L343.2 118.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"45.2\" cy=\"97.2\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"45.2\" y=\"102.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"149.2\" cy=\"45.2\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"149.2\" y=\"50.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"149.2\" cy=\"149.2\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"149.2\" y=\"154.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><circle cx=\"149.2\" cy=\"232.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"149.2\" y=\"237.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><circle cx=\"253.2\" cy=\"118.0\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"253.2\" y=\"123.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">E</text><circle cx=\"357.2\" cy=\"118.0\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"357.2\" y=\"123.1\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">F</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the degree of each vertex, and verify that the sum of the degrees is twice the number of edges.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Write down the adjacency matrix of the graph, with rows and columns in the order A to F.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find how many more edges would be needed to make the graph complete.",
+    "marks": 1
+   }
+  ],
+  "idea": "Each edge adds 1 to the degree of each of its two ends, so the degrees add up to twice the number of edges. A complete graph on \\(n\\) vertices has \\(\\tfrac{1}{2}n(n - 1)\\) edges.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "A 3, B 3, C 3, D 3, E 3, F 1. The sum is 16, and there are 8 edges."
+    ],
+    "answer": "Degrees 3, 3, 3, 3, 3, 1; \\(16 = 2 \\times 8\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Put 1 where two students are joined and 0 elsewhere. The matrix is symmetric."
+    ],
+    "answer": "\\(\\begin{pmatrix}0 & 1 & 1 & 1 & 0 & 0 \\\\ 1 & 0 & 1 & 0 & 1 & 0 \\\\ 1 & 1 & 0 & 1 & 0 & 0 \\\\ 1 & 0 & 1 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 1 & 0 & 1 \\\\ 0 & 0 & 0 & 0 & 1 & 0\\end{pmatrix}\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The complete graph on 6 vertices has \\(\\tfrac{1}{2} \\times 6 \\times 5 = 15\\) edges, and \\(15 - 8 = 7\\)."
+    ],
+    "answer": "7 more edges"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-024",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graphs and adjacency matrices",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A small website has five pages, A to E. The directed graph shows the links: an arrow from one page to another means the first page has a link to the second. A and C link to each other.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 350 278\" width=\"350\" height=\"278\" role=\"img\" aria-label=\"Directed graph with five vertices A to E. Arrows: A to B, A to C and C to A (one double-headed arrow), B to C, B to E, C to D, D to E, E to A and E to C.\"><path d=\"M56.9 120.6 L158.3 53.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M158.3 53.0 L151.9 63.2 L146.4 54.9 Z\" fill=\"#0b0d12\"/><path d=\"M56.9 136.2 L158.3 203.8\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M158.3 203.8 L146.4 201.9 L151.9 193.6 Z\" fill=\"#0b0d12\"/><path d=\"M56.9 136.2 L68.8 138.1 L63.3 146.4 Z\" fill=\"#0b0d12\"/><path d=\"M170.0 59.2 L170.0 197.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M170.0 197.6 L165.0 186.6 L175.0 186.6 Z\" fill=\"#0b0d12\"/><path d=\"M183.7 48.4 L291.5 73.2\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M291.5 73.2 L279.7 75.6 L281.9 65.9 Z\" fill=\"#0b0d12\"/><path d=\"M183.9 213.7 L291.3 230.3\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M291.3 230.3 L279.7 233.5 L281.2 223.7 Z\" fill=\"#0b0d12\"/><path d=\"M305.2 218.4 L305.2 90.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M305.2 90.4 L310.2 101.4 L300.2 101.4 Z\" fill=\"#0b0d12\"/><path d=\"M291.4 79.2 L59.0 125.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M59.0 125.6 L68.8 118.6 L70.7 128.4 Z\" fill=\"#0b0d12\"/><path d=\"M295.3 86.3 L179.9 201.7\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M179.9 201.7 L184.2 190.4 L191.2 197.4 Z\" fill=\"#0b0d12\"/><circle cx=\"45.2\" cy=\"128.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"45.2\" y=\"133.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"170.0\" cy=\"45.2\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"170.0\" y=\"50.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"170.0\" cy=\"211.6\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"170.0\" y=\"216.7\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><circle cx=\"305.2\" cy=\"232.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"305.2\" y=\"237.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><circle cx=\"305.2\" cy=\"76.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"305.2\" y=\"81.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">E</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the adjacency matrix \\(\\boldsymbol{M}\\), where the entry in row \\(i\\) and column \\(j\\) is the number of links from page \\(i\\) to page \\(j\\) (order A to E).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the number of ways to go from page A to page C in exactly 3 clicks.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Write down the in-degree and the out-degree of page C.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Find the least number of clicks needed to go from page D to page B.",
+    "marks": 1
+   }
+  ],
+  "idea": "The entry in row \\(i\\), column \\(j\\) of \\(\\boldsymbol{M}^{n}\\) counts the walks of length \\(n\\) from \\(i\\) to \\(j\\). The in-degree counts arrows arriving; the out-degree counts arrows leaving.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Row A has 1s for B and C, row B for C and E, row C for A and D, row D for E, row E for A and C."
+    ],
+    "answer": "\\(\\boldsymbol{M} = \\begin{pmatrix}0 & 1 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 & 1 \\\\ 1 & 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 & 0 & 1 \\\\ 1 & 0 & 1 & 0 & 0\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\boldsymbol{M}^{3} = \\begin{pmatrix}2 & 1 & 2 & 1 & 1 \\\\ 1 & 2 & 2 & 1 & 1 \\\\ 2 & 0 & 2 & 1 & 1 \\\\ 1 & 1 & 1 & 1 & 0 \\\\ 1 & 1 & 2 & 1 & 2\\end{pmatrix}\\); the entry in row A, column C is 2.",
+     "(They are A → B → E → C and A → C → A → C.)"
+    ],
+    "answer": "2"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Arrows into C come from A, B and E; arrows out of C go to A and D."
+    ],
+    "answer": "In-degree 3, out-degree 2"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "D links only to E, E to A and C, and only A links to B: D → E → A → B."
+    ],
+    "answer": "3 clicks"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-025",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graphs and adjacency matrices",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 7,
+  "stem": [
+   "This question uses the website in the previous question: A links to B and C; B to C and E; C to A and D; D to E; E to A and C.",
+   "A visitor clicks links at random: on each page, they follow each of that page's links with equal probability.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 350 278\" width=\"350\" height=\"278\" role=\"img\" aria-label=\"Directed graph with five vertices A to E. Arrows: A to B, A to C and C to A (one double-headed arrow), B to C, B to E, C to D, D to E, E to A and E to C.\"><path d=\"M56.9 120.6 L158.3 53.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M158.3 53.0 L151.9 63.2 L146.4 54.9 Z\" fill=\"#0b0d12\"/><path d=\"M56.9 136.2 L158.3 203.8\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M158.3 203.8 L146.4 201.9 L151.9 193.6 Z\" fill=\"#0b0d12\"/><path d=\"M56.9 136.2 L68.8 138.1 L63.3 146.4 Z\" fill=\"#0b0d12\"/><path d=\"M170.0 59.2 L170.0 197.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M170.0 197.6 L165.0 186.6 L175.0 186.6 Z\" fill=\"#0b0d12\"/><path d=\"M183.7 48.4 L291.5 73.2\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M291.5 73.2 L279.7 75.6 L281.9 65.9 Z\" fill=\"#0b0d12\"/><path d=\"M183.9 213.7 L291.3 230.3\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M291.3 230.3 L279.7 233.5 L281.2 223.7 Z\" fill=\"#0b0d12\"/><path d=\"M305.2 218.4 L305.2 90.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M305.2 90.4 L310.2 101.4 L300.2 101.4 Z\" fill=\"#0b0d12\"/><path d=\"M291.4 79.2 L59.0 125.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M59.0 125.6 L68.8 118.6 L70.7 128.4 Z\" fill=\"#0b0d12\"/><path d=\"M295.3 86.3 L179.9 201.7\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M179.9 201.7 L184.2 190.4 L191.2 197.4 Z\" fill=\"#0b0d12\"/><circle cx=\"45.2\" cy=\"128.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"45.2\" y=\"133.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"170.0\" cy=\"45.2\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"170.0\" y=\"50.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"170.0\" cy=\"211.6\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"170.0\" y=\"216.7\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><circle cx=\"305.2\" cy=\"232.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"305.2\" y=\"237.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><circle cx=\"305.2\" cy=\"76.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"305.2\" y=\"81.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">E</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the transition matrix \\(\\boldsymbol{T}\\), with columns for the page the visitor is on (order A to E).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "The visitor starts on page A. Find the probability that they are on page C after 4 clicks.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the long-term probability of being on each page, and hence rank the pages from the highest long-term probability to the lowest.",
+    "marks": 3
+   }
+  ],
+  "idea": "Column \\(j\\) of \\(\\boldsymbol{T}\\) shares probability 1 equally among the pages that page \\(j\\) links to. The state after \\(n\\) clicks is \\(\\boldsymbol{T}^{n}\\boldsymbol{s}_{0}\\), and the long-term state \\(\\boldsymbol{s}\\) solves \\(\\boldsymbol{T}\\boldsymbol{s} = \\boldsymbol{s}\\) with entries adding up to 1.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Pages A, B, C and E have two links each (probability 0.5 each); D has one link (probability 1)."
+    ],
+    "answer": "\\(\\boldsymbol{T} = \\begin{pmatrix}0 & 0 & 0.5 & 0 & 0.5 \\\\ 0.5 & 0 & 0 & 0 & 0 \\\\ 0.5 & 0.5 & 0 & 0 & 0.5 \\\\ 0 & 0 & 0.5 & 0 & 0 \\\\ 0 & 0.5 & 0 & 1 & 0\\end{pmatrix}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\boldsymbol{T}^{4}\\begin{pmatrix}1 \\\\ 0 \\\\ 0 \\\\ 0 \\\\ 0\\end{pmatrix} = \\begin{pmatrix}0.25 \\\\ 0.125 \\\\ 0.3125 \\\\ 0.125 \\\\ 0.1875\\end{pmatrix}\\)"
+    ],
+    "answer": "0.3125"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\((\\boldsymbol{T} - \\boldsymbol{I})\\boldsymbol{s} = \\boldsymbol{0}\\) with \\(a + b + c + d + e = 1\\) (or find a high power of \\(\\boldsymbol{T}\\)).",
+     "\\(\\boldsymbol{s} = \\begin{pmatrix}\\tfrac{12}{49} \\\\ \\tfrac{6}{49} \\\\ \\tfrac{14}{49} \\\\ \\tfrac{7}{49} \\\\ \\tfrac{10}{49}\\end{pmatrix} = \\begin{pmatrix}0.245 \\\\ 0.122 \\\\ 0.286 \\\\ 0.143 \\\\ 0.204\\end{pmatrix}\\)",
+     "Check one row: \\(b = 0.5a\\), and \\(\\tfrac{6}{49} = 0.5 \\times \\tfrac{12}{49}\\)."
+    ],
+    "answer": "A 0.245, B 0.122, C 0.286, D 0.143, E 0.204; ranking C, A, E, D, B"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-026",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graphs and adjacency matrices",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "The graph shows the rooms of a small museum and the doorways between them. H is the entrance hall, and each edge is one doorway.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 434 226\" width=\"434\" height=\"226\" role=\"img\" aria-label=\"Graph with six vertices H, P, Q, R, S and T. Edges: H-P, H-Q, P-Q, Q-R, Q-S, R-S, S-T and R-T.\"><path d=\"M45.2 166.4 L45.2 69.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M56.6 172.1 L148.2 105.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M58.4 60.4 L146.4 92.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M172.4 91.4 L261.2 51.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M171.0 105.5 L262.6 172.1\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M274.0 59.2 L274.0 166.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M286.1 173.3 L376.3 119.9\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M286.1 52.3 L376.3 105.7\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><circle cx=\"45.2\" cy=\"180.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"45.2\" y=\"185.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">H</text><circle cx=\"45.2\" cy=\"55.6\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"45.2\" y=\"60.7\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P</text><circle cx=\"159.6\" cy=\"97.2\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"159.6\" y=\"102.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Q</text><circle cx=\"274.0\" cy=\"45.2\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"274.0\" y=\"50.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">R</text><circle cx=\"274.0\" cy=\"180.4\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"274.0\" y=\"185.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">S</text><circle cx=\"388.4\" cy=\"112.8\" r=\"14.0\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"388.4\" y=\"117.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">T</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "A guard wants to walk through every doorway exactly once. Explain why this is possible, and state where the walk must start and finish.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Write down one such walk.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The museum adds one extra doorway (two rooms may have more than one doorway between them) so that the guard can start and finish in the entrance hall, still passing through every doorway exactly once. State which two rooms the new doorway should join.",
+    "marks": 1
+   },
+   {
+    "label": "d",
+    "text": "Explain why there is no route that visits every room exactly once and returns to the entrance hall.",
+    "marks": 2
+   }
+  ],
+  "idea": "A trail using every edge once (an Eulerian trail) exists when exactly two vertices have odd degree, and it runs from one odd vertex to the other. If no vertex is odd, there is an Eulerian circuit. A vertex of degree 2 forces both of its edges into any Hamiltonian cycle.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Degrees: H 2, P 2, Q 4, R 3, S 3, T 2. The graph is connected and exactly two vertices, R and S, have odd degree."
+    ],
+    "answer": "Exactly two rooms (R and S) have an odd number of doorways; the walk starts at one of them and finishes at the other"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Start at R and use all 8 edges once, finishing at S."
+    ],
+    "answer": "For example R–T–S–R–Q–H–P–Q–S"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Joining the two odd vertices makes every degree even, so an Eulerian circuit exists, and a circuit can start anywhere, including H."
+    ],
+    "answer": "R and S"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "H and P both have degree 2, so a cycle through every room must use both edges at H (H–P and H–Q) and both edges at P (P–H and P–Q).",
+     "These three edges already close the cycle H–P–Q–H, before R, S and T are visited."
+    ],
+    "answer": "Any such route would have to contain the short cycle H–P–Q–H, which misses R, S and T"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-027",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graph algorithms",
+  "level": {
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 6,
+  "stem": [
+   "A farmer wants to join six fields, A to F, with irrigation pipes so that water can reach every field. The table gives the length, in metres, of each possible pipe; a dash means a pipe is not possible.",
+   "\\[\\def\\arraystretch{1.35}\\begin{array}{|c|cccccc|}\\hline  & \\textbf{A} & \\textbf{B} & \\textbf{C} & \\textbf{D} & \\textbf{E} & \\textbf{F} \\\\ \\hline \\textbf{A} &  & 85 & 120 & – & 140 & 95 \\\\ \\textbf{B} & 85 &  & 70 & 110 & – & 60 \\\\ \\textbf{C} & 120 & 70 &  & 75 & 90 & – \\\\ \\textbf{D} & – & 110 & 75 &  & 65 & 130 \\\\ \\textbf{E} & 140 & – & 90 & 65 &  & 100 \\\\ \\textbf{F} & 95 & 60 & – & 130 & 100 &  \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use Prim's algorithm, starting at A, to find the pipes the farmer should lay to use the least total length. List the pipes in the order they are chosen.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the total length of pipe.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Explain why the network uses exactly five pipes.",
+    "marks": 1
+   }
+  ],
+  "idea": "Prim's algorithm grows one tree: at each step add the shortest edge that joins a field already in the tree to a field not yet in it.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "From {A}: shortest is AB (85).",
+     "From {A, B}: shortest is BF (60).",
+     "From {A, B, F}: shortest is BC (70).",
+     "From {A, B, C, F}: shortest is CD (75).",
+     "From {A, B, C, D, F}: shortest is DE (65)."
+    ],
+    "answer": "AB, BF, BC, CD, DE"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(85 + 60 + 70 + 75 + 65\\)"
+    ],
+    "answer": "355 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "A spanning tree on \\(n\\) vertices has \\(n - 1\\) edges."
+    ],
+    "answer": "A tree that joins 6 fields has \\(6 - 1 = 5\\) edges; any extra pipe would make a cycle"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-028",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graph algorithms",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "A botanic garden plans to pave some of its paths so that all seven attractions are joined by paved paths. The graph shows the paths and their lengths in metres: G is the gate, C the café, H the glasshouse, L the lookout, M the maze, P the pond and R the rose garden.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 388 475\" width=\"388\" height=\"475\" role=\"img\" aria-label=\"Weighted graph with seven vertices G, P, R, M, H, C and L. Edge weights: G-R 60, G-P 75, G-M 110, R-M 55, R-C 80, R-H 70, P-H 65, H-C 85, H-L 50, C-L 90, C-M 95, P-R 68.\"><path d=\"M63.3 391.0 L179.3 344.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M48.8 381.1 L48.8 238.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M64.5 396.8 L323.1 396.8\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M208.3 344.6 L324.3 391.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M206.0 329.0 L326.6 232.6\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M193.8 323.1 L193.8 192.1\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M63.7 218.0 L178.9 181.2\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M208.7 181.2 L323.9 218.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M200.8 162.4 L250.6 62.8\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M332.2 208.6 L264.2 63.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M338.8 238.5 L338.8 381.1\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M61.0 232.6 L181.6 329.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><text x=\"121.3\" y=\"360.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">60</text><text x=\"34.8\" y=\"314.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">75</text><text x=\"193.8\" y=\"413.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">110</text><text x=\"272.3\" y=\"362.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">55</text><text x=\"274.3\" y=\"295.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">80</text><text x=\"179.8\" y=\"262.4\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">70</text><text x=\"121.3\" y=\"192.4\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">65</text><text x=\"266.3\" y=\"192.4\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">85</text><text x=\"211.7\" y=\"117.4\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">50</text><text x=\"312.2\" y=\"140.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">90</text><text x=\"354.8\" y=\"314.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">95</text><text x=\"115.3\" y=\"275.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">68</text><circle cx=\"48.8\" cy=\"396.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"48.8\" y=\"401.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">G</text><circle cx=\"48.8\" cy=\"222.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"48.8\" y=\"227.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">P</text><circle cx=\"193.8\" cy=\"338.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"193.8\" y=\"343.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">R</text><circle cx=\"338.8\" cy=\"396.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"338.8\" y=\"401.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">M</text><circle cx=\"193.8\" cy=\"176.4\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"193.8\" y=\"181.5\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">H</text><circle cx=\"338.8\" cy=\"222.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"338.8\" y=\"227.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><circle cx=\"257.6\" cy=\"48.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"257.6\" y=\"53.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">L</text><text x=\"193.8\" y=\"444.7\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Not to scale</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use Kruskal's algorithm to find the paths to pave so that the total length is least. List the paths in the order they are chosen, and state the path rejected before all seven attractions are joined.",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find the total length paved.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "The path from the gate to the maze, GM, must be paved for wheelchair access. Find the least total length of paving that includes GM.",
+    "marks": 3
+   }
+  ],
+  "idea": "Kruskal's algorithm takes edges from shortest to longest, skipping any edge that would make a cycle. To force an edge in, take it first and then continue the algorithm as normal.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "In order of length: HL 50 ✓, RM 55 ✓, GR 60 ✓, PH 65 ✓, PR 68 ✓ (joins the group P, H, L to the group G, R, M).",
+     "RH 70 is rejected: R and H are already joined (R–P–H), so it would make a cycle.",
+     "RC 80 ✓ joins C. All seven vertices are now joined by 6 edges."
+    ],
+    "answer": "HL, RM, GR, PH, PR, RC (RH rejected)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(50 + 55 + 60 + 65 + 68 + 80\\)"
+    ],
+    "answer": "378 m"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Start with GM (110), then run Kruskal: HL 50 ✓, RM 55 ✓, GR 60 rejected (G–M–R is already joined), PH 65 ✓, PR 68 ✓, RH 70 rejected, RC 80 ✓.",
+     "\\(110 + 50 + 55 + 65 + 68 + 80\\)"
+    ],
+    "answer": "428 m"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-029",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graph algorithms",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 8,
+  "stem": [
+   "After a snowfall, a snowplough must clear every road in a village. The graph shows the roads and their lengths in km. The plough is kept at the depot, D.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 446 330\" width=\"446\" height=\"330\" role=\"img\" aria-label=\"Weighted graph with six vertices. Edge lengths in km: D-A 3, A-C 4.5, C-F 3.5, F-E 3, E-D 5.5, D-B 2.5, A-B 2, B-C 2.5, B-E 3.\"><path d=\"M48.8 236.1 L48.8 93.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M64.2 75.2 L207.4 51.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M238.2 51.4 L381.4 75.2\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M391.5 92.5 L344.1 225.5\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M323.2 240.8 L64.4 251.2\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M62.9 245.0 L179.7 189.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M61.5 87.0 L181.1 173.0\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M197.1 166.9 L219.5 64.1\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M208.3 188.0 L324.3 234.4\" stroke=\"#0b0d12\" stroke-width=\"2.0\" fill=\"none\" stroke-linecap=\"round\"/><text x=\"34.8\" y=\"169.6\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"135.8\" y=\"56.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">4.5</text><text x=\"309.8\" y=\"56.1\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3.5</text><text x=\"381.8\" y=\"163.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><text x=\"193.8\" y=\"263.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">5.5</text><text x=\"125.3\" y=\"211.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2.5</text><text x=\"127.3\" y=\"142.8\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2</text><text x=\"220.3\" y=\"120.3\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">2.5</text><text x=\"266.3\" y=\"205.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\" paint-order=\"stroke\" stroke=\"#fff\" stroke-width=\"3\" stroke-linejoin=\"round\">3</text><circle cx=\"48.8\" cy=\"77.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"48.8\" y=\"82.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">A</text><circle cx=\"222.8\" cy=\"48.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"222.8\" y=\"53.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">C</text><circle cx=\"396.8\" cy=\"77.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"396.8\" y=\"82.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">F</text><circle cx=\"48.8\" cy=\"251.8\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"48.8\" y=\"256.9\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">D</text><circle cx=\"193.8\" cy=\"182.2\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"193.8\" y=\"187.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">B</text><circle cx=\"338.8\" cy=\"240.2\" r=\"15.7\" fill=\"#fff\" stroke=\"#0b0d12\" stroke-width=\"1.8\"/><text x=\"338.8\" y=\"245.3\" text-anchor=\"middle\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">E</text><text x=\"222.8\" y=\"299.7\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Not to scale</text></svg>"
+   }
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the total length of the roads.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "The plough starts and finishes at D. Find the length of the shortest route that clears every road, and state which roads are driven twice.",
+    "marks": 5
+   },
+   {
+    "label": "c",
+    "text": "Instead, the plough may finish at any junction, where it will be collected. Find where it should finish, and the length of the shortest route.",
+    "marks": 2
+   }
+  ],
+  "idea": "This is the Chinese postman problem. Find the odd vertices; for a closed route, pair them up in every possible way and repeat the shortest paths of the cheapest pairing. If the route may end elsewhere, one pair of odd vertices can be the start and the end, so only the other pair is repeated.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(3 + 4.5 + 3.5 + 3 + 5.5 + 2.5 + 2 + 2.5 + 3\\)"
+    ],
+    "answer": "29.5 km"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Degrees: A 3, B 4, C 3, D 3, E 3, F 2. The odd vertices are A, C, D and E.",
+     "Shortest paths: AC 4.5, AD 3, AE 5 (A–B–E), CD 5 (C–B–D), CE 5.5 (C–B–E), DE 5.5.",
+     "Pairings: AC + DE = 10; AD + CE = 3 + 5.5 = 8.5; AE + CD = 5 + 5 = 10. The least is AD + CE.",
+     "Route length: \\(29.5 + 8.5 = 38\\)."
+    ],
+    "answer": "38 km; roads AD, CB and BE are driven twice"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "The route starts at D, so D is one end and the other end is A, C or E. Only the remaining pair is repeated:",
+     "end at A: repeat CE (5.5); end at C: repeat AE (5); end at E: repeat AC (4.5).",
+     "\\(29.5 + 4.5 = 34\\)"
+    ],
+    "answer": "Finish at E; 34 km"
+   }
+  ]
+ },
+ {
+  "id": "ai-gt-hl-030",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Graph algorithms",
+  "level": {
+   "HL AI": "Hard"
+  },
+  "calculator": true,
+  "marks": 9,
+  "stem": [
+   "A piano tuner leaves home, H, visits five clients, A to E, and returns home. The table gives the travel times, in minutes, between each pair of places.",
+   "\\[\\def\\arraystretch{1.35}\\begin{array}{|c|cccccc|}\\hline  & \\textbf{H} & \\textbf{A} & \\textbf{B} & \\textbf{C} & \\textbf{D} & \\textbf{E} \\\\ \\hline \\textbf{H} &  & 12 & 18 & 25 & 15 & 20 \\\\ \\textbf{A} & 12 &  & 10 & 22 & 17 & 28 \\\\ \\textbf{B} & 18 & 10 &  & 14 & 24 & 19 \\\\ \\textbf{C} & 25 & 22 & 14 &  & 16 & 11 \\\\ \\textbf{D} & 15 & 17 & 24 & 16 &  & 21 \\\\ \\textbf{E} & 20 & 28 & 19 & 11 & 21 &  \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Use the nearest neighbour algorithm, starting at H, to find an upper bound for the shortest round trip. Write down the route.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "By deleting vertex H, find a lower bound for the shortest round trip.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Deleting vertex C instead gives a minimum spanning tree of the other five vertices with weight 56 minutes. Find the lower bound this gives.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Hence write down the best interval you can for the time of the shortest round trip.",
+    "marks": 1
+   }
+  ],
+  "idea": "Nearest neighbour gives a real round trip, so its length is an upper bound. For a lower bound, find a minimum spanning tree of the graph without one vertex, then add that vertex's two shortest edges. Different deleted vertices give different lower bounds; keep the largest.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "H → A (12) → B (10) → C (14) → E (11) → D (21) → H (15)."
+    ],
+    "answer": "HABCEDH, 83 minutes"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Minimum spanning tree of A, B, C, D, E (Kruskal): AB 10, CE 11, BC 14, CD 16; weight 51.",
+     "Two shortest edges from H: HA 12 and HD 15.",
+     "\\(51 + 12 + 15 = 78\\)"
+    ],
+    "answer": "78 minutes"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Two shortest edges from C: CE 11 and BC 14.",
+     "\\(56 + 11 + 14 = 81\\)"
+    ],
+    "answer": "81 minutes"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Take the largest lower bound and the smallest upper bound."
+    ],
+    "answer": "\\(81 \\le T \\le 83\\) minutes"
+   }
+  ]
+ }
+]

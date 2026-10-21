@@ -1,0 +1,564 @@
+[
+ {
+  "id": "ai-na-p2-001",
+  "strand": "Number and Algebra",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "Ana and Ben train for a long-distance charity walk. On day 1 Ana walks 12 km, and each day after that she walks 1.5 km more than the day before. On day 1 Ben walks 10 km, and each day after that he walks 8 % more than the day before."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the distance each of them walks on day 10.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the total distance each of them walks in the first 10 days.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the first day on which Ben walks further than Ana.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Ana's target is a total of 500 km. Find the day on which she reaches it.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "At the end of the day on which Ana reaches her target, find how much further Ben must still walk before his total distance reaches 500 km.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "Find the distance Ben's model gives for day 30, and comment on it.",
+    "marks": 2
+   }
+  ],
+  "idea": "Ana's daily distances form an arithmetic sequence (add 1.5 each day) and Ben's a geometric sequence (multiply by 1.08 each day). A geometric sequence with ratio above 1 always overtakes an arithmetic one in the end.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Ana: \\(u_{10} = 12 + 9 \\times 1.5 = 25.5\\).",
+     "Ben: \\(v_{10} = 10 \\times 1.08^{9} = 19.99\\ldots\\)"
+    ],
+    "answer": "Ana 25.5 km; Ben 20.0 km"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Ana: \\(S_{10} = \\dfrac{10}{2}(2 \\times 12 + 9 \\times 1.5) = 187.5\\).",
+     "Ben: \\(S_{10} = \\dfrac{10(1.08^{10} - 1)}{0.08} = 144.8\\ldots\\)"
+    ],
+    "answer": "Ana 187.5 km; Ben 145 km"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Compare \\(10 \\times 1.08^{n - 1}\\) with \\(12 + 1.5(n - 1)\\) in a table: day 18 gives \\(37.00\\ldots\\) and 37.5; day 19 gives \\(39.96\\ldots\\) and 39."
+    ],
+    "answer": "Day 19"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\dfrac{n}{2}(24 + 1.5(n - 1)) \\ge 500\\). A table gives \\(S_{19} = 484.5\\) and \\(S_{20} = 525\\)."
+    ],
+    "answer": "Day 20"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Ben's total after 20 days: \\(\\dfrac{10(1.08^{20} - 1)}{0.08} = 457.6\\ldots\\)",
+     "\\(500 - 457.6\\ldots = 42.38\\ldots\\)"
+    ],
+    "answer": "42.4 km"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(10 \\times 1.08^{29} = 93.17\\ldots\\) km"
+    ],
+    "answer": "93.2 km in a day is not realistic, so the model cannot continue for long"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-p2-002",
+  "strand": "Number and Algebra",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "A drone camera records video at 375 megabytes per minute. One megabyte is \\(10^{6}\\) bytes and one gigabyte is \\(10^{9}\\) bytes."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write 375 megabytes in bytes, in the form \\(a \\times 10^{k}\\), where \\(1 \\le a < 10\\) and \\(k \\in \\mathbb{Z}\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the number of bytes recorded each second. Give your answer in the form \\(a \\times 10^{k}\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The drone has a 128 gigabyte memory card. Find the number of minutes of video the card can hold. Give your answer to the nearest minute, and also in hours and minutes.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "A pilot estimates the recording time by taking the rate as 0.4 gigabytes per minute. Find the percentage error in the pilot's estimate of the recording time.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "The rate of 375 megabytes per minute is correct to three significant figures. Find the least and greatest possible recording times for the 128 gigabyte card, in minutes, correct to one decimal place.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "A full card is uploaded at 25 megabits per second, where one megabit is \\(10^{6}\\) bits and 1 byte is 8 bits. Find the time taken to upload it, in hours.",
+    "marks": 2
+   }
+  ],
+  "idea": "Work in bytes, writing each quantity in standard form. A value correct to three significant figures lies within half a unit of the last figure: 375 could be anything from 374.5 to 375.5. A larger rate fills the card sooner.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(375 \\times 10^{6} = 3.75 \\times 10^{8}\\)"
+    ],
+    "answer": "\\(3.75 \\times 10^{8}\\) bytes"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{3.75 \\times 10^{8}}{60} = 6\\,250\\,000\\)"
+    ],
+    "answer": "\\(6.25 \\times 10^{6}\\) bytes per second"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{1.28 \\times 10^{11}}{3.75 \\times 10^{8}} = 341.3\\ldots\\) minutes. 341 minutes is 5 hours and 41 minutes."
+    ],
+    "answer": "341 minutes, which is 5 hours 41 minutes"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Pilot: \\(\\dfrac{128}{0.4} = 320\\) minutes.",
+     "Using the unrounded time: \\(\\left|\\dfrac{320 - 341.3\\ldots}{341.3\\ldots}\\right| \\times 100 = 6.25\\)"
+    ],
+    "answer": "6.25 %"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Greatest rate 375.5 MB per minute gives the least time: \\(\\dfrac{1.28 \\times 10^{11}}{3.755 \\times 10^{8}} = 340.87\\ldots\\)",
+     "Least rate 374.5 MB per minute gives the greatest time: \\(\\dfrac{1.28 \\times 10^{11}}{3.745 \\times 10^{8}} = 341.78\\ldots\\)"
+    ],
+    "answer": "Least 340.9 minutes; greatest 341.8 minutes"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Bits on the card: \\(1.28 \\times 10^{11} \\times 8 = 1.024 \\times 10^{12}\\). Rate: \\(2.5 \\times 10^{7}\\) bits per second.",
+     "\\(\\dfrac{1.024 \\times 10^{12}}{2.5 \\times 10^{7}} = 40\\,960\\) seconds, and \\(40\\,960 \\div 3600 = 11.37\\ldots\\)"
+    ],
+    "answer": "11.4 hours"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-p2-003",
+  "strand": "Number and Algebra",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "A family buys solar panels for $9600. They borrow the whole amount at a nominal annual interest rate of 4.8 %, compounded monthly, and repay it in equal monthly payments over 5 years."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the monthly payment.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Using your monthly payment rounded to the nearest cent, find the total amount repaid and the total interest paid.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "The panels save the family $1500 on electricity in the first year, and the saving goes up by 4 % each year after that. Find the saving in the fifth year.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the number of complete years after which the total saving is first greater than the total amount repaid in part (b).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "The value of the panels falls by 7 % each year. Find their value after 10 years.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "State one reason why the 4 % growth in the yearly saving may not continue.",
+    "marks": 1
+   }
+  ],
+  "idea": "Use the finance solver for the loan: 60 monthly payments, with the amount borrowed positive and the payments negative. The yearly savings form a geometric sequence with ratio 1.04, so their total is a geometric series.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Finance solver: \\(N = 60\\), \\(I\\% = 4.8\\), \\(PV = 9600\\), \\(FV = 0\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Then \\(PMT = -180.28\\ldots\\)"
+    ],
+    "answer": "$180.29"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(60 \\times 180.29 = 10\\,817.40\\)",
+     "\\(10\\,817.40 - 9600\\)"
+    ],
+    "answer": "Repaid $10 817.40; interest $1217.40"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(1500 \\times 1.04^{4} = 1754.78\\ldots\\)"
+    ],
+    "answer": "$1754.79"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Total saving after \\(n\\) years: \\(\\dfrac{1500(1.04^{n} - 1)}{0.04}\\).",
+     "\\(n = 6\\): \\(9949.46\\ldots\\); \\(n = 7\\): \\(11\\,847.4\\ldots\\), which is more than 10 817.40."
+    ],
+    "answer": "7 years"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(9600 \\times 0.93^{10} = 4646.23\\ldots\\)"
+    ],
+    "answer": "$4646.23"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "For example: electricity prices may not keep rising by 4 % a year, or the panels become less efficient as they age."
+    ],
+    "answer": "Electricity prices may change, or the panels may produce less as they get older"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-p2-004",
+  "strand": "Number and Algebra",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "A video is posted online. It gets 2000 views on day 1, and for the first 20 days the number of views each day is 35 % more than the day before. From day 21, the number of views each day is 20 % less than the day before."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the number of views on day 5, to the nearest whole number.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the total number of views in the first 20 days.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the first day on which the video gets more than 100 000 views.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the number of views on day 25.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the total number of views from day 21 to day 30.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "Suggest why the 35 % growth could not continue for many more weeks.",
+    "marks": 1
+   }
+  ],
+  "idea": "Both stages are geometric sequences: ratio 1.35 up to day 20, then ratio 0.8 starting from the day 20 value. The total for days 21 to 30 is a geometric series whose first term is the day 21 value.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(2000 \\times 1.35^{4} = 6643.01\\ldots\\)"
+    ],
+    "answer": "6643 views"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{2000(1.35^{20} - 1)}{0.35} = 2\\,304\\,420.5\\ldots\\)"
+    ],
+    "answer": "\\(2.30 \\times 10^{6}\\) views"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(2000 \\times 1.35^{n - 1} > 100\\,000\\), so \\(1.35^{n - 1} > 50\\).",
+     "A table or the solver gives day 14: \\(98\\,939.3\\ldots\\) and day 15: \\(133\\,568.1\\ldots\\)"
+    ],
+    "answer": "Day 15"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Day 20: \\(2000 \\times 1.35^{19} = 598\\,923.8\\ldots\\)",
+     "Day 25: \\(598\\,923.8\\ldots \\times 0.8^{5} = 196\\,255.3\\ldots\\)"
+    ],
+    "answer": "196 000 views"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Day 21 has \\(598\\,923.8\\ldots \\times 0.8 = 479\\,139.0\\ldots\\) views. Days 21 to 30 form a geometric series with 10 terms and ratio 0.8:",
+     "\\(\\dfrac{479\\,139.0\\ldots(1 - 0.8^{10})}{1 - 0.8} = 2\\,138\\,459.5\\ldots\\)"
+    ],
+    "answer": "\\(2.14 \\times 10^{6}\\) views"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "At 35 % a day, views would soon pass the number of people online."
+    ],
+    "answer": "The number of people who could watch is limited, and interest fades"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-p2-005",
+  "strand": "Number and Algebra",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A sports club has three types of monthly membership: junior at \\(\\$x\\), adult at \\(\\$y\\) and family at \\(\\$z\\). The table shows the number of memberships sold and the total income in three months.",
+   "\\[\\def\\arraystretch{1.4}\\begin{array}{|l|c|c|c|c|}\\hline & \\text{Junior} & \\text{Adult} & \\text{Family} & \\text{Income} \\\\ \\hline \\text{Jan} & 40 & 65 & 20 & 5680 \\\\ \\hline \\text{Feb} & 35 & 70 & 24 & 6120 \\\\ \\hline \\text{Mar} & 50 & 60 & 30 & 6480 \\\\ \\hline \\end{array}\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down three equations in \\(x\\), \\(y\\) and \\(z\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the price of each type of membership.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "In April the club sold 45 junior and 70 adult memberships, and the total income was $7240. Find the number of family memberships sold.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "From next year, the adult price goes up by 6 % each year. Find the number of whole years after which the adult price is first more than $70.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the percentage increase in the adult price over 10 years.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "The junior price goes up by $3 each year instead, so it is $24 a month this year, $27 next year, and so on. Find the total that a junior member pays in monthly fees over the 10 years starting with this year.",
+    "marks": 4
+   }
+  ],
+  "idea": "Each month gives one linear equation; three equations in three unknowns can be solved with the calculator. A fixed percentage rise gives a geometric sequence, and a fixed dollar rise gives an arithmetic sequence.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Income = number of each type times its price, added up."
+    ],
+    "answer": "\\(40x + 65y + 20z = 5680\\); \\(35x + 70y + 24z = 6120\\); \\(50x + 60y + 30z = 6480\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Solve the three equations with the calculator."
+    ],
+    "answer": "Junior $24, adult $48, family $80"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(45 \\times 24 + 70 \\times 48 + 80f = 7240\\), so \\(1080 + 3360 + 80f = 7240\\) and \\(80f = 2800\\)."
+    ],
+    "answer": "35 family memberships"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "After \\(n\\) years the price is \\(48 \\times 1.06^{n}\\). \\(n = 6\\): \\(68.08\\ldots\\); \\(n = 7\\): \\(72.17\\ldots\\)"
+    ],
+    "answer": "7 years from now"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(1.06^{10} = 1.790\\ldots\\), an increase of \\(0.790\\ldots\\)"
+    ],
+    "answer": "79.1 %"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The monthly prices form an arithmetic sequence: 24, 27, \\(\\ldots\\), with the tenth term \\(24 + 9 \\times 3 = 51\\).",
+     "Sum of the ten monthly prices: \\(\\dfrac{10}{2}(24 + 51) = 375\\). Each year has 12 months: \\(12 \\times 375\\)."
+    ],
+    "answer": "$4500"
+   }
+  ]
+ },
+ {
+  "id": "ai-na-p2-006",
+  "strand": "Number and Algebra",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "Mia is saving for a deposit on a flat. She puts $8000 into a savings account now, and adds $900 at the end of every month. The account pays a nominal annual interest rate of 3.6 %, compounded monthly."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Mia needs $60 000. Find the number of months it takes her savings to reach this amount.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the amount in the account at the end of that month.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the total amount Mia has paid in by then, and the interest she has earned.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Flat prices are rising, so the deposit she needs goes up by 4 % each year from $60 000 now. Show that after 5 years she needs $72 999.17, to the nearest cent.",
+    "marks": 1
+   },
+   {
+    "label": "e",
+    "text": "Find the first whole number of years after which her savings are at least the deposit she needs.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "Mia would like to have exactly $72 999.17 after 5 years. Find the monthly amount, to the nearest cent, she would need to save instead of $900.",
+    "marks": 3
+   }
+  ],
+  "idea": "Savings with regular payments are found with the finance solver; the amounts paid in are negative and the final value positive. A target that grows by 4 % a year is a geometric sequence, to be compared with the savings at the end of each year.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Finance solver: \\(I\\% = 3.6\\), \\(PV = -8000\\), \\(PMT = -900\\), \\(FV = 60\\,000\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Then \\(N = 52.07\\ldots\\)",
+     "After 52 months she is just short, so she needs the 53rd payment."
+    ],
+    "answer": "53 months"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Finance solver with \\(N = 53\\): \\(FV = 60\\,994.15\\ldots\\)"
+    ],
+    "answer": "$60 994.15"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Paid in: \\(8000 + 53 \\times 900 = 55\\,700\\).",
+     "Interest: \\(60\\,994.15 - 55\\,700\\)"
+    ],
+    "answer": "Paid in $55 700; interest $5294.15"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(60\\,000 \\times 1.04^{5} = 72\\,999.174\\ldots\\)"
+    ],
+    "answer": "$72 999.17"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Savings after \\(y\\) years (\\(N = 12y\\)) against the deposit \\(60\\,000 \\times 1.04^{y}\\):",
+     "\\(y = 5\\): \\(68\\,643.59\\ldots\\) against \\(72\\,999.17\\ldots\\); \\(y = 6\\): \\(82\\,135.94\\ldots\\) against \\(75\\,919.14\\ldots\\)"
+    ],
+    "answer": "6 years"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Finance solver: \\(N = 60\\), \\(I\\% = 3.6\\), \\(PV = -8000\\), \\(FV = 72\\,999.17\\), \\(P/Y = 12\\), \\(C/Y = 12\\). Then \\(PMT = -966.36\\ldots\\)"
+    ],
+    "answer": "$966.36 per month"
+   }
+  ]
+ }
+]

@@ -1,0 +1,570 @@
+[
+ {
+  "id": "aa-gt-hl-b-001",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vectors and the scalar product",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "ABCDEF is a regular hexagon with centre O, with its vertices labelled in order. Let \\(\\overrightarrow{OA} = \\mathbf{a}\\) and \\(\\overrightarrow{OB} = \\mathbf{b}\\), where \\(|\\mathbf{a}| = |\\mathbf{b}| = 2\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Express \\(\\overrightarrow{OC}\\), \\(\\overrightarrow{OD}\\), \\(\\overrightarrow{OE}\\) and \\(\\overrightarrow{OF}\\) in terms of \\(\\mathbf{a}\\) and \\(\\mathbf{b}\\).",
+    "marks": 4
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\mathbf{a} \\cdot \\mathbf{b}\\).",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\overrightarrow{AC} \\cdot \\overrightarrow{AE}\\), and hence show that triangle ACE is equilateral.",
+    "marks": 4
+   },
+   {
+    "label": "d",
+    "text": "The point P lies on \\([\\mathrm{AD}]\\) with \\(\\overrightarrow{AP} = \\lambda\\overrightarrow{AD}\\). Find the value of \\(\\lambda\\) for which \\(\\overrightarrow{BP}\\) is perpendicular to \\(\\overrightarrow{AC}\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Show that the area of triangle ACE is half the area of the hexagon.",
+    "marks": 3
+   }
+  ],
+  "idea": "The hexagon is made of six equilateral triangles meeting at O, so \\(\\angle\\mathrm{AOB} = 60°\\) and \\(\\overrightarrow{OC} = \\overrightarrow{OB} + \\overrightarrow{AO}\\). Every scalar product then reduces to \\(|\\mathbf{a}|^2\\), \\(|\\mathbf{b}|^2\\) and \\(\\mathbf{a} \\cdot \\mathbf{b}\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "OABC is a rhombus made of two equilateral triangles, so \\(\\overrightarrow{BC} = \\overrightarrow{AO} = -\\mathbf{a}\\) and \\(\\overrightarrow{OC} = \\mathbf{b} - \\mathbf{a}\\).",
+     "D, E, F are opposite A, B, C through O: \\(\\overrightarrow{OD} = -\\mathbf{a}\\), \\(\\overrightarrow{OE} = -\\mathbf{b}\\), \\(\\overrightarrow{OF} = \\mathbf{a} - \\mathbf{b}\\)."
+    ],
+    "answer": "\\(\\overrightarrow{OC} = \\mathbf{b} - \\mathbf{a}\\), \\(\\overrightarrow{OD} = -\\mathbf{a}\\), \\(\\overrightarrow{OE} = -\\mathbf{b}\\), \\(\\overrightarrow{OF} = \\mathbf{a} - \\mathbf{b}\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\angle\\mathrm{AOB} = 60°\\): \\(\\mathbf{a} \\cdot \\mathbf{b} = 2 \\times 2 \\times \\cos 60°\\)."
+    ],
+    "answer": "\\(2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\overrightarrow{AC} = \\mathbf{b} - 2\\mathbf{a}\\) and \\(\\overrightarrow{AE} = -\\mathbf{b} - \\mathbf{a}\\).",
+     "\\(\\overrightarrow{AC} \\cdot \\overrightarrow{AE} = -|\\mathbf{b}|^2 - \\mathbf{a} \\cdot \\mathbf{b} + 2\\,\\mathbf{a} \\cdot \\mathbf{b} + 2|\\mathbf{a}|^2 = -4 - 2 + 4 + 8 = 6\\).",
+     "\\(\\left|\\overrightarrow{AC}\\right|^2 = |\\mathbf{b}|^2 - 4\\,\\mathbf{a} \\cdot \\mathbf{b} + 4|\\mathbf{a}|^2 = 4 - 8 + 16 = 12\\), and likewise \\(\\left|\\overrightarrow{AE}\\right|^2 = 4 + 4 + 4 = 12\\).",
+     "So \\(AC = AE\\) and \\(\\cos\\mathrm{C\\hat{A}E} = \\dfrac{6}{12} = \\dfrac{1}{2}\\): the angle at A is \\(60°\\). An isosceles triangle with a \\(60°\\) angle between the equal sides is equilateral."
+    ],
+    "answer": "\\(6\\); equilateral (shown)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\overrightarrow{AD} = -2\\mathbf{a}\\), so \\(\\overrightarrow{BP} = \\overrightarrow{BA} + \\overrightarrow{AP} = \\mathbf{a} - \\mathbf{b} - 2\\lambda\\mathbf{a} = (1 - 2\\lambda)\\mathbf{a} - \\mathbf{b}\\).",
+     "\\(\\overrightarrow{BP} \\cdot \\overrightarrow{AC} = (1 - 2\\lambda)\\left(\\mathbf{a} \\cdot \\mathbf{b} - 2|\\mathbf{a}|^2\\right) - \\left(|\\mathbf{b}|^2 - 2\\,\\mathbf{a} \\cdot \\mathbf{b}\\right) = (1 - 2\\lambda)(-6) - 0\\).",
+     "This is zero when \\(\\lambda = \\frac{1}{2}\\), so P is the centre O."
+    ],
+    "answer": "\\(\\lambda = \\dfrac{1}{2}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The hexagon is six equilateral triangles of side 2: area \\(6 \\times \\frac{\\sqrt{3}}{4} \\times 4 = 6\\sqrt{3}\\).",
+     "Triangle ACE is equilateral with side \\(\\sqrt{12}\\): area \\(\\frac{\\sqrt{3}}{4} \\times 12 = 3\\sqrt{3}\\), which is half of \\(6\\sqrt{3}\\)."
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-b-002",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "The vector product",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "The points \\(A(1, 2, 3)\\), \\(B(5, 0, 1)\\) and \\(C(3, 4, -1)\\) are given."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that triangle ABC is equilateral.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Let G be the point \\((3, 2, 1)\\) and M the midpoint of \\([\\mathrm{BC}]\\). Show that \\(\\overrightarrow{AG} = \\frac{2}{3}\\overrightarrow{AM}\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find \\(\\overrightarrow{AB} \\times \\overrightarrow{AC}\\), and hence a unit vector perpendicular to the plane ABC.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The point D lies on the line through G perpendicular to the plane ABC, and ABCD is a regular tetrahedron (all six edges equal). Find the two possible positions of D.",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Find the volume of the tetrahedron.",
+    "marks": 2
+   }
+  ],
+  "idea": "G is the centre of the equilateral triangle, so it is equally far from A, B and C, and so is every point on the perpendicular through G. Choose the height so that DA equals the side, using Pythagoras with \\(GA\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{AB} = (4, -2, -2)\\), \\(\\overrightarrow{AC} = (2, 2, -4)\\), \\(\\overrightarrow{BC} = (-2, 4, -2)\\). Each has length \\(\\sqrt{24}\\)."
+    ],
+    "answer": "Shown (each side \\(\\sqrt{24} = 2\\sqrt{6}\\))"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(M = (4, 2, 0)\\), so \\(\\overrightarrow{AM} = (3, 0, -3)\\) and \\(\\overrightarrow{AG} = (2, 0, -2) = \\frac{2}{3}\\overrightarrow{AM}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\[\\overrightarrow{AB} \\times \\overrightarrow{AC} = \\begin{pmatrix} (-2)(-4) - (-2)(2) \\\\ (-2)(2) - (4)(-4) \\\\ (4)(2) - (-2)(2) \\end{pmatrix} = \\begin{pmatrix} 12 \\\\ 12 \\\\ 12 \\end{pmatrix}\\]",
+     "Divide by its length, \\(12\\sqrt{3}\\)."
+    ],
+    "answer": "\\((12, 12, 12)\\); unit normal \\(\\dfrac{1}{\\sqrt{3}}(1, 1, 1)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(GA^2 = 2^2 + 0^2 + 2^2 = 8\\). With D at height \\(h\\) above G along the normal, \\(DA^2 = h^2 + 8\\). Set \\(DA^2 = 24\\): \\(h = 4\\).",
+     "\\(D = (3, 2, 1) \\pm \\dfrac{4}{\\sqrt{3}}(1, 1, 1)\\)."
+    ],
+    "answer": "\\(D = (3, 2, 1) + \\frac{4}{\\sqrt{3}}(1, 1, 1)\\) or \\(D = (3, 2, 1) - \\frac{4}{\\sqrt{3}}(1, 1, 1)\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Base area \\(= \\frac{1}{2}\\left|\\overrightarrow{AB} \\times \\overrightarrow{AC}\\right| = 6\\sqrt{3}\\); height 4.",
+     "\\(V = \\frac{1}{3} \\times 6\\sqrt{3} \\times 4\\)."
+    ],
+    "answer": "\\(8\\sqrt{3}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-b-003",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Vector equations of lines",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "In this question distances are in kilometres and time is in minutes. A helicopter takes off from a base at the origin; its position \\(t\\) minutes later is \\(\\mathbf{r}_H = t\\begin{pmatrix} 2 \\\\ 1 \\\\ 1 \\end{pmatrix}\\). At the same moment a drone is at \\((7, -1, 2)\\); its position \\(t\\) minutes later is \\(\\mathbf{r}_D = \\begin{pmatrix} 7 \\\\ -1 \\\\ 2 \\end{pmatrix} + t\\begin{pmatrix} -1 \\\\ 1 \\\\ 0 \\end{pmatrix}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the speed of the helicopter and the speed of the drone.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that the paths cross, and find the point X where they cross and the time at which each one is at X.",
+    "marks": 5
+   },
+   {
+    "label": "c",
+    "text": "Find the distance between the helicopter and the drone when the helicopter is at X.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "The drone could instead fly from \\((7, -1, 2)\\) in the same direction but at a different constant speed. Find the speed that would bring it to X at the same time as the helicopter.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the acute angle between the two paths.",
+    "marks": 2
+   }
+  ],
+  "idea": "Two paths cross if their lines meet; that needs different parameters \\(s\\) and \\(t\\) for the two vehicles. They only collide if they are at the crossing point at the same time.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Speeds are the lengths of the velocity vectors: \\(\\sqrt{4 + 1 + 1}\\) and \\(\\sqrt{1 + 1 + 0}\\)."
+    ],
+    "answer": "Helicopter \\(\\sqrt{6} = 2.45\\) km per minute; drone \\(\\sqrt{2} = 1.41\\) km per minute"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Let the helicopter be at time \\(s\\) and the drone at time \\(t\\): \\(2s = 7 - t\\), \\(s = -1 + t\\), \\(s = 2\\).",
+     "From the third equation \\(s = 2\\); then the second gives \\(t = 3\\), and the first: \\(4 = 7 - 3\\). All three hold, so the paths cross."
+    ],
+    "answer": "\\(X(4, 2, 2)\\); helicopter at \\(t = 2\\), drone at \\(t = 3\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "At \\(t = 2\\) the drone is at \\((5, 1, 2)\\). Distance \\(= |(5, 1, 2) - (4, 2, 2)| = \\sqrt{1 + 1 + 0}\\)."
+    ],
+    "answer": "\\(\\sqrt{2} = 1.41\\) km"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "From \\((7, -1, 2)\\) to X is \\((-3, 3, 0)\\), length \\(3\\sqrt{2}\\) km, to be covered in 2 minutes."
+    ],
+    "answer": "\\(\\dfrac{3\\sqrt{2}}{2} = 2.12\\) km per minute"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\cos\\theta = \\dfrac{|(2, 1, 1) \\cdot (-1, 1, 0)|}{\\sqrt{6}\\sqrt{2}} = \\dfrac{1}{\\sqrt{12}}\\), so \\(\\theta = 73.22\\ldots°\\)"
+    ],
+    "answer": "\\(73.2°\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-b-004",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Planes",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "The plane \\(\\Pi\\) passes through \\(A(1, 2, 1)\\) and has normal vector \\(\\mathbf{n} = \\begin{pmatrix} 2 \\\\ -2 \\\\ -1 \\end{pmatrix}\\). A square ABCD lies in \\(\\Pi\\), with \\(B(3, 3, 3)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the Cartesian equation of \\(\\Pi\\), and verify that B lies in \\(\\Pi\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find \\(\\mathbf{n} \\times \\overrightarrow{AB}\\), and hence find the two vectors of length 3 that lie in \\(\\Pi\\) and are perpendicular to \\(\\overrightarrow{AB}\\).",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "Hence find the two possible positions of the pair C, D.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "For the square with D at \\((0, 0, 3)\\), find the coordinates of its centre, and a vector equation of the line through the centre perpendicular to \\(\\Pi\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find the acute angle between \\(\\Pi\\) and the plane \\(z = 0\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "A vector perpendicular both to the normal and to \\(\\overrightarrow{AB}\\) lies in the plane and is perpendicular to the side AB, so it points along the side AD. Scale it to the side length, 3, in either direction.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(2x - 2y - z = 2 - 4 - 1 = -3\\). At B: \\(6 - 6 - 3 = -3\\)."
+    ],
+    "answer": "\\(2x - 2y - z = -3\\); B lies in \\(\\Pi\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\overrightarrow{AB} = (2, 1, 2)\\), of length 3, and \\(\\mathbf{n} \\cdot \\overrightarrow{AB} = 4 - 2 - 2 = 0\\).",
+     "\\[\\mathbf{n} \\times \\overrightarrow{AB} = \\begin{pmatrix} (-2)(2) - (-1)(1) \\\\ (-1)(2) - (2)(2) \\\\ (2)(1) - (-2)(2) \\end{pmatrix} = \\begin{pmatrix} -3 \\\\ -6 \\\\ 6 \\end{pmatrix}\\]",
+     "This has length 9.",
+     "Scale to length 3: \\(\\pm(-1, -2, 2)\\)."
+    ],
+    "answer": "\\((-3, -6, 6)\\); \\((-1, -2, 2)\\) and \\((1, 2, -2)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\overrightarrow{AD} = \\overrightarrow{BC}\\) is one of these vectors.",
+     "With \\((-1, -2, 2)\\): \\(D = (0, 0, 3)\\), \\(C = (2, 1, 5)\\). With \\((1, 2, -2)\\): \\(D = (2, 4, -1)\\), \\(C = (4, 5, 1)\\)."
+    ],
+    "answer": "\\(C(2, 1, 5), D(0, 0, 3)\\) or \\(C(4, 5, 1), D(2, 4, -1)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The centre is the midpoint of \\([\\mathrm{AC}]\\): \\(\\left(\\frac{1 + 2}{2}, \\frac{2 + 1}{2}, \\frac{1 + 5}{2}\\right)\\)."
+    ],
+    "answer": "Centre \\(\\left(\\frac{3}{2}, \\frac{3}{2}, 3\\right)\\); \\(\\mathbf{r} = \\begin{pmatrix} 3/2 \\\\ 3/2 \\\\ 3 \\end{pmatrix} + \\mu\\begin{pmatrix} 2 \\\\ -2 \\\\ -1 \\end{pmatrix}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Angle between the normals \\((2, -2, -1)\\) and \\((0, 0, 1)\\): \\(\\cos\\theta = \\dfrac{|-1|}{3 \\times 1} = \\dfrac{1}{3}\\), so \\(\\theta = 70.52\\ldots°\\)"
+    ],
+    "answer": "\\(70.5°\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-b-005",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Planes",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A pyramid has a square base ABCD with \\(A(0, 0, 0)\\), \\(B(4, 0, 0)\\), \\(C(4, 4, 0)\\), \\(D(0, 4, 0)\\), and apex \\(V(2, 2, 6)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the Cartesian equation of the plane VAB.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the acute angle between the face VAB and the base.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the angle between the edge \\([\\mathrm{VA}]\\) and the base.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "M and N are the midpoints of \\([\\mathrm{VC}]\\) and \\([\\mathrm{VD}]\\). Find the equation of the plane through A, B and M, and show that N also lies in this plane.",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "The plane ABMN cuts the pyramid into two pieces. Find the acute angle between this plane and the base.",
+    "marks": 1
+   },
+   {
+    "label": "f",
+    "text": "Find the volume of the pyramid.",
+    "marks": 2
+   }
+  ],
+  "idea": "A normal to a plane through three points is the vector product of two edges. The angle between two planes is the angle between their normals (taking the acute one); the angle between a line and a plane is \\(90°\\) minus the angle between the line and the normal.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\overrightarrow{AB} \\times \\overrightarrow{AV} = (4, 0, 0) \\times (2, 2, 6) = (0 - 0,\\ 0 - 24,\\ 8 - 0) = (0, -24, 8)\\), parallel to \\((0, -3, 1)\\). The plane passes through A, the origin."
+    ],
+    "answer": "\\(-3y + z = 0\\), that is \\(z = 3y\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\cos\\theta = \\dfrac{(0, -3, 1) \\cdot (0, 0, 1)}{\\sqrt{10}} = \\dfrac{1}{\\sqrt{10}}\\), so \\(\\theta = 71.56\\ldots°\\)"
+    ],
+    "answer": "\\(71.6°\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\overrightarrow{AV} = (2, 2, 6)\\). The angle \\(\\phi\\) with the base satisfies \\(\\sin\\phi = \\dfrac{6}{\\sqrt{4 + 4 + 36}} = \\dfrac{6}{\\sqrt{44}}\\), so \\(\\phi = 64.76\\ldots°\\)"
+    ],
+    "answer": "\\(64.8°\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(M = (3, 3, 3)\\), \\(N = (1, 3, 3)\\). \\(\\overrightarrow{AB} \\times \\overrightarrow{AM} = (4, 0, 0) \\times (3, 3, 3) = (0, -12, 12)\\), parallel to \\((0, -1, 1)\\): the plane is \\(z = y\\).",
+     "N has \\(y = z = 3\\), so it lies in the plane."
+    ],
+    "answer": "\\(z = y\\); N lies in it (shown)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\cos\\theta = \\dfrac{(0, -1, 1) \\cdot (0, 0, 1)}{\\sqrt{2}} = \\dfrac{1}{\\sqrt{2}}\\)."
+    ],
+    "answer": "\\(45°\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(V = \\frac{1}{3} \\times 16 \\times 6\\)."
+    ],
+    "answer": "\\(32\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-b-006",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Compound angle and reciprocal identities",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "Let \\(A\\), \\(B\\) and \\(C\\) be angles, none of whose tangents is undefined, and write \\(a = \\tan A\\), \\(b = \\tan B\\), \\(c = \\tan C\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\tan(A + B + C) = \\dfrac{a + b + c - abc}{1 - ab - bc - ca}\\).",
+    "marks": 5
+   },
+   {
+    "label": "b",
+    "text": "Hence show that if \\(A + B + C = \\pi\\) then \\(a + b + c = abc\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "In a triangle, \\(\\tan A = 1\\) and \\(\\tan B = 2\\). Find \\(\\tan C\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "For this triangle, find the exact values of \\(\\sin A\\), \\(\\sin B\\) and \\(\\sin C\\), and hence show that its sides are in the ratio \\(\\sqrt{5} : 2\\sqrt{2} : 3\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "Apply the formula for \\(\\tan(X + Y)\\) twice, with \\(X = A + B\\) and \\(Y = C\\), and clear the inner fractions. For part (d), each tangent fixes a right-angled triangle, and the sine rule turns the ratio of sines into the ratio of sides.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\tan(A + B) = \\dfrac{a + b}{1 - ab}\\).",
+     "\\[\\tan(A + B + C) = \\frac{\\frac{a + b}{1 - ab} + c}{1 - \\frac{a + b}{1 - ab}\\,c}\\]",
+     "Multiply top and bottom by \\(1 - ab\\): \\(\\dfrac{a + b + c - abc}{1 - ab - ac - bc}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\tan\\pi = 0\\), so the numerator is zero: \\(a + b + c - abc = 0\\). (The denominator is not zero, or \\(\\tan(A + B + C)\\) would be undefined.)"
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(1 + 2 + c = 2c\\), so \\(c = 3\\)."
+    ],
+    "answer": "\\(\\tan C = 3\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "All three tangents are positive, so all three angles are acute. \\(\\tan A = 1\\): \\(\\sin A = \\frac{1}{\\sqrt{2}}\\). \\(\\tan B = 2\\): hypotenuse \\(\\sqrt{5}\\), \\(\\sin B = \\frac{2}{\\sqrt{5}}\\). \\(\\tan C = 3\\): hypotenuse \\(\\sqrt{10}\\), \\(\\sin C = \\frac{3}{\\sqrt{10}}\\).",
+     "By the sine rule the sides are in the ratio \\(\\frac{1}{\\sqrt{2}} : \\frac{2}{\\sqrt{5}} : \\frac{3}{\\sqrt{10}}\\). Multiply by \\(\\sqrt{10}\\): \\(\\sqrt{5} : \\frac{2\\sqrt{10}}{\\sqrt{5}} : 3 = \\sqrt{5} : 2\\sqrt{2} : 3\\)."
+    ],
+    "answer": "\\(\\sin A = \\frac{\\sqrt{2}}{2}\\), \\(\\sin B = \\frac{2\\sqrt{5}}{5}\\), \\(\\sin C = \\frac{3\\sqrt{10}}{10}\\); ratio shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-gt-hl-b-007",
+  "strand": "Geometry and Trigonometry",
+  "subtopic": "Inverse trigonometric functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A cinema screen on a vertical wall is 3 m tall, and its lower edge is 1 m above the eye level of a viewer. The viewer sits \\(x\\) metres from the wall, where \\(x > 0\\). Let \\(\\theta\\) be the angle that the screen makes at the viewer’s eye, so that \\(0 < \\theta < 90°\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(\\theta = \\arctan\\dfrac{4}{x} - \\arctan\\dfrac{1}{x}\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that \\(\\tan\\theta = \\dfrac{3x}{x^2 + 4}\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "By writing \\(\\tan\\theta = k\\) as a quadratic equation in \\(x\\), find the greatest possible value of \\(\\tan\\theta\\) and the value of \\(x\\) that gives it. Hence find the greatest viewing angle.",
+    "marks": 4
+   },
+   {
+    "label": "d",
+    "text": "Find the set of values of \\(x\\) for which the viewing angle is at least \\(30°\\).",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Describe what happens to \\(\\theta\\) as \\(x \\to 0\\), and explain why.",
+    "marks": 1
+   }
+  ],
+  "idea": "The angle to the top of the screen minus the angle to the bottom gives \\(\\theta\\). Since \\(\\theta\\) is acute, \\(\\theta\\) increases exactly when \\(\\tan\\theta\\) increases, so it is enough to find the range of \\(\\tan\\theta\\) using the discriminant.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "The top of the screen is 4 m above eye level and the bottom 1 m above, both at horizontal distance \\(x\\). The angles of elevation are \\(\\arctan\\frac{4}{x}\\) and \\(\\arctan\\frac{1}{x}\\); \\(\\theta\\) is their difference."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\tan\\theta = \\dfrac{\\frac{4}{x} - \\frac{1}{x}}{1 + \\frac{4}{x^2}}\\). Multiply top and bottom by \\(x^2\\): \\(\\dfrac{3x}{x^2 + 4}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{3x}{x^2 + 4} = k\\) gives \\(kx^2 - 3x + 4k = 0\\). A real \\(x\\) needs \\(9 - 16k^2 \\ge 0\\), so \\(k \\le \\frac{3}{4}\\).",
+     "With \\(k = \\frac{3}{4}\\): \\(\\frac{3}{4}x^2 - 3x + 3 = \\frac{3}{4}(x - 2)^2 = 0\\), so \\(x = 2\\).",
+     "\\(\\theta = \\arctan\\frac{3}{4} = 36.86\\ldots°\\)"
+    ],
+    "answer": "\\(\\tan\\theta \\le \\dfrac{3}{4}\\), at \\(x = 2\\) m; greatest angle \\(36.9°\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\theta \\ge 30°\\iff \\tan\\theta \\ge \\dfrac{1}{\\sqrt{3}}\\), since \\(\\theta\\) is acute.",
+     "\\(\\dfrac{3x}{x^2 + 4} \\ge \\dfrac{1}{\\sqrt{3}}\\) gives \\(x^2 - 3\\sqrt{3}\\,x + 4 \\le 0\\), with roots \\(x = \\dfrac{3\\sqrt{3} \\pm \\sqrt{11}}{2} = 0.9397\\ldots\\) and \\(4.256\\ldots\\)"
+    ],
+    "answer": "\\(0.940 \\le x \\le 4.26\\) (m)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "As \\(x \\to 0\\), both arctangents tend to \\(\\frac{\\pi}{2}\\), so their difference tends to 0: from right under the screen, it is seen almost edge-on."
+    ],
+    "answer": "\\(\\theta \\to 0\\)"
+   }
+  ]
+ }
+]

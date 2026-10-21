@@ -1,0 +1,542 @@
+[
+ {
+  "id": "aa-fn-hl-b-001",
+  "strand": "Functions",
+  "subtopic": "Polynomial functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "Let \\(p(x) = x^3 - 3x + k\\), where \\(k \\in \\mathbb{R}\\). You may use \\(p'(x) = 3x^2 - 3\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that if \\((x - \\alpha)^2\\) is a factor of a polynomial \\(q(x)\\), then \\(q(\\alpha) = 0\\) and \\(q'(\\alpha) = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the two values of \\(k\\) for which \\(p(x) = 0\\) has a repeated root, and for each one write \\(p(x)\\) as a product of linear factors.",
+    "marks": 5
+   },
+   {
+    "label": "c",
+    "text": "State the number of distinct real roots of \\(p(x) = 0\\) when \\(|k| < 2\\), when \\(|k| = 2\\) and when \\(|k| > 2\\). Justify your answer.",
+    "marks": 4
+   },
+   {
+    "label": "d",
+    "text": "Let \\(k = 1\\), and let the roots of \\(p(x) = 0\\) be \\(\\alpha\\), \\(\\beta\\) and \\(\\gamma\\). Find a cubic equation with integer coefficients whose roots are \\(\\alpha^2\\), \\(\\beta^2\\) and \\(\\gamma^2\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "A repeated root is a root of both \\(p\\) and \\(p'\\). The roots of \\(p(x) = 0\\) are where the line \\(y = -k\\) meets \\(y = x^3 - 3x\\), whose turning values are \\(\\pm 2\\). For new roots, find their sum, their pairwise sum and their product from the old ones.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Write \\(q(x) = (x - \\alpha)^2 r(x)\\). Then \\(q(\\alpha) = 0\\), and by the product rule \\(q'(x) = 2(x - \\alpha)r(x) + (x - \\alpha)^2 r'(x)\\), so \\(q'(\\alpha) = 0\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(p'(\\alpha) = 0\\) gives \\(\\alpha = \\pm 1\\). \\(p(1) = k - 2 = 0\\) gives \\(k = 2\\); \\(p(-1) = k + 2 = 0\\) gives \\(k = -2\\).",
+     "\\(k = 2\\): \\(x^3 - 3x + 2 = (x - 1)^2(x + 2)\\). \\(k = -2\\): \\(x^3 - 3x - 2 = (x + 1)^2(x - 2)\\).",
+     "Check: \\((x - 1)^2(x + 2) = \\left(x^2 - 2x + 1\\right)(x + 2) = x^3 - 3x + 2\\)."
+    ],
+    "answer": "\\(k = 2\\): \\((x - 1)^2(x + 2)\\); \\(k = -2\\): \\((x + 1)^2(x - 2)\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(p(x) = 0\\) means \\(x^3 - 3x = -k\\). The graph of \\(y = x^3 - 3x\\) has a local maximum 2 at \\(x = -1\\) and a local minimum \\(-2\\) at \\(x = 1\\).",
+     "The horizontal line \\(y = -k\\) meets it three times if \\(-2 < -k < 2\\), twice (one point a tangent) if \\(-k = \\pm 2\\), and once otherwise."
+    ],
+    "answer": "3 roots if \\(|k| < 2\\); 2 if \\(|k| = 2\\); 1 if \\(|k| > 2\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For \\(x^3 - 3x + 1 = 0\\): \\(\\sum\\alpha = 0\\), \\(\\sum\\alpha\\beta = -3\\), \\(\\alpha\\beta\\gamma = -1\\).",
+     "\\(\\sum\\alpha^2 = 0^2 - 2(-3) = 6\\). \\(\\sum\\alpha^2\\beta^2 = \\left(\\sum\\alpha\\beta\\right)^2 - 2\\alpha\\beta\\gamma\\sum\\alpha = 9 - 0 = 9\\). Product: \\((\\alpha\\beta\\gamma)^2 = 1\\).",
+     "So the new equation is \\(x^3 - 6x^2 + 9x - 1 = 0\\)."
+    ],
+    "answer": "\\(x^3 - 6x^2 + 9x - 1 = 0\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-fn-hl-b-002",
+  "strand": "Functions",
+  "subtopic": "Sums and products of roots",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 13,
+  "stem": [
+   "The equation \\(x^2 - px + q = 0\\) has roots \\(\\alpha\\) and \\(\\beta\\). Let \\(S_n = \\alpha^n + \\beta^n\\), for \\(n \\in \\mathbb{N}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(S_{n+2} = pS_{n+1} - qS_n\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Now let \\(p = 1\\) and \\(q = -1\\). Find \\(S_0, S_1, S_2, \\ldots, S_6\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "For these values of \\(p\\) and \\(q\\), prove that \\(S_n\\) is an integer for every \\(n = 0, 1, 2, \\ldots\\)",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The roots are \\(\\alpha = \\dfrac{1 + \\sqrt{5}}{2}\\) and \\(\\beta = \\dfrac{1 - \\sqrt{5}}{2}\\). Given that \\(S_{10} = 123\\), and using \\(|\\beta| < \\dfrac{2}{3}\\), show that \\(122.98 < \\alpha^{10} < 123\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "Each root satisfies its own equation: \\(\\alpha^2 = p\\alpha - q\\). Multiply by \\(\\alpha^n\\), do the same for \\(\\beta\\), and add. Then \\(\\alpha^{10} = 123 - \\beta^{10}\\), and \\(\\beta^{10}\\) is a small positive number.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\alpha^2 = p\\alpha - q\\), so \\(\\alpha^{n+2} = p\\alpha^{n+1} - q\\alpha^n\\). Likewise \\(\\beta^{n+2} = p\\beta^{n+1} - q\\beta^n\\).",
+     "Add: \\(S_{n+2} = pS_{n+1} - qS_n\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(S_0 = 1 + 1 = 2\\), \\(S_1 = \\alpha + \\beta = p = 1\\), and \\(S_{n+2} = S_{n+1} + S_n\\).",
+     "\\(S_2 = 3\\), \\(S_3 = 4\\), \\(S_4 = 7\\), \\(S_5 = 11\\), \\(S_6 = 18\\)."
+    ],
+    "answer": "\\(2, 1, 3, 4, 7, 11, 18\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(S_0 = 2\\) and \\(S_1 = 1\\) are integers. If \\(S_k\\) and \\(S_{k+1}\\) are integers, then \\(S_{k+2} = S_{k+1} + S_k\\) is an integer.",
+     "So by induction (on consecutive pairs), \\(S_n\\) is an integer for every \\(n\\)."
+    ],
+    "answer": "Proved"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\alpha^{10} = S_{10} - \\beta^{10} = 123 - \\beta^{10}\\).",
+     "\\(\\beta \\ne 0\\) and the power is even, so \\(\\beta^{10} > 0\\). Also \\(\\beta^{10} < \\left(\\frac{2}{3}\\right)^{10} = \\frac{1024}{59\\,049} < \\frac{1024}{51\\,200} = 0.02\\).",
+     "So \\(123 - 0.02 < \\alpha^{10} < 123\\)."
+    ],
+    "answer": "Shown"
+   }
+  ]
+ },
+ {
+  "id": "aa-fn-hl-b-003",
+  "strand": "Functions",
+  "subtopic": "Rational functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "The concentration of a medicine in a patient’s blood, \\(t\\) hours after a dose, is modelled by \\(C(t) = \\dfrac{20t}{t^2 + 4}\\) mg per litre, for \\(t \\ge 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down \\(C(0)\\), and describe what happens to \\(C(t)\\) as \\(t\\) increases without limit.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "By writing \\(C(t) = k\\) as a quadratic in \\(t\\), show that \\(C(t) \\le 5\\) for all \\(t \\ge 0\\), and find when the maximum concentration occurs.",
+    "marks": 4
+   },
+   {
+    "label": "c",
+    "text": "The medicine is effective when its concentration is above 4 mg per litre. Find the length of time for which it is effective.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "A second, identical dose is taken 3 hours after the first, and the concentrations add, so that for \\(t \\ge 3\\) the total is \\(C(t) + C(t - 3)\\). Find the greatest total concentration and the time at which it occurs.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "After the second dose, find the time at which the total concentration falls below 1 mg per litre for the last time.",
+    "marks": 3
+   }
+  ],
+  "idea": "A value \\(k\\) is reached exactly when \\(kt^2 - 20t + 4k = 0\\) has a real root, so the discriminant gives the greatest possible \\(k\\). With two doses the total is \\(C(t) + C(t - 3)\\) for \\(t \\ge 3\\), which needs a GDC.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(C(0) = 0\\). For large \\(t\\) the denominator grows faster than the numerator, so \\(C(t) \\to 0\\)."
+    ],
+    "answer": "\\(C(0) = 0\\); \\(C(t) \\to 0\\) (horizontal asymptote \\(C = 0\\))"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{20t}{t^2 + 4} = k\\) gives \\(kt^2 - 20t + 4k = 0\\). For \\(k \\ne 0\\) a real \\(t\\) needs \\(400 - 16k^2 \\ge 0\\), so \\(k \\le 5\\) (concentrations are not negative).",
+     "With \\(k = 5\\): \\(5t^2 - 20t + 20 = 5(t - 2)^2 = 0\\), so \\(t = 2\\)."
+    ],
+    "answer": "Maximum 5 mg per litre, at \\(t = 2\\) hours"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{20t}{t^2 + 4} > 4\\) gives \\(20t > 4t^2 + 16\\), so \\(t^2 - 5t + 4 < 0\\), \\((t - 1)(t - 4) < 0\\), \\(1 < t < 4\\)."
+    ],
+    "answer": "3 hours (from \\(t = 1\\) to \\(t = 4\\))"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For \\(t \\ge 3\\) the total is \\(T(t) = \\dfrac{20t}{t^2 + 4} + \\dfrac{20(t - 3)}{(t - 3)^2 + 4}\\). With a GDC, the maximum is \\(8.538\\ldots\\) at \\(t = 4.665\\ldots\\)",
+     "(Before \\(t = 3\\) the total is just \\(C(t) \\le 5\\).)"
+    ],
+    "answer": "\\(8.54\\) mg per litre, at \\(t = 4.67\\) hours"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(T(t)\\) decreases after its maximum. Solve \\(T(t) = 1\\) for \\(t > 4.67\\) with a GDC: \\(t = 41.45\\ldots\\)"
+    ],
+    "answer": "\\(t = 41.5\\) hours"
+   }
+  ]
+ },
+ {
+  "id": "aa-fn-hl-b-004",
+  "strand": "Functions",
+  "subtopic": "Rational functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "Let \\(f(x) = \\dfrac{x^2 - 1}{x^2 - 4}\\), for \\(x \\ne \\pm 2\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(f\\) is an even function.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Write down the equations of the asymptotes of the graph of \\(f\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the coordinates of the points where the graph of \\(f\\) meets the axes.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the range of \\(f\\).",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Solve the inequality \\(f(x) \\ge 2\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "Make \\(x^2\\) the subject of \\(f(x) = y\\): a value \\(y\\) is in the range exactly when the expression for \\(x^2\\) is non-negative (and \\(x \\ne \\pm 2\\)). For the inequality, collect everything into one fraction and use signs.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(f\\) depends only on \\(x^2\\), so \\(f(-x) = f(x)\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Vertical: \\(x^2 - 4 = 0\\), \\(x = \\pm 2\\) (the numerator is 3 there). Horizontal: the leading coefficients of top and bottom are both 1, so \\(y = 1\\)."
+    ],
+    "answer": "\\(x = 2\\), \\(x = -2\\), \\(y = 1\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(f(x) = 0\\) when \\(x^2 = 1\\). \\(f(0) = \\dfrac{-1}{-4} = \\dfrac{1}{4}\\)."
+    ],
+    "answer": "\\((1, 0)\\), \\((-1, 0)\\), \\(\\left(0, \\frac{1}{4}\\right)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(y\\left(x^2 - 4\\right) = x^2 - 1\\) gives \\(x^2(y - 1) = 4y - 1\\), so for \\(y \\ne 1\\), \\(x^2 = \\dfrac{4y - 1}{y - 1}\\). (\\(y = 1\\) would need \\(3 = 0\\): impossible.)",
+     "Need \\(\\dfrac{4y - 1}{y - 1} \\ge 0\\): \\(y \\le \\frac{1}{4}\\) or \\(y > 1\\). (This value of \\(x^2\\) is never 4, since that would need \\(4y - 4 = 4y - 1\\).)"
+    ],
+    "answer": "\\(f(x) \\le \\dfrac{1}{4}\\) or \\(f(x) > 1\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\dfrac{x^2 - 1}{x^2 - 4} - 2 = \\dfrac{x^2 - 1 - 2x^2 + 8}{x^2 - 4} = \\dfrac{7 - x^2}{x^2 - 4} \\ge 0\\).",
+     "Top \\(\\ge 0\\) when \\(x^2 \\le 7\\); bottom \\(> 0\\) when \\(x^2 > 4\\). Both negative: \\(x^2 > 7\\) and \\(x^2 < 4\\), impossible. So \\(4 < x^2 \\le 7\\)."
+    ],
+    "answer": "\\(-\\sqrt{7} \\le x < -2\\) or \\(2 < x \\le \\sqrt{7}\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-fn-hl-b-005",
+  "strand": "Functions",
+  "subtopic": "Odd, even and inverse functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "A function \\(f\\) is self-inverse if \\((f \\circ f)(x) = x\\) for every \\(x\\) in its domain. Consider \\(f(x) = \\dfrac{ax + b}{cx + d}\\), where \\(a, b, c, d \\in \\mathbb{R}\\), \\(c \\ne 0\\) and \\(ad - bc \\ne 0\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that \\(g(x) = \\dfrac{2x + 3}{x - 2}\\), for \\(x \\ne 2\\), is self-inverse.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Show that \\((f \\circ f)(x) = \\dfrac{\\left(a^2 + bc\\right)x + b(a + d)}{c(a + d)x + bc + d^2}\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Hence show that \\(f\\) is self-inverse if \\(a + d = 0\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the value of \\(k\\) for which \\(h(x) = \\dfrac{kx + 1}{x + 3}\\) is self-inverse, and state the domain and range of \\(h\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "For this value of \\(k\\), find the exact coordinates of the points where the graph of \\(h\\) meets the line \\(y = x\\).",
+    "marks": 4
+   }
+  ],
+  "idea": "Compose by substituting the fraction into itself and clearing the inner denominators. A self-inverse function is its own inverse, so its domain and range are the same set, and its graph is symmetric in \\(y = x\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(g(g(x)) = \\dfrac{2\\cdot\\frac{2x + 3}{x - 2} + 3}{\\frac{2x + 3}{x - 2} - 2}\\). Multiply top and bottom by \\(x - 2\\): \\(\\dfrac{4x + 6 + 3x - 6}{2x + 3 - 2x + 4} = \\dfrac{7x}{7} = x\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(f(f(x)) = \\dfrac{a\\frac{ax + b}{cx + d} + b}{c\\frac{ax + b}{cx + d} + d}\\). Multiply top and bottom by \\(cx + d\\):",
+     "Top: \\(a(ax + b) + b(cx + d) = \\left(a^2 + bc\\right)x + b(a + d)\\). Bottom: \\(c(ax + b) + d(cx + d) = c(a + d)x + bc + d^2\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "If \\(d = -a\\): the top is \\(\\left(a^2 + bc\\right)x\\) and the bottom is \\(bc + a^2\\). Since \\(ad - bc = -\\left(a^2 + bc\\right) \\ne 0\\), this is \\(x\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Here \\(a = k\\), \\(d = 3\\), so \\(a + d = 0\\) gives \\(k = -3\\). (Check \\(ad - bc = -9 - 1 \\ne 0\\).)",
+     "Domain \\(x \\ne -3\\). A self-inverse function has range equal to its domain: \\(h(x) = -3 + \\frac{10}{x + 3}\\) never equals \\(-3\\)."
+    ],
+    "answer": "\\(k = -3\\); domain \\(x \\ne -3\\), range \\(h(x) \\ne -3\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\dfrac{-3x + 1}{x + 3} = x\\) gives \\(-3x + 1 = x^2 + 3x\\), so \\(x^2 + 6x - 1 = 0\\) and \\(x = -3 \\pm \\sqrt{10}\\).",
+     "On \\(y = x\\) the \\(y\\)-coordinate equals the \\(x\\)-coordinate."
+    ],
+    "answer": "\\(\\left(-3 + \\sqrt{10}, -3 + \\sqrt{10}\\right)\\) and \\(\\left(-3 - \\sqrt{10}, -3 - \\sqrt{10}\\right)\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-fn-hl-b-006",
+  "strand": "Functions",
+  "subtopic": "Graphs of related functions",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "Let \\(g(x) = x^2 - 2x - 3\\), for \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Sketch the graph of \\(y = g(x)\\), showing its vertex and the points where it meets the axes.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Sketch the graph of \\(y = g(|x|)\\), showing its local maximum and minimum points and the points where it meets the axes.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Sketch the graph of \\(y = \\left|g(|x|)\\right|\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the number of solutions of the equation \\(\\left|g(|x|)\\right| = 3\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the set of values of \\(k\\) for which the equation \\(\\left|g(|x|)\\right| = k\\) has exactly six solutions.",
+    "marks": 5
+   }
+  ],
+  "idea": "\\(g(|x|)\\) keeps the right half of the parabola and mirrors it in the \\(y\\)-axis; the outer modulus then reflects the negative parts up. Count solutions by sliding a horizontal line across the final graph, paying attention to the heights of its turning points (3 at \\(x = 0\\), 4 at \\(x = \\pm 1\\)).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(g(x) = (x - 1)^2 - 4 = (x + 1)(x - 3)\\): vertex \\((1, -4)\\), \\(x\\)-intercepts \\((-1, 0)\\), \\((3, 0)\\), \\(y\\)-intercept \\((0, -3)\\)."
+    ],
+    "answer": "Parabola with vertex \\((1, -4)\\), through \\((-1, 0)\\), \\((3, 0)\\), \\((0, -3)\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "For \\(x \\ge 0\\) use \\(g(x)\\); reflect in the \\(y\\)-axis. Minimum points \\((\\pm 1, -4)\\), a corner at \\((0, -3)\\), \\(x\\)-intercepts \\((\\pm 3, 0)\\)."
+    ],
+    "answer": "W shape: minima \\((\\pm 1, -4)\\), local maximum (corner) \\((0, -3)\\), zeros at \\(x = \\pm 3\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Reflect the part between \\(x = -3\\) and \\(x = 3\\) up: maxima \\((\\pm 1, 4)\\), a corner at \\((0, 3)\\), zeros at \\(x = \\pm 3\\).",
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 380 300\" width=\"380\" height=\"300\" role=\"img\" aria-label=\"Graph of y = |g(|x|)| where g(x) = x squared - 2x - 3. It is symmetric about the y-axis. It is 0 at x = -3 and x = 3, has local maxima of 4 at x = -1 and x = 1, and a local minimum (a corner) of 3 at x = 0. Outside x = ±3 it rises steeply. The dashed line y = k with 3 < k < 4 meets it six times.\"><defs><clipPath id=\"c8d2e4b7d\"><rect x=\"30\" y=\"24\" width=\"324\" height=\"248\"/></clipPath></defs><line x1=\"30.0\" y1=\"272.0\" x2=\"30.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"57.0\" y1=\"272.0\" x2=\"57.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"84.0\" y1=\"272.0\" x2=\"84.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"111.0\" y1=\"272.0\" x2=\"111.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"138.0\" y1=\"272.0\" x2=\"138.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"165.0\" y1=\"272.0\" x2=\"165.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"192.0\" y1=\"272.0\" x2=\"192.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"219.0\" y1=\"272.0\" x2=\"219.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"246.0\" y1=\"272.0\" x2=\"246.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"273.0\" y1=\"272.0\" x2=\"273.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"300.0\" y1=\"272.0\" x2=\"300.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"327.0\" y1=\"272.0\" x2=\"327.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"354.0\" y1=\"272.0\" x2=\"354.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"272.0\" x2=\"354.0\" y2=\"272.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"241.0\" x2=\"354.0\" y2=\"241.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"210.0\" x2=\"354.0\" y2=\"210.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"179.0\" x2=\"354.0\" y2=\"179.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"148.0\" x2=\"354.0\" y2=\"148.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"117.0\" x2=\"354.0\" y2=\"117.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"86.0\" x2=\"354.0\" y2=\"86.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"55.0\" x2=\"354.0\" y2=\"55.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"24.0\" x2=\"354.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"241.0\" x2=\"366.0\" y2=\"241.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"192.0\" y1=\"272.0\" x2=\"192.0\" y2=\"12.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M372.0 241.0 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M192.0 6.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"370.0\" y=\"259.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"180.0\" y=\"10.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"30.0\" y1=\"238.0\" x2=\"30.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"30.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−6</text><line x1=\"57.0\" y1=\"238.0\" x2=\"57.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"57.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−5</text><line x1=\"84.0\" y1=\"238.0\" x2=\"84.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"84.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−4</text><line x1=\"111.0\" y1=\"238.0\" x2=\"111.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"111.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−3</text><line x1=\"138.0\" y1=\"238.0\" x2=\"138.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"138.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−2</text><line x1=\"165.0\" y1=\"238.0\" x2=\"165.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−1</text><line x1=\"219.0\" y1=\"238.0\" x2=\"219.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"219.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><line x1=\"246.0\" y1=\"238.0\" x2=\"246.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"246.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"273.0\" y1=\"238.0\" x2=\"273.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"273.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><line x1=\"300.0\" y1=\"238.0\" x2=\"300.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"300.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><line x1=\"327.0\" y1=\"238.0\" x2=\"327.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"327.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">5</text><line x1=\"354.0\" y1=\"238.0\" x2=\"354.0\" y2=\"244.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"354.0\" y=\"258.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6</text><line x1=\"189.0\" y1=\"272.0\" x2=\"195.0\" y2=\"272.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"276.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−1</text><line x1=\"189.0\" y1=\"210.0\" x2=\"195.0\" y2=\"210.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"214.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><line x1=\"189.0\" y1=\"179.0\" x2=\"195.0\" y2=\"179.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"183.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"189.0\" y1=\"148.0\" x2=\"195.0\" y2=\"148.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"152.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><line x1=\"189.0\" y1=\"117.0\" x2=\"195.0\" y2=\"117.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"121.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><line x1=\"189.0\" y1=\"86.0\" x2=\"195.0\" y2=\"86.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"90.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">5</text><line x1=\"189.0\" y1=\"55.0\" x2=\"195.0\" y2=\"55.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"59.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6</text><line x1=\"189.0\" y1=\"24.0\" x2=\"195.0\" y2=\"24.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"185.0\" y=\"28.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">7</text><text x=\"185.0\" y=\"257.0\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><path d=\"M67.8 -36.8 L68.1 -34.2 L68.4 -31.6 L68.7 -29.1 L69.0 -26.6 L69.4 -24.0 L69.7 -21.5 L70.0 -19.0 L70.3 -16.5 L70.6 -14.0 L70.9 -11.5 L71.2 -9.0 L71.5 -6.5 L71.8 -4.1 L72.1 -1.6 L72.5 0.8 L72.8 3.3 L73.1 5.7 L73.4 8.1 L73.7 10.5 L74.0 12.9 L74.3 15.3 L74.6 17.7 L74.9 20.1 L75.3 22.5 L75.6 24.8 L75.9 27.2 L76.2 29.6 L76.5 31.9 L76.8 34.2 L77.1 36.6 L77.4 38.9 L77.7 41.2 L78.0 43.5 L78.4 45.8 L78.7 48.1 L79.0 50.3 L79.3 52.6 L79.6 54.9 L79.9 57.1 L80.2 59.4 L80.5 61.6 L80.8 63.8 L81.2 66.0 L81.5 68.2 L81.8 70.4 L82.1 72.6 L82.4 74.8 L82.7 77.0 L83.0 79.2 L83.3 81.3 L83.6 83.5 L83.9 85.6 L84.3 87.8 L84.6 89.9 L84.9 92.0 L85.2 94.1 L85.5 96.2 L85.8 98.3 L86.1 100.4 L86.4 102.5 L86.7 104.6 L87.1 106.6 L87.4 108.7 L87.7 110.7 L88.0 112.8 L88.3 114.8 L88.6 116.8 L88.9 118.8 L89.2 120.8 L89.5 122.8 L89.8 124.8 L90.2 126.8 L90.5 128.8 L90.8 130.7 L91.1 132.7 L91.4 134.6 L91.7 136.6 L92.0 138.5 L92.3 140.4 L92.6 142.3 L93.0 144.3 L93.3 146.2 L93.6 148.0 L93.9 149.9 L94.2 151.8 L94.5 153.7 L94.8 155.5 L95.1 157.4 L95.4 159.2 L95.7 161.0 L96.1 162.9 L96.4 164.7 L96.7 166.5 L97.0 168.3 L97.3 170.1 L97.6 171.9 L97.9 173.6 L98.2 175.4 L98.5 177.2 L98.9 178.9 L99.2 180.7 L99.5 182.4 L99.8 184.1 L100.1 185.8 L100.4 187.6 L100.7 189.3 L101.0 190.9 L101.3 192.6 L101.6 194.3 L102.0 196.0 L102.3 197.6 L102.6 199.3 L102.9 200.9 L103.2 202.6 L103.5 204.2 L103.8 205.8 L104.1 207.4 L104.4 209.0 L104.7 210.6 L105.1 212.2 L105.4 213.8 L105.7 215.4 L106.0 216.9 L106.3 218.5 L106.6 220.0 L106.9 221.6 L107.2 223.1 L107.5 224.6 L107.9 226.1 L108.2 227.6 L108.5 229.1 L108.8 230.6 L109.1 232.1 L109.4 233.6 L109.7 235.0 L110.0 236.5 L110.3 237.9 L110.6 239.4 L111.0 240.8 L111.3 239.8 L111.6 238.3 L111.9 236.9 L112.2 235.5 L112.5 234.2 L112.8 232.8 L113.1 231.4 L113.4 230.0 L113.8 228.7 L114.1 227.3 L114.4 226.0 L114.7 224.7 L115.0 223.3 L115.3 222.0 L115.6 220.7 L115.9 219.4 L116.2 218.1 L116.5 216.8 L116.9 215.6 L117.2 214.3 L117.5 213.0 L117.8 211.8 L118.1 210.5 L118.4 209.3 L118.7 208.1 L119.0 206.9 L119.3 205.6 L119.7 204.4 L120.0 203.2 L120.3 202.1 L120.6 200.9 L120.9 199.7 L121.2 198.6 L121.5 197.4 L121.8 196.3 L122.1 195.1 L122.4 194.0 L122.8 192.9 L123.1 191.8 L123.4 190.7 L123.7 189.6 L124.0 188.5 L124.3 187.4 L124.6 186.3 L124.9 185.3 L125.2 184.2 L125.6 183.2 L125.9 182.1 L126.2 181.1 L126.5 180.1 L126.8 179.1 L127.1 178.1 L127.4 177.1 L127.7 176.1 L128.0 175.1 L128.3 174.1 L128.7 173.2 L129.0 172.2 L129.3 171.3 L129.6 170.3 L129.9 169.4 L130.2 168.5 L130.5 167.6 L130.8 166.6 L131.1 165.7 L131.5 164.9 L131.8 164.0 L132.1 163.1 L132.4 162.2 L132.7 161.4 L133.0 160.5 L133.3 159.7 L133.6 158.9 L133.9 158.0 L134.2 157.2 L134.6 156.4 L134.9 155.6 L135.2 154.8 L135.5 154.0 L135.8 153.3 L136.1 152.5 L136.4 151.7 L136.7 151.0 L137.0 150.2 L137.4 149.5 L137.7 148.8 L138.0 148.1 L138.3 147.4 L138.6 146.7 L138.9 146.0 L139.2 145.3 L139.5 144.6 L139.8 143.9 L140.1 143.3 L140.5 142.6 L140.8 142.0 L141.1 141.3 L141.4 140.7 L141.7 140.1 L142.0 139.5 L142.3 138.9 L142.6 138.3 L142.9 137.7 L143.3 137.1 L143.6 136.5 L143.9 136.0 L144.2 135.4 L144.5 134.9 L144.8 134.3 L145.1 133.8 L145.4 133.3 L145.7 132.8 L146.0 132.3 L146.4 131.8 L146.7 131.3 L147.0 130.8 L147.3 130.3 L147.6 129.9 L147.9 129.4 L148.2 129.0 L148.5 128.5 L148.8 128.1 L149.2 127.7 L149.5 127.3 L149.8 126.9 L150.1 126.5 L150.4 126.1 L150.7 125.7 L151.0 125.3 L151.3 125.0 L151.6 124.6 L151.9 124.2 L152.3 123.9 L152.6 123.6 L152.9 123.2 L153.2 122.9 L153.5 122.6 L153.8 122.3 L154.1 122.0 L154.4 121.8 L154.7 121.5 L155.1 121.2 L155.4 121.0 L155.7 120.7 L156.0 120.5 L156.3 120.2 L156.6 120.0 L156.9 119.8 L157.2 119.6 L157.5 119.4 L157.8 119.2 L158.2 119.0 L158.5 118.8 L158.8 118.6 L159.1 118.5 L159.4 118.3 L159.7 118.2 L160.0 118.1 L160.3 117.9 L160.6 117.8 L161.0 117.7 L161.3 117.6 L161.6 117.5 L161.9 117.4 L162.2 117.3 L162.5 117.3 L162.8 117.2 L163.1 117.1 L163.4 117.1 L163.7 117.1 L164.1 117.0 L164.4 117.0 L164.7 117.0 L165.0 117.0 L165.3 117.0 L165.6 117.0 L165.9 117.0 L166.2 117.1 L166.5 117.1 L166.8 117.1 L167.2 117.2 L167.5 117.3 L167.8 117.3 L168.1 117.4 L168.4 117.5 L168.7 117.6 L169.0 117.7 L169.3 117.8 L169.6 117.9 L170.0 118.0 L170.3 118.2 L170.6 118.3 L170.9 118.5 L171.2 118.6 L171.5 118.8 L171.8 119.0 L172.1 119.2 L172.4 119.4 L172.7 119.6 L173.1 119.8 L173.4 120.0 L173.7 120.2 L174.0 120.4 L174.3 120.7 L174.6 120.9 L174.9 121.2 L175.2 121.5 L175.5 121.7 L175.9 122.0 L176.2 122.3 L176.5 122.6 L176.8 122.9 L177.1 123.2 L177.4 123.5 L177.7 123.9 L178.0 124.2 L178.3 124.6 L178.6 124.9 L179.0 125.3 L179.3 125.7 L179.6 126.0 L179.9 126.4 L180.2 126.8 L180.5 127.2 L180.8 127.6 L181.1 128.1 L181.4 128.5 L181.8 128.9 L182.1 129.4 L182.4 129.8 L182.7 130.3 L183.0 130.8 L183.3 131.3 L183.6 131.7 L183.9 132.2 L184.2 132.7 L184.5 133.2 L184.9 133.8 L185.2 134.3 L185.5 134.8 L185.8 135.4 L186.1 135.9 L186.4 136.5 L186.7 137.1 L187.0 137.6 L187.3 138.2 L187.7 138.8 L188.0 139.4 L188.3 140.0 L188.6 140.7 L188.9 141.3 L189.2 141.9 L189.5 142.6 L189.8 143.2 L190.1 143.9 L190.4 144.5 L190.8 145.2 L191.1 145.9 L191.4 146.6 L191.7 147.3 L192.0 148.0 L192.3 147.3 L192.6 146.6 L192.9 145.9 L193.2 145.2 L193.6 144.5 L193.9 143.9 L194.2 143.2 L194.5 142.6 L194.8 141.9 L195.1 141.3 L195.4 140.7 L195.7 140.0 L196.0 139.4 L196.3 138.8 L196.7 138.2 L197.0 137.6 L197.3 137.1 L197.6 136.5 L197.9 135.9 L198.2 135.4 L198.5 134.8 L198.8 134.3 L199.1 133.8 L199.5 133.2 L199.8 132.7 L200.1 132.2 L200.4 131.7 L200.7 131.3 L201.0 130.8 L201.3 130.3 L201.6 129.8 L201.9 129.4 L202.2 128.9 L202.6 128.5 L202.9 128.1 L203.2 127.6 L203.5 127.2 L203.8 126.8 L204.1 126.4 L204.4 126.0 L204.7 125.7 L205.0 125.3 L205.4 124.9 L205.7 124.6 L206.0 124.2 L206.3 123.9 L206.6 123.5 L206.9 123.2 L207.2 122.9 L207.5 122.6 L207.8 122.3 L208.1 122.0 L208.5 121.7 L208.8 121.5 L209.1 121.2 L209.4 120.9 L209.7 120.7 L210.0 120.4 L210.3 120.2 L210.6 120.0 L210.9 119.8 L211.3 119.6 L211.6 119.4 L211.9 119.2 L212.2 119.0 L212.5 118.8 L212.8 118.6 L213.1 118.5 L213.4 118.3 L213.7 118.2 L214.0 118.0 L214.4 117.9 L214.7 117.8 L215.0 117.7 L215.3 117.6 L215.6 117.5 L215.9 117.4 L216.2 117.3 L216.5 117.3 L216.8 117.2 L217.2 117.1 L217.5 117.1 L217.8 117.1 L218.1 117.0 L218.4 117.0 L218.7 117.0 L219.0 117.0 L219.3 117.0 L219.6 117.0 L219.9 117.0 L220.3 117.1 L220.6 117.1 L220.9 117.1 L221.2 117.2 L221.5 117.3 L221.8 117.3 L222.1 117.4 L222.4 117.5 L222.7 117.6 L223.1 117.7 L223.4 117.8 L223.7 117.9 L224.0 118.1 L224.3 118.2 L224.6 118.3 L224.9 118.5 L225.2 118.6 L225.5 118.8 L225.8 119.0 L226.2 119.2 L226.5 119.4 L226.8 119.6 L227.1 119.8 L227.4 120.0 L227.7 120.2 L228.0 120.5 L228.3 120.7 L228.6 121.0 L228.9 121.2 L229.3 121.5 L229.6 121.8 L229.9 122.0 L230.2 122.3 L230.5 122.6 L230.8 122.9 L231.1 123.2 L231.4 123.6 L231.7 123.9 L232.1 124.2 L232.4 124.6 L232.7 125.0 L233.0 125.3 L233.3 125.7 L233.6 126.1 L233.9 126.5 L234.2 126.9 L234.5 127.3 L234.8 127.7 L235.2 128.1 L235.5 128.5 L235.8 129.0 L236.1 129.4 L236.4 129.9 L236.7 130.3 L237.0 130.8 L237.3 131.3 L237.6 131.8 L238.0 132.3 L238.3 132.8 L238.6 133.3 L238.9 133.8 L239.2 134.3 L239.5 134.9 L239.8 135.4 L240.1 136.0 L240.4 136.5 L240.7 137.1 L241.1 137.7 L241.4 138.3 L241.7 138.9 L242.0 139.5 L242.3 140.1 L242.6 140.7 L242.9 141.3 L243.2 142.0 L243.5 142.6 L243.9 143.3 L244.2 143.9 L244.5 144.6 L244.8 145.3 L245.1 146.0 L245.4 146.7 L245.7 147.4 L246.0 148.1 L246.3 148.8 L246.6 149.5 L247.0 150.2 L247.3 151.0 L247.6 151.7 L247.9 152.5 L248.2 153.3 L248.5 154.0 L248.8 154.8 L249.1 155.6 L249.4 156.4 L249.8 157.2 L250.1 158.0 L250.4 158.9 L250.7 159.7 L251.0 160.5 L251.3 161.4 L251.6 162.2 L251.9 163.1 L252.2 164.0 L252.5 164.9 L252.9 165.7 L253.2 166.6 L253.5 167.6 L253.8 168.5 L254.1 169.4 L254.4 170.3 L254.7 171.3 L255.0 172.2 L255.3 173.2 L255.7 174.1 L256.0 175.1 L256.3 176.1 L256.6 177.1 L256.9 178.1 L257.2 179.1 L257.5 180.1 L257.8 181.1 L258.1 182.1 L258.4 183.2 L258.8 184.2 L259.1 185.3 L259.4 186.3 L259.7 187.4 L260.0 188.5 L260.3 189.6 L260.6 190.7 L260.9 191.8 L261.2 192.9 L261.6 194.0 L261.9 195.1 L262.2 196.3 L262.5 197.4 L262.8 198.6 L263.1 199.7 L263.4 200.9 L263.7 202.1 L264.0 203.2 L264.3 204.4 L264.7 205.6 L265.0 206.9 L265.3 208.1 L265.6 209.3 L265.9 210.5 L266.2 211.8 L266.5 213.0 L266.8 214.3 L267.1 215.6 L267.5 216.8 L267.8 218.1 L268.1 219.4 L268.4 220.7 L268.7 222.0 L269.0 223.3 L269.3 224.7 L269.6 226.0 L269.9 227.3 L270.2 228.7 L270.6 230.0 L270.9 231.4 L271.2 232.8 L271.5 234.2 L271.8 235.5 L272.1 236.9 L272.4 238.3 L272.7 239.8 L273.0 240.8 L273.4 239.4 L273.7 237.9 L274.0 236.5 L274.3 235.0 L274.6 233.6 L274.9 232.1 L275.2 230.6 L275.5 229.1 L275.8 227.6 L276.1 226.1 L276.5 224.6 L276.8 223.1 L277.1 221.6 L277.4 220.0 L277.7 218.5 L278.0 216.9 L278.3 215.4 L278.6 213.8 L278.9 212.2 L279.3 210.6 L279.6 209.0 L279.9 207.4 L280.2 205.8 L280.5 204.2 L280.8 202.6 L281.1 200.9 L281.4 199.3 L281.7 197.6 L282.0 196.0 L282.4 194.3 L282.7 192.6 L283.0 190.9 L283.3 189.3 L283.6 187.6 L283.9 185.8 L284.2 184.1 L284.5 182.4 L284.8 180.7 L285.1 178.9 L285.5 177.2 L285.8 175.4 L286.1 173.6 L286.4 171.9 L286.7 170.1 L287.0 168.3 L287.3 166.5 L287.6 164.7 L287.9 162.9 L288.3 161.0 L288.6 159.2 L288.9 157.4 L289.2 155.5 L289.5 153.7 L289.8 151.8 L290.1 149.9 L290.4 148.0 L290.7 146.2 L291.0 144.3 L291.4 142.3 L291.7 140.4 L292.0 138.5 L292.3 136.6 L292.6 134.6 L292.9 132.7 L293.2 130.7 L293.5 128.8 L293.8 126.8 L294.2 124.8 L294.5 122.8 L294.8 120.8 L295.1 118.8 L295.4 116.8 L295.7 114.8 L296.0 112.8 L296.3 110.7 L296.6 108.7 L296.9 106.6 L297.3 104.6 L297.6 102.5 L297.9 100.4 L298.2 98.3 L298.5 96.2 L298.8 94.1 L299.1 92.0 L299.4 89.9 L299.7 87.8 L300.1 85.6 L300.4 83.5 L300.7 81.3 L301.0 79.2 L301.3 77.0 L301.6 74.8 L301.9 72.6 L302.2 70.4 L302.5 68.2 L302.8 66.0 L303.2 63.8 L303.5 61.6 L303.8 59.4 L304.1 57.1 L304.4 54.9 L304.7 52.6 L305.0 50.3 L305.3 48.1 L305.6 45.8 L306.0 43.5 L306.3 41.2 L306.6 38.9 L306.9 36.6 L307.2 34.2 L307.5 31.9 L307.8 29.6 L308.1 27.2 L308.4 24.8 L308.7 22.5 L309.1 20.1 L309.4 17.7 L309.7 15.3 L310.0 12.9 L310.3 10.5 L310.6 8.1 L310.9 5.7 L311.2 3.3 L311.5 0.8 L311.9 -1.6 L312.2 -4.1 L312.5 -6.5 L312.8 -9.0 L313.1 -11.5 L313.4 -14.0 L313.7 -16.5 L314.0 -19.0 L314.3 -21.5 L314.6 -24.0 L315.0 -26.6 L315.3 -29.1 L315.6 -31.6 L315.9 -34.2 L316.2 -36.8\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#c8d2e4b7d)\"/><line x1=\"30.0\" y1=\"132.5\" x2=\"354.0\" y2=\"132.5\" stroke=\"#1f5fd6\" stroke-width=\"1.3\" stroke-dasharray=\"6 4\"/><circle cx=\"165.0\" cy=\"117.0\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"219.0\" cy=\"117.0\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"192.0\" cy=\"148.0\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"111.0\" cy=\"241.0\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"273.0\" cy=\"241.0\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><text x=\"225.0\" y=\"109.0\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">(1, 4)</text><text x=\"198.0\" y=\"166.0\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">(0, 3)</text><text x=\"350.6\" y=\"124.5\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#1f5fd6\"><tspan font-style=\"italic\">y</tspan> = <tspan font-style=\"italic\">k</tspan></text></svg>"
+     }
+    ],
+    "answer": "Maxima \\((\\pm 1, 4)\\); corner \\((0, 3)\\); zeros at \\(x = \\pm 3\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(g(|x|) = 3\\): \\(|x|^2 - 2|x| - 6 = 0\\), so \\(|x| = 1 + \\sqrt{7}\\): two solutions.",
+     "\\(g(|x|) = -3\\): \\(|x|\\left(|x| - 2\\right) = 0\\), so \\(x = 0\\) or \\(x = \\pm 2\\): three solutions."
+    ],
+    "answer": "5 solutions"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The outer branches (\\(|x| > 3\\)) give two solutions for every \\(k > 0\\).",
+     "Between \\(x = -3\\) and \\(x = 3\\), the graph rises from 0 to 4 at \\(x = \\pm 1\\) and dips to 3 at \\(x = 0\\). A line \\(y = k\\) with \\(3 < k < 4\\) meets this part four times; with \\(0 < k < 3\\) twice; \\(k = 3\\) three times; \\(k = 4\\) twice.",
+     "Six solutions in all only when \\(3 < k < 4\\)."
+    ],
+    "answer": "\\(3 < k < 4\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-fn-hl-b-007",
+  "strand": "Functions",
+  "subtopic": "Inequalities and modulus equations",
+  "level": {
+   "HL AA": "Hard"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "This question is about the graphs of \\(y = \\left|x^2 - 4\\right|\\) and \\(y = 3|x|\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Sketch both graphs on the same axes.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Solve the equation \\(\\left|x^2 - 4\\right| = 3x\\) for \\(x \\ge 0\\). Hence write down all the solutions of \\(\\left|x^2 - 4\\right| = 3|x|\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Solve the inequality \\(\\left|x^2 - 4\\right| < 3|x|\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Solve the inequality \\(\\left|x^2 - 4\\right| \\ge 3|x| + 4\\).",
+    "marks": 5
+   }
+  ],
+  "idea": "Both sides are even functions, so solve for \\(x \\ge 0\\) and reflect. On \\(x \\ge 0\\), \\(\\left|x^2 - 4\\right|\\) is \\(4 - x^2\\) for \\(x \\le 2\\) and \\(x^2 - 4\\) for \\(x \\ge 2\\): solve each case and keep only the answers in its own interval.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 340 330\" width=\"340\" height=\"330\" role=\"img\" aria-label=\"Graphs of y = |x squared - 4| and y = 3|x|. The first is zero at x = -2 and x = 2, with an arch reaching 4 at x = 0. The second is a V through the origin. They meet at x = -4, -1, 1 and 4, where y = 12, 3, 3 and 12.\"><defs><clipPath id=\"c6faf06a8\"><rect x=\"30\" y=\"24\" width=\"284\" height=\"278\"/></clipPath></defs><line x1=\"30.0\" y1=\"302.0\" x2=\"30.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"58.4\" y1=\"302.0\" x2=\"58.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"86.8\" y1=\"302.0\" x2=\"86.8\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"115.2\" y1=\"302.0\" x2=\"115.2\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"143.6\" y1=\"302.0\" x2=\"143.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"172.0\" y1=\"302.0\" x2=\"172.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"200.4\" y1=\"302.0\" x2=\"200.4\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"228.8\" y1=\"302.0\" x2=\"228.8\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"257.2\" y1=\"302.0\" x2=\"257.2\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"285.6\" y1=\"302.0\" x2=\"285.6\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"314.0\" y1=\"302.0\" x2=\"314.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"302.0\" x2=\"314.0\" y2=\"302.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"283.5\" x2=\"314.0\" y2=\"283.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"264.9\" x2=\"314.0\" y2=\"264.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"246.4\" x2=\"314.0\" y2=\"246.4\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"227.9\" x2=\"314.0\" y2=\"227.9\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"209.3\" x2=\"314.0\" y2=\"209.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"190.8\" x2=\"314.0\" y2=\"190.8\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"172.3\" x2=\"314.0\" y2=\"172.3\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"153.7\" x2=\"314.0\" y2=\"153.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"135.2\" x2=\"314.0\" y2=\"135.2\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"116.7\" x2=\"314.0\" y2=\"116.7\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"98.1\" x2=\"314.0\" y2=\"98.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"79.6\" x2=\"314.0\" y2=\"79.6\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"61.1\" x2=\"314.0\" y2=\"61.1\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"42.5\" x2=\"314.0\" y2=\"42.5\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"24.0\" x2=\"314.0\" y2=\"24.0\" stroke=\"#d5dbe6\" stroke-width=\"1\"/><line x1=\"30.0\" y1=\"264.9\" x2=\"326.0\" y2=\"264.9\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><line x1=\"172.0\" y1=\"302.0\" x2=\"172.0\" y2=\"12.0\" stroke=\"#0b0d12\" stroke-width=\"1.4\"/><path d=\"M332.0 264.9 l-8 -4 v8 z\" fill=\"#0b0d12\"/><path d=\"M172.0 6.0 l-4 8 h8 z\" fill=\"#0b0d12\"/><text x=\"330.0\" y=\"282.9\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">x</tspan></text><text x=\"160.0\" y=\"10.0\" text-anchor=\"middle\" font-size=\"16\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan></text><line x1=\"30.0\" y1=\"261.9\" x2=\"30.0\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"30.0\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−5</text><line x1=\"58.4\" y1=\"261.9\" x2=\"58.4\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"58.4\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−4</text><line x1=\"86.8\" y1=\"261.9\" x2=\"86.8\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"86.8\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−3</text><line x1=\"115.2\" y1=\"261.9\" x2=\"115.2\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"115.2\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−2</text><line x1=\"143.6\" y1=\"261.9\" x2=\"143.6\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"143.6\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−1</text><line x1=\"200.4\" y1=\"261.9\" x2=\"200.4\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"200.4\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">1</text><line x1=\"228.8\" y1=\"261.9\" x2=\"228.8\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"228.8\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"257.2\" y1=\"261.9\" x2=\"257.2\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"257.2\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">3</text><line x1=\"285.6\" y1=\"261.9\" x2=\"285.6\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"285.6\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><line x1=\"314.0\" y1=\"261.9\" x2=\"314.0\" y2=\"267.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"314.0\" y=\"281.9\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">5</text><line x1=\"169.0\" y1=\"302.0\" x2=\"175.0\" y2=\"302.0\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"306.5\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">−2</text><line x1=\"169.0\" y1=\"227.9\" x2=\"175.0\" y2=\"227.9\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"232.4\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">2</text><line x1=\"169.0\" y1=\"190.8\" x2=\"175.0\" y2=\"190.8\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"195.3\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">4</text><line x1=\"169.0\" y1=\"153.7\" x2=\"175.0\" y2=\"153.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"158.2\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">6</text><line x1=\"169.0\" y1=\"116.7\" x2=\"175.0\" y2=\"116.7\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"121.2\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">8</text><line x1=\"169.0\" y1=\"79.6\" x2=\"175.0\" y2=\"79.6\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"84.1\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">10</text><line x1=\"169.0\" y1=\"42.5\" x2=\"175.0\" y2=\"42.5\" stroke=\"#0b0d12\" stroke-width=\"1.2\"/><text x=\"165.0\" y=\"47.0\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">12</text><text x=\"165.0\" y=\"280.9\" text-anchor=\"end\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">0</text><path d=\"M47.0 -19.7 L47.4 -17.9 L47.7 -16.2 L48.0 -14.4 L48.3 -12.6 L48.6 -10.8 L48.9 -9.1 L49.2 -7.3 L49.5 -5.5 L49.9 -3.8 L50.2 -2.0 L50.5 -0.3 L50.8 1.5 L51.1 3.2 L51.4 4.9 L51.7 6.7 L52.0 8.4 L52.4 10.1 L52.7 11.8 L53.0 13.5 L53.3 15.2 L53.6 16.9 L53.9 18.6 L54.2 20.3 L54.5 22.0 L54.8 23.7 L55.2 25.4 L55.5 27.1 L55.8 28.7 L56.1 30.4 L56.4 32.1 L56.7 33.7 L57.0 35.4 L57.3 37.0 L57.7 38.7 L58.0 40.3 L58.3 41.9 L58.6 43.6 L58.9 45.2 L59.2 46.8 L59.5 48.4 L59.8 50.0 L60.2 51.7 L60.5 53.3 L60.8 54.9 L61.1 56.5 L61.4 58.0 L61.7 59.6 L62.0 61.2 L62.3 62.8 L62.7 64.4 L63.0 65.9 L63.3 67.5 L63.6 69.0 L63.9 70.6 L64.2 72.1 L64.5 73.7 L64.8 75.2 L65.2 76.8 L65.5 78.3 L65.8 79.8 L66.1 81.4 L66.4 82.9 L66.7 84.4 L67.0 85.9 L67.3 87.4 L67.7 88.9 L68.0 90.4 L68.3 91.9 L68.6 93.4 L68.9 94.9 L69.2 96.3 L69.5 97.8 L69.8 99.3 L70.2 100.7 L70.5 102.2 L70.8 103.7 L71.1 105.1 L71.4 106.6 L71.7 108.0 L72.0 109.4 L72.3 110.9 L72.7 112.3 L73.0 113.7 L73.3 115.1 L73.6 116.6 L73.9 118.0 L74.2 119.4 L74.5 120.8 L74.8 122.2 L75.2 123.6 L75.5 124.9 L75.8 126.3 L76.1 127.7 L76.4 129.1 L76.7 130.5 L77.0 131.8 L77.3 133.2 L77.7 134.5 L78.0 135.9 L78.3 137.2 L78.6 138.6 L78.9 139.9 L79.2 141.3 L79.5 142.6 L79.8 143.9 L80.2 145.2 L80.5 146.5 L80.8 147.9 L81.1 149.2 L81.4 150.5 L81.7 151.8 L82.0 153.1 L82.3 154.4 L82.7 155.6 L83.0 156.9 L83.3 158.2 L83.6 159.5 L83.9 160.7 L84.2 162.0 L84.5 163.3 L84.8 164.5 L85.2 165.8 L85.5 167.0 L85.8 168.2 L86.1 169.5 L86.4 170.7 L86.7 171.9 L87.0 173.2 L87.3 174.4 L87.7 175.6 L88.0 176.8 L88.3 178.0 L88.6 179.2 L88.9 180.4 L89.2 181.6 L89.5 182.8 L89.8 184.0 L90.2 185.1 L90.5 186.3 L90.8 187.5 L91.1 188.6 L91.4 189.8 L91.7 190.9 L92.0 192.1 L92.3 193.2 L92.7 194.4 L93.0 195.5 L93.3 196.7 L93.6 197.8 L93.9 198.9 L94.2 200.0 L94.5 201.1 L94.8 202.3 L95.1 203.4 L95.5 204.5 L95.8 205.6 L96.1 206.6 L96.4 207.7 L96.7 208.8 L97.0 209.9 L97.3 211.0 L97.6 212.0 L98.0 213.1 L98.3 214.2 L98.6 215.2 L98.9 216.3 L99.2 217.3 L99.5 218.4 L99.8 219.4 L100.1 220.4 L100.5 221.5 L100.8 222.5 L101.1 223.5 L101.4 224.5 L101.7 225.5 L102.0 226.5 L102.3 227.5 L102.6 228.5 L103.0 229.5 L103.3 230.5 L103.6 231.5 L103.9 232.5 L104.2 233.5 L104.5 234.4 L104.8 235.4 L105.1 236.4 L105.5 237.3 L105.8 238.3 L106.1 239.2 L106.4 240.2 L106.7 241.1 L107.0 242.0 L107.3 243.0 L107.6 243.9 L108.0 244.8 L108.3 245.7 L108.6 246.7 L108.9 247.6 L109.2 248.5 L109.5 249.4 L109.8 250.3 L110.1 251.2 L110.5 252.0 L110.8 252.9 L111.1 253.8 L111.4 254.7 L111.7 255.5 L112.0 256.4 L112.3 257.3 L112.6 258.1 L113.0 259.0 L113.3 259.8 L113.6 260.6 L113.9 261.5 L114.2 262.3 L114.5 263.1 L114.8 264.0 L115.1 264.8 L115.5 264.3 L115.8 263.5 L116.1 262.7 L116.4 261.9 L116.7 261.1 L117.0 260.3 L117.3 259.5 L117.6 258.7 L118.0 257.9 L118.3 257.1 L118.6 256.4 L118.9 255.6 L119.2 254.8 L119.5 254.1 L119.8 253.3 L120.1 252.6 L120.5 251.9 L120.8 251.1 L121.1 250.4 L121.4 249.7 L121.7 248.9 L122.0 248.2 L122.3 247.5 L122.6 246.8 L123.0 246.1 L123.3 245.4 L123.6 244.7 L123.9 244.0 L124.2 243.3 L124.5 242.6 L124.8 241.9 L125.1 241.3 L125.5 240.6 L125.8 239.9 L126.1 239.3 L126.4 238.6 L126.7 237.9 L127.0 237.3 L127.3 236.7 L127.6 236.0 L128.0 235.4 L128.3 234.8 L128.6 234.1 L128.9 233.5 L129.2 232.9 L129.5 232.3 L129.8 231.7 L130.1 231.1 L130.5 230.5 L130.8 229.9 L131.1 229.3 L131.4 228.7 L131.7 228.1 L132.0 227.5 L132.3 227.0 L132.6 226.4 L132.9 225.8 L133.3 225.3 L133.6 224.7 L133.9 224.2 L134.2 223.6 L134.5 223.1 L134.8 222.6 L135.1 222.0 L135.4 221.5 L135.8 221.0 L136.1 220.5 L136.4 219.9 L136.7 219.4 L137.0 218.9 L137.3 218.4 L137.6 217.9 L137.9 217.4 L138.3 217.0 L138.6 216.5 L138.9 216.0 L139.2 215.5 L139.5 215.1 L139.8 214.6 L140.1 214.1 L140.4 213.7 L140.8 213.2 L141.1 212.8 L141.4 212.3 L141.7 211.9 L142.0 211.5 L142.3 211.0 L142.6 210.6 L142.9 210.2 L143.3 209.8 L143.6 209.4 L143.9 209.0 L144.2 208.6 L144.5 208.2 L144.8 207.8 L145.1 207.4 L145.4 207.0 L145.8 206.6 L146.1 206.2 L146.4 205.9 L146.7 205.5 L147.0 205.2 L147.3 204.8 L147.6 204.4 L147.9 204.1 L148.3 203.8 L148.6 203.4 L148.9 203.1 L149.2 202.8 L149.5 202.4 L149.8 202.1 L150.1 201.8 L150.4 201.5 L150.8 201.2 L151.1 200.9 L151.4 200.6 L151.7 200.3 L152.0 200.0 L152.3 199.7 L152.6 199.4 L152.9 199.1 L153.3 198.9 L153.6 198.6 L153.9 198.3 L154.2 198.1 L154.5 197.8 L154.8 197.6 L155.1 197.3 L155.4 197.1 L155.8 196.9 L156.1 196.6 L156.4 196.4 L156.7 196.2 L157.0 196.0 L157.3 195.8 L157.6 195.5 L157.9 195.3 L158.3 195.1 L158.6 194.9 L158.9 194.8 L159.2 194.6 L159.5 194.4 L159.8 194.2 L160.1 194.0 L160.4 193.9 L160.8 193.7 L161.1 193.5 L161.4 193.4 L161.7 193.2 L162.0 193.1 L162.3 193.0 L162.6 192.8 L162.9 192.7 L163.3 192.6 L163.6 192.4 L163.9 192.3 L164.2 192.2 L164.5 192.1 L164.8 192.0 L165.1 191.9 L165.4 191.8 L165.8 191.7 L166.1 191.6 L166.4 191.5 L166.7 191.4 L167.0 191.4 L167.3 191.3 L167.6 191.2 L167.9 191.2 L168.3 191.1 L168.6 191.1 L168.9 191.0 L169.2 191.0 L169.5 190.9 L169.8 190.9 L170.1 190.9 L170.4 190.9 L170.8 190.8 L171.1 190.8 L171.4 190.8 L171.7 190.8 L172.0 190.8 L172.3 190.8 L172.6 190.8 L172.9 190.8 L173.2 190.8 L173.6 190.9 L173.9 190.9 L174.2 190.9 L174.5 190.9 L174.8 191.0 L175.1 191.0 L175.4 191.1 L175.7 191.1 L176.1 191.2 L176.4 191.2 L176.7 191.3 L177.0 191.4 L177.3 191.4 L177.6 191.5 L177.9 191.6 L178.2 191.7 L178.6 191.8 L178.9 191.9 L179.2 192.0 L179.5 192.1 L179.8 192.2 L180.1 192.3 L180.4 192.4 L180.7 192.6 L181.1 192.7 L181.4 192.8 L181.7 193.0 L182.0 193.1 L182.3 193.2 L182.6 193.4 L182.9 193.5 L183.2 193.7 L183.6 193.9 L183.9 194.0 L184.2 194.2 L184.5 194.4 L184.8 194.6 L185.1 194.8 L185.4 194.9 L185.7 195.1 L186.1 195.3 L186.4 195.5 L186.7 195.8 L187.0 196.0 L187.3 196.2 L187.6 196.4 L187.9 196.6 L188.2 196.9 L188.6 197.1 L188.9 197.3 L189.2 197.6 L189.5 197.8 L189.8 198.1 L190.1 198.3 L190.4 198.6 L190.7 198.9 L191.1 199.1 L191.4 199.4 L191.7 199.7 L192.0 200.0 L192.3 200.3 L192.6 200.6 L192.9 200.9 L193.2 201.2 L193.6 201.5 L193.9 201.8 L194.2 202.1 L194.5 202.4 L194.8 202.8 L195.1 203.1 L195.4 203.4 L195.7 203.8 L196.1 204.1 L196.4 204.4 L196.7 204.8 L197.0 205.2 L197.3 205.5 L197.6 205.9 L197.9 206.2 L198.2 206.6 L198.6 207.0 L198.9 207.4 L199.2 207.8 L199.5 208.2 L199.8 208.6 L200.1 209.0 L200.4 209.4 L200.7 209.8 L201.1 210.2 L201.4 210.6 L201.7 211.0 L202.0 211.5 L202.3 211.9 L202.6 212.3 L202.9 212.8 L203.2 213.2 L203.6 213.7 L203.9 214.1 L204.2 214.6 L204.5 215.1 L204.8 215.5 L205.1 216.0 L205.4 216.5 L205.7 217.0 L206.1 217.4 L206.4 217.9 L206.7 218.4 L207.0 218.9 L207.3 219.4 L207.6 219.9 L207.9 220.5 L208.2 221.0 L208.6 221.5 L208.9 222.0 L209.2 222.6 L209.5 223.1 L209.8 223.6 L210.1 224.2 L210.4 224.7 L210.7 225.3 L211.0 225.8 L211.4 226.4 L211.7 227.0 L212.0 227.5 L212.3 228.1 L212.6 228.7 L212.9 229.3 L213.2 229.9 L213.5 230.5 L213.9 231.1 L214.2 231.7 L214.5 232.3 L214.8 232.9 L215.1 233.5 L215.4 234.1 L215.7 234.8 L216.0 235.4 L216.4 236.0 L216.7 236.7 L217.0 237.3 L217.3 237.9 L217.6 238.6 L217.9 239.3 L218.2 239.9 L218.5 240.6 L218.9 241.3 L219.2 241.9 L219.5 242.6 L219.8 243.3 L220.1 244.0 L220.4 244.7 L220.7 245.4 L221.0 246.1 L221.4 246.8 L221.7 247.5 L222.0 248.2 L222.3 248.9 L222.6 249.7 L222.9 250.4 L223.2 251.1 L223.5 251.9 L223.9 252.6 L224.2 253.3 L224.5 254.1 L224.8 254.8 L225.1 255.6 L225.4 256.4 L225.7 257.1 L226.0 257.9 L226.4 258.7 L226.7 259.5 L227.0 260.3 L227.3 261.1 L227.6 261.9 L227.9 262.7 L228.2 263.5 L228.5 264.3 L228.9 264.8 L229.2 264.0 L229.5 263.1 L229.8 262.3 L230.1 261.5 L230.4 260.6 L230.7 259.8 L231.0 259.0 L231.4 258.1 L231.7 257.3 L232.0 256.4 L232.3 255.5 L232.6 254.7 L232.9 253.8 L233.2 252.9 L233.5 252.0 L233.9 251.2 L234.2 250.3 L234.5 249.4 L234.8 248.5 L235.1 247.6 L235.4 246.7 L235.7 245.7 L236.0 244.8 L236.4 243.9 L236.7 243.0 L237.0 242.0 L237.3 241.1 L237.6 240.2 L237.9 239.2 L238.2 238.3 L238.5 237.3 L238.9 236.4 L239.2 235.4 L239.5 234.4 L239.8 233.5 L240.1 232.5 L240.4 231.5 L240.7 230.5 L241.0 229.5 L241.4 228.5 L241.7 227.5 L242.0 226.5 L242.3 225.5 L242.6 224.5 L242.9 223.5 L243.2 222.5 L243.5 221.5 L243.9 220.4 L244.2 219.4 L244.5 218.4 L244.8 217.3 L245.1 216.3 L245.4 215.2 L245.7 214.2 L246.0 213.1 L246.4 212.0 L246.7 211.0 L247.0 209.9 L247.3 208.8 L247.6 207.7 L247.9 206.6 L248.2 205.6 L248.5 204.5 L248.9 203.4 L249.2 202.3 L249.5 201.1 L249.8 200.0 L250.1 198.9 L250.4 197.8 L250.7 196.7 L251.0 195.5 L251.3 194.4 L251.7 193.2 L252.0 192.1 L252.3 190.9 L252.6 189.8 L252.9 188.6 L253.2 187.5 L253.5 186.3 L253.8 185.1 L254.2 184.0 L254.5 182.8 L254.8 181.6 L255.1 180.4 L255.4 179.2 L255.7 178.0 L256.0 176.8 L256.3 175.6 L256.7 174.4 L257.0 173.2 L257.3 171.9 L257.6 170.7 L257.9 169.5 L258.2 168.2 L258.5 167.0 L258.8 165.8 L259.2 164.5 L259.5 163.3 L259.8 162.0 L260.1 160.7 L260.4 159.5 L260.7 158.2 L261.0 156.9 L261.3 155.6 L261.7 154.4 L262.0 153.1 L262.3 151.8 L262.6 150.5 L262.9 149.2 L263.2 147.9 L263.5 146.5 L263.8 145.2 L264.2 143.9 L264.5 142.6 L264.8 141.3 L265.1 139.9 L265.4 138.6 L265.7 137.2 L266.0 135.9 L266.3 134.5 L266.7 133.2 L267.0 131.8 L267.3 130.5 L267.6 129.1 L267.9 127.7 L268.2 126.3 L268.5 124.9 L268.8 123.6 L269.2 122.2 L269.5 120.8 L269.8 119.4 L270.1 118.0 L270.4 116.6 L270.7 115.1 L271.0 113.7 L271.3 112.3 L271.7 110.9 L272.0 109.4 L272.3 108.0 L272.6 106.6 L272.9 105.1 L273.2 103.7 L273.5 102.2 L273.8 100.7 L274.2 99.3 L274.5 97.8 L274.8 96.3 L275.1 94.9 L275.4 93.4 L275.7 91.9 L276.0 90.4 L276.3 88.9 L276.7 87.4 L277.0 85.9 L277.3 84.4 L277.6 82.9 L277.9 81.4 L278.2 79.8 L278.5 78.3 L278.8 76.8 L279.2 75.2 L279.5 73.7 L279.8 72.1 L280.1 70.6 L280.4 69.0 L280.7 67.5 L281.0 65.9 L281.3 64.4 L281.7 62.8 L282.0 61.2 L282.3 59.6 L282.6 58.0 L282.9 56.5 L283.2 54.9 L283.5 53.3 L283.8 51.7 L284.2 50.0 L284.5 48.4 L284.8 46.8 L285.1 45.2 L285.4 43.6 L285.7 41.9 L286.0 40.3 L286.3 38.7 L286.7 37.0 L287.0 35.4 L287.3 33.7 L287.6 32.1 L287.9 30.4 L288.2 28.7 L288.5 27.1 L288.8 25.4 L289.1 23.7 L289.5 22.0 L289.8 20.3 L290.1 18.6 L290.4 16.9 L290.7 15.2 L291.0 13.5 L291.3 11.8 L291.6 10.1 L292.0 8.4 L292.3 6.7 L292.6 4.9 L292.9 3.2 L293.2 1.5 L293.5 -0.3 L293.8 -2.0 L294.1 -3.8 L294.5 -5.5 L294.8 -7.3 L295.1 -9.1 L295.4 -10.8 L295.7 -12.6 L296.0 -14.4 L296.3 -16.2 L296.6 -17.9 L297.0 -19.7\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"2.4\" stroke-linejoin=\"round\" stroke-linecap=\"round\" clip-path=\"url(#c6faf06a8)\"/><path d=\"M47.0 20.3 L47.4 20.9 L47.7 21.5 L48.0 22.1 L48.3 22.7 L48.6 23.4 L48.9 24.0 L49.2 24.6 L49.5 25.2 L49.9 25.8 L50.2 26.4 L50.5 27.0 L50.8 27.6 L51.1 28.2 L51.4 28.9 L51.7 29.5 L52.0 30.1 L52.4 30.7 L52.7 31.3 L53.0 31.9 L53.3 32.5 L53.6 33.1 L53.9 33.7 L54.2 34.4 L54.5 35.0 L54.8 35.6 L55.2 36.2 L55.5 36.8 L55.8 37.4 L56.1 38.0 L56.4 38.6 L56.7 39.3 L57.0 39.9 L57.3 40.5 L57.7 41.1 L58.0 41.7 L58.3 42.3 L58.6 42.9 L58.9 43.5 L59.2 44.1 L59.5 44.8 L59.8 45.4 L60.2 46.0 L60.5 46.6 L60.8 47.2 L61.1 47.8 L61.4 48.4 L61.7 49.0 L62.0 49.7 L62.3 50.3 L62.7 50.9 L63.0 51.5 L63.3 52.1 L63.6 52.7 L63.9 53.3 L64.2 53.9 L64.5 54.5 L64.8 55.2 L65.2 55.8 L65.5 56.4 L65.8 57.0 L66.1 57.6 L66.4 58.2 L66.7 58.8 L67.0 59.4 L67.3 60.0 L67.7 60.7 L68.0 61.3 L68.3 61.9 L68.6 62.5 L68.9 63.1 L69.2 63.7 L69.5 64.3 L69.8 64.9 L70.2 65.6 L70.5 66.2 L70.8 66.8 L71.1 67.4 L71.4 68.0 L71.7 68.6 L72.0 69.2 L72.3 69.8 L72.7 70.4 L73.0 71.1 L73.3 71.7 L73.6 72.3 L73.9 72.9 L74.2 73.5 L74.5 74.1 L74.8 74.7 L75.2 75.3 L75.5 75.9 L75.8 76.6 L76.1 77.2 L76.4 77.8 L76.7 78.4 L77.0 79.0 L77.3 79.6 L77.7 80.2 L78.0 80.8 L78.3 81.5 L78.6 82.1 L78.9 82.7 L79.2 83.3 L79.5 83.9 L79.8 84.5 L80.2 85.1 L80.5 85.7 L80.8 86.3 L81.1 87.0 L81.4 87.6 L81.7 88.2 L82.0 88.8 L82.3 89.4 L82.7 90.0 L83.0 90.6 L83.3 91.2 L83.6 91.9 L83.9 92.5 L84.2 93.1 L84.5 93.7 L84.8 94.3 L85.2 94.9 L85.5 95.5 L85.8 96.1 L86.1 96.7 L86.4 97.4 L86.7 98.0 L87.0 98.6 L87.3 99.2 L87.7 99.8 L88.0 100.4 L88.3 101.0 L88.6 101.6 L88.9 102.2 L89.2 102.9 L89.5 103.5 L89.8 104.1 L90.2 104.7 L90.5 105.3 L90.8 105.9 L91.1 106.5 L91.4 107.1 L91.7 107.8 L92.0 108.4 L92.3 109.0 L92.7 109.6 L93.0 110.2 L93.3 110.8 L93.6 111.4 L93.9 112.0 L94.2 112.6 L94.5 113.3 L94.8 113.9 L95.1 114.5 L95.5 115.1 L95.8 115.7 L96.1 116.3 L96.4 116.9 L96.7 117.5 L97.0 118.1 L97.3 118.8 L97.6 119.4 L98.0 120.0 L98.3 120.6 L98.6 121.2 L98.9 121.8 L99.2 122.4 L99.5 123.0 L99.8 123.7 L100.1 124.3 L100.5 124.9 L100.8 125.5 L101.1 126.1 L101.4 126.7 L101.7 127.3 L102.0 127.9 L102.3 128.5 L102.6 129.2 L103.0 129.8 L103.3 130.4 L103.6 131.0 L103.9 131.6 L104.2 132.2 L104.5 132.8 L104.8 133.4 L105.1 134.1 L105.5 134.7 L105.8 135.3 L106.1 135.9 L106.4 136.5 L106.7 137.1 L107.0 137.7 L107.3 138.3 L107.6 138.9 L108.0 139.6 L108.3 140.2 L108.6 140.8 L108.9 141.4 L109.2 142.0 L109.5 142.6 L109.8 143.2 L110.1 143.8 L110.5 144.4 L110.8 145.1 L111.1 145.7 L111.4 146.3 L111.7 146.9 L112.0 147.5 L112.3 148.1 L112.6 148.7 L113.0 149.3 L113.3 150.0 L113.6 150.6 L113.9 151.2 L114.2 151.8 L114.5 152.4 L114.8 153.0 L115.1 153.6 L115.5 154.2 L115.8 154.8 L116.1 155.5 L116.4 156.1 L116.7 156.7 L117.0 157.3 L117.3 157.9 L117.6 158.5 L118.0 159.1 L118.3 159.7 L118.6 160.3 L118.9 161.0 L119.2 161.6 L119.5 162.2 L119.8 162.8 L120.1 163.4 L120.5 164.0 L120.8 164.6 L121.1 165.2 L121.4 165.9 L121.7 166.5 L122.0 167.1 L122.3 167.7 L122.6 168.3 L123.0 168.9 L123.3 169.5 L123.6 170.1 L123.9 170.7 L124.2 171.4 L124.5 172.0 L124.8 172.6 L125.1 173.2 L125.5 173.8 L125.8 174.4 L126.1 175.0 L126.4 175.6 L126.7 176.3 L127.0 176.9 L127.3 177.5 L127.6 178.1 L128.0 178.7 L128.3 179.3 L128.6 179.9 L128.9 180.5 L129.2 181.1 L129.5 181.8 L129.8 182.4 L130.1 183.0 L130.5 183.6 L130.8 184.2 L131.1 184.8 L131.4 185.4 L131.7 186.0 L132.0 186.6 L132.3 187.3 L132.6 187.9 L132.9 188.5 L133.3 189.1 L133.6 189.7 L133.9 190.3 L134.2 190.9 L134.5 191.5 L134.8 192.2 L135.1 192.8 L135.4 193.4 L135.8 194.0 L136.1 194.6 L136.4 195.2 L136.7 195.8 L137.0 196.4 L137.3 197.0 L137.6 197.7 L137.9 198.3 L138.3 198.9 L138.6 199.5 L138.9 200.1 L139.2 200.7 L139.5 201.3 L139.8 201.9 L140.1 202.6 L140.4 203.2 L140.8 203.8 L141.1 204.4 L141.4 205.0 L141.7 205.6 L142.0 206.2 L142.3 206.8 L142.6 207.4 L142.9 208.1 L143.3 208.7 L143.6 209.3 L143.9 209.9 L144.2 210.5 L144.5 211.1 L144.8 211.7 L145.1 212.3 L145.4 212.9 L145.8 213.6 L146.1 214.2 L146.4 214.8 L146.7 215.4 L147.0 216.0 L147.3 216.6 L147.6 217.2 L147.9 217.8 L148.3 218.5 L148.6 219.1 L148.9 219.7 L149.2 220.3 L149.5 220.9 L149.8 221.5 L150.1 222.1 L150.4 222.7 L150.8 223.3 L151.1 224.0 L151.4 224.6 L151.7 225.2 L152.0 225.8 L152.3 226.4 L152.6 227.0 L152.9 227.6 L153.3 228.2 L153.6 228.8 L153.9 229.5 L154.2 230.1 L154.5 230.7 L154.8 231.3 L155.1 231.9 L155.4 232.5 L155.8 233.1 L156.1 233.7 L156.4 234.4 L156.7 235.0 L157.0 235.6 L157.3 236.2 L157.6 236.8 L157.9 237.4 L158.3 238.0 L158.6 238.6 L158.9 239.2 L159.2 239.9 L159.5 240.5 L159.8 241.1 L160.1 241.7 L160.4 242.3 L160.8 242.9 L161.1 243.5 L161.4 244.1 L161.7 244.8 L162.0 245.4 L162.3 246.0 L162.6 246.6 L162.9 247.2 L163.3 247.8 L163.6 248.4 L163.9 249.0 L164.2 249.6 L164.5 250.3 L164.8 250.9 L165.1 251.5 L165.4 252.1 L165.8 252.7 L166.1 253.3 L166.4 253.9 L166.7 254.5 L167.0 255.1 L167.3 255.8 L167.6 256.4 L167.9 257.0 L168.3 257.6 L168.6 258.2 L168.9 258.8 L169.2 259.4 L169.5 260.0 L169.8 260.7 L170.1 261.3 L170.4 261.9 L170.8 262.5 L171.1 263.1 L171.4 263.7 L171.7 264.3 L172.0 264.9 L172.3 264.3 L172.6 263.7 L172.9 263.1 L173.2 262.5 L173.6 261.9 L173.9 261.3 L174.2 260.7 L174.5 260.0 L174.8 259.4 L175.1 258.8 L175.4 258.2 L175.7 257.6 L176.1 257.0 L176.4 256.4 L176.7 255.8 L177.0 255.1 L177.3 254.5 L177.6 253.9 L177.9 253.3 L178.2 252.7 L178.6 252.1 L178.9 251.5 L179.2 250.9 L179.5 250.3 L179.8 249.6 L180.1 249.0 L180.4 248.4 L180.7 247.8 L181.1 247.2 L181.4 246.6 L181.7 246.0 L182.0 245.4 L182.3 244.8 L182.6 244.1 L182.9 243.5 L183.2 242.9 L183.6 242.3 L183.9 241.7 L184.2 241.1 L184.5 240.5 L184.8 239.9 L185.1 239.2 L185.4 238.6 L185.7 238.0 L186.1 237.4 L186.4 236.8 L186.7 236.2 L187.0 235.6 L187.3 235.0 L187.6 234.4 L187.9 233.7 L188.2 233.1 L188.6 232.5 L188.9 231.9 L189.2 231.3 L189.5 230.7 L189.8 230.1 L190.1 229.5 L190.4 228.8 L190.7 228.2 L191.1 227.6 L191.4 227.0 L191.7 226.4 L192.0 225.8 L192.3 225.2 L192.6 224.6 L192.9 224.0 L193.2 223.3 L193.6 222.7 L193.9 222.1 L194.2 221.5 L194.5 220.9 L194.8 220.3 L195.1 219.7 L195.4 219.1 L195.7 218.5 L196.1 217.8 L196.4 217.2 L196.7 216.6 L197.0 216.0 L197.3 215.4 L197.6 214.8 L197.9 214.2 L198.2 213.6 L198.6 212.9 L198.9 212.3 L199.2 211.7 L199.5 211.1 L199.8 210.5 L200.1 209.9 L200.4 209.3 L200.7 208.7 L201.1 208.1 L201.4 207.4 L201.7 206.8 L202.0 206.2 L202.3 205.6 L202.6 205.0 L202.9 204.4 L203.2 203.8 L203.6 203.2 L203.9 202.6 L204.2 201.9 L204.5 201.3 L204.8 200.7 L205.1 200.1 L205.4 199.5 L205.7 198.9 L206.1 198.3 L206.4 197.7 L206.7 197.0 L207.0 196.4 L207.3 195.8 L207.6 195.2 L207.9 194.6 L208.2 194.0 L208.6 193.4 L208.9 192.8 L209.2 192.2 L209.5 191.5 L209.8 190.9 L210.1 190.3 L210.4 189.7 L210.7 189.1 L211.0 188.5 L211.4 187.9 L211.7 187.3 L212.0 186.6 L212.3 186.0 L212.6 185.4 L212.9 184.8 L213.2 184.2 L213.5 183.6 L213.9 183.0 L214.2 182.4 L214.5 181.8 L214.8 181.1 L215.1 180.5 L215.4 179.9 L215.7 179.3 L216.0 178.7 L216.4 178.1 L216.7 177.5 L217.0 176.9 L217.3 176.3 L217.6 175.6 L217.9 175.0 L218.2 174.4 L218.5 173.8 L218.9 173.2 L219.2 172.6 L219.5 172.0 L219.8 171.4 L220.1 170.7 L220.4 170.1 L220.7 169.5 L221.0 168.9 L221.4 168.3 L221.7 167.7 L222.0 167.1 L222.3 166.5 L222.6 165.9 L222.9 165.2 L223.2 164.6 L223.5 164.0 L223.9 163.4 L224.2 162.8 L224.5 162.2 L224.8 161.6 L225.1 161.0 L225.4 160.3 L225.7 159.7 L226.0 159.1 L226.4 158.5 L226.7 157.9 L227.0 157.3 L227.3 156.7 L227.6 156.1 L227.9 155.5 L228.2 154.8 L228.5 154.2 L228.9 153.6 L229.2 153.0 L229.5 152.4 L229.8 151.8 L230.1 151.2 L230.4 150.6 L230.7 150.0 L231.0 149.3 L231.4 148.7 L231.7 148.1 L232.0 147.5 L232.3 146.9 L232.6 146.3 L232.9 145.7 L233.2 145.1 L233.5 144.4 L233.9 143.8 L234.2 143.2 L234.5 142.6 L234.8 142.0 L235.1 141.4 L235.4 140.8 L235.7 140.2 L236.0 139.6 L236.4 138.9 L236.7 138.3 L237.0 137.7 L237.3 137.1 L237.6 136.5 L237.9 135.9 L238.2 135.3 L238.5 134.7 L238.9 134.1 L239.2 133.4 L239.5 132.8 L239.8 132.2 L240.1 131.6 L240.4 131.0 L240.7 130.4 L241.0 129.8 L241.4 129.2 L241.7 128.5 L242.0 127.9 L242.3 127.3 L242.6 126.7 L242.9 126.1 L243.2 125.5 L243.5 124.9 L243.9 124.3 L244.2 123.7 L244.5 123.0 L244.8 122.4 L245.1 121.8 L245.4 121.2 L245.7 120.6 L246.0 120.0 L246.4 119.4 L246.7 118.8 L247.0 118.1 L247.3 117.5 L247.6 116.9 L247.9 116.3 L248.2 115.7 L248.5 115.1 L248.9 114.5 L249.2 113.9 L249.5 113.3 L249.8 112.6 L250.1 112.0 L250.4 111.4 L250.7 110.8 L251.0 110.2 L251.3 109.6 L251.7 109.0 L252.0 108.4 L252.3 107.8 L252.6 107.1 L252.9 106.5 L253.2 105.9 L253.5 105.3 L253.8 104.7 L254.2 104.1 L254.5 103.5 L254.8 102.9 L255.1 102.2 L255.4 101.6 L255.7 101.0 L256.0 100.4 L256.3 99.8 L256.7 99.2 L257.0 98.6 L257.3 98.0 L257.6 97.4 L257.9 96.7 L258.2 96.1 L258.5 95.5 L258.8 94.9 L259.2 94.3 L259.5 93.7 L259.8 93.1 L260.1 92.5 L260.4 91.9 L260.7 91.2 L261.0 90.6 L261.3 90.0 L261.7 89.4 L262.0 88.8 L262.3 88.2 L262.6 87.6 L262.9 87.0 L263.2 86.3 L263.5 85.7 L263.8 85.1 L264.2 84.5 L264.5 83.9 L264.8 83.3 L265.1 82.7 L265.4 82.1 L265.7 81.5 L266.0 80.8 L266.3 80.2 L266.7 79.6 L267.0 79.0 L267.3 78.4 L267.6 77.8 L267.9 77.2 L268.2 76.6 L268.5 75.9 L268.8 75.3 L269.2 74.7 L269.5 74.1 L269.8 73.5 L270.1 72.9 L270.4 72.3 L270.7 71.7 L271.0 71.1 L271.3 70.4 L271.7 69.8 L272.0 69.2 L272.3 68.6 L272.6 68.0 L272.9 67.4 L273.2 66.8 L273.5 66.2 L273.8 65.6 L274.2 64.9 L274.5 64.3 L274.8 63.7 L275.1 63.1 L275.4 62.5 L275.7 61.9 L276.0 61.3 L276.3 60.7 L276.7 60.0 L277.0 59.4 L277.3 58.8 L277.6 58.2 L277.9 57.6 L278.2 57.0 L278.5 56.4 L278.8 55.8 L279.2 55.2 L279.5 54.5 L279.8 53.9 L280.1 53.3 L280.4 52.7 L280.7 52.1 L281.0 51.5 L281.3 50.9 L281.7 50.3 L282.0 49.7 L282.3 49.0 L282.6 48.4 L282.9 47.8 L283.2 47.2 L283.5 46.6 L283.8 46.0 L284.2 45.4 L284.5 44.8 L284.8 44.1 L285.1 43.5 L285.4 42.9 L285.7 42.3 L286.0 41.7 L286.3 41.1 L286.7 40.5 L287.0 39.9 L287.3 39.3 L287.6 38.6 L287.9 38.0 L288.2 37.4 L288.5 36.8 L288.8 36.2 L289.1 35.6 L289.5 35.0 L289.8 34.4 L290.1 33.7 L290.4 33.1 L290.7 32.5 L291.0 31.9 L291.3 31.3 L291.6 30.7 L292.0 30.1 L292.3 29.5 L292.6 28.9 L292.9 28.2 L293.2 27.6 L293.5 27.0 L293.8 26.4 L294.1 25.8 L294.5 25.2 L294.8 24.6 L295.1 24.0 L295.4 23.4 L295.7 22.7 L296.0 22.1 L296.3 21.5 L296.6 20.9 L297.0 20.3\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"2.0\" stroke-linejoin=\"round\" stroke-linecap=\"round\" stroke-dasharray=\"7 4\" clip-path=\"url(#c6faf06a8)\"/><circle cx=\"58.4\" cy=\"42.5\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"143.6\" cy=\"209.3\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"200.4\" cy=\"209.3\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><circle cx=\"285.6\" cy=\"42.5\" r=\"3.8\" fill=\"#0b0d12\" stroke=\"#0b0d12\" stroke-width=\"1.5\"/><text x=\"277.6\" y=\"46.5\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">(4, 12)</text><text x=\"208.4\" y=\"205.3\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">(1, 3)</text><text x=\"270.9\" y=\"101.0\" text-anchor=\"start\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#1f5fd6\"><tspan font-style=\"italic\">y</tspan> = 3|<tspan font-style=\"italic\">x</tspan>|</text><text x=\"88.2\" y=\"217.8\" text-anchor=\"end\" font-size=\"15\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\"><tspan font-style=\"italic\">y</tspan> = |<tspan font-style=\"italic\">x</tspan>² − 4|</text></svg>"
+     },
+     "\\(y = \\left|x^2 - 4\\right|\\): zeros at \\(\\pm 2\\), arch up to 4 at \\(x = 0\\), steep outside. \\(y = 3|x|\\): a V through the origin with gradients \\(\\pm 3\\)."
+    ],
+    "answer": "See diagram"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(0 \\le x \\le 2\\): \\(4 - x^2 = 3x\\), so \\(x^2 + 3x - 4 = (x + 4)(x - 1) = 0\\): \\(x = 1\\).",
+     "\\(x \\ge 2\\): \\(x^2 - 4 = 3x\\), so \\(x^2 - 3x - 4 = (x - 4)(x + 1) = 0\\): \\(x = 4\\).",
+     "Both sides are even, so the solutions of the second equation are \\(\\pm 1\\) and \\(\\pm 4\\)."
+    ],
+    "answer": "\\(x = 1, 4\\); then \\(x = \\pm 1, \\pm 4\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "For \\(x \\ge 0\\), the V is above the curve between \\(x = 1\\) and \\(x = 4\\) (check \\(x = 2\\): \\(0 < 6\\)). Reflect for \\(x < 0\\)."
+    ],
+    "answer": "\\(-4 < x < -1\\) or \\(1 < x < 4\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "For \\(x \\ge 0\\): if \\(x \\le 2\\), \\(4 - x^2 \\ge 3x + 4\\) gives \\(x(x + 3) \\le 0\\), so \\(x = 0\\).",
+     "If \\(x > 2\\), \\(x^2 - 4 \\ge 3x + 4\\) gives \\(x^2 - 3x - 8 \\ge 0\\), so \\(x \\ge \\dfrac{3 + \\sqrt{41}}{2}\\) (\\(= 4.70\\ldots\\), which is \\(> 2\\)).",
+     "Reflect for \\(x < 0\\)."
+    ],
+    "answer": "\\(x = 0\\) or \\(|x| \\ge \\dfrac{3 + \\sqrt{41}}{2}\\)"
+   }
+  ]
+ }
+]

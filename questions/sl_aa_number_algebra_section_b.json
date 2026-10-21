@@ -1,0 +1,636 @@
+[
+ {
+  "id": "aa-na-b-001",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 16,
+  "stem": [
+   "Stage 1 of a pattern is an equilateral triangle with sides of 9 cm. Each later stage is made from the one before: every side is divided into three equal parts, and the middle part is replaced by the two other sides of a small equilateral triangle that points outwards. The process continues without end.",
+   {
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 230\" width=\"600\" height=\"230\" role=\"img\" aria-label=\"Three shapes side by side, labelled Stage 1, Stage 2 and Stage 3. Stage 1 is an equilateral triangle with sides of 9 cm. Stage 2 is a six-pointed star with 12 sides of 3 cm. Stage 3 has 48 sides of 1 cm, with a smaller triangular point on every side of the star.\"><path d=\"M52.0 130.0 L119.5 13.1 L187.0 130.0 Z\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"119.5\" y=\"194.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Stage 1</text><path d=\"M250.0 130.0 L272.5 91.1 L250.0 52.1 L295.0 52.1 L317.5 13.1 L340.0 52.1 L385.0 52.1 L362.5 91.1 L385.0 130.0 L340.0 130.0 L317.5 169.0 L295.0 130.0 Z\" fill=\"none\" stroke=\"#1f5fd6\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"317.5\" y=\"194.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Stage 2</text><path d=\"M448.0 130.0 L455.5 117.0 L448.0 104.0 L463.0 104.0 L470.5 91.1 L463.0 78.1 L448.0 78.1 L455.5 65.1 L448.0 52.1 L463.0 52.1 L470.5 39.1 L478.0 52.1 L493.0 52.1 L500.5 39.1 L493.0 26.1 L508.0 26.1 L515.5 13.1 L523.0 26.1 L538.0 26.1 L530.5 39.1 L538.0 52.1 L553.0 52.1 L560.5 39.1 L568.0 52.1 L583.0 52.1 L575.5 65.1 L583.0 78.1 L568.0 78.1 L560.5 91.1 L568.0 104.0 L583.0 104.0 L575.5 117.0 L583.0 130.0 L568.0 130.0 L560.5 143.0 L553.0 130.0 L538.0 130.0 L530.5 143.0 L538.0 156.0 L523.0 156.0 L515.5 169.0 L508.0 156.0 L493.0 156.0 L500.5 143.0 L493.0 130.0 L478.0 130.0 L470.5 143.0 L463.0 130.0 Z\" fill=\"none\" stroke=\"#0b0d12\" stroke-width=\"1.6\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><text x=\"515.5\" y=\"194.0\" text-anchor=\"middle\" font-size=\"14\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">Stage 3</text><text x=\"119.5\" y=\"153.0\" text-anchor=\"middle\" font-size=\"13\" font-family=\"'Times New Roman', Times, serif\" fill=\"#0b0d12\">9 cm</text></svg>"
+   },
+   "Stage 2 has 12 sides, each of length 3 cm. The area of a stage means the area enclosed by its outline."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Show that stage \\(n\\) has \\(3 \\times 4^{\\,n-1}\\) sides, each of length \\(9\\left(\\frac{1}{3}\\right)^{n-1}\\) cm.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Hence show that the perimeter of stage \\(n\\) is \\(27\\left(\\frac{4}{3}\\right)^{n-1}\\) cm, and explain why the perimeter does not approach a limit as \\(n\\) increases.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Find the smallest value of \\(n\\) for which the perimeter of stage \\(n\\) is greater than 100 cm.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "The area of an equilateral triangle with side \\(s\\) is \\(\\dfrac{\\sqrt{3}}{4}s^2\\). Show that the total area of the new small triangles added in going from stage \\(n\\) to stage \\(n + 1\\) is \\(\\dfrac{27\\sqrt{3}}{4}\\left(\\dfrac{4}{9}\\right)^{n-1}\\) cm\\(^2\\).",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Find the limit of the area of stage \\(n\\) as \\(n\\) increases, giving your answer in the form \\(k\\sqrt{3}\\), where \\(k \\in \\mathbb{Q}\\).",
+    "marks": 3
+   }
+  ],
+  "idea": "Track three geometric sequences: the number of sides (×4 each stage), the length of a side (×\\(\\frac{1}{3}\\)) and the area added (one new triangle on every side, each with \\(\\frac{1}{9}\\) of the area of the last ones, so ×\\(\\frac{4}{9}\\)). A geometric series has a sum to infinity only when \\(|r| < 1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Each side is replaced by 4 sides (two thirds of the old side stay, and two new sides are added), so the number of sides is multiplied by 4 at each stage: \\(3, 12, 48, \\ldots = 3 \\times 4^{\\,n-1}\\).",
+     "Each new side is one third of an old side, so side lengths are \\(9, 3, 1, \\ldots = 9\\left(\\frac{1}{3}\\right)^{n-1}\\)."
+    ],
+    "answer": "\\(3 \\times 4^{\\,n-1}\\) sides of length \\(9\\left(\\frac{1}{3}\\right)^{n-1}\\) cm (shown)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\[P_n = 3 \\times 4^{\\,n-1} \\times 9\\left(\\frac{1}{3}\\right)^{n-1} = 27\\left(\\frac{4}{3}\\right)^{n-1}\\]",
+     "This is a geometric sequence with common ratio \\(\\frac{4}{3} > 1\\), so the perimeter grows without bound."
+    ],
+    "answer": "\\(P_n = 27\\left(\\frac{4}{3}\\right)^{n-1}\\); no limit, since the ratio \\(\\frac{4}{3}\\) is greater than 1"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "We need \\(27\\left(\\frac{4}{3}\\right)^{n-1} > 100\\), that is \\(\\left(\\frac{4}{3}\\right)^{n-1} > \\frac{100}{27}\\), or \\(4^{\\,n-1} \\times 27 > 100 \\times 3^{\\,n-1}\\).",
+     "\\(n = 5\\): \\(P_5 = 27 \\times \\dfrac{256}{81} = \\dfrac{256}{3} = 85.3\\ldots\\), which is not enough.",
+     "\\(n = 6\\): \\(P_6 = 27 \\times \\dfrac{1024}{243} = \\dfrac{1024}{9} = 113.7\\ldots\\), which is enough."
+    ],
+    "answer": "\\(n = 6\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Going from stage \\(n\\) to stage \\(n + 1\\), one new triangle is added on each of the \\(3 \\times 4^{\\,n-1}\\) sides. Its side is one third of a side of stage \\(n\\): \\(\\dfrac{9}{3}\\left(\\frac{1}{3}\\right)^{n-1} = 3\\left(\\frac{1}{3}\\right)^{n-1}\\).",
+     "Area of one new triangle: \\(\\dfrac{\\sqrt{3}}{4} \\times 9\\left(\\frac{1}{9}\\right)^{n-1}\\).",
+     "\\[\\begin{aligned} \\text{Total} &= 3 \\times 4^{\\,n-1} \\times \\frac{9\\sqrt{3}}{4}\\left(\\frac{1}{9}\\right)^{n-1} \\\\[4pt] &= \\frac{27\\sqrt{3}}{4}\\left(\\frac{4}{9}\\right)^{n-1} \\end{aligned}\\]",
+     "Check with \\(n = 1\\): three triangles of side 3 have total area \\(3 \\times \\dfrac{9\\sqrt{3}}{4} = \\dfrac{27\\sqrt{3}}{4}\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Stage 1 has area \\(\\dfrac{\\sqrt{3}}{4} \\times 81 = \\dfrac{81\\sqrt{3}}{4}\\).",
+     "The added areas form a geometric series with first term \\(\\dfrac{27\\sqrt{3}}{4}\\) and ratio \\(\\dfrac{4}{9}\\). Since \\(\\left|\\frac{4}{9}\\right| < 1\\), it has a sum to infinity:",
+     "\\[\\frac{\\frac{27\\sqrt{3}}{4}}{1 - \\frac{4}{9}} = \\frac{27\\sqrt{3}}{4} \\times \\frac{9}{5} = \\frac{243\\sqrt{3}}{20}\\]",
+     "\\[\\begin{aligned} \\text{Limit of area} &= \\frac{81\\sqrt{3}}{4} + \\frac{243\\sqrt{3}}{20} = \\frac{405\\sqrt{3} + 243\\sqrt{3}}{20} \\\\[4pt] &= \\frac{648\\sqrt{3}}{20} = \\frac{162\\sqrt{3}}{5} \\end{aligned}\\]",
+     "So the area stays finite (\\(\\frac{8}{5}\\) of the original triangle) even though the perimeter grows without bound."
+    ],
+    "answer": "\\(\\dfrac{162\\sqrt{3}}{5}\\) cm\\(^2\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-b-002",
+  "strand": "Number and Algebra",
+  "subtopic": "Financial applications",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 15,
+  "stem": [
+   "Priya buys a motorbike for $12 000. Its value decreases by 15% each year.",
+   "On the same day her brother Arjun invests $5000 in an account paying a nominal annual interest rate of 6%, compounded monthly."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of the motorbike after 3 years.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the percentage of its original value that the motorbike has lost after 3 years.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the number of complete years after which the value of the motorbike first falls below half of its original value.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the amount in Arjun’s account after 3 years.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the number of complete years after which the amount in Arjun’s account first exceeds the value of the motorbike.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "Arjun wants his $5000 to grow to $8000 in 5 years. Find the nominal annual interest rate, compounded monthly, that he would need.",
+    "marks": 3
+   }
+  ],
+  "idea": "Depreciation of 15% multiplies the value by 0.85 each year. Monthly compounding at a nominal 6% multiplies the amount by \\(1 + \\frac{0.06}{12}\\) each month, so \\(12n\\) times in \\(n\\) years. To compare the two, list the values year by year.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(V(n) = 12\\,000 \\times 0.85^n\\).",
+     "\\(V(3) = 12\\,000 \\times 0.85^3 = 7369.50\\)."
+    ],
+    "answer": "$7369.50"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{V(3)}{12\\,000} = 0.85^3 = 0.614125\\), so it keeps 61.4125% of its value.",
+     "Lost: \\(100 - 61.4125 = 38.5875\\)."
+    ],
+    "answer": "\\(38.6\\%\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Half of the original value is $6000. Solve \\(12\\,000 \\times 0.85^n < 6000\\), that is \\(0.85^n < 0.5\\).",
+     "\\(n > \\dfrac{\\ln 0.5}{\\ln 0.85} = 4.265\\ldots\\) (the inequality turns round because \\(\\ln 0.85 < 0\\)).",
+     "Check: \\(V(4) = 6264.07\\) (above 6000) and \\(V(5) = 5324.46\\) (below 6000)."
+    ],
+    "answer": "After 5 years"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(A(n) = 5000\\left(1 + \\dfrac{0.06}{12}\\right)^{12n} = 5000 \\times 1.005^{12n}\\).",
+     "\\(A(3) = 5000 \\times 1.005^{36} = 5983.40\\)."
+    ],
+    "answer": "$5983.40"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Compare the two at the end of each year:",
+     "Year 3: \\(A = 5983.40\\), \\(V = 7369.50\\). The motorbike is worth more.",
+     "Year 4: \\(A = 5000 \\times 1.005^{48} = 6352.45\\), \\(V = 12\\,000 \\times 0.85^4 = 6264.07\\). The account is now larger.",
+     "The account grows each year and the motorbike loses value each year, so once the account is ahead it stays ahead."
+    ],
+    "answer": "After 4 years"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Let the nominal rate be \\(r\\%\\). Then \\(5000\\left(1 + \\dfrac{r}{1200}\\right)^{60} = 8000\\), so \\(\\left(1 + \\dfrac{r}{1200}\\right)^{60} = 1.6\\).",
+     "\\(1 + \\dfrac{r}{1200} = 1.6^{1/60} = 1.0078641\\ldots\\)",
+     "\\(r = 1200 \\times 0.0078641\\ldots = 9.4369\\ldots\\) (a finance solver gives the same value)."
+    ],
+    "answer": "\\(9.44\\%\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-b-003",
+  "strand": "Number and Algebra",
+  "subtopic": "Binomial theorem",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "Consider the expansion of \\((1 + 2x)^6\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the first four terms of the expansion in ascending powers of \\(x\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the coefficient of \\(x^2\\) in the expansion of \\((1 + 2x)^6(3 - x)\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Use your answer to part (a), with a suitable value of \\(x\\), to find an estimate of \\(1.02^6\\). Give your answer to five decimal places.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "In the expansion of \\((1 + 2x)^6(1 + ax)^2\\), where \\(a\\) is a constant, the coefficient of \\(x\\) is zero. Find the value of \\(a\\), and hence find the coefficient of \\(x^2\\).",
+    "marks": 5
+   }
+  ],
+  "idea": "The general term of \\((1 + 2x)^6\\) is \\(\\binom{6}{r}(2x)^r\\). In a product of two brackets, a term in \\(x^2\\) comes from every pair of terms whose powers of \\(x\\) add to 2: list those pairs and add their products.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(\\binom{6}{0} = 1\\), \\(\\binom{6}{1}(2x) = 12x\\), \\(\\binom{6}{2}(2x)^2 = 15 \\times 4x^2 = 60x^2\\), \\(\\binom{6}{3}(2x)^3 = 20 \\times 8x^3 = 160x^3\\)."
+    ],
+    "answer": "\\(1 + 12x + 60x^2 + 160x^3\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Terms in \\(x^2\\) come from \\(60x^2 \\times 3\\) and \\(12x \\times (-x)\\).",
+     "\\(180 - 12 = 168\\)."
+    ],
+    "answer": "\\(168\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(1 + 2x = 1.02\\) when \\(x = 0.01\\).",
+     "\\(1 + 12(0.01) + 60(0.01)^2 + 160(0.01)^3 = 1 + 0.12 + 0.006 + 0.00016 = 1.12616\\).",
+     "The terms left out are very small (the next one is \\(240 \\times 0.01^4 = 0.0000024\\)), so five decimal places are reliable."
+    ],
+    "answer": "\\(1.12616\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\((1 + ax)^2 = 1 + 2ax + a^2x^2\\).",
+     "Coefficient of \\(x\\): \\(12 \\times 1 + 1 \\times 2a = 12 + 2a\\). Setting \\(12 + 2a = 0\\) gives \\(a = -6\\).",
+     "Coefficient of \\(x^2\\): \\(60 \\times 1 + 12 \\times 2a + 1 \\times a^2 = 60 + 24a + a^2\\).",
+     "With \\(a = -6\\): \\(60 - 144 + 36 = -48\\)."
+    ],
+    "answer": "\\(a = -6\\); coefficient of \\(x^2\\) is \\(-48\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-b-004",
+  "strand": "Number and Algebra",
+  "subtopic": "Arithmetic sequences and series",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": true,
+  "marks": 16,
+  "stem": [
+   "Two cyclists start a training plan on the same day.",
+   "Ana cycles 10 km on day 1 and increases her distance by 1.25 km each day.",
+   "Ben cycles 10 km on day 1 and increases his distance by 7% each day."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the distance Ana cycles on day 10.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the total distance Ana cycles in the first 10 days.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the distance Ben cycles on day 10.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the total distance Ben cycles in the first 10 days.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the first day on which Ben cycles further than Ana.",
+    "marks": 4
+   },
+   {
+    "label": "f",
+    "text": "Find the number of days after which Ben’s total distance first exceeds Ana’s total distance.",
+    "marks": 4
+   }
+  ],
+  "idea": "Ana’s daily distances form an arithmetic sequence and Ben’s a geometric sequence. A geometric sequence with \\(r > 1\\) eventually overtakes any arithmetic one, but the totals catch up later than the daily distances, because Ben has to make up the distance he lost on the earlier days.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(a_n = 10 + 1.25(n - 1)\\), so \\(a_{10} = 10 + 1.25 \\times 9 = 21.25\\)."
+    ],
+    "answer": "\\(21.25\\) km"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(S_{10} = \\dfrac{10}{2}\\left(2 \\times 10 + 9 \\times 1.25\\right) = 5 \\times 31.25 = 156.25\\)."
+    ],
+    "answer": "\\(156.25\\) km"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(b_n = 10 \\times 1.07^{\\,n-1}\\), so \\(b_{10} = 10 \\times 1.07^9 = 18.384\\ldots\\)"
+    ],
+    "answer": "\\(18.4\\) km"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(T_{10} = \\dfrac{10\\left(1.07^{10} - 1\\right)}{0.07} = 138.16\\ldots\\)"
+    ],
+    "answer": "\\(138\\) km"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "We need the smallest \\(n\\) with \\(10 \\times 1.07^{\\,n-1} > 10 + 1.25(n - 1)\\). Use a table or the graphs of both sides on a GDC.",
+     "Day 17: Ben \\(10 \\times 1.07^{16} = 29.52\\ldots\\), Ana \\(30\\). Ana is still further.",
+     "Day 18: Ben \\(10 \\times 1.07^{17} = 31.58\\ldots\\), Ana \\(31.25\\). Ben is further."
+    ],
+    "answer": "Day 18"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "We need the smallest \\(n\\) with \\(\\dfrac{10\\left(1.07^n - 1\\right)}{0.07} > \\dfrac{n}{2}\\left(20 + 1.25(n - 1)\\right)\\).",
+     "After 24 days: Ben \\(581.7\\ldots\\) km, Ana \\(585\\) km.",
+     "After 25 days: Ben \\(632.4\\ldots\\) km, Ana \\(625\\) km.",
+     "So Ben’s total first exceeds Ana’s after 25 days, seven days after he first cycles further on a single day. Ben needs those seven days to make up the distance he lost while Ana was cycling further each day."
+    ],
+    "answer": "25 days"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-b-005",
+  "strand": "Number and Algebra",
+  "subtopic": "Exponents and logarithms",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "The loudness of a sound, \\(L\\) decibels (dB), is given by \\(L = 10\\log_{10}\\left(\\dfrac{I}{I_0}\\right)\\), where \\(I\\) is the intensity of the sound and \\(I_0\\) is a fixed reference intensity."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find \\(L\\) for a sound of intensity \\(10^5 I_0\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Show that if the intensity of a sound is multiplied by \\(k\\), its loudness increases by \\(10\\log_{10} k\\) dB.",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "A lawnmower is 20 dB louder than a conversation. Find how many times greater the intensity of the lawnmower is.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the intensity of a sound of loudness 35 dB, giving your answer in the form \\(p\\sqrt{10}\\,I_0\\), where \\(p \\in \\mathbb{Z}\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "One machine produces a sound of loudness 60 dB. Two identical machines together produce twice the intensity. Given that \\(\\log_{10} 2 \\approx 0.301\\), find the loudness of the two machines together.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "A factory has \\(n\\) identical machines, each producing 60 dB, so that their intensities add. Find the least value of \\(n\\) for which the total loudness is at least 75 dB.",
+    "marks": 3
+   }
+  ],
+  "idea": "Use the laws of logarithms: \\(\\log_{10}(kx) = \\log_{10} k + \\log_{10} x\\). Multiplying the intensity adds a fixed amount to the loudness. To go from loudness back to intensity, undo the logarithm with a power of 10.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(L = 10\\log_{10}\\left(10^5\\right) = 10 \\times 5 = 50\\)."
+    ],
+    "answer": "\\(50\\) dB"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "The new loudness is \\(10\\log_{10}\\left(\\dfrac{kI}{I_0}\\right) = 10\\left[\\log_{10} k + \\log_{10}\\left(\\dfrac{I}{I_0}\\right)\\right]\\).",
+     "\\(= 10\\log_{10} k + 10\\log_{10}\\left(\\dfrac{I}{I_0}\\right) = 10\\log_{10} k + L\\).",
+     "So the loudness increases by \\(10\\log_{10} k\\)."
+    ],
+    "answer": "Shown"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "By part (b), \\(10\\log_{10} k = 20\\), so \\(\\log_{10} k = 2\\) and \\(k = 10^2\\)."
+    ],
+    "answer": "100 times"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(10\\log_{10}\\left(\\dfrac{I}{I_0}\\right) = 35\\), so \\(\\log_{10}\\left(\\dfrac{I}{I_0}\\right) = 3.5\\).",
+     "\\(\\dfrac{I}{I_0} = 10^{3.5} = 10^3 \\times 10^{0.5} = 1000\\sqrt{10}\\)."
+    ],
+    "answer": "\\(I = 1000\\sqrt{10}\\,I_0\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "By part (b) with \\(k = 2\\): \\(L = 60 + 10\\log_{10} 2 \\approx 60 + 3.01\\)."
+    ],
+    "answer": "\\(63.0\\) dB"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "By part (b) with \\(k = n\\): we need \\(60 + 10\\log_{10} n \\ge 75\\), so \\(\\log_{10} n \\ge 1.5\\) and \\(n \\ge 10^{1.5} = 10\\sqrt{10}\\).",
+     "Square both sides (both are positive): \\(n^2 \\ge 1000\\).",
+     "\\(31^2 = 961 < 1000\\) and \\(32^2 = 1024 \\ge 1000\\)."
+    ],
+    "answer": "\\(n = 32\\)"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-b-006",
+  "strand": "Number and Algebra",
+  "subtopic": "Proof",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 14,
+  "stem": [
+   "This question is about the product of four consecutive integers, \\(n(n + 1)(n + 2)(n + 3)\\), where \\(n \\in \\mathbb{Z}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Expand and simplify \\(\\left(n^2 + 3n + 1\\right)^2\\).",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Prove that \\(n(n + 1)(n + 2)(n + 3) + 1 = \\left(n^2 + 3n + 1\\right)^2\\).",
+    "marks": 3
+   },
+   {
+    "label": "c",
+    "text": "Hence, without a calculator, find the value of \\(\\sqrt{99 \\times 100 \\times 101 \\times 102 + 1}\\).",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Prove that \\(n^2 + 3n + 1\\) is odd for every integer \\(n\\).",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Lena works out \\(\\sqrt{n(n + 1)(n + 2)(n + 3) + 1}\\) for \\(n = 1, 2, 3, 4, 5\\) and finds 5, 11, 19, 29 and 41. She claims that for every positive integer \\(n\\), this square root is a prime number. Find the smallest value of \\(n\\) that shows Lena’s claim is false.",
+    "marks": 3
+   }
+  ],
+  "idea": "Pair the outer factors and the inner factors: \\(n(n + 3) = n^2 + 3n\\) and \\((n + 1)(n + 2) = n^2 + 3n + 2\\). With \\(m = n^2 + 3n\\), the product plus 1 is \\(m(m + 2) + 1 = (m + 1)^2\\). A claim about every \\(n\\) is disproved by one counterexample.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\[\\begin{aligned} \\left(n^2 + 3n + 1\\right)^2 &= n^4 + 9n^2 + 1 + 2\\left(3n^3 + n^2 + 3n\\right) \\\\[4pt] &= n^4 + 6n^3 + 11n^2 + 6n + 1 \\end{aligned}\\]"
+    ],
+    "answer": "\\(n^4 + 6n^3 + 11n^2 + 6n + 1\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(n(n + 3) = n^2 + 3n\\) and \\((n + 1)(n + 2) = n^2 + 3n + 2\\). Let \\(P = n(n + 1)(n + 2)(n + 3)\\).",
+     "\\[\\begin{aligned} P &= \\left(n^2 + 3n\\right)\\left(n^2 + 3n + 2\\right) \\\\[4pt] &= n^4 + 3n^3 + 2n^2 + 3n^3 + 9n^2 + 6n \\\\[4pt] &= n^4 + 6n^3 + 11n^2 + 6n \\end{aligned}\\]",
+     "Adding 1 gives \\(n^4 + 6n^3 + 11n^2 + 6n + 1\\), which is \\(\\left(n^2 + 3n + 1\\right)^2\\) by part (a)."
+    ],
+    "answer": "Proved"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Take \\(n = 99\\): the expression is \\(\\sqrt{\\left(99^2 + 3 \\times 99 + 1\\right)^2} = 99^2 + 297 + 1\\), since \\(99^2 + 297 + 1 > 0\\).",
+     "\\(99^2 = 9801\\), so the value is \\(9801 + 298 = 10\\,099\\)."
+    ],
+    "answer": "\\(10\\,099\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(n^2 + 3n + 1 = n(n + 3) + 1\\).",
+     "\\(n\\) and \\(n + 3\\) differ by 3, an odd number, so one of them is even and one is odd. Hence \\(n(n + 3)\\) is even.",
+     "An even number plus 1 is odd, so \\(n^2 + 3n + 1\\) is odd for every integer \\(n\\)."
+    ],
+    "answer": "Proved"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "By part (b), the square root is \\(n^2 + 3n + 1\\) (which is positive for every positive integer \\(n\\)). One value of \\(n\\) that gives a number that is not prime is enough to disprove the claim.",
+     "Lena has checked \\(n = 1\\) to 5. Next, \\(n = 6\\): \\(36 + 18 + 1 = 55 = 5 \\times 11\\), which is not prime.",
+     "Check: \\(6 \\times 7 \\times 8 \\times 9 + 1 = 3025 = 55^2\\)."
+    ],
+    "answer": "\\(n = 6\\), which gives \\(55 = 5 \\times 11\\), not prime"
+   }
+  ]
+ },
+ {
+  "id": "aa-na-b-007",
+  "strand": "Number and Algebra",
+  "subtopic": "Geometric sequences and series",
+  "level": {
+   "SL AA": "Hard",
+   "HL AA": "Medium"
+  },
+  "calculator": false,
+  "marks": 15,
+  "stem": [
+   "A geometric series has first term 6 and common ratio \\(\\dfrac{x - 2}{3}\\), where \\(x \\in \\mathbb{R}\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the set of values of \\(x\\) for which the series has a sum to infinity.",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the sum to infinity when \\(x = 3.5\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the value of \\(x\\) for which the sum to infinity is 9.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "When \\(x = 3.5\\), find the least number of terms for which the sum of the series is greater than 11.99.",
+    "marks": 4
+   },
+   {
+    "label": "e",
+    "text": "Find the set of all possible values of the sum to infinity.",
+    "marks": 3
+   }
+  ],
+  "idea": "A geometric series has a sum to infinity exactly when \\(-1 < r < 1\\), and then \\(S_\\infty = \\dfrac{u_1}{1 - r}\\). To find the possible sums, see how \\(\\dfrac{6}{1 - r}\\) changes as \\(r\\) moves across the interval \\(-1 < r < 1\\).",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "We need \\(-1 < \\dfrac{x - 2}{3} < 1\\).",
+     "Multiply by 3: \\(-3 < x - 2 < 3\\). Add 2: \\(-1 < x < 5\\)."
+    ],
+    "answer": "\\(-1 < x < 5\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(r = \\dfrac{3.5 - 2}{3} = 0.5\\), so \\(S_\\infty = \\dfrac{6}{1 - 0.5} = 12\\)."
+    ],
+    "answer": "\\(12\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(\\dfrac{6}{1 - r} = 9\\), so \\(1 - r = \\dfrac{2}{3}\\) and \\(r = \\dfrac{1}{3}\\).",
+     "\\(\\dfrac{x - 2}{3} = \\dfrac{1}{3}\\) gives \\(x = 3\\). This lies in \\(-1 < x < 5\\), so the sum to infinity exists."
+    ],
+    "answer": "\\(x = 3\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(S_n = \\dfrac{6\\left(1 - 0.5^n\\right)}{1 - 0.5} = 12\\left(1 - 0.5^n\\right)\\).",
+     "\\(12\\left(1 - 0.5^n\\right) > 11.99\\) gives \\(12 \\times 0.5^n < 0.01\\), so \\(0.5^n < \\dfrac{1}{1200}\\), that is \\(2^n > 1200\\).",
+     "\\(2^{10} = 1024\\) is too small and \\(2^{11} = 2048\\) is large enough."
+    ],
+    "answer": "11 terms"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "As \\(x\\) runs over \\(-1 < x < 5\\), \\(r\\) takes every value in \\(-1 < r < 1\\), so \\(1 - r\\) takes every value in \\(0 < 1 - r < 2\\).",
+     "\\(S_\\infty = \\dfrac{6}{1 - r}\\). As \\(1 - r\\) goes from just above 0 up towards 2, \\(\\dfrac{6}{1 - r}\\) decreases from arbitrarily large values towards 3, without reaching 3.",
+     "So \\(S_\\infty\\) can be any number greater than 3."
+    ],
+    "answer": "\\(S_\\infty > 3\\)"
+   }
+  ]
+ }
+]

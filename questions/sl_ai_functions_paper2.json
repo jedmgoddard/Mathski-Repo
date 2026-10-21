@@ -1,0 +1,605 @@
+[
+ {
+  "id": "ai-fn-p2-001",
+  "strand": "Functions",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "An energy company offers three monthly electricity plans. For \\(x\\) kilowatt-hours (kWh) used in a month, the costs in dollars are:",
+   "Plan A: a fixed charge of $18 plus $0.28 per kWh. Plan B: a fixed charge of $45 plus $0.22 per kWh. Plan C: no fixed charge; $0.40 per kWh for the first 200 kWh, and $0.20 per kWh for every kWh after that."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the cost of using 300 kWh in a month on plan A and on plan B.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the number of kWh for which plans A and B cost the same.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the cost on plan C of using (i) 150 kWh; (ii) 500 kWh.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Show that, for \\(x > 200\\), the cost on plan C is \\(C(x) = 0.2x + 40\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Find the range of values of \\(x\\) for which plan A is cheaper than both of the other plans.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "A household on plan C paid $150 for one month. Find the number of kWh it used.",
+    "marks": 2
+   }
+  ],
+  "idea": "Plans A and B are linear models: fixed charge plus a rate times \\(x\\). Plan C is piecewise: one rule up to 200 kWh and another above. Compare plans by finding where their costs are equal.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "A: \\(18 + 0.28 \\times 300 = 102\\). B: \\(45 + 0.22 \\times 300 = 111\\)."
+    ],
+    "answer": "A $102; B $111"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(18 + 0.28x = 45 + 0.22x\\), so \\(0.06x = 27\\)."
+    ],
+    "answer": "450 kWh"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "(i) \\(0.40 \\times 150 = 60\\)",
+     "(ii) \\(0.40 \\times 200 + 0.20 \\times 300 = 80 + 60 = 140\\)"
+    ],
+    "answer": "(i) $60 (ii) $140"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "The first 200 kWh cost $80, and the other \\(x - 200\\) cost $0.20 each: \\(80 + 0.2(x - 200) = 0.2x + 40\\)."
+    ],
+    "answer": "\\(C(x) = 0.2x + 40\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "For \\(x \\le 200\\): C costs \\(0.4x\\), and \\(0.4x > 18 + 0.28x\\) when \\(x > 150\\). So A is cheaper than C for \\(150 < x \\le 200\\).",
+     "For \\(x > 200\\): \\(0.2x + 40 > 18 + 0.28x\\) when \\(x < 275\\). So A is cheaper than C for \\(200 < x < 275\\).",
+     "A is cheaper than B for \\(x < 450\\), which covers all of these values."
+    ],
+    "answer": "\\(150 < x < 275\\)"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "$150 is more than the $80 for the first 200 kWh, so use \\(0.2x + 40 = 150\\)."
+    ],
+    "answer": "550 kWh"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-p2-002",
+  "strand": "Functions",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Medium",
+   "HL AI": "Easy"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "The temperature inside a cold-storage room, \\(T\\) °C, \\(t\\) minutes after the cooling unit switches on is modelled by \\[T(t) = 1.5\\sin(20t) + 4, \\quad t \\ge 0,\\] where \\(20t\\) is in degrees."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the highest and the lowest temperature in the room.",
+    "marks": 2
+   },
+   {
+    "label": "b",
+    "text": "Find the period of the model.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Find the temperature 10 minutes after the unit switches on.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Find the two times in the first 18 minutes at which the temperature is 5 °C.",
+    "marks": 3
+   },
+   {
+    "label": "e",
+    "text": "Find the length of time in each cycle for which the temperature is above 5 °C, and write it as a percentage of the cycle.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "An engineer changes the model to \\(T(t) = a\\sin(bt) + 4\\), so that the highest temperature is 4.8 °C and one cycle takes 12 minutes, where \\(a > 0\\) and \\(b > 0\\). Find the values of \\(a\\) and \\(b\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "For \\(a\\sin(bx) + d\\): the amplitude is \\(a\\), the principal axis is \\(y = d\\), and the period is \\(\\dfrac{360}{b}\\) in degrees. Equations such as \\(T(t) = 5\\) are solved with the calculator, or from the graph.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(4 + 1.5\\) and \\(4 - 1.5\\)."
+    ],
+    "answer": "Highest 5.5 °C; lowest 2.5 °C"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{360}{20}\\)"
+    ],
+    "answer": "18 minutes"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(1.5\\sin 200^\\circ + 4 = 1.5 \\times (-0.3420\\ldots) + 4 = 3.486\\ldots\\)"
+    ],
+    "answer": "3.49 °C"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(\\sin(20t) = \\dfrac{2}{3}\\), so \\(20t = 41.81\\ldots^\\circ\\) or \\(180^\\circ - 41.81\\ldots^\\circ = 138.18\\ldots^\\circ\\).",
+     "\\(t = 2.090\\ldots\\) or \\(t = 6.909\\ldots\\)"
+    ],
+    "answer": "2.09 and 6.91 minutes"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Above 5 °C between the two times: \\(6.909\\ldots - 2.090\\ldots = 4.818\\ldots\\) minutes.",
+     "\\(\\dfrac{4.818\\ldots}{18} \\times 100 = 26.77\\ldots\\)"
+    ],
+    "answer": "4.82 minutes, 26.8 % of each cycle"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(4 + a = 4.8\\), and \\(\\dfrac{360}{b} = 12\\)."
+    ],
+    "answer": "\\(a = 0.8\\), \\(b = 30\\)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-p2-003",
+  "strand": "Functions",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 16,
+  "stem": [
+   "A curved garden path is modelled by a quadratic \\(y = ax^{2} + bx + c\\), where \\(x\\) and \\(y\\) are distances in metres. The path passes through the points \\((0, 2)\\), \\((4, 6)\\) and \\((12, 4.4)\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down three equations in \\(a\\), \\(b\\) and \\(c\\).",
+    "marks": 3
+   },
+   {
+    "label": "b",
+    "text": "Find the values of \\(a\\), \\(b\\) and \\(c\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the coordinates of the vertex of the path.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "A straight hedge follows the line \\(y = 0.25x + 2\\). Find the \\(x\\)-coordinates of the points where the hedge meets the path.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Between these two points, the path is above the hedge. Find the greatest vertical distance between them.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "The path runs from \\(x = 0\\) to \\(x = 14\\). Find the range of \\(y\\) for the path.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "A lamp post stands at the point \\((8, 3)\\). Determine whether it is in the region between the path and the hedge.",
+    "marks": 2
+   }
+  ],
+  "idea": "Each point on the curve gives one linear equation in \\(a\\), \\(b\\) and \\(c\\). The vertical distance between the path and the hedge is the difference of their \\(y\\)-values, itself a quadratic, whose greatest value is at its vertex.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "Substitute each point into \\(y = ax^{2} + bx + c\\)."
+    ],
+    "answer": "\\(c = 2\\); \\(16a + 4b + c = 6\\); \\(144a + 12b + c = 4.4\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "Solve with the calculator."
+    ],
+    "answer": "\\(a = -0.1\\), \\(b = 1.4\\), \\(c = 2\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "\\(x = -\\dfrac{b}{2a} = -\\dfrac{1.4}{-0.2} = 7\\), and \\(y = -4.9 + 9.8 + 2 = 6.9\\)."
+    ],
+    "answer": "\\((7, 6.9)\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "\\(-0.1x^{2} + 1.4x + 2 = 0.25x + 2\\), so \\(-0.1x^{2} + 1.15x = 0\\) and \\(x(-0.1x + 1.15) = 0\\)."
+    ],
+    "answer": "\\(x = 0\\) and \\(x = 11.5\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "Vertical distance: \\(d = -0.1x^{2} + 1.15x\\). Its vertex is at \\(x = \\dfrac{1.15}{0.2} = 5.75\\).",
+     "\\(d(5.75) = -0.1 \\times 33.0625 + 6.6125 = 3.30625\\)"
+    ],
+    "answer": "3.31 m"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The greatest value is 6.9 at the vertex. At the ends, \\(y(0) = 2\\) and \\(y(14) = -19.6 + 19.6 + 2 = 2\\)."
+    ],
+    "answer": "\\(2 \\le y \\le 6.9\\)"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "At \\(x = 8\\) the hedge is at \\(y = 4\\) and the path at \\(y = 6.8\\). The lamp post is at \\(y = 3\\), below the hedge."
+    ],
+    "answer": "No: it is below the hedge, outside the region"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-p2-004",
+  "strand": "Functions",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "Phone X is put on charge. Its battery level, as a percentage, \\(t\\) minutes later is modelled by \\[B(t) = 100 - 85(0.92)^{t}, \\quad t \\ge 0.\\]"
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the battery level when the phone is put on charge.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the battery level after 10 minutes.",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the time it takes for the battery level to reach 80 %.",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Write down the equation of the horizontal asymptote of the graph of \\(B\\), and explain what it means for the battery.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Phone Y starts at 20 % and charges at a steady 2.5 percentage points per minute until it is full. Write down a model \\(Y(t)\\) for its battery level, with its domain, and state the time at which it is full.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "The two phones are put on charge at the same time. Find the two times at which they have the same battery level.",
+    "marks": 3
+   },
+   {
+    "label": "g",
+    "text": "Determine which phone reaches 95 % first.",
+    "marks": 2
+   }
+  ],
+  "idea": "In \\(100 - 85(0.92)^{t}\\) the term \\(85(0.92)^{t}\\) gets smaller and smaller but never reaches 0, so \\(B\\) approaches 100 without reaching it. Compare an exponential and a linear model by solving \\(B(t) = Y(t)\\) with the calculator.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(B(0) = 100 - 85\\)"
+    ],
+    "answer": "15 %"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(100 - 85 \\times 0.92^{10} = 63.07\\ldots\\)"
+    ],
+    "answer": "63.1 %"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(100 - 85(0.92)^{t} = 80\\) with the calculator: \\(t = 17.35\\ldots\\)"
+    ],
+    "answer": "17.4 minutes"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "As \\(t\\) increases, \\(0.92^{t}\\) approaches 0, so \\(B(t)\\) approaches 100."
+    ],
+    "answer": "\\(y = 100\\): the battery gets closer and closer to full but, in the model, never quite reaches 100 %"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(20 + 2.5t = 100\\) when \\(t = 32\\)."
+    ],
+    "answer": "\\(Y(t) = 20 + 2.5t\\), \\(0 \\le t \\le 32\\); full after 32 minutes"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "Solve \\(100 - 85(0.92)^{t} = 20 + 2.5t\\) with the calculator, for \\(0 \\le t \\le 32\\): \\(t = 1.176\\ldots\\) and \\(t = 28.96\\ldots\\)"
+    ],
+    "answer": "1.18 minutes and 29.0 minutes"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "Phone X: \\(100 - 85(0.92)^{t} = 95\\) gives \\(t = 33.97\\ldots\\) Phone Y: \\(20 + 2.5t = 95\\) gives \\(t = 30\\)."
+    ],
+    "answer": "Phone Y, after 30 minutes (phone X takes 34.0 minutes)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-p2-005",
+  "strand": "Functions",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 13,
+  "stem": [
+   "A group of volunteers clears litter from a beach. The time the job takes, \\(T\\) hours, varies inversely with the number of volunteers, \\(n\\), so \\(T = \\dfrac{k}{n}\\). Six volunteers take 6 hours."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Find the value of \\(k\\).",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Find the time the job takes with 9 volunteers.",
+    "marks": 1
+   },
+   {
+    "label": "c",
+    "text": "Describe what happens to \\(T\\) as \\(n\\) increases, and write down the equation of the horizontal asymptote of the graph of \\(T\\) against \\(n\\).",
+    "marks": 2
+   },
+   {
+    "label": "d",
+    "text": "Each volunteer is paid $15 for travel, and the organiser pays $40 for each hour the job takes. Show that the total cost, \\(C\\) dollars, is \\(C(n) = 15n + \\dfrac{1440}{n}\\).",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "Use your calculator to find the whole number of volunteers that makes the cost as small as possible, and the smallest cost.",
+    "marks": 3
+   },
+   {
+    "label": "f",
+    "text": "The job must be finished in at most 3 hours. Find the least number of volunteers needed, and the cost.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "Find the greatest and least cost for groups of 4 to 20 volunteers.",
+    "marks": 2
+   }
+  ],
+  "idea": "Inverse variation \\(T = \\dfrac{k}{n}\\) means that doubling \\(n\\) halves \\(T\\). The cost adds a part that grows with \\(n\\) (travel) to a part that shrinks as \\(n\\) grows (hours of the job), so it has a least value in between; \\(n\\) must be a whole number.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(6 = \\dfrac{k}{6}\\)"
+    ],
+    "answer": "\\(k = 36\\)"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(\\dfrac{36}{9}\\)"
+    ],
+    "answer": "4 hours"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "As \\(n\\) gets larger, \\(\\dfrac{36}{n}\\) gets smaller and closer to 0, but never reaches it."
+    ],
+    "answer": "\\(T\\) decreases towards 0; asymptote \\(T = 0\\)"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Travel: \\(15n\\). The job takes \\(\\dfrac{36}{n}\\) hours, costing \\(40 \\times \\dfrac{36}{n} = \\dfrac{1440}{n}\\)."
+    ],
+    "answer": "\\(C(n) = 15n + \\dfrac{1440}{n}\\)"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "The graph of \\(C\\) has its minimum at \\(n = 9.797\\ldots\\), which is not a whole number. Compare the whole numbers either side: \\(C(9) = 135 + 160 = 295\\) and \\(C(10) = 150 + 144 = 294\\)."
+    ],
+    "answer": "10 volunteers, costing $294"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "\\(\\dfrac{36}{n} \\le 3\\), so \\(n \\ge 12\\). \\(C(12) = 180 + 120\\)"
+    ],
+    "answer": "12 volunteers, costing $300"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "The least cost is $294 (part (e)). At the ends: \\(C(4) = 60 + 360 = 420\\) and \\(C(20) = 300 + 72 = 372\\)."
+    ],
+    "answer": "Greatest $420 (4 volunteers); least $294 (10 volunteers)"
+   }
+  ]
+ },
+ {
+  "id": "ai-fn-p2-006",
+  "strand": "Functions",
+  "subtopic": "Paper 2 style",
+  "level": {
+   "SL AI": "Hard",
+   "HL AI": "Medium"
+  },
+  "calculator": true,
+  "marks": 14,
+  "stem": [
+   "A school stall bakes and sells cookies at a fair. The cost of making \\(x\\) cookies is \\(C(x) = 40 + 0.6x\\) dollars, and the income from selling them is \\(R(x) = 2.4x - 0.004x^{2}\\) dollars, for \\(0 \\le x \\le 600\\)."
+  ],
+  "parts": [
+   {
+    "label": "a",
+    "text": "Write down the fixed cost.",
+    "marks": 1
+   },
+   {
+    "label": "b",
+    "text": "Show that the profit is \\(P(x) = -0.004x^{2} + 1.8x - 40\\).",
+    "marks": 2
+   },
+   {
+    "label": "c",
+    "text": "Find the least and the greatest whole number of cookies the stall can sell and still make a profit.",
+    "marks": 3
+   },
+   {
+    "label": "d",
+    "text": "Find the number of cookies that gives the greatest profit, and the greatest profit.",
+    "marks": 2
+   },
+   {
+    "label": "e",
+    "text": "The price of each cookie is \\(\\dfrac{R(x)}{x}\\). Find the price that gives the greatest profit.",
+    "marks": 2
+   },
+   {
+    "label": "f",
+    "text": "The oven can bake at most 200 cookies. Find the greatest profit now.",
+    "marks": 2
+   },
+   {
+    "label": "g",
+    "text": "Find the range of \\(P\\) for \\(0 \\le x \\le 600\\).",
+    "marks": 2
+   }
+  ],
+  "idea": "Profit is income minus cost. The stall makes a profit between the two zeros of the quadratic \\(P\\), and the greatest profit is at the vertex, unless the vertex is outside the values allowed.",
+  "solution": [
+   {
+    "label": "a",
+    "steps": [
+     "\\(C(0) = 40\\)"
+    ],
+    "answer": "$40"
+   },
+   {
+    "label": "b",
+    "steps": [
+     "\\(P(x) = R(x) - C(x) = 2.4x - 0.004x^{2} - 40 - 0.6x\\)"
+    ],
+    "answer": "\\(P(x) = -0.004x^{2} + 1.8x - 40\\)"
+   },
+   {
+    "label": "c",
+    "steps": [
+     "Solve \\(P(x) = 0\\) with the calculator: \\(x = 23.44\\ldots\\) or \\(x = 426.5\\ldots\\)",
+     "A profit needs \\(P(x) > 0\\), so between the two. The number of cookies is a whole number."
+    ],
+    "answer": "From 24 to 426 cookies"
+   },
+   {
+    "label": "d",
+    "steps": [
+     "Vertex: \\(x = -\\dfrac{1.8}{2(-0.004)} = 225\\). \\(P(225) = -202.5 + 405 - 40\\)"
+    ],
+    "answer": "225 cookies; $162.50"
+   },
+   {
+    "label": "e",
+    "steps": [
+     "\\(\\dfrac{R(x)}{x} = 2.4 - 0.004x\\), and at \\(x = 225\\) this is \\(2.4 - 0.9\\)."
+    ],
+    "answer": "$1.50"
+   },
+   {
+    "label": "f",
+    "steps": [
+     "The vertex, 225, is more than 200, and \\(P\\) is increasing for \\(x < 225\\), so the best is \\(x = 200\\).",
+     "\\(P(200) = -160 + 360 - 40\\)"
+    ],
+    "answer": "$160"
+   },
+   {
+    "label": "g",
+    "steps": [
+     "The greatest value is 162.5 at the vertex. At the ends, \\(P(0) = -40\\) and \\(P(600) = -1440 + 1080 - 40 = -400\\)."
+    ],
+    "answer": "\\(-400 \\le P \\le 162.5\\)"
+   }
+  ]
+ }
+]
