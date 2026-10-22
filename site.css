@@ -1,0 +1,265 @@
+/* Mathski shared layout: background, banner, footer, home, tickets, info pages */
+
+body { background: #F3F7FC; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #F3F7FC url("img/bg_desktop.webp") center bottom / cover no-repeat;
+}
+@media (max-width: 640px) {
+  body::before { background-image: url("img/bg_phone.webp"); }
+}
+
+/* ─── Banner ─── */
+.msk-banner {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(28,28,30,0.1);
+}
+.msk-banner-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 32px;
+  min-height: 72px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+.msk-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #1C1C1E;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.msk-brand img { width: 44px; height: auto; display: block; }
+.msk-brand span { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.6rem; color: #1C1C1E; }
+.msk-brand span b { color: #007AFF; font-weight: 800; }
+.msk-nav { display: flex; align-items: center; gap: 2px; overflow-x: auto; }
+.msk-nav a, .msk-nav button {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #3C3C43;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  padding: 12px 14px 9px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.msk-nav a:hover, .msk-nav button:hover { color: #007AFF; }
+.msk-nav .active { color: #1C1C1E; border-bottom-color: #007AFF; }
+.msk-nav .msk-nav-teacher { margin-left: 8px; background: #1C1C1E; color: #FFFFFF; border-bottom-color: #1C1C1E; padding: 12px 18px; }
+.msk-nav .msk-nav-teacher:hover { color: #FFFFFF; background: #007AFF; border-bottom-color: #007AFF; }
+.msk-nav .msk-nav-teacher.active { background: #007AFF; border-bottom-color: #007AFF; color: #FFFFFF; }
+@media (max-width: 760px) {
+  .msk-banner-inner { padding: 6px 16px 0; }
+  .msk-brand img { width: 36px; }
+  .msk-brand span { font-size: 1.35rem; }
+  .msk-nav { width: 100%; margin: 0 -6px; }
+  .msk-nav a, .msk-nav button { font-size: 0.88rem; padding: 10px 10px 8px; }
+  .msk-nav .msk-nav-teacher { margin-left: auto; padding: 10px 12px; }
+}
+
+/* ─── Home ─── */
+.msk-home { font-family: 'Nunito Sans', sans-serif; color: #1C1C1E; }
+.msk-intro { padding: 72px 0 24px; }
+.msk-kicker { margin: 0 0 18px; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.12em; text-transform: uppercase; color: #0057CC; }
+.msk-h1 { margin: 0; max-width: 880px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1; letter-spacing: -0.02em; }
+.msk-lead { margin: 26px 0 0; max-width: 680px; font-size: 1.25rem; line-height: 1.6; color: #3C3C43; }
+.msk-cred { margin: 22px 0 0; display: flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 700; }
+.msk-cred svg { flex: none; }
+.msk-stats { margin: 44px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 900px; border-top: 2px solid #1C1C1E; }
+.msk-stats div { padding: 16px 20px 0 0; }
+.msk-stats dt { font-size: 0.875rem; font-weight: 600; color: #6B6B70; }
+.msk-stats dd { margin: 4px 0 0; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 2.5rem; }
+.msk-jump { margin-top: 56px; display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1rem; color: #1C1C1E; text-decoration: none; }
+.msk-jump:hover { color: #007AFF; }
+.msk-options { padding: 80px 0 120px; }
+.msk-options h2 { margin: 0 0 30px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.25rem; letter-spacing: 0.12em; text-transform: uppercase; color: #0057CC; }
+@media (max-width: 640px) {
+  .msk-intro { padding: 40px 0 8px; }
+  .msk-lead { font-size: 1.06rem; }
+  .msk-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; }
+  .msk-stats dd { font-size: 1.9rem; }
+  .msk-options { padding: 140px 0 48px; }
+  .msk-options h2 { font-size: 0.95rem; margin-bottom: 16px; }
+}
+
+/* ─── Lift-pass tickets ─── */
+.tk-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px; align-items: start; }
+.tk-wrap {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+  font: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  filter: drop-shadow(0 14px 18px rgba(20,60,120,0.20));
+  transition: transform 0.18s ease;
+}
+.tk-grid > .tk-wrap:nth-child(1) { transform: rotate(-2deg); }
+.tk-grid > .tk-wrap:nth-child(2) { transform: rotate(1.5deg); margin-top: 14px; }
+.tk-grid > .tk-wrap:nth-child(3) { transform: rotate(-1deg); margin-top: 4px; }
+.tk-grid > .tk-wrap:nth-child(4) { transform: rotate(2deg); margin-top: 18px; }
+.tk-grid > .tk-wrap:hover, .tk-grid > .tk-wrap:focus-visible { transform: translateY(-8px) rotate(0deg); }
+.tk-wrap:focus-visible { outline: 3px solid #007AFF; outline-offset: 6px; }
+.tk {
+  display: flex;
+  flex-direction: column;
+  height: 440px;
+  background: #FFFFFF;
+  color: #1C1C1E;
+  -webkit-mask:
+    radial-gradient(circle 15px at 0 76%, #0000 98%, #000 100%),
+    radial-gradient(circle 15px at 100% 76%, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 0 0, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 100% 0, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 0 100%, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 100% 100%, #0000 98%, #000 100%);
+  -webkit-mask-composite: source-in;
+  mask:
+    radial-gradient(circle 15px at 0 76%, #0000 98%, #000 100%),
+    radial-gradient(circle 15px at 100% 76%, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 0 0, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 100% 0, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 0 100%, #0000 98%, #000 100%),
+    radial-gradient(circle 12px at 100% 100%, #0000 98%, #000 100%);
+  mask-composite: intersect;
+}
+.tk-head { display: flex; flex-direction: column; gap: 2px; padding: 22px 24px 18px; background: #007AFF; color: #FFFFFF; }
+.tk-kicker { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
+.tk-admit { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+.tk-body { flex: 1; display: flex; flex-direction: column; gap: 10px; padding: 20px 24px; }
+.tk-title { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.9rem; line-height: 1; }
+.tk-desc { font-size: 0.95rem; line-height: 1.5; color: #3C3C43; }
+.tk-perf { margin: 0 22px; border-top: 3px dotted #AEAEB2; }
+.tk-stub { display: flex; flex-direction: column; gap: 8px; padding: 14px 24px 22px; }
+.tk-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.tk-no { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6B6B70; }
+.tk-price { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.15rem; text-transform: uppercase; text-align: right; }
+.tk-price small { font-size: 0.7rem; letter-spacing: 0.06em; color: #6B6B70; margin-right: 6px; }
+.tk-price.free { color: #1A7F3C; }
+.tk-code { height: 34px; background: repeating-linear-gradient(90deg, #1C1C1E 0 2px, transparent 2px 4px, #1C1C1E 4px 5px, transparent 5px 8px, #1C1C1E 8px 11px, transparent 11px 13px); }
+.tk.dark { background: #1C1C1E; color: #FFFFFF; }
+.tk.dark .tk-head { background: #FFFFFF; color: #1C1C1E; }
+.tk.dark .tk-admit { color: #0057CC; opacity: 1; }
+.tk.dark .tk-desc { color: #D1D1D6; }
+.tk.dark .tk-perf { border-top-color: #6B6B70; }
+.tk.dark .tk-no, .tk.dark .tk-price small { color: #AEAEB2; }
+.tk.dark .tk-code { background: repeating-linear-gradient(90deg, #FFFFFF 0 2px, transparent 2px 4px, #FFFFFF 4px 5px, transparent 5px 8px, #FFFFFF 8px 11px, transparent 11px 13px); }
+
+@media (max-width: 1040px) {
+  .tk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 44px; }
+}
+/* Phone: horizontal tickets */
+@media (max-width: 640px) {
+  .tk-grid { grid-template-columns: 1fr; gap: 16px; }
+  .tk-grid > .tk-wrap:nth-child(n) { transform: none; margin-top: 0; }
+  .tk-grid > .tk-wrap:hover { transform: translateY(-3px); }
+  .tk {
+    flex-direction: row;
+    height: auto;
+    min-height: 150px;
+    -webkit-mask:
+      radial-gradient(circle 12px at 74% 0, #0000 98%, #000 100%),
+      radial-gradient(circle 12px at 74% 100%, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 0 0, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 100% 0, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 0 100%, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 100% 100%, #0000 98%, #000 100%);
+    -webkit-mask-composite: source-in;
+    mask:
+      radial-gradient(circle 12px at 74% 0, #0000 98%, #000 100%),
+      radial-gradient(circle 12px at 74% 100%, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 0 0, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 100% 0, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 0 100%, #0000 98%, #000 100%),
+      radial-gradient(circle 9px at 100% 100%, #0000 98%, #000 100%);
+    mask-composite: intersect;
+  }
+  .tk-head { width: 26px; flex: none; padding: 0; align-items: center; justify-content: center; }
+  .tk-kicker { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 0.6rem; white-space: nowrap; }
+  .tk-kicker .tk-brand, .tk-admit { display: none; }
+  .tk-body { width: calc(74% - 26px); flex: none; box-sizing: border-box; padding: 16px 14px 16px 16px; gap: 6px; }
+  .tk-title { font-size: 1.35rem; line-height: 1.05; }
+  .tk-desc { font-size: 0.875rem; line-height: 1.45; }
+  .tk-perf { margin: 14px 0; border-top: 0; border-left: 3px dotted #AEAEB2; }
+  .tk.dark .tk-perf { border-left-color: #6B6B70; }
+  .tk-stub { flex: 1; flex-direction: row; gap: 8px; padding: 14px 10px 14px 12px; min-width: 0; }
+  .tk-meta { flex-direction: column; justify-content: space-between; align-items: flex-start; }
+  .tk-price { font-size: 0.95rem; text-align: left; line-height: 1.1; display: flex; flex-direction: column-reverse; }
+  .tk-price small { margin: 2px 0 0; font-size: 0.6rem; }
+  .tk-code { height: auto; width: 26px; flex: none; background: repeating-linear-gradient(0deg, #1C1C1E 0 2px, transparent 2px 4px, #1C1C1E 4px 5px, transparent 5px 8px, #1C1C1E 8px 11px, transparent 11px 13px); }
+  .tk.dark .tk-code { background: repeating-linear-gradient(0deg, #FFFFFF 0 2px, transparent 2px 4px, #FFFFFF 4px 5px, transparent 5px 8px, #FFFFFF 8px 11px, transparent 11px 13px); }
+}
+
+/* ─── Footer ─── */
+.msk-footer { background: rgba(255,255,255,0.95); border-top: 1px solid rgba(28,28,30,0.12); font-family: 'Nunito Sans', sans-serif; color: #1C1C1E; text-align: left; }
+.msk-footer-inner { max-width: 1160px; margin: 0 auto; padding: 48px 32px 28px; }
+.msk-footer-cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; padding-bottom: 32px; border-bottom: 1px solid rgba(28,28,30,0.12); }
+.msk-footer-cols p { margin: 12px 0 0; font-size: 0.875rem; line-height: 1.6; color: #6B6B70; }
+.msk-footer h3 { margin: 0 0 12px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.95rem; }
+.msk-footer ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; }
+.msk-footer a { color: #3C3C43; text-decoration: none; }
+.msk-footer a:hover { color: #007AFF; text-decoration: underline; }
+.msk-footer button.msk-link { font: inherit; color: #3C3C43; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+.msk-footer button.msk-link:hover { color: #007AFF; text-decoration: underline; }
+.msk-footer-legal { padding-top: 22px; display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem; line-height: 1.6; color: #6B6B70; }
+.msk-footer-legal p { margin: 0; }
+.msk-footer-legal .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+@media (max-width: 760px) {
+  .msk-footer-inner { padding: 32px 20px 24px; }
+  .msk-footer-cols { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .msk-footer-cols > div:first-child { grid-column: 1 / -1; }
+}
+
+/* ─── Info pages ─── */
+.msk-doc { max-width: 760px; margin: 0 auto; padding: 56px 32px 96px; font-family: 'Nunito Sans', sans-serif; color: #1C1C1E; }
+.msk-doc-sheet { background: rgba(255,255,255,0.92); border-top: 4px solid #1C1C1E; padding: 40px 44px 48px; }
+.msk-doc h1 { margin: 0 0 8px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.05; }
+.msk-doc .updated { margin: 0 0 28px; font-size: 0.875rem; color: #6B6B70; }
+.msk-doc h2 { margin: 34px 0 10px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.3rem; }
+.msk-doc p, .msk-doc li { font-size: 1.02rem; line-height: 1.7; color: #2C2C2E; }
+.msk-doc ul, .msk-doc ol { padding-left: 1.3em; }
+.msk-doc li { margin-bottom: 6px; }
+.msk-doc a { color: #0057CC; }
+.msk-doc table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+.msk-doc th, .msk-doc td { text-align: left; padding: 10px 8px; border-bottom: 1px solid rgba(28,28,30,0.12); vertical-align: top; line-height: 1.5; }
+.msk-doc th { font-family: 'Nunito', sans-serif; font-weight: 800; }
+.msk-doc .note { padding: 14px 18px; background: #E8F2FF; border-left: 4px solid #007AFF; margin: 20px 0; }
+@media (max-width: 640px) {
+  .msk-doc { padding: 24px 12px 56px; }
+  .msk-doc-sheet { padding: 26px 18px 32px; }
+}
+.msk-footer { padding: 0; line-height: normal; font-size: 1rem; }
+body[data-tab="home"] .shell { max-width: 1160px; padding: 0 32px; }
+@media (max-width: 640px) { body[data-tab="home"] .shell { padding: 0 16px; } }
+.msk-teach-intro { font-family: 'Nunito Sans', sans-serif; }
+/* fixes */
+.tk-no { white-space: nowrap; }
+.tk-kicker { letter-spacing: 0.16em; }
+.tk-price { display: flex; flex-direction: column; align-items: flex-end; line-height: 1.1; }
+.tk-price small { margin: 0 0 2px; }
+@media (max-width: 640px) {
+  .tk-price { align-items: flex-start; }
+  .msk-nav { margin: 0 -8px; gap: 0; }
+  .msk-nav a, .msk-nav button { font-size: 0.8rem; padding: 10px 7px 8px; }
+  .msk-nav .msk-nav-teacher { padding: 8px 10px; margin-bottom: 4px; }
+}
