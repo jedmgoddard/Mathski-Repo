@@ -957,28 +957,7 @@ body {
 
 .auth-close-btn:hover { background: var(--bg); }
 
-/* ─── WELCOME OVERLAY ─── */
-#welcomeOverlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(4px);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
 
-.welcome-modal {
-  background: rgba(255,255,255,0.97);
-  border-radius: 20px;
-  max-width: 400px;
-  width: 100%;
-  padding: 28px 24px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
-  animation: fadeUp 0.3s ease both;
-}
 
 /* Apple segmented pill toggle */
 .seg-pill {
@@ -1008,40 +987,9 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.welcome-heading {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 1.3rem;
-  color: var(--text);
-  margin-bottom: 10px;
-  line-height: 1.3;
-}
 
-.welcome-copy {
-  font-size: 0.88rem;
-  color: var(--text-sec);
-  line-height: 1.6;
-  margin-bottom: 22px;
-}
 
-.welcome-go-btn {
-  width: 100%;
-  padding: 13px;
-  border-radius: 9999px;
-  background: var(--blue);
-  color: white;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: background 0.15s, transform 0.1s;
-}
 
-.welcome-go-btn:hover {
-  background: var(--blue-dark);
-  transform: translateY(-1px);
-}
 
 /* ─── WORKSHEETS ─── */
 .ws-filter-row {
@@ -2166,25 +2114,6 @@ footer .blue { color: var(--blue); font-weight: 700; }
   </div>
 </div>
 
-<!-- ─── WELCOME OVERLAY ─── -->
-<div id="welcomeOverlay">
-  <div class="welcome-modal">
-    <div class="seg-pill">
-      <button class="seg-pill-btn welcome-toggle-btn active" data-mode="student" onclick="setWelcomeMode('student')">Student</button>
-      <button class="seg-pill-btn welcome-toggle-btn" data-mode="teacher" onclick="setWelcomeMode('teacher')">Teacher</button>
-    </div>
-    <div id="studentCopy">
-      <div class="welcome-heading">yesss my ski.</div>
-      <div class="welcome-copy">welcome to mathski. your place for IB maths practice and IA marking.</div>
-    </div>
-    <div id="teacherCopy" style="display:none;">
-      <div class="welcome-heading">welcome to mathski.</div>
-      <div class="welcome-copy">A collection of IB maths resources and IA marking guidance. your students' marks are going to ski into first place.</div>
-    </div>
-    <button class="welcome-go-btn" onclick="dismissWelcome()">let's go →</button>
-  </div>
-</div>
-
 <!-- ─── JAVASCRIPT ─── -->
 <script>
 // CONFIG
@@ -2212,11 +2141,8 @@ function showTab(name, opts) {
 window.addEventListener('hashchange', () => showTab(location.hash.slice(1) || 'home', { keepScroll: true }));
 document.addEventListener('DOMContentLoaded', () => showTab(location.hash.slice(1) || 'home', { keepScroll: true }));
 
-// Welcome modal
+// Start-up
 window.addEventListener('DOMContentLoaded', () => {
-  if (!localStorage.getItem('mathski_welcomed')) {
-    document.getElementById('welcomeOverlay').style.display = 'flex';
-  }
   initSupabase();
   updateAuthUI();
   initWorksheetFilter();
@@ -2244,18 +2170,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-function dismissWelcome() {
-  localStorage.setItem('mathski_welcomed', '1');
-  document.getElementById('welcomeOverlay').style.display = 'none';
-}
-
-function setWelcomeMode(mode) {
-  document.querySelectorAll('.welcome-toggle-btn').forEach(b => b.classList.remove('active'));
-  document.querySelector('.welcome-toggle-btn[data-mode="' + mode + '"]').classList.add('active');
-  document.getElementById('studentCopy').style.display = mode === 'student' ? 'block' : 'none';
-  document.getElementById('teacherCopy').style.display = mode === 'teacher' ? 'block' : 'none';
-}
 
 // Supabase
 let _supabase;
