@@ -211,7 +211,7 @@ export default async function handler(req, res) {
 
     } else if (purchasedVariantId === PRODUCTS.STUDENT) {
       // ── Student purchase ───────────────────────────────────────────────────
-      const MARKS_PER_PURCHASE = 2; // each £3.49 purchase = 2 marks
+      const MARKS_PER_PURCHASE = 1; // each £3.49 purchase = 1 full report
 
       // Check if user already exists
       const { data: existingUser } = await supabase
