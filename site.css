@@ -263,3 +263,104 @@ body[data-tab="home"] .shell { max-width: 1160px; padding: 0 32px; }
   .msk-nav a, .msk-nav button { font-size: 0.8rem; padding: 10px 7px 8px; }
   .msk-nav .msk-nav-teacher { padding: 8px 10px; margin-bottom: 4px; }
 }
+
+/* ─── Question Bank: actions, full screen, print ─── */
+.qb-metarow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin: 4px 2px 14px; }
+.qb-metarow .qb-meta { margin: 0; }
+.qb-print-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px; border: 2px solid #1C1C1E; background: #FFFFFF; color: #1C1C1E; font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.875rem; cursor: pointer; }
+.qb-print-btn:hover { background: #1C1C1E; color: #FFFFFF; }
+.qb-print-btn:disabled { opacity: 0.6; cursor: wait; }
+.qb-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.qb-actions .qb-ms-btn { margin-top: 0; }
+.qb-fs-btn { display: inline-flex; align-items: center; gap: 7px; font-family: 'Nunito Sans', sans-serif; font-size: 0.82rem; font-weight: 700; padding: 8px 14px; border: 1px solid rgba(28,28,30,0.18); background: #FFFFFF; color: #1C1C1E; border-radius: 9999px; cursor: pointer; }
+.qb-fs-btn:hover { border-color: #1C1C1E; }
+
+.qb-focus { position: fixed; inset: 0; z-index: 400; background: #FFFFFF; display: none; flex-direction: column; }
+.qb-focus.open { display: flex; }
+.qb-focus-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; padding: 14px 28px; border-bottom: 1px solid #D8DEE8; background: #FFFFFF; }
+.qb-focus-id { display: flex; flex-direction: column; min-width: 0; }
+.qb-focus-title { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.5rem; }
+.qb-focus-sub { font-size: 0.875rem; color: #6B6B70; }
+.qb-focus-ctrls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.qb-focus-count { font-size: 0.875rem; font-weight: 700; color: #6B6B70; margin-right: 6px; }
+.qb-focus-ctrls button { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px; border: 2px solid #1C1C1E; background: #FFFFFF; color: #1C1C1E; font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.9rem; cursor: pointer; }
+.qb-focus-ctrls button:hover:not(:disabled) { background: #F3F7FC; }
+.qb-focus-ctrls button:disabled { opacity: 0.35; cursor: default; }
+.qb-focus-ctrls .qb-focus-sol-btn { background: #007AFF; border-color: #007AFF; color: #FFFFFF; }
+.qb-focus-ctrls button.qb-focus-sol-btn:hover:not(:disabled) { background: #0055CC; border-color: #0055CC; color: #FFFFFF; }
+.qb-focus-ctrls .qb-focus-min { background: #1C1C1E; color: #FFFFFF; }
+.qb-focus-ctrls button.qb-focus-min:hover:not(:disabled) { background: #3C3C43; color: #FFFFFF; }
+.qb-focus-body { flex: 1; overflow-y: auto; }
+.qb-focus-inner { max-width: 1040px; margin: 0 auto; padding: 40px 32px 80px; }
+.qb-focus .qb-focus-tags { justify-content: flex-start; margin-bottom: 22px; }
+.qb-focus .qb-focus-q { font-size: 1.75rem; line-height: 1.6; }
+.qb-focus .qb-focus-q .qb-part { grid-template-columns: 56px 1fr auto; margin-bottom: 14px; }
+.qb-focus .qb-focus-q .qb-part-marks { font-size: 1.2rem; }
+.qb-focus .qb-focus-q .qb-fig svg { max-height: 46vh; width: auto; }
+.qb-focus .qb-focus-solbox { margin-top: 36px; padding-top: 24px; border-top: 3px solid #1C1C1E; font-size: 1.3rem; line-height: 1.6; }
+.qb-focus-solh { margin: 0 0 16px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.4rem; }
+@media (max-width: 640px) {
+  .qb-focus-bar { padding: 10px 14px; }
+  .qb-focus-title { font-size: 1.2rem; }
+  .qb-focus-ctrls button { padding: 0 10px; font-size: 0.82rem; }
+  .qb-focus-inner { padding: 22px 16px 60px; }
+  .qb-focus .qb-focus-q { font-size: 1.2rem; }
+  .qb-focus .qb-focus-q .qb-part { grid-template-columns: 34px 1fr auto; }
+  .qb-focus .qb-focus-solbox { font-size: 1.02rem; }
+  .qb-focus-ctrls { width: 100%; }
+  .qb-focus-count { width: auto; margin-right: auto; }
+  .qb-focus-ctrls .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .qb-focus-ctrls button { min-width: 44px; justify-content: center; }
+}
+
+.qb-panel { position: fixed; inset: 0; z-index: 450; background: rgba(0,0,0,0.4); display: none; align-items: center; justify-content: center; padding: 16px; }
+.qb-panel.open { display: flex; }
+.qb-panel-box { width: 100%; max-width: 440px; background: #FFFFFF; border-top: 4px solid #1C1C1E; padding: 26px 24px 20px; font-family: 'Nunito Sans', sans-serif; display: flex; flex-direction: column; gap: 10px; }
+.qb-panel-box h3 { margin: 0; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.3rem; }
+.qb-panel-box p { margin: 0 0 6px; font-size: 0.95rem; line-height: 1.55; color: #3C3C43; }
+.qb-panel-primary, .qb-panel-secondary, .qb-panel-cancel { min-height: 46px; padding: 0 16px; font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.95rem; cursor: pointer; }
+.qb-panel-primary { border: 0; background: #007AFF; color: #FFFFFF; }
+.qb-panel-primary:hover { background: #0055CC; }
+.qb-panel-secondary { border: 2px solid #1C1C1E; background: #FFFFFF; color: #1C1C1E; }
+.qb-panel-secondary:hover { background: #F3F7FC; }
+.qb-panel-cancel { border: 0; background: none; color: #6B6B70; }
+.qb-panel-label { margin-top: 10px; font-size: 0.875rem; font-weight: 700; }
+.qb-panel-row { display: flex; gap: 8px; }
+.qb-panel-row input { flex: 1; min-width: 0; min-height: 46px; padding: 0 12px; border: 2px solid #D8DEE8; font: inherit; font-size: 0.95rem; }
+.qb-panel-row input:focus { outline: none; border-color: #007AFF; }
+.qb-panel-msg { font-size: 0.875rem !important; color: #0057CC !important; min-height: 1em; }
+
+#qbPrintSheet { display: none; }
+@media print {
+  @page { size: A4; margin: 14mm 14mm 16mm; }
+  body::before { display: none; }
+  body.qb-printing > *:not(#qbPrintSheet) { display: none !important; }
+  body.qb-printing { background: #FFFFFF !important; }
+  body.qb-printing #qbPrintSheet { display: block; font-family: 'Nunito Sans', sans-serif; color: #000; font-size: 10.5pt; }
+  .qbp-head { display: grid; grid-template-columns: auto 1fr; align-items: end; gap: 4pt 14pt; border-bottom: 2pt solid #000; padding-bottom: 6pt; margin-bottom: 10pt; }
+  .qbp-brand { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 16pt; }
+  .qbp-brand b { color: #007AFF; font-weight: 900; }
+  .qbp-title { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 12pt; }
+  .qbp-lines { grid-column: 1 / -1; display: grid; grid-template-columns: 2fr 1fr; gap: 18pt; margin-top: 6pt; font-size: 9.5pt; }
+  .qbp-lines span { border-bottom: 0.75pt solid #000; padding-bottom: 12pt; }
+  .qbp-q, .qbp-s { padding: 6pt 0 8pt; border-bottom: 0.5pt solid #BBB; }
+  .qbp-qhead { break-after: avoid; }
+  #qbPrintSheet .qb-part, #qbPrintSheet .qb-fig, #qbPrintSheet .qb-body p, #qbPrintSheet .qb-sol-step, #qbPrintSheet .qb-answer, #qbPrintSheet .katex-display { break-inside: avoid; }
+  .qbp-qhead { display: flex; align-items: baseline; gap: 8pt; margin-bottom: 3pt; }
+  .qbp-num { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 12pt; }
+  .qbp-meta { font-size: 8.5pt; color: #444; }
+  #qbPrintSheet .qb-body { font-size: 10.5pt; line-height: 1.45; }
+  #qbPrintSheet .qb-body p { margin: 0 0 4pt; }
+  #qbPrintSheet .qb-part { grid-template-columns: 22pt 1fr auto; margin-bottom: 3pt; gap: 2pt; }
+  #qbPrintSheet .qb-fig { margin: 4pt 0; }
+  #qbPrintSheet .qb-fig svg { max-width: 8.5cm; max-height: 6.5cm; }
+  #qbPrintSheet .qb-idea { background: none; border: 0.75pt solid #999; padding: 5pt 7pt; margin-bottom: 6pt; font-size: 9.5pt; }
+  #qbPrintSheet .qb-sol-part { margin-bottom: 5pt; }
+  #qbPrintSheet .qb-answer { background: none; border: 0.75pt solid #000; padding: 2pt 6pt; }
+  #qbPrintSheet .katex-display { margin: 3pt 0; }
+  .qbp-solh { break-before: page; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 15pt; border-bottom: 2pt solid #000; padding-bottom: 4pt; margin: 0 0 8pt; }
+  .qbp-foot { margin-top: 12pt; font-size: 7.5pt; color: #555; }
+  /* Browser print (Ctrl+P) on the Question Bank without the teacher button */
+  body[data-tab="qbank"]:not(.qb-printing) > * { display: none !important; }
+  body[data-tab="qbank"]:not(.qb-printing)::after { content: "Printing Question Bank worksheets is part of the Mathski teacher plan. Teachers can use the Print worksheet button on mathski.io."; display: block; font: 12pt 'Nunito Sans', sans-serif; padding: 20mm 0; }
+}
